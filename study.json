@@ -1,0 +1,2602 @@
+[
+  {
+    "id": 1,
+    "type": "Quality Control",
+    "question": "The primary objective of an engagement quality control review is to:",
+    "options": [
+      "(a) Reperform the entire audit",
+      "(b) Objectively evaluate significant judgments and conclusions before the report is issued",
+      "(c) Approve the client's accounting policies",
+      "(d) Assume the engagement partner's responsibilities"
+    ],
+    "correctOption": 1,
+    "explanation": "EQCR is an objective evaluation of significant judgments and conclusions before the report is issued."
+  },
+  {
+    "id": 2,
+    "type": "Quality Control",
+    "question": "An engagement partner disagrees with the EQCR on a significant matter that remains unresolved. The report should generally be:",
+    "options": [
+      "(a) Issued because the partner has final authority",
+      "(b) Issued with a note describing the disagreement",
+      "(c) Not issued until the disagreement is resolved",
+      "(d) Issued after management approves the disagreement"
+    ],
+    "correctOption": 2,
+    "explanation": "A significant unresolved disagreement identified during the engagement quality control review must be resolved before the report is issued."
+  },
+  {
+    "id": 3,
+    "type": "Quality Control",
+    "question": "Which characteristic is most critical for a person performing an engagement quality control review?",
+    "options": [
+      "(a) Familiarity with management",
+      "(b) Objectivity",
+      "(c) Authority over the client",
+      "(d) Responsibility for preparing financial statements"
+    ],
+    "correctOption": 1,
+    "explanation": "The reviewer must be objective and sufficiently independent of the engagement team."
+  },
+  {
+    "id": 4,
+    "type": "Quality Control",
+    "question": "An auditor takes over an audit engagement from another partner during the engagement. The successor partner should primarily:",
+    "options": [
+      "(a) Automatically rely on all work already performed",
+      "(b) Review the work and significant matters sufficiently to assume responsibility",
+      "(c) Start the audit from zero in every case",
+      "(d) Ask management to certify the previous auditor's work"
+    ],
+    "correctOption": 1,
+    "explanation": "The incoming engagement partner needs to perform appropriate review procedures to obtain a basis for assuming responsibility."
+  },
+  {
+    "id": 5,
+    "type": "Quality Control",
+    "question": "Which of the following is NOT an appropriate reason for ignoring a significant EQCR comment?",
+    "options": [
+      "(a) The engagement partner has greater experience with the client",
+      "(b) The comment is evaluated and found not relevant after appropriate consideration",
+      "(c) The comment is resolved through consultation",
+      "(d) The disagreement is appropriately documented and resolved"
+    ],
+    "correctOption": 0,
+    "explanation": "Greater client familiarity does not by itself justify ignoring an objective EQCR comment."
+  },
+  {
+    "id": 6,
+    "type": "Quality Control",
+    "question": "Quality control procedures relating to acceptance and continuance of clients primarily address:",
+    "options": [
+      "(a) Whether the engagement is profitable",
+      "(b) Whether the firm should accept or continue the professional relationship after considering relevant risks",
+      "(c) Whether management will agree to all proposed adjustments",
+      "(d) Whether the client will provide a bonus"
+    ],
+    "correctOption": 1,
+    "explanation": "Acceptance and continuance procedures consider integrity, competence, independence and other relevant engagement risks."
+  },
+  {
+    "id": 7,
+    "type": "General Auditing Principles and Auditors Responsibilities",
+    "question": "Professional skepticism is best demonstrated when an auditor:",
+    "options": [
+      "(a) Presumes management is dishonest",
+      "(b) Accepts consistent explanations without challenge",
+      "(c) Maintains a questioning mind and critically evaluates evidence",
+      "(d) Rejects all management evidence"
+    ],
+    "correctOption": 2,
+    "explanation": "Professional skepticism involves a questioning mind and critical assessment of audit evidence."
+  },
+  {
+    "id": 8,
+    "type": "General Auditing Principles and Auditors Responsibilities",
+    "question": "Professional judgment is required by the auditor particularly because:",
+    "options": [
+      "(a) Standards prescribe every audit decision in detail",
+      "(b) Audit evidence and circumstances often require informed evaluation",
+      "(c) Management determines the audit conclusion",
+      "(d) The auditor may disregard Standards on Auditing"
+    ],
+    "correctOption": 1,
+    "explanation": "Professional judgment is applied in planning, performing and concluding on audit matters where informed judgment is necessary."
+  },
+  {
+    "id": 9,
+    "type": "General Auditing Principles and Auditors Responsibilities",
+    "question": "The auditor's objective in an audit of financial statements is to obtain:",
+    "options": [
+      "(a) Absolute assurance",
+      "(b) Reasonable assurance",
+      "(c) Limited assurance",
+      "(d) No assurance"
+    ],
+    "correctOption": 1,
+    "explanation": "An audit provides reasonable assurance, not absolute assurance."
+  },
+  {
+    "id": 10,
+    "type": "General Auditing Principles and Auditors Responsibilities",
+    "question": "The inherent limitations of an audit mean that:",
+    "options": [
+      "(a) The auditor can guarantee detection of every fraud",
+      "(b) Some risk remains that material misstatements may not be detected",
+      "(c) Audit evidence is unnecessary",
+      "(d) Reasonable assurance equals certainty"
+    ],
+    "correctOption": 1,
+    "explanation": "Because of inherent limitations of auditing, reasonable assurance cannot be absolute assurance."
+  },
+  {
+    "id": 11,
+    "type": "General Auditing Principles and Auditors Responsibilities",
+    "question": "Management's responsibility for the financial statements includes responsibility for:",
+    "options": [
+      "(a) Expressing the auditor's opinion",
+      "(b) Preparation and fair presentation of the financial statements",
+      "(c) Determining audit materiality",
+      "(d) Designing the auditor's procedures"
+    ],
+    "correctOption": 1,
+    "explanation": "Management is responsible for preparation and fair presentation of financial statements."
+  },
+  {
+    "id": 12,
+    "type": "General Auditing Principles and Auditors Responsibilities",
+    "question": "An auditor discovers contradictory evidence regarding a significant management assertion. The auditor should:",
+    "options": [
+      "(a) Prefer management's evidence automatically",
+      "(b) Ignore the contradiction if immaterial in appearance",
+      "(c) Investigate the contradiction and obtain sufficient appropriate evidence",
+      "(d) Immediately issue an adverse opinion"
+    ],
+    "correctOption": 2,
+    "explanation": "Contradictory evidence requires further investigation and evaluation."
+  },
+  {
+    "id": 13,
+    "type": "General Auditing Principles and Auditors Responsibilities",
+    "question": "Which situation most clearly illustrates management bias?",
+    "options": [
+      "(a) Management uses an unbiased valuation method",
+      "(b) Management consistently selects assumptions producing the most favourable result",
+      "(c) Management provides external confirmations",
+      "(d) Management corrects an identified error"
+    ],
+    "correctOption": 1,
+    "explanation": "Consistent selection of favourable assumptions may indicate management bias."
+  },
+  {
+    "id": 14,
+    "type": "General Auditing Principles and Auditors Responsibilities",
+    "question": "When an auditor uses an expert, ultimate responsibility for the audit opinion:",
+    "options": [
+      "(a) Automatically transfers to the expert",
+      "(b) Remains with the auditor",
+      "(c) Transfers to management",
+      "(d) Is shared equally with the expert"
+    ],
+    "correctOption": 1,
+    "explanation": "Use of an auditor's expert does not relieve the auditor of responsibility for the audit opinion."
+  },
+  {
+    "id": 15,
+    "type": "General Auditing Principles and Auditors Responsibilities",
+    "question": "If audit evidence obtained from two sources is inconsistent, the auditor should:",
+    "options": [
+      "(a) Select the source that supports management",
+      "(b) Investigate the inconsistency",
+      "(c) Ignore both sources",
+      "(d) Automatically qualify the opinion"
+    ],
+    "correctOption": 1,
+    "explanation": "Inconsistency in evidence is a matter requiring investigation."
+  },
+  {
+    "id": 16,
+    "type": "Audit Planning, Strategy and Execution",
+    "question": "The overall audit strategy primarily establishes:",
+    "options": [
+      "(a) The exact working-paper format",
+      "(b) Scope, timing and direction of the audit",
+      "(c) Management's accounting estimates",
+      "(d) The final audit adjustment"
+    ],
+    "correctOption": 1,
+    "explanation": "The overall audit strategy establishes scope, timing and direction and guides the audit plan."
+  },
+  {
+    "id": 17,
+    "type": "Audit Planning, Strategy and Execution",
+    "question": "Audit planning is best regarded as:",
+    "options": [
+      "(a) A one-time activity completed before fieldwork",
+      "(b) A continuous and iterative process throughout the audit",
+      "(c) A management responsibility",
+      "(d) An activity required only for listed entities"
+    ],
+    "correctOption": 1,
+    "explanation": "Planning is continuous and may need modification as circumstances change."
+  },
+  {
+    "id": 18,
+    "type": "Audit Planning, Strategy and Execution",
+    "question": "The audit plan differs from the overall audit strategy because the audit plan:",
+    "options": [
+      "(a) Contains more detailed audit procedures",
+      "(b) Is prepared by management",
+      "(c) Determines financial reporting requirements",
+      "(d) Eliminates the need for professional judgment"
+    ],
+    "correctOption": 0,
+    "explanation": "The audit plan contains the nature, timing and extent of further audit procedures."
+  },
+  {
+    "id": 19,
+    "type": "Audit Planning, Strategy and Execution",
+    "question": "If significant new information changes the auditor's risk assessment, the auditor should:",
+    "options": [
+      "(a) Continue unchanged",
+      "(b) Modify the audit strategy or plan as appropriate",
+      "(c) Ignore the new information",
+      "(d) Transfer responsibility to management"
+    ],
+    "correctOption": 1,
+    "explanation": "Audit planning is iterative and should respond to new information."
+  },
+  {
+    "id": 20,
+    "type": "Audit Planning, Strategy and Execution",
+    "question": "The involvement of the engagement partner and key team members during planning is important primarily because it:",
+    "options": [
+      "(a) Removes all audit risk",
+      "(b) Brings their experience and judgment to significant planning decisions",
+      "(c) Transfers responsibility to junior staff",
+      "(d) Eliminates the need for documentation"
+    ],
+    "correctOption": 1,
+    "explanation": "Appropriate team involvement improves planning and identification of significant matters."
+  },
+  {
+    "id": 21,
+    "type": "Audit Planning, Strategy and Execution",
+    "question": "A higher-risk engagement would ordinarily require:",
+    "options": [
+      "(a) Less experienced personnel",
+      "(b) Greater partner involvement and appropriate allocation of resources",
+      "(c) Elimination of supervision",
+      "(d) Less audit evidence"
+    ],
+    "correctOption": 1,
+    "explanation": "Riskier engagements generally require appropriate resources, supervision and experienced personnel."
+  },
+  {
+    "id": 22,
+    "type": "Audit Planning, Strategy and Execution",
+    "question": "An audit procedure designed specifically to detect material misstatements at the assertion level is a:",
+    "options": [
+      "(a) Substantive procedure",
+      "(b) Governance procedure",
+      "(c) Quality review",
+      "(d) Acceptance procedure"
+    ],
+    "correctOption": 0,
+    "explanation": "Substantive procedures are designed to detect material misstatements at the assertion level."
+  },
+  {
+    "id": 23,
+    "type": "Audit Planning, Strategy and Execution",
+    "question": "If the auditor decides to rely extensively on controls, the auditor should:",
+    "options": [
+      "(a) Eliminate all substantive procedures",
+      "(b) Obtain appropriate evidence regarding the operating effectiveness of relevant controls",
+      "(c) Rely on management representations only",
+      "(d) Avoid testing controls"
+    ],
+    "correctOption": 1,
+    "explanation": "Reliance on controls requires appropriate testing of their operating effectiveness."
+  },
+  {
+    "id": 24,
+    "type": "Audit Planning, Strategy and Execution",
+    "question": "Supervision of audit staff is primarily intended to ensure that:",
+    "options": [
+      "(a) Staff work is performed in accordance with the planned audit approach",
+      "(b) Staff independently determine the audit opinion",
+      "(c) Management approves working papers",
+      "(d) All audit procedures are performed by the partner"
+    ],
+    "correctOption": 0,
+    "explanation": "Supervision ensures appropriate direction, review and performance of audit work."
+  },
+  {
+    "id": 25,
+    "type": "Materiality, Risk Assessment and Internal Control",
+    "question": "Materiality is affected by:",
+    "options": [
+      "(a) Only the monetary size of a misstatement",
+      "(b) Both quantitative and qualitative considerations",
+      "(c) Only management's opinion",
+      "(d) Only the auditor's fee"
+    ],
+    "correctOption": 1,
+    "explanation": "Materiality depends on magnitude and nature of information and circumstances."
+  },
+  {
+    "id": 26,
+    "type": "Materiality, Risk Assessment and Internal Control",
+    "question": "Performance materiality is generally set:",
+    "options": [
+      "(a) Above overall materiality",
+      "(b) At or below overall materiality to reduce aggregation risk",
+      "(c) Equal to zero",
+      "(d) Only after the audit opinion"
+    ],
+    "correctOption": 1,
+    "explanation": "Performance materiality is set below overall materiality to reduce the probability that aggregate uncorrected and undetected misstatements exceed overall materiality."
+  },
+  {
+    "id": 27,
+    "type": "Materiality, Risk Assessment and Internal Control",
+    "question": "If assessed risk increases, the auditor ordinarily needs:",
+    "options": [
+      "(a) Less persuasive evidence",
+      "(b) More persuasive evidence",
+      "(c) No substantive procedures",
+      "(d) Only management representation"
+    ],
+    "correctOption": 1,
+    "explanation": "Higher assessed risk generally requires more persuasive audit evidence."
+  },
+  {
+    "id": 28,
+    "type": "Materiality, Risk Assessment and Internal Control",
+    "question": "Inherent risk relates primarily to:",
+    "options": [
+      "(a) Susceptibility of an assertion to misstatement before considering related controls",
+      "(b) Risk that the auditor's report is late",
+      "(c) Risk of staff turnover",
+      "(d) Risk of non-payment of audit fees"
+    ],
+    "correctOption": 0,
+    "explanation": "Inherent risk reflects susceptibility to misstatement before consideration of controls."
+  },
+  {
+    "id": 29,
+    "type": "Materiality, Risk Assessment and Internal Control",
+    "question": "Control risk is the risk that:",
+    "options": [
+      "(a) The auditor fails to detect a misstatement",
+      "(b) A misstatement that could occur is not prevented or detected and corrected by controls",
+      "(c) Management refuses an audit adjustment",
+      "(d) The auditor selects a wrong accounting policy"
+    ],
+    "correctOption": 1,
+    "explanation": "Control risk concerns failure of internal control to prevent, detect or correct a material misstatement."
+  },
+  {
+    "id": 30,
+    "type": "Materiality, Risk Assessment and Internal Control",
+    "question": "Detection risk is primarily affected by:",
+    "options": [
+      "(a) The effectiveness of audit procedures",
+      "(b) The client's profitability",
+      "(c) Management remuneration",
+      "(d) The entity's share price"
+    ],
+    "correctOption": 0,
+    "explanation": "Detection risk relates to the possibility that audit procedures fail to detect an existing misstatement."
+  },
+  {
+    "id": 31,
+    "type": "Materiality, Risk Assessment and Internal Control",
+    "question": "A significant deficiency in internal control should ordinarily be:",
+    "options": [
+      "(a) Ignored if no error has yet been detected",
+      "(b) Communicated appropriately to those charged with governance and management as required",
+      "(c) Corrected by the auditor",
+      "(d) Disclosed publicly in every case"
+    ],
+    "correctOption": 1,
+    "explanation": "Significant deficiencies are appropriately communicated to management and those charged with governance."
+  },
+  {
+    "id": 32,
+    "type": "Materiality, Risk Assessment and Internal Control",
+    "question": "A control that prevents an unauthorized transaction before it occurs is primarily:",
+    "options": [
+      "(a) Preventive",
+      "(b) Detective",
+      "(c) Corrective only",
+      "(d) Compensating only"
+    ],
+    "correctOption": 0,
+    "explanation": "Preventive controls are designed to prevent errors or unauthorized transactions."
+  },
+  {
+    "id": 33,
+    "type": "Materiality, Risk Assessment and Internal Control",
+    "question": "A control that identifies an error after processing is primarily:",
+    "options": [
+      "(a) Preventive",
+      "(b) Detective",
+      "(c) Authorization",
+      "(d) Strategic"
+    ],
+    "correctOption": 1,
+    "explanation": "Detective controls identify errors or irregularities after they occur."
+  },
+  {
+    "id": 34,
+    "type": "Materiality, Risk Assessment and Internal Control",
+    "question": "An unusual transaction involving a related party should be assessed carefully because:",
+    "options": [
+      "(a) Related-party transactions are always illegal",
+      "(b) Relationships may create heightened risk of material misstatement",
+      "(c) Related parties are never disclosed",
+      "(d) They require no audit evidence"
+    ],
+    "correctOption": 1,
+    "explanation": "Related-party relationships and transactions may create significant risks requiring specific attention."
+  },
+  {
+    "id": 35,
+    "type": "Audit Evidence",
+    "question": "Which evidence is generally considered more reliable?",
+    "options": [
+      "(a) Oral representation from management",
+      "(b) External confirmation obtained directly by the auditor",
+      "(c) Internally generated document with weak controls",
+      "(d) Unsigned internal memo"
+    ],
+    "correctOption": 1,
+    "explanation": "Evidence obtained directly by the auditor from an independent external source is generally more reliable."
+  },
+  {
+    "id": 36,
+    "type": "Audit Evidence",
+    "question": "Inspection of an asset primarily provides evidence about:",
+    "options": [
+      "(a) Existence",
+      "(b) Completeness of liabilities",
+      "(c) Future profitability",
+      "(d) Management integrity"
+    ],
+    "correctOption": 0,
+    "explanation": "Physical inspection generally provides evidence regarding existence, but may not establish rights or valuation."
+  },
+  {
+    "id": 37,
+    "type": "Audit Evidence",
+    "question": "Inspection of title documents for property primarily helps address:",
+    "options": [
+      "(a) Rights and obligations",
+      "(b) Cut-off only",
+      "(c) Completeness of revenue",
+      "(d) Classification of expenses"
+    ],
+    "correctOption": 0,
+    "explanation": "Title documents can provide evidence about the entity's rights to property."
+  },
+  {
+    "id": 38,
+    "type": "Audit Evidence",
+    "question": "Reperformance involves:",
+    "options": [
+      "(a) Repeating an independently performed control or procedure",
+      "(b) Asking management for an explanation",
+      "(c) Reading the annual report",
+      "(d) Observing employees only"
+    ],
+    "correctOption": 0,
+    "explanation": "Reperformance is the auditor's independent execution of procedures or controls originally performed as part of internal control."
+  },
+  {
+    "id": 39,
+    "type": "Audit Evidence",
+    "question": "Analytical procedures primarily involve:",
+    "options": [
+      "(a) Evaluation of plausible relationships among financial and non-financial data",
+      "(b) Physical verification only",
+      "(c) Confirmation only",
+      "(d) Recalculation only"
+    ],
+    "correctOption": 0,
+    "explanation": "Analytical procedures evaluate plausible relationships and investigate unexpected fluctuations."
+  },
+  {
+    "id": 40,
+    "type": "Audit Evidence",
+    "question": "A written representation from management is:",
+    "options": [
+      "(a) A substitute for all other audit evidence",
+      "(b) Necessary in certain circumstances but not a substitute for sufficient appropriate audit evidence",
+      "(c) Always the strongest evidence",
+      "(d) Irrelevant to auditing"
+    ],
+    "correctOption": 1,
+    "explanation": "Written representations supplement other evidence and cannot substitute for evidence the auditor needs."
+  },
+  {
+    "id": 41,
+    "type": "Audit Evidence",
+    "question": "If management refuses to provide a written representation that the auditor considers necessary, the auditor should:",
+    "options": [
+      "(a) Ignore the refusal",
+      "(b) Evaluate its effect on the audit and the auditor's ability to obtain sufficient appropriate evidence",
+      "(c) Automatically issue an unmodified opinion",
+      "(d) Treat the refusal as approval"
+    ],
+    "correctOption": 1,
+    "explanation": "A refusal may represent a limitation on evidence and can have implications for the audit opinion."
+  },
+  {
+    "id": 42,
+    "type": "Audit Evidence",
+    "question": "Sampling risk exists because:",
+    "options": [
+      "(a) The auditor never obtains evidence",
+      "(b) The conclusion from a sample may differ from the conclusion from testing the entire population",
+      "(c) Management always manipulates samples",
+      "(d) Sampling eliminates professional judgment"
+    ],
+    "correctOption": 1,
+    "explanation": "Sampling risk is inherent whenever conclusions are drawn from a sample."
+  },
+  {
+    "id": 43,
+    "type": "Audit Evidence",
+    "question": "When designing an audit sample, increasing the desired level of assurance ordinarily tends to:",
+    "options": [
+      "(a) Reduce sample size automatically",
+      "(b) Increase the sample size, all else equal",
+      "(c) Eliminate sampling risk",
+      "(d) Eliminate substantive testing"
+    ],
+    "correctOption": 1,
+    "explanation": "Greater assurance generally requires a larger sample, assuming other factors remain constant."
+  },
+  {
+    "id": 44,
+    "type": "Audit Evidence",
+    "question": "An external confirmation is most directly useful for testing:",
+    "options": [
+      "(a) Certain balances and terms with independent external parties",
+      "(b) Employee morale",
+      "(c) Internal control culture",
+      "(d) Management competence"
+    ],
+    "correctOption": 0,
+    "explanation": "External confirmations are particularly useful for obtaining evidence directly from external parties."
+  },
+  {
+    "id": 45,
+    "type": "Audit Evidence",
+    "question": "A negative confirmation generally provides less persuasive evidence than a positive confirmation because:",
+    "options": [
+      "(a) It is never sent externally",
+      "(b) Non-response does not necessarily establish agreement",
+      "(c) It cannot relate to balances",
+      "(d) It is prepared by management"
+    ],
+    "correctOption": 1,
+    "explanation": "Under negative confirmation, absence of response does not ordinarily constitute explicit confirmation."
+  },
+  {
+    "id": 46,
+    "type": "Completion and Review",
+    "question": "Subsequent events procedures are performed primarily to identify events occurring:",
+    "options": [
+      "(a) Only before the reporting period begins",
+      "(b) Between the date of financial statements and the date of the auditor's report",
+      "(c) Only after the audit report is issued",
+      "(d) Only during the previous financial year"
+    ],
+    "correctOption": 1,
+    "explanation": "The auditor performs subsequent events procedures up to the date of the auditor's report."
+  },
+  {
+    "id": 47,
+    "type": "Completion and Review",
+    "question": "An event after the reporting date that provides evidence of a condition existing at the reporting date may require:",
+    "options": [
+      "(a) Adjustment of the financial statements",
+      "(b) No consideration",
+      "(c) Automatic disclaimer",
+      "(d) Cancellation of the audit"
+    ],
+    "correctOption": 0,
+    "explanation": "Such events may provide evidence about conditions existing at the reporting date and may require adjustment."
+  },
+  {
+    "id": 48,
+    "type": "Completion and Review",
+    "question": "An event arising after the reporting date but before the auditor's report that relates to a new condition generally requires:",
+    "options": [
+      "(a) Adjustment for the earlier condition",
+      "(b) Appropriate disclosure where required",
+      "(c) Automatic adverse opinion",
+      "(d) No evaluation"
+    ],
+    "correctOption": 1,
+    "explanation": "Events relating to conditions arising after the reporting date may require disclosure depending on their significance."
+  },
+  {
+    "id": 49,
+    "type": "Completion and Review",
+    "question": "The auditor's going concern evaluation is primarily concerned with:",
+    "options": [
+      "(a) Whether management will achieve every forecast",
+      "(b) The appropriateness of management's use of the going concern basis and related disclosures",
+      "(c) Whether the company will definitely survive",
+      "(d) The auditor's personal investment"
+    ],
+    "correctOption": 1,
+    "explanation": "The auditor evaluates management's use of the going concern basis and related material uncertainties and disclosures."
+  },
+  {
+    "id": 50,
+    "type": "Completion and Review",
+    "question": "A material uncertainty related to going concern should generally be considered in relation to:",
+    "options": [
+      "(a) Only tax expense",
+      "(b) Adequacy of financial statement disclosure and implications for the auditor's report",
+      "(c) Employee salaries only",
+      "(d) Audit fees only"
+    ],
+    "correctOption": 1,
+    "explanation": "The auditor considers whether material uncertainty is adequately disclosed and the consequences for reporting."
+  },
+  {
+    "id": 51,
+    "type": "Completion and Review",
+    "question": "The purpose of an overall review of the financial statements near completion is to:",
+    "options": [
+      "(a) Replace substantive testing",
+      "(b) Evaluate whether the financial statements are consistent with the auditor's understanding and evidence",
+      "(c) Allow management to determine the opinion",
+      "(d) Eliminate documentation"
+    ],
+    "correctOption": 1,
+    "explanation": "The overall review assists in evaluating the consistency of the financial statements with the auditor's understanding and conclusions."
+  },
+  {
+    "id": 52,
+    "type": "Completion and Review",
+    "question": "Uncorrected misstatements should be evaluated:",
+    "options": [
+      "(a) Individually only",
+      "(b) Individually and in aggregate, considering materiality",
+      "(c) Only by management",
+      "(d) Only after the audit report is issued"
+    ],
+    "correctOption": 1,
+    "explanation": "The auditor considers the effect of uncorrected misstatements individually and in aggregate."
+  },
+  {
+    "id": 53,
+    "type": "Reporting",
+    "question": "An unmodified opinion is appropriate when the auditor concludes that:",
+    "options": [
+      "(a) Financial statements are materially misstated",
+      "(b) Financial statements are prepared, in all material respects, in accordance with the applicable framework",
+      "(c) Evidence is insufficient and pervasive",
+      "(d) Management refuses all adjustments"
+    ],
+    "correctOption": 1,
+    "explanation": "An unmodified opinion is issued when the financial statements are free from material misstatement under the applicable framework."
+  },
+  {
+    "id": 54,
+    "type": "Reporting",
+    "question": "A qualified opinion due to a known misstatement is generally appropriate when the misstatement is:",
+    "options": [
+      "(a) Immaterial",
+      "(b) Material but not pervasive",
+      "(c) Material and pervasive",
+      "(d) Never material"
+    ],
+    "correctOption": 1,
+    "explanation": "A material but not pervasive misstatement generally results in a qualified opinion."
+  },
+  {
+    "id": 55,
+    "type": "Reporting",
+    "question": "An adverse opinion is generally appropriate when identified misstatements are:",
+    "options": [
+      "(a) Immaterial",
+      "(b) Material but not pervasive",
+      "(c) Material and pervasive",
+      "(d) Merely possible"
+    ],
+    "correctOption": 2,
+    "explanation": "Material and pervasive misstatements result in an adverse opinion."
+  },
+  {
+    "id": 56,
+    "type": "Reporting",
+    "question": "A disclaimer of opinion is generally appropriate when the auditor cannot obtain sufficient appropriate evidence and possible effects are:",
+    "options": [
+      "(a) Immaterial",
+      "(b) Material but not pervasive",
+      "(c) Material and pervasive",
+      "(d) Certain to be nil"
+    ],
+    "correctOption": 2,
+    "explanation": "A pervasive scope limitation may require a disclaimer of opinion."
+  },
+  {
+    "id": 57,
+    "type": "Reporting",
+    "question": "Which combination is correct?",
+    "options": [
+      "(a) Known material pervasive misstatement - qualified",
+      "(b) Known material pervasive misstatement - adverse",
+      "(c) Evidence limitation material not pervasive - adverse",
+      "(d) Evidence limitation material pervasive - qualified"
+    ],
+    "correctOption": 1,
+    "explanation": "Known material and pervasive misstatement results in an adverse opinion."
+  },
+  {
+    "id": 58,
+    "type": "Reporting",
+    "question": "A Key Audit Matter is intended primarily to:",
+    "options": [
+      "(a) Replace the audit opinion",
+      "(b) Communicate matters of most significance in the audit",
+      "(c) Disclose every audit adjustment",
+      "(d) Provide assurance on future profits"
+    ],
+    "correctOption": 1,
+    "explanation": "KAMs communicate matters that, in the auditor's professional judgment, were of most significance in the audit."
+  },
+  {
+    "id": 59,
+    "type": "Reporting",
+    "question": "A matter giving rise to a modified opinion:",
+    "options": [
+      "(a) Can never also be relevant to KAM considerations",
+      "(b) Is considered in determining whether it is a matter of most significance",
+      "(c) Must always be excluded from the report",
+      "(d) Automatically becomes an Emphasis of Matter"
+    ],
+    "correctOption": 1,
+    "explanation": "A matter resulting in a modified opinion may also be significant in determining KAMs, subject to the applicable reporting requirements."
+  },
+  {
+    "id": 60,
+    "type": "Reporting",
+    "question": "An Emphasis of Matter paragraph is used primarily when:",
+    "options": [
+      "(a) The auditor wants to modify the opinion",
+      "(b) A matter appropriately presented or disclosed in the financial statements is fundamental to users' understanding",
+      "(c) The auditor lacks evidence",
+      "(d) Management refuses to sign the representation letter"
+    ],
+    "correctOption": 1,
+    "explanation": "An EOM paragraph draws attention to a matter appropriately presented or disclosed that is fundamental to users' understanding."
+  },
+  {
+    "id": 61,
+    "type": "Reporting",
+    "question": "An Other Matter paragraph refers to:",
+    "options": [
+      "(a) A matter presented or disclosed in the financial statements",
+      "(b) A matter other than those presented or disclosed in the financial statements that is relevant to users' understanding of the audit",
+      "(c) Every audit adjustment",
+      "(d) Management's forecasts"
+    ],
+    "correctOption": 1,
+    "explanation": "An Other Matter paragraph addresses matters other than those presented or disclosed in the financial statements that are relevant to users' understanding of the audit."
+  },
+  {
+    "id": 62,
+    "type": "Reporting",
+    "question": "If comparative information is materially misstated, the auditor should:",
+    "options": [
+      "(a) Ignore it because it relates to the previous period",
+      "(b) Consider the applicable reporting implications",
+      "(c) Modify only management's records",
+      "(d) Delete the comparative figures"
+    ],
+    "correctOption": 1,
+    "explanation": "Comparative information forms part of the financial reporting and may affect the auditor's report."
+  },
+  {
+    "id": 63,
+    "type": "Reporting",
+    "question": "The auditor's report date should generally not be earlier than the date on which:",
+    "options": [
+      "(a) Management approves the financial statements and the auditor has obtained sufficient appropriate evidence",
+      "(b) Fieldwork begins",
+      "(c) The first invoice is issued",
+      "(d) The audit fee is negotiated"
+    ],
+    "correctOption": 0,
+    "explanation": "The report date reflects completion of audit work necessary to support the opinion and management's responsibility for the financial statements."
+  },
+  {
+    "id": 64,
+    "type": "Specialised Areas",
+    "question": "In auditing accounting estimates, the auditor should focus particularly on:",
+    "options": [
+      "(a) Management's assumptions and methods",
+      "(b) Whether estimates are prepared without judgment",
+      "(c) Whether every estimate equals last year's figure",
+      "(d) Whether the auditor prepares the estimate"
+    ],
+    "correctOption": 0,
+    "explanation": "The auditor evaluates methods, assumptions, data and related disclosures used in estimates."
+  },
+  {
+    "id": 65,
+    "type": "Specialised Areas",
+    "question": "Estimation uncertainty is especially relevant when:",
+    "options": [
+      "(a) Outcomes are highly predictable",
+      "(b) The amount cannot be measured with precision due to inherent uncertainty",
+      "(c) There is no management judgment",
+      "(d) The amount is always zero"
+    ],
+    "correctOption": 1,
+    "explanation": "Estimation uncertainty arises where measurement is subject to inherent lack of precision."
+  },
+  {
+    "id": 66,
+    "type": "Specialised Areas",
+    "question": "A significant accounting estimate supported by a valuation model should lead the auditor to consider:",
+    "options": [
+      "(a) Inputs, assumptions and methodology",
+      "(b) Only the final numerical amount",
+      "(c) Only management's representation",
+      "(d) Only the previous year's amount"
+    ],
+    "correctOption": 0,
+    "explanation": "The auditor evaluates the appropriateness of methodology, assumptions and data used in the estimate."
+  },
+  {
+    "id": 67,
+    "type": "Specialised Areas",
+    "question": "When auditing fair value measurements, the auditor should consider whether:",
+    "options": [
+      "(a) The valuation method and assumptions are appropriate",
+      "(b) Management's estimate is automatically correct",
+      "(c) External evidence is never relevant",
+      "(d) Valuation risk is irrelevant"
+    ],
+    "correctOption": 0,
+    "explanation": "Fair value auditing requires evaluation of methods, assumptions, inputs and disclosures."
+  },
+  {
+    "id": 68,
+    "type": "Specialised Areas",
+    "question": "A specialist engaged by management is:",
+    "options": [
+      "(a) Automatically considered an auditor's expert",
+      "(b) A management's expert",
+      "(c) The engagement partner",
+      "(d) A component auditor"
+    ],
+    "correctOption": 1,
+    "explanation": "A person whose expertise assists management in preparing financial statements is management's expert."
+  },
+  {
+    "id": 69,
+    "type": "Related Services",
+    "question": "An agreed-upon procedures engagement primarily results in:",
+    "options": [
+      "(a) An audit opinion",
+      "(b) Factual findings from procedures agreed by the relevant parties",
+      "(c) Absolute assurance",
+      "(d) A review conclusion"
+    ],
+    "correctOption": 1,
+    "explanation": "AUP engagements report factual findings and do not express an audit or review opinion."
+  },
+  {
+    "id": 70,
+    "type": "Related Services",
+    "question": "In an agreed-upon procedures engagement, the procedures are:",
+    "options": [
+      "(a) Determined exclusively by the practitioner",
+      "(b) Agreed with the intended users and/or engaging party as applicable",
+      "(c) Prescribed identically for every engagement",
+      "(d) Determined by the stock exchange"
+    ],
+    "correctOption": 1,
+    "explanation": "The procedures are agreed with the relevant parties based on the engagement."
+  },
+  {
+    "id": 71,
+    "type": "Related Services",
+    "question": "A compilation engagement ordinarily involves:",
+    "options": [
+      "(a) Providing an audit opinion",
+      "(b) Assisting management in presenting financial information without providing assurance",
+      "(c) Providing reasonable assurance",
+      "(d) Investigating fraud"
+    ],
+    "correctOption": 1,
+    "explanation": "Compilation is a non-assurance service involving presentation of financial information."
+  },
+  {
+    "id": 72,
+    "type": "Related Services",
+    "question": "The practitioner in an agreed-upon procedures engagement should:",
+    "options": [
+      "(a) Express a conclusion on whether the subject matter is fairly stated",
+      "(b) Report the factual findings from the procedures performed",
+      "(c) Guarantee that no fraud exists",
+      "(d) Issue an unmodified audit opinion"
+    ],
+    "correctOption": 1,
+    "explanation": "The report communicates factual findings without expressing an assurance conclusion."
+  },
+  {
+    "id": 73,
+    "type": "Review of Financial Information",
+    "question": "A review engagement provides:",
+    "options": [
+      "(a) Reasonable assurance",
+      "(b) Limited assurance",
+      "(c) Absolute assurance",
+      "(d) No assurance"
+    ],
+    "correctOption": 1,
+    "explanation": "Review engagements provide limited assurance."
+  },
+  {
+    "id": 74,
+    "type": "Review of Financial Information",
+    "question": "The primary procedures in a review engagement generally include:",
+    "options": [
+      "(a) Inquiry and analytical procedures",
+      "(b) Full substantive testing",
+      "(c) Complete physical verification",
+      "(d) Full audit sampling"
+    ],
+    "correctOption": 0,
+    "explanation": "Review engagements primarily use inquiry and analytical procedures."
+  },
+  {
+    "id": 75,
+    "type": "Review of Financial Information",
+    "question": "If a reviewer becomes aware of a matter causing the financial information to appear materially misstated, the reviewer should:",
+    "options": [
+      "(a) Ignore it",
+      "(b) Perform additional procedures as necessary",
+      "(c) Automatically issue an adverse audit opinion",
+      "(d) Convert the engagement into an audit without consideration"
+    ],
+    "correctOption": 1,
+    "explanation": "The practitioner performs additional procedures to obtain sufficient evidence for the review conclusion."
+  },
+  {
+    "id": 76,
+    "type": "Review of Financial Information",
+    "question": "A review differs from an audit primarily in:",
+    "options": [
+      "(a) Level of assurance and nature and extent of procedures",
+      "(b) Requirement for professional ethics",
+      "(c) Need for practitioner competence",
+      "(d) Existence of financial statements"
+    ],
+    "correctOption": 0,
+    "explanation": "A review provides limited assurance through less extensive procedures than an audit."
+  },
+  {
+    "id": 77,
+    "type": "Prospective Financial Information and Other Assurance Services",
+    "question": "Prospective financial information is primarily concerned with:",
+    "options": [
+      "(a) Historical transactions only",
+      "(b) Future financial information based on assumptions",
+      "(c) Past audit adjustments only",
+      "(d) Statutory registers only"
+    ],
+    "correctOption": 1,
+    "explanation": "Prospective financial information concerns future financial outcomes based on assumptions."
+  },
+  {
+    "id": 78,
+    "type": "Prospective Financial Information and Other Assurance Services",
+    "question": "The practitioner examining prospective financial information should evaluate whether:",
+    "options": [
+      "(a) The underlying assumptions provide a reasonable basis",
+      "(b) The forecast is guaranteed to occur",
+      "(c) Management has no uncertainty",
+      "(d) The practitioner can guarantee future performance"
+    ],
+    "correctOption": 0,
+    "explanation": "The practitioner evaluates the reasonableness of the underlying assumptions."
+  },
+  {
+    "id": 79,
+    "type": "Prospective Financial Information and Other Assurance Services",
+    "question": "A forecast differs from a projection because a forecast is generally based on:",
+    "options": [
+      "(a) Hypothetical assumptions only",
+      "(b) Assumptions reflecting the expected course of events",
+      "(c) No assumptions",
+      "(d) Historical information exclusively"
+    ],
+    "correctOption": 1,
+    "explanation": "A forecast generally reflects assumptions about expected future events and management actions."
+  },
+  {
+    "id": 80,
+    "type": "Prospective Financial Information and Other Assurance Services",
+    "question": "A projection may include:",
+    "options": [
+      "(a) Hypothetical assumptions about future events",
+      "(b) Only events already completed",
+      "(c) No management assumptions",
+      "(d) Only audited balances"
+    ],
+    "correctOption": 0,
+    "explanation": "Projections may be based on hypothetical assumptions about future events and management actions."
+  },
+  {
+    "id": 81,
+    "type": "Digital Auditing & Assurance",
+    "question": "Use of audit data analytics primarily enables the auditor to:",
+    "options": [
+      "(a) Eliminate professional judgment",
+      "(b) Analyse large volumes of data and identify unusual patterns",
+      "(c) Guarantee fraud detection",
+      "(d) Eliminate audit evidence"
+    ],
+    "correctOption": 1,
+    "explanation": "Data analytics can analyse large populations and highlight unusual relationships requiring investigation."
+  },
+  {
+    "id": 82,
+    "type": "Digital Auditing & Assurance",
+    "question": "An anomaly identified by data analytics should ordinarily be:",
+    "options": [
+      "(a) Automatically treated as fraud",
+      "(b) Investigated further",
+      "(c) Automatically ignored",
+      "(d) Treated as an audit adjustment"
+    ],
+    "correctOption": 1,
+    "explanation": "Analytics identify exceptions or patterns; further investigation is necessary before drawing conclusions."
+  },
+  {
+    "id": 83,
+    "type": "Digital Auditing & Assurance",
+    "question": "When auditing in an IT environment, the auditor should consider:",
+    "options": [
+      "(a) IT general controls and relevant application controls",
+      "(b) Only paper documents",
+      "(c) Only management representations",
+      "(d) No controls"
+    ],
+    "correctOption": 0,
+    "explanation": "IT general controls and application controls may be relevant to the reliability of information used in the audit."
+  },
+  {
+    "id": 84,
+    "type": "Digital Auditing & Assurance",
+    "question": "A change in an automated application control may be particularly significant because:",
+    "options": [
+      "(a) Automated controls are always immaterial",
+      "(b) A change may affect processing consistently across a large population",
+      "(c) Automated controls cannot fail",
+      "(d) IT changes do not affect audit risk"
+    ],
+    "correctOption": 1,
+    "explanation": "Changes to automated controls can have broad effects because the same logic may apply to many transactions."
+  },
+  {
+    "id": 85,
+    "type": "Digital Auditing & Assurance",
+    "question": "The auditor should not assume that system-generated information is reliable merely because:",
+    "options": [
+      "(a) It is generated by a computer",
+      "(b) It comes from an audited entity",
+      "(c) It appears in a report",
+      "(d) It is electronically stored"
+    ],
+    "correctOption": 0,
+    "explanation": "Reliability depends on relevant controls and procedures, not merely on computer generation."
+  },
+  {
+    "id": 86,
+    "type": "Digital Auditing & Assurance",
+    "question": "Access controls over an accounting system primarily address:",
+    "options": [
+      "(a) Whether unauthorised persons can access or alter information",
+      "(b) Whether financial statements are profitable",
+      "(c) Whether management approves dividends",
+      "(d) Whether audit fees are paid"
+    ],
+    "correctOption": 0,
+    "explanation": "Access controls restrict unauthorised access to systems and data."
+  },
+  {
+    "id": 87,
+    "type": "Group Audits",
+    "question": "Ultimate responsibility for the group audit opinion rests with:",
+    "options": [
+      "(a) The component auditor",
+      "(b) The group engagement partner",
+      "(c) The parent company's CFO",
+      "(d) The largest subsidiary"
+    ],
+    "correctOption": 1,
+    "explanation": "The group engagement partner is responsible for the group audit opinion."
+  },
+  {
+    "id": 88,
+    "type": "Group Audits",
+    "question": "A component auditor's work is used by the group engagement team. The group team should:",
+    "options": [
+      "(a) Accept it automatically",
+      "(b) Obtain an appropriate understanding and evaluate whether sufficient appropriate evidence has been obtained",
+      "(c) Transfer the group opinion to the component auditor",
+      "(d) Ignore component risks"
+    ],
+    "correctOption": 1,
+    "explanation": "The group engagement team retains responsibility and must evaluate the work and evidence relevant to the group audit."
+  },
+  {
+    "id": 89,
+    "type": "Group Audits",
+    "question": "A component may be financially significant to the group even if:",
+    "options": [
+      "(a) It is small in legal size",
+      "(b) It has risks of material misstatement significant to the group",
+      "(c) It has no transactions",
+      "(d) It is unregistered"
+    ],
+    "correctOption": 1,
+    "explanation": "Components may be significant because of their individual financial significance or specific risks."
+  },
+  {
+    "id": 90,
+    "type": "Group Audits",
+    "question": "When the group engagement team determines that a component is significant due to significant risk, the response should:",
+    "options": [
+      "(a) Ignore the component",
+      "(b) Address the significant risk through appropriate audit procedures",
+      "(c) Automatically issue a qualified opinion",
+      "(d) Ask management to perform the audit"
+    ],
+    "correctOption": 1,
+    "explanation": "Significant risks at component level require an appropriate audit response."
+  },
+  {
+    "id": 91,
+    "type": "Group Audits",
+    "question": "Communication between the group engagement team and component auditor is important primarily to:",
+    "options": [
+      "(a) Coordinate audit work and communicate relevant findings",
+      "(b) Transfer legal responsibility",
+      "(c) Avoid documentation",
+      "(d) Allow management to control audit procedures"
+    ],
+    "correctOption": 0,
+    "explanation": "Effective communication supports coordination, risk response and evaluation of component audit findings."
+  },
+  {
+    "id": 92,
+    "type": "Group Audits",
+    "question": "If a component auditor identifies a significant matter relevant to the group, the component auditor should:",
+    "options": [
+      "(a) Keep it confidential from the group team",
+      "(b) Communicate it appropriately to the group engagement team",
+      "(c) Modify the group opinion",
+      "(d) Ignore it"
+    ],
+    "correctOption": 1,
+    "explanation": "Relevant significant matters must be communicated to the group engagement team."
+  },
+  {
+    "id": 93,
+    "type": "Special Features of Audit of Banks & Non-Banking Financial Companies",
+    "question": "In a bank audit, classification of advances is important because it affects:",
+    "options": [
+      "(a) Income recognition and provisioning",
+      "(b) Only share capital",
+      "(c) Only employee benefits",
+      "(d) Only fixed assets"
+    ],
+    "correctOption": 0,
+    "explanation": "Classification of advances has significant implications for income recognition and provisioning."
+  },
+  {
+    "id": 94,
+    "type": "Special Features of Audit of Banks & Non-Banking Financial Companies",
+    "question": "An auditor examining advances should pay particular attention to:",
+    "options": [
+      "(a) Asset classification and provisioning requirements",
+      "(b) Only the borrower's logo",
+      "(c) Only the branch's rent",
+      "(d) Only cash receipts"
+    ],
+    "correctOption": 0,
+    "explanation": "Advances are a key area of bank audit because classification and provisioning affect financial reporting."
+  },
+  {
+    "id": 95,
+    "type": "Special Features of Audit of Banks & Non-Banking Financial Companies",
+    "question": "For bank audit purposes, an auditor should be alert to evergreening because it may:",
+    "options": [
+      "(a) Conceal deterioration in the quality of advances",
+      "(b) Improve audit evidence automatically",
+      "(c) Reduce all credit risk",
+      "(d) Have no reporting implications"
+    ],
+    "correctOption": 0,
+    "explanation": "Evergreening may conceal the actual status of stressed advances and affect classification and provisioning."
+  },
+  {
+    "id": 96,
+    "type": "Special Features of Audit of Banks & Non-Banking Financial Companies",
+    "question": "In auditing cash and balances with banks, the auditor should place importance on:",
+    "options": [
+      "(a) Independent confirmations and reconciliation",
+      "(b) Management's oral statement only",
+      "(c) Forecast revenue",
+      "(d) Employee attendance"
+    ],
+    "correctOption": 0,
+    "explanation": "External confirmation and reconciliation provide important audit evidence over bank balances."
+  },
+  {
+    "id": 97,
+    "type": "Special Features of Audit of Banks & Non-Banking Financial Companies",
+    "question": "In a bank audit, income recognition relating to non-performing assets requires special attention because:",
+    "options": [
+      "(a) Prudential requirements may restrict recognition on an accrual basis",
+      "(b) All interest must always be accrued",
+      "(c) Income is irrelevant to asset classification",
+      "(d) It is entirely outside the auditor's scope"
+    ],
+    "correctOption": 0,
+    "explanation": "Applicable prudential norms affect income recognition for stressed/non-performing assets."
+  },
+  {
+    "id": 98,
+    "type": "Special Features of Audit of Banks & Non-Banking Financial Companies",
+    "question": "An auditor finding unusual movement in a borrower's account immediately before year-end should:",
+    "options": [
+      "(a) Automatically accept it",
+      "(b) Investigate the transaction and consider its effect on classification and reporting",
+      "(c) Ignore it",
+      "(d) Delete the transaction"
+    ],
+    "correctOption": 1,
+    "explanation": "Unusual year-end movements may indicate window dressing or evergreening and require investigation."
+  },
+  {
+    "id": 99,
+    "type": "Special Features of Audit of Banks & Non-Banking Financial Companies",
+    "question": "In an NBFC audit, the auditor should pay particular attention to:",
+    "options": [
+      "(a) Compliance with applicable regulatory and prudential requirements",
+      "(b) Only office expenses",
+      "(c) Only share certificates",
+      "(d) Only payroll"
+    ],
+    "correctOption": 0,
+    "explanation": "NBFC audits require consideration of applicable regulatory and prudential requirements."
+  },
+  {
+    "id": 100,
+    "type": "Special Features of Audit of Banks & Non-Banking Financial Companies",
+    "question": "The existence of collateral for a loan does NOT by itself establish:",
+    "options": [
+      "(a) That the loan is automatically performing",
+      "(b) That the collateral is valuable",
+      "(c) Both (a) and (b)",
+      "(d) Neither (a) nor (b)"
+    ],
+    "correctOption": 2,
+    "explanation": "Collateral does not by itself establish performance status or recoverable value."
+  },
+  {
+    "id": 101,
+    "type": "Overview of Audit of Public Sector Undertakings",
+    "question": "Audit of a public sector undertaking may involve consideration of:",
+    "options": [
+      "(a) Statutory and governmental requirements",
+      "(b) Only private contractual terms",
+      "(c) Only cash transactions",
+      "(d) Only management forecasts"
+    ],
+    "correctOption": 0,
+    "explanation": "PSU audits involve statutory, regulatory, governmental and public accountability considerations."
+  },
+  {
+    "id": 102,
+    "type": "Overview of Audit of Public Sector Undertakings",
+    "question": "Public accountability makes consideration of economy, efficiency and effectiveness particularly relevant in:",
+    "options": [
+      "(a) PSU-related audit contexts",
+      "(b) Only private family businesses",
+      "(c) Only tax audits",
+      "(d) Only inventory audits"
+    ],
+    "correctOption": 0,
+    "explanation": "Public sector audit may involve broader accountability considerations, including economy, efficiency and effectiveness."
+  },
+  {
+    "id": 103,
+    "type": "Overview of Audit of Public Sector Undertakings",
+    "question": "A statutory auditor of a PSU should not assume that:",
+    "options": [
+      "(a) Statutory compliance is irrelevant",
+      "(b) Management's assertions require no evidence",
+      "(c) Both (a) and (b) are correct",
+      "(d) Neither is correct"
+    ],
+    "correctOption": 2,
+    "explanation": "Both statements are inappropriate assumptions for a PSU audit."
+  },
+  {
+    "id": 104,
+    "type": "Overview of Audit of Public Sector Undertakings",
+    "question": "An auditor examining a government-controlled entity should be alert to:",
+    "options": [
+      "(a) Compliance and public accountability requirements",
+      "(b) Only profit maximisation",
+      "(c) Only market share",
+      "(d) Only dividend policy"
+    ],
+    "correctOption": 0,
+    "explanation": "Public sector entities operate within a broader regulatory and accountability framework."
+  },
+  {
+    "id": 105,
+    "type": "Internal Audit",
+    "question": "Internal audit is primarily intended to:",
+    "options": [
+      "(a) Replace statutory audit",
+      "(b) Add value and improve operations through assurance and consulting activity",
+      "(c) Prepare statutory financial statements",
+      "(d) Guarantee management decisions"
+    ],
+    "correctOption": 1,
+    "explanation": "Internal audit provides independent and objective assurance and consulting designed to add value and improve operations."
+  },
+  {
+    "id": 106,
+    "type": "Internal Audit",
+    "question": "A risk-based internal audit plan should give greater attention to:",
+    "options": [
+      "(a) Areas with higher risks",
+      "(b) Areas selected randomly regardless of risk",
+      "(c) Only low-risk areas",
+      "(d) Only areas requested by employees"
+    ],
+    "correctOption": 0,
+    "explanation": "Risk-based internal audit prioritises significant risks."
+  },
+  {
+    "id": 107,
+    "type": "Internal Audit",
+    "question": "Internal audit independence is strengthened when the chief internal auditor:",
+    "options": [
+      "(a) Reports appropriately to those charged with governance",
+      "(b) Reports only to the department being audited",
+      "(c) Approves all operational decisions",
+      "(d) Prepares the statutory audit opinion"
+    ],
+    "correctOption": 0,
+    "explanation": "Appropriate organisational reporting supports internal audit independence and objectivity."
+  },
+  {
+    "id": 108,
+    "type": "Internal Audit",
+    "question": "An internal auditor identifying a major control weakness should primarily:",
+    "options": [
+      "(a) Hide it to preserve management relations",
+      "(b) Communicate the finding and appropriate recommendations",
+      "(c) Correct the client's accounting records personally",
+      "(d) Issue the statutory audit report"
+    ],
+    "correctOption": 1,
+    "explanation": "Internal audit communicates findings and recommendations to improve controls and operations."
+  },
+  {
+    "id": 109,
+    "type": "Internal Audit",
+    "question": "A follow-up review in internal audit primarily determines whether:",
+    "options": [
+      "(a) Agreed corrective actions have been implemented",
+      "(b) The auditor received a fee",
+      "(c) Management changed auditors",
+      "(d) Financial statements were published"
+    ],
+    "correctOption": 0,
+    "explanation": "Follow-up evaluates implementation of agreed corrective actions."
+  },
+  {
+    "id": 110,
+    "type": "Internal Audit",
+    "question": "Internal audit may cover:",
+    "options": [
+      "(a) Governance, risk management and controls",
+      "(b) Only financial statements",
+      "(c) Only taxation",
+      "(d) Only cash"
+    ],
+    "correctOption": 0,
+    "explanation": "Internal audit has a broad scope covering governance, risk management and controls."
+  },
+  {
+    "id": 111,
+    "type": "Internal Audit",
+    "question": "An internal auditor providing consulting services should be careful to:",
+    "options": [
+      "(a) Avoid assuming management responsibility",
+      "(b) Take over operational decision-making",
+      "(c) Approve all transactions",
+      "(d) Replace the board"
+    ],
+    "correctOption": 0,
+    "explanation": "Consulting activity should not result in assuming management responsibility."
+  },
+  {
+    "id": 112,
+    "type": "Internal Audit",
+    "question": "If an internal auditor designs a control and later audits that same control, the primary concern is:",
+    "options": [
+      "(a) Self-review threat",
+      "(b) Sampling risk",
+      "(c) Currency risk",
+      "(d) Liquidity risk"
+    ],
+    "correctOption": 0,
+    "explanation": "Auditing one's own prior work creates a self-review threat."
+  },
+  {
+    "id": 113,
+    "type": "Due Diligence, Investigation & Forensic Accounting",
+    "question": "Due diligence is generally performed to:",
+    "options": [
+      "(a) Assist decision-making in a specific transaction or proposed investment",
+      "(b) Provide the statutory audit opinion",
+      "(c) Replace financial statement audit permanently",
+      "(d) Guarantee investment returns"
+    ],
+    "correctOption": 0,
+    "explanation": "Due diligence is generally tailored to a transaction or decision and assists the user in evaluating relevant risks."
+  },
+  {
+    "id": 114,
+    "type": "Due Diligence, Investigation & Forensic Accounting",
+    "question": "In a financial due diligence assignment, unusual related-party transactions should:",
+    "options": [
+      "(a) Be ignored if properly recorded",
+      "(b) Be investigated for their commercial substance and potential risks",
+      "(c) Automatically be treated as fraud",
+      "(d) Be removed from the financial statements"
+    ],
+    "correctOption": 1,
+    "explanation": "Due diligence focuses on identifying risks and understanding the substance of significant transactions."
+  },
+  {
+    "id": 115,
+    "type": "Due Diligence, Investigation & Forensic Accounting",
+    "question": "Forensic accounting differs from ordinary financial reporting primarily because it often involves:",
+    "options": [
+      "(a) Investigation of suspected financial irregularities and disputes",
+      "(b) Only bookkeeping",
+      "(c) Only budgeting",
+      "(d) Only tax computation"
+    ],
+    "correctOption": 0,
+    "explanation": "Forensic accounting applies accounting and investigative skills in fraud, disputes and legal contexts."
+  },
+  {
+    "id": 116,
+    "type": "Due Diligence, Investigation & Forensic Accounting",
+    "question": "In a forensic investigation, preservation of evidence is important because:",
+    "options": [
+      "(a) Evidence may need to support findings in legal or disciplinary proceedings",
+      "(b) Documentation has no significance",
+      "(c) Management alone determines evidence",
+      "(d) Evidence can always be recreated"
+    ],
+    "correctOption": 0,
+    "explanation": "Forensic evidence may need to withstand legal or disciplinary scrutiny, making preservation and documentation important."
+  },
+  {
+    "id": 117,
+    "type": "Due Diligence, Investigation & Forensic Accounting",
+    "question": "A forensic accountant noticing unexplained payments to an intermediary should first:",
+    "options": [
+      "(a) Conclude bribery immediately",
+      "(b) Obtain and analyse relevant evidence and understand the transaction",
+      "(c) Delete the payment",
+      "(d) Issue an audit opinion"
+    ],
+    "correctOption": 1,
+    "explanation": "Forensic conclusions should be evidence-based rather than based solely on an unexplained transaction."
+  },
+  {
+    "id": 118,
+    "type": "Due Diligence, Investigation & Forensic Accounting",
+    "question": "A red flag in forensic investigation is best understood as:",
+    "options": [
+      "(a) Proof of fraud",
+      "(b) An indicator requiring further investigation",
+      "(c) An audit opinion",
+      "(d) A legal conviction"
+    ],
+    "correctOption": 1,
+    "explanation": "A red flag indicates potential irregularity but does not by itself establish fraud."
+  },
+  {
+    "id": 119,
+    "type": "Due Diligence, Investigation & Forensic Accounting",
+    "question": "In transaction due diligence, a sudden unexplained fall in gross margin may indicate:",
+    "options": [
+      "(a) An area requiring further investigation",
+      "(b) Guaranteed fraud",
+      "(c) Guaranteed profitability",
+      "(d) No risk"
+    ],
+    "correctOption": 0,
+    "explanation": "Unexpected financial trends are risk indicators requiring further analysis."
+  },
+  {
+    "id": 120,
+    "type": "Due Diligence, Investigation & Forensic Accounting",
+    "question": "A forensic report should generally distinguish between:",
+    "options": [
+      "(a) Facts, evidence and conclusions",
+      "(b) Facts and guesses only",
+      "(c) Management opinion and speculation only",
+      "(d) Advertising and marketing"
+    ],
+    "correctOption": 0,
+    "explanation": "Forensic reporting should clearly distinguish factual evidence from analysis and conclusions."
+  },
+  {
+    "id": 121,
+    "type": "Sustainable Development Goals (SDG) & Environment, Social and Governance (ESG) Assurance",
+    "question": "ESG assurance primarily concerns:",
+    "options": [
+      "(a) Reliability of specified ESG information against appropriate criteria",
+      "(b) Guaranteeing share-price growth",
+      "(c) Marketing effectiveness",
+      "(d) Management remuneration"
+    ],
+    "correctOption": 0,
+    "explanation": "ESG assurance evaluates specified information against suitable criteria and obtains appropriate evidence."
+  },
+  {
+    "id": 122,
+    "type": "Sustainable Development Goals (SDG) & Environment, Social and Governance (ESG) Assurance",
+    "question": "The 'G' in ESG primarily relates to:",
+    "options": [
+      "(a) Governance",
+      "(b) Growth",
+      "(c) Gross profit",
+      "(d) Government tax"
+    ],
+    "correctOption": 0,
+    "explanation": "Governance covers structures, oversight, accountability, ethics and related governance matters."
+  },
+  {
+    "id": 123,
+    "type": "Sustainable Development Goals (SDG) & Environment, Social and Governance (ESG) Assurance",
+    "question": "The environmental component of ESG may include:",
+    "options": [
+      "(a) Greenhouse gas emissions and resource use",
+      "(b) Only board meetings",
+      "(c) Only employee promotions",
+      "(d) Only financial ratios"
+    ],
+    "correctOption": 0,
+    "explanation": "Environmental matters may include emissions, energy, water, waste and resource-related information."
+  },
+  {
+    "id": 124,
+    "type": "Sustainable Development Goals (SDG) & Environment, Social and Governance (ESG) Assurance",
+    "question": "The social component of ESG may include:",
+    "options": [
+      "(a) Employee welfare, human rights and community impacts",
+      "(b) Only tax payments",
+      "(c) Only board composition",
+      "(d) Only carbon emissions"
+    ],
+    "correctOption": 0,
+    "explanation": "Social matters cover workforce, human rights, communities and related impacts."
+  },
+  {
+    "id": 125,
+    "type": "Sustainable Development Goals (SDG) & Environment, Social and Governance (ESG) Assurance",
+    "question": "An assurance practitioner assessing ESG information should pay attention to:",
+    "options": [
+      "(a) Criteria used to prepare the information",
+      "(b) Only management's narrative",
+      "(c) Only share price",
+      "(d) Only advertising material"
+    ],
+    "correctOption": 0,
+    "explanation": "Assurance requires appropriate criteria against which the subject matter information is evaluated."
+  },
+  {
+    "id": 126,
+    "type": "Sustainable Development Goals (SDG) & Environment, Social and Governance (ESG) Assurance",
+    "question": "A major assurance risk in ESG reporting is:",
+    "options": [
+      "(a) Greenwashing or unsupported claims",
+      "(b) Excessive audit evidence",
+      "(c) Guaranteed financial success",
+      "(d) Automatic regulatory compliance"
+    ],
+    "correctOption": 0,
+    "explanation": "Unsupported or misleading sustainability claims create significant assurance risks."
+  },
+  {
+    "id": 127,
+    "type": "Sustainable Development Goals (SDG) & Environment, Social and Governance (ESG) Assurance",
+    "question": "ESG information may require assurance because:",
+    "options": [
+      "(a) Stakeholders may rely on it for decision-making",
+      "(b) It is always immaterial",
+      "(c) It is never externally reported",
+      "(d) It has no measurement uncertainty"
+    ],
+    "correctOption": 0,
+    "explanation": "Stakeholder reliance increases the importance of credible ESG information."
+  },
+  {
+    "id": 128,
+    "type": "Sustainable Development Goals (SDG) & Environment, Social and Governance (ESG) Assurance",
+    "question": "A sustainability metric based on an internally developed methodology should lead the practitioner to consider:",
+    "options": [
+      "(a) Whether the criteria are suitable and consistently applied",
+      "(b) Only management's approval",
+      "(c) Only the final number",
+      "(d) Whether the number is commercially attractive"
+    ],
+    "correctOption": 0,
+    "explanation": "Suitability and consistent application of criteria are central to assurance over subject matter information."
+  },
+  {
+    "id": 129,
+    "type": "Professional Ethics & Liabilities of Auditors",
+    "question": "The fundamental principle requiring honesty and straightforwardness is:",
+    "options": [
+      "(a) Integrity",
+      "(b) Confidentiality",
+      "(c) Advocacy",
+      "(d) Marketing"
+    ],
+    "correctOption": 0,
+    "explanation": "Integrity requires straightforwardness and honesty in professional and business relationships."
+  },
+  {
+    "id": 130,
+    "type": "Professional Ethics & Liabilities of Auditors",
+    "question": "Objectivity requires a professional accountant to:",
+    "options": [
+      "(a) Allow bias when profitable",
+      "(b) Avoid bias, conflict of interest and undue influence",
+      "(c) Follow management blindly",
+      "(d) Promote the client regardless of facts"
+    ],
+    "correctOption": 1,
+    "explanation": "Objectivity requires freedom from bias, conflict of interest and undue influence."
+  },
+  {
+    "id": 131,
+    "type": "Professional Ethics & Liabilities of Auditors",
+    "question": "Professional competence and due care require a professional accountant to:",
+    "options": [
+      "(a) Maintain professional knowledge and act diligently",
+      "(b) Stop learning after qualification",
+      "(c) Accept assignments beyond competence without safeguards",
+      "(d) Ignore new standards"
+    ],
+    "correctOption": 0,
+    "explanation": "Professional competence and due care require appropriate knowledge, skill, diligence and continuing development."
+  },
+  {
+    "id": 132,
+    "type": "Professional Ethics & Liabilities of Auditors",
+    "question": "Confidentiality generally means that professional information should:",
+    "options": [
+      "(a) Be disclosed freely to competitors",
+      "(b) Be protected and not disclosed without proper authority or legal/professional right or duty",
+      "(c) Always be disclosed to the public",
+      "(d) Be sold to third parties"
+    ],
+    "correctOption": 1,
+    "explanation": "Confidential information is protected except where disclosure is authorised or required/permitted by law or professional duty."
+  },
+  {
+    "id": 133,
+    "type": "Professional Ethics & Liabilities of Auditors",
+    "question": "Professional behaviour requires a professional accountant to:",
+    "options": [
+      "(a) Comply with relevant laws and regulations and avoid conduct that discredits the profession",
+      "(b) Maximise fees at all costs",
+      "(c) Ignore regulatory requirements",
+      "(d) Promote false claims"
+    ],
+    "correctOption": 0,
+    "explanation": "Professional behaviour includes compliance with laws and regulations and conduct consistent with the profession's reputation."
+  },
+  {
+    "id": 134,
+    "type": "Professional Ethics & Liabilities of Auditors",
+    "question": "A self-interest threat may arise when an auditor:",
+    "options": [
+      "(a) Has a financial interest in the audit client",
+      "(b) Performs an audit procedure",
+      "(c) Obtains external confirmation",
+      "(d) Reviews working papers"
+    ],
+    "correctOption": 0,
+    "explanation": "Financial interests can create self-interest threats to independence."
+  },
+  {
+    "id": 135,
+    "type": "Professional Ethics & Liabilities of Auditors",
+    "question": "A familiarity threat may arise when:",
+    "options": [
+      "(a) The auditor has a close or long-standing relationship with client personnel",
+      "(b) The auditor obtains a bank confirmation",
+      "(c) The auditor performs recalculation",
+      "(d) The auditor inspects inventory"
+    ],
+    "correctOption": 0,
+    "explanation": "Close or long-standing relationships can create excessive sympathy or trust and therefore familiarity threats."
+  },
+  {
+    "id": 136,
+    "type": "Professional Ethics & Liabilities of Auditors",
+    "question": "An intimidation threat may arise when:",
+    "options": [
+      "(a) The auditor faces pressure to act improperly",
+      "(b) The auditor performs analytical procedures",
+      "(c) The auditor reviews evidence",
+      "(d) The client provides a confirmation"
+    ],
+    "correctOption": 0,
+    "explanation": "Pressure or fear of actual or perceived consequences may create an intimidation threat."
+  },
+  {
+    "id": 137,
+    "type": "Professional Ethics & Liabilities of Auditors",
+    "question": "A self-review threat arises most directly when:",
+    "options": [
+      "(a) The auditor audits work previously performed by the auditor or the auditor's firm",
+      "(b) The auditor confirms receivables",
+      "(c) The auditor observes inventory",
+      "(d) The auditor reads minutes"
+    ],
+    "correctOption": 0,
+    "explanation": "Self-review occurs when previous work performed by the accountant or firm is subject to review."
+  },
+  {
+    "id": 138,
+    "type": "Professional Ethics & Liabilities of Auditors",
+    "question": "An advocacy threat may arise when the auditor:",
+    "options": [
+      "(a) Promotes a client's position to the extent that objectivity is compromised",
+      "(b) Performs an independent recalculation",
+      "(c) Requests confirmation",
+      "(d) Tests controls"
+    ],
+    "correctOption": 0,
+    "explanation": "Promoting a client's position can create an advocacy threat."
+  },
+  {
+    "id": 139,
+    "type": "Professional Ethics & Liabilities of Auditors",
+    "question": "When an independence threat cannot be reduced to an acceptable level, the appropriate response may be to:",
+    "options": [
+      "(a) Continue regardless",
+      "(b) Eliminate the circumstance or decline/withdraw from the engagement as appropriate",
+      "(c) Ask management to accept the threat",
+      "(d) Hide the threat"
+    ],
+    "correctOption": 1,
+    "explanation": "Where safeguards cannot reduce the threat to an acceptable level, the engagement should not be accepted or continued as applicable."
+  },
+  {
+    "id": 140,
+    "type": "Professional Ethics & Liabilities of Auditors",
+    "question": "Receiving an unusually valuable gift from an audit client may create:",
+    "options": [
+      "(a) Self-interest or familiarity threat",
+      "(b) Only sampling risk",
+      "(c) Only detection risk",
+      "(d) No ethical concern"
+    ],
+    "correctOption": 0,
+    "explanation": "Gifts and hospitality can create threats to compliance with fundamental principles and independence."
+  },
+  {
+    "id": 141,
+    "type": "Professional Ethics & Liabilities of Auditors",
+    "question": "A contingent fee arrangement for an audit may create:",
+    "options": [
+      "(a) Self-interest threat",
+      "(b) No threat",
+      "(c) Only inherent risk",
+      "(d) Only control risk"
+    ],
+    "correctOption": 0,
+    "explanation": "Fees dependent on an outcome can create a self-interest threat and may be prohibited in specified circumstances."
+  },
+  {
+    "id": 142,
+    "type": "Professional Ethics & Liabilities of Auditors",
+    "question": "Long association of senior personnel with an audit client may create:",
+    "options": [
+      "(a) Familiarity threat",
+      "(b) Sampling risk",
+      "(c) Currency risk",
+      "(d) Liquidity risk"
+    ],
+    "correctOption": 0,
+    "explanation": "Long association may create familiarity and other threats to independence."
+  },
+  {
+    "id": 143,
+    "type": "Professional Ethics & Liabilities of Auditors",
+    "question": "If an auditor has a prohibited financial interest in an audit client, the appropriate response is generally:",
+    "options": [
+      "(a) Ignore it if undisclosed",
+      "(b) Dispose of the interest or otherwise comply with applicable independence requirements",
+      "(c) Ask the client to approve it",
+      "(d) Record it as audit evidence"
+    ],
+    "correctOption": 1,
+    "explanation": "Prohibited financial interests must be addressed in accordance with applicable independence requirements."
+  },
+  {
+    "id": 144,
+    "type": "Professional Ethics & Liabilities of Auditors",
+    "question": "A professional accountant should disclose confidential information when:",
+    "options": [
+      "(a) Disclosure is legally required or professionally required/permitted as applicable",
+      "(b) A competitor asks",
+      "(c) The information is interesting",
+      "(d) It increases publicity"
+    ],
+    "correctOption": 0,
+    "explanation": "Confidentiality does not prevent disclosures required or appropriately permitted by law or professional duty."
+  },
+  {
+    "id": 145,
+    "type": "Professional Ethics & Liabilities of Auditors",
+    "question": "An auditor pressured by management to omit a material matter from the report faces primarily:",
+    "options": [
+      "(a) Intimidation threat",
+      "(b) Sampling risk",
+      "(c) Detection risk only",
+      "(d) Liquidity risk"
+    ],
+    "correctOption": 0,
+    "explanation": "Management pressure may create an intimidation threat."
+  },
+  {
+    "id": 146,
+    "type": "Professional Ethics & Liabilities of Auditors",
+    "question": "A statutory auditor preparing accounting records for an audit client may face:",
+    "options": [
+      "(a) Self-review threat",
+      "(b) No threat",
+      "(c) Only sampling risk",
+      "(d) Only business risk"
+    ],
+    "correctOption": 0,
+    "explanation": "Auditing records prepared by the auditor or firm can create a self-review threat."
+  },
+  {
+    "id": 147,
+    "type": "Professional Ethics & Liabilities of Auditors",
+    "question": "The auditor's responsibility for expressing an opinion cannot ordinarily be transferred to:",
+    "options": [
+      "(a) An auditor's expert",
+      "(b) Management",
+      "(c) A component auditor",
+      "(d) Any of the above"
+    ],
+    "correctOption": 3,
+    "explanation": "The engagement partner retains responsibility for the audit opinion even when using others' work."
+  },
+  {
+    "id": 148,
+    "type": "Professional Ethics & Liabilities of Auditors",
+    "question": "When an auditor delegates work to assistants, the auditor:",
+    "options": [
+      "(a) Remains responsible for the audit opinion",
+      "(b) Transfers all responsibility",
+      "(c) Becomes merely an adviser",
+      "(d) Has no responsibility for supervision"
+    ],
+    "correctOption": 0,
+    "explanation": "Delegation of work does not transfer the auditor's responsibility for the audit opinion."
+  },
+  {
+    "id": 149,
+    "type": "Professional Ethics & Liabilities of Auditors",
+    "question": "Professional misconduct may arise when a member:",
+    "options": [
+      "(a) Violates applicable professional requirements",
+      "(b) Performs appropriate audit procedures",
+      "(c) Maintains confidentiality",
+      "(d) Exercises professional judgment properly"
+    ],
+    "correctOption": 0,
+    "explanation": "Violation of professional requirements may constitute professional misconduct under applicable provisions."
+  },
+  {
+    "id": 150,
+    "type": "Professional Ethics & Liabilities of Auditors",
+    "question": "An auditor should not accept an engagement if:",
+    "options": [
+      "(a) Required competence cannot be obtained and relevant threats cannot be appropriately addressed",
+      "(b) The client is profitable",
+      "(c) The audit fee is high",
+      "(d) Management is cooperative"
+    ],
+    "correctOption": 0,
+    "explanation": "Competence and ethical considerations must be addressed before accepting an engagement."
+  },
+  {
+    "id": 151,
+    "type": "Professional Ethics & Liabilities of Auditors",
+    "question": "A threat is at an acceptable level when:",
+    "options": [
+      "(a) A reasonable and informed third party would likely conclude that compliance with fundamental principles is not compromised",
+      "(b) Management accepts the threat",
+      "(c) The fee is high",
+      "(d) The client is listed"
+    ],
+    "correctOption": 0,
+    "explanation": "The conceptual framework assesses threats from the perspective of a reasonable and informed third party."
+  },
+  {
+    "id": 152,
+    "type": "Professional Ethics & Liabilities of Auditors",
+    "question": "Safeguards are measures intended to:",
+    "options": [
+      "(a) Eliminate threats or reduce them to an acceptable level where permitted",
+      "(b) Increase audit fees",
+      "(c) Replace professional judgment",
+      "(d) Transfer responsibility to management"
+    ],
+    "correctOption": 0,
+    "explanation": "Safeguards are actions or measures addressing identified threats."
+  },
+  {
+    "id": 153,
+    "type": "Professional Ethics & Liabilities of Auditors",
+    "question": "A conflict of interest should be:",
+    "options": [
+      "(a) Identified, evaluated and appropriately addressed",
+      "(b) Ignored if profitable",
+      "(c) Disclosed only after the engagement",
+      "(d) Accepted automatically"
+    ],
+    "correctOption": 0,
+    "explanation": "Conflicts must be identified and appropriately managed under ethical requirements."
+  },
+  {
+    "id": 154,
+    "type": "Professional Ethics & Liabilities of Auditors",
+    "question": "An auditor discovering a breach of independence during an engagement should:",
+    "options": [
+      "(a) Evaluate the significance and take appropriate corrective action",
+      "(b) Ignore it",
+      "(c) Destroy related documentation",
+      "(d) Ask the client to decide"
+    ],
+    "correctOption": 0,
+    "explanation": "Independence breaches require prompt evaluation and appropriate action."
+  },
+  {
+    "id": 155,
+    "type": "Professional Ethics & Liabilities of Auditors",
+    "question": "The principle of confidentiality continues to apply:",
+    "options": [
+      "(a) Even after the professional relationship ends, subject to applicable requirements",
+      "(b) Only until the audit report date",
+      "(c) Only while fees remain unpaid",
+      "(d) Only for listed companies"
+    ],
+    "correctOption": 0,
+    "explanation": "Confidentiality generally continues after the professional relationship ends."
+  },
+  {
+    "id": 156,
+    "type": "Professional Ethics & Liabilities of Auditors",
+    "question": "An auditor should use confidential information for personal benefit:",
+    "options": [
+      "(a) Never, unless lawfully authorised and consistent with professional obligations",
+      "(b) Whenever profitable",
+      "(c) Whenever management permits",
+      "(d) Whenever the client is private"
+    ],
+    "correctOption": 0,
+    "explanation": "Confidential information must not be used for personal advantage contrary to professional obligations."
+  },
+  {
+    "id": 157,
+    "type": "Professional Ethics & Liabilities of Auditors",
+    "question": "A fee that is significantly overdue may create:",
+    "options": [
+      "(a) Self-interest threat",
+      "(b) Only detection risk",
+      "(c) No threat",
+      "(d) Only sampling risk"
+    ],
+    "correctOption": 0,
+    "explanation": "Overdue fees may resemble a loan and create a self-interest threat."
+  },
+  {
+    "id": 158,
+    "type": "Professional Ethics & Liabilities of Auditors",
+    "question": "A loan from an audit client to the auditor may create:",
+    "options": [
+      "(a) Self-interest threat and potentially an independence violation",
+      "(b) Only control risk",
+      "(c) No ethical concern",
+      "(d) Only inherent risk"
+    ],
+    "correctOption": 0,
+    "explanation": "Loans from audit clients can create significant self-interest threats and may be prohibited depending on circumstances."
+  },
+  {
+    "id": 159,
+    "type": "Professional Ethics & Liabilities of Auditors",
+    "question": "A close family relationship with a person in a key position at an audit client may create:",
+    "options": [
+      "(a) Familiarity or self-interest threat",
+      "(b) Sampling risk",
+      "(c) Liquidity risk",
+      "(d) No threat"
+    ],
+    "correctOption": 0,
+    "explanation": "Close family relationships can create threats to objectivity and independence."
+  },
+  {
+    "id": 160,
+    "type": "Professional Ethics & Liabilities of Auditors",
+    "question": "An auditor being asked to promote securities of an audit client may create:",
+    "options": [
+      "(a) Advocacy threat",
+      "(b) Only control risk",
+      "(c) No threat",
+      "(d) Sampling risk"
+    ],
+    "correctOption": 0,
+    "explanation": "Promoting a client's securities can create an advocacy threat."
+  },
+  {
+    "id": 161,
+    "type": "Quality Control",
+    "question": "An EQCR should ordinarily review:",
+    "options": [
+      "(a) Significant judgments and conclusions, not every routine audit procedure",
+      "(b) Only audit fees",
+      "(c) Only management remuneration",
+      "(d) Only tax returns"
+    ],
+    "correctOption": 0,
+    "explanation": "The review focuses on significant judgments and conclusions relevant to the engagement."
+  },
+  {
+    "id": 162,
+    "type": "Quality Control",
+    "question": "The EQCR's role is best described as:",
+    "options": [
+      "(a) Objective evaluation rather than taking over the engagement",
+      "(b) Preparing the financial statements",
+      "(c) Directing management",
+      "(d) Replacing the engagement partner"
+    ],
+    "correctOption": 0,
+    "explanation": "EQCR is a review function and does not replace the engagement partner."
+  },
+  {
+    "id": 163,
+    "type": "Audit Planning, Strategy and Execution",
+    "question": "If preliminary analytical procedures reveal an unexpected revenue spike, the auditor should:",
+    "options": [
+      "(a) Treat it as evidence of fraud automatically",
+      "(b) Investigate the fluctuation and reconsider risk assessment as necessary",
+      "(c) Ignore it",
+      "(d) Remove revenue from the financial statements"
+    ],
+    "correctOption": 1,
+    "explanation": "Unexpected trends are risk indicators requiring investigation."
+  },
+  {
+    "id": 164,
+    "type": "Audit Planning, Strategy and Execution",
+    "question": "The nature of audit procedures refers primarily to:",
+    "options": [
+      "(a) Their purpose and type",
+      "(b) Their fee",
+      "(c) Their documentation colour",
+      "(d) Their sequence only"
+    ],
+    "correctOption": 0,
+    "explanation": "Nature concerns the type and purpose of audit procedures."
+  },
+  {
+    "id": 165,
+    "type": "Audit Planning, Strategy and Execution",
+    "question": "The extent of audit procedures primarily concerns:",
+    "options": [
+      "(a) Quantity of procedures or evidence, such as sample size",
+      "(b) Type of opinion",
+      "(c) Management's strategy",
+      "(d) The reporting framework"
+    ],
+    "correctOption": 0,
+    "explanation": "Extent concerns the quantity or amount of testing and evidence."
+  },
+  {
+    "id": 166,
+    "type": "Audit Planning, Strategy and Execution",
+    "question": "The timing of audit procedures refers to:",
+    "options": [
+      "(a) When procedures are performed",
+      "(b) How fees are calculated",
+      "(c) When management approves budgets",
+      "(d) When the company declares dividends"
+    ],
+    "correctOption": 0,
+    "explanation": "Timing concerns when audit procedures are performed."
+  },
+  {
+    "id": 167,
+    "type": "Materiality, Risk Assessment and Internal Control",
+    "question": "A fraud risk is generally considered:",
+    "options": [
+      "(a) A risk requiring appropriate audit consideration",
+      "(b) Automatically immaterial",
+      "(c) Outside the auditor's responsibility",
+      "(d) Only a management issue"
+    ],
+    "correctOption": 0,
+    "explanation": "Fraud risks require appropriate risk assessment and audit responses."
+  },
+  {
+    "id": 168,
+    "type": "Materiality, Risk Assessment and Internal Control",
+    "question": "Management override of controls is significant because:",
+    "options": [
+      "(a) Management may circumvent controls designed to prevent misstatement",
+      "(b) Management cannot influence accounting",
+      "(c) Controls automatically detect all override",
+      "(d) It is irrelevant to fraud risk"
+    ],
+    "correctOption": 0,
+    "explanation": "Management override is a significant fraud consideration because management can circumvent established controls."
+  },
+  {
+    "id": 169,
+    "type": "Materiality, Risk Assessment and Internal Control",
+    "question": "Journal entries selected for testing should particularly include:",
+    "options": [
+      "(a) Unusual entries and entries made near period end where relevant",
+      "(b) Only routine payroll entries",
+      "(c) Only entries below materiality",
+      "(d) Only entries selected by management"
+    ],
+    "correctOption": 0,
+    "explanation": "Journal entry testing considers unusual, non-standard and period-end entries among other risk factors."
+  },
+  {
+    "id": 170,
+    "type": "Audit Evidence",
+    "question": "Evidence obtained directly by the auditor is generally:",
+    "options": [
+      "(a) More reliable than evidence obtained indirectly, all else equal",
+      "(b) Always unreliable",
+      "(c) Less reliable than management representation",
+      "(d) Not audit evidence"
+    ],
+    "correctOption": 0,
+    "explanation": "Direct evidence generally has greater reliability, subject to circumstances."
+  },
+  {
+    "id": 171,
+    "type": "Audit Evidence",
+    "question": "Evidence generated internally is generally more reliable when:",
+    "options": [
+      "(a) Related controls over its preparation and maintenance are effective",
+      "(b) Management refuses to explain it",
+      "(c) No controls exist",
+      "(d) It is unsigned"
+    ],
+    "correctOption": 0,
+    "explanation": "Reliability of internally generated evidence increases when related controls operate effectively."
+  },
+  {
+    "id": 172,
+    "type": "Completion and Review",
+    "question": "A final analytical review may identify:",
+    "options": [
+      "(a) Previously unrecognised inconsistencies requiring further investigation",
+      "(b) Only audit fees",
+      "(c) Only staff performance",
+      "(d) No useful information"
+    ],
+    "correctOption": 0,
+    "explanation": "Final analytical review can identify unusual relationships or inconsistencies requiring further investigation."
+  },
+  {
+    "id": 173,
+    "type": "Reporting",
+    "question": "A material uncertainty related to going concern does not automatically mean:",
+    "options": [
+      "(a) An adverse opinion must be issued",
+      "(b) The auditor should consider appropriate reporting",
+      "(c) Disclosures become important",
+      "(d) Going concern assessment is relevant"
+    ],
+    "correctOption": 0,
+    "explanation": "Reporting depends on the circumstances, including adequacy of disclosure and applicable reporting requirements."
+  },
+  {
+    "id": 174,
+    "type": "Reporting",
+    "question": "A matter is not a KAM merely because:",
+    "options": [
+      "(a) It required significant auditor attention",
+      "(b) It was automatically a matter of most significance",
+      "(c) It was discussed with those charged with governance",
+      "(d) It involved significant judgment"
+    ],
+    "correctOption": 1,
+    "explanation": "KAM determination involves matters requiring significant auditor attention and those of most significance, not merely any matter requiring attention."
+  },
+  {
+    "id": 175,
+    "type": "Specialised Areas",
+    "question": "An auditor reviewing an impairment estimate should consider:",
+    "options": [
+      "(a) Indicators of impairment, assumptions and valuation methodology",
+      "(b) Only last year's impairment",
+      "(c) Only management's oral statement",
+      "(d) Only market rumours"
+    ],
+    "correctOption": 0,
+    "explanation": "Impairment estimates involve evaluation of indicators, methods, assumptions and evidence."
+  },
+  {
+    "id": 176,
+    "type": "Related Services",
+    "question": "In a compilation engagement, the practitioner generally:",
+    "options": [
+      "(a) Does not express an assurance conclusion",
+      "(b) Expresses reasonable assurance",
+      "(c) Expresses limited assurance",
+      "(d) Issues an audit opinion"
+    ],
+    "correctOption": 0,
+    "explanation": "Compilation is a non-assurance service."
+  },
+  {
+    "id": 177,
+    "type": "Review of Financial Information",
+    "question": "A reviewer ordinarily performs less extensive procedures than an auditor because:",
+    "options": [
+      "(a) A review provides limited rather than reasonable assurance",
+      "(b) Reviews require no professional competence",
+      "(c) Reviews never involve evidence",
+      "(d) Financial statements are not used"
+    ],
+    "correctOption": 0,
+    "explanation": "The lower level of assurance results in less extensive procedures."
+  },
+  {
+    "id": 178,
+    "type": "Prospective Financial Information and Other Assurance Services",
+    "question": "A practitioner should be cautious about expressing assurance on prospective financial information because:",
+    "options": [
+      "(a) Actual results may differ from assumptions and projections",
+      "(b) Future events are certain",
+      "(c) Forecasts never contain assumptions",
+      "(d) Management cannot make estimates"
+    ],
+    "correctOption": 0,
+    "explanation": "Prospective information is inherently uncertain and actual results may differ materially."
+  },
+  {
+    "id": 179,
+    "type": "Digital Auditing & Assurance",
+    "question": "Continuous auditing is facilitated by:",
+    "options": [
+      "(a) Technology-enabled ongoing analysis and monitoring",
+      "(b) Eliminating audit procedures",
+      "(c) Relying only on annual meetings",
+      "(d) Avoiding data"
+    ],
+    "correctOption": 0,
+    "explanation": "Technology can facilitate more continuous or near-real-time audit analysis."
+  },
+  {
+    "id": 180,
+    "type": "Group Audits",
+    "question": "If the group team cannot obtain sufficient appropriate evidence from a significant component, it should:",
+    "options": [
+      "(a) Consider the effect on the group audit opinion",
+      "(b) Ignore the component",
+      "(c) Automatically issue an unmodified opinion",
+      "(d) Transfer responsibility to management"
+    ],
+    "correctOption": 0,
+    "explanation": "Insufficient evidence from a significant component may create a scope limitation affecting the group opinion."
+  },
+  {
+    "id": 181,
+    "type": "Special Features of Audit of Banks & Non-Banking Financial Companies",
+    "question": "An auditor should not conclude that a bank advance is performing merely because:",
+    "options": [
+      "(a) Interest was received shortly before year-end",
+      "(b) All documentation exists",
+      "(c) Collateral exists",
+      "(d) Both (a) and (c)"
+    ],
+    "correctOption": 3,
+    "explanation": "Temporary interest receipts or collateral do not alone establish the true performance status of an advance."
+  },
+  {
+    "id": 182,
+    "type": "Overview of Audit of Public Sector Undertakings",
+    "question": "The broader objective of public sector audit may include:",
+    "options": [
+      "(a) Accountability and compliance in addition to financial reporting",
+      "(b) Only profit maximisation",
+      "(c) Only investor return",
+      "(d) Only tax planning"
+    ],
+    "correctOption": 0,
+    "explanation": "Public sector auditing operates within a broader accountability framework."
+  },
+  {
+    "id": 183,
+    "type": "Internal Audit",
+    "question": "A risk register prepared by management can be useful to internal audit because it:",
+    "options": [
+      "(a) Provides information about identified organisational risks",
+      "(b) Replaces independent risk assessment",
+      "(c) Guarantees controls work",
+      "(d) Replaces audit evidence"
+    ],
+    "correctOption": 0,
+    "explanation": "Risk registers provide useful input, although internal audit should exercise independent judgment."
+  },
+  {
+    "id": 184,
+    "type": "Due Diligence, Investigation & Forensic Accounting",
+    "question": "In due diligence, quality of earnings analysis is useful primarily for:",
+    "options": [
+      "(a) Understanding sustainability and quality of reported profits",
+      "(b) Determining employee attendance",
+      "(c) Preparing payroll",
+      "(d) Issuing a statutory audit opinion"
+    ],
+    "correctOption": 0,
+    "explanation": "Quality of earnings analysis considers recurring, sustainable and unusual components of reported earnings."
+  },
+  {
+    "id": 185,
+    "type": "Sustainable Development Goals (SDG) & Environment, Social and Governance (ESG) Assurance",
+    "question": "An ESG metric based on an estimate should be treated as:",
+    "options": [
+      "(a) Requiring consideration of estimation uncertainty and assumptions",
+      "(b) Automatically precise",
+      "(c) Free from management judgment",
+      "(d) Outside assurance scope"
+    ],
+    "correctOption": 0,
+    "explanation": "Estimated ESG information can involve significant uncertainty and assumptions requiring assurance attention."
+  },
+  {
+    "id": 186,
+    "type": "Professional Ethics & Liabilities of Auditors",
+    "question": "A threat may be addressed by eliminating the circumstance creating it. This is:",
+    "options": [
+      "(a) An appropriate response under the conceptual framework",
+      "(b) Never permitted",
+      "(c) Management responsibility only",
+      "(d) A form of audit sampling"
+    ],
+    "correctOption": 0,
+    "explanation": "Threats may be eliminated, reduced through safeguards where applicable, or require declining/ending the engagement."
+  },
+  {
+    "id": 187,
+    "type": "Professional Ethics & Liabilities of Auditors",
+    "question": "If an auditor's family member holds a significant financial interest in an audit client, the auditor should:",
+    "options": [
+      "(a) Evaluate the independence implications under applicable requirements",
+      "(b) Ignore it",
+      "(c) Ask the family member to hide it",
+      "(d) Record it as revenue"
+    ],
+    "correctOption": 0,
+    "explanation": "Family financial interests can create significant independence threats and must be evaluated."
+  },
+  {
+    "id": 188,
+    "type": "Professional Ethics & Liabilities of Auditors",
+    "question": "An auditor being offered employment by the audit client may create:",
+    "options": [
+      "(a) Self-interest or intimidation-related concerns",
+      "(b) No threat",
+      "(c) Only sampling risk",
+      "(d) Only control risk"
+    ],
+    "correctOption": 0,
+    "explanation": "Employment negotiations with an audit client can create threats to objectivity and independence."
+  },
+  {
+    "id": 189,
+    "type": "Professional Ethics & Liabilities of Auditors",
+    "question": "A former audit team member joining the audit client in a key management position can create:",
+    "options": [
+      "(a) Familiarity and self-review concerns",
+      "(b) No ethical issue",
+      "(c) Only detection risk",
+      "(d) Only liquidity risk"
+    ],
+    "correctOption": 0,
+    "explanation": "Former personnel joining a client in key roles can create threats requiring appropriate safeguards and evaluation."
+  },
+  {
+    "id": 190,
+    "type": "Professional Ethics & Liabilities of Auditors",
+    "question": "An auditor should exercise particular care in accepting non-audit services for an audit client because:",
+    "options": [
+      "(a) Such services may create threats to independence",
+      "(b) Non-audit services are always prohibited",
+      "(c) Non-audit services never affect independence",
+      "(d) Management cannot receive services"
+    ],
+    "correctOption": 0,
+    "explanation": "Non-audit services may create self-review, management participation, advocacy or other threats."
+  },
+  {
+    "id": 191,
+    "type": "Quality Control",
+    "question": "The engagement quality control review should ordinarily be completed:",
+    "options": [
+      "(a) Before the report is issued",
+      "(b) After the report is issued",
+      "(c) Only after the next year's audit",
+      "(d) Only if management requests it"
+    ],
+    "correctOption": 0,
+    "explanation": "The review is completed before the engagement report is issued."
+  },
+  {
+    "id": 192,
+    "type": "Audit Planning, Strategy and Execution",
+    "question": "If controls are expected to be ineffective, the auditor may respond by:",
+    "options": [
+      "(a) Increasing substantive procedures as appropriate",
+      "(b) Eliminating audit evidence",
+      "(c) Relying exclusively on management representations",
+      "(d) Ignoring assessed risks"
+    ],
+    "correctOption": 0,
+    "explanation": "Weak controls may require greater substantive audit response."
+  },
+  {
+    "id": 193,
+    "type": "Materiality, Risk Assessment and Internal Control",
+    "question": "A risk of material misstatement may arise from:",
+    "options": [
+      "(a) Error or fraud",
+      "(b) Only fraud",
+      "(c) Only error",
+      "(d) Only audit fees"
+    ],
+    "correctOption": 0,
+    "explanation": "Risk of material misstatement encompasses risks arising from fraud or error."
+  },
+  {
+    "id": 194,
+    "type": "Audit Evidence",
+    "question": "When evidence is less reliable than expected, the auditor may need to:",
+    "options": [
+      "(a) Obtain additional or more persuasive evidence",
+      "(b) Ignore the issue",
+      "(c) Reduce audit work",
+      "(d) Automatically qualify the opinion"
+    ],
+    "correctOption": 0,
+    "explanation": "Evidence reliability affects the amount and quality of evidence needed."
+  },
+  {
+    "id": 195,
+    "type": "Completion and Review",
+    "question": "A subsequent event that indicates a condition existing at the reporting date is generally:",
+    "options": [
+      "(a) An adjusting event",
+      "(b) Always a non-adjusting event",
+      "(c) Never disclosed",
+      "(d) Outside the audit"
+    ],
+    "correctOption": 0,
+    "explanation": "Events providing evidence about conditions existing at the reporting date generally require adjustment."
+  },
+  {
+    "id": 196,
+    "type": "Reporting",
+    "question": "The auditor should not use an Emphasis of Matter paragraph to:",
+    "options": [
+      "(a) Substitute for a modified opinion when modification is required",
+      "(b) Draw attention to a fundamental disclosed matter",
+      "(c) Highlight an appropriately disclosed matter",
+      "(d) Assist users' understanding"
+    ],
+    "correctOption": 0,
+    "explanation": "An EOM paragraph is not a substitute for a modified opinion when modification is required."
+  },
+  {
+    "id": 197,
+    "type": "Group Audits",
+    "question": "A group engagement team's responsibility is not transferred merely because:",
+    "options": [
+      "(a) Component auditors perform procedures",
+      "(b) A component is audited by another firm",
+      "(c) Both (a) and (b)",
+      "(d) Neither"
+    ],
+    "correctOption": 2,
+    "explanation": "Use of component auditors does not transfer responsibility for the group audit opinion."
+  },
+  {
+    "id": 198,
+    "type": "Digital Auditing & Assurance",
+    "question": "When an auditor relies on a system-generated report, the auditor should consider:",
+    "options": [
+      "(a) The reliability of the report and relevant controls over its generation",
+      "(b) Only its visual appearance",
+      "(c) Only management's approval",
+      "(d) Nothing because it is computer-generated"
+    ],
+    "correctOption": 0,
+    "explanation": "Reliability of system-generated information depends on relevant controls and validation procedures."
+  },
+  {
+    "id": 199,
+    "type": "Special Features of Audit of Banks & Non-Banking Financial Companies",
+    "question": "A bank auditor discovering evidence inconsistent with the reported classification of an advance should:",
+    "options": [
+      "(a) Investigate and evaluate the appropriate classification and provisioning implications",
+      "(b) Ignore the evidence",
+      "(c) Accept management's classification automatically",
+      "(d) Delete the advance"
+    ],
+    "correctOption": 0,
+    "explanation": "Contradictory evidence regarding advances requires investigation and evaluation of classification and provisioning."
+  },
+  {
+    "id": 200,
+    "type": "Professional Ethics & Liabilities of Auditors",
+    "question": "The most appropriate overall approach when an auditor identifies an ethical threat is to:",
+    "options": [
+      "(a) Identify, evaluate and address the threat using appropriate measures",
+      "(b) Ignore it if the client is important",
+      "(c) Ask management to decide",
+      "(d) Continue without documentation"
+    ],
+    "correctOption": 0,
+    "explanation": "The conceptual framework requires identification and evaluation of threats and appropriate action to eliminate or reduce them to an acceptable level where possible."
+  }
+]
