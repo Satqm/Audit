@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CA Final Audit - KBC Quiz Portal</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap');
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: radial-gradient(circle at center, #1b0a3f 0%, #080214 100%);
+      color: #ffffff;
+      min-height: 100vh;
+    }
+    .kbc-hexagon {
+      clip-path: polygon(5% 0%, 95% 0%, 100% 50%, 95% 100%, 5% 100%, 0% 50%);
+      transition: all 0.3s ease;
+    }
+    .option-btn {
+      background: linear-gradient(180deg, #182260 0%, #0b0f33 100%);
+      border: 2px solid #3b82f6;
+    }
+    .option-btn:hover:not(:disabled) {
+      background: linear-gradient(180deg, #2563eb 0%, #1d4ed8 100%);
+      border-color: #f59e0b;
+      box-shadow: 0 0 15px rgba(245, 158, 11, 0.5);
+    }
+    .option-selected {
+      background: linear-gradient(180deg, #d97706 0%, #b45309 100%) !important;
+      border-color: #fef08a !important;
+      animation: pulse 0.8s infinite alternate;
+    }
+    .option-correct {
+      background: linear-gradient(180deg, #15803d 0%, #166534 100%) !important;
+      border-color: #4ade80 !important;
+      box-shadow: 0 0 20px #22c55e;
+    }
+    .option-wrong {
+      background: linear-gradient(180deg, #b91c1c 0%, #991b1b 100%) !important;
+      border-color: #fca5a5 !important;
+      box-shadow: 0 0 20px #ef4444;
+    }
+    .glass-panel {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .glow-gold {
+      text-shadow: 0 0 10px #f59e0b, 0 0 20px #f59e0b;
+    }
+  </style>
+</head>
+<body class="flex flex-col justify-between min-h-screen p-2 md:p-6 overflow-x-hidden">
+
+  <!-- Top Navigation & Lifelines -->
+  <header class="flex flex-wrap justify-between items-center gap-4 glass-panel p-4 rounded-2xl border-yellow-500/30">
+    <div class="flex items-center gap-3">
+      <div class="w-12 h-12 rounded-full bg-yellow-500/20 border-2 border-yellow-500 flex items-center justify-center text-yellow-400 text-xl font-bold glow-gold">
+        <i class="fa-solid font-black">CA</i>
+      </div>
+      <div>
+        <h1 class="text-lg font-bold text-yellow-400 leading-tight">CA FINAL AUDIT</h1>
+        <p class="text-xs text-gray-400">Advanced Auditing MCQs</p>
+      </div>
+    </div>
+
+    <!-- Timer -->
+    <div class="relative w-16 h-16 flex items-center justify-center">
+      <div id="timer-display" class="w-14 h-14 rounded-full border-4 border-yellow-500 flex items-center justify-center text-xl font-extrabold text-yellow-400 bg-black/50 glow-gold">
+        45
+      </div>
+    </div>
+
+    <!-- Lifeline Buttons -->
+    <div class="flex gap-3">
+      <button id="life-5050" onclick="use5050()" class="w-12 h-12 rounded-full bg-blue-900/80 border-2 border-cyan-400 flex flex-col items-center justify-center text-xs font-bold hover:bg-cyan-500 hover:text-black transition shadow-lg shadow-cyan-500/20">
+        <span>50:50</span>
+      </button>
+      <button id="life-poll" onclick="useAudiencePoll()" class="w-12 h-12 rounded-full bg-blue-900/80 border-2 border-cyan-400 flex items-center justify-center text-sm font-bold hover:bg-cyan-500 hover:text-black transition shadow-lg shadow-cyan-500/20">
+        <i class="fa-solid fa-chart-bar"></i>
+      </button>
+      <button id="life-expert" onclick="useExpertAdvice()" class="w-12 h-12 rounded-full bg-blue-900/80 border-2 border-cyan-400 flex items-center justify-center text-sm font-bold hover:bg-cyan-500 hover:text-black transition shadow-lg shadow-cyan-500/20">
+        <i class="fa-solid fa-user-tie"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- Main Game Dashboard -->
+  <div class="grid grid-cols-1 lg:grid-cols-4 gap-6 my-4 flex-grow items-center">
+
+    <!-- Left / Center: Question & Options Arena -->
+    <div class="lg:col-span-3 flex flex-col justify-center space-y-4">
+      
+      <!-- Question Container -->
+      <div class="relative">
+        <div class="kbc-hexagon bg-gradient-to-r from-blue-950 via-indigo-900 to-blue-950 border-2 border-yellow-500/80 p-6 md:p-8 text-center min-h-[140px] flex items-center justify-center shadow-2xl">
+          <p id="question-text" class="text-sm md:text-lg font-medium leading-relaxed text-gray-100">
+            Loading Hot Seat Question...
+          </p>
+        </div>
+      </div>
+
+      <!-- Options Grid -->
+      <div id="options-grid" class="grid grid-cols-1 md:grid-cols-2 gap-4 pt-2">
+        <!-- Dynamic Option Buttons inserted via JS -->
+      </div>
+    </div>
+
+    <!-- Right Sidebar: KBC Ladder -->
+    <div class="glass-panel p-4 rounded-2xl border-yellow-500/20 flex flex-col justify-center max-h-[450px]">
+      <h3 class="text-center font-bold text-yellow-400 text-sm tracking-widest mb-3 border-b border-yellow-500/20 pb-2">SCORE BOARD</h3>
+      <div id="ladder-container" class="space-y-1 overflow-y-auto pr-1 text-xs font-semibold">
+        <!-- Dynamic Money Ladder -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Bottom Navigation Actions -->
+  <footer class="flex justify-between items-center glass-panel p-3 rounded-2xl">
+    <button onclick="prevQuestion()" class="px-5 py-2 rounded-lg bg-gray-800 border border-gray-600 hover:bg-gray-700 text-xs font-semibold text-gray-300 transition flex items-center gap-2">
+      <i class="fa-solid fa-arrow-left"></i> Previous
+    </button>
+    <div class="text-xs text-yellow-400/80 font-mono tracking-wider" id="score-counter">
+      QUESTION 1 / 4
+    </div>
+    <button id="next-btn" onclick="nextQuestion()" class="px-6 py-2 rounded-lg bg-gradient-to-r from-yellow-500 to-amber-600 hover:from-yellow-400 hover:to-amber-500 text-black text-xs font-bold transition shadow-lg shadow-yellow-500/20 flex items-center gap-2">
+      Next <i class="fa-solid fa-arrow-right"></i>
+    </button>
+  </footer>
+
+  <!-- Modal: ICAI Explanation Popup -->
+  <div id="explanation-modal" class="fixed inset-0 bg-black/80 backdrop-blur-md flex items-center justify-center p-4 z-50 hidden">
+    <div class="bg-gradient-to-b from-slate-900 to-blue-950 border-2 border-yellow-500 rounded-2xl max-w-2xl w-full p-6 shadow-2xl space-y-4">
+      <div class="flex justify-between items-center border-b border-gray-700 pb-3">
+        <h2 id="modal-title" class="text-xl font-bold text-yellow-400 flex items-center gap-2">
+          <i class="fa-solid fa-circle-check text-green-400"></i> Correct Answer!
+        </h2>
+        <button onclick="closeModal()" class="text-gray-400 hover:text-white text-xl"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+      
+      <div class="space-y-2">
+        <p class="text-xs uppercase tracking-wider text-cyan-400 font-semibold">Official ICAI Technical Reference / Explanation</p>
+        <p id="modal-explanation" class="text-sm text-gray-200 leading-relaxed bg-black/40 p-4 rounded-xl border border-white/10 max-h-60 overflow-y-auto">
+          Explanation goes here...
+        </p>
+      </div>
+
+      <div class="flex justify-end pt-2">
+        <button onclick="closeModal()" class="px-6 py-2 bg-yellow-500 text-black rounded-lg font-bold text-sm hover:bg-yellow-400 transition">
+          Continue Game
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Audio Synthesis Engine for Sound Effects -->
+  <script>
+    const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+    
+    function playBeep(freq = 440, type = 'sine', duration = 0.15) {
+      if (audioCtx.state === 'suspended') audioCtx.resume();
+      const osc = audioCtx.createOscillator();
+      const gain = audioCtx.createGain();
+      osc.type = type;
+      osc.frequency.value = freq;
+      gain.gain.setValueAtTime(0.1, audioCtx.currentTime);
+      gain.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + duration);
+      osc.connect(gain);
+      gain.connect(audioCtx.destination);
+      osc.start();
+      osc.stop(audioCtx.currentTime + duration);
+    }
+
+    function soundCorrect() {
+      playBeep(523.25, 'triangle', 0.2);
+      setTimeout(() => playBeep(659.25, 'triangle', 0.2), 150);
+      setTimeout(() => playBeep(783.99, 'triangle', 0.4), 300);
+    }
+
+    function soundWrong() {
+      playBeep(220, 'sawtooth', 0.3);
+      setTimeout(() => playBeep(180, 'sawtooth', 0.5), 250);
+    }
+  </script>
+
+  <!-- Quiz Logic Script -->
+  <script>
+    const questionsData = [
+      {
+        id: 1,
+        question: "PMP Ltd. is an associate of PMP Inc, Kuwait. For FY 2020-21, the audit team appointed an External Quality Control Reviewer (EQCR) who was employed for 2.5 years but had not cleared his CA Final exams. The Audit Partner ignored EQCR's comments without concurrence and issued the clean report. As per SA 220 / SQC 1, which statement is correct?",
+        options: [
+          "(a) The changes were not appropriate. EQCR should have been a member of the ICAI.",
+          "(b) The audit partner did the right thing as he is the final authority to decide on any matter.",
+          "(c) The audit partner must discuss each comment with the client for financial statement disclosure.",
+          "(d) EQCR had sufficient experience. Audit partner passed his responsibility to EQCR."
+        ],
+        correctOption: 0,
+        explanation: "(a) As per SQC 1 / SA 220, an Engagement Quality Control Reviewer (EQCR) must be a member of the Institute of Chartered Accountants of India (ICAI) with suitable technical expertise. Since the appointed EQCR had not yet cleared CA Final exams, the appointment was invalid."
+      },
+      {
+        id: 2,
+        question: "VKPL & Associates are assessing client acceptance & continuance for an audit engagement under SA 220. Which of the following factors are RELEVANT under SA 220? (i) Integrity of principal owners, (ii) Employee qualifications, (iii) Competence & capabilities of engagement team, (iv) Consultant remuneration, (v) Ethical requirements compliance, (vi) Significant matters from previous audits.",
+        options: [
+          "(a) i, ii, iv and v.",
+          "(b) ii, iv, v and vi.",
+          "(c) iii, iv, v and vi.",
+          "(d) i, iii, v and vi."
+        ],
+        correctOption: 3,
+        explanation: "(d) Under SA 220, client acceptance evaluations require assessing integrity of management (i), capabilities of the engagement team (iii), ethical compliance (v), and significant matters from previous audits (vi)."
+      },
+      {
+        id: 3,
+        question: "ZOV Ltd. (Turnover INR 4,000 Cr) statutory auditors performed substantive testing resulting in adjustments. The engagement team skipped final analytical procedures claiming substantive testing was sufficient. The Audit Partner insisted on performing them. What is the correct position under SA 520?",
+        options: [
+          "(a) Explanation of audit team was correct. Substantive testing removes need for analytical procedures.",
+          "(b) CFO's advice to avoid additional procedures should be accepted.",
+          "(c) Audit partner's view is valid. Final analytical procedures corroborate conclusions formed on components.",
+          "(d) Audit team should obtain client's analytical document and assemble it in the audit file."
+        ],
+        correctOption: 2,
+        explanation: "(c) As per SA 520 'Analytical Procedures', the auditor is mandatorily required to design and perform analytical procedures near the end of the audit to corroborate overall conclusions."
+      },
+      {
+        id: 4,
+        question: "BDJ Private Ltd. (Turnover INR 700 Cr) asked the audit team to cut down sample size to match previous year levels. The audit team explained that sample sizes increased due to risk variations as per SA 530, leading to a deadlock. Guide the resolution.",
+        options: [
+          "(a) Client's argument is invalid. Sample selection is based on SA 530 risk assessments and changes annually.",
+          "(b) Audit team explanation is invalid. Risk approach should be formally shared before fieldwork.",
+          "(c) Audit team should cut sample size and rely on analytical procedures.",
+          "(d) Audit team must write to client; if refused, audit partner checks missing documents."
+        ],
+        correctOption: 0,
+        explanation: "(a) Pursuant to SA 530 'Audit Sampling', sample size determination is strictly a matter of professional judgment based on current year risk assessment. The client cannot dictate sample parameters."
+      }
+    ];
+
+    const moneyLadder = [
+      "₹ 10,000", "₹ 20,000", "₹ 50,000", "₹ 1,000,000"
+    ];
+
+    let currentIdx = 0;
+    let timer;
+    let timeLeft = 45;
+    let selectedOption = null;
+    let isAnswered = false;
+
+    function initGame() {
+      renderLadder();
+      loadQuestion();
+    }
+
+    function renderLadder() {
+      const container = document.getElementById('ladder-container');
+      container.innerHTML = '';
+      for (let i = moneyLadder.length - 1; i >= 0; i--) {
+        const item = document.createElement('div');
+        const isCurrent = i === currentIdx;
+        item.className = `flex justify-between px-3 py-1.5 rounded-lg border ${
+          isCurrent 
+            ? 'bg-gradient-to-r from-amber-500 to-yellow-600 text-black border-yellow-300 font-bold glow-gold' 
+            : 'bg-black/30 text-gray-400 border-white/5'
+        }`;
+        item.innerHTML = `<span>Q ${i + 1}</span> <span>${moneyLadder[i]}</span>`;
+        container.appendChild(item);
+      }
+    }
+
+    function startTimer() {
+      clearInterval(timer);
+      timeLeft = 45;
+      document.getElementById('timer-display').innerText = timeLeft;
+      timer = setInterval(() => {
+        timeLeft--;
+        document.getElementById('timer-display').innerText = timeLeft;
+        if (timeLeft <= 10) playBeep(880, 'sine', 0.05);
+        if (timeLeft <= 0) {
+          clearInterval(timer);
+          autoLockTimeout();
+        }
+      }, 1000);
+    }
+
+    function loadQuestion() {
+      isAnswered = false;
+      selectedOption = null;
+      renderLadder();
+      startTimer();
+
+      const q = questionsData[currentIdx];
+      document.getElementById('question-text').innerText = `${q.id}. ${q.question}`;
+      document.getElementById('score-counter').innerText = `QUESTION ${currentIdx + 1} / ${questionsData.length}`;
+
+      const grid = document.getElementById('options-grid');
+      grid.innerHTML = '';
+
+      q.options.forEach((opt, idx) => {
+        const btn = document.createElement('button');
+        btn.id = `opt-${idx}`;
+        btn.onclick = () => selectOption(idx);
+        btn.className = "option-btn kbc-hexagon text-left p-4 md:p-5 text-sm md:text-base font-medium rounded-xl transition duration-200 flex items-center gap-3";
+        btn.innerHTML = `<span class="text-yellow-400 font-bold min-w-[24px]"></span> ${opt}`;
+        grid.appendChild(btn);
+      });
+    }
+
+    function selectOption(idx) {
+      if (isAnswered) return;
+      playBeep(300, 'sine', 0.1);
+
+      const buttons = document.getElementById('options-grid').children;
+      for (let btn of buttons) btn.classList.remove('option-selected');
+
+      selectedOption = idx;
+      document.getElementById(`opt-${idx}`).classList.add('option-selected');
+
+      // Auto-lock answer after short suspense delay
+      setTimeout(() => lockAnswer(idx), 1000);
+    }
+
+    function lockAnswer(idx) {
+      if (isAnswered) return;
+      isAnswered = true;
+      clearInterval(timer);
+
+      const q = questionsData[currentIdx];
+      const selectedBtn = document.getElementById(`opt-${idx}`);
+      const correctBtn = document.getElementById(`opt-${q.correctOption}`);
+
+      selectedBtn.classList.remove('option-selected');
+
+      if (idx === q.correctOption) {
+        selectedBtn.classList.add('option-correct');
+        soundCorrect();
+        setTimeout(() => showExplanation(true, q.explanation), 1200);
+      } else {
+        selectedBtn.classList.add('option-wrong');
+        correctBtn.classList.add('option-correct');
+        soundWrong();
+        setTimeout(() => showExplanation(false, q.explanation), 1200);
+      }
+    }
+
+    function autoLockTimeout() {
+      if (isAnswered) return;
+      isAnswered = true;
+      const q = questionsData[currentIdx];
+      const correctBtn = document.getElementById(`opt-${q.correctOption}`);
+      correctBtn.classList.add('option-correct');
+      soundWrong();
+      setTimeout(() => showExplanation(false, "Time Out! " + q.explanation), 1000);
+    }
+
+    function showExplanation(isCorrect, expText) {
+      const modal = document.getElementById('explanation-modal');
+      const title = document.getElementById('modal-title');
+      const text = document.getElementById('modal-explanation');
+
+      if (isCorrect) {
+        title.innerHTML = `<i class="fa-solid fa-circle-check text-green-400"></i> Correct Answer!`;
+      } else {
+        title.innerHTML = `<i class="fa-solid fa-circle-xmark text-red-500"></i> Incorrect Answer!`;
+      }
+
+      text.innerText = expText;
+      modal.classList.remove('hidden');
+    }
+
+    function closeModal() {
+      document.getElementById('explanation-modal').classList.add('hidden');
+    }
+
+    function nextQuestion() {
+      closeModal();
+      if (currentIdx < questionsData.length - 1) {
+        currentIdx++;
+        loadQuestion();
+      } else {
+        alert("Congratulations! You completed all questions in the KBC Arena!");
+      }
+    }
+
+    function prevQuestion() {
+      closeModal();
+      if (currentIdx > 0) {
+        currentIdx--;
+        loadQuestion();
+      }
+    }
+
+    // Lifeline Functions
+    function use5050() {
+      if (isAnswered) return;
+      const q = questionsData[currentIdx];
+      const wrongIndices = [0, 1, 2, 3].filter(i => i !== q.correctOption);
+      
+      // Randomly hide two wrong options
+      wrongIndices.sort(() => Math.random() - 0.5);
+      document.getElementById(`opt-${wrongIndices[0]}`).style.visibility = 'hidden';
+      document.getElementById(`opt-${wrongIndices[1]}`).style.visibility = 'hidden';
+
+      const btn = document.getElementById('life-5050');
+      btn.disabled = true;
+      btn.classList.add('opacity-30', 'cursor-not-allowed');
+    }
+
+    function useAudiencePoll() {
+      if (isAnswered) return;
+      const q = questionsData[currentIdx];
+      const optChar = ['A', 'B', 'C', 'D'][q.correctOption];
+      alert(`📊 Audience Poll Results:\nOption ${optChar} leads with 78% votes!`);
+      const btn = document.getElementById('life-poll');
+      btn.disabled = true;
+      btn.classList.add('opacity-30', 'cursor-not-allowed');
+    }
+
+    function useExpertAdvice() {
+      if (isAnswered) return;
+      const q = questionsData[currentIdx];
+      const optChar = ['A', 'B', 'C', 'D'][q.correctOption];
+      alert(`👨‍🏫 Expert Advice (CA Audit Faculty):\n"Option (${optChar.toLowerCase()}) is the correct choice based on relevant Auditing Standards."`);
+      const btn = document.getElementById('life-expert');
+      btn.disabled = true;
+      btn.classList.add('opacity-30', 'cursor-not-allowed');
+    }
+
+    window.onload = initGame;
+  </script>
+</body>
+</html>
