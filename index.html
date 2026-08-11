@@ -3,156 +3,158 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
-    <title>CA Final Audit - KBC Style Pro</title>
+    <title>CA Final Audit - Pro Simulator</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@500;600;700&display=swap');
 
         :root {
-            --bg-top: #1b0a3f;
-            --bg-bottom: #05010a;
-            --gold: #f59e0b;
-            --gold-light: #fef08a;
-            --blue-accent: #3b82f6;
-            --green-ok: #4ade80;
-            --red-bad: #fca5a5;
-            --header-h: 76px;
-            --mode-h: 58px;
-            --footer-h: 132px;
+            --bg: #f8fafc;
+            --surface: #ffffff;
+            --text: #1e293b;
+            --text-secondary: #64748b;
+            --border: #e2e8f0;
+            --primary: #3b82f6;
+            --primary-light: #dbeafe;
+            --correct: #059669;
+            --correct-bg: #d1fae5;
+            --wrong: #dc2626;
+            --wrong-bg: #fee2e2;
+            --marked: #f59e0b;
+            --marked-bg: #fef3c7;
+            --shadow: 0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
+            --shadow-lg: 0 4px 24px rgba(0,0,0,0.08);
         }
 
-        html, body {
-            height: 100%;
-            margin: 0;
-        }
+        * { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+
+        html, body { height: 100%; }
 
         body {
-            font-family: 'Poppins', sans-serif;
-            background: radial-gradient(circle at top center, var(--bg-top) 0%, var(--bg-bottom) 100%);
-            color: #ffffff;
-            overflow: hidden; /* body itself never scrolls - only the scroll-area does */
-            overscroll-behavior-y: contain;
-            -webkit-overflow-scrolling: touch;
+            font-family: 'Inter', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            overflow: hidden;
             user-select: none;
             -webkit-user-select: none;
         }
 
-        /* ===== App shell: header / mode-switch / scroll-area / footer, all fit inside 100dvh ===== */
+        .poppins { font-family: 'Poppins', sans-serif; }
+
         .app-shell {
             display: flex;
             flex-direction: column;
             height: 100dvh;
-            height: 100vh; /* fallback */
             max-width: 900px;
             margin: 0 auto;
             width: 100%;
-        }
-
-        .glass-card {
-            background: rgba(255, 255, 255, 0.03);
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+            background: var(--bg);
         }
 
         .app-header, .mode-switch-wrap { flex: 0 0 auto; }
 
         .scroll-area {
             flex: 1 1 auto;
-            min-height: 0; /* critical for flex children to actually scroll */
+            min-height: 0;
             overflow-y: auto;
             -webkit-overflow-scrolling: touch;
             overscroll-behavior-y: contain;
-            touch-action: pan-y;
-            padding: 14px 12px 20px;
+            padding: 12px 12px 16px;
         }
 
         .app-footer { flex: 0 0 auto; }
 
-        /* Passage / case-study block gets its own capped height so the question
-           and 4 options below never get pushed off-screen; scroll-area still
-           scrolls as a safety net on very small phones. */
+        .card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            box-shadow: var(--shadow);
+        }
+
         .case-study-box {
-            max-height: 32vh;
+            max-height: 30vh;
             overflow-y: auto;
             -webkit-overflow-scrolling: touch;
+            background: #f1f5f9;
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 14px 16px;
+            margin-bottom: 16px;
+            font-size: 0.9rem;
+            line-height: 1.6;
+            color: var(--text);
         }
 
         .question-box {
-            font-size: clamp(0.95rem, 3.4vw, 1.05rem);
-            line-height: 1.55;
+            font-size: 1rem;
+            line-height: 1.65;
+            color: var(--text);
+            padding: 8px 0;
         }
 
         .option-btn {
-            background: linear-gradient(145deg, #182260 0%, #0b0f33 100%);
-            border: 2px solid #3b82f6;
-            transition: all 0.15s ease-out;
+            background: var(--surface);
+            border: 1.5px solid var(--border);
+            transition: all 0.15s ease;
             cursor: pointer;
             -webkit-tap-highlight-color: transparent;
             touch-action: manipulation;
-            min-height: 56px;
-            border-radius: 16px;
-            font-size: clamp(0.85rem, 3.2vw, 0.98rem);
+            min-height: 52px;
+            border-radius: 12px;
+            font-size: 0.95rem;
             padding: 14px 16px;
             display: flex;
             align-items: flex-start;
             gap: 12px;
             width: 100%;
+            color: var(--text);
+            box-shadow: var(--shadow);
         }
-        .option-btn:active:not(:disabled) {
-            transform: scale(0.97);
-            transition: transform 0.05s ease-out;
-        }
-        .option-btn:hover:not(:disabled) {
-            background: linear-gradient(145deg, #1e3a8a 0%, #172554 100%);
-            border-color: var(--gold);
-            box-shadow: 0 0 15px rgba(245, 158, 11, 0.4);
-        }
-        .option-selected {
-            background: linear-gradient(145deg, #d97706 0%, #92400e 100%) !important;
-            border-color: var(--gold-light) !important;
-        }
-        .option-correct {
-            background: linear-gradient(145deg, #166534 0%, #14532d 100%) !important;
-            border-color: var(--green-ok) !important;
-            box-shadow: 0 0 20px rgba(34, 197, 94, 0.6);
-        }
-        .option-wrong {
-            background: linear-gradient(145deg, #991b1b 0%, #7f1d1d 100%) !important;
-            border-color: var(--red-bad) !important;
-            box-shadow: 0 0 20px rgba(239, 68, 68, 0.6);
-        }
+        .option-btn:active:not(:disabled) { transform: scale(0.98); }
+        .option-btn:hover:not(:disabled) { border-color: var(--primary); background: var(--primary-light); }
+        .option-selected { border-color: var(--marked) !important; background: var(--marked-bg) !important; }
+        .option-correct { border-color: var(--correct) !important; background: var(--correct-bg) !important; color: var(--correct) !important; }
+        .option-wrong { border-color: var(--wrong) !important; background: var(--wrong-bg) !important; color: var(--wrong) !important; }
 
-        .option-correct .opt-letter { background: rgba(74, 222, 128, 0.2); color: var(--green-ok); border-color: var(--green-ok); }
-        .option-wrong .opt-letter { background: rgba(248, 113, 113, 0.2); color: var(--red-bad); border-color: var(--red-bad); }
-        .option-selected .opt-letter { background: rgba(254, 240, 138, 0.2); color: var(--gold-light); border-color: var(--gold-light); }
+        .opt-letter {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 32px;
+            height: 32px;
+            border-radius: 8px;
+            background: #f1f5f9;
+            color: var(--text-secondary);
+            font-weight: 700;
+            font-size: 0.85rem;
+            flex-shrink: 0;
+            border: 1px solid var(--border);
+        }
+        .option-correct .opt-letter { background: #d1fae5; color: var(--correct); border-color: var(--correct); }
+        .option-wrong .opt-letter { background: #fee2e2; color: var(--wrong); border-color: var(--wrong); }
+        .option-selected .opt-letter { background: #fef3c7; color: #92400e; border-color: var(--marked); }
 
-        .glow-gold { text-shadow: 0 0 10px var(--gold), 0 0 20px var(--gold); }
-
-        /* Any table dropped inside question/case-study HTML gets wrapped in this
-           by JS so it never breaks the mobile layout. */
         .table-wrap {
             overflow-x: auto;
             -webkit-overflow-scrolling: touch;
             border-radius: 10px;
-            border: 1px solid rgba(255,255,255,0.1);
+            border: 1px solid var(--border);
             margin: 10px 0;
         }
         .table-wrap table { min-width: 480px; border-collapse: collapse; width: 100%; font-size: 0.85rem; }
-        .table-wrap th, .table-wrap td { padding: 8px 10px; border: 1px solid rgba(255,255,255,0.12); text-align: left; }
+        .table-wrap th, .table-wrap td { padding: 8px 10px; border: 1px solid var(--border); text-align: left; }
+        .table-wrap th { background: #f8fafc; font-weight: 600; color: var(--text-secondary); }
 
-        /* Palette */
         .palette-btn {
-            width: 44px;
-            height: 44px;
+            width: 38px;
+            height: 38px;
             border-radius: 10px;
-            font-size: 13px;
+            font-size: 12px;
             font-weight: 600;
-            border: 1.5px solid #475569;
-            background: #1e293b;
-            color: #cbd5e1;
+            border: 1.5px solid var(--border);
+            background: var(--surface);
+            color: var(--text-secondary);
             cursor: pointer;
             transition: all 0.15s;
             display: flex;
@@ -163,79 +165,69 @@
             position: relative;
         }
         .palette-btn:active { transform: scale(0.92); }
-        .palette-btn.answered { background: #2563eb; border-color: #60a5fa; color: #fff; }
-        .palette-btn.wrong { background: #b91c1c; border-color: #f87171; color: #fff; }
-        .palette-btn.current { border-color: #fff !important; box-shadow: 0 0 0 3px rgba(255,255,255,0.3); transform: scale(1.08); }
+        .palette-btn.answered { background: #dbeafe; border-color: var(--primary); color: var(--primary); }
+        .palette-btn.wrong { background: #fee2e2; border-color: var(--wrong); color: var(--wrong); }
+        .palette-btn.current { border-color: var(--primary) !important; box-shadow: 0 0 0 3px rgba(59,130,246,0.2); transform: scale(1.05); }
         .palette-btn .mark-dot {
             position: absolute; top: -4px; right: -4px;
-            width: 12px; height: 12px; border-radius: 50%;
-            background: var(--gold); border: 1.5px solid #fcd34d;
+            width: 10px; height: 10px; border-radius: 50%;
+            background: var(--marked); border: 1.5px solid #d97706;
         }
 
-        /* Toast */
         .toast {
             position: fixed;
-            bottom: calc(var(--footer-h) + 12px);
+            bottom: 140px;
             left: 50%;
             transform: translateX(-50%);
-            background: #1e1e3f;
-            border: 1px solid var(--gold);
-            color: var(--gold-light);
-            padding: 12px 20px;
-            border-radius: 40px;
-            font-size: 12.5px;
+            background: var(--text);
+            border: 1px solid var(--border);
+            color: #fff;
+            padding: 10px 18px;
+            border-radius: 24px;
+            font-size: 12px;
             font-weight: 600;
             z-index: 200;
             opacity: 0;
             pointer-events: none;
             transition: opacity 0.4s, transform 0.4s;
-            max-width: 92vw;
+            max-width: 90vw;
             text-align: center;
-            backdrop-filter: blur(8px);
-            -webkit-backdrop-filter: blur(8px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+            box-shadow: var(--shadow-lg);
         }
-        .toast.show {
-            opacity: 1;
-            transform: translateX(-50%) translateY(-6px);
-            pointer-events: auto;
-        }
+        .toast.show { opacity: 1; transform: translateX(-50%) translateY(-6px); pointer-events: auto; }
 
-        /* Revision list */
         .revision-item {
-            background: rgba(255,255,255,0.03);
-            border: 1px solid rgba(255,255,255,0.08);
-            border-radius: 14px;
-            padding: 16px;
-            margin-bottom: 12px;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 14px 16px;
+            margin-bottom: 10px;
             transition: background 0.2s;
             touch-action: manipulation;
+            cursor: pointer;
         }
-        .revision-item:active { background: rgba(255,255,255,0.08); }
+        .revision-item:active { background: #f1f5f9; }
 
-        /* Social Icons - compact strip that lives inside footer, never overlaps content */
         .sf-icon {
-            width: 40px;
-            height: 40px;
-            min-width: 40px;
-            min-height: 40px;
+            width: 38px;
+            height: 38px;
+            min-width: 38px;
+            min-height: 38px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.05rem;
+            font-size: 1rem;
             transition: all 0.25s ease;
-            background: rgba(0,0,0,0.5);
+            background: #f1f5f9;
             touch-action: manipulation;
+            color: var(--text-secondary);
+            text-decoration: none;
         }
-        .sf-icon.ig { border: 1px solid #e1306c; color: #e1306c; }
-        .sf-icon.ig:hover, .sf-icon.ig:active { background: #e1306c; color: #fff; box-shadow: 0 0 15px #e1306c; }
-        .sf-icon.li { border: 1px solid #0077b5; color: #0077b5; }
-        .sf-icon.li:hover, .sf-icon.li:active { background: #0077b5; color: #fff; box-shadow: 0 0 15px #0077b5; }
-        .sf-icon.yt { border: 1px solid #ff0000; color: #ff0000; }
-        .sf-icon.yt:hover, .sf-icon.yt:active { background: #ff0000; color: #fff; box-shadow: 0 0 15px #ff0000; }
-        .sf-icon.tg { border: 1px solid #0088cc; color: #0088cc; }
-        .sf-icon.tg:hover, .sf-icon.tg:active { background: #0088cc; color: #fff; box-shadow: 0 0 15px #0088cc; }
+        .sf-icon.ig:hover, .sf-icon.ig:active { background: #e1306c; color: #fff; }
+        .sf-icon.li:hover, .sf-icon.li:active { background: #0077b5; color: #fff; }
+        .sf-icon.yt:hover, .sf-icon.yt:active { background: #ff0000; color: #fff; }
+        .sf-icon.tg:hover, .sf-icon.tg:active { background: #0088cc; color: #fff; }
 
         .nav-pill-btn {
             touch-action: manipulation;
@@ -243,87 +235,89 @@
             min-height: 44px;
         }
 
-        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar { width: 5px; }
         ::-webkit-scrollbar-track { background: transparent; }
-        ::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.2); border-radius: 10px; }
+        ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 10px; }
+
+        @media (max-width: 480px) {
+            .question-box { font-size: 0.95rem; }
+            .option-btn { font-size: 0.9rem; padding: 12px 14px; min-height: 48px; }
+            .case-study-box { max-height: 28vh; font-size: 0.85rem; }
+        }
     </style>
 </head>
 <body>
 
-    <!-- Toast -->
     <div id="toast" class="toast"></div>
 
     <div class="app-shell">
 
         <!-- Header -->
-        <header class="app-header glass-card flex flex-wrap justify-between items-center gap-3 p-3 md:p-4 border-t-2 border-yellow-500/50 shadow-lg shadow-yellow-900/10 mx-2 mt-2 rounded-2xl">
+        <header class="app-header card flex flex-wrap justify-between items-center gap-3 p-3 md:p-4 border-t-2 border-blue-500/50 mx-2 mt-2 rounded-2xl">
             <div class="flex items-center gap-3">
-                <div class="w-11 h-11 rounded-full bg-yellow-500/20 border-2 border-yellow-500 flex items-center justify-center text-yellow-400 text-lg font-bold glow-gold shrink-0">CA</div>
+                <div class="w-10 h-10 rounded-lg bg-blue-50 border border-blue-200 flex items-center justify-center text-blue-600 text-lg font-bold poppins shrink-0">CA</div>
                 <div>
-                    <h1 class="text-sm md:text-xl font-bold text-yellow-400 leading-tight">FINAL AUDIT</h1>
-                    <p class="text-[10px] md:text-sm text-gray-300 hidden sm:block mt-0.5">Advanced Auditing MCQs</p>
+                    <h1 class="text-sm md:text-lg font-bold text-slate-800 poppins leading-tight">FINAL AUDIT</h1>
+                    <p class="text-[10px] md:text-xs text-slate-500 hidden sm:block">Advanced Auditing MCQs</p>
                 </div>
             </div>
             <div class="flex items-center gap-2 md:gap-3">
-                <button onclick="retakeQuiz()" class="nav-pill-btn px-3 py-2 rounded-lg bg-red-900/40 border border-red-500/50 text-[11px] md:text-xs font-bold text-red-200 hover:bg-red-600 transition flex items-center gap-2"><i class="fa-solid fa-rotate-right"></i> <span class="hidden sm:inline">Retake</span></button>
-                <button id="life-5050" onclick="use5050()" class="nav-pill-btn w-11 h-11 rounded-full bg-blue-900/80 border border-cyan-400 flex items-center justify-center text-[11px] md:text-xs font-bold hover:bg-cyan-500 hover:text-black transition shadow-lg shadow-cyan-900/30">50:50</button>
-                <button id="life-poll" onclick="useAudiencePoll()" class="nav-pill-btn w-11 h-11 rounded-full bg-blue-900/80 border border-cyan-400 flex items-center justify-center text-sm md:text-base font-bold hover:bg-cyan-500 hover:text-black transition shadow-lg shadow-cyan-900/30"><i class="fa-solid fa-chart-bar"></i></button>
-                <button id="life-expert" onclick="useExpertAdvice()" class="nav-pill-btn w-11 h-11 rounded-full bg-blue-900/80 border border-cyan-400 flex items-center justify-center text-sm md:text-base font-bold hover:bg-cyan-500 hover:text-black transition shadow-lg shadow-cyan-900/30"><i class="fa-solid fa-user-tie"></i></button>
+                <button onclick="retakeQuiz()" class="nav-pill-btn px-3 py-2 rounded-lg bg-red-50 border border-red-200 text-[11px] md:text-xs font-semibold text-red-600 hover:bg-red-100 transition flex items-center gap-2"><i class="fa-solid fa-rotate-right"></i> <span class="hidden sm:inline">Retake</span></button>
+                <button id="life-5050" onclick="use5050()" class="nav-pill-btn w-10 h-10 rounded-full bg-blue-50 border border-blue-200 flex items-center justify-center text-[11px] md:text-xs font-bold text-blue-600 hover:bg-blue-100 transition">50:50</button>
+                <button id="life-poll" onclick="useAudiencePoll()" class="nav-pill-btn w-10 h-10 rounded-full bg-blue-50 border border-blue-200 flex items-center justify-center text-sm md:text-base text-blue-600 hover:bg-blue-100 transition"><i class="fa-solid fa-chart-bar"></i></button>
+                <button id="life-expert" onclick="useExpertAdvice()" class="nav-pill-btn w-10 h-10 rounded-full bg-blue-50 border border-blue-200 flex items-center justify-center text-sm md:text-base text-blue-600 hover:bg-blue-100 transition"><i class="fa-solid fa-user-tie"></i></button>
             </div>
         </header>
 
         <!-- Mode Switcher -->
         <div class="mode-switch-wrap flex justify-center mt-3 mb-1 z-10 px-2">
-            <div class="glass-card p-1.5 rounded-full flex gap-1 border border-yellow-500/30 bg-black/40 shadow-xl w-full max-w-md justify-center">
-                <button id="btn-mode-study" onclick="switchMode('study')" class="nav-pill-btn flex-1 px-4 py-2.5 rounded-full text-xs md:text-sm font-bold transition flex items-center justify-center gap-2"><i class="fa-solid fa-book-open"></i> Direct MCQs</button>
-                <button id="btn-mode-mcqs" onclick="switchMode('mcqs')" class="nav-pill-btn flex-1 px-4 py-2.5 rounded-full text-xs md:text-sm font-bold transition flex items-center justify-center gap-2"><i class="fa-solid fa-briefcase"></i> Case Scenarios</button>
+            <div class="card p-1.5 rounded-full flex gap-1 border border-slate-200 bg-white shadow-sm w-full max-w-md justify-center">
+                <button id="btn-mode-study" onclick="switchMode('study')" class="nav-pill-btn flex-1 px-4 py-2.5 rounded-full text-xs md:text-sm font-semibold transition flex items-center justify-center gap-2"><i class="fa-solid fa-book-open"></i> Direct MCQs</button>
+                <button id="btn-mode-mcqs" onclick="switchMode('mcqs')" class="nav-pill-btn flex-1 px-4 py-2.5 rounded-full text-xs md:text-sm font-semibold transition flex items-center justify-center gap-2"><i class="fa-solid fa-briefcase"></i> Case Scenarios</button>
             </div>
         </div>
 
-        <!-- Scrollable content: passage + question + options + palette dots + end-screen -->
+        <!-- Scrollable content -->
         <main id="scroll-area" class="scroll-area">
             <div id="quiz-container" class="w-full space-y-4">
-                <div class="relative w-full">
-                    <div class="glass-card bg-gradient-to-br from-blue-950/80 to-indigo-950/80 border-t-4 border-yellow-500 p-4 md:p-6 rounded-2xl flex flex-col shadow-2xl">
-                        <div class="flex items-start justify-between gap-3">
-                            <div id="question-text" class="question-box text-gray-50 whitespace-pre-wrap text-left w-full"></div>
-                            <button id="mark-review-btn" onclick="toggleMarkReview()" class="nav-pill-btn text-2xl md:text-3xl shrink-0 mt-1 text-gray-400 hover:text-yellow-400 transition w-11 h-11 flex items-center justify-center" title="Mark for review"><i class="fa-regular fa-bookmark"></i></button>
-                        </div>
+                <div class="card p-4 md:p-6">
+                    <div class="flex items-start justify-between gap-3">
+                        <div id="question-text" class="question-box whitespace-pre-wrap text-left w-full"></div>
+                        <button id="mark-review-btn" onclick="toggleMarkReview()" class="nav-pill-btn text-2xl md:text-3xl shrink-0 mt-1 text-slate-400 hover:text-amber-500 transition w-10 h-10 flex items-center justify-center" title="Mark for review"><i class="fa-regular fa-bookmark"></i></button>
                     </div>
                 </div>
 
                 <div id="options-grid" class="grid grid-cols-1 gap-3 w-full"></div>
 
-                <!-- Inline progress dots for quick jump without opening the full palette sheet -->
                 <div id="dots-strip" class="flex gap-2 overflow-x-auto py-1 px-1"></div>
             </div>
 
-            <!-- End Screen (lives inside scroll-area so it's reachable the same way) -->
+            <!-- End Screen -->
             <div id="end-screen" class="hidden flex-col items-center justify-center w-full text-center space-y-5 my-6 px-1">
-                <div class="text-yellow-400 text-6xl md:text-8xl glow-gold mb-2"><i class="fa-solid fa-trophy"></i></div>
-                <h1 class="text-2xl md:text-4xl font-bold text-white tracking-wide">Quiz Completed!</h1>
-                <p class="text-sm md:text-lg text-gray-300">You have successfully attempted all the questions in this mode.</p>
-                <div class="glass-card bg-gradient-to-b from-blue-900/40 to-black/60 border border-yellow-500/30 rounded-2xl p-5 md:p-8 mt-4 w-full max-w-lg mx-auto">
-                    <h3 class="text-lg md:text-2xl font-bold text-yellow-400 mb-2">Developed with ❤️ by Satyam</h3>
-                    <p class="text-xs md:text-base text-gray-300 mb-4">Subscribe for more such powerful tools!</p>
-                    <a href="https://youtube.com/@observe_with_satyam?si=9BiGcrs2Dhv4HDFa" target="_blank" class="nav-pill-btn px-6 py-3.5 rounded-full bg-red-600 hover:bg-red-700 text-white font-bold text-sm md:text-base transition inline-flex items-center justify-center gap-3 shadow-lg shadow-red-600/30 w-full mb-3">
+                <div class="text-blue-600 text-5xl md:text-7xl mb-2"><i class="fa-solid fa-trophy"></i></div>
+                <h1 class="text-2xl md:text-4xl font-bold text-slate-800 poppins tracking-wide">Quiz Completed!</h1>
+                <p class="text-sm md:text-lg text-slate-500">You have successfully attempted all the questions in this mode.</p>
+                <div class="card p-6 md:p-8 mt-4 w-full max-w-lg mx-auto border border-blue-100">
+                    <h3 class="text-lg md:text-2xl font-bold text-slate-800 mb-2">Developed with ❤️ by Satyam</h3>
+                    <p class="text-xs md:text-base text-slate-500 mb-4">Subscribe for more such powerful tools!</p>
+                    <a href="https://youtube.com/@observe_with_satyam?si=9BiGcrs2Dhv4HDFa" target="_blank" class="nav-pill-btn px-6 py-3.5 rounded-full bg-red-600 hover:bg-red-700 text-white font-bold text-sm md:text-base transition inline-flex items-center justify-center gap-3 shadow-sm w-full mb-3">
                         <i class="fab fa-youtube text-xl"></i> Subscribe on YouTube
                     </a>
-                    <button onclick="retakeQuiz()" class="nav-pill-btn px-6 py-3.5 rounded-full bg-gray-700 hover:bg-gray-600 border border-gray-500 text-white font-bold text-sm md:text-base transition flex items-center justify-center gap-3 w-full">
+                    <button onclick="retakeQuiz()" class="nav-pill-btn px-6 py-3.5 rounded-full bg-white hover:bg-slate-100 border border-slate-300 text-slate-700 font-bold text-sm md:text-base transition flex items-center justify-center gap-3 w-full">
                         <i class="fa-solid fa-rotate-right"></i> Retake Quiz
                     </button>
                 </div>
             </div>
         </main>
 
-        <!-- Footer: nav controls + compact social strip, always visible, never overlaps content -->
+        <!-- Footer -->
         <footer id="quiz-footer" class="app-footer px-2 pb-2 space-y-2">
-            <div class="flex justify-between items-center glass-card p-2.5 md:p-3 rounded-xl shadow-lg gap-1">
-                <button onclick="prevQuestion()" class="nav-pill-btn px-3 py-2.5 md:px-5 rounded-xl bg-gray-800 border border-gray-600 hover:bg-gray-700 text-xs md:text-sm font-semibold text-gray-300 transition flex items-center gap-2 shrink-0"><i class="fa-solid fa-arrow-left"></i> <span class="hidden sm:inline">Prev</span></button>
-                <button onclick="togglePalette()" class="nav-pill-btn px-3 py-2.5 rounded-xl bg-gray-800 border border-gray-600 hover:bg-gray-700 text-xs md:text-sm font-semibold text-gray-300 transition flex items-center gap-2"><i class="fa-solid fa-th"></i> <span class="hidden sm:inline">Palette</span></button>
-                <div class="text-xs md:text-base text-yellow-400 font-mono tracking-widest font-bold whitespace-nowrap px-2 bg-black/30 py-2 rounded-lg border border-yellow-500/20" id="score-counter">Q: 0/0</div>
-                <button onclick="openRevision()" class="nav-pill-btn px-3 py-2.5 rounded-xl bg-gray-800 border border-gray-600 hover:bg-gray-700 text-xs md:text-sm font-semibold text-gray-300 transition flex items-center gap-2"><i class="fa-solid fa-clock-rotate-left"></i> <span class="hidden sm:inline">Review All</span></button>
-                <button onclick="nextQuestion()" class="nav-pill-btn px-3 py-2.5 md:px-5 rounded-xl bg-gradient-to-r from-yellow-500 to-amber-600 hover:from-yellow-400 hover:to-amber-500 text-black text-xs md:text-sm font-bold transition flex items-center gap-2 shrink-0"><span class="hidden sm:inline">Next</span> <i class="fa-solid fa-arrow-right"></i></button>
+            <div class="flex justify-between items-center card p-2.5 md:p-3 rounded-xl shadow-sm gap-1">
+                <button onclick="prevQuestion()" class="nav-pill-btn px-3 py-2.5 md:px-5 rounded-xl bg-white border border-slate-200 hover:bg-slate-50 text-xs md:text-sm font-semibold text-slate-600 transition flex items-center gap-2 shrink-0"><i class="fa-solid fa-arrow-left"></i> <span class="hidden sm:inline">Prev</span></button>
+                <button onclick="togglePalette()" class="nav-pill-btn px-3 py-2.5 rounded-xl bg-white border border-slate-200 hover:bg-slate-50 text-xs md:text-sm font-semibold text-slate-600 transition flex items-center gap-2"><i class="fa-solid fa-th"></i> <span class="hidden sm:inline">Palette</span></button>
+                <div class="text-xs md:text-base text-blue-600 font-mono font-bold whitespace-nowrap px-2 bg-slate-50 py-2 rounded-lg border border-slate-200" id="score-counter">Q: 0/0</div>
+                <button onclick="openRevision()" class="nav-pill-btn px-3 py-2.5 rounded-xl bg-white border border-slate-200 hover:bg-slate-50 text-xs md:text-sm font-semibold text-slate-600 transition flex items-center gap-2"><i class="fa-solid fa-clock-rotate-left"></i> <span class="hidden sm:inline">Review All</span></button>
+                <button onclick="nextQuestion()" class="nav-pill-btn px-3 py-2.5 md:px-5 rounded-xl bg-blue-600 hover:bg-blue-700 text-white text-xs md:text-sm font-bold transition flex items-center gap-2 shrink-0"><span class="hidden sm:inline">Next</span> <i class="fa-solid fa-arrow-right"></i></button>
             </div>
 
             <!-- Social Branding -->
@@ -334,45 +328,44 @@
                     <a href="https://youtube.com/@observe_with_satyam" target="_blank" class="sf-icon yt" title="YouTube"><i class="fab fa-youtube"></i></a>
                     <a href="https://t.me/CA_Protracker" target="_blank" class="sf-icon tg" title="Telegram"><i class="fab fa-telegram-plane"></i></a>
                 </div>
-                <p class="text-[10px] md:text-xs text-gray-400">Made with ❤️ by Satyam</p>
+                <p class="text-[10px] md:text-xs text-slate-400">Made with ❤️ by Satyam</p>
             </div>
         </footer>
     </div>
 
     <!-- Palette Panel -->
-    <div id="palette-panel" class="hidden fixed inset-x-0 bottom-0 z-50 p-5 bg-[#0a0420]/95 backdrop-blur-xl border-t-2 border-yellow-500/40 rounded-t-3xl max-h-[70vh] overflow-y-auto shadow-[0_-10px_40px_rgba(0,0,0,0.5)]" style="-webkit-overflow-scrolling:touch;">
+    <div id="palette-panel" class="hidden fixed inset-x-0 bottom-0 z-50 p-5 bg-white/95 backdrop-blur-xl border-t-2 border-blue-500/40 rounded-t-3xl max-h-[70vh] overflow-y-auto shadow-lg" style="-webkit-overflow-scrolling:touch;">
         <div class="flex justify-between items-center mb-4 max-w-5xl mx-auto">
-            <h3 class="text-xl font-bold text-yellow-400">Question Palette</h3>
-            <button onclick="togglePalette()" class="nav-pill-btn text-gray-400 hover:text-white text-3xl leading-none transition-transform hover:scale-110 w-11 h-11 flex items-center justify-center">&times;</button>
+            <h3 class="text-xl font-bold text-slate-800 poppins">Question Palette</h3>
+            <button onclick="togglePalette()" class="nav-pill-btn text-slate-400 hover:text-slate-600 text-3xl leading-none transition w-10 h-10 flex items-center justify-center">&times;</button>
         </div>
-        <div class="flex gap-3 text-xs md:text-sm text-gray-300 mb-5 flex-wrap justify-center font-medium max-w-5xl mx-auto bg-black/20 p-3 rounded-xl">
-            <span class="flex items-center gap-1.5"><span class="inline-block w-3.5 h-3.5 rounded bg-[#2563eb]"></span> Answered</span>
-            <span class="flex items-center gap-1.5"><span class="inline-block w-3.5 h-3.5 rounded bg-[#b91c1c]"></span> Wrong</span>
-            <span class="flex items-center gap-1.5"><span class="inline-block w-3.5 h-3.5 rounded-full bg-[var(--gold)]"></span> Marked</span>
-            <span class="flex items-center gap-1.5"><span class="inline-block w-3.5 h-3.5 rounded bg-[#1e293b] border border-[#475569]"></span> Unanswered</span>
+        <div class="flex gap-3 text-xs md:text-sm text-slate-500 mb-5 flex-wrap justify-center font-medium max-w-5xl mx-auto bg-slate-50 p-3 rounded-xl">
+            <span class="flex items-center gap-1.5"><span class="inline-block w-3.5 h-3.5 rounded bg-blue-100 border border-blue-300"></span> Answered</span>
+            <span class="flex items-center gap-1.5"><span class="inline-block w-3.5 h-3.5 rounded bg-red-100 border border-red-300"></span> Wrong</span>
+            <span class="flex items-center gap-1.5"><span class="inline-block w-3.5 h-3.5 rounded-full bg-amber-100 border border-amber-300"></span> Marked</span>
+            <span class="flex items-center gap-1.5"><span class="inline-block w-3.5 h-3.5 rounded bg-white border border-slate-300"></span> Unanswered</span>
         </div>
         <div id="palette-grid" class="flex flex-wrap gap-2.5 justify-center max-w-5xl mx-auto"></div>
     </div>
 
     <!-- Revision Panel -->
-    <div id="revision-panel" class="hidden fixed inset-0 z-50 bg-black/90 backdrop-blur-lg p-4 flex flex-col">
+    <div id="revision-panel" class="hidden fixed inset-0 z-50 bg-white/95 backdrop-blur-lg p-4 flex flex-col">
         <div class="flex justify-between items-center mb-4 max-w-5xl mx-auto w-full mt-3">
-            <h2 class="text-xl md:text-2xl font-bold text-yellow-400">Review All</h2>
-            <button onclick="closeRevision()" class="nav-pill-btn text-white text-3xl md:text-4xl hover:text-red-400 transition w-11 h-11 flex items-center justify-center">&times;</button>
+            <h2 class="text-xl md:text-2xl font-bold text-slate-800 poppins">Review All</h2>
+            <button onclick="closeRevision()" class="nav-pill-btn text-slate-600 text-3xl md:text-4xl hover:text-red-500 transition w-10 h-10 flex items-center justify-center">&times;</button>
         </div>
         <div id="revision-list" class="flex-1 overflow-y-auto space-y-3 pr-1 max-w-5xl mx-auto w-full" style="-webkit-overflow-scrolling:touch;"></div>
     </div>
 
     <!-- Explanation Modal -->
-    <div id="explanation-modal" class="fixed inset-0 bg-black/85 backdrop-blur-sm flex items-center justify-center p-4 z-50 hidden">
-        <div class="glass-card bg-gradient-to-b from-slate-900 to-[#0b0f33] border border-yellow-500/50 rounded-2xl max-w-sm md:max-w-lg w-full p-6 md:p-8 text-center space-y-5 shadow-2xl max-h-[85vh] overflow-y-auto" style="-webkit-overflow-scrolling:touch;">
+    <div id="explanation-modal" class="fixed inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center p-4 z-50 hidden">
+        <div class="card border border-blue-100 rounded-2xl max-w-sm md:max-w-lg w-full p-6 md:p-8 text-center space-y-5 shadow-xl max-h-[85vh] overflow-y-auto" style="-webkit-overflow-scrolling:touch;">
             <h2 id="modal-title" class="text-xl md:text-3xl font-bold flex items-center justify-center gap-3"></h2>
-            <div id="modal-subtitle" class="text-sm md:text-base text-gray-200 leading-relaxed font-medium"></div>
-            <button id="modal-continue-btn" onclick="nextQuestion()" class="nav-pill-btn px-8 py-3.5 bg-gradient-to-r from-yellow-500 to-amber-600 text-black rounded-xl font-bold text-base hover:from-yellow-400 hover:to-amber-500 transition shadow-lg w-full mt-4">Next Question</button>
+            <div id="modal-subtitle" class="text-sm md:text-base text-slate-600 leading-relaxed font-medium"></div>
+            <button id="modal-continue-btn" onclick="nextQuestion()" class="nav-pill-btn px-8 py-3.5 bg-blue-600 text-white rounded-xl font-bold text-base hover:bg-blue-700 transition shadow-sm w-full mt-4">Next Question</button>
         </div>
     </div>
 
-    <!-- Audio -->
     <script>
         const audioCtx = new(window.AudioContext || window.webkitAudioContext)();
 
@@ -398,22 +391,20 @@
             setTimeout(() => playBeep(180, 'sawtooth', 0.4), 200); }
     </script>
 
-    <!-- Core App -->
     <script>
         let currentMode = localStorage.getItem('caAuditProMode') || 'study';
         let questionsData = [];
         let currentIdx = 0;
         let isAnswered = false;
         let selectedOption = null;
-        // sessionState: array of { selected: null|number, isCorrect: null|boolean, marked: boolean }
         let sessionState = [];
         let toastShown = false;
 
         function updateModeUI() {
             const s = document.getElementById('btn-mode-study'),
                 m = document.getElementById('btn-mode-mcqs');
-            const active = "nav-pill-btn flex-1 px-4 py-2.5 rounded-full text-xs md:text-sm font-bold bg-gradient-to-r from-yellow-500 to-amber-600 text-black transition shadow-lg flex items-center justify-center gap-2";
-            const inactive = "nav-pill-btn flex-1 px-4 py-2.5 rounded-full text-xs md:text-sm font-bold text-gray-400 hover:text-white transition flex items-center justify-center gap-2";
+            const active = "nav-pill-btn flex-1 px-4 py-2.5 rounded-full text-xs md:text-sm font-semibold bg-blue-600 text-white transition shadow-sm flex items-center justify-center gap-2";
+            const inactive = "nav-pill-btn flex-1 px-4 py-2.5 rounded-full text-xs md:text-sm font-semibold text-slate-500 hover:text-slate-700 hover:bg-slate-100 transition flex items-center justify-center gap-2";
             s.className = currentMode === 'study' ? active : inactive;
             m.className = currentMode === 'mcqs' ? active : inactive;
         }
@@ -467,7 +458,6 @@
             return 0;
         }
 
-        // Converts audit_case_scenarios.json into the same flat format used by the quiz.
         function normaliseCaseScenarioData(data) {
             const records = Array.isArray(data) ? data : (data.caseScenarios || data.questions || []);
             return records.flatMap((record, recordIndex) => {
@@ -499,22 +489,24 @@
 
         async function fetchQuestions() {
             const caseScenarioMode = currentMode === 'mcqs';
-            const files = caseScenarioMode
-                ? ['./audit_case_scenarios.json']
-                : ['./study.json', './mcqs.json'];
+            const files = caseScenarioMode ?
+                ['./audit_case_scenarios.json'] :
+                ['./study.json', './mcqs.json'];
 
             try {
                 const payloads = await Promise.all(files.map(fetchJson));
-                questionsData = caseScenarioMode
-                    ? normaliseCaseScenarioData(payloads[0])
-                    : payloads.flatMap(normaliseCaseScenarioData);
+                questionsData = caseScenarioMode ?
+                    normaliseCaseScenarioData(payloads[0]) :
+                    payloads.flatMap(normaliseCaseScenarioData);
 
                 if (!Array.isArray(questionsData) || questionsData.length === 0) {
                     throw new Error('No usable questions');
                 }
                 if (sessionState.length !== questionsData.length) {
                     sessionState = questionsData.map((_, i) => sessionState[i] || {
-                        selected: null, isCorrect: null, marked: false
+                        selected: null,
+                        isCorrect: null,
+                        marked: false
                     });
                 }
                 if (currentIdx >= questionsData.length) currentIdx = 0;
@@ -537,8 +529,6 @@
             maybeShowSubscribeToast();
         }
 
-        // Wrap any <table> found inside dynamically injected HTML so it never
-        // breaks the mobile layout — scrolls horizontally instead of the page.
         function wrapTables(container) {
             container.querySelectorAll('table').forEach(t => {
                 if (!t.parentElement.classList.contains('table-wrap')) {
@@ -555,14 +545,14 @@
             selectedOption = null;
             const q = questionsData[currentIdx];
             const caseStudy = q.caseStudy ? `
-                <div class="case-study-box mb-4 rounded-xl border border-yellow-500/30 bg-black/30 p-3.5 md:p-5 text-sm leading-relaxed text-gray-200">
-                    <div class="mb-2.5 font-bold uppercase tracking-wider text-yellow-400 flex items-center gap-2 sticky -top-0.5"><i class="fa-solid fa-file-contract"></i> Case Scenario ${escapeHtml(q.scenarioNumber)}</div>
+                <div class="case-study-box">
+                    <div class="mb-2.5 font-bold uppercase tracking-wider text-blue-600 flex items-center gap-2 sticky -top-0.5"><i class="fa-solid fa-file-contract"></i> Case Scenario ${escapeHtml(q.scenarioNumber)}</div>
                     <div class="whitespace-pre-wrap">${escapeHtml(q.caseStudy)}</div>
                 </div>` : '';
             const questionLabel = q.questionNumber || `Q${currentIdx + 1}`;
             const qTextEl = document.getElementById('question-text');
             qTextEl.innerHTML =
-                `${caseStudy}<div><span class="text-yellow-400 font-bold tracking-wider mr-1">${escapeHtml(questionLabel)}.</span> ${escapeHtml(q.question)}</div>`;
+                `${caseStudy}<div><span class="text-blue-600 font-bold tracking-wider mr-1">${escapeHtml(questionLabel)}.</span> ${escapeHtml(q.question)}</div>`;
             wrapTables(qTextEl);
             document.getElementById('score-counter').innerText = `Q: ${currentIdx + 1} / ${questionsData.length}`;
             updateMarkReviewIcon();
@@ -573,11 +563,9 @@
                 const btn = document.createElement('button');
                 btn.id = `opt-${idx}`;
                 btn.className = "option-btn";
-
                 const optLetter = String.fromCharCode(65 + idx);
-
-                btn.innerHTML = `<span class="opt-letter flex items-center justify-center w-8 h-8 rounded-full bg-yellow-500/10 text-yellow-400 font-bold text-sm shrink-0 border border-yellow-500/30 shadow-[0_0_8px_rgba(234,179,8,0.1)] transition-colors mt-0.5">${optLetter}</span> <span class="leading-relaxed text-left">${opt}</span>`;
-
+                btn.innerHTML =
+                    `<span class="opt-letter">${optLetter}</span> <span class="leading-relaxed text-left">${opt}</span>`;
                 if (state.selected !== null) {
                     btn.disabled = true;
                     if (idx === state.selected && !state.isCorrect) btn.classList.add('option-wrong');
@@ -589,13 +577,10 @@
             });
             wrapTables(grid);
             renderDotsStrip();
-            // Ensure the newly loaded question starts at the top of the scroll area
             document.getElementById('scroll-area').scrollTo({ top: 0, behavior: 'auto' });
             saveProgress();
         }
 
-        // Compact inline progress dots directly under the options for fast jumping
-        // without needing to open the full palette sheet.
         function renderDotsStrip() {
             const strip = document.getElementById('dots-strip');
             strip.innerHTML = '';
@@ -662,12 +647,12 @@
             const q = questionsData[currentIdx];
             const modal = document.getElementById('explanation-modal');
             document.getElementById('modal-title').innerHTML = isCorrect ?
-                '<i class="fa-solid fa-circle-check text-green-400 text-3xl md:text-4xl"></i> <span class="text-green-400">Awesome!</span>' :
-                '<i class="fa-solid fa-circle-xmark text-red-500 text-3xl md:text-4xl"></i> <span class="text-red-500">Incorrect!</span>';
+                '<i class="fa-solid fa-circle-check text-green-500 text-3xl md:text-4xl"></i> <span class="text-green-600">Awesome!</span>' :
+                '<i class="fa-solid fa-circle-xmark text-red-500 text-3xl md:text-4xl"></i> <span class="text-red-600">Incorrect!</span>';
             let sub = isCorrect ? 'You selected the right answer.' :
-                `Correct answer:<br><div class="text-yellow-400 text-sm md:text-base text-left bg-black/40 p-4 rounded-xl border border-yellow-500/30 mt-3 font-medium flex gap-3"><span class="w-6 h-6 flex items-center justify-center shrink-0 bg-yellow-500/20 rounded-full border border-yellow-500/40 text-xs">${String.fromCharCode(65 + q.correctOption)}</span> <span>${q.options[q.correctOption]}</span></div>`;
+                `Correct answer:<br><div class="text-slate-700 text-sm md:text-base text-left bg-slate-50 p-4 rounded-xl border border-slate-200 mt-3 font-medium flex gap-3"><span class="w-6 h-6 flex items-center justify-center shrink-0 bg-green-50 rounded-full border border-green-200 text-xs text-green-600">${String.fromCharCode(65 + q.correctOption)}</span> <span>${q.options[q.correctOption]}</span></div>`;
             if (q.explanation) sub +=
-                `<br><div class="text-gray-300 text-sm text-left bg-black/40 p-4 rounded-xl border border-gray-500/30 mt-3"><b>Explanation:</b> ${q.explanation}</div>`;
+                `<br><div class="text-slate-500 text-sm text-left bg-slate-50 p-4 rounded-xl border border-slate-200 mt-3"><b class="text-slate-700">Explanation:</b> ${q.explanation}</div>`;
             document.getElementById('modal-subtitle').innerHTML = sub;
             document.getElementById('modal-continue-btn').innerText = currentIdx === questionsData.length - 1 ?
                 'Finish Quiz' : 'Next Question';
@@ -706,11 +691,10 @@
             const btn = document.getElementById('mark-review-btn');
             const state = sessionState[currentIdx] || { marked: false };
             btn.innerHTML = state.marked ?
-                '<i class="fa-solid fa-bookmark text-yellow-400 drop-shadow-md"></i>' :
-                '<i class="fa-regular fa-bookmark"></i>';
+                '<i class="fa-solid fa-bookmark text-amber-500"></i>' :
+                '<i class="fa-regular fa-bookmark text-slate-400"></i>';
         }
 
-        // Palette (full bottom-sheet)
         function togglePalette() {
             const panel = document.getElementById('palette-panel');
             if (panel.classList.contains('hidden')) {
@@ -751,7 +735,6 @@
             }
         }
 
-        // Revision / Review All
         function openRevision() {
             const panel = document.getElementById('revision-panel');
             const list = document.getElementById('revision-list');
@@ -763,19 +746,20 @@
                 let statusIcon = '';
                 if (state.selected !== null) {
                     statusIcon = state.isCorrect ?
-                        '<i class="fa-solid fa-circle-check text-green-400"></i>' :
+                        '<i class="fa-solid fa-circle-check text-green-500"></i>' :
                         '<i class="fa-solid fa-circle-xmark text-red-500"></i>';
                 } else {
-                    statusIcon = '<i class="fa-regular fa-square text-gray-500"></i>';
+                    statusIcon = '<i class="fa-regular fa-square text-slate-400"></i>';
                 }
-                const markIcon = state.marked ? ' <i class="fa-solid fa-star text-yellow-400 ml-1" title="Marked for review"></i>' : '';
+                const markIcon = state.marked ?
+                    ' <i class="fa-solid fa-star text-amber-500 ml-1" title="Marked for review"></i>' : '';
                 div.innerHTML = `
               <div class="flex items-start gap-4">
                 <div class="text-xl shrink-0 mt-0.5">${statusIcon}</div>
                 <div class="flex-1">
-                  <p class="text-sm font-semibold text-white leading-snug">Q${i+1}: ${q.question.substring(0,120)}...${markIcon}</p>
-                  ${state.selected !== null ? `<p class="text-xs text-gray-400 mt-2 bg-black/40 p-2 rounded border border-gray-700/50">Your answer: <span class="${state.isCorrect ? 'text-green-400 font-medium' : 'text-red-400 font-medium'}">${q.options[state.selected]}</span></p>` : ''}
-                  <p class="text-xs text-yellow-400 mt-1.5 font-medium">Correct: ${q.options[q.correctOption]}</p>
+                  <p class="text-sm font-semibold text-slate-800 leading-snug">Q${i+1}: ${q.question.substring(0,120)}...${markIcon}</p>
+                  ${state.selected !== null ? `<p class="text-xs text-slate-500 mt-2 bg-slate-50 p-2 rounded border border-slate-200">Your answer: <span class="${state.isCorrect ? 'text-green-600 font-medium' : 'text-red-600 font-medium'}">${q.options[state.selected]}</span></p>` : ''}
+                  <p class="text-xs text-blue-600 mt-1.5 font-medium">Correct: ${q.options[q.correctOption]}</p>
                 </div>
               </div>`;
                 div.onclick = () => { jumpTo(i);
@@ -789,26 +773,12 @@
             document.getElementById('revision-panel').classList.add('hidden');
         }
 
-        // Close overlays when tapping the dimmed backdrop
         document.getElementById('revision-panel').addEventListener('click', (e) => {
             if (e.target.id === 'revision-panel') closeRevision();
         });
         document.getElementById('explanation-modal').addEventListener('click', (e) => {
-            if (e.target.id === 'explanation-modal') { /* keep modal - user must acknowledge answer */ }
+            if (e.target.id === 'explanation-modal') { /* keep modal */ }
         });
-
-        // Analytics quick display
-        function showAnalytics() {
-            const total = questionsData.length;
-            let attempted = 0,
-                correct = 0;
-            sessionState.forEach(s => { if (s.selected !== null) { attempted++; if (s.isCorrect) correct++; } });
-            const wrong = attempted - correct;
-            const score = correct * 3 - wrong * 1;
-            alert(
-                `📊 Quick Analytics\n\nTotal Questions: ${total}\nAttempted: ${attempted}\nCorrect: ${correct}\nWrong: ${wrong}\nScore: ${score}/${total*3}`
-                );
-        }
 
         function finishQuiz() {
             document.getElementById('quiz-container').classList.add('hidden');
@@ -836,7 +806,6 @@
             });
         }
 
-        // Lifelines
         function use5050() {
             if (isAnswered) return;
             const q = questionsData[currentIdx];
@@ -866,14 +835,13 @@
             document.getElementById('life-expert').classList.add('opacity-40', 'cursor-not-allowed');
         }
 
-        // Subscribe Toast
         function maybeShowSubscribeToast() {
             if (toastShown) return;
             const attempted = sessionState.filter(s => s.selected !== null).length;
             if (attempted >= 20 && !localStorage.getItem('caAuditSubToastShown')) {
                 const toast = document.getElementById('toast');
                 toast.innerHTML =
-                    `❤️ Like the app? <a href="https://youtube.com/@observe_with_satyam?si=9BiGcrs2Dhv4HDFa" target="_blank" class="underline text-yellow-300">Subscribe to Satyam's YouTube</a> for more!`;
+                    `❤️ Like the app? <a href="https://youtube.com/@observe_with_satyam?si=9BiGcrs2Dhv4HDFa" target="_blank" class="underline text-white">Subscribe to Satyam's YouTube</a> for more!`;
                 toast.classList.add('show');
                 localStorage.setItem('caAuditSubToastShown', '1');
                 toastShown = true;
@@ -881,12 +849,11 @@
             }
         }
 
-        // Swipe Navigation — horizontal only, ignores vertical scroll gestures,
-        // attached to the scroll-area so it never blocks scrolling of long
-        // passages, options, or tables.
         function setupSwipe() {
             const area = document.getElementById('scroll-area');
-            let startX = 0, startY = 0, tracking = false;
+            let startX = 0,
+                startY = 0,
+                tracking = false;
             const MIN_DIST = 45;
 
             area.addEventListener('touchstart', (e) => {
@@ -899,8 +866,6 @@
                 if (!tracking) return;
                 const dx = e.touches[0].clientX - startX;
                 const dy = e.touches[0].clientY - startY;
-                // If the gesture is clearly more vertical than horizontal,
-                // stop tracking so native scrolling takes over completely.
                 if (Math.abs(dy) > Math.abs(dx)) tracking = false;
             }, { passive: true });
 
@@ -916,7 +881,6 @@
             }, { passive: true });
         }
 
-        // Keyboard shortcuts
         window.addEventListener('keydown', (e) => {
             if (e.key === 'ArrowRight') nextQuestion();
             if (e.key === 'ArrowLeft') prevQuestion();
@@ -937,4 +901,4 @@
         };
     </script>
 </body>
-</html>
+                    </html>
