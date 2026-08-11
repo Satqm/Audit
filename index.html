@@ -1,904 +1,620 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
-    <title>CA Final Audit - Pro Simulator</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@500;600;700&display=swap');
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+  <title>CA Final Audit • Pro Simulator</title>
+  <!-- Tailwind + Font Awesome -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400..700&family=Poppins:wght@500;600;700&display=swap');
 
-        :root {
-            --bg: #f8fafc;
-            --surface: #ffffff;
-            --text: #1e293b;
-            --text-secondary: #64748b;
-            --border: #e2e8f0;
-            --primary: #3b82f6;
-            --primary-light: #dbeafe;
-            --correct: #059669;
-            --correct-bg: #d1fae5;
-            --wrong: #dc2626;
-            --wrong-bg: #fee2e2;
-            --marked: #f59e0b;
-            --marked-bg: #fef3c7;
-            --shadow: 0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
-            --shadow-lg: 0 4px 24px rgba(0,0,0,0.08);
-        }
+    * { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+    html, body { height: 100%; overflow: hidden; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #f8fafc;
+      color: #1e293b;
+      user-select: none;
+      -webkit-user-select: none;
+    }
+    .poppins { font-family: 'Poppins', sans-serif; }
 
-        * { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+    /* mobile-first card & surfaces */
+    .card {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 16px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+    }
 
-        html, body { height: 100%; }
+    /* scrollable main area */
+    .scroll-area {
+      flex: 1 1 auto;
+      min-height: 0;
+      overflow-y: auto;
+      -webkit-overflow-scrolling: touch;
+      overscroll-behavior-y: contain;
+      padding: 12px 12px 8px;
+    }
 
-        body {
-            font-family: 'Inter', sans-serif;
-            background: var(--bg);
-            color: var(--text);
-            overflow: hidden;
-            user-select: none;
-            -webkit-user-select: none;
-        }
+    /* compact header single row */
+    .compact-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 8px 12px;
+      margin: 8px 8px 0;
+      background: white;
+      border-radius: 20px;
+      border: 1px solid #e2e8f0;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+      max-height: 60px;
+    }
 
-        .poppins { font-family: 'Poppins', sans-serif; }
+    /* mode switcher tighter */
+    .mode-pill {
+      display: flex;
+      background: white;
+      border-radius: 40px;
+      padding: 4px;
+      border: 1px solid #e2e8f0;
+      margin: 6px 8px;
+      gap: 4px;
+    }
+    .mode-btn {
+      flex: 1;
+      text-align: center;
+      padding: 8px 6px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      border-radius: 40px;
+      background: transparent;
+      transition: all 0.2s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      border: none;
+      color: #64748b;
+    }
+    .mode-btn.active {
+      background: #3b82f6;
+      color: white;
+      box-shadow: 0 4px 10px rgba(59,130,246,0.2);
+    }
 
-        .app-shell {
-            display: flex;
-            flex-direction: column;
-            height: 100dvh;
-            max-width: 900px;
-            margin: 0 auto;
-            width: 100%;
-            background: var(--bg);
-        }
+    /* question grid: horizontal scroll dots */
+    .dots-scroll {
+      display: flex;
+      overflow-x: auto;
+      gap: 8px;
+      padding: 8px 2px;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+      white-space: nowrap;
+      margin: 6px 0;
+    }
+    .dots-scroll::-webkit-scrollbar { display: none; }
+    .dot-btn {
+      width: 44px;
+      height: 44px;
+      min-width: 44px;
+      border-radius: 12px;
+      font-weight: 600;
+      font-size: 0.85rem;
+      border: 1.5px solid #e2e8f0;
+      background: white;
+      color: #334155;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      flex-shrink: 0;
+      transition: all 0.15s;
+    }
+    .dot-btn.current {
+      border-color: #3b82f6;
+      box-shadow: 0 0 0 3px rgba(59,130,246,0.25);
+      transform: scale(1.02);
+    }
+    .dot-btn.answered { background: #dbeafe; border-color: #3b82f6; color: #1e40af; }
+    .dot-btn.wrong { background: #fee2e2; border-color: #dc2626; color: #991b1b; }
+    .mark-dot {
+      position: absolute;
+      top: -3px;
+      right: -3px;
+      width: 12px;
+      height: 12px;
+      background: #f59e0b;
+      border-radius: 50%;
+      border: 2px solid white;
+    }
 
-        .app-header, .mode-switch-wrap { flex: 0 0 auto; }
+    .option-btn {
+      background: white;
+      border: 1.5px solid #e2e8f0;
+      border-radius: 14px;
+      padding: 12px 14px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      width: 100%;
+      font-size: 0.9rem;
+      transition: all 0.15s;
+      touch-action: manipulation;
+      min-height: 48px;
+      text-align: left;
+    }
+    .option-btn:active { transform: scale(0.98); }
+    .opt-letter {
+      width: 32px; height: 32px;
+      border-radius: 8px;
+      background: #f1f5f9;
+      display: flex; align-items: center; justify-content: center;
+      font-weight: 700; color: #475569;
+      border: 1px solid #e2e8f0;
+    }
+    .option-correct { border-color: #059669 !important; background: #d1fae5 !important; }
+    .option-wrong { border-color: #dc2626 !important; background: #fee2e2 !important; }
+    .option-selected { border-color: #f59e0b !important; background: #fef3c7 !important; }
 
-        .scroll-area {
-            flex: 1 1 auto;
-            min-height: 0;
-            overflow-y: auto;
-            -webkit-overflow-scrolling: touch;
-            overscroll-behavior-y: contain;
-            padding: 12px 12px 16px;
-        }
+    .case-box {
+      background: #f1f5f9;
+      border-radius: 14px;
+      padding: 12px;
+      margin-bottom: 12px;
+      font-size: 0.85rem;
+      line-height: 1.5;
+      border: 1px solid #e2e8f0;
+      max-height: 30vh;
+      overflow-y: auto;
+    }
 
-        .app-footer { flex: 0 0 auto; }
+    .footer-nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: white;
+      border-radius: 20px;
+      padding: 8px 12px;
+      margin: 0 8px 8px;
+      border: 1px solid #e2e8f0;
+      gap: 6px;
+    }
 
-        .card {
-            background: var(--surface);
-            border: 1px solid var(--border);
-            border-radius: 16px;
-            box-shadow: var(--shadow);
-        }
+    .icon-btn {
+      width: 38px; height: 38px;
+      border-radius: 12px;
+      display: flex; align-items: center; justify-content: center;
+      background: #f8fafc; border: 1px solid #e2e8f0;
+      color: #334155; font-size: 1rem;
+      transition: 0.2s;
+    }
+    .icon-btn:active { background: #e2e8f0; }
 
-        .case-study-box {
-            max-height: 30vh;
-            overflow-y: auto;
-            -webkit-overflow-scrolling: touch;
-            background: #f1f5f9;
-            border: 1px solid var(--border);
-            border-radius: 12px;
-            padding: 14px 16px;
-            margin-bottom: 16px;
-            font-size: 0.9rem;
-            line-height: 1.6;
-            color: var(--text);
-        }
+    .palette-panel {
+      background: rgba(255,255,255,0.98);
+      backdrop-filter: blur(12px);
+      border-radius: 24px 24px 0 0;
+      padding: 16px;
+      border-top: 2px solid #bfdbfe;
+    }
 
-        .question-box {
-            font-size: 1rem;
-            line-height: 1.65;
-            color: var(--text);
-            padding: 8px 0;
-        }
-
-        .option-btn {
-            background: var(--surface);
-            border: 1.5px solid var(--border);
-            transition: all 0.15s ease;
-            cursor: pointer;
-            -webkit-tap-highlight-color: transparent;
-            touch-action: manipulation;
-            min-height: 52px;
-            border-radius: 12px;
-            font-size: 0.95rem;
-            padding: 14px 16px;
-            display: flex;
-            align-items: flex-start;
-            gap: 12px;
-            width: 100%;
-            color: var(--text);
-            box-shadow: var(--shadow);
-        }
-        .option-btn:active:not(:disabled) { transform: scale(0.98); }
-        .option-btn:hover:not(:disabled) { border-color: var(--primary); background: var(--primary-light); }
-        .option-selected { border-color: var(--marked) !important; background: var(--marked-bg) !important; }
-        .option-correct { border-color: var(--correct) !important; background: var(--correct-bg) !important; color: var(--correct) !important; }
-        .option-wrong { border-color: var(--wrong) !important; background: var(--wrong-bg) !important; color: var(--wrong) !important; }
-
-        .opt-letter {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 32px;
-            height: 32px;
-            border-radius: 8px;
-            background: #f1f5f9;
-            color: var(--text-secondary);
-            font-weight: 700;
-            font-size: 0.85rem;
-            flex-shrink: 0;
-            border: 1px solid var(--border);
-        }
-        .option-correct .opt-letter { background: #d1fae5; color: var(--correct); border-color: var(--correct); }
-        .option-wrong .opt-letter { background: #fee2e2; color: var(--wrong); border-color: var(--wrong); }
-        .option-selected .opt-letter { background: #fef3c7; color: #92400e; border-color: var(--marked); }
-
-        .table-wrap {
-            overflow-x: auto;
-            -webkit-overflow-scrolling: touch;
-            border-radius: 10px;
-            border: 1px solid var(--border);
-            margin: 10px 0;
-        }
-        .table-wrap table { min-width: 480px; border-collapse: collapse; width: 100%; font-size: 0.85rem; }
-        .table-wrap th, .table-wrap td { padding: 8px 10px; border: 1px solid var(--border); text-align: left; }
-        .table-wrap th { background: #f8fafc; font-weight: 600; color: var(--text-secondary); }
-
-        .palette-btn {
-            width: 38px;
-            height: 38px;
-            border-radius: 10px;
-            font-size: 12px;
-            font-weight: 600;
-            border: 1.5px solid var(--border);
-            background: var(--surface);
-            color: var(--text-secondary);
-            cursor: pointer;
-            transition: all 0.15s;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            touch-action: manipulation;
-            flex-shrink: 0;
-            position: relative;
-        }
-        .palette-btn:active { transform: scale(0.92); }
-        .palette-btn.answered { background: #dbeafe; border-color: var(--primary); color: var(--primary); }
-        .palette-btn.wrong { background: #fee2e2; border-color: var(--wrong); color: var(--wrong); }
-        .palette-btn.current { border-color: var(--primary) !important; box-shadow: 0 0 0 3px rgba(59,130,246,0.2); transform: scale(1.05); }
-        .palette-btn .mark-dot {
-            position: absolute; top: -4px; right: -4px;
-            width: 10px; height: 10px; border-radius: 50%;
-            background: var(--marked); border: 1.5px solid #d97706;
-        }
-
-        .toast {
-            position: fixed;
-            bottom: 140px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: var(--text);
-            border: 1px solid var(--border);
-            color: #fff;
-            padding: 10px 18px;
-            border-radius: 24px;
-            font-size: 12px;
-            font-weight: 600;
-            z-index: 200;
-            opacity: 0;
-            pointer-events: none;
-            transition: opacity 0.4s, transform 0.4s;
-            max-width: 90vw;
-            text-align: center;
-            box-shadow: var(--shadow-lg);
-        }
-        .toast.show { opacity: 1; transform: translateX(-50%) translateY(-6px); pointer-events: auto; }
-
-        .revision-item {
-            background: var(--surface);
-            border: 1px solid var(--border);
-            border-radius: 12px;
-            padding: 14px 16px;
-            margin-bottom: 10px;
-            transition: background 0.2s;
-            touch-action: manipulation;
-            cursor: pointer;
-        }
-        .revision-item:active { background: #f1f5f9; }
-
-        .sf-icon {
-            width: 38px;
-            height: 38px;
-            min-width: 38px;
-            min-height: 38px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1rem;
-            transition: all 0.25s ease;
-            background: #f1f5f9;
-            touch-action: manipulation;
-            color: var(--text-secondary);
-            text-decoration: none;
-        }
-        .sf-icon.ig:hover, .sf-icon.ig:active { background: #e1306c; color: #fff; }
-        .sf-icon.li:hover, .sf-icon.li:active { background: #0077b5; color: #fff; }
-        .sf-icon.yt:hover, .sf-icon.yt:active { background: #ff0000; color: #fff; }
-        .sf-icon.tg:hover, .sf-icon.tg:active { background: #0088cc; color: #fff; }
-
-        .nav-pill-btn {
-            touch-action: manipulation;
-            -webkit-tap-highlight-color: transparent;
-            min-height: 44px;
-        }
-
-        ::-webkit-scrollbar { width: 5px; }
-        ::-webkit-scrollbar-track { background: transparent; }
-        ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 10px; }
-
-        @media (max-width: 480px) {
-            .question-box { font-size: 0.95rem; }
-            .option-btn { font-size: 0.9rem; padding: 12px 14px; min-height: 48px; }
-            .case-study-box { max-height: 28vh; font-size: 0.85rem; }
-        }
-    </style>
+    @media (max-width: 480px) {
+      .option-btn { font-size: 0.85rem; padding: 10px 12px; }
+      .case-box { max-height: 25vh; }
+    }
+  </style>
 </head>
-<body>
+<body class="flex flex-col h-dvh max-w-lg mx-auto bg-slate-50">
 
-    <div id="toast" class="toast"></div>
+  <!-- TOAST -->
+  <div id="toast" class="fixed bottom-28 left-1/2 -translate-x-1/2 bg-gray-900 text-white px-5 py-2.5 rounded-full text-xs font-semibold z-50 opacity-0 transition pointer-events-none shadow-lg">❤️ Subscribe to Satyam</div>
 
-    <div class="app-shell">
-
-        <!-- Header -->
-        <header class="app-header card flex flex-wrap justify-between items-center gap-3 p-3 md:p-4 border-t-2 border-blue-500/50 mx-2 mt-2 rounded-2xl">
-            <div class="flex items-center gap-3">
-                <div class="w-10 h-10 rounded-lg bg-blue-50 border border-blue-200 flex items-center justify-center text-blue-600 text-lg font-bold poppins shrink-0">CA</div>
-                <div>
-                    <h1 class="text-sm md:text-lg font-bold text-slate-800 poppins leading-tight">FINAL AUDIT</h1>
-                    <p class="text-[10px] md:text-xs text-slate-500 hidden sm:block">Advanced Auditing MCQs</p>
-                </div>
-            </div>
-            <div class="flex items-center gap-2 md:gap-3">
-                <button onclick="retakeQuiz()" class="nav-pill-btn px-3 py-2 rounded-lg bg-red-50 border border-red-200 text-[11px] md:text-xs font-semibold text-red-600 hover:bg-red-100 transition flex items-center gap-2"><i class="fa-solid fa-rotate-right"></i> <span class="hidden sm:inline">Retake</span></button>
-                <button id="life-5050" onclick="use5050()" class="nav-pill-btn w-10 h-10 rounded-full bg-blue-50 border border-blue-200 flex items-center justify-center text-[11px] md:text-xs font-bold text-blue-600 hover:bg-blue-100 transition">50:50</button>
-                <button id="life-poll" onclick="useAudiencePoll()" class="nav-pill-btn w-10 h-10 rounded-full bg-blue-50 border border-blue-200 flex items-center justify-center text-sm md:text-base text-blue-600 hover:bg-blue-100 transition"><i class="fa-solid fa-chart-bar"></i></button>
-                <button id="life-expert" onclick="useExpertAdvice()" class="nav-pill-btn w-10 h-10 rounded-full bg-blue-50 border border-blue-200 flex items-center justify-center text-sm md:text-base text-blue-600 hover:bg-blue-100 transition"><i class="fa-solid fa-user-tie"></i></button>
-            </div>
-        </header>
-
-        <!-- Mode Switcher -->
-        <div class="mode-switch-wrap flex justify-center mt-3 mb-1 z-10 px-2">
-            <div class="card p-1.5 rounded-full flex gap-1 border border-slate-200 bg-white shadow-sm w-full max-w-md justify-center">
-                <button id="btn-mode-study" onclick="switchMode('study')" class="nav-pill-btn flex-1 px-4 py-2.5 rounded-full text-xs md:text-sm font-semibold transition flex items-center justify-center gap-2"><i class="fa-solid fa-book-open"></i> Direct MCQs</button>
-                <button id="btn-mode-mcqs" onclick="switchMode('mcqs')" class="nav-pill-btn flex-1 px-4 py-2.5 rounded-full text-xs md:text-sm font-semibold transition flex items-center justify-center gap-2"><i class="fa-solid fa-briefcase"></i> Case Scenarios</button>
-            </div>
-        </div>
-
-        <!-- Scrollable content -->
-        <main id="scroll-area" class="scroll-area">
-            <div id="quiz-container" class="w-full space-y-4">
-                <div class="card p-4 md:p-6">
-                    <div class="flex items-start justify-between gap-3">
-                        <div id="question-text" class="question-box whitespace-pre-wrap text-left w-full"></div>
-                        <button id="mark-review-btn" onclick="toggleMarkReview()" class="nav-pill-btn text-2xl md:text-3xl shrink-0 mt-1 text-slate-400 hover:text-amber-500 transition w-10 h-10 flex items-center justify-center" title="Mark for review"><i class="fa-regular fa-bookmark"></i></button>
-                    </div>
-                </div>
-
-                <div id="options-grid" class="grid grid-cols-1 gap-3 w-full"></div>
-
-                <div id="dots-strip" class="flex gap-2 overflow-x-auto py-1 px-1"></div>
-            </div>
-
-            <!-- End Screen -->
-            <div id="end-screen" class="hidden flex-col items-center justify-center w-full text-center space-y-5 my-6 px-1">
-                <div class="text-blue-600 text-5xl md:text-7xl mb-2"><i class="fa-solid fa-trophy"></i></div>
-                <h1 class="text-2xl md:text-4xl font-bold text-slate-800 poppins tracking-wide">Quiz Completed!</h1>
-                <p class="text-sm md:text-lg text-slate-500">You have successfully attempted all the questions in this mode.</p>
-                <div class="card p-6 md:p-8 mt-4 w-full max-w-lg mx-auto border border-blue-100">
-                    <h3 class="text-lg md:text-2xl font-bold text-slate-800 mb-2">Developed with ❤️ by Satyam</h3>
-                    <p class="text-xs md:text-base text-slate-500 mb-4">Subscribe for more such powerful tools!</p>
-                    <a href="https://youtube.com/@observe_with_satyam?si=9BiGcrs2Dhv4HDFa" target="_blank" class="nav-pill-btn px-6 py-3.5 rounded-full bg-red-600 hover:bg-red-700 text-white font-bold text-sm md:text-base transition inline-flex items-center justify-center gap-3 shadow-sm w-full mb-3">
-                        <i class="fab fa-youtube text-xl"></i> Subscribe on YouTube
-                    </a>
-                    <button onclick="retakeQuiz()" class="nav-pill-btn px-6 py-3.5 rounded-full bg-white hover:bg-slate-100 border border-slate-300 text-slate-700 font-bold text-sm md:text-base transition flex items-center justify-center gap-3 w-full">
-                        <i class="fa-solid fa-rotate-right"></i> Retake Quiz
-                    </button>
-                </div>
-            </div>
-        </main>
-
-        <!-- Footer -->
-        <footer id="quiz-footer" class="app-footer px-2 pb-2 space-y-2">
-            <div class="flex justify-between items-center card p-2.5 md:p-3 rounded-xl shadow-sm gap-1">
-                <button onclick="prevQuestion()" class="nav-pill-btn px-3 py-2.5 md:px-5 rounded-xl bg-white border border-slate-200 hover:bg-slate-50 text-xs md:text-sm font-semibold text-slate-600 transition flex items-center gap-2 shrink-0"><i class="fa-solid fa-arrow-left"></i> <span class="hidden sm:inline">Prev</span></button>
-                <button onclick="togglePalette()" class="nav-pill-btn px-3 py-2.5 rounded-xl bg-white border border-slate-200 hover:bg-slate-50 text-xs md:text-sm font-semibold text-slate-600 transition flex items-center gap-2"><i class="fa-solid fa-th"></i> <span class="hidden sm:inline">Palette</span></button>
-                <div class="text-xs md:text-base text-blue-600 font-mono font-bold whitespace-nowrap px-2 bg-slate-50 py-2 rounded-lg border border-slate-200" id="score-counter">Q: 0/0</div>
-                <button onclick="openRevision()" class="nav-pill-btn px-3 py-2.5 rounded-xl bg-white border border-slate-200 hover:bg-slate-50 text-xs md:text-sm font-semibold text-slate-600 transition flex items-center gap-2"><i class="fa-solid fa-clock-rotate-left"></i> <span class="hidden sm:inline">Review All</span></button>
-                <button onclick="nextQuestion()" class="nav-pill-btn px-3 py-2.5 md:px-5 rounded-xl bg-blue-600 hover:bg-blue-700 text-white text-xs md:text-sm font-bold transition flex items-center gap-2 shrink-0"><span class="hidden sm:inline">Next</span> <i class="fa-solid fa-arrow-right"></i></button>
-            </div>
-
-            <!-- Social Branding -->
-            <div class="flex flex-col items-center justify-center gap-1.5 py-1.5">
-                <div class="flex gap-3 md:gap-4">
-                    <a href="https://www.instagram.com/" target="_blank" class="sf-icon ig" title="Instagram"><i class="fab fa-instagram"></i></a>
-                    <a href="https://www.linkedin.com/in/satyam-kumar5286o" target="_blank" class="sf-icon li" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="https://youtube.com/@observe_with_satyam" target="_blank" class="sf-icon yt" title="YouTube"><i class="fab fa-youtube"></i></a>
-                    <a href="https://t.me/CA_Protracker" target="_blank" class="sf-icon tg" title="Telegram"><i class="fab fa-telegram-plane"></i></a>
-                </div>
-                <p class="text-[10px] md:text-xs text-slate-400">Made with ❤️ by Satyam</p>
-            </div>
-        </footer>
+  <!-- ===== COMPACT TOP HEADER (single row, max 60px) ===== -->
+  <header class="compact-header">
+    <div class="flex items-center gap-2">
+      <div class="w-9 h-9 rounded-lg bg-blue-50 border border-blue-200 flex items-center justify-center text-blue-600 font-bold text-sm">CA</div>
+      <div>
+        <h1 class="text-sm font-bold poppins text-slate-800 leading-tight">FINAL AUDIT</h1>
+        <p class="text-[10px] text-slate-500 -mt-0.5">Pro Simulator</p>
+      </div>
     </div>
-
-    <!-- Palette Panel -->
-    <div id="palette-panel" class="hidden fixed inset-x-0 bottom-0 z-50 p-5 bg-white/95 backdrop-blur-xl border-t-2 border-blue-500/40 rounded-t-3xl max-h-[70vh] overflow-y-auto shadow-lg" style="-webkit-overflow-scrolling:touch;">
-        <div class="flex justify-between items-center mb-4 max-w-5xl mx-auto">
-            <h3 class="text-xl font-bold text-slate-800 poppins">Question Palette</h3>
-            <button onclick="togglePalette()" class="nav-pill-btn text-slate-400 hover:text-slate-600 text-3xl leading-none transition w-10 h-10 flex items-center justify-center">&times;</button>
+    <div class="flex items-center gap-2">
+      <!-- merged lifeline button: tap to show 50:50 / poll / expert -->
+      <div class="relative">
+        <button id="lifeMenuBtn" onclick="toggleLifeMenu()" class="icon-btn w-10 h-10 text-blue-600 bg-blue-50 border-blue-200">
+          <i class="fa-solid fa-wand-magic-sparkles text-sm"></i>
+        </button>
+        <div id="lifeDropdown" class="hidden absolute right-0 top-12 bg-white border border-gray-200 rounded-2xl shadow-xl p-2 flex flex-col gap-1 z-50 min-w-[130px]">
+          <button onclick="use5050(); toggleLifeMenu();" class="text-xs font-medium px-3 py-2 rounded-xl hover:bg-blue-50 flex items-center gap-2"><span class="w-5 h-5 rounded bg-blue-100 flex items-center justify-center text-blue-600">½</span> 50:50</button>
+          <button onclick="useAudiencePoll(); toggleLifeMenu();" class="text-xs font-medium px-3 py-2 rounded-xl hover:bg-blue-50 flex items-center gap-2"><i class="fa-solid fa-chart-bar text-blue-600"></i> Poll</button>
+          <button onclick="useExpertAdvice(); toggleLifeMenu();" class="text-xs font-medium px-3 py-2 rounded-xl hover:bg-blue-50 flex items-center gap-2"><i class="fa-solid fa-user-tie text-blue-600"></i> Expert</button>
         </div>
-        <div class="flex gap-3 text-xs md:text-sm text-slate-500 mb-5 flex-wrap justify-center font-medium max-w-5xl mx-auto bg-slate-50 p-3 rounded-xl">
-            <span class="flex items-center gap-1.5"><span class="inline-block w-3.5 h-3.5 rounded bg-blue-100 border border-blue-300"></span> Answered</span>
-            <span class="flex items-center gap-1.5"><span class="inline-block w-3.5 h-3.5 rounded bg-red-100 border border-red-300"></span> Wrong</span>
-            <span class="flex items-center gap-1.5"><span class="inline-block w-3.5 h-3.5 rounded-full bg-amber-100 border border-amber-300"></span> Marked</span>
-            <span class="flex items-center gap-1.5"><span class="inline-block w-3.5 h-3.5 rounded bg-white border border-slate-300"></span> Unanswered</span>
-        </div>
-        <div id="palette-grid" class="flex flex-wrap gap-2.5 justify-center max-w-5xl mx-auto"></div>
+      </div>
+      <button onclick="retakeQuiz()" class="icon-btn w-10 h-10 text-red-500 bg-red-50 border-red-200"><i class="fa-solid fa-rotate-right text-sm"></i></button>
     </div>
+  </header>
 
-    <!-- Revision Panel -->
-    <div id="revision-panel" class="hidden fixed inset-0 z-50 bg-white/95 backdrop-blur-lg p-4 flex flex-col">
-        <div class="flex justify-between items-center mb-4 max-w-5xl mx-auto w-full mt-3">
-            <h2 class="text-xl md:text-2xl font-bold text-slate-800 poppins">Review All</h2>
-            <button onclick="closeRevision()" class="nav-pill-btn text-slate-600 text-3xl md:text-4xl hover:text-red-500 transition w-10 h-10 flex items-center justify-center">&times;</button>
-        </div>
-        <div id="revision-list" class="flex-1 overflow-y-auto space-y-3 pr-1 max-w-5xl mx-auto w-full" style="-webkit-overflow-scrolling:touch;"></div>
+  <!-- ===== MODE SWITCHER (compact) + bookmark inline ===== -->
+  <div class="mode-pill flex items-center justify-between px-1">
+    <div class="flex flex-1">
+      <button id="btn-study" onclick="switchMode('study')" class="mode-btn active"><i class="fa-solid fa-book-open text-xs"></i> MCQs</button>
+      <button id="btn-mcqs" onclick="switchMode('mcqs')" class="mode-btn"><i class="fa-solid fa-briefcase text-xs"></i> Cases</button>
     </div>
+    <button id="mark-review-btn" onclick="toggleMarkReview()" class="w-9 h-9 flex items-center justify-center text-slate-400 hover:text-amber-500 transition ml-1">
+      <i class="fa-regular fa-bookmark text-lg"></i>
+    </button>
+  </div>
 
-    <!-- Explanation Modal -->
-    <div id="explanation-modal" class="fixed inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center p-4 z-50 hidden">
-        <div class="card border border-blue-100 rounded-2xl max-w-sm md:max-w-lg w-full p-6 md:p-8 text-center space-y-5 shadow-xl max-h-[85vh] overflow-y-auto" style="-webkit-overflow-scrolling:touch;">
-            <h2 id="modal-title" class="text-xl md:text-3xl font-bold flex items-center justify-center gap-3"></h2>
-            <div id="modal-subtitle" class="text-sm md:text-base text-slate-600 leading-relaxed font-medium"></div>
-            <button id="modal-continue-btn" onclick="nextQuestion()" class="nav-pill-btn px-8 py-3.5 bg-blue-600 text-white rounded-xl font-bold text-base hover:bg-blue-700 transition shadow-sm w-full mt-4">Next Question</button>
-        </div>
+  <!-- ===== MAIN SCROLLABLE CONTENT ===== -->
+  <main id="scroll-area" class="scroll-area flex flex-col gap-3">
+    <!-- dynamic quiz container -->
+    <div id="quiz-container" class="space-y-3">
+      <div class="card p-4">
+        <div id="question-text" class="text-sm leading-relaxed whitespace-pre-wrap"></div>
+      </div>
+      <div id="options-grid" class="grid grid-cols-1 gap-2.5"></div>
+      <!-- horizontal scrollable question dots (grid replaced) -->
+      <div id="dots-strip" class="dots-scroll"></div>
     </div>
+    <!-- end screen hidden initially -->
+    <div id="end-screen" class="hidden flex-col items-center justify-center text-center space-y-4 py-6">
+      <i class="fa-solid fa-trophy text-5xl text-blue-600"></i>
+      <h2 class="text-2xl font-bold poppins">Quiz Complete!</h2>
+      <p class="text-slate-500 text-sm">Great effort! Subscribe for more.</p>
+      <a href="https://youtube.com/@observe_with_satyam" target="_blank" class="bg-red-600 text-white px-6 py-3 rounded-full font-bold text-sm flex items-center gap-2 w-fit mx-auto"><i class="fab fa-youtube"></i> Subscribe</a>
+      <button onclick="retakeQuiz()" class="border px-6 py-3 rounded-full font-semibold text-sm">Retake</button>
+    </div>
+  </main>
 
-    <script>
-        const audioCtx = new(window.AudioContext || window.webkitAudioContext)();
+  <!-- ===== FOOTER NAVIGATION ===== -->
+  <footer class="footer-nav">
+    <button onclick="prevQuestion()" class="icon-btn"><i class="fa-solid fa-arrow-left"></i></button>
+    <button onclick="togglePalette()" class="icon-btn"><i class="fa-solid fa-th"></i></button>
+    <div id="score-counter" class="text-xs font-mono font-bold text-blue-600 bg-blue-50 px-3 py-2 rounded-xl">0/0</div>
+    <button onclick="openRevision()" class="icon-btn"><i class="fa-solid fa-clock-rotate-left"></i></button>
+    <button onclick="nextQuestion()" class="icon-btn bg-blue-600 text-white border-blue-600"><i class="fa-solid fa-arrow-right"></i></button>
+  </footer>
 
-        function playBeep(f = 440, t = 'sine', d = 0.15) {
-            if (audioCtx.state === 'suspended') audioCtx.resume();
-            const o = audioCtx.createOscillator(),
-                g = audioCtx.createGain();
-            o.type = t;
-            o.frequency.value = f;
-            g.gain.setValueAtTime(0.08, audioCtx.currentTime);
-            g.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + d);
-            o.connect(g);
-            g.connect(audioCtx.destination);
-            o.start();
-            o.stop(audioCtx.currentTime + d);
+  <!-- PALETTE PANEL (collapsible bottom drawer) -->
+  <div id="palette-panel" class="hidden fixed inset-x-0 bottom-0 z-50 palette-panel max-h-[65vh] overflow-y-auto">
+    <div class="flex justify-between items-center mb-3">
+      <h3 class="font-bold text-slate-800">Question Palette</h3>
+      <button onclick="togglePalette()" class="text-2xl">&times;</button>
+    </div>
+    <div id="palette-grid" class="grid grid-cols-6 sm:grid-cols-8 gap-3 justify-items-center"></div>
+  </div>
+
+  <!-- REVISION PANEL -->
+  <div id="revision-panel" class="hidden fixed inset-0 bg-white z-50 flex flex-col p-4">
+    <div class="flex justify-between items-center mb-4">
+      <h2 class="text-xl font-bold">Review All</h2>
+      <button onclick="closeRevision()" class="text-3xl">&times;</button>
+    </div>
+    <div id="revision-list" class="flex-1 overflow-y-auto space-y-3"></div>
+  </div>
+
+  <!-- EXPLANATION MODAL -->
+  <div id="explanation-modal" class="hidden fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center p-4 z-50">
+    <div class="bg-white rounded-2xl p-6 max-w-sm w-full text-center space-y-4">
+      <h2 id="modal-title" class="text-xl font-bold"></h2>
+      <div id="modal-subtitle" class="text-sm text-slate-600"></div>
+      <button id="modal-continue-btn" onclick="nextQuestion()" class="w-full bg-blue-600 text-white py-3 rounded-xl font-bold">Next</button>
+    </div>
+  </div>
+
+  <script>
+    (function() {
+      // ---------- AUDIO ----------
+      const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+      function playBeep(f=440, t='sine', d=0.12) {
+        if(audioCtx.state==='suspended') audioCtx.resume();
+        const o=audioCtx.createOscillator(), g=audioCtx.createGain();
+        o.type=t; o.frequency.value=f; g.gain.setValueAtTime(0.08, audioCtx.currentTime);
+        g.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime+d);
+        o.connect(g); g.connect(audioCtx.destination); o.start(); o.stop(audioCtx.currentTime+d);
+      }
+      function soundCorrect(){ playBeep(523,'triangle',0.15); setTimeout(()=>playBeep(659,'triangle',0.15),120); }
+      function soundWrong(){ playBeep(220,'sawtooth',0.2); }
+
+      // ---------- STATE ----------
+      let currentMode = localStorage.getItem('caAuditMode') || 'study';
+      let questions = [];
+      let currentIdx = 0;
+      let session = [];        // { selected, isCorrect, marked }
+      let isAnswered = false;
+      let selectedOption = null;
+      let toastShown = false;
+
+      // DOM elements
+      const qText = document.getElementById('question-text');
+      const optionsGrid = document.getElementById('options-grid');
+      const dotsStrip = document.getElementById('dots-strip');
+      const scoreCounter = document.getElementById('score-counter');
+      const markBtn = document.getElementById('mark-review-btn');
+      const quizContainer = document.getElementById('quiz-container');
+      const endScreen = document.getElementById('end-screen');
+      const modal = document.getElementById('explanation-modal');
+      const modalTitle = document.getElementById('modal-title');
+      const modalSub = document.getElementById('modal-subtitle');
+      const modalContinue = document.getElementById('modal-continue-btn');
+
+      // ---------- DATA NORMALISATION ----------
+      function normalise(data) {
+        const records = Array.isArray(data) ? data : (data.questions || data.caseScenarios || []);
+        return records.flatMap((rec, i) => {
+          if (rec.questions && Array.isArray(rec.questions)) {
+            return rec.questions.map((q, j) => ({
+              question: q.question || '',
+              options: q.options || [],
+              correctOption: Number(q.correctOption) || 0,
+              explanation: q.explanation || '',
+              caseStudy: rec.caseStudy || rec.scenario || '',
+              scenarioNumber: rec.scenarioNumber || (i+1),
+              questionNumber: q.questionNumber || `${i+1}.${j+1}`
+            }));
+          }
+          return [{
+            question: rec.question || '',
+            options: rec.options || [],
+            correctOption: Number(rec.correctOption) || 0,
+            explanation: rec.explanation || '',
+            caseStudy: rec.caseStudy || '',
+            scenarioNumber: rec.scenarioNumber || (i+1),
+            questionNumber: rec.questionNumber || `Q${i+1}`
+          }];
+        }).filter(q => q.options.length > 0);
+      }
+
+      async function fetchQuestions() {
+        const files = currentMode === 'mcqs' ? ['./audit_case_scenarios.json'] : ['./study.json', './mcqs.json'];
+        try {
+          const results = await Promise.all(files.map(f => fetch(f).then(r => r.json())));
+          questions = currentMode === 'mcqs' ? normalise(results[0]) : results.flatMap(normalise);
+          if (!questions.length) throw new Error('Empty');
+          if (session.length !== questions.length) {
+            session = questions.map((_,i) => session[i] || {selected:null, isCorrect:null, marked:false});
+          }
+          if (currentIdx >= questions.length) currentIdx = 0;
+          renderQuestion();
+        } catch (e) {
+          qText.innerText = '⚠️ Could not load questions. Check JSON files.';
+          console.error(e);
         }
+      }
 
-        function soundCorrect() { playBeep(523, 'triangle', 0.18);
-            setTimeout(() => playBeep(659, 'triangle', 0.18), 150);
-            setTimeout(() => playBeep(784, 'triangle', 0.35), 300); }
+      // ---------- RENDER ----------
+      function renderQuestion() {
+        const q = questions[currentIdx];
+        isAnswered = false; selectedOption = null;
+        const state = session[currentIdx] || {selected:null, marked:false};
 
-        function soundWrong() { playBeep(220, 'sawtooth', 0.25);
-            setTimeout(() => playBeep(180, 'sawtooth', 0.4), 200); }
-    </script>
-
-    <script>
-        let currentMode = localStorage.getItem('caAuditProMode') || 'study';
-        let questionsData = [];
-        let currentIdx = 0;
-        let isAnswered = false;
-        let selectedOption = null;
-        let sessionState = [];
-        let toastShown = false;
-
-        function updateModeUI() {
-            const s = document.getElementById('btn-mode-study'),
-                m = document.getElementById('btn-mode-mcqs');
-            const active = "nav-pill-btn flex-1 px-4 py-2.5 rounded-full text-xs md:text-sm font-semibold bg-blue-600 text-white transition shadow-sm flex items-center justify-center gap-2";
-            const inactive = "nav-pill-btn flex-1 px-4 py-2.5 rounded-full text-xs md:text-sm font-semibold text-slate-500 hover:text-slate-700 hover:bg-slate-100 transition flex items-center justify-center gap-2";
-            s.className = currentMode === 'study' ? active : inactive;
-            m.className = currentMode === 'mcqs' ? active : inactive;
+        let html = '';
+        if (q.caseStudy) {
+          html += `<div class="case-box"><div class="font-bold text-blue-600 text-xs uppercase mb-1">Case ${q.scenarioNumber || ''}</div>${escapeHtml(q.caseStudy)}</div>`;
         }
+        html += `<span class="font-bold text-blue-600">${escapeHtml(q.questionNumber || `Q${currentIdx+1}`)}.</span> ${escapeHtml(q.question)}`;
+        qText.innerHTML = html;
 
-        function switchMode(mode) {
-            if (currentMode === mode) return;
-            currentMode = mode;
-            localStorage.setItem('caAuditProMode', mode);
-            updateModeUI();
-            resetLifelines();
-            loadProgressFromStorage();
-            fetchQuestions();
-        }
-
-        function saveProgress() {
-            const key = `caAuditPro_${currentMode}`;
-            const data = { idx: currentIdx, state: sessionState };
-            localStorage.setItem(key, JSON.stringify(data));
-        }
-
-        function loadProgressFromStorage() {
-            const key = `caAuditPro_${currentMode}`;
-            const raw = localStorage.getItem(key);
-            if (raw) {
-                try {
-                    const d = JSON.parse(raw);
-                    currentIdx = d.idx || 0;
-                    sessionState = d.state || [];
-                } catch (e) { resetProgress(); }
-            } else {
-                resetProgress();
-            }
-        }
-
-        function resetProgress() {
-            currentIdx = 0;
-            sessionState = [];
-            toastShown = false;
-        }
-
-        function escapeHtml(value = '') {
-            return String(value).replace(/[&<>"']/g, char => ({
-                '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#039;'
-            })[char]);
-        }
-
-        function toOptionIndex(value, options) {
-            const numeric = Number(value);
-            if (Number.isInteger(numeric) && numeric >= 0 && numeric < options.length) return numeric;
-            if (Number.isInteger(numeric) && numeric >= 1 && numeric <= options.length) return numeric - 1;
-            return 0;
-        }
-
-        function normaliseCaseScenarioData(data) {
-            const records = Array.isArray(data) ? data : (data.caseScenarios || data.questions || []);
-            return records.flatMap((record, recordIndex) => {
-                if (record.type === 'case_scenario' || Array.isArray(record.questions)) {
-                    const scenarioNumber = record.scenarioNumber ?? record.id ?? recordIndex + 1;
-                    return (record.questions || []).map((question, questionIndex) => {
-                        const options = Array.isArray(question.options) ? question.options : [];
-                        return {
-                            question: question.question || `Question ${questionIndex + 1}`,
-                            options,
-                            correctOption: toOptionIndex(question.correctOption, options),
-                            explanation: question.explanation || '',
-                            caseStudy: record.caseStudy || record.scenario || '',
-                            scenarioNumber,
-                            questionNumber: question.questionNumber || `${scenarioNumber}.${questionIndex + 1}`
-                        };
-                    });
-                }
-                const options = Array.isArray(record.options) ? record.options : [];
-                return [{ ...record, options, correctOption: toOptionIndex(record.correctOption, options) }];
-            }).filter(question => question.options.length > 0);
-        }
-
-        async function fetchJson(url) {
-            const response = await fetch(url);
-            if (!response.ok) throw new Error(`${url}: HTTP ${response.status}`);
-            return response.json();
-        }
-
-        async function fetchQuestions() {
-            const caseScenarioMode = currentMode === 'mcqs';
-            const files = caseScenarioMode ?
-                ['./audit_case_scenarios.json'] :
-                ['./study.json', './mcqs.json'];
-
-            try {
-                const payloads = await Promise.all(files.map(fetchJson));
-                questionsData = caseScenarioMode ?
-                    normaliseCaseScenarioData(payloads[0]) :
-                    payloads.flatMap(normaliseCaseScenarioData);
-
-                if (!Array.isArray(questionsData) || questionsData.length === 0) {
-                    throw new Error('No usable questions');
-                }
-                if (sessionState.length !== questionsData.length) {
-                    sessionState = questionsData.map((_, i) => sessionState[i] || {
-                        selected: null,
-                        isCorrect: null,
-                        marked: false
-                    });
-                }
-                if (currentIdx >= questionsData.length) currentIdx = 0;
-                initGame();
-            } catch (e) {
-                document.getElementById('question-text').innerText =
-                    `Unable to load quiz data. Ensure these files are beside this HTML: ${files.join(', ')}.`;
-                document.getElementById('options-grid').innerHTML = '';
-                document.getElementById('dots-strip').innerHTML = '';
-                console.error('Question loading error:', e);
-            }
-        }
-
-        function initGame() {
-            document.getElementById('end-screen').classList.add('hidden');
-            document.getElementById('end-screen').classList.remove('flex');
-            document.getElementById('quiz-container').classList.remove('hidden');
-            document.getElementById('quiz-footer').classList.remove('hidden');
-            loadQuestion();
-            maybeShowSubscribeToast();
-        }
-
-        function wrapTables(container) {
-            container.querySelectorAll('table').forEach(t => {
-                if (!t.parentElement.classList.contains('table-wrap')) {
-                    const wrap = document.createElement('div');
-                    wrap.className = 'table-wrap';
-                    t.parentNode.insertBefore(wrap, t);
-                    wrap.appendChild(t);
-                }
-            });
-        }
-
-        function loadQuestion() {
-            isAnswered = false;
-            selectedOption = null;
-            const q = questionsData[currentIdx];
-            const caseStudy = q.caseStudy ? `
-                <div class="case-study-box">
-                    <div class="mb-2.5 font-bold uppercase tracking-wider text-blue-600 flex items-center gap-2 sticky -top-0.5"><i class="fa-solid fa-file-contract"></i> Case Scenario ${escapeHtml(q.scenarioNumber)}</div>
-                    <div class="whitespace-pre-wrap">${escapeHtml(q.caseStudy)}</div>
-                </div>` : '';
-            const questionLabel = q.questionNumber || `Q${currentIdx + 1}`;
-            const qTextEl = document.getElementById('question-text');
-            qTextEl.innerHTML =
-                `${caseStudy}<div><span class="text-blue-600 font-bold tracking-wider mr-1">${escapeHtml(questionLabel)}.</span> ${escapeHtml(q.question)}</div>`;
-            wrapTables(qTextEl);
-            document.getElementById('score-counter').innerText = `Q: ${currentIdx + 1} / ${questionsData.length}`;
-            updateMarkReviewIcon();
-            const grid = document.getElementById('options-grid');
-            grid.innerHTML = '';
-            const state = sessionState[currentIdx] || { selected: null, isCorrect: null, marked: false };
-            q.options.forEach((opt, idx) => {
-                const btn = document.createElement('button');
-                btn.id = `opt-${idx}`;
-                btn.className = "option-btn";
-                const optLetter = String.fromCharCode(65 + idx);
-                btn.innerHTML =
-                    `<span class="opt-letter">${optLetter}</span> <span class="leading-relaxed text-left">${opt}</span>`;
-                if (state.selected !== null) {
-                    btn.disabled = true;
-                    if (idx === state.selected && !state.isCorrect) btn.classList.add('option-wrong');
-                    if (idx === q.correctOption) btn.classList.add('option-correct');
-                    isAnswered = true;
-                }
-                btn.onclick = () => selectOption(idx);
-                grid.appendChild(btn);
-            });
-            wrapTables(grid);
-            renderDotsStrip();
-            document.getElementById('scroll-area').scrollTo({ top: 0, behavior: 'auto' });
-            saveProgress();
-        }
-
-        function renderDotsStrip() {
-            const strip = document.getElementById('dots-strip');
-            strip.innerHTML = '';
-            questionsData.forEach((_, i) => {
-                const state = sessionState[i] || { selected: null, isCorrect: null, marked: false };
-                const dot = document.createElement('button');
-                dot.className = 'palette-btn';
-                dot.style.width = '34px';
-                dot.style.height = '34px';
-                dot.style.fontSize = '11px';
-                dot.textContent = i + 1;
-                if (i === currentIdx) dot.classList.add('current');
-                if (state.selected !== null) dot.classList.add(state.isCorrect ? 'answered' : 'wrong');
-                if (state.marked) {
-                    const markDot = document.createElement('span');
-                    markDot.className = 'mark-dot';
-                    dot.appendChild(markDot);
-                }
-                dot.onclick = () => jumpTo(i);
-                strip.appendChild(dot);
-            });
-        }
-
-        function selectOption(idx) {
-            if (isAnswered) return;
-            playBeep(300, 'sine', 0.08);
-            const buttons = document.getElementById('options-grid').children;
-            for (let b of buttons) b.classList.remove('option-selected');
-            selectedOption = idx;
-            document.getElementById(`opt-${idx}`).classList.add('option-selected');
-            setTimeout(() => lockAnswer(idx), 500);
-        }
-
-        function lockAnswer(idx) {
-            if (isAnswered) return;
+        optionsGrid.innerHTML = '';
+        q.options.forEach((opt, idx) => {
+          const btn = document.createElement('button');
+          btn.className = 'option-btn';
+          btn.innerHTML = `<span class="opt-letter">${String.fromCharCode(65+idx)}</span><span>${opt}</span>`;
+          if (state.selected !== null) {
+            btn.disabled = true;
+            if (idx === state.selected && !state.isCorrect) btn.classList.add('option-wrong');
+            if (idx === q.correctOption) btn.classList.add('option-correct');
             isAnswered = true;
-            const q = questionsData[currentIdx];
-            const isCorrect = idx === q.correctOption;
-            const prevMarked = (sessionState[currentIdx] || {}).marked || false;
-            sessionState[currentIdx] = { selected: idx, isCorrect, marked: prevMarked };
-            const selBtn = document.getElementById(`opt-${idx}`);
-            const corrBtn = document.getElementById(`opt-${q.correctOption}`);
-            selBtn.classList.remove('option-selected');
-            if (isCorrect) {
-                selBtn.classList.add('option-correct');
-                soundCorrect();
-            } else {
-                selBtn.classList.add('option-wrong');
-                if (corrBtn) corrBtn.classList.add('option-correct');
-                soundWrong();
-            }
-            disableAllOptions();
-            renderDotsStrip();
-            saveProgress();
-            setTimeout(() => showExplanation(isCorrect), 800);
-        }
-
-        function disableAllOptions() {
-            const btns = document.getElementById('options-grid').children;
-            for (let b of btns) b.disabled = true;
-        }
-
-        function showExplanation(isCorrect) {
-            const q = questionsData[currentIdx];
-            const modal = document.getElementById('explanation-modal');
-            document.getElementById('modal-title').innerHTML = isCorrect ?
-                '<i class="fa-solid fa-circle-check text-green-500 text-3xl md:text-4xl"></i> <span class="text-green-600">Awesome!</span>' :
-                '<i class="fa-solid fa-circle-xmark text-red-500 text-3xl md:text-4xl"></i> <span class="text-red-600">Incorrect!</span>';
-            let sub = isCorrect ? 'You selected the right answer.' :
-                `Correct answer:<br><div class="text-slate-700 text-sm md:text-base text-left bg-slate-50 p-4 rounded-xl border border-slate-200 mt-3 font-medium flex gap-3"><span class="w-6 h-6 flex items-center justify-center shrink-0 bg-green-50 rounded-full border border-green-200 text-xs text-green-600">${String.fromCharCode(65 + q.correctOption)}</span> <span>${q.options[q.correctOption]}</span></div>`;
-            if (q.explanation) sub +=
-                `<br><div class="text-slate-500 text-sm text-left bg-slate-50 p-4 rounded-xl border border-slate-200 mt-3"><b class="text-slate-700">Explanation:</b> ${q.explanation}</div>`;
-            document.getElementById('modal-subtitle').innerHTML = sub;
-            document.getElementById('modal-continue-btn').innerText = currentIdx === questionsData.length - 1 ?
-                'Finish Quiz' : 'Next Question';
-            modal.classList.remove('hidden');
-        }
-
-        function nextQuestion() {
-            document.getElementById('explanation-modal').classList.add('hidden');
-            if (currentIdx < questionsData.length - 1) {
-                currentIdx++;
-                loadQuestion();
-                maybeShowSubscribeToast();
-            } else {
-                finishQuiz();
-            }
-        }
-
-        function prevQuestion() {
-            document.getElementById('explanation-modal').classList.add('hidden');
-            if (currentIdx > 0) {
-                currentIdx--;
-                loadQuestion();
-            }
-        }
-
-        function toggleMarkReview() {
-            const state = sessionState[currentIdx] || { selected: null, isCorrect: null, marked: false };
-            state.marked = !state.marked;
-            sessionState[currentIdx] = state;
-            updateMarkReviewIcon();
-            renderDotsStrip();
-            saveProgress();
-        }
-
-        function updateMarkReviewIcon() {
-            const btn = document.getElementById('mark-review-btn');
-            const state = sessionState[currentIdx] || { marked: false };
-            btn.innerHTML = state.marked ?
-                '<i class="fa-solid fa-bookmark text-amber-500"></i>' :
-                '<i class="fa-regular fa-bookmark text-slate-400"></i>';
-        }
-
-        function togglePalette() {
-            const panel = document.getElementById('palette-panel');
-            if (panel.classList.contains('hidden')) {
-                renderPalette();
-                panel.classList.remove('hidden');
-            } else {
-                panel.classList.add('hidden');
-            }
-        }
-
-        function renderPalette() {
-            const grid = document.getElementById('palette-grid');
-            grid.innerHTML = '';
-            for (let i = 0; i < questionsData.length; i++) {
-                const btn = document.createElement('button');
-                btn.textContent = i + 1;
-                btn.className = 'palette-btn';
-                const state = sessionState[i] || { selected: null, isCorrect: null, marked: false };
-                if (i === currentIdx) btn.classList.add('current');
-                if (state.selected !== null) {
-                    btn.classList.add(state.isCorrect ? 'answered' : 'wrong');
-                }
-                if (state.marked) {
-                    const markDot = document.createElement('span');
-                    markDot.className = 'mark-dot';
-                    btn.appendChild(markDot);
-                }
-                btn.onclick = () => { jumpTo(i);
-                    togglePalette(); };
-                grid.appendChild(btn);
-            }
-        }
-
-        function jumpTo(idx) {
-            if (idx >= 0 && idx < questionsData.length) {
-                currentIdx = idx;
-                loadQuestion();
-            }
-        }
-
-        function openRevision() {
-            const panel = document.getElementById('revision-panel');
-            const list = document.getElementById('revision-list');
-            list.innerHTML = '';
-            questionsData.forEach((q, i) => {
-                const state = sessionState[i] || { selected: null, isCorrect: null, marked: false };
-                const div = document.createElement('div');
-                div.className = 'revision-item cursor-pointer';
-                let statusIcon = '';
-                if (state.selected !== null) {
-                    statusIcon = state.isCorrect ?
-                        '<i class="fa-solid fa-circle-check text-green-500"></i>' :
-                        '<i class="fa-solid fa-circle-xmark text-red-500"></i>';
-                } else {
-                    statusIcon = '<i class="fa-regular fa-square text-slate-400"></i>';
-                }
-                const markIcon = state.marked ?
-                    ' <i class="fa-solid fa-star text-amber-500 ml-1" title="Marked for review"></i>' : '';
-                div.innerHTML = `
-              <div class="flex items-start gap-4">
-                <div class="text-xl shrink-0 mt-0.5">${statusIcon}</div>
-                <div class="flex-1">
-                  <p class="text-sm font-semibold text-slate-800 leading-snug">Q${i+1}: ${q.question.substring(0,120)}...${markIcon}</p>
-                  ${state.selected !== null ? `<p class="text-xs text-slate-500 mt-2 bg-slate-50 p-2 rounded border border-slate-200">Your answer: <span class="${state.isCorrect ? 'text-green-600 font-medium' : 'text-red-600 font-medium'}">${q.options[state.selected]}</span></p>` : ''}
-                  <p class="text-xs text-blue-600 mt-1.5 font-medium">Correct: ${q.options[q.correctOption]}</p>
-                </div>
-              </div>`;
-                div.onclick = () => { jumpTo(i);
-                    closeRevision(); };
-                list.appendChild(div);
-            });
-            panel.classList.remove('hidden');
-        }
-
-        function closeRevision() {
-            document.getElementById('revision-panel').classList.add('hidden');
-        }
-
-        document.getElementById('revision-panel').addEventListener('click', (e) => {
-            if (e.target.id === 'revision-panel') closeRevision();
-        });
-        document.getElementById('explanation-modal').addEventListener('click', (e) => {
-            if (e.target.id === 'explanation-modal') { /* keep modal */ }
+          }
+          btn.onclick = () => selectOption(idx);
+          optionsGrid.appendChild(btn);
         });
 
-        function finishQuiz() {
-            document.getElementById('quiz-container').classList.add('hidden');
-            const end = document.getElementById('end-screen');
-            end.classList.remove('hidden');
-            end.classList.add('flex');
-            localStorage.setItem(`caAuditPro_${currentMode}`, JSON.stringify({ idx: 0, state: [] }));
-            resetProgress();
-        }
+        updateMarkIcon();
+        renderDots();
+        scoreCounter.innerText = `${currentIdx+1}/${questions.length}`;
+        document.getElementById('scroll-area').scrollTop = 0;
+        saveProgress();
+      }
 
-        function retakeQuiz() {
-            if (confirm('Restart quiz from Question 1?')) {
-                resetProgress();
-                loadProgressFromStorage();
-                resetLifelines();
-                initGame();
-            }
-        }
-
-        function resetLifelines() {
-            ['life-5050', 'life-poll', 'life-expert'].forEach(id => {
-                const btn = document.getElementById(id);
-                btn.disabled = false;
-                btn.classList.remove('opacity-40', 'cursor-not-allowed');
-            });
-        }
-
-        function use5050() {
-            if (isAnswered) return;
-            const q = questionsData[currentIdx];
-            const wrong = q.options.map((_, i) => i).filter(i => i !== q.correctOption);
-            wrong.sort(() => Math.random() - 0.5);
-            wrong.slice(0, Math.min(2, wrong.length)).forEach(index => {
-                const el = document.getElementById(`opt-${index}`);
-                if (el) { el.style.opacity = '0.25'; el.disabled = true; }
-            });
-            document.getElementById('life-5050').disabled = true;
-            document.getElementById('life-5050').classList.add('opacity-40', 'cursor-not-allowed');
-        }
-
-        function useAudiencePoll() {
-            if (isAnswered) return;
-            const opt = String.fromCharCode(65 + questionsData[currentIdx].correctOption);
-            alert(`📊 Audience Poll: Option ${opt} leads with huge majority!`);
-            document.getElementById('life-poll').disabled = true;
-            document.getElementById('life-poll').classList.add('opacity-40', 'cursor-not-allowed');
-        }
-
-        function useExpertAdvice() {
-            if (isAnswered) return;
-            const opt = String.fromCharCode(65 + questionsData[currentIdx].correctOption);
-            alert(`👨‍🏫 Satyam's Advice: "Based on standards, Option (${opt}) is the way."`);
-            document.getElementById('life-expert').disabled = true;
-            document.getElementById('life-expert').classList.add('opacity-40', 'cursor-not-allowed');
-        }
-
-        function maybeShowSubscribeToast() {
-            if (toastShown) return;
-            const attempted = sessionState.filter(s => s.selected !== null).length;
-            if (attempted >= 20 && !localStorage.getItem('caAuditSubToastShown')) {
-                const toast = document.getElementById('toast');
-                toast.innerHTML =
-                    `❤️ Like the app? <a href="https://youtube.com/@observe_with_satyam?si=9BiGcrs2Dhv4HDFa" target="_blank" class="underline text-white">Subscribe to Satyam's YouTube</a> for more!`;
-                toast.classList.add('show');
-                localStorage.setItem('caAuditSubToastShown', '1');
-                toastShown = true;
-                setTimeout(() => toast.classList.remove('show'), 5000);
-            }
-        }
-
-        function setupSwipe() {
-            const area = document.getElementById('scroll-area');
-            let startX = 0,
-                startY = 0,
-                tracking = false;
-            const MIN_DIST = 45;
-
-            area.addEventListener('touchstart', (e) => {
-                startX = e.touches[0].clientX;
-                startY = e.touches[0].clientY;
-                tracking = true;
-            }, { passive: true });
-
-            area.addEventListener('touchmove', (e) => {
-                if (!tracking) return;
-                const dx = e.touches[0].clientX - startX;
-                const dy = e.touches[0].clientY - startY;
-                if (Math.abs(dy) > Math.abs(dx)) tracking = false;
-            }, { passive: true });
-
-            area.addEventListener('touchend', (e) => {
-                if (!tracking) return;
-                const dx = e.changedTouches[0].clientX - startX;
-                const dy = e.changedTouches[0].clientY - startY;
-                if (Math.abs(dx) > Math.abs(dy) && Math.abs(dx) > MIN_DIST) {
-                    if (dx < 0) nextQuestion();
-                    else prevQuestion();
-                }
-                tracking = false;
-            }, { passive: true });
-        }
-
-        window.addEventListener('keydown', (e) => {
-            if (e.key === 'ArrowRight') nextQuestion();
-            if (e.key === 'ArrowLeft') prevQuestion();
-            if (e.key === 'p' || e.key === 'P') togglePalette();
-            if (e.key === 'r' || e.key === 'R') openRevision();
-            if (e.key === 'Escape') {
-                document.getElementById('explanation-modal').classList.add('hidden');
-                document.getElementById('palette-panel').classList.add('hidden');
-                document.getElementById('revision-panel').classList.add('hidden');
-            }
+      function renderDots() {
+        dotsStrip.innerHTML = '';
+        questions.forEach((_, i) => {
+          const st = session[i] || {};
+          const dot = document.createElement('button');
+          dot.className = 'dot-btn';
+          dot.textContent = i+1;
+          if (i === currentIdx) dot.classList.add('current');
+          if (st.selected !== null) dot.classList.add(st.isCorrect ? 'answered' : 'wrong');
+          if (st.marked) {
+            const mark = document.createElement('span');
+            mark.className = 'mark-dot';
+            dot.appendChild(mark);
+          }
+          dot.onclick = () => jumpTo(i);
+          dotsStrip.appendChild(dot);
         });
+      }
 
-        window.onload = () => {
-            updateModeUI();
-            loadProgressFromStorage();
-            fetchQuestions();
-            setupSwipe();
-        };
-    </script>
+      function selectOption(idx) {
+        if (isAnswered) return;
+        playBeep(300, 'sine', 0.06);
+        Array.from(optionsGrid.children).forEach(b => b.classList.remove('option-selected'));
+        selectedOption = idx;
+        optionsGrid.children[idx].classList.add('option-selected');
+        setTimeout(() => lockAnswer(idx), 400);
+      }
+
+      function lockAnswer(idx) {
+        if (isAnswered) return;
+        isAnswered = true;
+        const q = questions[currentIdx];
+        const correct = idx === q.correctOption;
+        session[currentIdx] = { selected: idx, isCorrect: correct, marked: session[currentIdx]?.marked || false };
+        const sel = optionsGrid.children[idx];
+        const corr = optionsGrid.children[q.correctOption];
+        sel.classList.remove('option-selected');
+        if (correct) { sel.classList.add('option-correct'); soundCorrect(); }
+        else { sel.classList.add('option-wrong'); if(corr) corr.classList.add('option-correct'); soundWrong(); }
+        Array.from(optionsGrid.children).forEach(b => b.disabled = true);
+        renderDots(); saveProgress();
+        setTimeout(() => showExplanation(correct), 600);
+      }
+
+      function showExplanation(correct) {
+        const q = questions[currentIdx];
+        modalTitle.innerHTML = correct ? '✅ Correct!' : '❌ Incorrect';
+        let sub = correct ? 'Well done!' : `Right answer: ${q.options[q.correctOption]}`;
+        if (q.explanation) sub += `<br><span class="text-xs text-slate-500">${q.explanation}</span>`;
+        modalSub.innerHTML = sub;
+        modalContinue.innerText = (currentIdx === questions.length-1) ? 'Finish' : 'Next';
+        modal.classList.remove('hidden');
+      }
+
+      function nextQuestion() {
+        modal.classList.add('hidden');
+        if (currentIdx < questions.length-1) { currentIdx++; renderQuestion(); checkToast(); }
+        else finishQuiz();
+      }
+      function prevQuestion() {
+        modal.classList.add('hidden');
+        if (currentIdx > 0) { currentIdx--; renderQuestion(); }
+      }
+
+      function toggleMarkReview() {
+        const st = session[currentIdx] || {selected:null, marked:false};
+        st.marked = !st.marked;
+        session[currentIdx] = st;
+        updateMarkIcon(); renderDots(); saveProgress();
+      }
+      function updateMarkIcon() {
+        const marked = session[currentIdx]?.marked;
+        markBtn.innerHTML = marked ? '<i class="fa-solid fa-bookmark text-amber-500 text-lg"></i>' : '<i class="fa-regular fa-bookmark text-slate-400 text-lg"></i>';
+      }
+
+      function jumpTo(i) { if(i>=0 && i<questions.length){ currentIdx=i; renderQuestion(); } }
+
+      // palette & revision
+      function togglePalette() {
+        const panel = document.getElementById('palette-panel');
+        if (panel.classList.contains('hidden')) {
+          renderPaletteGrid();
+          panel.classList.remove('hidden');
+        } else panel.classList.add('hidden');
+      }
+      function renderPaletteGrid() {
+        const grid = document.getElementById('palette-grid');
+        grid.innerHTML = '';
+        questions.forEach((_, i) => {
+          const st = session[i] || {};
+          const btn = document.createElement('button');
+          btn.className = 'dot-btn';
+          btn.textContent = i+1;
+          if (i===currentIdx) btn.classList.add('current');
+          if (st.selected!==null) btn.classList.add(st.isCorrect?'answered':'wrong');
+          if (st.marked) { const m=document.createElement('span'); m.className='mark-dot'; btn.appendChild(m); }
+          btn.onclick = ()=>{ jumpTo(i); togglePalette(); };
+          grid.appendChild(btn);
+        });
+      }
+      function openRevision() {
+        const panel = document.getElementById('revision-panel');
+        const list = document.getElementById('revision-list');
+        list.innerHTML = '';
+        questions.forEach((q,i)=>{
+          const st=session[i]||{};
+          const div=document.createElement('div');
+          div.className='p-3 border rounded-xl bg-white';
+          div.innerHTML=`<div class="font-semibold text-sm">Q${i+1}: ${q.question.substring(0,80)}...</div>
+            <div class="text-xs text-slate-500">Your: ${st.selected!==null?q.options[st.selected]:'—'} | Correct: ${q.options[q.correctOption]}</div>`;
+          div.onclick=()=>{jumpTo(i); closeRevision();};
+          list.appendChild(div);
+        });
+        panel.classList.remove('hidden');
+      }
+      function closeRevision(){ document.getElementById('revision-panel').classList.add('hidden'); }
+
+      function finishQuiz() {
+        quizContainer.classList.add('hidden');
+        endScreen.classList.remove('hidden');
+        endScreen.classList.add('flex');
+        localStorage.removeItem(`caAudit_${currentMode}`);
+      }
+      function retakeQuiz() {
+        if(confirm('Restart?')) { session = []; currentIdx=0; resetLifelines(); fetchQuestions(); endScreen.classList.add('hidden'); quizContainer.classList.remove('hidden'); }
+      }
+
+      // lifelines
+      function toggleLifeMenu() {
+        document.getElementById('lifeDropdown').classList.toggle('hidden');
+      }
+      function use5050() {
+        if(isAnswered) return;
+        const q=questions[currentIdx];
+        const wrong = q.options.map((_,i)=>i).filter(i=>i!==q.correctOption);
+        wrong.sort(()=>Math.random()-0.5);
+        wrong.slice(0,2).forEach(i=>{ const el=optionsGrid.children[i]; if(el){el.style.opacity='0.25'; el.disabled=true;} });
+      }
+      function useAudiencePoll(){ if(!isAnswered) alert(`📊 Poll: Option ${String.fromCharCode(65+questions[currentIdx].correctOption)} leads!`); }
+      function useExpertAdvice(){ if(!isAnswered) alert(`👔 Expert: Go with ${String.fromCharCode(65+questions[currentIdx].correctOption)}`); }
+      function resetLifelines(){}
+
+      function switchMode(mode) {
+        if (currentMode===mode) return;
+        currentMode=mode;
+        localStorage.setItem('caAuditMode', mode);
+        document.getElementById('btn-study').classList.toggle('active', mode==='study');
+        document.getElementById('btn-mcqs').classList.toggle('active', mode==='mcqs');
+        session=[]; currentIdx=0;
+        fetchQuestions();
+      }
+
+      function saveProgress() {
+        localStorage.setItem(`caAudit_${currentMode}`, JSON.stringify({idx:currentIdx, session}));
+      }
+      function loadProgress() {
+        const raw = localStorage.getItem(`caAudit_${currentMode}`);
+        if(raw) { const d=JSON.parse(raw); currentIdx=d.idx||0; session=d.session||[]; }
+      }
+      function checkToast() {
+        if(toastShown) return;
+        const attempted = session.filter(s=>s.selected!==null).length;
+        if(attempted>=20 && !localStorage.getItem('caToast')) {
+          const t=document.getElementById('toast');
+          t.classList.add('opacity-100'); t.style.opacity='1';
+          localStorage.setItem('caToast','1'); toastShown=true;
+          setTimeout(()=>{ t.classList.remove('opacity-100'); t.style.opacity='0'; },4000);
+        }
+      }
+      function escapeHtml(t){ return String(t).replace(/[&<>"]/g, c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'})[c]); }
+
+      // swipe
+      function setupSwipe() {
+        const area = document.getElementById('scroll-area');
+        let startX=0,startY=0,tracking=false;
+        area.addEventListener('touchstart',e=>{ startX=e.touches[0].clientX; startY=e.touches[0].clientY; tracking=true; },{passive:true});
+        area.addEventListener('touchmove',e=>{ if(!tracking)return; if(Math.abs(e.touches[0].clientY-startY)>Math.abs(e.touches[0].clientX-startX)) tracking=false; },{passive:true});
+        area.addEventListener('touchend',e=>{ if(!tracking)return; const dx=e.changedTouches[0].clientX-startX; if(Math.abs(dx)>45){ if(dx<0)nextQuestion(); else prevQuestion(); } tracking=false; },{passive:true});
+      }
+
+      window.addEventListener('keydown', e=>{
+        if(e.key==='ArrowRight') nextQuestion();
+        if(e.key==='ArrowLeft') prevQuestion();
+        if(e.key==='Escape'){ modal.classList.add('hidden'); document.getElementById('palette-panel').classList.add('hidden'); closeRevision(); }
+      });
+
+      window.onload = ()=>{
+        document.getElementById('btn-study').classList.toggle('active', currentMode==='study');
+        document.getElementById('btn-mcqs').classList.toggle('active', currentMode==='mcqs');
+        loadProgress();
+        fetchQuestions();
+        setupSwipe();
+      };
+    })();
+  </script>
 </body>
-                    </html>
+                                                                                                                                                                                                             </html>
