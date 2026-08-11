@@ -4,7 +4,6 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
   <title>CA Final Audit • Pro Simulator</title>
-  <!-- Tailwind + Font Awesome -->
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <style>
@@ -21,600 +20,849 @@
     }
     .poppins { font-family: 'Poppins', sans-serif; }
 
-    /* mobile-first card & surfaces */
+    .app-container {
+      display: flex;
+      flex-direction: column;
+      height: 100dvh;
+      max-width: 480px;
+      margin: 0 auto;
+      background: #f8fafc;
+    }
+
     .card {
       background: #ffffff;
       border: 1px solid #e2e8f0;
       border-radius: 16px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+      box-shadow: 0 1px 3px rgba(0,0,0,0.04);
     }
 
-    /* scrollable main area */
     .scroll-area {
       flex: 1 1 auto;
       min-height: 0;
       overflow-y: auto;
       -webkit-overflow-scrolling: touch;
       overscroll-behavior-y: contain;
-      padding: 12px 12px 8px;
+      padding: 8px 10px;
     }
 
-    /* compact header single row */
+    /* Compact Header - Single Row */
     .compact-header {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 8px 12px;
-      margin: 8px 8px 0;
+      padding: 6px 10px;
+      margin: 6px 8px 0;
       background: white;
-      border-radius: 20px;
+      border-radius: 16px;
       border: 1px solid #e2e8f0;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.02);
-      max-height: 60px;
+      min-height: 48px;
+      max-height: 52px;
     }
 
-    /* mode switcher tighter */
-    .mode-pill {
+    /* Mode Switcher */
+    .mode-row {
       display: flex;
-      background: white;
-      border-radius: 40px;
-      padding: 4px;
-      border: 1px solid #e2e8f0;
+      align-items: center;
+      gap: 6px;
       margin: 6px 8px;
-      gap: 4px;
+      background: white;
+      border-radius: 30px;
+      padding: 3px;
+      border: 1px solid #e2e8f0;
     }
     .mode-btn {
       flex: 1;
-      text-align: center;
-      padding: 8px 6px;
-      font-size: 0.8rem;
+      padding: 7px 8px;
+      font-size: 0.75rem;
       font-weight: 600;
-      border-radius: 40px;
+      border-radius: 30px;
+      border: none;
       background: transparent;
-      transition: all 0.2s;
+      color: #64748b;
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 6px;
-      border: none;
-      color: #64748b;
+      gap: 5px;
+      cursor: pointer;
+      transition: all 0.2s;
     }
     .mode-btn.active {
       background: #3b82f6;
       color: white;
-      box-shadow: 0 4px 10px rgba(59,130,246,0.2);
     }
 
-    /* question grid: horizontal scroll dots */
-    .dots-scroll {
+    /* Question Dots - Horizontal Scroll */
+    .dots-row {
       display: flex;
+      gap: 6px;
       overflow-x: auto;
-      gap: 8px;
-      padding: 8px 2px;
+      padding: 6px 0;
       -webkit-overflow-scrolling: touch;
       scrollbar-width: none;
-      white-space: nowrap;
-      margin: 6px 0;
     }
-    .dots-scroll::-webkit-scrollbar { display: none; }
-    .dot-btn {
-      width: 44px;
-      height: 44px;
-      min-width: 44px;
-      border-radius: 12px;
-      font-weight: 600;
-      font-size: 0.85rem;
+    .dots-row::-webkit-scrollbar { display: none; }
+    .q-dot {
+      min-width: 40px;
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
       border: 1.5px solid #e2e8f0;
       background: white;
-      color: #334155;
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: #475569;
       display: flex;
       align-items: center;
       justify-content: center;
-      position: relative;
       flex-shrink: 0;
-      transition: all 0.15s;
+      cursor: pointer;
+      position: relative;
     }
-    .dot-btn.current {
-      border-color: #3b82f6;
-      box-shadow: 0 0 0 3px rgba(59,130,246,0.25);
-      transform: scale(1.02);
-    }
-    .dot-btn.answered { background: #dbeafe; border-color: #3b82f6; color: #1e40af; }
-    .dot-btn.wrong { background: #fee2e2; border-color: #dc2626; color: #991b1b; }
-    .mark-dot {
+    .q-dot.current { border-color: #3b82f6; background: #eff6ff; }
+    .q-dot.answered { background: #dbeafe; border-color: #3b82f6; color: #1e40af; }
+    .q-dot.wrong { background: #fee2e2; border-color: #dc2626; color: #991b1b; }
+    .mark-indicator {
       position: absolute;
       top: -3px;
       right: -3px;
-      width: 12px;
-      height: 12px;
+      width: 10px;
+      height: 10px;
       background: #f59e0b;
       border-radius: 50%;
-      border: 2px solid white;
+      border: 1.5px solid white;
     }
 
+    /* Options */
     .option-btn {
       background: white;
       border: 1.5px solid #e2e8f0;
-      border-radius: 14px;
-      padding: 12px 14px;
+      border-radius: 12px;
+      padding: 10px 12px;
       display: flex;
       align-items: center;
-      gap: 12px;
+      gap: 10px;
       width: 100%;
-      font-size: 0.9rem;
+      font-size: 0.85rem;
+      cursor: pointer;
       transition: all 0.15s;
-      touch-action: manipulation;
-      min-height: 48px;
+      min-height: 44px;
       text-align: left;
     }
     .option-btn:active { transform: scale(0.98); }
-    .opt-letter {
-      width: 32px; height: 32px;
+    .opt-badge {
+      width: 30px;
+      height: 30px;
       border-radius: 8px;
       background: #f1f5f9;
-      display: flex; align-items: center; justify-content: center;
-      font-weight: 700; color: #475569;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 0.8rem;
+      color: #475569;
       border: 1px solid #e2e8f0;
+      flex-shrink: 0;
     }
-    .option-correct { border-color: #059669 !important; background: #d1fae5 !important; }
-    .option-wrong { border-color: #dc2626 !important; background: #fee2e2 !important; }
-    .option-selected { border-color: #f59e0b !important; background: #fef3c7 !important; }
+    .option-correct { border-color: #059669 !important; background: #ecfdf5 !important; }
+    .option-wrong { border-color: #dc2626 !important; background: #fef2f2 !important; }
+    .option-selected { border-color: #f59e0b !important; background: #fffbeb !important; }
 
     .case-box {
-      background: #f1f5f9;
-      border-radius: 14px;
-      padding: 12px;
-      margin-bottom: 12px;
-      font-size: 0.85rem;
-      line-height: 1.5;
+      background: #f8fafc;
       border: 1px solid #e2e8f0;
-      max-height: 30vh;
+      border-radius: 12px;
+      padding: 10px 12px;
+      margin-bottom: 10px;
+      font-size: 0.8rem;
+      line-height: 1.5;
+      max-height: 25vh;
       overflow-y: auto;
     }
 
-    .footer-nav {
+    /* Footer */
+    .bottom-nav {
       display: flex;
       align-items: center;
       justify-content: space-between;
+      gap: 4px;
+      padding: 6px 8px;
+      margin: 0 8px 6px;
       background: white;
-      border-radius: 20px;
-      padding: 8px 12px;
-      margin: 0 8px 8px;
+      border-radius: 16px;
       border: 1px solid #e2e8f0;
-      gap: 6px;
     }
-
-    .icon-btn {
-      width: 38px; height: 38px;
-      border-radius: 12px;
-      display: flex; align-items: center; justify-content: center;
-      background: #f8fafc; border: 1px solid #e2e8f0;
-      color: #334155; font-size: 1rem;
-      transition: 0.2s;
+    .nav-icon {
+      width: 38px;
+      height: 38px;
+      border-radius: 10px;
+      border: 1px solid #e2e8f0;
+      background: #f8fafc;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      font-size: 0.9rem;
+      color: #475569;
+      transition: all 0.15s;
     }
-    .icon-btn:active { background: #e2e8f0; }
+    .nav-icon:active { background: #e2e8f0; transform: scale(0.95); }
+    .nav-icon.primary { background: #3b82f6; color: white; border-color: #3b82f6; }
 
-    .palette-panel {
-      background: rgba(255,255,255,0.98);
-      backdrop-filter: blur(12px);
-      border-radius: 24px 24px 0 0;
+    /* Overlays */
+    .bottom-sheet {
+      position: fixed;
+      inset: 0;
+      top: auto;
+      background: white;
+      border-radius: 20px 20px 0 0;
       padding: 16px;
-      border-top: 2px solid #bfdbfe;
+      max-height: 70vh;
+      overflow-y: auto;
+      z-index: 100;
+      box-shadow: 0 -4px 20px rgba(0,0,0,0.1);
+    }
+    .modal-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.5);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 200;
+      padding: 16px;
     }
 
-    @media (max-width: 480px) {
-      .option-btn { font-size: 0.85rem; padding: 10px 12px; }
-      .case-box { max-height: 25vh; }
+    .toast-msg {
+      position: fixed;
+      bottom: 100px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #1e293b;
+      color: white;
+      padding: 8px 18px;
+      border-radius: 20px;
+      font-size: 0.7rem;
+      font-weight: 600;
+      z-index: 300;
+      opacity: 0;
+      transition: opacity 0.3s;
+      pointer-events: none;
     }
+    .toast-msg.show { opacity: 1; }
   </style>
 </head>
-<body class="flex flex-col h-dvh max-w-lg mx-auto bg-slate-50">
-
-  <!-- TOAST -->
-  <div id="toast" class="fixed bottom-28 left-1/2 -translate-x-1/2 bg-gray-900 text-white px-5 py-2.5 rounded-full text-xs font-semibold z-50 opacity-0 transition pointer-events-none shadow-lg">❤️ Subscribe to Satyam</div>
-
-  <!-- ===== COMPACT TOP HEADER (single row, max 60px) ===== -->
-  <header class="compact-header">
-    <div class="flex items-center gap-2">
-      <div class="w-9 h-9 rounded-lg bg-blue-50 border border-blue-200 flex items-center justify-center text-blue-600 font-bold text-sm">CA</div>
-      <div>
-        <h1 class="text-sm font-bold poppins text-slate-800 leading-tight">FINAL AUDIT</h1>
-        <p class="text-[10px] text-slate-500 -mt-0.5">Pro Simulator</p>
-      </div>
-    </div>
-    <div class="flex items-center gap-2">
-      <!-- merged lifeline button: tap to show 50:50 / poll / expert -->
-      <div class="relative">
-        <button id="lifeMenuBtn" onclick="toggleLifeMenu()" class="icon-btn w-10 h-10 text-blue-600 bg-blue-50 border-blue-200">
-          <i class="fa-solid fa-wand-magic-sparkles text-sm"></i>
-        </button>
-        <div id="lifeDropdown" class="hidden absolute right-0 top-12 bg-white border border-gray-200 rounded-2xl shadow-xl p-2 flex flex-col gap-1 z-50 min-w-[130px]">
-          <button onclick="use5050(); toggleLifeMenu();" class="text-xs font-medium px-3 py-2 rounded-xl hover:bg-blue-50 flex items-center gap-2"><span class="w-5 h-5 rounded bg-blue-100 flex items-center justify-center text-blue-600">½</span> 50:50</button>
-          <button onclick="useAudiencePoll(); toggleLifeMenu();" class="text-xs font-medium px-3 py-2 rounded-xl hover:bg-blue-50 flex items-center gap-2"><i class="fa-solid fa-chart-bar text-blue-600"></i> Poll</button>
-          <button onclick="useExpertAdvice(); toggleLifeMenu();" class="text-xs font-medium px-3 py-2 rounded-xl hover:bg-blue-50 flex items-center gap-2"><i class="fa-solid fa-user-tie text-blue-600"></i> Expert</button>
+<body>
+  <div class="app-container">
+    
+    <!-- HEADER -->
+    <div class="compact-header">
+      <div style="display:flex;align-items:center;gap:8px;">
+        <div style="width:34px;height:34px;border-radius:10px;background:#eff6ff;border:1px solid #bfdbfe;display:flex;align-items:center;justify-content:center;color:#3b82f6;font-weight:700;font-size:0.8rem;">CA</div>
+        <div>
+          <div style="font-size:0.8rem;font-weight:700;color:#1e293b;line-height:1.2;">FINAL AUDIT</div>
+          <div style="font-size:0.6rem;color:#94a3b8;">Pro Simulator</div>
         </div>
       </div>
-      <button onclick="retakeQuiz()" class="icon-btn w-10 h-10 text-red-500 bg-red-50 border-red-200"><i class="fa-solid fa-rotate-right text-sm"></i></button>
-    </div>
-  </header>
-
-  <!-- ===== MODE SWITCHER (compact) + bookmark inline ===== -->
-  <div class="mode-pill flex items-center justify-between px-1">
-    <div class="flex flex-1">
-      <button id="btn-study" onclick="switchMode('study')" class="mode-btn active"><i class="fa-solid fa-book-open text-xs"></i> MCQs</button>
-      <button id="btn-mcqs" onclick="switchMode('mcqs')" class="mode-btn"><i class="fa-solid fa-briefcase text-xs"></i> Cases</button>
-    </div>
-    <button id="mark-review-btn" onclick="toggleMarkReview()" class="w-9 h-9 flex items-center justify-center text-slate-400 hover:text-amber-500 transition ml-1">
-      <i class="fa-regular fa-bookmark text-lg"></i>
-    </button>
-  </div>
-
-  <!-- ===== MAIN SCROLLABLE CONTENT ===== -->
-  <main id="scroll-area" class="scroll-area flex flex-col gap-3">
-    <!-- dynamic quiz container -->
-    <div id="quiz-container" class="space-y-3">
-      <div class="card p-4">
-        <div id="question-text" class="text-sm leading-relaxed whitespace-pre-wrap"></div>
+      <div style="display:flex;align-items:center;gap:6px;">
+        <button onclick="toggleLifeMenu()" style="width:34px;height:34px;border-radius:10px;background:#eff6ff;border:1px solid #bfdbfe;display:flex;align-items:center;justify-content:center;cursor:pointer;color:#3b82f6;font-size:0.8rem;">
+          <i class="fa-solid fa-wand-magic-sparkles"></i>
+        </button>
+        <button onclick="retakeQuiz()" style="width:34px;height:34px;border-radius:10px;background:#fef2f2;border:1px solid #fecaca;display:flex;align-items:center;justify-content:center;cursor:pointer;color:#ef4444;font-size:0.8rem;">
+          <i class="fa-solid fa-rotate-right"></i>
+        </button>
       </div>
-      <div id="options-grid" class="grid grid-cols-1 gap-2.5"></div>
-      <!-- horizontal scrollable question dots (grid replaced) -->
-      <div id="dots-strip" class="dots-scroll"></div>
     </div>
-    <!-- end screen hidden initially -->
-    <div id="end-screen" class="hidden flex-col items-center justify-center text-center space-y-4 py-6">
-      <i class="fa-solid fa-trophy text-5xl text-blue-600"></i>
-      <h2 class="text-2xl font-bold poppins">Quiz Complete!</h2>
-      <p class="text-slate-500 text-sm">Great effort! Subscribe for more.</p>
-      <a href="https://youtube.com/@observe_with_satyam" target="_blank" class="bg-red-600 text-white px-6 py-3 rounded-full font-bold text-sm flex items-center gap-2 w-fit mx-auto"><i class="fab fa-youtube"></i> Subscribe</a>
-      <button onclick="retakeQuiz()" class="border px-6 py-3 rounded-full font-semibold text-sm">Retake</button>
-    </div>
-  </main>
 
-  <!-- ===== FOOTER NAVIGATION ===== -->
-  <footer class="footer-nav">
-    <button onclick="prevQuestion()" class="icon-btn"><i class="fa-solid fa-arrow-left"></i></button>
-    <button onclick="togglePalette()" class="icon-btn"><i class="fa-solid fa-th"></i></button>
-    <div id="score-counter" class="text-xs font-mono font-bold text-blue-600 bg-blue-50 px-3 py-2 rounded-xl">0/0</div>
-    <button onclick="openRevision()" class="icon-btn"><i class="fa-solid fa-clock-rotate-left"></i></button>
-    <button onclick="nextQuestion()" class="icon-btn bg-blue-600 text-white border-blue-600"><i class="fa-solid fa-arrow-right"></i></button>
-  </footer>
-
-  <!-- PALETTE PANEL (collapsible bottom drawer) -->
-  <div id="palette-panel" class="hidden fixed inset-x-0 bottom-0 z-50 palette-panel max-h-[65vh] overflow-y-auto">
-    <div class="flex justify-between items-center mb-3">
-      <h3 class="font-bold text-slate-800">Question Palette</h3>
-      <button onclick="togglePalette()" class="text-2xl">&times;</button>
+    <!-- LIFE DROPDOWN -->
+    <div id="lifeDropdown" style="display:none;position:fixed;top:60px;right:16px;background:white;border:1px solid #e2e8f0;border-radius:16px;padding:6px;z-index:150;box-shadow:0 4px 16px rgba(0,0,0,0.1);">
+      <button onclick="use5050()" style="display:block;width:100%;padding:8px 14px;border:none;background:none;font-size:0.75rem;cursor:pointer;border-radius:10px;text-align:left;">🎯 50:50</button>
+      <button onclick="useAudiencePoll()" style="display:block;width:100%;padding:8px 14px;border:none;background:none;font-size:0.75rem;cursor:pointer;border-radius:10px;text-align:left;">📊 Audience Poll</button>
+      <button onclick="useExpertAdvice()" style="display:block;width:100%;padding:8px 14px;border:none;background:none;font-size:0.75rem;cursor:pointer;border-radius:10px;text-align:left;">👔 Expert Advice</button>
     </div>
-    <div id="palette-grid" class="grid grid-cols-6 sm:grid-cols-8 gap-3 justify-items-center"></div>
+
+    <!-- MODE SWITCHER -->
+    <div class="mode-row">
+      <button id="btnStudy" class="mode-btn active" onclick="switchMode('study')"><i class="fa-solid fa-book-open"></i> Direct MCQs</button>
+      <button id="btnMcqs" class="mode-btn" onclick="switchMode('mcqs')"><i class="fa-solid fa-briefcase"></i> Case Studies</button>
+      <button id="markBtn" onclick="toggleMarkReview()" style="width:34px;height:34px;border:none;background:none;cursor:pointer;color:#94a3b8;font-size:1.1rem;padding:0;display:flex;align-items:center;justify-content:center;">
+        <i class="fa-regular fa-bookmark"></i>
+      </button>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="mainScroll" class="scroll-area">
+      <div id="quizContent">
+        <div class="card" style="padding:12px;margin-bottom:8px;">
+          <div id="questionText" style="font-size:0.85rem;line-height:1.5;"></div>
+        </div>
+        <div id="optionsContainer" style="display:flex;flex-direction:column;gap:8px;"></div>
+        <div id="dotsContainer" class="dots-row" style="margin-top:10px;"></div>
+      </div>
+      <div id="endScreen" style="display:none;text-align:center;padding:20px;">
+        <div style="font-size:3rem;margin-bottom:12px;">🏆</div>
+        <h2 style="font-size:1.3rem;font-weight:700;margin-bottom:6px;">Quiz Complete!</h2>
+        <p style="font-size:0.8rem;color:#64748b;margin-bottom:16px;">Great work! Subscribe for more tools.</p>
+        <a href="https://youtube.com/@observe_with_satyam" target="_blank" style="display:inline-block;padding:10px 20px;background:#ef4444;color:white;border-radius:30px;text-decoration:none;font-weight:600;font-size:0.8rem;margin-bottom:10px;"><i class="fab fa-youtube"></i> Subscribe</a>
+        <br>
+        <button onclick="retakeQuiz()" style="padding:10px 20px;border:1px solid #e2e8f0;border-radius:30px;background:white;font-weight:600;font-size:0.8rem;cursor:pointer;">Retake Quiz</button>
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <div class="bottom-nav">
+      <button class="nav-icon" onclick="prevQuestion()"><i class="fa-solid fa-arrow-left"></i></button>
+      <button class="nav-icon" onclick="togglePalette()"><i class="fa-solid fa-th"></i></button>
+      <div style="font-size:0.75rem;font-weight:700;color:#3b82f6;background:#eff6ff;padding:6px 12px;border-radius:10px;" id="scoreDisplay">0/0</div>
+      <button class="nav-icon" onclick="openRevision()"><i class="fa-solid fa-clock-rotate-left"></i></button>
+      <button class="nav-icon primary" onclick="nextQuestion()"><i class="fa-solid fa-arrow-right"></i></button>
+    </div>
   </div>
 
-  <!-- REVISION PANEL -->
-  <div id="revision-panel" class="hidden fixed inset-0 bg-white z-50 flex flex-col p-4">
-    <div class="flex justify-between items-center mb-4">
-      <h2 class="text-xl font-bold">Review All</h2>
-      <button onclick="closeRevision()" class="text-3xl">&times;</button>
+  <!-- PALETTE SHEET -->
+  <div id="paletteSheet" class="bottom-sheet" style="display:none;">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;">
+      <h3 style="font-weight:700;">Question Palette</h3>
+      <button onclick="togglePalette()" style="font-size:1.5rem;border:none;background:none;cursor:pointer;">&times;</button>
     </div>
-    <div id="revision-list" class="flex-1 overflow-y-auto space-y-3"></div>
+    <div id="paletteGrid" style="display:grid;grid-template-columns:repeat(6,1fr);gap:8px;"></div>
+  </div>
+
+  <!-- REVISION SHEET -->
+  <div id="revisionSheet" class="bottom-sheet" style="display:none;top:0;">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;">
+      <h3 style="font-weight:700;">Review All Questions</h3>
+      <button onclick="closeRevision()" style="font-size:1.5rem;border:none;background:none;cursor:pointer;">&times;</button>
+    </div>
+    <div id="revisionList" style="display:flex;flex-direction:column;gap:8px;"></div>
   </div>
 
   <!-- EXPLANATION MODAL -->
-  <div id="explanation-modal" class="hidden fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center p-4 z-50">
-    <div class="bg-white rounded-2xl p-6 max-w-sm w-full text-center space-y-4">
-      <h2 id="modal-title" class="text-xl font-bold"></h2>
-      <div id="modal-subtitle" class="text-sm text-slate-600"></div>
-      <button id="modal-continue-btn" onclick="nextQuestion()" class="w-full bg-blue-600 text-white py-3 rounded-xl font-bold">Next</button>
+  <div id="explanationModal" class="modal-overlay" style="display:none;">
+    <div style="background:white;border-radius:20px;padding:20px;max-width:320px;width:100%;text-align:center;">
+      <div id="modalTitle" style="font-size:1.2rem;font-weight:700;margin-bottom:8px;"></div>
+      <div id="modalBody" style="font-size:0.8rem;color:#475569;margin-bottom:16px;"></div>
+      <button id="modalNextBtn" onclick="nextQuestion()" style="width:100%;padding:12px;background:#3b82f6;color:white;border:none;border-radius:14px;font-weight:600;font-size:0.85rem;cursor:pointer;">Next Question</button>
     </div>
   </div>
 
+  <!-- TOAST -->
+  <div id="toast" class="toast-msg">❤️ Like the app? Subscribe to Satyam's YouTube!</div>
+
   <script>
-    (function() {
-      // ---------- AUDIO ----------
-      const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-      function playBeep(f=440, t='sine', d=0.12) {
-        if(audioCtx.state==='suspended') audioCtx.resume();
-        const o=audioCtx.createOscillator(), g=audioCtx.createGain();
-        o.type=t; o.frequency.value=f; g.gain.setValueAtTime(0.08, audioCtx.currentTime);
-        g.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime+d);
-        o.connect(g); g.connect(audioCtx.destination); o.start(); o.stop(audioCtx.currentTime+d);
+    // ============ GLOBAL STATE ============
+    window.quizState = {
+      mode: 'study',
+      questions: [],
+      currentIndex: 0,
+      session: [],
+      isAnswered: false,
+      selectedOption: null,
+      toastShown: false,
+      audioCtx: null
+    };
+
+    // ============ AUDIO ============
+    function getAudioCtx() {
+      if (!window.quizState.audioCtx) {
+        window.quizState.audioCtx = new (window.AudioContext || window.webkitAudioContext)();
       }
-      function soundCorrect(){ playBeep(523,'triangle',0.15); setTimeout(()=>playBeep(659,'triangle',0.15),120); }
-      function soundWrong(){ playBeep(220,'sawtooth',0.2); }
+      return window.quizState.audioCtx;
+    }
 
-      // ---------- STATE ----------
-      let currentMode = localStorage.getItem('caAuditMode') || 'study';
-      let questions = [];
-      let currentIdx = 0;
-      let session = [];        // { selected, isCorrect, marked }
-      let isAnswered = false;
-      let selectedOption = null;
-      let toastShown = false;
+    function playBeep(freq, type, duration) {
+      try {
+        const ctx = getAudioCtx();
+        if (ctx.state === 'suspended') ctx.resume();
+        const osc = ctx.createOscillator();
+        const gain = ctx.createGain();
+        osc.type = type || 'sine';
+        osc.frequency.value = freq || 440;
+        gain.gain.setValueAtTime(0.06, ctx.currentTime);
+        gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + (duration || 0.12));
+        osc.connect(gain);
+        gain.connect(ctx.destination);
+        osc.start();
+        osc.stop(ctx.currentTime + (duration || 0.12));
+      } catch(e) {}
+    }
 
-      // DOM elements
-      const qText = document.getElementById('question-text');
-      const optionsGrid = document.getElementById('options-grid');
-      const dotsStrip = document.getElementById('dots-strip');
-      const scoreCounter = document.getElementById('score-counter');
-      const markBtn = document.getElementById('mark-review-btn');
-      const quizContainer = document.getElementById('quiz-container');
-      const endScreen = document.getElementById('end-screen');
-      const modal = document.getElementById('explanation-modal');
-      const modalTitle = document.getElementById('modal-title');
-      const modalSub = document.getElementById('modal-subtitle');
-      const modalContinue = document.getElementById('modal-continue-btn');
+    function soundCorrect() {
+      playBeep(523, 'triangle', 0.15);
+      setTimeout(() => playBeep(659, 'triangle', 0.15), 120);
+    }
+    function soundWrong() {
+      playBeep(220, 'sawtooth', 0.2);
+    }
 
-      // ---------- DATA NORMALISATION ----------
-      function normalise(data) {
-        const records = Array.isArray(data) ? data : (data.questions || data.caseScenarios || []);
-        return records.flatMap((rec, i) => {
-          if (rec.questions && Array.isArray(rec.questions)) {
-            return rec.questions.map((q, j) => ({
-              question: q.question || '',
-              options: q.options || [],
-              correctOption: Number(q.correctOption) || 0,
-              explanation: q.explanation || '',
-              caseStudy: rec.caseStudy || rec.scenario || '',
-              scenarioNumber: rec.scenarioNumber || (i+1),
-              questionNumber: q.questionNumber || `${i+1}.${j+1}`
-            }));
-          }
-          return [{
-            question: rec.question || '',
-            options: rec.options || [],
-            correctOption: Number(rec.correctOption) || 0,
-            explanation: rec.explanation || '',
-            caseStudy: rec.caseStudy || '',
+    // ============ DATA ============
+    function escapeHtml(str) {
+      return String(str || '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'})[c]);
+    }
+
+    function normalizeData(data) {
+      const records = Array.isArray(data) ? data : (data.caseScenarios || data.questions || []);
+      return records.flatMap((rec, i) => {
+        if (rec.questions && Array.isArray(rec.questions)) {
+          return rec.questions.map((q, j) => ({
+            question: q.question || '',
+            options: q.options || [],
+            correctOption: parseInt(q.correctOption) || 0,
+            explanation: q.explanation || '',
+            caseStudy: rec.caseStudy || rec.scenario || '',
             scenarioNumber: rec.scenarioNumber || (i+1),
-            questionNumber: rec.questionNumber || `Q${i+1}`
-          }];
-        }).filter(q => q.options.length > 0);
-      }
-
-      async function fetchQuestions() {
-        const files = currentMode === 'mcqs' ? ['./audit_case_scenarios.json'] : ['./study.json', './mcqs.json'];
-        try {
-          const results = await Promise.all(files.map(f => fetch(f).then(r => r.json())));
-          questions = currentMode === 'mcqs' ? normalise(results[0]) : results.flatMap(normalise);
-          if (!questions.length) throw new Error('Empty');
-          if (session.length !== questions.length) {
-            session = questions.map((_,i) => session[i] || {selected:null, isCorrect:null, marked:false});
-          }
-          if (currentIdx >= questions.length) currentIdx = 0;
-          renderQuestion();
-        } catch (e) {
-          qText.innerText = '⚠️ Could not load questions. Check JSON files.';
-          console.error(e);
+            questionNumber: q.questionNumber || `${i+1}.${j+1}`
+          }));
         }
-      }
+        return [{
+          question: rec.question || '',
+          options: rec.options || [],
+          correctOption: parseInt(rec.correctOption) || 0,
+          explanation: rec.explanation || '',
+          caseStudy: rec.caseStudy || '',
+          scenarioNumber: rec.scenarioNumber || (i+1),
+          questionNumber: rec.questionNumber || `Q${i+1}`
+        }];
+      }).filter(q => q.options && q.options.length > 0);
+    }
 
-      // ---------- RENDER ----------
-      function renderQuestion() {
-        const q = questions[currentIdx];
-        isAnswered = false; selectedOption = null;
-        const state = session[currentIdx] || {selected:null, marked:false};
-
-        let html = '';
-        if (q.caseStudy) {
-          html += `<div class="case-box"><div class="font-bold text-blue-600 text-xs uppercase mb-1">Case ${q.scenarioNumber || ''}</div>${escapeHtml(q.caseStudy)}</div>`;
+    async function loadQuestions() {
+      const mode = window.quizState.mode;
+      const files = mode === 'mcqs' ? ['./audit_case_scenarios.json'] : ['./study.json', './mcqs.json'];
+      
+      try {
+        const results = await Promise.all(files.map(f => fetch(f).then(r => {
+          if (!r.ok) throw new Error(`Failed to load ${f}`);
+          return r.json();
+        })));
+        
+        window.quizState.questions = mode === 'mcqs' ? normalizeData(results[0]) : results.flatMap(normalizeData);
+        
+        if (!window.quizState.questions.length) {
+          document.getElementById('questionText').innerHTML = '<p style="color:#ef4444;">No questions found. Please check JSON files.</p>';
+          return;
         }
-        html += `<span class="font-bold text-blue-600">${escapeHtml(q.questionNumber || `Q${currentIdx+1}`)}.</span> ${escapeHtml(q.question)}`;
-        qText.innerHTML = html;
 
-        optionsGrid.innerHTML = '';
-        q.options.forEach((opt, idx) => {
-          const btn = document.createElement('button');
-          btn.className = 'option-btn';
-          btn.innerHTML = `<span class="opt-letter">${String.fromCharCode(65+idx)}</span><span>${opt}</span>`;
-          if (state.selected !== null) {
-            btn.disabled = true;
-            if (idx === state.selected && !state.isCorrect) btn.classList.add('option-wrong');
-            if (idx === q.correctOption) btn.classList.add('option-correct');
-            isAnswered = true;
-          }
-          btn.onclick = () => selectOption(idx);
-          optionsGrid.appendChild(btn);
-        });
-
-        updateMarkIcon();
-        renderDots();
-        scoreCounter.innerText = `${currentIdx+1}/${questions.length}`;
-        document.getElementById('scroll-area').scrollTop = 0;
-        saveProgress();
-      }
-
-      function renderDots() {
-        dotsStrip.innerHTML = '';
-        questions.forEach((_, i) => {
-          const st = session[i] || {};
-          const dot = document.createElement('button');
-          dot.className = 'dot-btn';
-          dot.textContent = i+1;
-          if (i === currentIdx) dot.classList.add('current');
-          if (st.selected !== null) dot.classList.add(st.isCorrect ? 'answered' : 'wrong');
-          if (st.marked) {
-            const mark = document.createElement('span');
-            mark.className = 'mark-dot';
-            dot.appendChild(mark);
-          }
-          dot.onclick = () => jumpTo(i);
-          dotsStrip.appendChild(dot);
-        });
-      }
-
-      function selectOption(idx) {
-        if (isAnswered) return;
-        playBeep(300, 'sine', 0.06);
-        Array.from(optionsGrid.children).forEach(b => b.classList.remove('option-selected'));
-        selectedOption = idx;
-        optionsGrid.children[idx].classList.add('option-selected');
-        setTimeout(() => lockAnswer(idx), 400);
-      }
-
-      function lockAnswer(idx) {
-        if (isAnswered) return;
-        isAnswered = true;
-        const q = questions[currentIdx];
-        const correct = idx === q.correctOption;
-        session[currentIdx] = { selected: idx, isCorrect: correct, marked: session[currentIdx]?.marked || false };
-        const sel = optionsGrid.children[idx];
-        const corr = optionsGrid.children[q.correctOption];
-        sel.classList.remove('option-selected');
-        if (correct) { sel.classList.add('option-correct'); soundCorrect(); }
-        else { sel.classList.add('option-wrong'); if(corr) corr.classList.add('option-correct'); soundWrong(); }
-        Array.from(optionsGrid.children).forEach(b => b.disabled = true);
-        renderDots(); saveProgress();
-        setTimeout(() => showExplanation(correct), 600);
-      }
-
-      function showExplanation(correct) {
-        const q = questions[currentIdx];
-        modalTitle.innerHTML = correct ? '✅ Correct!' : '❌ Incorrect';
-        let sub = correct ? 'Well done!' : `Right answer: ${q.options[q.correctOption]}`;
-        if (q.explanation) sub += `<br><span class="text-xs text-slate-500">${q.explanation}</span>`;
-        modalSub.innerHTML = sub;
-        modalContinue.innerText = (currentIdx === questions.length-1) ? 'Finish' : 'Next';
-        modal.classList.remove('hidden');
-      }
-
-      function nextQuestion() {
-        modal.classList.add('hidden');
-        if (currentIdx < questions.length-1) { currentIdx++; renderQuestion(); checkToast(); }
-        else finishQuiz();
-      }
-      function prevQuestion() {
-        modal.classList.add('hidden');
-        if (currentIdx > 0) { currentIdx--; renderQuestion(); }
-      }
-
-      function toggleMarkReview() {
-        const st = session[currentIdx] || {selected:null, marked:false};
-        st.marked = !st.marked;
-        session[currentIdx] = st;
-        updateMarkIcon(); renderDots(); saveProgress();
-      }
-      function updateMarkIcon() {
-        const marked = session[currentIdx]?.marked;
-        markBtn.innerHTML = marked ? '<i class="fa-solid fa-bookmark text-amber-500 text-lg"></i>' : '<i class="fa-regular fa-bookmark text-slate-400 text-lg"></i>';
-      }
-
-      function jumpTo(i) { if(i>=0 && i<questions.length){ currentIdx=i; renderQuestion(); } }
-
-      // palette & revision
-      function togglePalette() {
-        const panel = document.getElementById('palette-panel');
-        if (panel.classList.contains('hidden')) {
-          renderPaletteGrid();
-          panel.classList.remove('hidden');
-        } else panel.classList.add('hidden');
-      }
-      function renderPaletteGrid() {
-        const grid = document.getElementById('palette-grid');
-        grid.innerHTML = '';
-        questions.forEach((_, i) => {
-          const st = session[i] || {};
-          const btn = document.createElement('button');
-          btn.className = 'dot-btn';
-          btn.textContent = i+1;
-          if (i===currentIdx) btn.classList.add('current');
-          if (st.selected!==null) btn.classList.add(st.isCorrect?'answered':'wrong');
-          if (st.marked) { const m=document.createElement('span'); m.className='mark-dot'; btn.appendChild(m); }
-          btn.onclick = ()=>{ jumpTo(i); togglePalette(); };
-          grid.appendChild(btn);
-        });
-      }
-      function openRevision() {
-        const panel = document.getElementById('revision-panel');
-        const list = document.getElementById('revision-list');
-        list.innerHTML = '';
-        questions.forEach((q,i)=>{
-          const st=session[i]||{};
-          const div=document.createElement('div');
-          div.className='p-3 border rounded-xl bg-white';
-          div.innerHTML=`<div class="font-semibold text-sm">Q${i+1}: ${q.question.substring(0,80)}...</div>
-            <div class="text-xs text-slate-500">Your: ${st.selected!==null?q.options[st.selected]:'—'} | Correct: ${q.options[q.correctOption]}</div>`;
-          div.onclick=()=>{jumpTo(i); closeRevision();};
-          list.appendChild(div);
-        });
-        panel.classList.remove('hidden');
-      }
-      function closeRevision(){ document.getElementById('revision-panel').classList.add('hidden'); }
-
-      function finishQuiz() {
-        quizContainer.classList.add('hidden');
-        endScreen.classList.remove('hidden');
-        endScreen.classList.add('flex');
-        localStorage.removeItem(`caAudit_${currentMode}`);
-      }
-      function retakeQuiz() {
-        if(confirm('Restart?')) { session = []; currentIdx=0; resetLifelines(); fetchQuestions(); endScreen.classList.add('hidden'); quizContainer.classList.remove('hidden'); }
-      }
-
-      // lifelines
-      function toggleLifeMenu() {
-        document.getElementById('lifeDropdown').classList.toggle('hidden');
-      }
-      function use5050() {
-        if(isAnswered) return;
-        const q=questions[currentIdx];
-        const wrong = q.options.map((_,i)=>i).filter(i=>i!==q.correctOption);
-        wrong.sort(()=>Math.random()-0.5);
-        wrong.slice(0,2).forEach(i=>{ const el=optionsGrid.children[i]; if(el){el.style.opacity='0.25'; el.disabled=true;} });
-      }
-      function useAudiencePoll(){ if(!isAnswered) alert(`📊 Poll: Option ${String.fromCharCode(65+questions[currentIdx].correctOption)} leads!`); }
-      function useExpertAdvice(){ if(!isAnswered) alert(`👔 Expert: Go with ${String.fromCharCode(65+questions[currentIdx].correctOption)}`); }
-      function resetLifelines(){}
-
-      function switchMode(mode) {
-        if (currentMode===mode) return;
-        currentMode=mode;
-        localStorage.setItem('caAuditMode', mode);
-        document.getElementById('btn-study').classList.toggle('active', mode==='study');
-        document.getElementById('btn-mcqs').classList.toggle('active', mode==='mcqs');
-        session=[]; currentIdx=0;
-        fetchQuestions();
-      }
-
-      function saveProgress() {
-        localStorage.setItem(`caAudit_${currentMode}`, JSON.stringify({idx:currentIdx, session}));
-      }
-      function loadProgress() {
-        const raw = localStorage.getItem(`caAudit_${currentMode}`);
-        if(raw) { const d=JSON.parse(raw); currentIdx=d.idx||0; session=d.session||[]; }
-      }
-      function checkToast() {
-        if(toastShown) return;
-        const attempted = session.filter(s=>s.selected!==null).length;
-        if(attempted>=20 && !localStorage.getItem('caToast')) {
-          const t=document.getElementById('toast');
-          t.classList.add('opacity-100'); t.style.opacity='1';
-          localStorage.setItem('caToast','1'); toastShown=true;
-          setTimeout(()=>{ t.classList.remove('opacity-100'); t.style.opacity='0'; },4000);
+        // Initialize session
+        if (window.quizState.session.length !== window.quizState.questions.length) {
+          window.quizState.session = window.quizState.questions.map((_, i) => 
+            window.quizState.session[i] || { selected: null, isCorrect: null, marked: false }
+          );
         }
+        
+        if (window.quizState.currentIndex >= window.quizState.questions.length) {
+          window.quizState.currentIndex = 0;
+        }
+        
+        renderQuestion();
+      } catch (err) {
+        console.error('Load error:', err);
+        document.getElementById('questionText').innerHTML = '<p style="color:#ef4444;">Error loading questions. Make sure JSON files exist.</p>';
       }
-      function escapeHtml(t){ return String(t).replace(/[&<>"]/g, c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'})[c]); }
+    }
 
-      // swipe
-      function setupSwipe() {
-        const area = document.getElementById('scroll-area');
-        let startX=0,startY=0,tracking=false;
-        area.addEventListener('touchstart',e=>{ startX=e.touches[0].clientX; startY=e.touches[0].clientY; tracking=true; },{passive:true});
-        area.addEventListener('touchmove',e=>{ if(!tracking)return; if(Math.abs(e.touches[0].clientY-startY)>Math.abs(e.touches[0].clientX-startX)) tracking=false; },{passive:true});
-        area.addEventListener('touchend',e=>{ if(!tracking)return; const dx=e.changedTouches[0].clientX-startX; if(Math.abs(dx)>45){ if(dx<0)nextQuestion(); else prevQuestion(); } tracking=false; },{passive:true});
+    // ============ RENDER ============
+    function renderQuestion() {
+      const q = window.quizState.questions[window.quizState.currentIndex];
+      if (!q) return;
+      
+      window.quizState.isAnswered = false;
+      window.quizState.selectedOption = null;
+      
+      const state = window.quizState.session[window.quizState.currentIndex] || { selected: null, marked: false };
+      
+      // Question text
+      let html = '';
+      if (q.caseStudy) {
+        html += `<div class="case-box"><strong style="color:#3b82f6;font-size:0.7rem;">CASE ${q.scenarioNumber || ''}</strong><br>${escapeHtml(q.caseStudy)}</div>`;
       }
-
-      window.addEventListener('keydown', e=>{
-        if(e.key==='ArrowRight') nextQuestion();
-        if(e.key==='ArrowLeft') prevQuestion();
-        if(e.key==='Escape'){ modal.classList.add('hidden'); document.getElementById('palette-panel').classList.add('hidden'); closeRevision(); }
+      html += `<strong style="color:#3b82f6;">${escapeHtml(q.questionNumber || ('Q'+(window.quizState.currentIndex+1)))}.</strong> ${escapeHtml(q.question)}`;
+      document.getElementById('questionText').innerHTML = html;
+      
+      // Options
+      const optContainer = document.getElementById('optionsContainer');
+      optContainer.innerHTML = '';
+      
+      q.options.forEach((opt, idx) => {
+        const btn = document.createElement('button');
+        btn.className = 'option-btn';
+        btn.innerHTML = `<span class="opt-badge">${String.fromCharCode(65+idx)}</span><span>${opt}</span>`;
+        
+        if (state.selected !== null) {
+          btn.disabled = true;
+          if (idx === state.selected && !state.isCorrect) btn.classList.add('option-wrong');
+          if (idx === q.correctOption) btn.classList.add('option-correct');
+          window.quizState.isAnswered = true;
+        }
+        
+        btn.addEventListener('click', function() {
+          handleOptionSelect(idx);
+        });
+        
+        optContainer.appendChild(btn);
       });
+      
+      // Dots
+      renderDots();
+      
+      // Score
+      document.getElementById('scoreDisplay').textContent = `${window.quizState.currentIndex+1}/${window.quizState.questions.length}`;
+      
+      // Mark button
+      updateMarkButton();
+      
+      // Scroll to top
+      document.getElementById('mainScroll').scrollTop = 0;
+      
+      saveProgress();
+    }
 
-      window.onload = ()=>{
-        document.getElementById('btn-study').classList.toggle('active', currentMode==='study');
-        document.getElementById('btn-mcqs').classList.toggle('active', currentMode==='mcqs');
-        loadProgress();
-        fetchQuestions();
-        setupSwipe();
+    function renderDots() {
+      const container = document.getElementById('dotsContainer');
+      container.innerHTML = '';
+      
+      window.quizState.questions.forEach((_, i) => {
+        const st = window.quizState.session[i] || {};
+        const dot = document.createElement('button');
+        dot.className = 'q-dot';
+        dot.textContent = i + 1;
+        
+        if (i === window.quizState.currentIndex) dot.classList.add('current');
+        if (st.selected !== null) dot.classList.add(st.isCorrect ? 'answered' : 'wrong');
+        if (st.marked) {
+          const marker = document.createElement('span');
+          marker.className = 'mark-indicator';
+          dot.appendChild(marker);
+        }
+        
+        dot.addEventListener('click', function() {
+          jumpToQuestion(i);
+        });
+        
+        container.appendChild(dot);
+      });
+    }
+
+    function updateMarkButton() {
+      const state = window.quizState.session[window.quizState.currentIndex] || {};
+      const btn = document.getElementById('markBtn');
+      if (state.marked) {
+        btn.innerHTML = '<i class="fa-solid fa-bookmark" style="color:#f59e0b;"></i>';
+      } else {
+        btn.innerHTML = '<i class="fa-regular fa-bookmark"></i>';
+      }
+    }
+
+    // ============ ACTIONS ============
+    function handleOptionSelect(idx) {
+      if (window.quizState.isAnswered) return;
+      
+      playBeep(400, 'sine', 0.08);
+      
+      // Remove previous selection
+      document.querySelectorAll('#optionsContainer .option-btn').forEach(b => b.classList.remove('option-selected'));
+      
+      // Highlight selection
+      const buttons = document.querySelectorAll('#optionsContainer .option-btn');
+      if (buttons[idx]) buttons[idx].classList.add('option-selected');
+      
+      window.quizState.selectedOption = idx;
+      
+      setTimeout(() => lockAnswer(idx), 500);
+    }
+
+    function lockAnswer(idx) {
+      if (window.quizState.isAnswered) return;
+      window.quizState.isAnswered = true;
+      
+      const q = window.quizState.questions[window.quizState.currentIndex];
+      const isCorrect = idx === q.correctOption;
+      
+      window.quizState.session[window.quizState.currentIndex] = {
+        selected: idx,
+        isCorrect: isCorrect,
+        marked: window.quizState.session[window.quizState.currentIndex]?.marked || false
       };
-    })();
+      
+      const buttons = document.querySelectorAll('#optionsContainer .option-btn');
+      buttons.forEach(b => b.disabled = true);
+      
+      if (buttons[idx]) buttons[idx].classList.remove('option-selected');
+      if (isCorrect) {
+        if (buttons[idx]) buttons[idx].classList.add('option-correct');
+        soundCorrect();
+      } else {
+        if (buttons[idx]) buttons[idx].classList.add('option-wrong');
+        if (buttons[q.correctOption]) buttons[q.correctOption].classList.add('option-correct');
+        soundWrong();
+      }
+      
+      renderDots();
+      saveProgress();
+      
+      setTimeout(() => showExplanation(isCorrect), 700);
+    }
+
+    function showExplanation(isCorrect) {
+      const q = window.quizState.questions[window.quizState.currentIndex];
+      document.getElementById('modalTitle').innerHTML = isCorrect ? '✅ Correct!' : '❌ Incorrect';
+      
+      let body = isCorrect ? 'Great job! You got it right.' : `Correct answer: <strong>${q.options[q.correctOption]}</strong>`;
+      if (q.explanation) body += `<br><br><small style="color:#64748b;">${q.explanation}</small>`;
+      
+      document.getElementById('modalBody').innerHTML = body;
+      document.getElementById('modalNextBtn').textContent = 
+        window.quizState.currentIndex >= window.quizState.questions.length - 1 ? 'Finish Quiz' : 'Next Question';
+      
+      document.getElementById('explanationModal').style.display = 'flex';
+    }
+
+    function nextQuestion() {
+      document.getElementById('explanationModal').style.display = 'none';
+      
+      if (window.quizState.currentIndex < window.quizState.questions.length - 1) {
+        window.quizState.currentIndex++;
+        renderQuestion();
+        checkToast();
+      } else {
+        finishQuiz();
+      }
+    }
+
+    function prevQuestion() {
+      document.getElementById('explanationModal').style.display = 'none';
+      if (window.quizState.currentIndex > 0) {
+        window.quizState.currentIndex--;
+        renderQuestion();
+      }
+    }
+
+    function jumpToQuestion(index) {
+      document.getElementById('explanationModal').style.display = 'none';
+      if (index >= 0 && index < window.quizState.questions.length) {
+        window.quizState.currentIndex = index;
+        renderQuestion();
+      }
+    }
+
+    function toggleMarkReview() {
+      const st = window.quizState.session[window.quizState.currentIndex] || { selected: null, marked: false };
+      st.marked = !st.marked;
+      window.quizState.session[window.quizState.currentIndex] = st;
+      updateMarkButton();
+      renderDots();
+      saveProgress();
+    }
+
+    function finishQuiz() {
+      document.getElementById('quizContent').style.display = 'none';
+      document.getElementById('endScreen').style.display = 'block';
+    }
+
+    function retakeQuiz() {
+      window.quizState.session = [];
+      window.quizState.currentIndex = 0;
+      window.quizState.isAnswered = false;
+      document.getElementById('quizContent').style.display = 'block';
+      document.getElementById('endScreen').style.display = 'none';
+      document.getElementById('explanationModal').style.display = 'none';
+      loadQuestions();
+    }
+
+    // ============ PALETTE ============
+    function togglePalette() {
+      const sheet = document.getElementById('paletteSheet');
+      if (sheet.style.display === 'none' || !sheet.style.display) {
+        renderPalette();
+        sheet.style.display = 'block';
+      } else {
+        sheet.style.display = 'none';
+      }
+    }
+
+    function renderPalette() {
+      const grid = document.getElementById('paletteGrid');
+      grid.innerHTML = '';
+      
+      window.quizState.questions.forEach((_, i) => {
+        const st = window.quizState.session[i] || {};
+        const btn = document.createElement('button');
+        btn.className = 'q-dot';
+        btn.textContent = i + 1;
+        btn.style.width = '100%';
+        
+        if (i === window.quizState.currentIndex) btn.classList.add('current');
+        if (st.selected !== null) btn.classList.add(st.isCorrect ? 'answered' : 'wrong');
+        if (st.marked) {
+          const m = document.createElement('span');
+          m.className = 'mark-indicator';
+          btn.appendChild(m);
+        }
+        
+        btn.addEventListener('click', function() {
+          jumpToQuestion(i);
+          togglePalette();
+        });
+        
+        grid.appendChild(btn);
+      });
+    }
+
+    // ============ REVISION ============
+    function openRevision() {
+      const sheet = document.getElementById('revisionSheet');
+      const list = document.getElementById('revisionList');
+      list.innerHTML = '';
+      
+      window.quizState.questions.forEach((q, i) => {
+        const st = window.quizState.session[i] || {};
+        const div = document.createElement('div');
+        div.style.cssText = 'padding:10px;border:1px solid #e2e8f0;border-radius:12px;background:white;cursor:pointer;';
+        div.innerHTML = `
+          <strong style="font-size:0.8rem;">Q${i+1}:</strong> ${escapeHtml(q.question.substring(0, 80))}...
+          <br><small style="color:#64748b;">Your: ${st.selected !== null ? q.options[st.selected] : 'Not answered'} | Correct: ${q.options[q.correctOption]}</small>
+        `;
+        div.addEventListener('click', function() {
+          jumpToQuestion(i);
+          closeRevision();
+        });
+        list.appendChild(div);
+      });
+      
+      sheet.style.display = 'block';
+    }
+
+    function closeRevision() {
+      document.getElementById('revisionSheet').style.display = 'none';
+    }
+
+    // ============ LIFELINES ============
+    function toggleLifeMenu() {
+      const menu = document.getElementById('lifeDropdown');
+      menu.style.display = menu.style.display === 'none' || !menu.style.display ? 'block' : 'none';
+    }
+
+    function use5050() {
+      toggleLifeMenu();
+      if (window.quizState.isAnswered) return;
+      
+      const q = window.quizState.questions[window.quizState.currentIndex];
+      const wrongIndices = q.options.map((_, i) => i).filter(i => i !== q.correctOption);
+      
+      // Shuffle and pick 2 to hide
+      wrongIndices.sort(() => Math.random() - 0.5);
+      const toHide = wrongIndices.slice(0, Math.min(2, wrongIndices.length));
+      
+      const buttons = document.querySelectorAll('#optionsContainer .option-btn');
+      toHide.forEach(i => {
+        if (buttons[i]) {
+          buttons[i].style.opacity = '0.2';
+          buttons[i].disabled = true;
+        }
+      });
+    }
+
+    function useAudiencePoll() {
+      toggleLifeMenu();
+      if (window.quizState.isAnswered) return;
+      const q = window.quizState.questions[window.quizState.currentIndex];
+      alert('📊 Audience Poll: Option ' + String.fromCharCode(65 + q.correctOption) + ' is leading!');
+    }
+
+    function useExpertAdvice() {
+      toggleLifeMenu();
+      if (window.quizState.isAnswered) return;
+      const q = window.quizState.questions[window.quizState.currentIndex];
+      alert('👔 Expert Advice: Go with Option ' + String.fromCharCode(65 + q.correctOption));
+    }
+
+    // ============ MODE SWITCH ============
+    function switchMode(mode) {
+      if (window.quizState.mode === mode) return;
+      window.quizState.mode = mode;
+      
+      document.getElementById('btnStudy').classList.toggle('active', mode === 'study');
+      document.getElementById('btnMcqs').classList.toggle('active', mode === 'mcqs');
+      
+      window.quizState.session = [];
+      window.quizState.currentIndex = 0;
+      document.getElementById('quizContent').style.display = 'block';
+      document.getElementById('endScreen').style.display = 'none';
+      
+      loadQuestions();
+    }
+
+    // ============ PERSISTENCE ============
+    function saveProgress() {
+      try {
+        localStorage.setItem('caAuditMode', window.quizState.mode);
+        localStorage.setItem('caAuditProgress', JSON.stringify({
+          mode: window.quizState.mode,
+          index: window.quizState.currentIndex,
+          session: window.quizState.session
+        }));
+      } catch(e) {}
+    }
+
+    function loadProgress() {
+      try {
+        const savedMode = localStorage.getItem('caAuditMode');
+        if (savedMode) {
+          window.quizState.mode = savedMode;
+          document.getElementById('btnStudy').classList.toggle('active', savedMode === 'study');
+          document.getElementById('btnMcqs').classList.toggle('active', savedMode === 'mcqs');
+        }
+        
+        const saved = localStorage.getItem('caAuditProgress');
+        if (saved) {
+          const data = JSON.parse(saved);
+          if (data.mode === window.quizState.mode) {
+            window.quizState.currentIndex = data.index || 0;
+            window.quizState.session = data.session || [];
+          }
+        }
+      } catch(e) {}
+    }
+
+    function checkToast() {
+      if (window.quizState.toastShown) return;
+      const attempted = window.quizState.session.filter(s => s.selected !== null).length;
+      if (attempted >= 20) {
+        const toast = document.getElementById('toast');
+        toast.classList.add('show');
+        window.quizState.toastShown = true;
+        setTimeout(() => toast.classList.remove('show'), 4000);
+      }
+    }
+
+    // ============ KEYBOARD & SWIPE ============
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'ArrowRight') nextQuestion();
+      if (e.key === 'ArrowLeft') prevQuestion();
+      if (e.key === 'Escape') {
+        document.getElementById('explanationModal').style.display = 'none';
+        document.getElementById('paletteSheet').style.display = 'none';
+        document.getElementById('revisionSheet').style.display = 'none';
+        document.getElementById('lifeDropdown').style.display = 'none';
+      }
+    });
+
+    // Close dropdown when clicking outside
+    document.addEventListener('click', function(e) {
+      const menu = document.getElementById('lifeDropdown');
+      if (menu.style.display === 'block' && !e.target.closest('#lifeDropdown') && !e.target.closest('[onclick="toggleLifeMenu()"]')) {
+        menu.style.display = 'none';
+      }
+    });
+
+    // ============ INIT ============
+    window.addEventListener('load', function() {
+      loadProgress();
+      loadQuestions();
+      
+      // Hide end screen initially
+      document.getElementById('endScreen').style.display = 'none';
+      document.getElementById('quizContent').style.display = 'block';
+    });
   </script>
 </body>
-                                                                                                                                                                                                             </html>
+            </html>
