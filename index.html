@@ -81,41 +81,127 @@
             box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
             overflow: hidden;
             background: var(--bg);
+            display: flex;
+            flex-direction: column;
         }
 
         body.desktop-view .header { margin: 16px 20px 0; padding: 14px 20px; }
-        body.desktop-view .bottom-nav { margin: 0 20px 16px; padding: 12px 20px; }
-        body.desktop-view .main-content { padding: 20px; }
+        body.desktop-view .bottom-nav { margin: 0 20px 20px; padding: 12px 20px; z-index: 10; }
         
-        body.desktop-view #quizArea.has-case {
+        body.desktop-view .main-content { 
+            padding: 24px 32px; 
             display: flex;
             flex-direction: row;
-            gap: 24px;
-            align-items: flex-start;
+            gap: 32px;
             height: 100%;
+            overflow: hidden; /* Manage scrolling inside children */
+        }
+        
+        body.desktop-view #quizArea {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            max-width: 850px; /* Constrain max width for comfortable reading */
+            margin: 0 auto;
+            height: 100%;
+            overflow-y: auto;
+            padding-right: 12px;
+            scrollbar-width: thin;
+        }
+
+        body.desktop-view #quizArea.has-case {
+            flex-direction: row;
+            max-width: 100%; /* Utilize full width for split view */
+            align-items: flex-start;
         }
 
         body.desktop-view #caseStudyContainer {
             flex: 1;
-            max-height: calc(100vh - 220px);
-            overflow-y: auto;
+            max-width: 50%;
             position: sticky;
             top: 0;
+            max-height: 100%;
+            overflow-y: auto;
+            padding-right: 16px;
+            scrollbar-width: thin;
         }
 
         body.desktop-view .case-study-box {
             max-height: none; 
             font-size: 0.95rem; 
             margin-bottom: 0;
+            padding: 24px;
+            line-height: 1.8;
         }
 
         body.desktop-view #questionAndOptionsContainer {
             flex: 1;
             display: flex;
             flex-direction: column;
-            max-width: 800px;
+            max-width: 800px; /* Line length constraint */
             margin: 0 auto;
+            width: 100%;
         }
+
+        /* Improved Typography for Desktop */
+        body.desktop-view .question-text {
+            font-size: 1.05rem;
+            line-height: 1.7;
+        }
+
+        body.desktop-view .option-btn {
+            font-size: 0.95rem;
+            padding: 14px 18px;
+        }
+
+        /* Desktop Sidebar for Question Palette */
+        .desktop-sidebar-wrapper { display: contents; } /* Transparent in mobile */
+        .desktop-sidebar-title { display: none; }
+        
+        body.desktop-view .desktop-sidebar-wrapper {
+            display: flex;
+            flex-direction: column;
+            width: 340px;
+            flex-shrink: 0;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 20px;
+            height: 100%;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+            animation: fadeIn 0.3s ease;
+        }
+
+        body.desktop-view .desktop-sidebar-title {
+            display: block;
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: var(--text);
+            margin-bottom: 16px;
+            padding-bottom: 12px;
+            border-bottom: 2px solid var(--border);
+            text-align: center;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body.desktop-view .dots-container {
+            flex: 1;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(42px, 1fr));
+            gap: 8px;
+            align-content: start;
+            overflow-y: auto;
+            padding: 4px;
+            margin-top: 0;
+            scrollbar-width: thin;
+        }
+
+        body.desktop-view .dots-container::-webkit-scrollbar { display: block; width: 6px; }
+        body.desktop-view .dots-container::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
+        
+        body.desktop-view #btnPalette { display: none; /* Hidden on desktop as it's always visible */ }
+        body.desktop-view #endScreen { margin: auto; width: 100%; }
 
         /* SCREENS */
         .screen { display: none; height: 100%; width: 100%; flex-direction: column; overflow-y: auto; padding-bottom: 20px;}
@@ -394,8 +480,11 @@
                     </div>
                 </div>
                 
-                <!-- Moved Dots outside the split layout so it spans full width below or stays fixed -->
-                <div class="dots-container" id="dotsDisplay"></div>
+                <!-- Desktop Sidebar Wrapper for Palette Grid -->
+                <div class="desktop-sidebar-wrapper" id="desktopSidebarWrapper">
+                    <h3 class="desktop-sidebar-title">📋 Question Palette</h3>
+                    <div class="dots-container" id="dotsDisplay"></div>
+                </div>
 
                 <div id="endScreen" style="display:none; text-align:center; padding:40px 16px; max-width: 500px; margin: 0 auto;">
                     <div style="font-size:4rem; margin-bottom:16px;">🏆</div>
@@ -688,8 +777,9 @@
                     }
 
                     switchScreen('quizScreen');
-                    document.getElementById('quizArea').style.display = 'block';
-                    document.getElementById('dotsDisplay').style.display = 'flex';
+                    document.getElementById('quizArea').style.display = '';
+                    document.getElementById('desktopSidebarWrapper').style.display = '';
+                    document.getElementById('dotsDisplay').style.display = ''; // Inherit CSS flex/grid
                     document.getElementById('endScreen').style.display = 'none';
                     
                     renderQuestion();
@@ -989,6 +1079,7 @@
 
             function showEndScreen() {
                 document.getElementById('quizArea').style.display = 'none';
+                document.getElementById('desktopSidebarWrapper').style.display = 'none';
                 document.getElementById('dotsDisplay').style.display = 'none';
                 document.getElementById('endScreen').style.display = 'block';
             }
@@ -998,8 +1089,9 @@
                     STATE.session = STATE.questions.map(() => ({ sel: null, ok: null, mark: false }));
                     STATE.currentIdx = 0;
                     saveProgress();
-                    document.getElementById('quizArea').style.display = 'block';
-                    document.getElementById('dotsDisplay').style.display = 'flex';
+                    document.getElementById('quizArea').style.display = '';
+                    document.getElementById('desktopSidebarWrapper').style.display = '';
+                    document.getElementById('dotsDisplay').style.display = ''; // Inherit CSS flex/grid
                     document.getElementById('endScreen').style.display = 'none';
                     renderQuestion();
                 }
