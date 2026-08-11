@@ -7,7 +7,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@500;600;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap');
 
         :root {
             --bg: #f1f5f9;
@@ -35,8 +35,7 @@
             -webkit-tap-highlight-color: transparent;
         }
 
-        html,
-        body {
+        html, body {
             height: 100%;
             overflow: hidden;
             font-family: 'Inter', sans-serif;
@@ -44,6 +43,12 @@
             color: var(--text);
             user-select: none;
             -webkit-user-select: none;
+        }
+
+        /* Allow selection in reader mode */
+        .reader-content, .case-study-box {
+            user-select: text;
+            -webkit-user-select: text;
         }
 
         .app-container {
@@ -56,841 +61,307 @@
             position: relative;
         }
 
+        /* SCREENS */
+        .screen { display: none; height: 100%; width: 100%; flex-direction: column; overflow-y: auto; padding-bottom: 20px;}
+        .screen.active { display: flex; }
+
+        /* WELCOME SCREEN */
+        .welcome-header { padding: 40px 20px 20px; text-align: center; background: linear-gradient(135deg, #1e3a8a, #2563eb); color: white; border-radius: 0 0 30px 30px; box-shadow: 0 10px 25px rgba(37, 99, 235, 0.2); margin-bottom: 24px;}
+        .welcome-header h1 { font-family: 'Poppins', sans-serif; font-size: 1.8rem; font-weight: 800; line-height: 1.2; margin-bottom: 8px;}
+        .welcome-header p { font-size: 0.9rem; opacity: 0.9; }
+        
+        .mode-cards { padding: 0 20px; display: flex; flex-direction: column; gap: 12px; }
+        .mode-card { background: var(--surface); border: 2px solid var(--border); border-radius: 20px; padding: 20px; cursor: pointer; transition: all 0.2s; display: flex; align-items: center; gap: 16px; position: relative; overflow: hidden; }
+        .mode-card:active { transform: scale(0.97); }
+        .mode-card.easy { border-color: #a7f3d0; background: #ecfdf5; }
+        .mode-card.medium { border-color: #bfdbfe; background: #eff6ff; }
+        .mode-card.hard { border-color: #fca5a5; background: #fef2f2; }
+        .mode-icon { width: 50px; height: 50px; border-radius: 14px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; color: white; flex-shrink: 0; }
+        .easy .mode-icon { background: #10b981; }
+        .medium .mode-icon { background: #3b82f6; }
+        .hard .mode-icon { background: #ef4444; }
+        .mode-text h3 { font-family: 'Poppins', sans-serif; font-size: 1.1rem; font-weight: 700; color: #1e293b; margin-bottom: 4px;}
+        .mode-text p { font-size: 0.8rem; color: var(--text-secondary); line-height: 1.4; }
+
+        .tools-section { padding: 24px 20px; display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+        .tool-btn { background: white; border: 1px solid var(--border); border-radius: 14px; padding: 16px; text-align: center; cursor: pointer; transition: 0.2s; box-shadow: 0 2px 5px rgba(0,0,0,0.02); }
+        .tool-btn:active { transform: scale(0.95); background: #f8fafc; }
+        .tool-btn i { font-size: 1.5rem; margin-bottom: 8px; color: var(--primary); }
+        .tool-btn h4 { font-size: 0.85rem; font-weight: 600; color: var(--text); }
+
         /* HEADER */
-        .header {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 10px 14px;
-            margin: 8px 10px 0;
-            background: var(--surface);
-            border-radius: 16px;
-            border: 1px solid var(--border);
-            flex-shrink: 0;
-            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
-        }
-
-        .header-left {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .logo {
-            width: 36px;
-            height: 36px;
-            border-radius: 10px;
-            background: var(--primary-light);
-            border: 2px solid #93c5fd;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--primary);
-            font-weight: 800;
-            font-size: 0.85rem;
-            flex-shrink: 0;
-        }
-
-        .header-title h2 {
-            font-size: 0.9rem;
-            font-weight: 700;
-            color: var(--text);
-            line-height: 1.2;
-            font-family: 'Poppins', sans-serif;
-        }
-
-        .header-title p {
-            font-size: 0.65rem;
-            color: var(--text-secondary);
-        }
-
-        .header-actions {
-            display: flex;
-            gap: 8px;
-        }
-
-        .icon-btn {
-            width: 38px;
-            height: 38px;
-            border-radius: 10px;
-            border: 1.5px solid var(--border);
-            background: #f8fafc;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            font-size: 0.85rem;
-            color: var(--text-secondary);
-            transition: all 0.2s;
-            position: relative;
-        }
-
-        .icon-btn:active {
-            transform: scale(0.94);
-            background: #e2e8f0;
-        }
-
-        .icon-btn.lifeline {
-            background: #eff6ff;
-            border-color: #93c5fd;
-            color: var(--primary);
-        }
-
-        .icon-btn.retake {
-            background: #fef2f2;
-            border-color: #fca5a5;
-            color: #ef4444;
-        }
-
-        /* MODE TABS */
-        .mode-tabs {
-            display: flex;
-            align-items: center;
-            gap: 4px;
-            margin: 8px 10px;
-            background: var(--surface);
-            border-radius: 30px;
-            padding: 4px;
-            border: 1px solid var(--border);
-            flex-shrink: 0;
-            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
-        }
-
-        .tab-btn {
-            flex: 1;
-            padding: 9px 12px;
-            border: none;
-            border-radius: 30px;
-            background: transparent;
-            font-size: 0.78rem;
-            font-weight: 600;
-            color: var(--text-secondary);
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 6px;
-            transition: all 0.25s;
-        }
-
-        .tab-btn.active {
-            background: var(--primary);
-            color: white;
-            box-shadow: 0 2px 8px rgba(37, 99, 235, 0.3);
-        }
-
-        .bookmark-btn {
-            width: 38px;
-            height: 38px;
-            border: none;
-            background: none;
-            cursor: pointer;
-            font-size: 1.2rem;
-            padding: 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-shrink: 0;
-            transition: transform 0.2s;
-        }
-
-        .bookmark-btn:active {
-            transform: scale(1.3);
-        }
+        .header { display: flex; align-items: center; justify-content: space-between; padding: 10px 14px; margin: 8px 10px 0; background: var(--surface); border-radius: 16px; border: 1px solid var(--border); flex-shrink: 0; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05); }
+        .header-left { display: flex; align-items: center; gap: 10px; }
+        .home-btn { width: 36px; height: 36px; border-radius: 10px; background: #f1f5f9; border: 1.5px solid var(--border); display: flex; align-items: center; justify-content: center; color: var(--text-secondary); cursor: pointer; font-size: 0.9rem; transition: 0.2s;}
+        .home-btn:active { transform: scale(0.9); background: #e2e8f0; }
+        .header-title h2 { font-size: 0.9rem; font-weight: 700; color: var(--text); line-height: 1.2; font-family: 'Poppins', sans-serif; }
+        .header-title p { font-size: 0.65rem; color: var(--text-secondary); text-transform: uppercase; font-weight: 600; letter-spacing: 0.5px;}
+        
+        .header-actions { display: flex; gap: 8px; }
+        .icon-btn { width: 38px; height: 38px; border-radius: 10px; border: 1.5px solid var(--border); background: #f8fafc; display: flex; align-items: center; justify-content: center; cursor: pointer; font-size: 0.85rem; color: var(--text-secondary); transition: all 0.2s; position: relative; }
+        .icon-btn:active { transform: scale(0.94); background: #e2e8f0; }
+        .icon-btn.lifeline { background: #eff6ff; border-color: #93c5fd; color: var(--primary); }
+        .icon-btn.retake { background: #fef2f2; border-color: #fca5a5; color: #ef4444; }
 
         /* MAIN CONTENT */
-        .main-content {
-            flex: 1;
-            overflow-y: auto;
-            -webkit-overflow-scrolling: touch;
-            padding: 6px 10px;
-            min-height: 0;
-        }
+        .main-content { flex: 1; overflow-y: auto; -webkit-overflow-scrolling: touch; padding: 10px; min-height: 0; }
 
         /* CASE STUDY BOX */
-        .case-study-box {
-            background: #f8fafc;
-            border: 1px solid var(--border);
-            border-radius: 12px;
-            padding: 12px 14px;
-            margin-bottom: 12px;
-            font-size: 0.82rem;
-            line-height: 1.6;
-            max-height: 28vh;
-            overflow-y: auto;
-            color: #334155;
-            position: relative;
-        }
-
-        .case-study-box .case-label {
-            color: var(--primary);
-            font-weight: 700;
-            font-size: 0.7rem;
-            text-transform: uppercase;
-            margin-bottom: 6px;
-            letter-spacing: 0.5px;
-        }
-
-        .expand-btn {
-            position: absolute;
-            top: 8px;
-            right: 8px;
-            width: 30px;
-            height: 30px;
-            border-radius: 8px;
-            border: 1px solid var(--border);
-            background: white;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 0.8rem;
-            color: var(--text-secondary);
-            z-index: 5;
-        }
-
-        .expand-btn:active {
-            background: #f1f5f9;
-        }
+        .case-study-box { background: #f8fafc; border: 1px solid var(--border); border-radius: 12px; padding: 12px 14px; margin-bottom: 12px; font-size: 0.85rem; line-height: 1.6; max-height: 25vh; overflow-y: auto; color: #334155; position: relative; border-left: 4px solid var(--primary); cursor: pointer; transition: 0.2s;}
+        .case-study-box:active { background: #f1f5f9; }
+        .case-study-box .case-label { color: var(--primary); font-weight: 700; font-size: 0.7rem; text-transform: uppercase; margin-bottom: 6px; letter-spacing: 0.5px; }
+        .expand-btn { position: absolute; top: 8px; right: 8px; width: 30px; height: 30px; border-radius: 8px; border: 1px solid var(--border); background: white; cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 0.8rem; color: var(--text-secondary); z-index: 5; pointer-events: none;}
 
         /* QUESTION CARD */
-        .question-card {
-            background: var(--surface);
-            border: 1px solid var(--border);
-            border-radius: 14px;
-            padding: 14px;
-            margin-bottom: 10px;
-            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
-        }
-
-        .question-text {
-            font-size: 0.88rem;
-            line-height: 1.6;
-            color: var(--text);
-            position: relative;
-        }
-
-        .question-text .q-number {
-            color: var(--primary);
-            font-weight: 700;
-            font-size: 0.85rem;
-        }
-
-        .question-expand-btn {
-            position: absolute;
-            top: 0;
-            right: 0;
-            width: 28px;
-            height: 28px;
-            border-radius: 6px;
-            border: 1px solid var(--border);
-            background: #f8fafc;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 0.7rem;
-            color: var(--text-secondary);
-        }
+        .question-card { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 14px; margin-bottom: 10px; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04); position: relative; }
+        .question-text { font-size: 0.9rem; line-height: 1.6; color: var(--text); padding-right: 30px; }
+        .question-text .q-number { color: var(--primary); font-weight: 700; font-size: 0.85rem; }
+        .question-expand-btn { position: absolute; top: 10px; right: 10px; width: 28px; height: 28px; border-radius: 6px; border: 1px solid var(--border); background: #f8fafc; cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 0.7rem; color: var(--text-secondary); transition: 0.2s;}
+        .question-expand-btn:active { background: #e2e8f0; transform: scale(0.9); }
 
         /* OPTIONS */
-        .options-list {
-            display: flex;
-            flex-direction: column;
-            gap: 8px;
-        }
+        .options-list { display: flex; flex-direction: column; gap: 8px; }
+        .option-btn { display: flex; align-items: flex-start; gap: 10px; width: 100%; padding: 12px 14px; background: var(--surface); border: 2px solid var(--border); border-radius: 12px; font-size: 0.88rem; cursor: pointer; text-align: left; transition: all 0.2s; line-height: 1.45; position: relative; }
+        .option-btn:active:not(:disabled) { transform: scale(0.97); border-color: var(--primary); }
+        .option-letter { width: 32px; height: 32px; border-radius: 8px; background: #f1f5f9; border: 1.5px solid var(--border); display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.8rem; flex-shrink: 0; color: var(--text-secondary); transition: all 0.2s; }
+        
+        .option-btn.correct { border-color: var(--correct) !important; background: var(--correct-bg) !important; animation: pulse-green 0.5s ease; }
+        .option-btn.correct .option-letter { background: #a7f3d0; border-color: var(--correct); color: var(--correct); }
+        .option-btn.wrong { border-color: var(--wrong) !important; background: var(--wrong-bg) !important; animation: shake 0.5s ease; }
+        .option-btn.wrong .option-letter { background: #fecaca; border-color: var(--wrong); color: var(--wrong); }
+        .option-btn.selected { border-color: var(--marked) !important; background: var(--marked-bg) !important; box-shadow: 0 0 0 3px rgba(217, 119, 6, 0.15); }
+        .option-btn.selected .option-letter { background: #fde68a; border-color: var(--marked); color: #92400e; }
+        .option-btn:disabled { cursor: default; opacity: 0.9; }
 
-        .option-btn {
-            display: flex;
-            align-items: flex-start;
-            gap: 10px;
-            width: 100%;
-            padding: 12px 14px;
-            background: var(--surface);
-            border: 2px solid var(--border);
-            border-radius: 12px;
-            font-size: 0.85rem;
-            cursor: pointer;
-            text-align: left;
-            transition: all 0.2s;
-            line-height: 1.45;
-            position: relative;
-        }
-
-        .option-btn:active:not(:disabled) {
-            transform: scale(0.97);
-            border-color: var(--primary);
-        }
-
-        .option-letter {
-            width: 32px;
-            height: 32px;
-            border-radius: 8px;
-            background: #f1f5f9;
-            border: 1.5px solid var(--border);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: 700;
-            font-size: 0.8rem;
-            flex-shrink: 0;
-            color: var(--text-secondary);
-            transition: all 0.2s;
-        }
-
-        .option-btn.correct {
-            border-color: var(--correct) !important;
-            background: var(--correct-bg) !important;
-            animation: pulse-green 0.5s ease;
-        }
-
-        .option-btn.correct .option-letter {
-            background: #a7f3d0;
-            border-color: var(--correct);
-            color: var(--correct);
-        }
-
-        .option-btn.wrong {
-            border-color: var(--wrong) !important;
-            background: var(--wrong-bg) !important;
-            animation: shake 0.5s ease;
-        }
-
-        .option-btn.wrong .option-letter {
-            background: #fecaca;
-            border-color: var(--wrong);
-            color: var(--wrong);
-        }
-
-        .option-btn.selected {
-            border-color: var(--marked) !important;
-            background: var(--marked-bg) !important;
-            box-shadow: 0 0 0 3px rgba(217, 119, 6, 0.15);
-        }
-
-        .option-btn.selected .option-letter {
-            background: #fde68a;
-            border-color: var(--marked);
-            color: #92400e;
-        }
-
-        .option-btn:disabled {
-            cursor: default;
-            opacity: 0.85;
-        }
-
-        @keyframes pulse-green {
-            0%,
-            100% {
-                transform: scale(1);
-            }
-            50% {
-                transform: scale(1.02);
-            }
-        }
-
-        @keyframes shake {
-            0%,
-            100% {
-                transform: translateX(0);
-            }
-            25% {
-                transform: translateX(-5px);
-            }
-            75% {
-                transform: translateX(5px);
-            }
-        }
+        @keyframes pulse-green { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.02); } }
+        @keyframes shake { 0%, 100% { transform: translateX(0); } 25% { transform: translateX(-5px); } 75% { transform: translateX(5px); } }
 
         /* DOTS NAVIGATION */
-        .dots-container {
-            display: flex;
-            gap: 7px;
-            overflow-x: auto;
-            padding: 10px 2px;
-            -webkit-overflow-scrolling: touch;
-            scrollbar-width: none;
-        }
-
-        .dots-container::-webkit-scrollbar {
-            display: none;
-        }
-
-        .dot-btn {
-            min-width: 40px;
-            width: 40px;
-            height: 40px;
-            border-radius: 10px;
-            border: 2px solid var(--border);
-            background: var(--surface);
-            font-size: 0.75rem;
-            font-weight: 700;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-shrink: 0;
-            cursor: pointer;
-            position: relative;
-            color: var(--text-secondary);
-            transition: all 0.2s;
-        }
-
-        .dot-btn:active {
-            transform: scale(0.9);
-        }
-
-        .dot-btn.current {
-            border-color: var(--primary);
-            background: #eff6ff;
-            color: var(--primary);
-            box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.2);
-            transform: scale(1.08);
-        }
-
-        .dot-btn.correct-answer {
-            background: #d1fae5 !important;
-            border-color: #059669 !important;
-            color: #065f46 !important;
-        }
-
-        .dot-btn.wrong-answer {
-            background: #fee2e2 !important;
-            border-color: #dc2626 !important;
-            color: #991b1b !important;
-        }
-
-        .dot-btn.attempted {
-            background: #dbeafe !important;
-            border-color: #3b82f6 !important;
-            color: #1e40af !important;
-        }
-
-        .dot-btn.unattempted {
-            background: #ffffff !important;
-            border-color: #cbd5e1 !important;
-            color: #94a3b8 !important;
-        }
-
-        .bookmark-indicator {
-            position: absolute;
-            top: -4px;
-            right: -4px;
-            width: 12px;
-            height: 12px;
-            background: var(--marked);
-            border-radius: 50%;
-            border: 2px solid white;
-            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
-        }
+        .dots-container { display: flex; gap: 7px; overflow-x: auto; padding: 12px 2px; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
+        .dots-container::-webkit-scrollbar { display: none; }
+        .dot-btn { min-width: 40px; width: 40px; height: 40px; border-radius: 10px; border: 2px solid var(--border); background: var(--surface); font-size: 0.75rem; font-weight: 700; display: flex; align-items: center; justify-content: center; flex-shrink: 0; cursor: pointer; position: relative; color: var(--text-secondary); transition: all 0.2s; }
+        .dot-btn:active { transform: scale(0.9); }
+        .dot-btn.current { border-color: var(--primary); background: #eff6ff; color: var(--primary); box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.2); transform: scale(1.08); }
+        .dot-btn.correct-answer { background: #d1fae5 !important; border-color: #059669 !important; color: #065f46 !important; }
+        .dot-btn.wrong-answer { background: #fee2e2 !important; border-color: #dc2626 !important; color: #991b1b !important; }
+        .dot-btn.attempted { background: #dbeafe !important; border-color: #3b82f6 !important; color: #1e40af !important; }
+        .bookmark-indicator { position: absolute; top: -4px; right: -4px; width: 12px; height: 12px; background: var(--marked); border-radius: 50%; border: 2px solid white; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2); }
 
         /* BOTTOM NAV */
-        .bottom-nav {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 6px;
-            padding: 8px 10px;
-            margin: 0 10px 10px;
-            background: var(--surface);
-            border-radius: 16px;
-            border: 1px solid var(--border);
-            flex-shrink: 0;
-            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
-        }
-
-        .nav-btn {
-            width: 42px;
-            height: 42px;
-            border-radius: 10px;
-            border: 1.5px solid var(--border);
-            background: #f8fafc;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            font-size: 0.95rem;
-            color: var(--text-secondary);
-            transition: all 0.2s;
-            flex-shrink: 0;
-        }
-
-        .nav-btn:active {
-            background: #e2e8f0;
-            transform: scale(0.93);
-        }
-
-        .nav-btn.next-btn {
-            background: var(--primary);
-            color: white;
-            border-color: var(--primary);
-            font-size: 1rem;
-        }
-
-        .nav-btn.next-btn:active {
-            background: #1d4ed8;
-        }
-
-        .score-badge {
-            font-size: 0.8rem;
-            font-weight: 700;
-            color: var(--primary);
-            background: #eff6ff;
-            padding: 8px 14px;
-            border-radius: 10px;
-            border: 1.5px solid #bfdbfe;
-            white-space: nowrap;
-            letter-spacing: 0.3px;
-        }
+        .bottom-nav { display: flex; align-items: center; justify-content: space-between; gap: 6px; padding: 8px 10px; margin: 0 10px 10px; background: var(--surface); border-radius: 16px; border: 1px solid var(--border); flex-shrink: 0; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05); }
+        .nav-btn { width: 42px; height: 42px; border-radius: 10px; border: 1.5px solid var(--border); background: #f8fafc; display: flex; align-items: center; justify-content: center; cursor: pointer; font-size: 0.95rem; color: var(--text-secondary); transition: all 0.2s; flex-shrink: 0; }
+        .nav-btn:active { background: #e2e8f0; transform: scale(0.93); }
+        .nav-btn.next-btn { background: var(--primary); color: white; border-color: var(--primary); font-size: 1rem; }
+        .nav-btn.next-btn:active { background: #1d4ed8; }
+        .score-badge { font-size: 0.85rem; font-weight: 700; color: var(--primary); background: #eff6ff; padding: 8px 14px; border-radius: 10px; border: 1.5px solid #bfdbfe; white-space: nowrap; }
 
         /* MODALS & SHEETS */
-        .modal-overlay {
-            position: fixed;
-            inset: 0;
-            background: rgba(15, 23, 42, 0.6);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            z-index: 200;
-            padding: 20px;
-        }
-
-        .modal-card {
-            background: white;
-            border-radius: 20px;
-            padding: 24px;
-            max-width: 360px;
-            width: 100%;
-            text-align: center;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
-        }
-
-        .modal-card h3 {
-            font-size: 1.2rem;
-            font-weight: 700;
-            margin-bottom: 10px;
-        }
-
-        .modal-card .modal-body {
-            font-size: 0.85rem;
-            color: var(--text-secondary);
-            margin-bottom: 18px;
-            line-height: 1.5;
-            text-align: left;
-            background: #f8fafc;
-            padding: 12px;
-            border-radius: 10px;
-            border: 1px solid var(--border);
-        }
-
-        .modal-card button {
-            width: 100%;
-            padding: 13px;
-            background: var(--primary);
-            color: white;
-            border: none;
-            border-radius: 12px;
-            font-weight: 600;
-            font-size: 0.9rem;
-            cursor: pointer;
-        }
-
-        .modal-card button:active {
-            background: #1d4ed8;
-        }
+        .modal-overlay { position: fixed; inset: 0; background: rgba(15, 23, 42, 0.7); display: flex; align-items: center; justify-content: center; z-index: 200; padding: 20px; backdrop-filter: blur(4px); }
+        .modal-card { background: white; border-radius: 20px; padding: 24px; max-width: 380px; width: 100%; text-align: center; box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2); max-height: 90vh; overflow-y: auto; }
+        .modal-card h3 { font-size: 1.25rem; font-weight: 800; margin-bottom: 12px; }
+        .modal-card .modal-body { font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 20px; line-height: 1.6; text-align: left; background: #f8fafc; padding: 16px; border-radius: 12px; border: 1px solid var(--border); }
+        .modal-card button { width: 100%; padding: 14px; background: var(--primary); color: white; border: none; border-radius: 12px; font-weight: 600; font-size: 0.95rem; cursor: pointer; }
+        .modal-card button:active { background: #1d4ed8; transform: scale(0.98); }
 
         /* BOTTOM SHEET */
-        .bottom-sheet {
-            position: fixed;
-            inset: 0;
-            top: auto;
-            background: white;
-            border-radius: 24px 24px 0 0;
-            max-height: 80vh;
-            overflow-y: auto;
-            z-index: 180;
-            padding: 20px;
-            box-shadow: 0 -8px 40px rgba(0, 0, 0, 0.15);
-        }
-
-        .sheet-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 16px;
-            position: sticky;
-            top: 0;
-            background: white;
-            padding-bottom: 12px;
-            z-index: 1;
-            border-bottom: 1px solid var(--border);
-        }
-
-        .sheet-header h3 {
-            font-size: 1.15rem;
-            font-weight: 700;
-        }
-
-        .close-btn {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            border: 1.5px solid var(--border);
-            background: #f8fafc;
-            font-size: 1.4rem;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--text-secondary);
-            transition: all 0.2s;
-        }
-
-        .close-btn:active {
-            background: #fee2e2;
-            color: #ef4444;
-            border-color: #fca5a5;
-        }
+        .bottom-sheet { position: fixed; inset: 0; top: auto; background: white; border-radius: 24px 24px 0 0; max-height: 85vh; overflow-y: auto; z-index: 180; padding: 20px; box-shadow: 0 -8px 40px rgba(0, 0, 0, 0.15); transform: translateY(100%); transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1); }
+        .bottom-sheet.show { transform: translateY(0); }
+        .sheet-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; position: sticky; top: 0; background: white; padding-bottom: 12px; z-index: 1; border-bottom: 1px solid var(--border); }
+        .sheet-header h3 { font-size: 1.15rem; font-weight: 700; font-family: 'Poppins', sans-serif;}
+        .close-btn { width: 40px; height: 40px; border-radius: 50%; border: 1.5px solid var(--border); background: #f8fafc; font-size: 1.4rem; cursor: pointer; display: flex; align-items: center; justify-content: center; color: var(--text-secondary); transition: all 0.2s; }
+        .close-btn:active { background: #fee2e2; color: #ef4444; border-color: #fca5a5; transform: scale(0.9); }
 
         /* PALETTE LEGEND */
-        .palette-legend {
-            display: flex;
-            gap: 12px;
-            flex-wrap: wrap;
-            margin-top: 16px;
-            padding: 12px;
-            background: #f8fafc;
-            border-radius: 10px;
-            font-size: 0.7rem;
-            color: var(--text-secondary);
-            border: 1px solid var(--border);
-        }
-
-        .legend-item {
-            display: flex;
-            align-items: center;
-            gap: 6px;
-        }
-
-        .legend-dot {
-            width: 16px;
-            height: 16px;
-            border-radius: 4px;
-            border: 1.5px solid;
-        }
-
-        .legend-dot.green {
-            background: #d1fae5;
-            border-color: #059669;
-        }
-        .legend-dot.red {
-            background: #fee2e2;
-            border-color: #dc2626;
-        }
-        .legend-dot.yellow {
-            background: #fef3c7;
-            border-color: #d97706;
-        }
-        .legend-dot.blue {
-            background: #dbeafe;
-            border-color: #3b82f6;
-        }
-        .legend-dot.gray {
-            background: #ffffff;
-            border-color: #cbd5e1;
-        }
+        .palette-legend { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 16px; padding: 12px; background: #f8fafc; border-radius: 10px; font-size: 0.75rem; color: var(--text-secondary); border: 1px solid var(--border); }
+        .legend-item { display: flex; align-items: center; gap: 6px; font-weight: 500;}
+        .legend-dot { width: 16px; height: 16px; border-radius: 4px; border: 1.5px solid; }
+        .legend-dot.green { background: #d1fae5; border-color: #059669; }
+        .legend-dot.red { background: #fee2e2; border-color: #dc2626; }
+        .legend-dot.yellow { background: #fef3c7; border-color: #d97706; }
+        .legend-dot.blue { background: #dbeafe; border-color: #3b82f6; }
+        .legend-dot.gray { background: #ffffff; border-color: #cbd5e1; }
 
         /* FULLSCREEN READER */
-        .fullscreen-reader {
-            position: fixed;
-            inset: 0;
-            background: white;
-            z-index: 250;
-            display: flex;
-            flex-direction: column;
-            padding: 16px;
-        }
-
-        .fullscreen-reader .reader-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding-bottom: 12px;
-            border-bottom: 1px solid var(--border);
-            margin-bottom: 16px;
-        }
-
-        .fullscreen-reader .reader-content {
-            flex: 1;
-            overflow-y: auto;
-            font-size: 0.9rem;
-            line-height: 1.7;
-            padding: 8px;
-        }
+        .fullscreen-reader { position: fixed; inset: 0; background: white; z-index: 250; display: none; flex-direction: column; padding: 16px; animation: fadeIn 0.2s ease;}
+        .fullscreen-reader .reader-header { display: flex; justify-content: space-between; align-items: center; padding-bottom: 12px; border-bottom: 1px solid var(--border); margin-bottom: 16px; }
+        .fullscreen-reader .reader-content { flex: 1; overflow-y: auto; font-size: 0.95rem; line-height: 1.7; padding: 8px; color: #1e293b; }
+        @keyframes fadeIn { from{opacity:0;} to{opacity:1;} }
 
         /* LIFELINE DROPDOWN */
-        .lifeline-dropdown {
-            display: none;
-            position: fixed;
-            top: 65px;
-            right: 16px;
-            background: white;
-            border: 1px solid var(--border);
-            border-radius: 14px;
-            padding: 8px;
-            z-index: 220;
-            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
-            min-width: 150px;
-        }
+        .lifeline-dropdown { display: none; position: absolute; top: 65px; right: 16px; background: white; border: 1px solid var(--border); border-radius: 14px; padding: 8px; z-index: 220; box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15); min-width: 170px; }
+        .lifeline-dropdown button { display: flex; align-items: center; gap: 10px; width: 100%; padding: 12px 14px; border: none; background: none; font-size: 0.85rem; cursor: pointer; text-align: left; border-radius: 8px; font-weight: 600; color: #334155; transition: background 0.15s; }
+        .lifeline-dropdown button:active { background: #f1f5f9; }
 
-        .lifeline-dropdown button {
-            display: block;
-            width: 100%;
-            padding: 10px 14px;
-            border: none;
-            background: none;
-            font-size: 0.8rem;
-            cursor: pointer;
-            text-align: left;
-            border-radius: 8px;
-            font-weight: 500;
-            color: #334155;
-            transition: background 0.15s;
-        }
+        /* ANALYTICS */
+        .stat-box { background: white; border: 1px solid var(--border); border-radius: 16px; padding: 16px; text-align: center; }
+        .stat-val { font-size: 1.8rem; font-weight: 800; font-family: 'Poppins', sans-serif; margin-bottom: 4px; }
+        .stat-label { font-size: 0.75rem; color: var(--text-secondary); text-transform: uppercase; font-weight: 600; letter-spacing: 0.5px;}
 
-        .lifeline-dropdown button:active {
-            background: #f1f5f9;
-        }
+        /* LOADER */
+        .loader-overlay { position: fixed; inset: 0; background: rgba(255,255,255,0.9); z-index: 999; display: flex; flex-direction: column; align-items: center; justify-content: center; display: none;}
+        .spinner { width: 40px; height: 40px; border: 4px solid var(--primary-light); border-top: 4px solid var(--primary); border-radius: 50%; animation: spin 1s linear infinite; margin-bottom: 16px; }
+        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
 
-        /* TOAST */
-        .toast {
-            position: fixed;
-            bottom: 110px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: #0f172a;
-            color: white;
-            padding: 10px 22px;
-            border-radius: 30px;
-            font-size: 0.72rem;
-            font-weight: 600;
-            z-index: 300;
-            opacity: 0;
-            pointer-events: none;
-            transition: opacity 0.4s;
-            white-space: nowrap;
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
-        }
-
-        .toast.show {
-            opacity: 1;
-        }
-
-        @media (max-width: 380px) {
-            .tab-btn {
-                font-size: 0.7rem;
-                padding: 8px 8px;
-            }
-            .option-btn {
-                font-size: 0.8rem;
-                padding: 10px 12px;
-            }
-            .dot-btn {
-                min-width: 36px;
-                width: 36px;
-                height: 36px;
-                font-size: 0.7rem;
-            }
-        }
     </style>
 </head>
 <body>
 
-    <!-- TOAST -->
-    <div id="toast" class="toast">❤️ Enjoying the app? Subscribe to Satyam's YouTube!</div>
+    <input type="file" id="importFile" accept=".json" style="display: none;" />
 
-    <!-- APP CONTAINER -->
-    <div class="app-container" id="appContainer">
-
-        <!-- HEADER -->
-        <div class="header">
-            <div class="header-left">
-                <div class="logo">CA</div>
-                <div class="header-title">
-                    <h2>FINAL AUDIT</h2>
-                    <p>Pro Simulator</p>
-                </div>
-            </div>
-            <div class="header-actions">
-                <button class="icon-btn lifeline" id="lifelineBtn" title="Lifelines">
-                    <i class="fa-solid fa-wand-magic-sparkles"></i>
-                </button>
-                <button class="icon-btn retake" title="Retake Quiz">
-                    <i class="fa-solid fa-rotate-right"></i>
-                </button>
-            </div>
-        </div>
-
-        <!-- LIFELINE DROPDOWN -->
-        <div id="lifelineDropdown" class="lifeline-dropdown">
-            <button id="btn5050">🎯 50:50</button>
-            <button id="btnPoll">📊 Audience Poll</button>
-            <button id="btnExpert">👔 Expert Advice</button>
-        </div>
-
-        <!-- MODE TABS -->
-        <div class="mode-tabs">
-            <button id="tabStudy" class="tab-btn active">
-                <i class="fa-solid fa-book-open"></i> Direct MCQs
-            </button>
-            <button id="tabCases" class="tab-btn">
-                <i class="fa-solid fa-briefcase"></i> Case Studies
-            </button>
-            <button class="bookmark-btn" id="bookmarkBtn" title="Mark for review">
-                <i class="fa-regular fa-bookmark" id="bookmarkIcon" style="color:#94a3b8;"></i>
-            </button>
-        </div>
-
-        <!-- MAIN CONTENT -->
-        <div class="main-content" id="mainContent">
-            <div id="quizArea">
-                <div class="question-card">
-                    <div id="questionDisplay" style="position:relative;"></div>
-                </div>
-                <div class="options-list" id="optionsDisplay"></div>
-                <div class="dots-container" id="dotsDisplay"></div>
-            </div>
-            <div id="endScreen" style="display:none;text-align:center;padding:40px 16px;">
-                <div style="font-size:4rem;">🏆</div>
-                <h2 style="font-size:1.5rem;font-weight:700;margin:12px 0;">Quiz Completed!</h2>
-                <p style="color:#64748b;margin-bottom:20px;">You've attempted all questions.</p>
-                <a href="https://youtube.com/@observe_with_satyam" target="_blank" style="display:inline-block;padding:12px 28px;background:#ef4444;color:white;border-radius:30px;text-decoration:none;font-weight:600;font-size:0.85rem;margin-bottom:12px;">
-                    <i class="fab fa-youtube"></i> Subscribe
-                </a>
-                <br>
-                <button style="padding:10px 24px;border:1px solid #e2e8f0;border-radius:30px;background:white;font-weight:600;font-size:0.8rem;cursor:pointer;">
-                    <i class="fa-solid fa-rotate-right"></i> Retake
-                </button>
-            </div>
-        </div>
-
-        <!-- BOTTOM NAV -->
-        <div class="bottom-nav">
-            <button class="nav-btn" id="btnPrev" title="Previous">
-                <i class="fa-solid fa-chevron-left"></i>
-            </button>
-            <button class="nav-btn" id="btnPalette" title="Question Palette">
-                <i class="fa-solid fa-table-cells"></i>
-            </button>
-            <div class="score-badge" id="scoreDisplay">1/10</div>
-            <button class="nav-btn" id="btnReview" title="Review All">
-                <i class="fa-solid fa-list-check"></i>
-            </button>
-            <button class="nav-btn next-btn" id="btnNext" title="Next">
-                <i class="fa-solid fa-chevron-right"></i>
-            </button>
-        </div>
+    <div class="loader-overlay" id="loader">
+        <div class="spinner"></div>
+        <p style="font-weight: 600; color: var(--text-secondary);" id="loaderText">Loading data...</p>
     </div>
 
+    <div class="app-container" id="appContainer">
+        
+        <!-- ================= WELCOME SCREEN ================= -->
+        <div id="welcomeScreen" class="screen active">
+            <div class="welcome-header">
+                <h1>CA Final Audit</h1>
+                <p>Master your concepts with the Pro Simulator</p>
+            </div>
+            
+            <div class="mode-cards">
+                <div class="mode-card easy" onclick="startApp('easy')">
+                    <div class="mode-icon"><i class="fa-solid fa-seedling"></i></div>
+                    <div class="mode-text">
+                        <h3>Easy Set</h3>
+                        <p>Core concepts & direct MCQs. Great for building basics. (study.json)</p>
+                    </div>
+                </div>
+                <div class="mode-card medium" onclick="startApp('medium')">
+                    <div class="mode-icon"><i class="fa-solid fa-fire"></i></div>
+                    <div class="mode-text">
+                        <h3>Medium Set</h3>
+                        <p>Advanced standard questions. Test your application. (mcqs.json)</p>
+                    </div>
+                </div>
+                <div class="mode-card hard" onclick="startApp('hard')">
+                    <div class="mode-icon"><i class="fa-solid fa-briefcase"></i></div>
+                    <div class="mode-text">
+                        <h3>Case Studies</h3>
+                        <p>Complex scenario-based challenges. Exam level. (audit_case_scenarios.json)</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tools-section">
+                <div class="tool-btn" onclick="showAnalytics()">
+                    <i class="fa-solid fa-chart-pie"></i>
+                    <h4>Analytics</h4>
+                </div>
+                <div class="tool-btn" onclick="exportData()">
+                    <i class="fa-solid fa-cloud-arrow-down"></i>
+                    <h4>Backup DB</h4>
+                </div>
+                <div class="tool-btn" onclick="document.getElementById('importFile').click()" style="grid-column: span 2;">
+                    <i class="fa-solid fa-cloud-arrow-up"></i>
+                    <h4>Restore Progress from File</h4>
+                </div>
+            </div>
+        </div>
+
+        <!-- ================= ANALYTICS SCREEN ================= -->
+        <div id="analyticsScreen" class="screen" style="background: white;">
+            <div class="sheet-header" style="padding: 16px 20px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); margin-bottom: 20px;">
+                <h3>📊 Performance Analytics</h3>
+                <button class="close-btn" onclick="goHome()"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            
+            <div style="padding: 0 20px;">
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 12px;">
+                    <div class="stat-box" style="border-color: #bfdbfe; background: #eff6ff;">
+                        <div class="stat-val" style="color: var(--primary);" id="statTotal">0</div>
+                        <div class="stat-label">Total Attempted</div>
+                    </div>
+                    <div class="stat-box" style="border-color: #a7f3d0; background: #ecfdf5;">
+                        <div class="stat-val" style="color: var(--correct);" id="statAcc">0%</div>
+                        <div class="stat-label">Overall Accuracy</div>
+                    </div>
+                    <div class="stat-box" style="border-color: #a7f3d0;">
+                        <div class="stat-val" style="color: var(--correct);" id="statRight">0</div>
+                        <div class="stat-label">Correct Answers</div>
+                    </div>
+                    <div class="stat-box" style="border-color: #fca5a5;">
+                        <div class="stat-val" style="color: var(--wrong);" id="statWrong">0</div>
+                        <div class="stat-label">Wrong Answers</div>
+                    </div>
+                </div>
+                
+                <h4 style="margin: 24px 0 12px; font-weight: 700;">Set Performance</h4>
+                <div id="setStatsBreakdown" style="display: flex; flex-direction: column; gap: 10px;">
+                    <!-- Injected by JS -->
+                </div>
+            </div>
+        </div>
+
+        <!-- ================= MAIN QUIZ APP ================= -->
+        <div id="quizScreen" class="screen" style="overflow: hidden;">
+            
+            <div class="header">
+                <div class="header-left">
+                    <button class="home-btn" onclick="goHome()" title="Back to Home"><i class="fa-solid fa-house"></i></button>
+                    <div class="header-title">
+                        <h2>FINAL AUDIT</h2>
+                        <p id="currentModeLabel">Mode: Easy</p>
+                    </div>
+                </div>
+                <div class="header-actions">
+                    <button class="icon-btn" id="bookmarkBtn" title="Mark for review">
+                        <i class="fa-regular fa-bookmark" id="bookmarkIcon" style="color:#94a3b8;"></i>
+                    </button>
+                    <button class="icon-btn lifeline" id="lifelineBtn" title="Lifelines">
+                        <i class="fa-solid fa-wand-magic-sparkles"></i>
+                    </button>
+                    <button class="icon-btn retake" title="Retake Set" onclick="retakeQuiz()">
+                        <i class="fa-solid fa-rotate-right"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- LIFELINES -->
+            <div id="lifelineDropdown" class="lifeline-dropdown">
+                <button id="btn5050">🎯 <span>50:50 Eliminator</span></button>
+                <button id="btnExpert">👔 <span>Direct Explanation</span></button>
+            </div>
+
+            <div class="main-content" id="mainContent">
+                <div id="quizArea">
+                    <div class="question-card">
+                        <div id="questionDisplay" style="position:relative;"></div>
+                    </div>
+                    <div class="options-list" id="optionsDisplay"></div>
+                    <div class="dots-container" id="dotsDisplay"></div>
+                </div>
+                
+                <div id="endScreen" style="display:none; text-align:center; padding:40px 16px;">
+                    <div style="font-size:4rem; margin-bottom:16px;">🏆</div>
+                    <h2 style="font-size:1.5rem; font-weight:800; margin-bottom:8px;">Set Completed!</h2>
+                    <p style="color:#64748b; margin-bottom:24px;">You've reached the end of this module.</p>
+                    <button onclick="goHome()" style="padding:12px 28px; background:var(--primary); color:white; border:none; border-radius:30px; font-weight:600; font-size:0.9rem; cursor:pointer; width:100%; margin-bottom: 12px;">
+                        Return to Dashboard
+                    </button>
+                    <button onclick="retakeQuiz()" style="padding:12px 28px; border:2px solid var(--border); border-radius:30px; background:white; font-weight:600; font-size:0.9rem; cursor:pointer; width:100%;">
+                        Restart this Set
+                    </button>
+                </div>
+            </div>
+
+            <!-- BOTTOM NAV -->
+            <div class="bottom-nav">
+                <button class="nav-btn" id="btnPrev" title="Previous"><i class="fa-solid fa-chevron-left"></i></button>
+                <button class="nav-btn" id="btnPalette" title="Question Palette"><i class="fa-solid fa-table-cells"></i></button>
+                <div class="score-badge" id="scoreDisplay">1/10</div>
+                <button class="nav-btn" id="btnReview" title="Review All"><i class="fa-solid fa-list-check"></i></button>
+                <button class="nav-btn next-btn" id="btnNext" title="Next"><i class="fa-solid fa-chevron-right"></i></button>
+            </div>
+        </div>
+
+    </div> <!-- App Container -->
+
+    <!-- ================= MODALS & SHEETS ================= -->
+    
     <!-- EXPLANATION MODAL -->
     <div id="explanationModal" class="modal-overlay" style="display:none;">
         <div class="modal-card">
@@ -901,35 +372,35 @@
     </div>
 
     <!-- PALETTE SHEET -->
-    <div id="paletteSheet" class="bottom-sheet" style="display:none;">
+    <div id="paletteSheet" class="bottom-sheet">
         <div class="sheet-header">
             <h3>📋 Question Palette</h3>
-            <button class="close-btn" id="closePaletteBtn">&times;</button>
+            <button class="close-btn" onclick="closeSheet('paletteSheet')"><i class="fa-solid fa-xmark"></i></button>
         </div>
-        <div id="paletteGrid" style="display:grid;grid-template-columns:repeat(6,1fr);gap:8px;"></div>
+        <div id="paletteGrid" style="display:grid; grid-template-columns:repeat(6,1fr); gap:8px;"></div>
         <div class="palette-legend">
             <div class="legend-item"><span class="legend-dot green"></span> Correct</div>
             <div class="legend-item"><span class="legend-dot red"></span> Wrong</div>
-            <div class="legend-item"><span class="legend-dot yellow"></span> Bookmarked</div>
+            <div class="legend-item"><span class="legend-dot yellow"></span> Marked</div>
             <div class="legend-item"><span class="legend-dot blue"></span> Answered</div>
             <div class="legend-item"><span class="legend-dot gray"></span> Unattempted</div>
         </div>
     </div>
 
     <!-- REVIEW SHEET -->
-    <div id="reviewSheet" class="bottom-sheet" style="display:none;top:0;max-height:100vh;">
+    <div id="reviewSheet" class="bottom-sheet" style="height: 90vh;">
         <div class="sheet-header">
             <h3>📝 Review All Questions</h3>
-            <button class="close-btn" id="closeReviewBtn">&times;</button>
+            <button class="close-btn" onclick="closeSheet('reviewSheet')"><i class="fa-solid fa-xmark"></i></button>
         </div>
         <div id="reviewList"></div>
     </div>
 
     <!-- FULLSCREEN READER -->
-    <div id="fullscreenReader" class="fullscreen-reader" style="display:none;">
+    <div id="fullscreenReader" class="fullscreen-reader">
         <div class="reader-header">
-            <h3 style="font-weight:700;">📖 Reading Mode</h3>
-            <button class="close-btn" id="closeReaderBtn">&times;</button>
+            <h3 style="font-weight:700; font-family:'Poppins', sans-serif;">📖 Reading Mode</h3>
+            <button class="close-btn" onclick="closeFullscreenReader()"><i class="fa-solid fa-xmark"></i></button>
         </div>
         <div class="reader-content" id="readerContent"></div>
     </div>
@@ -938,15 +409,78 @@
         (function() {
             // ==================== STATE ====================
             const STATE = {
-                mode: 'study',
+                currentMode: null, // 'easy', 'medium', 'hard'
                 questions: [],
                 currentIdx: 0,
                 session: [],
                 isAnswered: false,
-                selectedOption: null,
-                toastShown: false,
                 audioCtx: null
             };
+
+            const DB_NAME = 'CAAuditProDB';
+            const STORE_NAME = 'progress';
+
+            // Files mapping
+            const FILES = {
+                'easy': 'study.json',
+                'medium': 'mcqs.json',
+                'hard': 'audit_case_scenarios.json'
+            };
+
+            // ==================== INDEXEDDB ENGINE ====================
+            function initDB() {
+                return new Promise((resolve, reject) => {
+                    const req = indexedDB.open(DB_NAME, 1);
+                    req.onupgradeneeded = (e) => {
+                        const db = e.target.result;
+                        if (!db.objectStoreNames.contains(STORE_NAME)) {
+                            db.createObjectStore(STORE_NAME);
+                        }
+                    };
+                    req.onsuccess = (e) => resolve(e.target.result);
+                    req.onerror = (e) => reject(e);
+                });
+            }
+
+            async function saveState(mode, data) {
+                const db = await initDB();
+                return new Promise((resolve, reject) => {
+                    const tx = db.transaction(STORE_NAME, 'readwrite');
+                    const store = tx.objectStore(STORE_NAME);
+                    store.put(data, mode);
+                    tx.oncomplete = () => resolve();
+                    tx.onerror = () => reject();
+                });
+            }
+
+            async function loadState(mode) {
+                const db = await initDB();
+                return new Promise((resolve) => {
+                    const tx = db.transaction(STORE_NAME, 'readonly');
+                    const store = tx.objectStore(STORE_NAME);
+                    const req = store.get(mode);
+                    req.onsuccess = (e) => resolve(e.target.result || null);
+                    req.onerror = () => resolve(null);
+                });
+            }
+
+            async function getAllStates() {
+                const db = await initDB();
+                return new Promise((resolve) => {
+                    const tx = db.transaction(STORE_NAME, 'readonly');
+                    const store = tx.objectStore(STORE_NAME);
+                    const req = store.getAll();
+                    const keysReq = store.getAllKeys();
+                    
+                    req.onsuccess = () => {
+                        keysReq.onsuccess = () => {
+                            let obj = {};
+                            keysReq.result.forEach((k, i) => obj[k] = req.result[i]);
+                            resolve(obj);
+                        }
+                    };
+                });
+            }
 
             // ==================== AUDIO ====================
             function getAudio() {
@@ -971,95 +505,155 @@
                 } catch (e) {}
             }
 
-            function soundCorrect() { beep(523, 'triangle', 0.14);
-                setTimeout(() => beep(659, 'triangle', 0.14), 120); }
-
-            function soundWrong() { beep(200, 'sawtooth', 0.22); }
-
             // ==================== HELPERS ====================
-            function esc(s) { return String(s || '').replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;',
-                    '"': '&quot;' })[c]); }
+            const esc = s => String(s || '').replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]);
 
-            function norm(data) {
-                const recs = Array.isArray(data) ? data : (data.caseScenarios || data.questions || []);
-                return recs.flatMap((r, i) => {
-                    if (r.questions && Array.isArray(r.questions)) {
-                        return r.questions.map((q, j) => ({
-                            question: q.question || '',
-                            options: q.options || [],
-                            correct: parseInt(q.correctOption) || 0,
-                            explain: q.explanation || '',
-                            caseStudy: r.caseStudy || r.scenario || '',
-                            scenarioNum: r.scenarioNumber || (i + 1),
-                            qNum: q.questionNumber || `${i+1}.${j+1}`
-                        }));
-                    }
-                    return [{
-                        question: r.question || '',
-                        options: r.options || [],
-                        correct: parseInt(r.correctOption) || 0,
-                        explain: r.explanation || '',
-                        caseStudy: r.caseStudy || '',
-                        scenarioNum: r.scenarioNumber || (i + 1),
-                        qNum: r.questionNumber || `Q${i+1}`
-                    }];
-                }).filter(q => q.options.length > 0);
+            function showLoader(text) {
+                document.getElementById('loaderText').textContent = text;
+                document.getElementById('loader').style.display = 'flex';
+            }
+            function hideLoader() {
+                document.getElementById('loader').style.display = 'none';
             }
 
-            // ==================== DATA LOADING ====================
-            async function loadQuestions() {
-                const files = STATE.mode === 'mcqs' ? ['./audit_case_scenarios.json'] : ['./study.json',
-                    './mcqs.json'
-                ];
-                try {
-                    const responses = await Promise.all(files.map(f => fetch(f).then(r => { if (!r.ok) throw Error(
-                            f); return r.json(); })));
-                    STATE.questions = STATE.mode === 'mcqs' ? norm(responses[0]) : responses.flatMap(norm);
-                    if (!STATE.questions.length) {
-                        document.getElementById('questionDisplay').innerHTML =
-                            '<p style="color:#ef4444;">No questions found.</p>';
-                        return;
+            function switchScreen(id) {
+                document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
+                document.getElementById(id).classList.add('active');
+            }
+
+            window.goHome = function() {
+                if(STATE.currentMode) saveProgress(); // auto save when leaving
+                switchScreen('welcomeScreen');
+            }
+
+            // ==================== DATA NORMALIZATION ENGINE ====================
+            // Handles any format you throw at it (array of mcqs, array of cases, new json object structures)
+            function normalizeData(rawData) {
+                let parsedList = [];
+                let ds = Array.isArray(rawData) ? rawData : (rawData.caseScenarios || rawData.questions || []);
+
+                ds.forEach((item, i) => {
+                    // Check if item contains nested questions (Case Scenario format)
+                    if (item.questions && Array.isArray(item.questions)) {
+                        let caseText = item.passage_html || item.caseStudy || item.scenario || '';
+                        let caseTitle = item.title || `CASE SCENARIO ${item.scenario_number || (i+1)}`;
+                        
+                        item.questions.forEach((q, j) => {
+                            parsedList.push(parseSingleQuestion(q, caseText, caseTitle, `${i+1}.${j+1}`));
+                        });
+                    } else {
+                        // Direct MCQ format
+                        parsedList.push(parseSingleQuestion(item, '', '', `${i+1}`));
                     }
-                    if (STATE.session.length !== STATE.questions.length) {
-                        STATE.session = STATE.questions.map((_, i) => STATE.session[i] || { sel: null, ok: null,
-                            mark: false });
+                });
+                return parsedList;
+            }
+
+            function parseSingleQuestion(q, caseText, caseTitle, qNum) {
+                let opts = [];
+                let correctIdx = 0;
+
+                // Handle Options Array vs Object format
+                if (Array.isArray(q.options)) {
+                    opts = q.options;
+                    // If correctOption is "A" instead of index 0
+                    if (typeof q.correctOption === 'string' && isNaN(parseInt(q.correctOption))) {
+                        correctIdx = q.correctOption.toLowerCase().charCodeAt(0) - 97;
+                    } else {
+                        correctIdx = parseInt(q.correctOption) || parseInt(q.correct_option) || 0;
                     }
-                    if (STATE.currentIdx >= STATE.questions.length) STATE.currentIdx = 0;
-                    renderQuestion();
-                    saveProgress();
-                } catch (e) {
-                    document.getElementById('questionDisplay').innerHTML =
-                        '<p style="color:#ef4444;">Error loading. Check JSON files.</p>';
-                    console.error(e);
+                } else if (typeof q.options === 'object' && q.options !== null) {
+                    // new format: { "a": "...", "b": "..." }
+                    const keys = ['a', 'b', 'c', 'd'];
+                    opts = keys.map(k => q.options[k]).filter(Boolean);
+                    
+                    let ansKey = (q.correct_option || q.correctOption || 'a').toLowerCase();
+                    correctIdx = keys.indexOf(ansKey);
+                    if(correctIdx === -1) correctIdx = 0;
                 }
+
+                return {
+                    question: q.question_text || q.question || '',
+                    options: opts,
+                    correct: correctIdx,
+                    explain: q.explanation_html || q.explanation || q.explain || '',
+                    caseStudy: caseText,
+                    caseTitle: caseTitle,
+                    qNum: q.question_number || q.questionNumber || qNum
+                };
             }
 
-            // ==================== RENDER ====================
+            // ==================== APP LOGIC ====================
+            window.startApp = async function(mode) {
+                showLoader(`Loading ${mode.toUpperCase()} module...`);
+                STATE.currentMode = mode;
+                
+                // UI updates
+                const modeLabels = { 'easy': 'Basic Concepts', 'medium': 'Standard Questions', 'hard': 'Case Scenarios' };
+                document.getElementById('currentModeLabel').textContent = modeLabels[mode];
+
+                try {
+                    // Fetch JSON
+                    let res = await fetch(FILES[mode]);
+                    if (!res.ok) throw new Error("File missing");
+                    let rawData = await res.json();
+                    
+                    STATE.questions = normalizeData(rawData);
+
+                    // Load saved session
+                    let saved = await loadState(mode);
+                    if (saved && saved.session && saved.session.length === STATE.questions.length) {
+                        STATE.session = saved.session;
+                        STATE.currentIdx = saved.idx || 0;
+                    } else {
+                        // Init new session
+                        STATE.session = STATE.questions.map(() => ({ sel: null, ok: null, mark: false }));
+                        STATE.currentIdx = 0;
+                    }
+
+                    switchScreen('quizScreen');
+                    document.getElementById('quizArea').style.display = 'block';
+                    document.getElementById('endScreen').style.display = 'none';
+                    renderQuestion();
+
+                } catch (e) {
+                    console.error("Data load error:", e);
+                    alert(`Could not load ${FILES[mode]}. Please ensure the file exists in the directory or use the 'Restore Progress' button to upload your database.`);
+                } finally {
+                    hideLoader();
+                }
+            };
+
+            async function saveProgress() {
+                if(!STATE.currentMode) return;
+                await saveState(STATE.currentMode, {
+                    idx: STATE.currentIdx,
+                    session: STATE.session
+                });
+            }
+
+            // ==================== RENDERING ====================
             function renderQuestion() {
                 const q = STATE.questions[STATE.currentIdx];
                 if (!q) return;
+                
                 STATE.isAnswered = false;
-                STATE.selectedOption = null;
                 const st = STATE.session[STATE.currentIdx] || { sel: null, ok: null, mark: false };
 
-                // Question HTML
                 let html = '';
                 if (q.caseStudy) {
-                    html += `<div class="case-study-box" id="caseStudyBox">
-                <div class="case-label">📋 CASE SCENARIO ${esc(String(q.scenarioNum))}</div>
-                <div>${esc(q.caseStudy)}</div>
-                <button class="expand-btn" id="expandCaseBtn" title="Expand to read">⛶</button>
-              </div>`;
+                    // Added ondblclick here per user request
+                    html += `<div class="case-study-box" ondblclick="openFullscreenReader('case')" title="Double click to read fullscreen">
+                        <div class="case-label">📋 ${esc(q.caseTitle)}</div>
+                        <div>${q.caseStudy}</div>
+                        <div class="expand-btn"><i class="fa-solid fa-expand"></i></div>
+                    </div>`;
                 }
-                html +=
-                    `<div class="question-text"><span class="q-number">${esc(String(q.qNum))}.</span> ${esc(q.question)} <button class="question-expand-btn" id="expandQBtn" title="Expand question">⛶</button></div>`;
+                
+                html += `<div class="question-text"><span class="q-number">Q${esc(String(q.qNum))}.</span> ${q.question} 
+                         <button class="question-expand-btn" onclick="openFullscreenReader('question')" title="Expand question"><i class="fa-solid fa-expand"></i></button></div>`;
+                
                 document.getElementById('questionDisplay').innerHTML = html;
-
-                // Bind expand buttons
-                const expandCaseBtn = document.getElementById('expandCaseBtn');
-                const expandQBtn = document.getElementById('expandQBtn');
-                if (expandCaseBtn) expandCaseBtn.addEventListener('click', () => openFullscreenReader('case'));
-                if (expandQBtn) expandQBtn.addEventListener('click', () => openFullscreenReader('question'));
 
                 // Options
                 const optArea = document.getElementById('optionsDisplay');
@@ -1067,23 +661,23 @@
                 q.options.forEach((o, i) => {
                     const btn = document.createElement('button');
                     btn.className = 'option-btn';
-                    btn.innerHTML =
-                        `<span class="option-letter">${String.fromCharCode(65+i)}</span><span>${o}</span>`;
+                    btn.innerHTML = `<span class="option-letter">${String.fromCharCode(65+i)}</span><span>${o}</span>`;
                     btn.id = 'optBtn' + i;
+                    
                     if (st.sel !== null) {
                         btn.disabled = true;
                         if (i === st.sel && !st.ok) btn.classList.add('wrong');
                         if (i === q.correct) btn.classList.add('correct');
                         STATE.isAnswered = true;
                     }
+                    
                     btn.addEventListener('click', () => handleOptionClick(i));
                     optArea.appendChild(btn);
                 });
 
                 renderDots();
-                document.getElementById('scoreDisplay').textContent =
-                    `${STATE.currentIdx+1}/${STATE.questions.length}`;
                 updateBookmarkIcon();
+                document.getElementById('scoreDisplay').textContent = `${STATE.currentIdx+1}/${STATE.questions.length}`;
                 document.getElementById('mainContent').scrollTop = 0;
             }
 
@@ -1091,10 +685,11 @@
                 const container = document.getElementById('dotsDisplay');
                 container.innerHTML = '';
                 STATE.questions.forEach((_, i) => {
-                    const st = STATE.session[i] || {};
+                    const st = STATE.session[i];
                     const dot = document.createElement('button');
                     dot.className = 'dot-btn';
                     dot.textContent = i + 1;
+                    
                     if (i === STATE.currentIdx) dot.classList.add('current');
                     if (st.sel !== null) {
                         if (st.ok === true) dot.classList.add('correct-answer');
@@ -1104,25 +699,23 @@
                         dot.classList.add('unattempted');
                     }
                     if (st.mark) {
-                        const indicator = document.createElement('span');
-                        indicator.className = 'bookmark-indicator';
-                        dot.appendChild(indicator);
+                        dot.innerHTML += `<span class="bookmark-indicator"></span>`;
                     }
+                    
                     dot.addEventListener('click', () => jumpTo(i));
                     container.appendChild(dot);
                 });
-                // Auto-scroll to current
+
                 setTimeout(() => {
                     const currentDot = container.querySelector('.dot-btn.current');
-                    if (currentDot) currentDot.scrollIntoView({ behavior: 'smooth', block: 'nearest',
-                        inline: 'center' });
+                    if (currentDot) currentDot.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
                 }, 100);
             }
 
             function updateBookmarkIcon() {
-                const st = STATE.session[STATE.currentIdx] || { mark: false };
+                const st = STATE.session[STATE.currentIdx];
                 const icon = document.getElementById('bookmarkIcon');
-                if (st.mark) {
+                if (st && st.mark) {
                     icon.className = 'fa-solid fa-bookmark';
                     icon.style.color = '#d97706';
                 } else {
@@ -1131,186 +724,212 @@
                 }
             }
 
-            // ==================== FULLSCREEN READER ====================
-            function openFullscreenReader(type) {
-                const q = STATE.questions[STATE.currentIdx];
-                let content = '';
-                if (type === 'case' && q.caseStudy) {
-                    content =
-                        `<h3 style="color:#2563eb;margin-bottom:12px;">📋 Case Scenario ${esc(String(q.scenarioNum))}</h3><p style="line-height:1.8;">${esc(q.caseStudy)}</p>`;
-                } else {
-                    content =
-                        `<h3 style="color:#2563eb;margin-bottom:12px;">${esc(String(q.qNum))}</h3><p style="line-height:1.8;">${esc(q.question)}</p>`;
-                    content +=
-                        '<hr style="margin:16px 0;"><h4 style="margin-bottom:8px;">Options:</h4>';
-                    q.options.forEach((o, i) => {
-                        content +=
-                            `<p style="padding:8px;margin:4px 0;background:#f8fafc;border-radius:8px;"><b>${String.fromCharCode(65+i)}.</b> ${esc(o)}</p>`;
-                    });
-                }
-                document.getElementById('readerContent').innerHTML = content;
-                document.getElementById('fullscreenReader').style.display = 'flex';
-            }
-
-            function closeFullscreenReader() {
-                document.getElementById('fullscreenReader').style.display = 'none';
-            }
-
-            // ==================== OPTION HANDLING ====================
+            // ==================== INTERACTION & EVAL ====================
             function handleOptionClick(idx) {
                 if (STATE.isAnswered) return;
                 beep(400, 'sine', 0.05);
-                document.querySelectorAll('#optionsDisplay .option-btn').forEach(b => b.classList.remove(
-                'selected'));
+                
+                document.querySelectorAll('#optionsDisplay .option-btn').forEach(b => b.classList.remove('selected'));
                 const btn = document.getElementById('optBtn' + idx);
                 if (btn) btn.classList.add('selected');
-                STATE.selectedOption = idx;
-                setTimeout(() => lockAnswer(idx), 400);
+                
+                setTimeout(() => lockAnswer(idx), 350);
             }
 
             function lockAnswer(idx) {
                 if (STATE.isAnswered) return;
                 STATE.isAnswered = true;
+                
                 const q = STATE.questions[STATE.currentIdx];
-                const ok = idx === q.correct;
-                STATE.session[STATE.currentIdx] = { sel: idx, ok, mark: STATE.session[STATE.currentIdx]?.mark ||
-                        false };
+                const ok = (idx === q.correct);
+                
+                STATE.session[STATE.currentIdx].sel = idx;
+                STATE.session[STATE.currentIdx].ok = ok;
+                
                 const btns = document.querySelectorAll('#optionsDisplay .option-btn');
-                btns.forEach(b => { b.disabled = true;
-                    b.classList.remove('selected'); });
+                btns.forEach(b => { b.disabled = true; b.classList.remove('selected'); });
+                
                 const selBtn = document.getElementById('optBtn' + idx);
                 const corrBtn = document.getElementById('optBtn' + q.correct);
-                if (ok) { if (selBtn) selBtn.classList.add('correct');
-                    soundCorrect(); } else { if (selBtn) selBtn.classList.add('wrong'); if (corrBtn && corrBtn !==
-                        selBtn) corrBtn.classList.add('correct');
-                    soundWrong(); }
+                
+                if (ok) { 
+                    if (selBtn) selBtn.classList.add('correct');
+                    beep(523, 'triangle', 0.14); setTimeout(() => beep(659, 'triangle', 0.14), 120); 
+                } else { 
+                    if (selBtn) selBtn.classList.add('wrong'); 
+                    if (corrBtn && corrBtn !== selBtn) corrBtn.classList.add('correct');
+                    beep(200, 'sawtooth', 0.22); 
+                }
+                
                 renderDots();
                 saveProgress();
-                setTimeout(() => showExplanation(ok), 700);
+                setTimeout(() => showExplanationModal(ok), 600);
             }
 
-            function showExplanation(ok) {
+            function showExplanationModal(isCorrect, isExpert = false) {
                 const q = STATE.questions[STATE.currentIdx];
-                document.getElementById('explanationTitle').innerHTML = ok ? '✅ Correct!' : '❌ Incorrect';
-                let body = ok ? 'Great job! You got it right.' :
-                    `<b>Correct Answer:</b> ${esc(q.options[q.correct])}`;
-                if (q.explain) body +=
-                    `<br><br><small style="color:#64748b;">💡 ${esc(q.explain)}</small>`;
-                document.getElementById('explanationBody').innerHTML = body;
-                document.getElementById('explanationNextBtn').textContent = STATE.currentIdx >= STATE.questions
-                    .length - 1 ? 'Finish Quiz' : 'Next Question →';
+                
+                if(isExpert) {
+                    document.getElementById('explanationTitle').innerHTML = '👔 Expert Advice';
+                } else {
+                    document.getElementById('explanationTitle').innerHTML = isCorrect ? '✅ Excellent!' : '❌ Incorrect';
+                }
+
+                let bodyHtml = `<div style="margin-bottom: 12px;"><b>Correct Answer:</b> Option ${String.fromCharCode(65 + q.correct)}</div>`;
+                
+                if (q.explain) {
+                    bodyHtml += `<div style="padding-top: 10px; border-top: 1px dashed #cbd5e1;"><b>Explanation:</b><br/>${q.explain}</div>`;
+                } else {
+                    bodyHtml += `<div style="padding-top: 10px; border-top: 1px dashed #cbd5e1; font-style: italic; color: #64748b;">No detailed explanation provided for this question.</div>`;
+                }
+                
+                document.getElementById('explanationBody').innerHTML = bodyHtml;
+                document.getElementById('explanationNextBtn').textContent = (STATE.currentIdx >= STATE.questions.length - 1) ? 'Finish Set' : 'Next Question →';
                 document.getElementById('explanationModal').style.display = 'flex';
             }
 
             // ==================== NAVIGATION ====================
-            function goNext() {
+            window.goNext = function() {
                 document.getElementById('explanationModal').style.display = 'none';
-                if (STATE.currentIdx < STATE.questions.length - 1) { STATE.currentIdx++;
+                if (STATE.currentIdx < STATE.questions.length - 1) { 
+                    STATE.currentIdx++;
                     renderQuestion();
-                    saveProgress();
-                    checkToast(); } else finishQuiz();
+                    saveProgress(); 
+                } else {
+                    showEndScreen();
+                }
             }
 
-            function goPrev() {
+            window.goPrev = function() {
                 document.getElementById('explanationModal').style.display = 'none';
-                if (STATE.currentIdx > 0) { STATE.currentIdx--;
+                if (STATE.currentIdx > 0) { 
+                    STATE.currentIdx--;
                     renderQuestion();
-                    saveProgress(); }
+                    saveProgress(); 
+                }
             }
 
             function jumpTo(i) {
-                document.getElementById('explanationModal').style.display = 'none';
-                if (i >= 0 && i < STATE.questions.length) { STATE.currentIdx = i;
+                if (i >= 0 && i < STATE.questions.length) { 
+                    STATE.currentIdx = i;
                     renderQuestion();
-                    saveProgress(); }
+                    saveProgress(); 
+                }
             }
 
             function toggleBookmark() {
-                const st = STATE.session[STATE.currentIdx] || { sel: null, ok: null, mark: false };
-                st.mark = !st.mark;
-                STATE.session[STATE.currentIdx] = st;
+                if(!STATE.session[STATE.currentIdx]) return;
+                STATE.session[STATE.currentIdx].mark = !STATE.session[STATE.currentIdx].mark;
                 updateBookmarkIcon();
                 renderDots();
                 saveProgress();
             }
 
-            function finishQuiz() {
+            function showEndScreen() {
                 document.getElementById('quizArea').style.display = 'none';
                 document.getElementById('endScreen').style.display = 'block';
-                localStorage.removeItem('caAuditPro_mode');
-                localStorage.removeItem('caAuditPro_data');
             }
 
-            function retakeQuiz() {
-                if (confirm('Restart quiz from beginning?')) {
-                    STATE.session = [];
+            window.retakeQuiz = function() {
+                if (confirm('Erase your progress for this set and restart?')) {
+                    STATE.session = STATE.questions.map(() => ({ sel: null, ok: null, mark: false }));
                     STATE.currentIdx = 0;
-                    STATE.isAnswered = false;
+                    saveProgress();
                     document.getElementById('quizArea').style.display = 'block';
                     document.getElementById('endScreen').style.display = 'none';
-                    document.getElementById('explanationModal').style.display = 'none';
-                    loadQuestions();
+                    renderQuestion();
                 }
             }
 
-            // ==================== PALETTE ====================
-            function openPalette() {
+            // ==================== FULLSCREEN READER ====================
+            window.openFullscreenReader = function(type) {
+                const q = STATE.questions[STATE.currentIdx];
+                let content = '';
+                
+                if (type === 'case' && q.caseStudy) {
+                    content = `<h3 style="color:var(--primary); margin-bottom:16px;">${esc(q.caseTitle)}</h3>
+                               <div style="background:#f8fafc; padding:16px; border-radius:12px; border:1px solid #e2e8f0;">${q.caseStudy}</div>`;
+                } else {
+                    content = `<h3 style="color:var(--primary); margin-bottom:12px;">Question ${esc(String(q.qNum))}</h3>
+                               <p style="font-size:1.05rem;">${q.question}</p>
+                               <hr style="margin:20px 0;">`;
+                    q.options.forEach((o, i) => {
+                        content += `<p style="padding:12px; margin:8px 0; background:#f8fafc; border-radius:10px; border:1px solid #e2e8f0;">
+                                    <b style="color:var(--primary); margin-right:8px;">${String.fromCharCode(65+i)}.</b> ${o}</p>`;
+                    });
+                }
+                
+                document.getElementById('readerContent').innerHTML = content;
+                document.getElementById('fullscreenReader').style.display = 'flex';
+            }
+            window.closeFullscreenReader = () => document.getElementById('fullscreenReader').style.display = 'none';
+
+            // ==================== SHEETS ====================
+            window.openSheet = function(id) {
+                const sheet = document.getElementById(id);
+                sheet.style.display = 'block';
+                // Trigger reflow
+                void sheet.offsetWidth;
+                sheet.classList.add('show');
+            }
+            window.closeSheet = function(id) {
+                const sheet = document.getElementById(id);
+                sheet.classList.remove('show');
+                setTimeout(() => sheet.style.display = 'none', 300);
+            }
+
+            window.buildPalette = function() {
                 const grid = document.getElementById('paletteGrid');
                 grid.innerHTML = '';
                 STATE.questions.forEach((_, i) => {
-                    const st = STATE.session[i] || {};
+                    const st = STATE.session[i];
                     const dot = document.createElement('button');
                     dot.className = 'dot-btn';
                     dot.style.width = '100%';
                     dot.style.aspectRatio = '1';
                     dot.textContent = i + 1;
+                    
                     if (i === STATE.currentIdx) dot.classList.add('current');
                     if (st.sel !== null) {
                         if (st.ok === true) dot.classList.add('correct-answer');
                         else if (st.ok === false) dot.classList.add('wrong-answer');
                         else dot.classList.add('attempted');
                     } else dot.classList.add('unattempted');
-                    if (st.mark) {
-                        const ind = document.createElement('span');
-                        ind.className = 'bookmark-indicator';
-                        dot.appendChild(ind);
-                    }
-                    dot.addEventListener('click', () => { jumpTo(i);
-                        closePalette(); });
+                    
+                    if (st.mark) dot.innerHTML += `<span class="bookmark-indicator"></span>`;
+                    
+                    dot.addEventListener('click', () => { jumpTo(i); closeSheet('paletteSheet'); });
                     grid.appendChild(dot);
                 });
-                document.getElementById('paletteSheet').style.display = 'block';
+                openSheet('paletteSheet');
             }
 
-            function closePalette() { document.getElementById('paletteSheet').style.display = 'none'; }
-
-            // ==================== REVIEW ====================
-            function openReview() {
+            window.buildReview = function() {
                 const list = document.getElementById('reviewList');
                 list.innerHTML = '';
                 STATE.questions.forEach((q, i) => {
-                    const st = STATE.session[i] || {};
+                    const st = STATE.session[i];
                     let icon = '⚪';
                     if (st.sel !== null) icon = st.ok ? '✅' : '❌';
+                    
                     const div = document.createElement('div');
-                    div.style.cssText =
-                        'padding:12px;border:1px solid #e2e8f0;border-radius:12px;background:white;cursor:pointer;margin-bottom:8px;';
+                    div.style.cssText = 'padding:14px; border:1px solid #e2e8f0; border-radius:14px; background:white; cursor:pointer; margin-bottom:10px; display:flex; gap:12px; align-items:flex-start;';
                     div.innerHTML = `
-              <div style="display:flex;align-items:flex-start;gap:10px;">
-                <span style="font-size:1.2rem;">${icon}</span>
-                <div style="flex:1;">
-                  <h4 style="font-size:0.82rem;font-weight:600;">Q${i+1}: ${esc(q.question.substring(0,100))}...</h4>
-                  <p style="font-size:0.7rem;color:#64748b;">Your: ${st.sel!==null?esc(q.options[st.sel]):'Not answered'} | Correct: ${esc(q.options[q.correct])} ${st.mark?'| 🔖 Marked':''}</p>
-                </div>
-              </div>`;
-                    div.addEventListener('click', () => { jumpTo(i);
-                        closeReview(); });
+                        <span style="font-size:1.2rem; flex-shrink:0;">${icon}</span>
+                        <div style="flex:1;">
+                            <h4 style="font-size:0.85rem; font-weight:600; color:#1e293b; margin-bottom:4px;">Q${i+1}: ${q.question.substring(0, 80)}${q.question.length>80?'...':''}</h4>
+                            <p style="font-size:0.75rem; color:#64748b;">
+                                Your Ans: <b style="color:${st.sel!==null?(st.ok?'#059669':'#dc2626'):'#64748b'}">${st.sel!==null?String.fromCharCode(65+st.sel):'-'}</b> 
+                                | Correct: <b style="color:#059669">${String.fromCharCode(65+q.correct)}</b>
+                                ${st.mark?' | <span style="color:#d97706;">🔖 Marked</span>':''}
+                            </p>
+                        </div>`;
+                    
+                    div.addEventListener('click', () => { jumpTo(i); closeSheet('reviewSheet'); });
                     list.appendChild(div);
                 });
-                document.getElementById('reviewSheet').style.display = 'block';
+                openSheet('reviewSheet');
             }
-
-            function closeReview() { document.getElementById('reviewSheet').style.display = 'none'; }
 
             // ==================== LIFELINES ====================
             function toggleLifelineMenu() {
@@ -1322,180 +941,155 @@
                 toggleLifelineMenu();
                 if (STATE.isAnswered) return;
                 const q = STATE.questions[STATE.currentIdx];
-                const wrong = q.options.map((_, i) => i).filter(i => i !== q.correct);
+                const wrong = [0,1,2,3].filter(i => i !== q.correct);
                 wrong.sort(() => Math.random() - 0.5);
                 wrong.slice(0, 2).forEach(i => {
                     const btn = document.getElementById('optBtn' + i);
-                    if (btn) { btn.style.opacity = '0.2';
-                        btn.disabled = true; }
+                    if (btn) { btn.style.opacity = '0.3'; btn.disabled = true; }
                 });
-            }
-
-            function usePoll() {
-                toggleLifelineMenu();
-                if (!STATE.isAnswered) alert('📊 Poll: Option ' + String.fromCharCode(65 + STATE.questions[STATE
-                    .currentIdx].correct) + ' leads!');
             }
 
             function useExpert() {
                 toggleLifelineMenu();
-                if (!STATE.isAnswered) alert('👔 Expert: Go with Option ' + String.fromCharCode(65 + STATE.questions[
-                    STATE.currentIdx].correct));
+                // Direct Explanation requirement fulfilled here
+                showExplanationModal(false, true); 
             }
 
-            // ==================== MODE SWITCH ====================
-            function switchMode(mode) {
-                if (STATE.mode === mode) return;
-                STATE.mode = mode;
-                STATE.session = [];
-                STATE.currentIdx = 0;
-                document.getElementById('tabStudy').classList.toggle('active', mode === 'study');
-                document.getElementById('tabCases').classList.toggle('active', mode === 'mcqs');
-                document.getElementById('quizArea').style.display = 'block';
-                document.getElementById('endScreen').style.display = 'none';
-                localStorage.setItem('caAuditPro_mode', mode);
-                loadQuestions();
-            }
-
-            // ==================== PERSISTENCE ====================
-            function saveProgress() {
+            // ==================== ANALYTICS & IMPORT/EXPORT ====================
+            window.showAnalytics = async function() {
+                showLoader('Crunching numbers...');
                 try {
-                    localStorage.setItem('caAuditPro_mode', STATE.mode);
-                    localStorage.setItem('caAuditPro_data', JSON.stringify({ mode: STATE.mode, idx: STATE
-                            .currentIdx, session: STATE.session }));
-                } catch (e) {}
-            }
+                    const allData = await getAllStates();
+                    let totalQs = 0;
+                    let correct = 0;
+                    let wrong = 0;
+                    let setStatsHtml = '';
 
-            function loadProgress() {
-                try {
-                    const m = localStorage.getItem('caAuditPro_mode');
-                    if (m) { STATE.mode = m;
-                        document.getElementById('tabStudy').classList.toggle('active', m === 'study');
-                        document.getElementById('tabCases').classList.toggle('active', m === 'mcqs'); }
-                    const d = localStorage.getItem('caAuditPro_data');
-                    if (d) { const p = JSON.parse(d); if (p.mode === STATE.mode) { STATE.currentIdx = p.idx || 0;
-                            STATE.session = p.session || []; } }
-                } catch (e) {}
-            }
+                    const modMap = { 'easy': 'Easy Set', 'medium': 'Medium Set', 'hard': 'Case Studies' };
+                    const cols = { 'easy': '#10b981', 'medium': '#3b82f6', 'hard': '#ef4444' };
 
-            function checkToast() {
-                if (STATE.toastShown) return;
-                const n = STATE.session.filter(s => s.sel !== null).length;
-                if (n >= 20) {
-                    const t = document.getElementById('toast');
-                    t.classList.add('show');
-                    STATE.toastShown = true;
-                    setTimeout(() => t.classList.remove('show'), 5000);
+                    for(let mode of ['easy', 'medium', 'hard']) {
+                        let data = allData[mode];
+                        if(data && data.session) {
+                            let s_total = data.session.length;
+                            let s_ans = data.session.filter(s => s.sel !== null);
+                            let s_cor = s_ans.filter(s => s.ok).length;
+                            
+                            totalQs += s_ans.length;
+                            correct += s_cor;
+                            wrong += (s_ans.length - s_cor);
+
+                            let pct = s_ans.length > 0 ? Math.round((s_cor / s_ans.length) * 100) : 0;
+                            
+                            setStatsHtml += `
+                            <div style="background: white; border: 1px solid var(--border); border-radius: 12px; padding: 12px; display:flex; align-items:center; gap: 12px;">
+                                <div style="width:40px; height:40px; border-radius:10px; background:${cols[mode]}20; color:${cols[mode]}; display:flex; align-items:center; justify-content:center; font-weight:800;">${pct}%</div>
+                                <div style="flex:1;">
+                                    <div style="font-weight:600; font-size:0.85rem;">${modMap[mode]}</div>
+                                    <div style="font-size:0.75rem; color:#64748b;">${s_ans.length} attempted | ${s_cor} correct</div>
+                                </div>
+                            </div>`;
+                        }
+                    }
+
+                    document.getElementById('statTotal').textContent = totalQs;
+                    document.getElementById('statRight').textContent = correct;
+                    document.getElementById('statWrong').textContent = wrong;
+                    document.getElementById('statAcc').textContent = totalQs > 0 ? Math.round((correct/totalQs)*100) + '%' : '0%';
+                    
+                    document.getElementById('setStatsBreakdown').innerHTML = setStatsHtml || '<p style="font-size:0.8rem; color:#64748b;">No data yet. Start a quiz module to generate analytics.</p>';
+
+                    switchScreen('analyticsScreen');
+                } catch(e) {
+                    alert('Could not load analytics.');
+                } finally {
+                    hideLoader();
                 }
             }
 
-            // ==================== SWIPE NAVIGATION ====================
-            function setupSwipe() {
-                const area = document.getElementById('mainContent');
-                let startX = 0,
-                    startY = 0,
-                    tracking = false;
-                area.addEventListener('touchstart', e => {
-                    startX = e.touches[0].clientX;
-                    startY = e.touches[0].clientY;
-                    tracking = true;
-                }, { passive: true });
-                area.addEventListener('touchmove', e => {
-                    if (!tracking) return;
-                    if (Math.abs(e.touches[0].clientY - startY) > Math.abs(e.touches[0].clientX - startX))
-                        tracking = false;
-                }, { passive: true });
-                area.addEventListener('touchend', e => {
-                    if (!tracking) return;
-                    const dx = e.changedTouches[0].clientX - startX;
-                    if (Math.abs(dx) > 50) {
-                        if (dx < 0) goNext();
-                        else goPrev();
-                    }
-                    tracking = false;
-                }, { passive: true });
+            window.exportData = async function() {
+                try {
+                    const allData = await getAllStates();
+                    const jsonStr = JSON.stringify(allData);
+                    const blob = new Blob([jsonStr], { type: "application/json" });
+                    const url = URL.createObjectURL(blob);
+                    
+                    const a = document.createElement('a');
+                    a.href = url;
+                    a.download = `CAAuditPro_Backup_${new Date().toISOString().split('T')[0]}.json`;
+                    a.click();
+                    URL.revokeObjectURL(url);
+                    alert("✅ Progress backed up successfully!");
+                } catch (e) {
+                    alert("Failed to export data.");
+                }
             }
+
+            document.getElementById('importFile').addEventListener('change', async function(e) {
+                const file = e.target.files[0];
+                if (!file) return;
+
+                showLoader('Restoring data...');
+                const reader = new FileReader();
+                reader.onload = async function(ev) {
+                    try {
+                        const data = JSON.parse(ev.target.result);
+                        for (let mode of Object.keys(data)) {
+                            await saveState(mode, data[mode]);
+                        }
+                        alert("✅ Progress restored successfully!");
+                        // Reset input
+                        document.getElementById('importFile').value = ""; 
+                    } catch (err) {
+                        alert("❌ Invalid backup file format.");
+                    } finally {
+                        hideLoader();
+                    }
+                };
+                reader.readAsText(file);
+            });
+
 
             // ==================== EVENT BINDINGS ====================
             function bindEvents() {
-                // Navigation buttons
                 document.getElementById('btnPrev').addEventListener('click', goPrev);
                 document.getElementById('btnNext').addEventListener('click', goNext);
-                document.getElementById('btnPalette').addEventListener('click', openPalette);
-                document.getElementById('btnReview').addEventListener('click', openReview);
-
-                // Bookmark
+                document.getElementById('btnPalette').addEventListener('click', buildPalette);
+                document.getElementById('btnReview').addEventListener('click', buildReview);
                 document.getElementById('bookmarkBtn').addEventListener('click', toggleBookmark);
-
-                // Lifeline
+                
                 document.getElementById('lifelineBtn').addEventListener('click', toggleLifelineMenu);
                 document.getElementById('btn5050').addEventListener('click', use5050);
-                document.getElementById('btnPoll').addEventListener('click', usePoll);
                 document.getElementById('btnExpert').addEventListener('click', useExpert);
-
-                // Close buttons
-                document.getElementById('closePaletteBtn').addEventListener('click', closePalette);
-                document.getElementById('closeReviewBtn').addEventListener('click', closeReview);
-                document.getElementById('closeReaderBtn').addEventListener('click', closeFullscreenReader);
-
-                // Explanation next button
+                
                 document.getElementById('explanationNextBtn').addEventListener('click', goNext);
 
-                // Mode tabs
-                document.getElementById('tabStudy').addEventListener('click', () => switchMode('study'));
-                document.getElementById('tabCases').addEventListener('click', () => switchMode('mcqs'));
-
-                // Retake buttons
-                document.querySelectorAll('.icon-btn.retake, #endScreen button').forEach(btn => {
-                    if (btn.textContent.includes('Retake') || btn.querySelector('.fa-rotate-right')) {
-                        btn.addEventListener('click', retakeQuiz);
-                    }
-                });
-
-                // Close lifeline dropdown on outside click
+                // Close dropdown on outside click
                 document.addEventListener('click', e => {
                     const dd = document.getElementById('lifelineDropdown');
                     const lb = document.getElementById('lifelineBtn');
-                    if (dd.style.display === 'block' && !dd.contains(e.target) && e.target !== lb && !lb
-                        .contains(e.target)) {
+                    if (dd.style.display === 'block' && !dd.contains(e.target) && e.target !== lb && !lb.contains(e.target)) {
                         dd.style.display = 'none';
                     }
                 });
 
-                // Keyboard
+                // Keyboard Nav
                 document.addEventListener('keydown', e => {
-                    if (e.key === 'ArrowRight') { e.preventDefault();
-                        goNext(); }
-                    if (e.key === 'ArrowLeft') { e.preventDefault();
-                        goPrev(); }
-                    if (e.key === 'Escape') {
-                        document.getElementById('explanationModal').style.display = 'none';
-                        closePalette();
-                        closeReview();
-                        closeFullscreenReader();
-                        document.getElementById('lifelineDropdown').style.display = 'none';
+                    if (document.getElementById('quizScreen').classList.contains('active')) {
+                        if (e.key === 'ArrowRight') { e.preventDefault(); goNext(); }
+                        if (e.key === 'ArrowLeft') { e.preventDefault(); goPrev(); }
                     }
                 });
-
-                // Swipe
-                setupSwipe();
             }
 
             // ==================== INIT ====================
-            function init() {
-                loadProgress();
+            window.addEventListener('DOMContentLoaded', () => {
+                initDB();
                 bindEvents();
-                loadQuestions();
-                document.getElementById('quizArea').style.display = 'block';
-                document.getElementById('endScreen').style.display = 'none';
-                console.log('✅ CA Final Audit Pro - All features loaded');
-                console.log('🎨 Color palette: Green=Correct, Red=Wrong, Yellow=Bookmarked, Blue=Answered, Gray=Unattempted');
-                console.log('👆 Swipe left/right to navigate questions');
-                console.log('⛶ Expand buttons for full-screen reading');
-            }
-
-            window.addEventListener('DOMContentLoaded', init);
+                // Start at welcome screen
+                switchScreen('welcomeScreen');
+            });
         })();
     </script>
 </body>
-  </html>
+</html>
