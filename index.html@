@@ -2,432 +2,441 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>CA Final Audit - Interactive MCQ Practice</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+  <title>CA Final Audit · Mobile‑first Pro</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap');
-    
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@500;600;700&display=swap');
+
+    :root {
+      --bg: #f8fafc;
+      --surface: #ffffff;
+      --text: #1e293b;
+      --text-secondary: #64748b;
+      --border: #e2e8f0;
+      --primary: #3b82f6;
+      --primary-light: #dbeafe;
+      --correct: #059669;
+      --correct-bg: #d1fae5;
+      --wrong: #dc2626;
+      --wrong-bg: #fee2e2;
+      --marked: #f59e0b;
+      --marked-bg: #fef3c7;
+      --shadow: 0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
+      --shadow-lg: 0 4px 24px rgba(0,0,0,0.08);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+
+    html, body { height: 100%; }
+
     body {
-      font-family: 'Poppins', sans-serif;
-      background: radial-gradient(circle at center, #1b0a3f 0%, #080214 100%);
-      color: #ffffff;
-      min-height: 100vh;
-    }
-    
-    .kbc-hexagon {
-      clip-path: polygon(3% 0%, 97% 0%, 100% 50%, 97% 100%, 3% 100%, 0% 50%);
-      transition: all 0.3s ease;
-    }
-    
-    .option-btn {
-      background: linear-gradient(180deg, #182260 0%, #0b0f33 100%);
-      border: 2px solid #3b82f6;
-    }
-    
-    .option-btn:hover:not(:disabled) {
-      background: linear-gradient(180deg, #2563eb 0%, #1d4ed8 100%);
-      border-color: #f59e0b;
-      box-shadow: 0 0 15px rgba(245, 158, 11, 0.5);
-      transform: scale(1.02);
-    }
-    
-    .option-selected {
-      background: linear-gradient(180deg, #d97706 0%, #b45309 100%) !important;
-      border-color: #fef08a !important;
-      animation: pulse 0.8s infinite alternate;
-    }
-    
-    .option-correct {
-      background: linear-gradient(180deg, #15803d 0%, #166534 100%) !important;
-      border-color: #4ade80 !important;
-      box-shadow: 0 0 20px #22c55e;
-    }
-    
-    .option-wrong {
-      background: linear-gradient(180deg, #b91c1c 0%, #991b1b 100%) !important;
-      border-color: #fca5a5 !important;
-      box-shadow: 0 0 20px #ef4444;
-    }
-    
-    .glass-panel {
-      background: rgba(255, 255, 255, 0.05);
-      backdrop-filter: blur(10px);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-    }
-    
-    .glow-gold {
-      text-shadow: 0 0 10px #f59e0b, 0 0 20px #f59e0b;
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      overflow: hidden;
+      user-select: none;
+      -webkit-user-select: none;
     }
 
-    /* Social Branding Icons Styling */
-    .sf-icon {
-      width: 45px;
-      height: 45px;
-      border-radius: 50%;
+    .poppins { font-family: 'Poppins', sans-serif; }
+
+    .app-shell {
       display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.25rem;
-      transition: all 0.3s ease;
-      background: rgba(0, 0, 0, 0.5);
+      flex-direction: column;
+      height: 100dvh;
+      max-width: 900px;
+      margin: 0 auto;
+      width: 100%;
+      background: var(--bg);
     }
-    .sf-icon.ig { border: 1px solid #e1306c; color: #e1306c; }
-    .sf-icon.ig:hover { background: #e1306c; color: #fff; box-shadow: 0 0 15px #e1306c; }
-    
-    .sf-icon.li { border: 1px solid #0077b5; color: #0077b5; }
-    .sf-icon.li:hover { background: #0077b5; color: #fff; box-shadow: 0 0 15px #0077b5; }
-    
-    .sf-icon.yt { border: 1px solid #ff0000; color: #ff0000; }
-    .sf-icon.yt:hover { background: #ff0000; color: #fff; box-shadow: 0 0 15px #ff0000; }
-    
-    .sf-icon.tg { border: 1px solid #0088cc; color: #0088cc; }
-    .sf-icon.tg:hover { background: #0088cc; color: #fff; box-shadow: 0 0 15px #0088cc; }
 
-    /* Improved typography for long questions */
-    #question-text {
-      line-height: 1.8;
-      letter-spacing: 0.02em;
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      box-shadow: var(--shadow);
     }
+
+    .case-study-box {
+      max-height: 30vh;
+      overflow-y: auto;
+      -webkit-overflow-scrolling: touch;
+      background: #f1f5f9;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 14px 16px;
+      margin-bottom: 16px;
+      font-size: 0.9rem;
+      line-height: 1.6;
+      color: var(--text);
+    }
+
+    .question-box {
+      font-size: 1rem;
+      line-height: 1.65;
+      color: var(--text);
+      padding: 8px 0;
+    }
+
+    .option-btn {
+      background: var(--surface);
+      border: 1.5px solid var(--border);
+      transition: all 0.15s ease;
+      cursor: pointer;
+      -webkit-tap-highlight-color: transparent;
+      touch-action: manipulation;
+      min-height: 48px;
+      border-radius: 12px;
+      font-size: 0.9rem;
+      padding: 12px 14px;
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      width: 100%;
+      color: var(--text);
+      box-shadow: var(--shadow);
+    }
+    .option-btn:active:not(:disabled) { transform: scale(0.98); }
+    .option-btn:hover:not(:disabled) { border-color: var(--primary); background: var(--primary-light); }
+    .option-selected { border-color: var(--marked) !important; background: var(--marked-bg) !important; }
+    .option-correct { border-color: var(--correct) !important; background: var(--correct-bg) !important; color: var(--correct) !important; }
+    .option-wrong { border-color: var(--wrong) !important; background: var(--wrong-bg) !important; color: var(--wrong) !important; }
+
+    .opt-letter {
+      display: flex; align-items: center; justify-content: center;
+      width: 28px; height: 28px; border-radius: 8px;
+      background: #f1f5f9; color: var(--text-secondary); font-weight: 700;
+      font-size: 0.8rem; flex-shrink: 0; border: 1px solid var(--border);
+    }
+    .option-correct .opt-letter { background: #d1fae5; color: var(--correct); border-color: var(--correct); }
+    .option-wrong .opt-letter { background: #fee2e2; color: var(--wrong); border-color: var(--wrong); }
+    .option-selected .opt-letter { background: #fef3c7; color: #92400e; border-color: var(--marked); }
+
+    .table-wrap {
+      overflow-x: auto; -webkit-overflow-scrolling: touch;
+      border-radius: 10px; border: 1px solid var(--border); margin: 10px 0;
+    }
+    .table-wrap table { min-width: 480px; border-collapse: collapse; width: 100%; font-size: 0.85rem; }
+    .table-wrap th, .table-wrap td { padding: 8px 10px; border: 1px solid var(--border); text-align: left; }
+    .table-wrap th { background: #f8fafc; font-weight: 600; color: var(--text-secondary); }
+
+    /* ── Palette dots (inline strip + full sheet) ── */
+    .palette-dot {
+      width: 44px; height: 44px; min-width: 44px; min-height: 44px;
+      border-radius: 10px; font-size: 12px; font-weight: 600;
+      border: 1.5px solid var(--border); background: var(--surface);
+      color: var(--text-secondary); cursor: pointer;
+      display: flex; align-items: center; justify-content: center;
+      touch-action: manipulation; flex-shrink: 0; position: relative;
+      transition: all 0.15s;
+    }
+    .palette-dot:active { transform: scale(0.92); }
+    .palette-dot.answered { background: #dbeafe; border-color: var(--primary); color: var(--primary); }
+    .palette-dot.wrong { background: #fee2e2; border-color: var(--wrong); color: var(--wrong); }
+    .palette-dot.current { border-color: var(--primary) !important; box-shadow: 0 0 0 3px rgba(59,130,246,0.2); transform: scale(1.05); }
+    .palette-dot .mark-dot {
+      position: absolute; top: -3px; right: -3px;
+      width: 9px; height: 9px; border-radius: 50%;
+      background: var(--marked); border: 1.5px solid #d97706;
+    }
+
+    .palette-sheet-btn {
+      width: 44px; height: 44px; border-radius: 10px; font-size: 13px; font-weight: 600;
+      border: 1.5px solid var(--border); background: var(--surface); color: var(--text-secondary);
+      cursor: pointer; display: flex; align-items: center; justify-content: center;
+      touch-action: manipulation; flex-shrink: 0; position: relative; transition: all 0.15s;
+    }
+    .palette-sheet-btn:active { transform: scale(0.92); }
+    .palette-sheet-btn.answered { background: #dbeafe; border-color: var(--primary); color: var(--primary); }
+    .palette-sheet-btn.wrong { background: #fee2e2; border-color: var(--wrong); color: var(--wrong); }
+    .palette-sheet-btn.current { border-color: var(--primary) !important; box-shadow: 0 0 0 3px rgba(59,130,246,0.2); transform: scale(1.05); }
+    .palette-sheet-btn .mark-dot {
+      position: absolute; top: -4px; right: -4px;
+      width: 10px; height: 10px; border-radius: 50%;
+      background: var(--marked); border: 1.5px solid #d97706;
+    }
+
+    .nav-pill-btn {
+      touch-action: manipulation; -webkit-tap-highlight-color: transparent; min-height: 44px;
+    }
+
+    .toast {
+      position: fixed; bottom: 120px; left: 50%; transform: translateX(-50%);
+      background: var(--text); border: 1px solid var(--border); color: #fff;
+      padding: 10px 18px; border-radius: 24px; font-size: 12px; font-weight: 600;
+      z-index: 200; opacity: 0; pointer-events: none;
+      transition: opacity 0.4s, transform 0.4s; max-width: 90vw; text-align: center;
+      box-shadow: var(--shadow-lg);
+    }
+    .toast.show { opacity: 1; transform: translateX(-50%) translateY(-6px); pointer-events: auto; }
+
+    .revision-item {
+      background: var(--surface); border: 1px solid var(--border); border-radius: 12px;
+      padding: 14px 16px; margin-bottom: 10px; cursor: pointer;
+      transition: background 0.2s; touch-action: manipulation;
+    }
+    .revision-item:active { background: #f1f5f9; }
+
+    .sf-icon {
+      width: 36px; height: 36px; min-width: 36px; min-height: 36px;
+      border-radius: 50%; display: flex; align-items: center; justify-content: center;
+      font-size: 0.95rem; transition: all 0.25s ease; background: #f1f5f9;
+      touch-action: manipulation; color: var(--text-secondary); text-decoration: none;
+    }
+    .sf-icon.ig:hover, .sf-icon.ig:active { background: #e1306c; color: #fff; }
+    .sf-icon.li:hover, .sf-icon.li:active { background: #0077b5; color: #fff; }
+    .sf-icon.yt:hover, .sf-icon.yt:active { background: #ff0000; color: #fff; }
+    .sf-icon.tg:hover, .sf-icon.tg:active { background: #0088cc; color: #fff; }
+
+    ::-webkit-scrollbar { width: 4px; }
+    ::-webkit-scrollbar-track { background: transparent; }
+    ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 10px; }
   </style>
 </head>
-<body class="flex flex-col min-h-screen p-2 md:p-6 overflow-x-hidden">
+<body>
 
-  <!-- Top Navigation & Lifelines -->
-  <header class="flex flex-wrap justify-between items-center gap-4 glass-panel p-4 rounded-2xl border-yellow-500/30 max-w-5xl mx-auto w-full">
-    <div class="flex items-center gap-3">
-      <div class="w-12 h-12 rounded-full bg-yellow-500/20 border-2 border-yellow-500 flex items-center justify-center text-yellow-400 text-xl font-bold glow-gold">
-        <i class="fa-solid font-black">CA</i>
-      </div>
+<div id="toast" class="toast"></div>
+
+<div class="app-shell">
+
+  <!-- ── COMPACT TOP HEADER (max 60px tall on mobile) ── -->
+  <header class="flex items-center justify-between gap-2 px-2 pt-2 pb-1 shrink-0">
+    <div class="flex items-center gap-2">
+      <div class="w-8 h-8 rounded-lg bg-blue-50 border border-blue-200 flex items-center justify-center text-blue-600 text-sm font-bold poppins shrink-0">CA</div>
       <div>
-        <h1 class="text-lg font-bold text-yellow-400 leading-tight">CA FINAL AUDIT</h1>
-        <p class="text-xs text-gray-400">Advanced Auditing MCQs</p>
+        <h1 class="text-xs font-bold text-slate-800 poppins leading-tight">FINAL AUDIT</h1>
+        <p class="text-[9px] text-slate-500">Advanced MCQs</p>
       </div>
     </div>
-
-    <!-- Timer -->
-    <div class="relative w-16 h-16 flex items-center justify-center">
-      <div id="timer-display" class="w-14 h-14 rounded-full border-4 border-yellow-500 flex items-center justify-center text-xl font-extrabold text-yellow-400 bg-black/50 glow-gold shadow-lg shadow-yellow-500/20">
-        45
-      </div>
-    </div>
-
-    <!-- Lifeline Buttons -->
-    <div class="flex gap-3">
-      <button id="life-5050" onclick="use5050()" class="w-12 h-12 rounded-full bg-blue-900/80 border-2 border-cyan-400 flex flex-col items-center justify-center text-xs font-bold hover:bg-cyan-500 hover:text-black transition shadow-lg shadow-cyan-500/20">
-        <span>50:50</span>
-      </button>
-      <button id="life-poll" onclick="useAudiencePoll()" class="w-12 h-12 rounded-full bg-blue-900/80 border-2 border-cyan-400 flex items-center justify-center text-sm font-bold hover:bg-cyan-500 hover:text-black transition shadow-lg shadow-cyan-500/20">
-        <i class="fa-solid fa-chart-bar"></i>
-      </button>
-      <button id="life-expert" onclick="useExpertAdvice()" class="w-12 h-12 rounded-full bg-blue-900/80 border-2 border-cyan-400 flex items-center justify-center text-sm font-bold hover:bg-cyan-500 hover:text-black transition shadow-lg shadow-cyan-500/20">
-        <i class="fa-solid fa-user-tie"></i>
-      </button>
+    <div class="flex items-center gap-1.5">
+      <button onclick="retakeQuiz()" class="nav-pill-btn px-2.5 py-1.5 rounded-lg bg-red-50 border border-red-200 text-[10px] font-semibold text-red-600 hover:bg-red-100 transition flex items-center gap-1"><i class="fa-solid fa-rotate-right text-[10px]"></i> <span class="hidden sm:inline">Retake</span></button>
+      <button id="life-5050" onclick="use5050()" class="nav-pill-btn w-7 h-7 rounded-full bg-blue-50 border border-blue-200 flex items-center justify-center text-[9px] font-bold text-blue-600 hover:bg-blue-100 transition">50:50</button>
+      <button id="life-poll" onclick="useAudiencePoll()" class="nav-pill-btn w-7 h-7 rounded-full bg-blue-50 border border-blue-200 flex items-center justify-center text-xs text-blue-600 hover:bg-blue-100 transition"><i class="fa-solid fa-chart-bar text-[10px]"></i></button>
+      <button id="life-expert" onclick="useExpertAdvice()" class="nav-pill-btn w-7 h-7 rounded-full bg-blue-50 border border-blue-200 flex items-center justify-center text-xs text-blue-600 hover:bg-blue-100 transition"><i class="fa-solid fa-user-tie text-[10px]"></i></button>
     </div>
   </header>
 
-  <!-- Main Game Dashboard -->
-  <main class="flex-grow flex flex-col justify-center max-w-5xl mx-auto w-full my-8 space-y-8">
-    
-    <!-- Question Container -->
-    <div class="relative w-full">
-      <div class="kbc-hexagon bg-gradient-to-r from-blue-950 via-indigo-900 to-blue-950 border-2 border-yellow-500/80 p-8 md:p-10 min-h-[160px] flex items-center shadow-2xl">
-        <!-- Added whitespace-pre-wrap and text-justify for excellent readability of large texts -->
-        <p id="question-text" class="text-sm md:text-[17px] font-medium text-gray-100 whitespace-pre-wrap text-justify w-full">
-          Fetching questions from repository...
-        </p>
-      </div>
+  <!-- ── STREAMLINED SUB-NAV + BOOKMARK (single row) ── -->
+  <div class="flex items-center justify-between gap-2 px-2 pt-1 pb-2 shrink-0">
+    <div class="card p-1 rounded-full flex gap-0.5 border border-slate-200 bg-white shadow-sm flex-1 max-w-sm">
+      <button id="btn-mode-study" onclick="switchMode('study')" class="nav-pill-btn flex-1 px-3 py-2 rounded-full text-[10px] md:text-xs font-semibold transition flex items-center justify-center gap-1"><i class="fa-solid fa-book-open text-[10px]"></i> Direct MCQs</button>
+      <button id="btn-mode-mcqs" onclick="switchMode('mcqs')" class="nav-pill-btn flex-1 px-3 py-2 rounded-full text-[10px] md:text-xs font-semibold transition flex items-center justify-center gap-1"><i class="fa-solid fa-briefcase text-[10px]"></i> Case Scenarios</button>
     </div>
+    <!-- bookmark lives inline here, not in a huge separate block -->
+    <button id="mark-review-btn" onclick="toggleMarkReview()" class="nav-pill-btn w-9 h-9 rounded-full bg-white border border-slate-200 flex items-center justify-center text-lg text-slate-400 hover:text-amber-500 transition shrink-0" title="Mark for review"><i class="fa-regular fa-bookmark"></i></button>
+  </div>
 
-    <!-- Options Grid -->
-    <div id="options-grid" class="grid grid-cols-1 md:grid-cols-2 gap-5 w-full">
-      <!-- Dynamic Option Buttons inserted via JS -->
+  <!-- ── SCROLLABLE CONTENT (expanded) ── -->
+  <main id="scroll-area" class="flex-1 min-h-0 overflow-y-auto -webkit-overflow-scrolling-touch overscroll-y-contain px-2 pb-2">
+    <div id="quiz-container" class="w-full space-y-3">
+      <div class="card p-3 md:p-5">
+        <div id="question-text" class="question-box whitespace-pre-wrap text-left w-full"></div>
+      </div>
+      <div id="options-grid" class="grid grid-cols-1 gap-2.5 w-full"></div>
+      <!-- mobile‑first dots strip: swipeable row with 44×44 tap targets -->
+      <div id="dots-strip" class="flex gap-1.5 overflow-x-auto py-1 px-0.5 -webkit-overflow-scrolling-touch"></div>
     </div>
-
-  </main>
-
-  <!-- Bottom Section: Navigation & Branding -->
-  <footer class="max-w-5xl mx-auto w-full space-y-6 mt-4">
-    
-    <!-- Navigation Bar -->
-    <div class="flex justify-between items-center glass-panel p-4 rounded-2xl">
-      <button onclick="prevQuestion()" class="px-6 py-2.5 rounded-lg bg-gray-800 border border-gray-600 hover:bg-gray-700 text-sm font-semibold text-gray-300 transition flex items-center gap-2">
-        <i class="fa-solid fa-arrow-left"></i> Previous
-      </button>
-      <div class="text-sm text-yellow-400/80 font-mono tracking-widest font-bold" id="score-counter">
-        QUESTION -- / --
-      </div>
-      <button id="next-btn" onclick="nextQuestion()" class="px-8 py-2.5 rounded-lg bg-gradient-to-r from-yellow-500 to-amber-600 hover:from-yellow-400 hover:to-amber-500 text-black text-sm font-bold transition shadow-lg shadow-yellow-500/20 flex items-center gap-2">
-        Next <i class="fa-solid fa-arrow-right"></i>
-      </button>
-    </div>
-
-    <!-- Interactive Social Branding -->
-    <section class="flex flex-col items-center justify-center py-4">
-      <div class="section-footer flex gap-6">
-           <a href="https://www.instagram.com/" target="_blank" class="sf-icon ig" title="Instagram"><i class="fab fa-instagram"></i></a>
-           <a href="https://www.linkedin.com/in/satyam-kumar5286o" target="_blank" class="sf-icon li" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-           <a href="https://youtube.com/@observe_with_satyam" target="_blank" class="sf-icon yt" title="YouTube"><i class="fab fa-youtube"></i></a>
-           <a href="https://t.me/CA_Protracker" target="_blank" class="sf-icon tg" title="Telegram"><i class="fab fa-telegram-plane"></i></a>
-      </div>
-    </section>
-
-  </footer>
-
-  <!-- Modal: ICAI Explanation Popup -->
-  <div id="explanation-modal" class="fixed inset-0 bg-black/80 backdrop-blur-md flex items-center justify-center p-4 z-50 hidden">
-    <div class="bg-gradient-to-b from-slate-900 to-blue-950 border-2 border-yellow-500 rounded-2xl max-w-3xl w-full p-6 shadow-2xl space-y-5">
-      <div class="flex justify-between items-center border-b border-gray-700 pb-3">
-        <h2 id="modal-title" class="text-xl font-bold text-yellow-400 flex items-center gap-2">
-          <i class="fa-solid fa-circle-check text-green-400"></i> Correct Answer!
-        </h2>
-        <button onclick="closeModal()" class="text-gray-400 hover:text-white text-2xl transition transform hover:scale-110"><i class="fa-solid fa-xmark"></i></button>
-      </div>
-      
-      <div class="space-y-3">
-        <p class="text-xs uppercase tracking-wider text-cyan-400 font-bold">Official ICAI Technical Reference / Explanation</p>
-        <div id="modal-explanation" class="text-base text-gray-200 leading-relaxed bg-black/40 p-5 rounded-xl border border-white/10 max-h-72 overflow-y-auto whitespace-pre-wrap text-justify">
-          Explanation goes here...
-        </div>
-      </div>
-
-      <div class="flex justify-end pt-3">
-        <button onclick="closeModal()" class="px-8 py-2.5 bg-yellow-500 text-black rounded-lg font-bold text-sm hover:bg-yellow-400 transition shadow-lg shadow-yellow-500/20">
-          Continue Game
+    <!-- End Screen -->
+    <div id="end-screen" class="hidden flex-col items-center justify-center w-full text-center space-y-4 my-4 px-1">
+      <div class="text-blue-600 text-4xl md:text-6xl mb-1"><i class="fa-solid fa-trophy"></i></div>
+      <h1 class="text-xl md:text-3xl font-bold text-slate-800 poppins">Quiz Completed!</h1>
+      <p class="text-xs md:text-base text-slate-500">You have attempted all questions in this mode.</p>
+      <div class="card p-5 md:p-6 mt-3 w-full max-w-lg mx-auto border border-blue-100">
+        <h3 class="text-base md:text-xl font-bold text-slate-800 mb-1">Developed with ❤️ by Satyam</h3>
+        <p class="text-[11px] md:text-sm text-slate-500 mb-3">Subscribe for more such powerful tools!</p>
+        <a href="https://youtube.com/@observe_with_satyam?si=9BiGcrs2Dhv4HDFa" target="_blank" class="nav-pill-btn px-5 py-3 rounded-full bg-red-600 hover:bg-red-700 text-white font-bold text-xs md:text-sm transition inline-flex items-center justify-center gap-2 shadow-sm w-full mb-2">
+          <i class="fab fa-youtube text-lg"></i> Subscribe on YouTube
+        </a>
+        <button onclick="retakeQuiz()" class="nav-pill-btn px-5 py-3 rounded-full bg-white hover:bg-slate-100 border border-slate-300 text-slate-700 font-bold text-xs md:text-sm transition flex items-center justify-center gap-2 w-full">
+          <i class="fa-solid fa-rotate-right"></i> Retake Quiz
         </button>
       </div>
     </div>
+  </main>
+
+  <!-- ── FOOTER (compact controls + social) ── -->
+  <footer id="quiz-footer" class="shrink-0 px-2 pb-1 space-y-1.5">
+    <div class="flex justify-between items-center card p-2 rounded-xl shadow-sm gap-1">
+      <button onclick="prevQuestion()" class="nav-pill-btn px-2.5 py-2 rounded-lg bg-white border border-slate-200 hover:bg-slate-50 text-[11px] md:text-xs font-semibold text-slate-600 transition flex items-center gap-1 shrink-0"><i class="fa-solid fa-arrow-left text-[10px]"></i></button>
+      <button onclick="togglePalette()" class="nav-pill-btn px-2.5 py-2 rounded-lg bg-white border border-slate-200 hover:bg-slate-50 text-[11px] md:text-xs font-semibold text-slate-600 transition flex items-center gap-1"><i class="fa-solid fa-th text-[10px]"></i> <span class="hidden sm:inline">Palette</span></button>
+      <div class="text-[11px] md:text-sm text-blue-600 font-mono font-bold whitespace-nowrap px-2 bg-slate-50 py-1.5 rounded-lg border border-slate-200" id="score-counter">Q: 0/0</div>
+      <button onclick="openRevision()" class="nav-pill-btn px-2.5 py-2 rounded-lg bg-white border border-slate-200 hover:bg-slate-50 text-[11px] md:text-xs font-semibold text-slate-600 transition flex items-center gap-1"><i class="fa-solid fa-clock-rotate-left text-[10px]"></i> <span class="hidden sm:inline">Review All</span></button>
+      <button onclick="nextQuestion()" class="nav-pill-btn px-2.5 py-2 rounded-lg bg-blue-600 hover:bg-blue-700 text-white text-[11px] md:text-xs font-bold transition flex items-center gap-1 shrink-0"><span class="hidden sm:inline">Next</span> <i class="fa-solid fa-arrow-right text-[10px]"></i></button>
+    </div>
+    <div class="flex flex-col items-center gap-1">
+      <div class="flex gap-3">
+        <a href="https://www.instagram.com/" target="_blank" class="sf-icon ig" title="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/in/satyam-kumar5286o" target="_blank" class="sf-icon li" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://youtube.com/@observe_with_satyam" target="_blank" class="sf-icon yt" title="YouTube"><i class="fab fa-youtube"></i></a>
+        <a href="https://t.me/CA_Protracker" target="_blank" class="sf-icon tg" title="Telegram"><i class="fab fa-telegram-plane"></i></a>
+      </div>
+      <p class="text-[9px] text-slate-400">Made with ❤️ by Satyam</p>
+    </div>
+  </footer>
+</div>
+
+<!-- ── PALETTE SHEET (bottom drawer) ── -->
+<div id="palette-panel" class="hidden fixed inset-x-0 bottom-0 z-50 p-4 bg-white/95 backdrop-blur-xl border-t-2 border-blue-500/40 rounded-t-3xl max-h-[70vh] overflow-y-auto shadow-lg" style="-webkit-overflow-scrolling:touch;">
+  <div class="flex justify-between items-center mb-3 max-w-5xl mx-auto">
+    <h3 class="text-lg font-bold text-slate-800 poppins">Question Palette</h3>
+    <button onclick="togglePalette()" class="nav-pill-btn text-slate-400 hover:text-slate-600 text-2xl leading-none transition w-9 h-9 flex items-center justify-center">&times;</button>
   </div>
+  <div class="flex gap-2 text-[10px] md:text-xs text-slate-500 mb-4 flex-wrap justify-center font-medium max-w-5xl mx-auto bg-slate-50 p-2.5 rounded-xl">
+    <span class="flex items-center gap-1"><span class="inline-block w-3 h-3 rounded bg-blue-100 border border-blue-300"></span> Answered</span>
+    <span class="flex items-center gap-1"><span class="inline-block w-3 h-3 rounded bg-red-100 border border-red-300"></span> Wrong</span>
+    <span class="flex items-center gap-1"><span class="inline-block w-3 h-3 rounded-full bg-amber-100 border border-amber-300"></span> Marked</span>
+    <span class="flex items-center gap-1"><span class="inline-block w-3 h-3 rounded bg-white border border-slate-300"></span> Unanswered</span>
+  </div>
+  <div id="palette-grid" class="grid grid-cols-[repeat(auto-fill,minmax(44px,1fr))] gap-2 justify-center max-w-5xl mx-auto"></div>
+</div>
 
-  <!-- Audio Synthesis Engine for Sound Effects -->
-  <script>
-    const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-    
-    function playBeep(freq = 440, type = 'sine', duration = 0.15) {
-      if (audioCtx.state === 'suspended') audioCtx.resume();
-      const osc = audioCtx.createOscillator();
-      const gain = audioCtx.createGain();
-      osc.type = type;
-      osc.frequency.value = freq;
-      gain.gain.setValueAtTime(0.1, audioCtx.currentTime);
-      gain.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + duration);
-      osc.connect(gain);
-      gain.connect(audioCtx.destination);
-      osc.start();
-      osc.stop(audioCtx.currentTime + duration);
-    }
+<!-- ── REVISION PANEL ── -->
+<div id="revision-panel" class="hidden fixed inset-0 z-50 bg-white/95 backdrop-blur-lg p-4 flex flex-col">
+  <div class="flex justify-between items-center mb-3 max-w-5xl mx-auto w-full">
+    <h2 class="text-lg md:text-xl font-bold text-slate-800 poppins">Review All</h2>
+    <button onclick="closeRevision()" class="nav-pill-btn text-slate-600 text-2xl md:text-3xl hover:text-red-500 transition w-9 h-9 flex items-center justify-center">&times;</button>
+  </div>
+  <div id="revision-list" class="flex-1 overflow-y-auto space-y-2.5 pr-1 max-w-5xl mx-auto w-full" style="-webkit-overflow-scrolling:touch;"></div>
+</div>
 
-    function soundCorrect() {
-      playBeep(523.25, 'triangle', 0.2);
-      setTimeout(() => playBeep(659.25, 'triangle', 0.2), 150);
-      setTimeout(() => playBeep(783.99, 'triangle', 0.4), 300);
-    }
+<!-- ── EXPLANATION MODAL ── -->
+<div id="explanation-modal" class="fixed inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center p-4 z-50 hidden">
+  <div class="card border border-blue-100 rounded-2xl max-w-sm md:max-w-lg w-full p-5 md:p-7 text-center space-y-4 shadow-xl max-h-[85vh] overflow-y-auto" style="-webkit-overflow-scrolling:touch;">
+    <h2 id="modal-title" class="text-lg md:text-2xl font-bold flex items-center justify-center gap-2"></h2>
+    <div id="modal-subtitle" class="text-xs md:text-sm text-slate-600 leading-relaxed font-medium"></div>
+    <button id="modal-continue-btn" onclick="nextQuestion()" class="nav-pill-btn px-6 py-3 bg-blue-600 text-white rounded-xl font-bold text-sm hover:bg-blue-700 transition shadow-sm w-full mt-2">Next Question</button>
+  </div>
+</div>
 
-    function soundWrong() {
-      playBeep(220, 'sawtooth', 0.3);
-      setTimeout(() => playBeep(180, 'sawtooth', 0.5), 250);
-    }
-  </script>
+<!-- ── SCRIPTS ── -->
+<script>
+  const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+  function playBeep(f=440,t='sine',d=0.15){if(audioCtx.state==='suspended')audioCtx.resume();const o=audioCtx.createOscillator(),g=audioCtx.createGain();o.type=t;o.frequency.value=f;g.gain.setValueAtTime(0.08,audioCtx.currentTime);g.gain.exponentialRampToValueAtTime(0.01,audioCtx.currentTime+d);o.connect(g);g.connect(audioCtx.destination);o.start();o.stop(audioCtx.currentTime+d);}
+  function soundCorrect(){playBeep(523,'triangle',0.18);setTimeout(()=>playBeep(659,'triangle',0.18),150);setTimeout(()=>playBeep(784,'triangle',0.35),300);}
+  function soundWrong(){playBeep(220,'sawtooth',0.25);setTimeout(()=>playBeep(180,'sawtooth',0.4),200);}
+</script>
+<script>
+  let currentMode = localStorage.getItem('caAuditProMode') || 'study';
+  let questionsData = [], currentIdx = 0, isAnswered = false, selectedOption = null, sessionState = [], toastShown = false;
 
-  <!-- Dynamic Fetch & Quiz Logic Script -->
-  <script>
-    // URL to fetch JSON file (Local or GitHub)
-    const JSON_DATA_URL = './mcqs.json'; 
+  function updateModeUI(){
+    const s=document.getElementById('btn-mode-study'), m=document.getElementById('btn-mode-mcqs');
+    const active="nav-pill-btn flex-1 px-3 py-2 rounded-full text-[10px] md:text-xs font-semibold bg-blue-600 text-white transition shadow-sm flex items-center justify-center gap-1";
+    const inactive="nav-pill-btn flex-1 px-3 py-2 rounded-full text-[10px] md:text-xs font-semibold text-slate-500 hover:text-slate-700 hover:bg-slate-100 transition flex items-center justify-center gap-1";
+    s.className=currentMode==='study'?active:inactive; m.className=currentMode==='mcqs'?active:inactive;
+  }
+  function switchMode(mode){if(currentMode===mode)return; currentMode=mode; localStorage.setItem('caAuditProMode',mode); updateModeUI(); resetLifelines(); loadProgressFromStorage(); fetchQuestions();}
+  function saveProgress(){const key=`caAuditPro_${currentMode}`; localStorage.setItem(key,JSON.stringify({idx:currentIdx,state:sessionState}));}
+  function loadProgressFromStorage(){const key=`caAuditPro_${currentMode}`; const raw=localStorage.getItem(key); if(raw){try{const d=JSON.parse(raw); currentIdx=d.idx||0; sessionState=d.state||[];}catch(e){resetProgress();}}else{resetProgress();}}
+  function resetProgress(){currentIdx=0; sessionState=[]; toastShown=false;}
+  function escapeHtml(v=''){return String(v).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'})[c]);}
+  function toOptionIndex(value,options){const n=Number(value); if(Number.isInteger(n)&&n>=0&&n<options.length)return n; if(Number.isInteger(n)&&n>=1&&n<=options.length)return n-1; return 0;}
 
-    let questionsData = [];
-    let currentIdx = 0;
-    let timer;
-    let timeLeft = 45;
-    let selectedOption = null;
-    let isAnswered = false;
-
-    // Fetch JSON File from GitHub/Local Directory
-    async function fetchQuestions() {
-      try {
-        const response = await fetch(JSON_DATA_URL);
-        if (!response.ok) {
-          throw new Error(`HTTP error! Status: ${response.status}`);
-        }
-        questionsData = await response.json();
-        if (questionsData.length > 0) {
-          initGame();
-        } else {
-          document.getElementById('question-text').innerText = "No questions found in mcqs.json!";
-        }
-      } catch (error) {
-        console.error("Failed to load mcqs.json:", error);
-        document.getElementById('question-text').innerText = "Error loading mcqs.json. Make sure the file exists in the same repository!";
+  function normaliseCaseScenarioData(data){
+    const records=Array.isArray(data)?data:(data.caseScenarios||data.questions||[]);
+    return records.flatMap((rec,ri)=>{
+      if(rec.type==='case_scenario'||Array.isArray(rec.questions)){
+        const sn=rec.scenarioNumber??rec.id??ri+1;
+        return (rec.questions||[]).map((q,qi)=>{const opts=Array.isArray(q.options)?q.options:[]; return {question:q.question||`Question ${qi+1}`,options:opts,correctOption:toOptionIndex(q.correctOption,opts),explanation:q.explanation||'',caseStudy:rec.caseStudy||rec.scenario||'',scenarioNumber:sn,questionNumber:q.questionNumber||`${sn}.${qi+1}`};});
       }
+      const opts=Array.isArray(rec.options)?rec.options:[];
+      return [{...rec,options:opts,correctOption:toOptionIndex(rec.correctOption,opts)}];
+    }).filter(q=>q.options.length>0);
+  }
+
+  async function fetchJson(url){const r=await fetch(url); if(!r.ok)throw new Error(`${url}: HTTP ${r.status}`); return r.json();}
+  async function fetchQuestions(){
+    const caseMode=currentMode==='mcqs';
+    const files=caseMode?['./audit_case_scenarios.json']:['./study.json','./mcqs.json'];
+    try{
+      const payloads=await Promise.all(files.map(fetchJson));
+      questionsData=caseMode?normaliseCaseScenarioData(payloads[0]):payloads.flatMap(normaliseCaseScenarioData);
+      if(!Array.isArray(questionsData)||questionsData.length===0)throw new Error('No usable questions');
+      if(sessionState.length!==questionsData.length) sessionState=questionsData.map((_,i)=>sessionState[i]||{selected:null,isCorrect:null,marked:false});
+      if(currentIdx>=questionsData.length)currentIdx=0;
+      initGame();
+    }catch(e){
+      document.getElementById('question-text').innerText=`Unable to load quiz data. Ensure these files are beside this HTML: ${files.join(', ')}.`;
+      document.getElementById('options-grid').innerHTML=''; document.getElementById('dots-strip').innerHTML='';
+      console.error(e);
     }
+  }
 
-    function initGame() {
-      loadQuestion();
-    }
+  function initGame(){document.getElementById('end-screen').classList.add('hidden'); document.getElementById('end-screen').classList.remove('flex'); document.getElementById('quiz-container').classList.remove('hidden'); document.getElementById('quiz-footer').classList.remove('hidden'); loadQuestion(); maybeShowSubscribeToast();}
+  function wrapTables(container){container.querySelectorAll('table').forEach(t=>{if(!t.parentElement.classList.contains('table-wrap')){const w=document.createElement('div'); w.className='table-wrap'; t.parentNode.insertBefore(w,t); w.appendChild(t);}});}
 
-    function startTimer() {
-      clearInterval(timer);
-      timeLeft = 45;
-      document.getElementById('timer-display').innerText = timeLeft;
-      timer = setInterval(() => {
-        timeLeft--;
-        document.getElementById('timer-display').innerText = timeLeft;
-        if (timeLeft <= 10) playBeep(880, 'sine', 0.05);
-        if (timeLeft <= 0) {
-          clearInterval(timer);
-          autoLockTimeout();
-        }
-      }, 1000);
-    }
+  function loadQuestion(){
+    isAnswered=false; selectedOption=null; const q=questionsData[currentIdx];
+    const caseStudy=q.caseStudy?`<div class="case-study-box"><div class="mb-2 font-bold uppercase tracking-wider text-blue-600 flex items-center gap-1.5 sticky -top-0.5 text-xs"><i class="fa-solid fa-file-contract"></i> Case Scenario ${escapeHtml(q.scenarioNumber)}</div><div class="whitespace-pre-wrap text-sm">${escapeHtml(q.caseStudy)}</div></div>`:'';
+    const qLabel=q.questionNumber||`Q${currentIdx+1}`;
+    const qEl=document.getElementById('question-text');
+    qEl.innerHTML=`${caseStudy}<div><span class="text-blue-600 font-bold tracking-wider mr-1">${escapeHtml(qLabel)}.</span> ${escapeHtml(q.question)}</div>`;
+    wrapTables(qEl);
+    document.getElementById('score-counter').innerText=`Q: ${currentIdx+1} / ${questionsData.length}`;
+    updateMarkReviewIcon();
+    const grid=document.getElementById('options-grid'); grid.innerHTML='';
+    const state=sessionState[currentIdx]||{selected:null,isCorrect:null,marked:false};
+    q.options.forEach((opt,idx)=>{
+      const btn=document.createElement('button'); btn.id=`opt-${idx}`; btn.className="option-btn";
+      const letter=String.fromCharCode(65+idx);
+      btn.innerHTML=`<span class="opt-letter">${letter}</span> <span class="leading-relaxed text-left">${opt}</span>`;
+      if(state.selected!==null){btn.disabled=true; if(idx===state.selected&&!state.isCorrect)btn.classList.add('option-wrong'); if(idx===q.correctOption)btn.classList.add('option-correct'); isAnswered=true;}
+      btn.onclick=()=>selectOption(idx); grid.appendChild(btn);
+    });
+    wrapTables(grid); renderDotsStrip(); document.getElementById('scroll-area').scrollTo({top:0,behavior:'auto'}); saveProgress();
+  }
 
-    function loadQuestion() {
-      isAnswered = false;
-      selectedOption = null;
-      startTimer();
+  function renderDotsStrip(){
+    const strip=document.getElementById('dots-strip'); strip.innerHTML='';
+    questionsData.forEach((_,i)=>{
+      const state=sessionState[i]||{selected:null,isCorrect:null,marked:false};
+      const dot=document.createElement('button'); dot.className='palette-dot'; dot.textContent=i+1;
+      if(i===currentIdx)dot.classList.add('current');
+      if(state.selected!==null)dot.classList.add(state.isCorrect?'answered':'wrong');
+      if(state.marked){const md=document.createElement('span'); md.className='mark-dot'; dot.appendChild(md);}
+      dot.onclick=()=>jumpTo(i); strip.appendChild(dot);
+    });
+  }
 
-      const q = questionsData[currentIdx];
-      // Insert Question ID and Text smoothly
-      document.getElementById('question-text').innerHTML = `<span class="text-yellow-400 font-bold tracking-wider">Q${q.id}.</span> ${q.question}`;
-      document.getElementById('score-counter').innerText = `QUESTION ${currentIdx + 1} / ${questionsData.length}`;
+  function selectOption(idx){if(isAnswered)return; playBeep(300,'sine',0.08); const btns=document.getElementById('options-grid').children; for(let b of btns)b.classList.remove('option-selected'); selectedOption=idx; document.getElementById(`opt-${idx}`).classList.add('option-selected'); setTimeout(()=>lockAnswer(idx),500);}
+  function lockAnswer(idx){if(isAnswered)return; isAnswered=true; const q=questionsData[currentIdx]; const isCorrect=idx===q.correctOption; const prev=(sessionState[currentIdx]||{}).marked||false; sessionState[currentIdx]={selected:idx,isCorrect,marked:prev}; const s=document.getElementById(`opt-${idx}`),c=document.getElementById(`opt-${q.correctOption}`); s.classList.remove('option-selected'); if(isCorrect){s.classList.add('option-correct'); soundCorrect();}else{s.classList.add('option-wrong'); if(c)c.classList.add('option-correct'); soundWrong();} disableAllOptions(); renderDotsStrip(); saveProgress(); setTimeout(()=>showExplanation(isCorrect),800);}
+  function disableAllOptions(){const btns=document.getElementById('options-grid').children; for(let b of btns)b.disabled=true;}
+  function showExplanation(isCorrect){const q=questionsData[currentIdx]; const modal=document.getElementById('explanation-modal'); document.getElementById('modal-title').innerHTML=isCorrect?'<i class="fa-solid fa-circle-check text-green-500 text-2xl md:text-3xl"></i> <span class="text-green-600">Awesome!</span>':'<i class="fa-solid fa-circle-xmark text-red-500 text-2xl md:text-3xl"></i> <span class="text-red-600">Incorrect!</span>'; let sub=isCorrect?'You selected the right answer.':`Correct answer:<br><div class="text-slate-700 text-xs md:text-sm text-left bg-slate-50 p-3 rounded-xl border border-slate-200 mt-2 font-medium flex gap-2"><span class="w-5 h-5 flex items-center justify-center shrink-0 bg-green-50 rounded-full border border-green-200 text-[10px] text-green-600">${String.fromCharCode(65+q.correctOption)}</span> <span>${q.options[q.correctOption]}</span></div>`; if(q.explanation)sub+=`<br><div class="text-slate-500 text-xs text-left bg-slate-50 p-3 rounded-xl border border-slate-200 mt-2"><b class="text-slate-700">Explanation:</b> ${q.explanation}</div>`; document.getElementById('modal-subtitle').innerHTML=sub; document.getElementById('modal-continue-btn').innerText=currentIdx===questionsData.length-1?'Finish Quiz':'Next Question'; modal.classList.remove('hidden');}
+  function nextQuestion(){document.getElementById('explanation-modal').classList.add('hidden'); if(currentIdx<questionsData.length-1){currentIdx++; loadQuestion(); maybeShowSubscribeToast();}else{finishQuiz();}}
+  function prevQuestion(){document.getElementById('explanation-modal').classList.add('hidden'); if(currentIdx>0){currentIdx--; loadQuestion();}}
+  function toggleMarkReview(){const s=sessionState[currentIdx]||{selected:null,isCorrect:null,marked:false}; s.marked=!s.marked; sessionState[currentIdx]=s; updateMarkReviewIcon(); renderDotsStrip(); saveProgress();}
+  function updateMarkReviewIcon(){const b=document.getElementById('mark-review-btn'); const s=sessionState[currentIdx]||{marked:false}; b.innerHTML=s.marked?'<i class="fa-solid fa-bookmark text-amber-500"></i>':'<i class="fa-regular fa-bookmark text-slate-400"></i>';}
+  function togglePalette(){const p=document.getElementById('palette-panel'); if(p.classList.contains('hidden')){renderPalette(); p.classList.remove('hidden');}else{p.classList.add('hidden');}}
+  function renderPalette(){const grid=document.getElementById('palette-grid'); grid.innerHTML=''; for(let i=0;i<questionsData.length;i++){const btn=document.createElement('button'); btn.textContent=i+1; btn.className='palette-sheet-btn'; const s=sessionState[i]||{selected:null,isCorrect:null,marked:false}; if(i===currentIdx)btn.classList.add('current'); if(s.selected!==null)btn.classList.add(s.isCorrect?'answered':'wrong'); if(s.marked){const md=document.createElement('span'); md.className='mark-dot'; btn.appendChild(md);} btn.onclick=()=>{jumpTo(i); togglePalette();}; grid.appendChild(btn);}}
+  function jumpTo(idx){if(idx>=0&&idx<questionsData.length){currentIdx=idx; loadQuestion();}}
+  function openRevision(){const panel=document.getElementById('revision-panel'),list=document.getElementById('revision-list'); list.innerHTML=''; questionsData.forEach((q,i)=>{const s=sessionState[i]||{selected:null,isCorrect:null,marked:false}; const div=document.createElement('div'); div.className='revision-item'; let icon=s.selected!==null?(s.isCorrect?'<i class="fa-solid fa-circle-check text-green-500"></i>':'<i class="fa-solid fa-circle-xmark text-red-500"></i>'):'<i class="fa-regular fa-square text-slate-400"></i>'; const markIcon=s.marked?' <i class="fa-solid fa-star text-amber-500 ml-1"></i>':''; div.innerHTML=`<div class="flex items-start gap-3"><div class="text-lg shrink-0 mt-0.5">${icon}</div><div class="flex-1"><p class="text-sm font-semibold text-slate-800 leading-snug">Q${i+1}: ${q.question.substring(0,100)}...${markIcon}</p>${s.selected!==null?`<p class="text-xs text-slate-500 mt-1.5 bg-slate-50 p-2 rounded border border-slate-200">Your answer: <span class="${s.isCorrect?'text-green-600 font-medium':'text-red-600 font-medium'}">${q.options[s.selected]}</span></p>`:''}<p class="text-xs text-blue-600 mt-1 font-medium">Correct: ${q.options[q.correctOption]}</p></div></div>`; div.onclick=()=>{jumpTo(i); closeRevision();}; list.appendChild(div);}); panel.classList.remove('hidden');}
+  function closeRevision(){document.getElementById('revision-panel').classList.add('hidden');}
+  document.getElementById('revision-panel').addEventListener('click',e=>{if(e.target.id==='revision-panel')closeRevision();});
 
-      const grid = document.getElementById('options-grid');
-      grid.innerHTML = '';
+  function finishQuiz(){document.getElementById('quiz-container').classList.add('hidden'); const end=document.getElementById('end-screen'); end.classList.remove('hidden'); end.classList.add('flex'); localStorage.setItem(`caAuditPro_${currentMode}`,JSON.stringify({idx:0,state:[]})); resetProgress();}
+  function retakeQuiz(){if(confirm('Restart quiz from Question 1?')){resetProgress(); loadProgressFromStorage(); resetLifelines(); initGame();}}
+  function resetLifelines(){['life-5050','life-poll','life-expert'].forEach(id=>{const b=document.getElementById(id); b.disabled=false; b.classList.remove('opacity-40','cursor-not-allowed');});}
+  function use5050(){if(isAnswered)return; const q=questionsData[currentIdx]; const wrong=q.options.map((_,i)=>i).filter(i=>i!==q.correctOption); wrong.sort(()=>Math.random()-0.5); wrong.slice(0,Math.min(2,wrong.length)).forEach(i=>{const el=document.getElementById(`opt-${i}`); if(el){el.style.opacity='0.25'; el.disabled=true;}}); document.getElementById('life-5050').disabled=true; document.getElementById('life-5050').classList.add('opacity-40','cursor-not-allowed');}
+  function useAudiencePoll(){if(isAnswered)return; alert(`📊 Audience Poll: Option ${String.fromCharCode(65+questionsData[currentIdx].correctOption)} leads with huge majority!`); document.getElementById('life-poll').disabled=true; document.getElementById('life-poll').classList.add('opacity-40','cursor-not-allowed');}
+  function useExpertAdvice(){if(isAnswered)return; alert(`👨‍🏫 Satyam's Advice: "Based on standards, Option (${String.fromCharCode(65+questionsData[currentIdx].correctOption)}) is the way."`); document.getElementById('life-expert').disabled=true; document.getElementById('life-expert').classList.add('opacity-40','cursor-not-allowed');}
+  function maybeShowSubscribeToast(){if(toastShown)return; const attempted=sessionState.filter(s=>s.selected!==null).length; if(attempted>=20&&!localStorage.getItem('caAuditSubToastShown')){const t=document.getElementById('toast'); t.innerHTML=`❤️ Like the app? <a href="https://youtube.com/@observe_with_satyam?si=9BiGcrs2Dhv4HDFa" target="_blank" class="underline text-white">Subscribe to Satyam's YouTube</a> for more!`; t.classList.add('show'); localStorage.setItem('caAuditSubToastShown','1'); toastShown=true; setTimeout(()=>t.classList.remove('show'),5000);}}
 
-      q.options.forEach((opt, idx) => {
-        const btn = document.createElement('button');
-        btn.id = `opt-${idx}`;
-        btn.onclick = () => selectOption(idx);
-        // Clean layout for options
-        btn.className = "option-btn kbc-hexagon text-left p-5 md:p-6 text-sm md:text-base font-medium rounded-xl transition duration-200 flex items-center gap-3";
-        btn.innerHTML = `<span class="text-yellow-400 font-bold min-w-[24px]"></span> <span class="leading-relaxed">${opt}</span>`;
-        grid.appendChild(btn);
-      });
-    }
+  function setupSwipe(){
+    const area=document.getElementById('scroll-area'); let sx=0,sy=0,trk=false; const MIN=45;
+    area.addEventListener('touchstart',e=>{sx=e.touches[0].clientX; sy=e.touches[0].clientY; trk=true;},{passive:true});
+    area.addEventListener('touchmove',e=>{if(!trk)return; if(Math.abs(e.touches[0].clientY-sy)>Math.abs(e.touches[0].clientX-sx))trk=false;},{passive:true});
+    area.addEventListener('touchend',e=>{if(!trk)return; const dx=e.changedTouches[0].clientX-sx; if(Math.abs(dx)>MIN){if(dx<0)nextQuestion(); else prevQuestion();} trk=false;},{passive:true});
+  }
 
-    function selectOption(idx) {
-      if (isAnswered) return;
-      playBeep(300, 'sine', 0.1);
+  window.addEventListener('keydown',e=>{
+    if(e.key==='ArrowRight')nextQuestion(); if(e.key==='ArrowLeft')prevQuestion();
+    if(e.key==='p'||e.key==='P')togglePalette(); if(e.key==='r'||e.key==='R')openRevision();
+    if(e.key==='Escape'){document.getElementById('explanation-modal').classList.add('hidden'); document.getElementById('palette-panel').classList.add('hidden'); document.getElementById('revision-panel').classList.add('hidden');}
+  });
 
-      const buttons = document.getElementById('options-grid').children;
-      for (let btn of buttons) btn.classList.remove('option-selected');
-
-      selectedOption = idx;
-      document.getElementById(`opt-${idx}`).classList.add('option-selected');
-
-      setTimeout(() => lockAnswer(idx), 1000);
-    }
-
-    function lockAnswer(idx) {
-      if (isAnswered) return;
-      isAnswered = true;
-      clearInterval(timer);
-
-      const q = questionsData[currentIdx];
-      const selectedBtn = document.getElementById(`opt-${idx}`);
-      const correctBtn = document.getElementById(`opt-${q.correctOption}`);
-
-      selectedBtn.classList.remove('option-selected');
-
-      if (idx === q.correctOption) {
-        selectedBtn.classList.add('option-correct');
-        soundCorrect();
-        setTimeout(() => showExplanation(true, q.explanation), 1200);
-      } else {
-        selectedBtn.classList.add('option-wrong');
-        if (correctBtn) correctBtn.classList.add('option-correct');
-        soundWrong();
-        setTimeout(() => showExplanation(false, q.explanation), 1200);
-      }
-    }
-
-    function autoLockTimeout() {
-      if (isAnswered) return;
-      isAnswered = true;
-      const q = questionsData[currentIdx];
-      const correctBtn = document.getElementById(`opt-${q.correctOption}`);
-      if (correctBtn) correctBtn.classList.add('option-correct');
-      soundWrong();
-      setTimeout(() => showExplanation(false, "Time Out! " + q.explanation), 1000);
-    }
-
-    function showExplanation(isCorrect, expText) {
-      const modal = document.getElementById('explanation-modal');
-      const title = document.getElementById('modal-title');
-      const text = document.getElementById('modal-explanation');
-
-      if (isCorrect) {
-        title.innerHTML = `<i class="fa-solid fa-circle-check text-green-400"></i> Correct Answer!`;
-      } else {
-        title.innerHTML = `<i class="fa-solid fa-circle-xmark text-red-500"></i> Incorrect Answer!`;
-      }
-
-      text.innerHTML = expText || "Explanation reference not available.";
-      modal.classList.remove('hidden');
-    }
-
-    function closeModal() {
-      document.getElementById('explanation-modal').classList.add('hidden');
-    }
-
-    function nextQuestion() {
-      closeModal();
-      if (currentIdx < questionsData.length - 1) {
-        currentIdx++;
-        loadQuestion();
-      } else {
-        alert("Congratulations! You completed all questions!");
-      }
-    }
-
-    function prevQuestion() {
-      closeModal();
-      if (currentIdx > 0) {
-        currentIdx--;
-        loadQuestion();
-      }
-    }
-
-    // Lifeline Functions
-    function use5050() {
-      if (isAnswered) return;
-      const q = questionsData[currentIdx];
-      const wrongIndices = [0, 1, 2, 3].filter(i => i !== q.correctOption);
-      
-      wrongIndices.sort(() => Math.random() - 0.5);
-      if (document.getElementById(`opt-${wrongIndices[0]}`)) {
-        document.getElementById(`opt-${wrongIndices[0]}`).style.visibility = 'hidden';
-      }
-      if (document.getElementById(`opt-${wrongIndices[1]}`)) {
-        document.getElementById(`opt-${wrongIndices[1]}`).style.visibility = 'hidden';
-      }
-
-      const btn = document.getElementById('life-5050');
-      btn.disabled = true;
-      btn.classList.add('opacity-30', 'cursor-not-allowed');
-    }
-
-    function useAudiencePoll() {
-      if (isAnswered) return;
-      const q = questionsData[currentIdx];
-      const optChar = ['A', 'B', 'C', 'D'][q.correctOption];
-      alert(`📊 Audience Poll Results:\nOption ${optChar} leads with 78% votes!`);
-      const btn = document.getElementById('life-poll');
-      btn.disabled = true;
-      btn.classList.add('opacity-30', 'cursor-not-allowed');
-    }
-
-    function useExpertAdvice() {
-      if (isAnswered) return;
-      const q = questionsData[currentIdx];
-      const optChar = ['A', 'B', 'C', 'D'][q.correctOption];
-      alert(`👨‍🏫 Expert Advice (CA Audit Faculty):\n"Option (${optChar.toLowerCase()}) is the correct choice based on relevant Auditing Standards."`);
-      const btn = document.getElementById('life-expert');
-      btn.disabled = true;
-      btn.classList.add('opacity-30', 'cursor-not-allowed');
-    }
-
-    // Load dynamic data on startup
-    window.onload = fetchQuestions;
-  </script>
+  window.onload=()=>{updateModeUI(); loadProgressFromStorage(); fetchQuestions(); setupSwipe();};
+</script>
 </body>
 </html>
