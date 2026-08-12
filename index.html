@@ -333,7 +333,7 @@
         
         /* HIGHLIGHTER TOOLBAR */
         .highlighter-tools { display: flex; gap: 8px; align-items: center; background: #f8fafc; padding: 6px 10px; border-radius: 18px; border: 1px solid var(--border); flex-wrap: wrap; }
-        .hl-btn { width: 28px; height: 28px; border-radius: 50%; border: 2px solid white; cursor: pointer; box-shadow: 0 1px 3px rgba(0,0,0,0.15); transition: transform 0.15s, box-shadow 0.15s; display: flex; align-items: center; justify-content: center; }
+        .hl-btn { width: 28px; height: 28px; border-radius: 50%; border: 2px solid white; cursor: pointer; box-shadow: 0 1px 3px rgba(0,0,0,0.15); transition: transform 0.15s, box-shadow 0.15s; display: flex; align-items: center; justify-content: center; touch-action: manipulation; }
         .hl-btn:active { transform: scale(0.9); }
         .hl-btn.armed { transform: scale(1.22); box-shadow: 0 0 0 3px rgba(37,99,235,0.55), 0 1px 3px rgba(0,0,0,0.15); }
         .hl-yellow { background: #fef08a; }
@@ -571,11 +571,11 @@
             
             <div class="highlighter-tools" id="highlighterTools" style="display:none;">
                 <span style="font-size: 0.75rem; color: #64748b; font-weight: 600; margin-right: 2px;">Highlight:</span>
-                <button class="hl-btn hl-yellow" data-color="#fef08a" ontouchstart="event.preventDefault()" onmousedown="event.preventDefault()" onclick="selectHighlightColor(this)" title="Yellow"></button>
-                <button class="hl-btn hl-green" data-color="#bbf7d0" ontouchstart="event.preventDefault()" onmousedown="event.preventDefault()" onclick="selectHighlightColor(this)" title="Green"></button>
-                <button class="hl-btn hl-blue" data-color="#bfdbfe" ontouchstart="event.preventDefault()" onmousedown="event.preventDefault()" onclick="selectHighlightColor(this)" title="Blue"></button>
-                <button class="hl-btn hl-pink" data-color="#fbcfe8" ontouchstart="event.preventDefault()" onmousedown="event.preventDefault()" onclick="selectHighlightColor(this)" title="Pink"></button>
-                <button class="hl-btn hl-eraser" data-color="transparent" ontouchstart="event.preventDefault()" onmousedown="event.preventDefault()" onclick="selectHighlightColor(this)" title="Eraser"><i class="fa-solid fa-eraser"></i></button>
+                <button class="hl-btn hl-yellow" data-color="#fef08a" onclick="selectHighlightColor(this)" title="Yellow"></button>
+                <button class="hl-btn hl-green" data-color="#bbf7d0" onclick="selectHighlightColor(this)" title="Green"></button>
+                <button class="hl-btn hl-blue" data-color="#bfdbfe" onclick="selectHighlightColor(this)" title="Blue"></button>
+                <button class="hl-btn hl-pink" data-color="#fbcfe8" onclick="selectHighlightColor(this)" title="Pink"></button>
+                <button class="hl-btn hl-eraser" data-color="transparent" onclick="selectHighlightColor(this)" title="Eraser"><i class="fa-solid fa-eraser"></i></button>
                 <span class="highlight-hint" id="highlightHint">✏️ Mode ON — swipe across text, or select text first. Tap the colour again to stop.</span>
             </div>
 
@@ -1029,6 +1029,8 @@
                 // Highlighter toolbar is now always available in Reading Mode
                 document.getElementById('highlighterTools').style.display = 'flex';
                 STATE.armedColor = null; // start fresh every time reader opens
+                pendingSelectionRange = null;
+                pendingSelectionContainer = null;
                 updateHighlightSwatchUI();
 
                 const caseContentToRender = st.caseHtml || q.caseStudy;
@@ -1177,25 +1179,59 @@
                 if (hint) hint.classList.toggle('show', !!STATE.armedColor);
             }
 
+            // Mobile browsers often collapse a text selection the instant you touch
+            // another element (like a colour button), before the click handler runs.
+            // To avoid needing multiple taps, we continuously snapshot the last valid
+            // selection via 'selectionchange' and use that snapshot if the live
+            // selection has already collapsed by the time the tap registers.
+            let pendingSelectionRange = null;
+            let pendingSelectionContainer = null;
+            let pendingSelectionTime = 0;
+
+            document.addEventListener('selectionchange', () => {
+                const sel = window.getSelection();
+                if (sel && sel.rangeCount > 0 && !sel.isCollapsed) {
+                    const r = sel.getRangeAt(0);
+                    const c = getHighlightableContainer(r.commonAncestorContainer);
+                    if (c) {
+                        try {
+                            pendingSelectionRange = r.cloneRange();
+                            pendingSelectionContainer = c;
+                            pendingSelectionTime = Date.now();
+                        } catch (e) {}
+                    }
+                }
+            });
+
             // Tapping a colour: if text is already selected (long-press), highlight it immediately.
             // Otherwise, arm/disarm "pen" mode for swipe-highlighting.
             window.selectHighlightColor = function(btnEl) {
                 const color = btnEl.dataset.color;
-                const selection = window.getSelection();
-                const hasUsableSelection = selection && selection.rangeCount > 0 && !selection.isCollapsed &&
-                    getHighlightableContainer(selection.getRangeAt(0).commonAncestorContainer);
+                let range = null, container = null;
 
-                if (hasUsableSelection) {
-                    const range = selection.getRangeAt(0);
-                    const container = getHighlightableContainer(range.commonAncestorContainer);
+                const selection = window.getSelection();
+                if (selection && selection.rangeCount > 0 && !selection.isCollapsed) {
+                    const r = selection.getRangeAt(0);
+                    const c = getHighlightableContainer(r.commonAncestorContainer);
+                    if (c) { range = r; container = c; }
+                }
+                // Live selection already gone (collapsed by the tap) - fall back to snapshot
+                if (!range && pendingSelectionRange && (Date.now() - pendingSelectionTime < 4000)) {
+                    range = pendingSelectionRange;
+                    container = pendingSelectionContainer;
+                }
+
+                if (range) {
                     applyHighlightToRange(range, color, container);
-                    selection.removeAllRanges();
+                    if (selection) selection.removeAllRanges();
+                    pendingSelectionRange = null;
+                    pendingSelectionContainer = null;
                     STATE.armedColor = color; // keep the pen "picked up" for further swiping
                     updateHighlightSwatchUI();
                     return;
                 }
 
-                // No selection - arm or disarm swipe mode
+                // No selection at all - arm or disarm swipe mode
                 STATE.armedColor = (STATE.armedColor === color) ? null : color;
                 updateHighlightSwatchUI();
             };
