@@ -7,25 +7,26 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap');
 
         :root {
-            --bg: #f1f5f9;
+            /* Fintech Professional Palette */
+            --bg: #f8fafc;
             --surface: #ffffff;
             --text: #0f172a;
-            --text-secondary: #475569;
+            --text-secondary: #64748b;
             --border: #e2e8f0;
             --primary: #2563eb;
-            --primary-light: #dbeafe;
-            --correct: #059669;
-            --correct-bg: #d1fae5;
-            --wrong: #dc2626;
-            --wrong-bg: #fee2e2;
-            --marked: #d97706;
-            --marked-bg: #fef3c7;
+            --primary-light: #eff6ff;
+            --correct: #10b981;
+            --correct-bg: #ecfdf5;
+            --wrong: #ef4444;
+            --wrong-bg: #fef2f2;
+            --marked: #f59e0b;
+            --marked-bg: #fffbeb;
             --answered: #3b82f6;
-            --answered-bg: #dbeafe;
-            --unattempted: #94a3b8;
+            --unattempted: #cbd5e1;
+            --app-max-width: 600px;
         }
 
         * {
@@ -37,348 +38,243 @@
 
         html, body {
             height: 100%;
+            width: 100%;
             overflow: hidden;
             font-family: 'Inter', sans-serif;
             background: var(--bg);
             color: var(--text);
             user-select: none;
             -webkit-user-select: none;
-            transition: background 0.3s ease;
         }
 
-        /* Allow selection in reader mode & case study / question / options for highlighting */
+        /* Highlight Selection allowed areas */
         .reader-content, .case-study-box, #readerCaseStudy, .highlightable {
             user-select: text;
             -webkit-user-select: text;
         }
-        .highlightable {
-            touch-action: pan-y;
-        }
-        .user-highlight {
-            border-radius: 2px;
-        }
+        .highlightable { touch-action: pan-y; }
+        .user-highlight { border-radius: 2px; }
 
-        /* DEFAULT MOBILE CONTAINER */
+        /* ================= MOBILE NATIVE LAYOUT ================= */
         .app-container {
             display: flex;
             flex-direction: column;
             height: 100dvh;
-            max-width: 500px;
-            margin: 0 auto;
-            background: var(--bg);
-            position: relative;
-            transition: all 0.3s ease;
-        }
-
-        /* DESKTOP VIEW OVERRIDES */
-        body.desktop-view {
-            background: #cbd5e1;
-            padding: 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        body.desktop-view .app-container {
-            max-width: 1400px;
             width: 100%;
-            height: calc(100vh - 40px);
-            border-radius: 24px;
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
-            overflow: hidden;
-            background: var(--bg);
-            display: flex;
-            flex-direction: column;
-        }
-
-        body.desktop-view .header { margin: 16px 20px 0; padding: 14px 20px; }
-        body.desktop-view .bottom-nav { margin: 0 20px 20px; padding: 12px 20px; z-index: 10; }
-        
-        body.desktop-view .main-content { 
-            padding: 24px 32px; 
-            display: flex;
-            flex-direction: row;
-            gap: 32px;
-            height: 100%;
-            overflow: hidden;
-        }
-        
-        body.desktop-view #quizArea {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            gap: 24px;
-            max-width: 850px;
+            max-width: var(--app-max-width);
             margin: 0 auto;
-            height: 100%;
-            overflow-y: auto;
-            padding-right: 12px;
-            scrollbar-width: thin;
-        }
-
-        body.desktop-view #quizArea.has-case {
-            flex-direction: row;
-            max-width: 100%;
-            align-items: flex-start;
-        }
-
-        body.desktop-view #caseStudyContainer {
-            flex: 1;
-            max-width: 50%;
-            position: sticky;
-            top: 0;
-            max-height: 100%;
-            overflow-y: auto;
-            padding-right: 16px;
-            scrollbar-width: thin;
-        }
-
-        body.desktop-view .case-study-box {
-            max-height: none; 
-            font-size: 0.95rem; 
-            margin-bottom: 0;
-            padding: 24px;
-            line-height: 1.8;
-        }
-
-        body.desktop-view #questionAndOptionsContainer {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            max-width: 800px;
-            margin: 0 auto;
-            width: 100%;
-        }
-
-        body.desktop-view .question-text {
-            font-size: 1.05rem;
-            line-height: 1.7;
-        }
-
-        body.desktop-view .option-btn {
-            font-size: 0.95rem;
-            padding: 14px 18px;
-        }
-
-        /* Desktop Sidebar for Question Palette */
-        .desktop-sidebar-wrapper { display: contents; }
-        .desktop-sidebar-title { display: none; }
-        
-        body.desktop-view .desktop-sidebar-wrapper {
-            display: flex;
-            flex-direction: column;
-            width: 340px;
-            flex-shrink: 0;
             background: var(--surface);
-            border: 1px solid var(--border);
-            border-radius: 16px;
-            padding: 20px;
-            height: 100%;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.03);
-            animation: fadeIn 0.3s ease;
+            position: relative;
+            box-shadow: 0 0 20px rgba(0,0,0,0.05);
         }
 
-        body.desktop-view .desktop-sidebar-title {
-            display: block;
-            font-size: 1.05rem;
-            font-weight: 700;
-            color: var(--text);
-            margin-bottom: 16px;
-            padding-bottom: 12px;
-            border-bottom: 2px solid var(--border);
-            text-align: center;
-            font-family: 'Poppins', sans-serif;
+        .header { 
+            display: flex; align-items: center; justify-content: space-between; 
+            padding: 12px 16px; background: var(--surface); 
+            border-bottom: 1px solid var(--border); flex-shrink: 0; z-index: 10;
         }
-
-        body.desktop-view .dots-container {
-            flex: 1;
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(42px, 1fr));
-            gap: 8px;
-            align-content: start;
-            overflow-y: auto;
-            padding: 4px;
-            margin-top: 0;
-            scrollbar-width: thin;
-        }
-
-        body.desktop-view .dots-container::-webkit-scrollbar { display: block; width: 6px; }
-        body.desktop-view .dots-container::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
-        
-        body.desktop-view #btnPalette { display: none; }
-        body.desktop-view #endScreen { margin: auto; width: 100%; }
-
-        /* SCREENS */
-        .screen { display: none; height: 100%; width: 100%; flex-direction: column; overflow-y: auto; padding-bottom: 20px;}
-        .screen.active { display: flex; }
-
-        /* WELCOME SCREEN */
-        .welcome-header { padding: 40px 20px 20px; text-align: center; background: linear-gradient(135deg, #1e3a8a, #2563eb); color: white; border-radius: 0 0 30px 30px; box-shadow: 0 10px 25px rgba(37, 99, 235, 0.2); margin-bottom: 24px;}
-        .welcome-header h1 { font-family: 'Poppins', sans-serif; font-size: 1.8rem; font-weight: 800; line-height: 1.2; margin-bottom: 8px;}
-        .welcome-header p { font-size: 0.9rem; opacity: 0.9; }
-        
-        body.desktop-view .welcome-header { border-radius: 0; margin-bottom: 30px; padding: 60px 20px 40px; }
-        body.desktop-view .mode-cards { display: grid; grid-template-columns: repeat(3, 1fr); max-width: 1200px; margin: 0 auto; }
-        body.desktop-view .tools-section { max-width: 1200px; margin: 0 auto; grid-template-columns: repeat(3, 1fr); }
-
-        .mode-cards { padding: 0 20px; display: flex; flex-direction: column; gap: 12px; }
-        .mode-card { background: var(--surface); border: 2px solid var(--border); border-radius: 20px; padding: 20px; cursor: pointer; transition: all 0.2s; display: flex; align-items: center; gap: 16px; position: relative; overflow: hidden; }
-        .mode-card:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
-        .mode-card:active { transform: scale(0.97); }
-        .mode-card.easy { border-color: #a7f3d0; background: #ecfdf5; }
-        .mode-card.medium { border-color: #bfdbfe; background: #eff6ff; }
-        .mode-card.hard { border-color: #fca5a5; background: #fef2f2; }
-        .mode-icon { width: 50px; height: 50px; border-radius: 14px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; color: white; flex-shrink: 0; }
-        .easy .mode-icon { background: #10b981; }
-        .medium .mode-icon { background: #3b82f6; }
-        .hard .mode-icon { background: #ef4444; }
-        .mode-text h3 { font-family: 'Poppins', sans-serif; font-size: 1.1rem; font-weight: 700; color: #1e293b; margin-bottom: 4px;}
-        .mode-text p { font-size: 0.8rem; color: var(--text-secondary); line-height: 1.4; }
-
-        .tools-section { padding: 24px 20px; display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
-        .tool-btn { background: white; border: 1px solid var(--border); border-radius: 14px; padding: 16px; text-align: center; cursor: pointer; transition: 0.2s; box-shadow: 0 2px 5px rgba(0,0,0,0.02); }
-        .tool-btn:active { transform: scale(0.95); background: #f8fafc; }
-        .tool-btn i { font-size: 1.5rem; margin-bottom: 8px; color: var(--primary); }
-        .tool-btn h4 { font-size: 0.85rem; font-weight: 600; color: var(--text); }
-
-        /* HEADER */
-        .header { display: flex; align-items: center; justify-content: space-between; padding: 10px 14px; margin: 8px 10px 0; background: var(--surface); border-radius: 16px; border: 1px solid var(--border); flex-shrink: 0; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05); transition: all 0.3s ease;}
-        .header-left { display: flex; align-items: center; gap: 10px; }
-        .home-btn { width: 36px; height: 36px; border-radius: 10px; background: #f1f5f9; border: 1.5px solid var(--border); display: flex; align-items: center; justify-content: center; color: var(--text-secondary); cursor: pointer; font-size: 0.9rem; transition: 0.2s;}
-        .home-btn:active { transform: scale(0.9); background: #e2e8f0; }
-        .header-title h2 { font-size: 0.9rem; font-weight: 700; color: var(--text); line-height: 1.2; font-family: 'Poppins', sans-serif; }
-        .header-title p { font-size: 0.65rem; color: var(--text-secondary); text-transform: uppercase; font-weight: 600; letter-spacing: 0.5px;}
+        .header-left { display: flex; align-items: center; gap: 12px; }
+        .home-btn { width: 36px; height: 36px; border-radius: 10px; background: var(--bg); border: 1px solid var(--border); display: flex; align-items: center; justify-content: center; color: var(--text-secondary); cursor: pointer; transition: 0.2s;}
+        .home-btn:active { transform: scale(0.92); }
+        .header-title h2 { font-size: 0.95rem; font-weight: 700; color: var(--text); font-family: 'Poppins', sans-serif; }
+        .header-title p { font-size: 0.7rem; color: var(--text-secondary); font-weight: 500;}
         
         .header-actions { display: flex; gap: 8px; }
-        .icon-btn { width: 38px; height: 38px; border-radius: 10px; border: 1.5px solid var(--border); background: #f8fafc; display: flex; align-items: center; justify-content: center; cursor: pointer; font-size: 0.85rem; color: var(--text-secondary); transition: all 0.2s; position: relative; }
-        .icon-btn:active { transform: scale(0.94); background: #e2e8f0; }
-        .icon-btn.lifeline { background: #eff6ff; border-color: #93c5fd; color: var(--primary); }
-        .icon-btn.retake { background: #fef2f2; border-color: #fca5a5; color: #ef4444; }
-        .icon-btn.desktop-toggle { background: #f3e8ff; border-color: #d8b4fe; color: #9333ea; }
+        .icon-btn { width: 36px; height: 36px; border-radius: 10px; background: var(--bg); display: flex; align-items: center; justify-content: center; cursor: pointer; font-size: 0.9rem; color: var(--text-secondary); transition: 0.2s; border: 1px solid transparent; }
+        .icon-btn:active { transform: scale(0.92); background: var(--border); }
+        .icon-btn.desktop-toggle { color: #8b5cf6; background: #f5f3ff; }
 
-        /* MAIN CONTENT */
-        .main-content { flex: 1; overflow-y: auto; -webkit-overflow-scrolling: touch; padding: 10px; min-height: 0; position: relative;}
+        .main-content { 
+            flex: 1; overflow-y: auto; overflow-x: hidden; 
+            background: var(--bg); padding: 0; min-height: 0; 
+            -webkit-overflow-scrolling: touch; 
+        }
 
-        /* CASE STUDY BOX */
-        .case-study-box { background: #f8fafc; border: 1px solid var(--border); border-radius: 12px; padding: 12px 14px; margin-bottom: 12px; font-size: 0.85rem; line-height: 1.6; max-height: 25vh; overflow-y: auto; color: #334155; position: relative; border-left: 4px solid var(--primary); cursor: pointer; transition: 0.2s;}
-        .case-study-box:active { background: #f1f5f9; }
-        .case-study-box .case-label { color: var(--primary); font-weight: 700; font-size: 0.7rem; text-transform: uppercase; margin-bottom: 6px; letter-spacing: 0.5px; }
-        .expand-btn { position: absolute; top: 8px; right: 8px; width: 30px; height: 30px; border-radius: 8px; border: 1px solid var(--border); background: white; cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 0.8rem; color: var(--text-secondary); z-index: 5; pointer-events: none;}
-
-        /* QUESTION CARD */
-        .question-card { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 14px; margin-bottom: 10px; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04); position: relative; cursor: pointer; transition: 0.2s;}
-        .question-card:active { background: #f8fafc; }
-        .question-text { font-size: 0.9rem; line-height: 1.6; color: var(--text); padding-right: 30px; }
-        .question-text .q-number { color: var(--primary); font-weight: 700; font-size: 0.85rem; }
-        .question-expand-btn { position: absolute; top: 10px; right: 10px; width: 28px; height: 28px; border-radius: 6px; border: 1px solid var(--border); background: #f8fafc; cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 0.7rem; color: var(--text-secondary); transition: 0.2s; pointer-events: none;}
-        
-        /* OPTIONS */
-        .options-list { display: flex; flex-direction: column; gap: 8px; }
-        .option-btn { display: flex; align-items: flex-start; gap: 10px; width: 100%; padding: 12px 14px; background: var(--surface); border: 2px solid var(--border); border-radius: 12px; font-size: 0.88rem; cursor: pointer; text-align: left; transition: all 0.2s; line-height: 1.45; position: relative; }
-        .option-btn:hover:not(:disabled) { border-color: #94a3b8; }
-        .option-btn:active:not(:disabled) { transform: scale(0.98); border-color: var(--primary); }
-        .option-letter { width: 32px; height: 32px; border-radius: 8px; background: #f1f5f9; border: 1.5px solid var(--border); display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.8rem; flex-shrink: 0; color: var(--text-secondary); transition: all 0.2s; }
-        
-        .option-btn.correct { border-color: var(--correct) !important; background: var(--correct-bg) !important; animation: pulse-green 0.5s ease; }
-        .option-btn.correct .option-letter { background: #a7f3d0; border-color: var(--correct); color: var(--correct); }
-        .option-btn.wrong { border-color: var(--wrong) !important; background: var(--wrong-bg) !important; animation: shake 0.5s ease; }
-        .option-btn.wrong .option-letter { background: #fecaca; border-color: var(--wrong); color: var(--wrong); }
-        .option-btn.selected { border-color: var(--marked) !important; background: var(--marked-bg) !important; box-shadow: 0 0 0 3px rgba(217, 119, 6, 0.15); }
-        .option-btn.selected .option-letter { background: #fde68a; border-color: var(--marked); color: #92400e; }
-        .option-btn:disabled { cursor: default; opacity: 0.9; }
-
-        @keyframes pulse-green { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.02); } }
-        @keyframes shake { 0%, 100% { transform: translateX(0); } 25% { transform: translateX(-5px); } 75% { transform: translateX(5px); } }
-
-        /* DOTS NAVIGATION */
-        .dots-container { display: flex; gap: 7px; overflow-x: auto; padding: 12px 2px; -webkit-overflow-scrolling: touch; scrollbar-width: none; margin-top: 10px;}
-        .dots-container::-webkit-scrollbar { display: none; }
-        .dot-btn { min-width: 40px; width: 40px; height: 40px; border-radius: 10px; border: 2px solid var(--border); background: var(--surface); font-size: 0.75rem; font-weight: 700; display: flex; align-items: center; justify-content: center; flex-shrink: 0; cursor: pointer; position: relative; color: var(--text-secondary); transition: all 0.2s; }
-        .dot-btn:active { transform: scale(0.9); }
-        .dot-btn.current { border-color: var(--primary); background: #eff6ff; color: var(--primary); box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.2); transform: scale(1.08); }
-        .dot-btn.correct-answer { background: #d1fae5 !important; border-color: #059669 !important; color: #065f46 !important; }
-        .dot-btn.wrong-answer { background: #fee2e2 !important; border-color: #dc2626 !important; color: #991b1b !important; }
-        .dot-btn.attempted { background: #dbeafe !important; border-color: #3b82f6 !important; color: #1e40af !important; }
-        .bookmark-indicator { position: absolute; top: -4px; right: -4px; width: 12px; height: 12px; background: var(--marked); border-radius: 50%; border: 2px solid white; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2); }
-
-        /* BOTTOM NAV */
-        .bottom-nav { display: flex; align-items: center; justify-content: space-between; gap: 6px; padding: 8px 10px; margin: 0 10px 10px; background: var(--surface); border-radius: 16px; border: 1px solid var(--border); flex-shrink: 0; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05); transition: all 0.3s ease;}
-        .nav-btn { width: 42px; height: 42px; border-radius: 10px; border: 1.5px solid var(--border); background: #f8fafc; display: flex; align-items: center; justify-content: center; cursor: pointer; font-size: 0.95rem; color: var(--text-secondary); transition: all 0.2s; flex-shrink: 0; }
-        .nav-btn:active { background: #e2e8f0; transform: scale(0.93); }
-        .nav-btn.next-btn { background: var(--primary); color: white; border-color: var(--primary); font-size: 1rem; }
+        /* Bottom Nav - Native App Style */
+        .bottom-nav { 
+            display: flex; align-items: center; justify-content: space-between; 
+            padding: 10px 16px; padding-bottom: calc(10px + env(safe-area-inset-bottom));
+            background: var(--surface); border-top: 1px solid var(--border); 
+            flex-shrink: 0; z-index: 10; gap: 8px;
+        }
+        .nav-btn { flex: 1; max-width: 60px; height: 44px; border-radius: 12px; background: var(--bg); display: flex; align-items: center; justify-content: center; cursor: pointer; font-size: 1rem; color: var(--text-secondary); transition: 0.2s; border: none;}
+        .nav-btn:active { transform: scale(0.95); background: var(--border); }
+        .nav-btn.next-btn { background: var(--primary); color: white; flex: 1.5; max-width: 100px; font-weight: 600;}
         .nav-btn.next-btn:active { background: #1d4ed8; }
-        .score-badge { font-size: 0.85rem; font-weight: 700; color: var(--primary); background: #eff6ff; padding: 8px 14px; border-radius: 10px; border: 1.5px solid #bfdbfe; white-space: nowrap; }
+        .score-badge { font-size: 0.9rem; font-weight: 700; color: var(--primary); font-family: 'Poppins', sans-serif; }
 
-        /* MODALS & SHEETS */
-        .modal-overlay { position: fixed; inset: 0; background: rgba(15, 23, 42, 0.7); display: flex; align-items: center; justify-content: center; z-index: 200; padding: 20px; backdrop-filter: blur(4px); }
-        .modal-card { background: white; border-radius: 20px; padding: 24px; max-width: 400px; width: 100%; text-align: center; box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2); max-height: 90vh; overflow-y: auto; display: flex; flex-direction: column; }
-        .modal-card h3 { font-size: 1.25rem; font-weight: 800; margin-bottom: 12px; }
-        .modal-card .modal-body { font-size: 0.95rem; color: var(--text-secondary); margin-bottom: 20px; line-height: 1.6; text-align: left; background: #f8fafc; padding: 16px; border-radius: 12px; border: 1px solid var(--border); }
-        .modal-card button.btn-primary { width: 100%; padding: 14px; background: var(--primary); color: white; border: none; border-radius: 12px; font-weight: 600; font-size: 0.95rem; cursor: pointer; transition: 0.2s;}
-        .modal-card button.btn-primary:active { background: #1d4ed8; transform: scale(0.98); }
+        /* Quiz Elements */
+        #quizArea { padding: 16px; display: flex; flex-direction: column; gap: 16px; }
+        
+        .case-study-box { 
+            background: var(--primary-light); border-radius: 16px; padding: 16px; 
+            font-size: 0.85rem; line-height: 1.6; max-height: 25vh; overflow-y: auto; 
+            color: var(--text); border-left: 4px solid var(--primary); cursor: pointer; position: relative;
+        }
+        .case-study-box .case-label { color: var(--primary); font-weight: 700; font-size: 0.75rem; margin-bottom: 8px; font-family: 'Poppins', sans-serif;}
+        
+        .question-card { background: transparent; padding: 0 4px; cursor: pointer; }
+        .question-text { font-size: 1rem; line-height: 1.6; font-weight: 500; color: var(--text); }
+        .question-text .q-number { color: var(--primary); font-weight: 700; margin-right: 4px; }
+        
+        .options-list { display: flex; flex-direction: column; gap: 10px; margin-top: 8px;}
+        .option-btn { 
+            display: flex; align-items: flex-start; gap: 12px; width: 100%; 
+            padding: 14px 16px; background: var(--surface); border: 1px solid var(--border); 
+            border-radius: 16px; font-size: 0.9rem; font-weight: 500; cursor: pointer; 
+            text-align: left; transition: all 0.2s; line-height: 1.5; box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+        }
+        .option-letter { 
+            width: 28px; height: 28px; border-radius: 8px; background: var(--bg); 
+            display: flex; align-items: center; justify-content: center; font-weight: 700; 
+            font-size: 0.8rem; flex-shrink: 0; color: var(--text-secondary); transition: 0.2s; 
+        }
+        
+        .option-btn.correct { border-color: var(--correct); background: var(--correct-bg); color: #064e3b; box-shadow: none;}
+        .option-btn.correct .option-letter { background: var(--correct); color: white; }
+        .option-btn.wrong { border-color: var(--wrong); background: var(--wrong-bg); color: #7f1d1d; box-shadow: none;}
+        .option-btn.wrong .option-letter { background: var(--wrong); color: white; }
+        .option-btn.selected { border-color: var(--primary); background: var(--primary-light); }
+        .option-btn.selected .option-letter { background: var(--primary); color: white; }
+        .option-btn:disabled { cursor: default; }
 
-        /* BOTTOM SHEET */
-        .bottom-sheet { position: fixed; inset: 0; top: auto; background: white; border-radius: 24px 24px 0 0; max-height: 85vh; overflow-y: auto; z-index: 180; padding: 20px; box-shadow: 0 -8px 40px rgba(0, 0, 0, 0.15); transform: translateY(100%); transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1); }
+        /* ================= DESKTOP / LAPTOP ENHANCED LAYOUT ================= */
+        body.desktop-view { background: #cbd5e1; padding: 0; }
+        body.desktop-view .app-container {
+            max-width: 100vw; width: 100vw; height: 100vh; border-radius: 0;
+            display: grid; grid-template-columns: 1fr 320px; grid-template-rows: 60px 1fr;
+            background: var(--bg);
+        }
+
+        body.desktop-view .header { grid-column: 1 / 3; grid-row: 1; padding: 0 24px; box-shadow: 0 1px 4px rgba(0,0,0,0.05); border-bottom: none;}
+        body.desktop-view .main-content { grid-column: 1; grid-row: 2; padding: 24px; height: 100%; display: flex; justify-content: center; }
+        
+        body.desktop-view #quizArea { flex-direction: row; gap: 32px; max-width: 1200px; width: 100%; padding: 0;}
+        body.desktop-view #quizArea.has-case #caseStudyContainer { display: block; flex: 1; max-width: 45%; position: sticky; top: 0; height: calc(100vh - 120px); overflow-y: auto; }
+        body.desktop-view #quizArea.has-case #questionAndOptionsContainer { flex: 1; max-width: 55%; }
+        
+        body.desktop-view #caseStudyContainer { display: none; }
+        body.desktop-view .case-study-box { max-height: none; height: 100%; font-size: 0.95rem; line-height: 1.8; border-radius: 20px;}
+        body.desktop-view #questionAndOptionsContainer { width: 100%; max-width: 800px; margin: 0 auto; }
+        body.desktop-view .question-text { font-size: 1.15rem; line-height: 1.8; margin-bottom: 24px;}
+        body.desktop-view .option-btn { font-size: 1rem; padding: 18px 20px; border-radius: 16px;}
+        
+        body.desktop-view .bottom-nav { display: none; } /* Hide bottom nav on true desktop */
+        
+        /* Desktop Sidebar Palette */
+        .desktop-sidebar-wrapper { display: none; }
+        body.desktop-view .desktop-sidebar-wrapper {
+            display: flex; flex-direction: column; grid-column: 2; grid-row: 2;
+            background: var(--surface); border-left: 1px solid var(--border);
+            padding: 24px 20px; height: 100%; overflow-y: auto; box-shadow: -4px 0 15px rgba(0,0,0,0.02);
+        }
+        body.desktop-view .desktop-sidebar-title { font-size: 1.1rem; font-weight: 700; margin-bottom: 20px; font-family: 'Poppins'; }
+        
+        /* Desktop specific Nav overrides inside Sidebar */
+        .desktop-nav-controls { display: flex; gap: 12px; margin-top: auto; padding-top: 20px; border-top: 1px solid var(--border); }
+        .desktop-nav-controls button { flex: 1; padding: 14px; border-radius: 12px; border: none; font-weight: 600; cursor: pointer; transition: 0.2s;}
+        .desktop-nav-controls .btn-prev { background: var(--bg); color: var(--text); }
+        .desktop-nav-controls .btn-next { background: var(--primary); color: white; }
+
+        /* ================= SHARED COMPONENTS ================= */
+        .dots-container { display: grid; grid-template-columns: repeat(auto-fill, minmax(42px, 1fr)); gap: 10px; align-content: start; }
+        .dot-btn { 
+            aspect-ratio: 1; border-radius: 12px; border: 1px solid var(--border); background: var(--surface); 
+            font-size: 0.8rem; font-weight: 600; display: flex; align-items: center; justify-content: center; 
+            cursor: pointer; position: relative; color: var(--text-secondary); transition: 0.2s; 
+        }
+        .dot-btn:active { transform: scale(0.9); }
+        .dot-btn.current { border-color: var(--primary); background: var(--primary-light); color: var(--primary); box-shadow: 0 0 0 2px rgba(37,99,235,0.3); font-weight: 700;}
+        .dot-btn.correct-answer { background: var(--correct-bg); border-color: var(--correct); color: var(--correct); }
+        .dot-btn.wrong-answer { background: var(--wrong-bg); border-color: var(--wrong); color: var(--wrong); }
+        .dot-btn.attempted { background: var(--primary-light); border-color: var(--primary); color: var(--primary); }
+        .bookmark-indicator { position: absolute; top: -4px; right: -4px; width: 12px; height: 12px; background: var(--marked); border-radius: 50%; border: 2px solid white; }
+
+        /* Modals & Sheets */
+        .modal-overlay { position: fixed; inset: 0; background: rgba(15, 23, 42, 0.6); display: flex; align-items: center; justify-content: center; z-index: 200; padding: 20px; backdrop-filter: blur(2px); }
+        .modal-card { background: white; border-radius: 24px; padding: 24px; max-width: 420px; width: 100%; display: flex; flex-direction: column; box-shadow: 0 25px 50px -12px rgba(0,0,0,0.25); }
+        .modal-card h3 { font-size: 1.25rem; font-weight: 700; font-family: 'Poppins', sans-serif; margin-bottom: 16px; }
+        .modal-body { font-size: 0.95rem; color: var(--text-secondary); margin-bottom: 24px; line-height: 1.6; background: var(--bg); padding: 16px; border-radius: 16px; }
+        .btn-primary { width: 100%; padding: 16px; background: var(--primary); color: white; border: none; border-radius: 14px; font-weight: 600; font-size: 1rem; cursor: pointer; transition: 0.2s; font-family: 'Inter', sans-serif;}
+        .btn-primary:active { transform: scale(0.98); background: #1d4ed8; }
+
+        .bottom-sheet { position: fixed; inset: 0; top: auto; background: white; border-radius: 24px 24px 0 0; max-height: 85vh; overflow-y: auto; z-index: 180; padding: 20px; box-shadow: 0 -10px 40px rgba(0,0,0,0.1); transform: translateY(100%); transition: transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1); }
         .bottom-sheet.show { transform: translateY(0); }
-        .sheet-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; position: sticky; top: 0; background: white; padding-bottom: 12px; z-index: 1; border-bottom: 1px solid var(--border); }
-        .sheet-header h3 { font-size: 1.15rem; font-weight: 700; font-family: 'Poppins', sans-serif;}
-        .close-btn { width: 40px; height: 40px; border-radius: 50%; border: 1.5px solid var(--border); background: #f8fafc; font-size: 1.4rem; cursor: pointer; display: flex; align-items: center; justify-content: center; color: var(--text-secondary); transition: all 0.2s; }
-        .close-btn:active { background: #fee2e2; color: #ef4444; border-color: #fca5a5; transform: scale(0.9); }
+        .sheet-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; position: sticky; top: 0; background: white; padding-bottom: 12px; z-index: 1; border-bottom: 1px solid var(--border); }
+        .sheet-header h3 { font-size: 1.1rem; font-weight: 700; font-family: 'Poppins', sans-serif; }
+        .close-btn { width: 36px; height: 36px; border-radius: 50%; background: var(--bg); font-size: 1.2rem; cursor: pointer; display: flex; align-items: center; justify-content: center; color: var(--text-secondary); transition: 0.2s; border: none;}
+        .close-btn:active { background: var(--wrong-bg); color: var(--wrong); }
 
-        /* FULLSCREEN READER */
-        .fullscreen-reader { position: fixed; inset: 0; background: white; z-index: 250; display: none; flex-direction: column; padding: 16px; animation: fadeIn 0.2s ease;}
-        .fullscreen-reader .reader-header { display: flex; justify-content: space-between; align-items: center; padding-bottom: 12px; border-bottom: 1px solid var(--border); margin-bottom: 16px; gap: 10px; flex-wrap: wrap;}
-        .fullscreen-reader .reader-content { flex: 1; overflow-y: auto; padding: 8px; max-width: 800px; margin: 0 auto; width: 100%;}
+        /* Fullscreen Reader */
+        .fullscreen-reader { position: fixed; inset: 0; background: var(--surface); z-index: 250; display: none; flex-direction: column; animation: fadeIn 0.2s ease;}
+        .fullscreen-reader .reader-header { display: flex; justify-content: space-between; align-items: center; padding: 12px 16px; border-bottom: 1px solid var(--border); background: var(--surface); box-shadow: 0 2px 10px rgba(0,0,0,0.02); gap: 10px; flex-wrap: wrap;}
+        .fullscreen-reader .reader-content { flex: 1; overflow-y: auto; padding: 20px; max-width: 800px; margin: 0 auto; width: 100%;}
         @keyframes fadeIn { from{opacity:0;} to{opacity:1;} }
-        
-        /* HIGHLIGHTER TOOLBAR & NOTES BUTTON */
-        .highlighter-tools { display: flex; gap: 8px; align-items: center; background: #f8fafc; padding: 6px 10px; border-radius: 18px; border: 1px solid var(--border); flex-wrap: wrap; }
-        .hl-btn { width: 28px; height: 28px; border-radius: 50%; border: 2px solid white; cursor: pointer; box-shadow: 0 1px 3px rgba(0,0,0,0.15); transition: transform 0.15s, box-shadow 0.15s; display: flex; align-items: center; justify-content: center; touch-action: manipulation; }
-        .hl-btn:active { transform: scale(0.9); }
-        .hl-btn.armed { transform: scale(1.22); box-shadow: 0 0 0 3px rgba(37,99,235,0.55), 0 1px 3px rgba(0,0,0,0.15); }
-        .hl-yellow { background: #fef08a; }
-        .hl-green { background: #bbf7d0; }
-        .hl-blue { background: #bfdbfe; }
-        .hl-pink { background: #fbcfe8; }
-        .hl-eraser { background: #f1f5f9; border: 2px solid var(--border); color: #64748b; font-size: 0.8rem; box-shadow: none; }
-        .hl-eraser.armed { box-shadow: 0 0 0 3px rgba(220,38,38,0.45); }
-        
-        .toolbar-notes-btn { background: #eff6ff; border: 1px solid #bfdbfe; color: var(--primary); font-size: 0.85rem; position: relative; box-shadow: none;}
+
+        /* Highlighter & Notes Toolbar */
+        .highlighter-tools { display: flex; gap: 8px; align-items: center; background: var(--bg); padding: 6px 12px; border-radius: 20px; flex-wrap: wrap; }
+        .hl-btn { width: 30px; height: 30px; border-radius: 50%; border: 2px solid white; cursor: pointer; box-shadow: 0 2px 4px rgba(0,0,0,0.1); display: flex; align-items: center; justify-content: center; touch-action: manipulation; transition: 0.2s;}
+        .hl-btn.armed { transform: scale(1.15); box-shadow: 0 0 0 3px rgba(37,99,235,0.4); }
+        .hl-yellow { background: #fef08a; } .hl-green { background: #bbf7d0; } .hl-blue { background: #bfdbfe; } .hl-pink { background: #fbcfe8; }
+        .hl-eraser { background: var(--surface); border-color: var(--border); color: var(--text-secondary); font-size: 0.85rem; }
+        .toolbar-notes-btn { background: var(--primary-light); border-color: #bfdbfe; color: var(--primary); font-size: 0.85rem; position: relative;}
         .notes-badge { position: absolute; top: -2px; right: -2px; width: 10px; height: 10px; background: var(--marked); border-radius: 50%; border: 2px solid white; display: none; }
         .notes-badge.show { display: block; }
-        
-        .highlight-hint { width: 100%; font-size: 0.68rem; color: var(--primary); font-weight: 600; padding: 2px 2px 0; display: none; }
+        .highlight-hint { width: 100%; font-size: 0.7rem; color: var(--primary); font-weight: 600; padding-top: 4px; display: none; }
         .highlight-hint.show { display: block; }
 
-        /* LIFELINE DROPDOWN */
-        .lifeline-dropdown { display: none; position: absolute; top: 65px; right: 16px; background: white; border: 1px solid var(--border); border-radius: 14px; padding: 8px; z-index: 220; box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15); min-width: 170px; }
-        .lifeline-dropdown button { display: flex; align-items: center; gap: 10px; width: 100%; padding: 12px 14px; border: none; background: none; font-size: 0.85rem; cursor: pointer; text-align: left; border-radius: 8px; font-weight: 600; color: #334155; transition: background 0.15s; }
-        .lifeline-dropdown button:active { background: #f1f5f9; }
+        /* CREATIVE YT TOAST (Bottom positioned) */
+        .yt-toast { 
+            position: fixed; bottom: 80px; left: 50%; transform: translateX(-50%) translateY(150%); 
+            background: rgba(15, 23, 42, 0.95); backdrop-filter: blur(8px);
+            border: 1px solid rgba(255,255,255,0.1); border-radius: 20px; padding: 14px 18px; 
+            z-index: 1000; display: flex; align-items: center; gap: 14px; 
+            box-shadow: 0 10px 40px rgba(0,0,0,0.25); transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1); 
+            width: 92%; max-width: 400px; color: white;
+        }
+        body.desktop-view .yt-toast { bottom: 30px; left: 30px; transform: translateX(-150%); width: auto; max-width: 380px;}
+        body.desktop-view .yt-toast.show { transform: translateX(0); }
+        .yt-toast.show { transform: translateX(-50%) translateY(0); }
+        .yt-toast i.fa-youtube { color: #ff0000; font-size: 2.2rem; filter: drop-shadow(0 0 8px rgba(255,0,0,0.4));}
+        .yt-toast-content { flex: 1; }
+        .yt-toast-title { font-weight: 700; font-size: 0.95rem; margin-bottom: 2px; font-family:'Poppins';}
+        .yt-toast-desc { font-size: 0.75rem; color: #cbd5e1; line-height: 1.4; }
+        .yt-toast-close { width: 28px; height: 28px; border-radius: 50%; background: rgba(255,255,255,0.1); border: none; color: white; cursor: pointer; display: flex; align-items: center; justify-content: center;}
 
-        /* ANALYTICS */
-        .stat-box { background: white; border: 1px solid var(--border); border-radius: 16px; padding: 16px; text-align: center; }
-        .stat-val { font-size: 1.8rem; font-weight: 800; font-family: 'Poppins', sans-serif; margin-bottom: 4px; }
-        .stat-label { font-size: 0.75rem; color: var(--text-secondary); text-transform: uppercase; font-weight: 600; letter-spacing: 0.5px;}
+        /* Welcome Screen & Cards */
+        .welcome-header { padding: 40px 24px; text-align: center; background: white; border-bottom: 1px solid var(--border); margin-bottom: 16px;}
+        .welcome-header h1 { font-family: 'Poppins'; font-size: 1.6rem; font-weight: 800; color: var(--text); margin-bottom: 6px;}
+        .welcome-header p { font-size: 0.9rem; color: var(--text-secondary); }
+        
+        .mode-cards { padding: 0 16px; display: flex; flex-direction: column; gap: 12px; }
+        .mode-card { background: white; border: 1px solid var(--border); border-radius: 16px; padding: 18px; cursor: pointer; display: flex; align-items: center; gap: 16px; transition: 0.2s; box-shadow: 0 2px 8px rgba(0,0,0,0.02);}
+        .mode-card:active { transform: scale(0.98); background: var(--bg); }
+        .mode-icon { width: 48px; height: 48px; border-radius: 14px; display: flex; align-items: center; justify-content: center; font-size: 1.4rem; flex-shrink: 0; }
+        .easy .mode-icon { background: #d1fae5; color: #059669; }
+        .medium .mode-icon { background: #dbeafe; color: #2563eb; }
+        .hard .mode-icon { background: #fee2e2; color: #dc2626; }
+        .mode-text h3 { font-family: 'Poppins'; font-size: 1.05rem; font-weight: 700; color: var(--text); margin-bottom: 4px;}
+        .mode-text p { font-size: 0.8rem; color: var(--text-secondary); line-height: 1.4; }
 
-        /* LOADER */
+        .tools-section { padding: 24px 16px; display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+        .tool-btn { background: white; border: 1px solid var(--border); border-radius: 14px; padding: 16px; text-align: center; cursor: pointer; transition: 0.2s; }
+        .tool-btn:active { transform: scale(0.96); background: var(--bg); }
+        .tool-btn i { font-size: 1.4rem; color: var(--primary); margin-bottom: 8px; }
+        .tool-btn h4 { font-size: 0.8rem; font-weight: 600; color: var(--text); }
+
+        .yt-footer { text-align: center; padding: 24px 20px; margin-top: auto; background: white; border-top: 1px solid var(--border); }
+        .yt-footer a { display: inline-flex; align-items: center; gap: 10px; color: var(--text); text-decoration: none; font-weight: 600; font-size: 0.85rem; padding: 12px 20px; background: #fff1f2; border: 1px solid #fecdd3; border-radius: 30px;}
+        
+        .screen { display: none; height: 100%; width: 100%; flex-direction: column; }
+        .screen.active { display: flex; }
+        
         .loader-overlay { position: fixed; inset: 0; background: rgba(255,255,255,0.9); z-index: 999; display: flex; flex-direction: column; align-items: center; justify-content: center; display: none;}
         .spinner { width: 40px; height: 40px; border: 4px solid var(--primary-light); border-top: 4px solid var(--primary); border-radius: 50%; animation: spin 1s linear infinite; margin-bottom: 16px; }
-        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
-
-        /* YT APPEAL COMPONENTS */
-        .yt-toast { position: fixed; top: 20px; left: 50%; transform: translateX(-50%) translateY(-150%); background: white; border: 2px solid #ef4444; border-radius: 16px; padding: 16px; z-index: 1000; display: flex; align-items: center; gap: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.15); transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275); width: 90%; max-width: 400px; }
-        .yt-toast.show { transform: translateX(-50%) translateY(0); }
-        .yt-toast-content { flex: 1; }
-        .yt-toast-title { font-weight: 700; font-size: 0.95rem; color: #0f172a; margin-bottom: 4px; display:flex; align-items:center; gap:6px;}
-        .yt-toast-desc { font-size: 0.8rem; color: #475569; line-height: 1.4; }
-        .yt-toast-close { width: 28px; height: 28px; border-radius: 50%; background: #f1f5f9; display: flex; align-items: center; justify-content: center; font-size: 0.8rem; color: #64748b; border: none; cursor: pointer; transition: 0.2s;}
-        .yt-toast-close:active { transform: scale(0.9); background: #e2e8f0; }
+        @keyframes spin { 100% { transform: rotate(360deg); } }
         
-        .yt-footer { text-align: center; padding: 24px 20px; margin-top: auto; background: var(--surface); border-top: 1px solid var(--border); }
-        .yt-footer a { display: inline-flex; align-items: center; justify-content: center; gap: 8px; color: var(--text); text-decoration: none; font-weight: 600; font-size: 0.85rem; padding: 12px 20px; background: #fff1f2; border: 1px solid #fecdd3; border-radius: 30px; transition: 0.2s; max-width: 100%; line-height: 1.4;}
-        .yt-footer a:active { transform: scale(0.95); background: #ffe4e6; }
-        .yt-footer a i { color: #ef4444; font-size: 1.4rem; }
-
+        .lifeline-dropdown { display: none; position: absolute; top: 60px; right: 16px; background: white; border: 1px solid var(--border); border-radius: 16px; padding: 8px; z-index: 220; box-shadow: 0 10px 25px rgba(0,0,0,0.1); min-width: 180px; }
+        .lifeline-dropdown button { display: flex; align-items: center; gap: 12px; width: 100%; padding: 12px; border: none; background: none; font-size: 0.9rem; cursor: pointer; text-align: left; border-radius: 10px; font-weight: 600; color: var(--text); transition: 0.15s; }
+        .lifeline-dropdown button:active { background: var(--bg); }
     </style>
 </head>
 <body>
@@ -392,32 +288,32 @@
     <div class="app-container" id="appContainer">
         
         <!-- ================= WELCOME SCREEN ================= -->
-        <div id="welcomeScreen" class="screen active">
+        <div id="welcomeScreen" class="screen active" style="background: var(--bg); overflow-y: auto;">
             <div class="welcome-header">
-                <h1>CA Final Audit</h1>
-                <p>Master your concepts with the Pro Simulator</p>
+                <h1>CA Final Audit Pro</h1>
+                <p>Master concepts with intelligent simulation</p>
             </div>
             
             <div class="mode-cards" style="flex:1;">
                 <div class="mode-card easy" onclick="startApp('easy')">
                     <div class="mode-icon"><i class="fa-solid fa-seedling"></i></div>
                     <div class="mode-text">
-                        <h3>Easy Set</h3>
-                        <p>Core concepts & direct MCQs. Great for building basics.</p>
+                        <h3>Core Basics</h3>
+                        <p>Direct MCQs for strong foundation.</p>
                     </div>
                 </div>
                 <div class="mode-card medium" onclick="startApp('medium')">
                     <div class="mode-icon"><i class="fa-solid fa-fire"></i></div>
                     <div class="mode-text">
-                        <h3>Medium Set</h3>
-                        <p>Advanced standard questions. Test your application.</p>
+                        <h3>Advanced Application</h3>
+                        <p>Standard exam-level challenges.</p>
                     </div>
                 </div>
                 <div class="mode-card hard" onclick="startApp('hard')">
                     <div class="mode-icon"><i class="fa-solid fa-briefcase"></i></div>
                     <div class="mode-text">
-                        <h3>Case Studies</h3>
-                        <p>Complex scenario-based challenges. Exam level.</p>
+                        <h3>Case Scenarios</h3>
+                        <p>Complex integrated case studies.</p>
                     </div>
                 </div>
             </div>
@@ -429,101 +325,58 @@
                 </div>
                 <div class="tool-btn" onclick="exportData()">
                     <i class="fa-solid fa-cloud-arrow-down"></i>
-                    <h4>Backup DB</h4>
+                    <h4>Backup</h4>
                 </div>
                 <div class="tool-btn" onclick="document.getElementById('importFile').click()" style="grid-column: span 2;">
-                    <i class="fa-solid fa-cloud-arrow-up"></i>
-                    <h4>Restore Progress from File</h4>
+                    <i class="fa-solid fa-clock-rotate-left"></i>
+                    <h4>Restore Progress</h4>
                 </div>
             </div>
             
             <div class="yt-footer">
                 <a href="https://youtube.com/@observe_with_satyam?si=8p90ukUsKvLJaZvh" target="_blank">
-                    <i class="fa-brands fa-youtube"></i>
-                    <span>Observe with Satyam<br><span style="font-size:0.75rem; color: #475569; font-weight:500;">Made with love for you, support ❤️</span></span>
-                </a>
-            </div>
-        </div>
-
-        <!-- ================= ANALYTICS SCREEN ================= -->
-        <div id="analyticsScreen" class="screen" style="background: white;">
-            <div class="sheet-header" style="padding: 16px 20px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); margin-bottom: 20px;">
-                <h3>📊 Performance Analytics</h3>
-                <button class="close-btn" onclick="goHome()"><i class="fa-solid fa-xmark"></i></button>
-            </div>
-            
-            <div style="padding: 0 20px; max-width: 800px; margin: 0 auto; width: 100%; flex: 1;">
-                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 12px;">
-                    <div class="stat-box" style="border-color: #bfdbfe; background: #eff6ff;">
-                        <div class="stat-val" style="color: var(--primary);" id="statTotal">0</div>
-                        <div class="stat-label">Total Attempted</div>
+                    <i class="fa-brands fa-youtube" style="color: #ef4444; font-size:1.4rem;"></i>
+                    <div style="text-align: left; line-height: 1.2;">
+                        <span>Observe with Satyam</span><br>
+                        <span style="font-size:0.7rem; color: #64748b; font-weight:500;">Made with love. Support the channel ❤️</span>
                     </div>
-                    <div class="stat-box" style="border-color: #a7f3d0; background: #ecfdf5;">
-                        <div class="stat-val" style="color: var(--correct);" id="statAcc">0%</div>
-                        <div class="stat-label">Overall Accuracy</div>
-                    </div>
-                    <div class="stat-box" style="border-color: #a7f3d0;">
-                        <div class="stat-val" style="color: var(--correct);" id="statRight">0</div>
-                        <div class="stat-label">Correct Answers</div>
-                    </div>
-                    <div class="stat-box" style="border-color: #fca5a5;">
-                        <div class="stat-val" style="color: var(--wrong);" id="statWrong">0</div>
-                        <div class="stat-label">Wrong Answers</div>
-                    </div>
-                </div>
-                
-                <h4 style="margin: 24px 0 12px; font-weight: 700;">Set Performance</h4>
-                <div id="setStatsBreakdown" style="display: flex; flex-direction: column; gap: 10px; margin-bottom: 30px;">
-                    <!-- Injected by JS -->
-                </div>
-            </div>
-
-            <div class="yt-footer" style="background: white; border-top: none;">
-                <a href="https://youtube.com/@observe_with_satyam?si=8p90ukUsKvLJaZvh" target="_blank">
-                    <i class="fa-brands fa-youtube"></i>
-                    <span>Watch Latest Videos on Observe with Satyam<br><span style="font-size:0.75rem; color: #475569; font-weight:500;">Support the creator ❤️</span></span>
                 </a>
             </div>
         </div>
 
         <!-- ================= MAIN QUIZ APP ================= -->
-        <div id="quizScreen" class="screen" style="overflow: hidden;">
+        <div id="quizScreen" class="screen">
             
             <div class="header">
                 <div class="header-left">
-                    <button class="home-btn" onclick="goHome()" title="Back to Home"><i class="fa-solid fa-house"></i></button>
+                    <button class="home-btn" onclick="goHome()" title="Back"><i class="fa-solid fa-arrow-left"></i></button>
                     <div class="header-title">
-                        <h2>FINAL AUDIT</h2>
-                        <p id="currentModeLabel">Mode: Easy</p>
+                        <h2>AUDIT PRO</h2>
+                        <p id="currentModeLabel">Module</p>
                     </div>
                 </div>
                 <div class="header-actions">
-                    <button class="icon-btn desktop-toggle" id="desktopToggleBtn" title="Toggle Desktop View" onclick="toggleDesktopView()">
+                    <button class="icon-btn desktop-toggle" id="desktopToggleBtn" title="Toggle Desktop" onclick="toggleDesktopView()">
                         <i class="fa-solid fa-desktop" id="desktopToggleIcon"></i>
                     </button>
-                    <button class="icon-btn" id="bookmarkBtn" title="Mark for review">
-                        <i class="fa-regular fa-bookmark" id="bookmarkIcon" style="color:#94a3b8;"></i>
+                    <button class="icon-btn" id="bookmarkBtn" title="Bookmark">
+                        <i class="fa-regular fa-bookmark" id="bookmarkIcon"></i>
                     </button>
-                    <button class="icon-btn lifeline" id="lifelineBtn" title="Lifelines">
+                    <button class="icon-btn" id="lifelineBtn" title="Tools" style="color:var(--primary); background:var(--primary-light);">
                         <i class="fa-solid fa-wand-magic-sparkles"></i>
-                    </button>
-                    <button class="icon-btn retake" title="Retake Set" onclick="retakeQuiz()">
-                        <i class="fa-solid fa-rotate-right"></i>
                     </button>
                 </div>
             </div>
 
-            <!-- LIFELINES -->
             <div id="lifelineDropdown" class="lifeline-dropdown">
-                <button id="btn5050">🎯 <span>50:50 Eliminator</span></button>
-                <button id="btnExpert">👔 <span>Direct Explanation</span></button>
+                <button id="btn5050"><i class="fa-solid fa-circle-half-stroke" style="color:#8b5cf6;"></i> <span>50:50 Eliminator</span></button>
+                <button id="btnExpert"><i class="fa-solid fa-user-tie" style="color:#2563eb;"></i> <span>Direct Solution</span></button>
+                <button onclick="retakeQuiz()" style="color:#ef4444; border-top:1px solid var(--border); border-radius:0 0 10px 10px; margin-top:4px; padding-top:12px;"><i class="fa-solid fa-rotate-right"></i> Reset Set</button>
             </div>
 
             <div class="main-content" id="mainContent">
                 <div id="quizArea">
-                    <!-- Split Layout Containers for Desktop -->
                     <div id="caseStudyContainer"></div>
-                    
                     <div id="questionAndOptionsContainer">
                         <div class="question-card" ondblclick="openFullscreenReader()" title="Double click to read fullscreen">
                             <div id="questionDisplay" style="position:relative;"></div>
@@ -531,45 +384,45 @@
                         <div class="options-list" id="optionsDisplay"></div>
                     </div>
                 </div>
-                
-                <!-- Desktop Sidebar Wrapper for Palette Grid -->
-                <div class="desktop-sidebar-wrapper" id="desktopSidebarWrapper">
-                    <h3 class="desktop-sidebar-title">📋 Question Palette</h3>
-                    <div class="dots-container" id="dotsDisplay"></div>
-                </div>
-
-                <div id="endScreen" style="display:none; text-align:center; padding:40px 16px; max-width: 500px; margin: 0 auto;">
-                    <div style="font-size:4rem; margin-bottom:16px;">🏆</div>
-                    <h2 style="font-size:1.5rem; font-weight:800; margin-bottom:8px;">Set Completed!</h2>
-                    <p style="color:#64748b; margin-bottom:24px;">You've reached the end of this module.</p>
-                    <button onclick="goHome()" style="padding:12px 28px; background:var(--primary); color:white; border:none; border-radius:30px; font-weight:600; font-size:0.9rem; cursor:pointer; width:100%; margin-bottom: 12px;">
-                        Return to Dashboard
-                    </button>
-                    <button onclick="retakeQuiz()" style="padding:12px 28px; border:2px solid var(--border); border-radius:30px; background:white; font-weight:600; font-size:0.9rem; cursor:pointer; width:100%;">
-                        Restart this Set
-                    </button>
+            </div>
+            
+            <!-- Desktop Sidebar (Only visible in desktop mode) -->
+            <div class="desktop-sidebar-wrapper" id="desktopSidebarWrapper">
+                <div class="desktop-sidebar-title">📋 Question Palette</div>
+                <div class="dots-container" id="dotsDisplayDesktop"></div>
+                <div class="desktop-nav-controls">
+                    <button class="btn-prev" onclick="goPrev()">Previous</button>
+                    <button class="btn-next" onclick="goNext()">Next</button>
                 </div>
             </div>
 
-            <!-- BOTTOM NAV -->
-            <div class="bottom-nav">
+            <div id="endScreen" style="display:none; text-align:center; padding:60px 24px; max-width: 500px; margin: auto;">
+                <div style="font-size:4rem; margin-bottom:16px;">🏆</div>
+                <h2 style="font-size:1.5rem; font-weight:800; margin-bottom:8px;">Set Completed!</h2>
+                <p style="color:var(--text-secondary); margin-bottom:32px;">You've successfully reached the end.</p>
+                <button class="btn-primary" onclick="goHome()" style="margin-bottom: 12px;">Return to Dashboard</button>
+                <button class="btn-primary" onclick="retakeQuiz()" style="background:var(--bg); color:var(--text); border:1px solid var(--border);">Restart Module</button>
+            </div>
+
+            <!-- Mobile Bottom Nav -->
+            <div class="bottom-nav" id="mobileBottomNav">
                 <button class="nav-btn" id="btnPrev" title="Previous"><i class="fa-solid fa-chevron-left"></i></button>
-                <button class="nav-btn" id="btnPalette" title="Question Palette"><i class="fa-solid fa-table-cells"></i></button>
+                <button class="nav-btn" id="btnPalette" title="Palette"><i class="fa-solid fa-grid-2"></i><i class="fa-solid fa-table-cells"></i></button>
                 <div class="score-badge" id="scoreDisplay">1/10</div>
-                <button class="nav-btn" id="btnReview" title="Review All"><i class="fa-solid fa-list-check"></i></button>
-                <button class="nav-btn next-btn" id="btnNext" title="Next"><i class="fa-solid fa-chevron-right"></i></button>
+                <button class="nav-btn" id="btnReview" title="Review"><i class="fa-solid fa-list-check"></i></button>
+                <button class="nav-btn next-btn" id="btnNext" title="Next">Next</button>
             </div>
         </div>
 
     </div> <!-- App Container -->
 
-    <!-- YT TOAST -->
+    <!-- SMART YT TOAST (Bottom positioned, non-intrusive) -->
     <div id="ytToast" class="yt-toast">
-        <i class="fa-brands fa-youtube" style="color: #ef4444; font-size: 2.2rem;"></i>
+        <i class="fa-brands fa-youtube"></i>
         <div class="yt-toast-content">
-            <a href="https://youtube.com/@observe_with_satyam?si=8p90ukUsKvLJaZvh" target="_blank" style="text-decoration:none;">
-                <div class="yt-toast-title">Observe with Satyam <i class="fa-solid fa-heart" style="font-size: 0.8rem;"></i></div>
-                <div class="yt-toast-desc" id="ytToastDesc">Level up your CA journey! Join my YouTube family today. 📚</div>
+            <a href="https://youtube.com/@observe_with_satyam?si=8p90ukUsKvLJaZvh" target="_blank" style="text-decoration:none; color:white;">
+                <div class="yt-toast-title">Observe with Satyam <i class="fa-solid fa-heart" style="font-size: 0.8rem; color:#f43f5e;"></i></div>
+                <div class="yt-toast-desc" id="ytToastDesc">You're doing great! Join my YouTube family for more tips.</div>
             </a>
         </div>
         <button class="yt-toast-close" onclick="closeYtToast()"><i class="fa-solid fa-xmark"></i></button>
@@ -584,69 +437,96 @@
         </div>
     </div>
 
-    <!-- NOTES MODAL (Renders over Reading Mode) -->
+    <!-- NOTES MODAL -->
     <div id="notesModal" class="modal-overlay" style="display:none; z-index: 300;">
         <div class="modal-card">
-            <div class="sheet-header" style="border-bottom:none; margin-bottom:8px;">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:16px;">
                 <h3 id="notesTitle" style="margin-bottom:0;">📝 My Notes</h3>
                 <button class="close-btn" onclick="closeNotesModal()"><i class="fa-solid fa-xmark"></i></button>
             </div>
-            <textarea id="notesTextarea" placeholder="Jot down important points for this specific concept or question..." style="width:100%; height:180px; padding:16px; border:2px solid var(--border); border-radius:12px; resize:none; margin-bottom:16px; font-family:inherit; font-size:0.9rem; outline:none; transition:0.2s;" onfocus="this.style.borderColor='var(--primary)'" onblur="this.style.borderColor='var(--border)'"></textarea>
+            <textarea id="notesTextarea" placeholder="Jot down important points for this concept..." style="width:100%; height:180px; padding:16px; border:1px solid var(--border); border-radius:12px; resize:none; margin-bottom:16px; font-family:inherit; font-size:0.95rem; outline:none; transition:0.2s; background:var(--bg);" onfocus="this.style.borderColor='var(--primary)'; this.style.background='white';"></textarea>
             <button class="btn-primary" onclick="saveNotes()">Save Note</button>
         </div>
     </div>
 
-    <!-- PALETTE SHEET -->
+    <!-- PALETTE SHEET (Mobile) -->
     <div id="paletteSheet" class="bottom-sheet">
         <div class="sheet-header">
-            <h3>📋 Question Palette</h3>
+            <h3>📋 Palette</h3>
             <button class="close-btn" onclick="closeSheet('paletteSheet')"><i class="fa-solid fa-xmark"></i></button>
         </div>
-        <div id="paletteGrid" style="display:grid; grid-template-columns:repeat(auto-fill, minmax(40px, 1fr)); gap:8px;"></div>
-        <div class="palette-legend" style="display:flex; flex-wrap:wrap; gap:10px; margin-top:20px; font-size:0.8rem; color:var(--text-secondary);">
-            <div><span style="display:inline-block; width:12px; height:12px; border-radius:3px; background:#d1fae5; border:1px solid #059669; margin-right:4px;"></span> Correct</div>
-            <div><span style="display:inline-block; width:12px; height:12px; border-radius:3px; background:#fee2e2; border:1px solid #dc2626; margin-right:4px;"></span> Wrong</div>
-            <div><span style="display:inline-block; width:12px; height:12px; border-radius:3px; background:#dbeafe; border:1px solid #3b82f6; margin-right:4px;"></span> Answered</div>
-            <div><span style="display:inline-block; width:12px; height:12px; border-radius:50%; background:var(--marked); margin-right:4px;"></span> Marked</div>
+        <div id="paletteGridMobile" class="dots-container"></div>
+        <div style="display:flex; flex-wrap:wrap; gap:12px; margin-top:24px; font-size:0.8rem; color:var(--text-secondary); font-weight:500;">
+            <div style="display:flex; align-items:center; gap:6px;"><span style="width:12px; height:12px; border-radius:4px; background:var(--correct-bg); border:1px solid var(--correct);"></span> Correct</div>
+            <div style="display:flex; align-items:center; gap:6px;"><span style="width:12px; height:12px; border-radius:4px; background:var(--wrong-bg); border:1px solid var(--wrong);"></span> Wrong</div>
+            <div style="display:flex; align-items:center; gap:6px;"><span style="width:12px; height:12px; border-radius:4px; background:var(--primary-light); border:1px solid var(--primary);"></span> Answered</div>
         </div>
     </div>
 
     <!-- REVIEW SHEET -->
     <div id="reviewSheet" class="bottom-sheet" style="height: 90vh;">
         <div class="sheet-header">
-            <h3>📝 Review All Questions</h3>
+            <h3>📝 Review All</h3>
             <button class="close-btn" onclick="closeSheet('reviewSheet')"><i class="fa-solid fa-xmark"></i></button>
         </div>
-        <div id="reviewList" style="max-width: 800px; margin: 0 auto;"></div>
+        <div id="reviewList" style="max-width: 800px; margin: 0 auto; padding-bottom:20px;"></div>
     </div>
 
     <!-- FULLSCREEN READER (INTERACTIVE WITH HIGHLIGHTER) -->
     <div id="fullscreenReader" class="fullscreen-reader">
         <div class="reader-header">
-            <h3 style="font-weight:700; font-family:'Poppins', sans-serif;">📖 Reading Mode</h3>
+            <h3 style="font-weight:700; font-family:'Poppins', sans-serif; font-size:1.1rem;">📖 Reading Mode</h3>
             
-            <div class="highlighter-tools" id="highlighterTools" style="display:none;">
-                <span style="font-size: 0.75rem; color: #64748b; font-weight: 600; margin-right: 2px;">Highlight:</span>
-                <button class="hl-btn hl-yellow" data-color="#fef08a" onclick="selectHighlightColor(this)" title="Yellow"></button>
-                <button class="hl-btn hl-green" data-color="#bbf7d0" onclick="selectHighlightColor(this)" title="Green"></button>
-                <button class="hl-btn hl-blue" data-color="#bfdbfe" onclick="selectHighlightColor(this)" title="Blue"></button>
-                <button class="hl-btn hl-pink" data-color="#fbcfe8" onclick="selectHighlightColor(this)" title="Pink"></button>
-                <button class="hl-btn hl-eraser" data-color="transparent" onclick="selectHighlightColor(this)" title="Eraser"><i class="fa-solid fa-eraser"></i></button>
+            <div class="highlighter-tools" id="highlighterTools">
+                <button class="hl-btn hl-yellow" data-color="#fef08a" onclick="selectHighlightColor(this)"></button>
+                <button class="hl-btn hl-green" data-color="#bbf7d0" onclick="selectHighlightColor(this)"></button>
+                <button class="hl-btn hl-blue" data-color="#bfdbfe" onclick="selectHighlightColor(this)"></button>
+                <button class="hl-btn hl-pink" data-color="#fbcfe8" onclick="selectHighlightColor(this)"></button>
+                <button class="hl-btn hl-eraser" data-color="transparent" onclick="selectHighlightColor(this)"><i class="fa-solid fa-eraser"></i></button>
                 
-                <div style="width: 1px; height: 20px; background: var(--border); margin: 0 4px;"></div>
+                <div style="width: 1px; height: 24px; background: var(--border); margin: 0 6px;"></div>
                 
-                <!-- NOTES BUTTON IN READING MODE TOOLBAR -->
-                <button class="hl-btn toolbar-notes-btn" onclick="openNotesModal()" title="Take Notes for this question">
+                <button class="hl-btn toolbar-notes-btn" onclick="openNotesModal()">
                     <i class="fa-solid fa-pen"></i>
                     <div class="notes-badge" id="notesBadge"></div>
                 </button>
-
-                <span class="highlight-hint" id="highlightHint">✏️ Mode ON — swipe across text, or select text first. Tap the colour again to stop.</span>
             </div>
-
-            <button class="close-btn" onclick="closeFullscreenReader()"><i class="fa-solid fa-xmark"></i></button>
+            <button class="close-btn" style="background:var(--surface); border:1px solid var(--border);" onclick="closeFullscreenReader()"><i class="fa-solid fa-xmark"></i></button>
+            <div class="highlight-hint" id="highlightHint">✏️ Tap & hold, or swipe to highlight text. Tap color again to stop.</div>
         </div>
         <div class="reader-content" id="readerContent"></div>
+    </div>
+
+    <!-- ANALYTICS SCREEN -->
+    <div id="analyticsScreen" class="screen" style="background: white;">
+        <div class="header" style="box-shadow:none; border-bottom:1px solid var(--border);">
+            <div class="header-left">
+                <button class="home-btn" onclick="goHome()"><i class="fa-solid fa-arrow-left"></i></button>
+                <div class="header-title"><h2>Performance Analytics</h2></div>
+            </div>
+        </div>
+        <div style="padding: 24px 16px; max-width: 800px; margin: 0 auto; width: 100%; flex: 1; overflow-y:auto;">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 32px;">
+                <div class="stat-box" style="background: var(--primary-light); border:none;">
+                    <div class="stat-val" style="color: var(--primary);" id="statTotal">0</div>
+                    <div class="stat-label">Attempted</div>
+                </div>
+                <div class="stat-box" style="background: var(--correct-bg); border:none;">
+                    <div class="stat-val" style="color: var(--correct);" id="statAcc">0%</div>
+                    <div class="stat-label">Accuracy</div>
+                </div>
+                <div class="stat-box" style="border-color: #a7f3d0;">
+                    <div class="stat-val" style="color: var(--correct);" id="statRight">0</div>
+                    <div class="stat-label">Correct</div>
+                </div>
+                <div class="stat-box" style="border-color: #fca5a5;">
+                    <div class="stat-val" style="color: var(--wrong);" id="statWrong">0</div>
+                    <div class="stat-label">Wrong</div>
+                </div>
+            </div>
+            <h4 style="font-weight: 700; font-family:'Poppins'; margin-bottom:16px;">Module Breakdown</h4>
+            <div id="setStatsBreakdown" style="display: flex; flex-direction: column; gap: 12px; padding-bottom: 30px;"></div>
+        </div>
     </div>
 
     <script>
@@ -660,7 +540,7 @@
                 isAnswered: false,
                 audioCtx: null,
                 armedColor: null,
-                ytToastShown: false
+                toastTriggeredFor: {} // Keep track of milestones hit
             };
 
             const DB_NAME = 'CAAuditProDB';
@@ -672,26 +552,21 @@
                 'hard': 'audit_case_scenarios.json'
             };
 
-            // YT Appeals Array (Daily rotation)
             const ytAppeals = [
-                "Mastering Audit? Supercharge your CA prep by subscribing to Observe with Satyam! 🚀",
-                "Level up your CA journey! Join the Observe with Satyam family on YouTube today. 📚",
-                "Love this simulator? Support the creator by subscribing to Observe with Satyam! ❤️",
-                "Cracking CA exams gets easier with the right guidance. Catch my latest videos! 🎯",
-                "Your support keeps this tool free! Subscribe to Observe with Satyam. 🙌",
-                "Want more CA Final resources? Let's connect on YouTube! 💡",
-                "Join thousands of CA students on Observe with Satyam for the best tips! 🌟"
+                "Mastering Audit? Supercharge your prep by subscribing to Observe with Satyam! 🚀",
+                "Level up your CA journey! Join the Observe with Satyam family today. 📚",
+                "Love this simulator? Support the creator by subscribing! ❤️",
+                "Cracking CA gets easier with right guidance. Catch my latest videos! 🎯",
+                "Your support keeps this tool free! Connect on YouTube. 🙌"
             ];
 
-            // ==================== INDEXEDDB ENGINE ====================
+            // ==================== DATABASE ====================
             function initDB() {
                 return new Promise((resolve, reject) => {
                     const req = indexedDB.open(DB_NAME, 1);
                     req.onupgradeneeded = (e) => {
                         const db = e.target.result;
-                        if (!db.objectStoreNames.contains(STORE_NAME)) {
-                            db.createObjectStore(STORE_NAME);
-                        }
+                        if (!db.objectStoreNames.contains(STORE_NAME)) db.createObjectStore(STORE_NAME);
                     };
                     req.onsuccess = (e) => resolve(e.target.result);
                     req.onerror = (e) => reject(e);
@@ -702,8 +577,7 @@
                 const db = await initDB();
                 return new Promise((resolve, reject) => {
                     const tx = db.transaction(STORE_NAME, 'readwrite');
-                    const store = tx.objectStore(STORE_NAME);
-                    store.put(data, mode);
+                    tx.objectStore(STORE_NAME).put(data, mode);
                     tx.oncomplete = () => resolve();
                     tx.onerror = () => reject();
                 });
@@ -712,9 +586,7 @@
             async function loadState(mode) {
                 const db = await initDB();
                 return new Promise((resolve) => {
-                    const tx = db.transaction(STORE_NAME, 'readonly');
-                    const store = tx.objectStore(STORE_NAME);
-                    const req = store.get(mode);
+                    const req = db.transaction(STORE_NAME, 'readonly').objectStore(STORE_NAME).get(mode);
                     req.onsuccess = (e) => resolve(e.target.result || null);
                     req.onerror = () => resolve(null);
                 });
@@ -723,11 +595,9 @@
             async function getAllStates() {
                 const db = await initDB();
                 return new Promise((resolve) => {
-                    const tx = db.transaction(STORE_NAME, 'readonly');
-                    const store = tx.objectStore(STORE_NAME);
+                    const store = db.transaction(STORE_NAME, 'readonly').objectStore(STORE_NAME);
                     const req = store.getAll();
                     const keysReq = store.getAllKeys();
-                    
                     req.onsuccess = () => {
                         keysReq.onsuccess = () => {
                             let obj = {};
@@ -738,7 +608,6 @@
                 });
             }
 
-            // ==================== AUDIO ====================
             function getAudio() {
                 if (!STATE.audioCtx) STATE.audioCtx = new(window.AudioContext || window.webkitAudioContext)();
                 if (STATE.audioCtx.state === 'suspended') STATE.audioCtx.resume();
@@ -750,35 +619,22 @@
                     const ctx = getAudio();
                     const o = ctx.createOscillator();
                     const g = ctx.createGain();
-                    o.type = t || 'sine';
-                    o.frequency.value = f || 440;
+                    o.type = t || 'sine'; o.frequency.value = f || 440;
                     g.gain.setValueAtTime(0.06, ctx.currentTime);
                     g.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + (d || 0.1));
-                    o.connect(g);
-                    g.connect(ctx.destination);
-                    o.start();
-                    o.stop(ctx.currentTime + (d || 0.1));
+                    o.connect(g); g.connect(ctx.destination);
+                    o.start(); o.stop(ctx.currentTime + (d || 0.1));
                 } catch (e) {}
             }
 
-            // ==================== HELPERS & UI CONTROLS ====================
             const esc = s => String(s || '').replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]);
-
-            function showLoader(text) {
-                document.getElementById('loaderText').textContent = text;
-                document.getElementById('loader').style.display = 'flex';
-            }
-            function hideLoader() {
-                document.getElementById('loader').style.display = 'none';
-            }
+            const showLoader = t => { document.getElementById('loaderText').textContent = t; document.getElementById('loader').style.display = 'flex'; }
+            const hideLoader = () => document.getElementById('loader').style.display = 'none';
 
             function switchScreen(id) {
                 document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
                 document.getElementById(id).classList.add('active');
-                
-                if (document.body.classList.contains('desktop-view') && id === 'quizScreen') {
-                    applyDesktopLayout();
-                }
+                if (id === 'quizScreen') applyDesktopLayout();
             }
 
             window.goHome = function() {
@@ -789,35 +645,30 @@
             window.toggleDesktopView = function() {
                 document.body.classList.toggle('desktop-view');
                 const icon = document.getElementById('desktopToggleIcon');
-                
                 if (document.body.classList.contains('desktop-view')) {
                     icon.className = 'fa-solid fa-mobile-screen';
                     applyDesktopLayout();
                 } else {
                     icon.className = 'fa-solid fa-desktop';
-                    removeDesktopLayout();
+                    document.getElementById('quizArea').classList.remove('has-case');
                 }
             }
 
             function applyDesktopLayout() {
-                if (STATE.questions[STATE.currentIdx]?.caseStudy) {
+                if (document.body.classList.contains('desktop-view') && STATE.questions[STATE.currentIdx]?.caseStudy) {
                     document.getElementById('quizArea').classList.add('has-case');
+                } else {
+                    document.getElementById('quizArea').classList.remove('has-case');
                 }
             }
-            function removeDesktopLayout() {
-                document.getElementById('quizArea').classList.remove('has-case');
-            }
 
-            // ==================== DATA NORMALIZATION ENGINE ====================
             function normalizeData(rawData) {
                 let parsedList = [];
                 let ds = Array.isArray(rawData) ? rawData : (rawData.caseScenarios || rawData.questions || []);
-
                 ds.forEach((item, i) => {
                     if (item.questions && Array.isArray(item.questions)) {
                         let caseText = item.passage_html || item.caseStudy || item.scenario || '';
                         let caseTitle = item.title || `CASE SCENARIO ${item.scenario_number || (i+1)}`;
-                        
                         item.questions.forEach((q, j) => {
                             parsedList.push(parseSingleQuestion(q, caseText, caseTitle, `${i+1}.${j+1}`));
                         });
@@ -829,16 +680,11 @@
             }
 
             function parseSingleQuestion(q, caseText, caseTitle, qNum) {
-                let opts = [];
-                let correctIdx = 0;
-
+                let opts = [], correctIdx = 0;
                 if (Array.isArray(q.options)) {
                     opts = q.options;
-                    if (typeof q.correctOption === 'string' && isNaN(parseInt(q.correctOption))) {
-                        correctIdx = q.correctOption.toLowerCase().charCodeAt(0) - 97;
-                    } else {
-                        correctIdx = parseInt(q.correctOption) || parseInt(q.correct_option) || 0;
-                    }
+                    if (typeof q.correctOption === 'string' && isNaN(parseInt(q.correctOption))) correctIdx = q.correctOption.toLowerCase().charCodeAt(0) - 97;
+                    else correctIdx = parseInt(q.correctOption) || parseInt(q.correct_option) || 0;
                 } else if (typeof q.options === 'object' && q.options !== null) {
                     const keys = ['a', 'b', 'c', 'd'];
                     opts = keys.map(k => q.options[k]).filter(Boolean);
@@ -846,32 +692,19 @@
                     correctIdx = keys.indexOf(ansKey);
                     if(correctIdx === -1) correctIdx = 0;
                 }
-
-                return {
-                    question: q.question_text || q.question || '',
-                    options: opts,
-                    correct: correctIdx,
-                    explain: q.explanation_html || q.explanation || q.explain || '',
-                    caseStudy: caseText,
-                    caseTitle: caseTitle,
-                    qNum: q.question_number || q.questionNumber || qNum
-                };
+                return { question: q.question_text || q.question || '', options: opts, correct: correctIdx, explain: q.explanation_html || q.explanation || q.explain || '', caseStudy: caseText, caseTitle: caseTitle, qNum: q.question_number || q.questionNumber || qNum };
             }
 
-            // ==================== APP LOGIC ====================
             window.startApp = async function(mode) {
-                showLoader(`Loading ${mode.toUpperCase()} module...`);
+                showLoader(`Loading module...`);
                 STATE.currentMode = mode;
-                
-                const modeLabels = { 'easy': 'Basic Concepts', 'medium': 'Standard Questions', 'hard': 'Case Scenarios' };
+                const modeLabels = { 'easy': 'Core Basics', 'medium': 'Standard MCQs', 'hard': 'Case Scenarios' };
                 document.getElementById('currentModeLabel').textContent = modeLabels[mode];
 
                 try {
                     let res = await fetch(FILES[mode]);
                     if (!res.ok) throw new Error("File missing");
-                    let rawData = await res.json();
-                    
-                    STATE.questions = normalizeData(rawData);
+                    STATE.questions = normalizeData(await res.json());
 
                     let saved = await loadState(mode);
                     if (saved && saved.session && saved.session.length === STATE.questions.length) {
@@ -881,53 +714,38 @@
                         STATE.session = STATE.questions.map(() => ({ sel: null, ok: null, mark: false, caseHtml: null, questionHtml: null, optionsHtml: null, note: null }));
                         STATE.currentIdx = 0;
                     }
+                    STATE.toastTriggeredFor = {}; 
 
                     switchScreen('quizScreen');
-                    document.getElementById('quizArea').style.display = '';
-                    document.getElementById('desktopSidebarWrapper').style.display = '';
-                    document.getElementById('dotsDisplay').style.display = ''; 
+                    document.getElementById('quizArea').style.display = 'flex';
                     document.getElementById('endScreen').style.display = 'none';
+                    if (document.body.classList.contains('desktop-view')) document.getElementById('desktopSidebarWrapper').style.display = 'flex';
+                    document.getElementById('mobileBottomNav').style.display = 'flex';
                     
                     renderQuestion();
-                    
-                    if (!STATE.ytToastShown) {
-                        setTimeout(() => {
-                            triggerYtAppeal();
-                            STATE.ytToastShown = true;
-                        }, 5000); 
-                    }
-
                 } catch (e) {
-                    console.error("Data load error:", e);
-                    alert(`Could not load ${FILES[mode]}. Please ensure the file exists in the directory or use the 'Restore Progress' button to upload your database.`);
-                } finally {
-                    hideLoader();
-                }
+                    alert(`Could not load ${FILES[mode]}. Please restore database from backup.`);
+                } finally { hideLoader(); }
             };
 
             async function saveProgress() {
                 if(!STATE.currentMode) return;
-                await saveState(STATE.currentMode, {
-                    idx: STATE.currentIdx,
-                    session: STATE.session
-                });
+                await saveState(STATE.currentMode, { idx: STATE.currentIdx, session: STATE.session });
             }
             
-            // ==================== YT APPEAL LOGIC ====================
-            function triggerYtAppeal() {
-                const todayIdx = new Date().getDay();
-                document.getElementById('ytToastDesc').textContent = ytAppeals[todayIdx % ytAppeals.length];
-                const toast = document.getElementById('ytToast');
-                toast.classList.add('show');
-                beep(800, 'sine', 0.1);
-                setTimeout(() => { closeYtToast(); }, 10000); 
+            function checkYtAppeal() {
+                let answeredCount = STATE.session.filter(s => s.sel !== null).length;
+                if (answeredCount > 0 && answeredCount % 50 === 0 && !STATE.toastTriggeredFor[answeredCount]) {
+                    STATE.toastTriggeredFor[answeredCount] = true;
+                    document.getElementById('ytToastDesc').textContent = ytAppeals[(answeredCount/50) % ytAppeals.length];
+                    const toast = document.getElementById('ytToast');
+                    toast.classList.add('show');
+                    beep(800, 'sine', 0.1);
+                    setTimeout(() => { closeYtToast(); }, 8000); 
+                }
             }
-            
-            window.closeYtToast = function() {
-                document.getElementById('ytToast').classList.remove('show');
-            }
+            window.closeYtToast = () => document.getElementById('ytToast').classList.remove('show');
 
-            // ==================== NOTES SYSTEM ====================
             window.openNotesModal = function() {
                 const st = STATE.session[STATE.currentIdx];
                 if (!st) return;
@@ -936,11 +754,7 @@
                 document.getElementById('notesModal').style.display = 'flex';
                 setTimeout(() => document.getElementById('notesTextarea').focus(), 100);
             }
-
-            window.closeNotesModal = function() {
-                document.getElementById('notesModal').style.display = 'none';
-            }
-
+            window.closeNotesModal = () => document.getElementById('notesModal').style.display = 'none';
             window.saveNotes = function() {
                 const st = STATE.session[STATE.currentIdx];
                 if (!st) return;
@@ -955,66 +769,42 @@
             function updateNotesBadge() {
                 const st = STATE.session[STATE.currentIdx];
                 const badge = document.getElementById('notesBadge');
-                if (st && st.note && st.note.length > 0) {
-                    badge.classList.add('show');
-                } else {
-                    badge.classList.remove('show');
-                }
+                if (st && st.note && st.note.length > 0) badge.classList.add('show');
+                else badge.classList.remove('show');
             }
 
-            // ==================== RENDERING ====================
             function renderQuestion() {
                 const q = STATE.questions[STATE.currentIdx];
                 if (!q) return;
                 
                 STATE.isAnswered = false;
-                // Add note key if upgrading from an older session state
                 const st = STATE.session[STATE.currentIdx] || { sel: null, ok: null, mark: false, caseHtml: null, questionHtml: null, optionsHtml: null, note: null };
                 if (st.note === undefined) st.note = null;
 
-                const caseContentToRender = st.caseHtml || q.caseStudy;
-                const questionContentToRender = st.questionHtml || q.question;
-
-                // Handle Case Study Container
                 const caseContainer = document.getElementById('caseStudyContainer');
-                const quizArea = document.getElementById('quizArea');
-                
                 if (q.caseStudy) {
-                    caseContainer.innerHTML = `
-                        <div class="case-study-box" ondblclick="openFullscreenReader()" title="Double click to read fullscreen">
-                            <div class="case-label">📋 ${esc(q.caseTitle)}</div>
-                            <div id="mainCaseStudyContent">${caseContentToRender}</div>
-                            <div class="expand-btn"><i class="fa-solid fa-expand"></i></div>
-                        </div>`;
+                    caseContainer.innerHTML = `<div class="case-study-box" ondblclick="openFullscreenReader()">
+                        <div class="case-label">📋 ${esc(q.caseTitle)}</div>
+                        <div id="mainCaseStudyContent">${st.caseHtml || q.caseStudy}</div>
+                    </div>`;
                     caseContainer.style.display = 'block';
-                    if(document.body.classList.contains('desktop-view')) {
-                        quizArea.classList.add('has-case');
-                    }
+                    applyDesktopLayout();
                 } else {
                     caseContainer.innerHTML = '';
                     caseContainer.style.display = 'none';
-                    quizArea.classList.remove('has-case');
+                    document.getElementById('quizArea').classList.remove('has-case');
                 }
                 
-                // Question text
-                const qHtml = `<div class="question-text">
-                                 <span class="q-number">Q${esc(String(q.qNum))}.</span> <span id="mainQuestionContent">${questionContentToRender}</span> 
-                                 <button class="question-expand-btn" title="Double click card to expand"><i class="fa-solid fa-expand"></i></button>
-                               </div>`;
-                document.getElementById('questionDisplay').innerHTML = qHtml;
+                document.getElementById('questionDisplay').innerHTML = `<div class="question-text"><span class="q-number">Q${esc(String(q.qNum))}.</span> <span id="mainQuestionContent">${st.questionHtml || q.question}</span></div>`;
 
-                // Options
                 const optArea = document.getElementById('optionsDisplay');
                 optArea.innerHTML = '';
-                
                 const savedOptionsHtml = st.optionsHtml || [];
                 
                 q.options.forEach((o, i) => {
                     const btn = document.createElement('button');
                     btn.className = 'option-btn';
-                    const oContentToRender = savedOptionsHtml[i] || o;
-                    
-                    btn.innerHTML = `<span class="option-letter">${String.fromCharCode(65+i)}</span><span id="mainOptionText${i}">${oContentToRender}</span>`;
+                    btn.innerHTML = `<span class="option-letter">${String.fromCharCode(65+i)}</span><span id="mainOptionText${i}">${savedOptionsHtml[i] || o}</span>`;
                     btn.id = 'optBtn' + i;
                     
                     if (st.sel !== null) {
@@ -1023,22 +813,22 @@
                         if (i === q.correct) btn.classList.add('correct');
                         STATE.isAnswered = true;
                     }
-                    
                     btn.addEventListener('click', () => handleOptionClick(i));
                     optArea.appendChild(btn);
                 });
 
-                renderDots();
+                renderDots('paletteGridMobile');
+                renderDots('dotsDisplayDesktop'); // desktop sidebar
                 updateBookmarkIcon();
                 updateNotesBadge();
                 document.getElementById('scoreDisplay').textContent = `${STATE.currentIdx+1}/${STATE.questions.length}`;
                 
                 document.getElementById('mainContent').scrollTop = 0;
-                if(caseContainer) caseContainer.scrollTop = 0;
             }
 
-            function renderDots() {
-                const container = document.getElementById('dotsDisplay');
+            function renderDots(containerId) {
+                const container = document.getElementById(containerId);
+                if(!container) return;
                 container.innerHTML = '';
                 STATE.questions.forEach((_, i) => {
                     const st = STATE.session[i];
@@ -1051,44 +841,31 @@
                         if (st.ok === true) dot.classList.add('correct-answer');
                         else if (st.ok === false) dot.classList.add('wrong-answer');
                         else dot.classList.add('attempted');
-                    } else {
-                        dot.classList.add('unattempted');
                     }
-                    if (st.mark) {
-                        dot.innerHTML += `<span class="bookmark-indicator"></span>`;
-                    }
+                    if (st.mark) dot.innerHTML += `<span class="bookmark-indicator"></span>`;
                     
-                    dot.addEventListener('click', () => jumpTo(i));
+                    dot.addEventListener('click', () => { jumpTo(i); closeSheet('paletteSheet'); });
                     container.appendChild(dot);
                 });
-
                 setTimeout(() => {
-                    const currentDot = container.querySelector('.dot-btn.current');
-                    if (currentDot) currentDot.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+                    const curr = container.querySelector('.dot-btn.current');
+                    if (curr) curr.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
                 }, 100);
             }
 
             function updateBookmarkIcon() {
                 const st = STATE.session[STATE.currentIdx];
                 const icon = document.getElementById('bookmarkIcon');
-                if (st && st.mark) {
-                    icon.className = 'fa-solid fa-bookmark';
-                    icon.style.color = '#d97706';
-                } else {
-                    icon.className = 'fa-regular fa-bookmark';
-                    icon.style.color = '#94a3b8';
-                }
+                if (st && st.mark) { icon.className = 'fa-solid fa-bookmark'; icon.style.color = 'var(--marked)'; }
+                else { icon.className = 'fa-regular fa-bookmark'; icon.style.color = 'var(--text-secondary)'; }
             }
 
-            // ==================== INTERACTION & EVAL ====================
             function handleOptionClick(idx) {
                 if (STATE.isAnswered) return;
                 beep(400, 'sine', 0.05);
-                
                 document.querySelectorAll('#optionsDisplay .option-btn').forEach(b => b.classList.remove('selected'));
                 const btn = document.getElementById('optBtn' + idx);
                 if (btn) btn.classList.add('selected');
-                
                 setTimeout(() => lockAnswer(idx), 350);
             }
 
@@ -1117,20 +894,15 @@
                     beep(200, 'sawtooth', 0.22); 
                 }
                 
-                renderDots();
+                renderDots('paletteGridMobile'); renderDots('dotsDisplayDesktop');
                 saveProgress();
+                checkYtAppeal();
 
                 if(isFromReader) {
                     setTimeout(() => {
                         if (STATE.currentIdx < STATE.questions.length - 1) {
-                            STATE.currentIdx++;
-                            renderQuestion();
-                            saveProgress();
-                            openFullscreenReader(); 
-                        } else {
-                            closeFullscreenReader();
-                            showEndScreen();
-                        }
+                            STATE.currentIdx++; renderQuestion(); saveProgress(); openFullscreenReader(); 
+                        } else { closeFullscreenReader(); showEndScreen(); }
                     }, 1200);
                 } else {
                     setTimeout(() => showExplanationModal(ok), 600);
@@ -1139,51 +911,33 @@
 
             function showExplanationModal(isCorrect, isExpert = false) {
                 const q = STATE.questions[STATE.currentIdx];
-                
-                if(isExpert) {
-                    document.getElementById('explanationTitle').innerHTML = '👔 Expert Advice';
-                } else {
-                    document.getElementById('explanationTitle').innerHTML = isCorrect ? '✅ Excellent!' : '❌ Incorrect';
-                }
-
-                let bodyHtml = `<div style="margin-bottom: 12px;"><b>Correct Answer:</b> Option ${String.fromCharCode(65 + q.correct)}</div>`;
-                
-                if (q.explain) {
-                    bodyHtml += `<div style="padding-top: 10px; border-top: 1px dashed #cbd5e1;"><b>Explanation:</b><br/>${q.explain}</div>`;
-                } else {
-                    bodyHtml += `<div style="padding-top: 10px; border-top: 1px dashed #cbd5e1; font-style: italic; color: #64748b;">No detailed explanation provided for this question.</div>`;
-                }
+                document.getElementById('explanationTitle').innerHTML = isExpert ? '👔 Direct Solution' : (isCorrect ? '✅ Excellent!' : '❌ Incorrect');
+                let bodyHtml = `<div style="margin-bottom: 16px; font-size:1.05rem; font-weight:600; color:var(--text);">Correct Answer: Option ${String.fromCharCode(65 + q.correct)}</div>`;
+                if (q.explain) bodyHtml += `<div style="padding-top: 12px; border-top: 1px dashed var(--border);"><b>Explanation:</b><br/>${q.explain}</div>`;
+                else bodyHtml += `<div style="padding-top: 12px; border-top: 1px dashed var(--border); font-style: italic;">No detailed explanation provided.</div>`;
                 
                 document.getElementById('explanationBody').innerHTML = bodyHtml;
                 document.getElementById('explanationNextBtn').textContent = (STATE.currentIdx >= STATE.questions.length - 1) ? 'Finish Set' : 'Next Question →';
                 document.getElementById('explanationModal').style.display = 'flex';
             }
 
-            // ==================== INTERACTIVE FULLSCREEN READER ====================
+            // ==================== INTERACTIVE READER ====================
             window.openFullscreenReader = function() {
                 const q = STATE.questions[STATE.currentIdx];
                 const st = STATE.session[STATE.currentIdx] || { sel: null, ok: null, mark: false, caseHtml: null, questionHtml: null, optionsHtml: null };
                 if (!st.optionsHtml) st.optionsHtml = [];
                 
                 let content = '';
-                
-                // Highlighter toolbar is now always available in Reading Mode
-                document.getElementById('highlighterTools').style.display = 'flex';
-                STATE.armedColor = null; // start fresh every time reader opens
-                pendingSelectionRange = null;
-                pendingSelectionContainer = null;
+                STATE.armedColor = null; 
                 updateHighlightSwatchUI();
 
-                const caseContentToRender = st.caseHtml || q.caseStudy;
-                const questionContentToRender = st.questionHtml || q.question;
-                
                 if (q.caseStudy) {
                     content += `<h3 style="color:var(--primary); margin-bottom:12px;">${esc(q.caseTitle)}</h3>
-                                <div id="readerCaseStudy" class="highlightable" style="background:#f8fafc; padding:16px; border-radius:12px; border:1px solid #e2e8f0; margin-bottom: 24px; line-height:1.7;">${caseContentToRender}</div>`;
+                                <div id="readerCaseStudy" class="highlightable" style="background:var(--primary-light); padding:20px; border-radius:16px; margin-bottom: 24px; line-height:1.7;">${st.caseHtml || q.caseStudy}</div>`;
                 } 
                 
                 content += `<h3 style="color:var(--text); margin-bottom:12px; font-weight:700;">Question ${esc(String(q.qNum))}</h3>
-                            <div id="readerQuestion" class="highlightable" style="font-size:1.05rem; margin-bottom: 20px; line-height:1.6;">${questionContentToRender}</div>
+                            <div id="readerQuestion" class="highlightable" style="font-size:1.1rem; margin-bottom: 24px; line-height:1.6; font-weight:500;">${st.questionHtml || q.question}</div>
                             <div class="options-list highlightable" id="readerOptions" style="margin-bottom: 30px;">`;
                 
                 q.options.forEach((o, i) => {
@@ -1192,13 +946,10 @@
                         if (i === st.sel && !st.ok) extraClass = 'wrong';
                         if (i === q.correct) extraClass = 'correct';
                     }
-                    
-                    const oContentToRender = st.optionsHtml[i] || o;
-                    
                     content += `
                         <button class="option-btn ${extraClass}" id="readerOptBtn${i}" onclick="handleReaderOptionClick(${i})" ${st.sel !== null ? 'disabled' : ''}>
                             <span class="option-letter">${String.fromCharCode(65+i)}</span>
-                            <span class="highlightable" id="readerOptText${i}" data-optidx="${i}" style="flex:1;">${oContentToRender}</span>
+                            <span class="highlightable" id="readerOptText${i}" data-optidx="${i}" style="flex:1;">${st.optionsHtml[i] || o}</span>
                         </button>`;
                 });
                 content += `</div>`;
@@ -1209,587 +960,259 @@
             }
 
             window.handleReaderOptionClick = function(idx) {
-                // If armed color is on, allow tapping/swiping for highlight rather than selecting option
-                if (STATE.armedColor) return;
-                
-                if (STATE.isAnswered) return;
+                if (STATE.armedColor || STATE.isAnswered) return;
                 beep(400, 'sine', 0.05);
-                
                 document.querySelectorAll('#readerContent .option-btn').forEach(b => b.classList.remove('selected'));
-                const btn = document.getElementById('readerOptBtn' + idx);
-                if (btn) btn.classList.add('selected');
-                
+                document.getElementById('readerOptBtn' + idx)?.classList.add('selected');
                 setTimeout(() => lockAnswer(idx, true), 350);
             }
+            window.closeFullscreenReader = () => { document.getElementById('fullscreenReader').style.display = 'none'; STATE.armedColor = null; window.getSelection()?.removeAllRanges(); }
 
-            window.closeFullscreenReader = function() {
-                document.getElementById('fullscreenReader').style.display = 'none';
-                STATE.armedColor = null;
-                const sel = window.getSelection();
-                if (sel) sel.removeAllRanges();
-            }
-
-            // ==================== CUSTOM HIGHLIGHTER (TAP-TO-SELECT + SWIPE + ERASE) ====================
+            // Highlight Logic
             function getHighlightableContainer(node) {
                 let el = (node && node.nodeType === 3) ? node.parentElement : node;
-                while (el && el !== document.body && el !== document) {
-                    if (el.classList && el.classList.contains('highlightable')) return el;
+                while (el && el !== document.body) {
+                    if (el.classList?.contains('highlightable')) return el;
                     el = el.parentElement;
                 }
                 return null;
             }
-
             function getCaretRangeFromPoint(x, y) {
-                if (document.caretRangeFromPoint) {
-                    return document.caretRangeFromPoint(x, y);
-                } else if (document.caretPositionFromPoint) {
+                if (document.caretRangeFromPoint) return document.caretRangeFromPoint(x, y);
+                else if (document.caretPositionFromPoint) {
                     const pos = document.caretPositionFromPoint(x, y);
                     if (!pos || !pos.offsetNode) return null;
-                    const range = document.createRange();
-                    range.setStart(pos.offsetNode, pos.offset);
-                    range.collapse(true);
-                    return range;
+                    const range = document.createRange(); range.setStart(pos.offsetNode, pos.offset); range.collapse(true); return range;
                 }
                 return null;
             }
-
             function buildOrderedRange(a, b) {
                 if (!a || !b) return null;
                 const range = document.createRange();
                 try {
-                    if (a.compareBoundaryPoints(Range.START_TO_START, b) <= 0) {
-                        range.setStart(a.startContainer, a.startOffset);
-                        range.setEnd(b.startContainer, b.startOffset);
-                    } else {
-                        range.setStart(b.startContainer, b.startOffset);
-                        range.setEnd(a.startContainer, a.startOffset);
-                    }
+                    if (a.compareBoundaryPoints(Range.START_TO_START, b) <= 0) { range.setStart(a.startContainer, a.startOffset); range.setEnd(b.startContainer, b.startOffset); } 
+                    else { range.setStart(b.startContainer, b.startOffset); range.setEnd(a.startContainer, a.startOffset); }
                 } catch (e) { return null; }
                 return range;
             }
-
-            function wrapRangeSafe(range, color) {
-                if (!range || range.collapsed) return false;
-                const span = document.createElement('span');
-                span.className = 'user-highlight';
-                span.style.backgroundColor = color;
-                try {
-                    range.surroundContents(span);
-                    return true;
-                } catch (e) {
-                    try {
-                        const frag = range.extractContents();
-                        span.appendChild(frag);
-                        range.insertNode(span);
-                        return true;
-                    } catch (e2) {
-                        return false;
-                    }
-                }
-            }
-
             function syncHighlightToState(container) {
-                if (!container) return;
-                const st = STATE.session[STATE.currentIdx];
-                if (!st) return;
+                if (!container) return; const st = STATE.session[STATE.currentIdx]; if (!st) return;
                 const html = container.innerHTML;
-                
-                if (container.id === 'readerCaseStudy') {
-                    st.caseHtml = html;
-                    const mainBox = document.getElementById('mainCaseStudyContent');
-                    if (mainBox) mainBox.innerHTML = html;
-                } else if (container.id === 'readerQuestion') {
-                    st.questionHtml = html;
-                    const mainBox = document.getElementById('mainQuestionContent');
-                    if (mainBox) mainBox.innerHTML = html;
-                } else if (container.id && container.id.startsWith('readerOptText')) {
-                    if (!st.optionsHtml) st.optionsHtml = [];
+                if (container.id === 'readerCaseStudy') { st.caseHtml = html; document.getElementById('mainCaseStudyContent').innerHTML = html; } 
+                else if (container.id === 'readerQuestion') { st.questionHtml = html; document.getElementById('mainQuestionContent').innerHTML = html; } 
+                else if (container.id?.startsWith('readerOptText')) {
                     const idx = parseInt(container.dataset.optidx);
-                    if (!isNaN(idx)) {
-                        st.optionsHtml[idx] = html;
-                        const mainOptBox = document.getElementById('mainOptionText' + idx);
-                        if (mainOptBox) mainOptBox.innerHTML = html;
-                    }
+                    if (!isNaN(idx)) { st.optionsHtml[idx] = html; document.getElementById('mainOptionText' + idx).innerHTML = html; }
                 }
                 saveProgress();
             }
-
             function eraseHighlights(range, container) {
                 const spans = container.querySelectorAll('.user-highlight');
                 let erased = false;
-                
                 spans.forEach(span => {
-                    const spanRange = document.createRange();
-                    spanRange.selectNodeContents(span);
-                    
-                    // Check intersection
-                    if (range.compareBoundaryPoints(Range.END_TO_START, spanRange) <= 0 &&
-                        range.compareBoundaryPoints(Range.START_TO_END, spanRange) >= 0) {
-                        
-                        const parent = span.parentNode;
-                        while(span.firstChild) {
-                            parent.insertBefore(span.firstChild, span);
-                        }
-                        parent.removeChild(span);
-                        erased = true;
+                    const spanRange = document.createRange(); spanRange.selectNodeContents(span);
+                    if (range.compareBoundaryPoints(Range.END_TO_START, spanRange) <= 0 && range.compareBoundaryPoints(Range.START_TO_END, spanRange) >= 0) {
+                        const parent = span.parentNode; while(span.firstChild) parent.insertBefore(span.firstChild, span); parent.removeChild(span); erased = true;
                     }
                 });
-                
-                if (erased) {
-                    container.normalize();
-                    beep(260, 'sine', 0.05);
-                    syncHighlightToState(container);
-                }
+                if (erased) { container.normalize(); beep(260, 'sine', 0.05); syncHighlightToState(container); }
             }
-
             function applyHighlightToRange(range, color, container) {
                 if (!container) container = getHighlightableContainer(range.commonAncestorContainer);
                 if (!container) return;
-                
-                if (color === 'transparent') {
-                    eraseHighlights(range, container);
-                    return;
-                }
-
-                const ok = wrapRangeSafe(range, color);
-                if (ok) {
-                    beep(520, 'sine', 0.05);
-                    syncHighlightToState(container);
-                }
+                if (color === 'transparent') { eraseHighlights(range, container); return; }
+                const span = document.createElement('span'); span.className = 'user-highlight'; span.style.backgroundColor = color;
+                try { range.surroundContents(span); beep(520, 'sine', 0.05); syncHighlightToState(container); } 
+                catch (e) { try { const frag = range.extractContents(); span.appendChild(frag); range.insertNode(span); beep(520, 'sine', 0.05); syncHighlightToState(container); } catch(err){} }
             }
-
             function updateHighlightSwatchUI() {
-                document.querySelectorAll('#highlighterTools .hl-btn').forEach(btn => {
-                    if(btn.dataset.color) btn.classList.toggle('armed', STATE.armedColor === btn.dataset.color);
-                });
-                const hint = document.getElementById('highlightHint');
-                if (hint) hint.classList.toggle('show', !!STATE.armedColor);
+                document.querySelectorAll('#highlighterTools .hl-btn').forEach(btn => { if(btn.dataset.color) btn.classList.toggle('armed', STATE.armedColor === btn.dataset.color); });
+                document.getElementById('highlightHint').classList.toggle('show', !!STATE.armedColor);
             }
-
-            let pendingSelectionRange = null;
-            let pendingSelectionContainer = null;
-            let pendingSelectionTime = 0;
-
+            
+            let pRange = null, pCont = null, pTime = 0;
             document.addEventListener('selectionchange', () => {
                 const sel = window.getSelection();
                 if (sel && sel.rangeCount > 0 && !sel.isCollapsed) {
-                    const r = sel.getRangeAt(0);
-                    const c = getHighlightableContainer(r.commonAncestorContainer);
-                    if (c) {
-                        try {
-                            pendingSelectionRange = r.cloneRange();
-                            pendingSelectionContainer = c;
-                            pendingSelectionTime = Date.now();
-                        } catch (e) {}
-                    }
+                    const r = sel.getRangeAt(0), c = getHighlightableContainer(r.commonAncestorContainer);
+                    if (c) { pRange = r.cloneRange(); pCont = c; pTime = Date.now(); }
                 }
             });
-
-            // Tapping a colour
             window.selectHighlightColor = function(btnEl) {
-                const color = btnEl.dataset.color;
-                let range = null, container = null;
-
-                const selection = window.getSelection();
-                if (selection && selection.rangeCount > 0 && !selection.isCollapsed) {
-                    const r = selection.getRangeAt(0);
-                    const c = getHighlightableContainer(r.commonAncestorContainer);
-                    if (c) { range = r; container = c; }
-                }
-                if (!range && pendingSelectionRange && (Date.now() - pendingSelectionTime < 4000)) {
-                    range = pendingSelectionRange;
-                    container = pendingSelectionContainer;
-                }
-
-                if (range) {
-                    applyHighlightToRange(range, color, container);
-                    if (selection) selection.removeAllRanges();
-                    pendingSelectionRange = null;
-                    pendingSelectionContainer = null;
-                    STATE.armedColor = color; 
-                    updateHighlightSwatchUI();
-                    return;
-                }
-
-                STATE.armedColor = (STATE.armedColor === color) ? null : color;
-                updateHighlightSwatchUI();
+                const color = btnEl.dataset.color; let range = null, container = null;
+                const sel = window.getSelection();
+                if (sel && sel.rangeCount > 0 && !sel.isCollapsed) { const r = sel.getRangeAt(0), c = getHighlightableContainer(r.commonAncestorContainer); if (c) { range = r; container = c; } }
+                if (!range && pRange && (Date.now() - pTime < 4000)) { range = pRange; container = pCont; }
+                if (range) { applyHighlightToRange(range, color, container); sel?.removeAllRanges(); pRange = pCont = null; STATE.armedColor = color; updateHighlightSwatchUI(); return; }
+                STATE.armedColor = (STATE.armedColor === color) ? null : color; updateHighlightSwatchUI();
             };
 
             let hlGesture = { active: false, mode: null, startX: 0, startY: 0, anchorRange: null, container: null };
-
             function onReaderTouchStart(e) {
                 if (!STATE.armedColor) return; 
-                const touch = e.touches[0];
-                if (!touch) return;
-                const target = document.elementFromPoint(touch.clientX, touch.clientY);
-                const container = target ? getHighlightableContainer(target) : null;
+                const touch = e.touches[0], target = document.elementFromPoint(touch.clientX, touch.clientY), container = target ? getHighlightableContainer(target) : null;
                 if (!container) return;
-                hlGesture.active = true;
-                hlGesture.mode = null;
-                hlGesture.startX = touch.clientX;
-                hlGesture.startY = touch.clientY;
-                hlGesture.container = container;
-                hlGesture.anchorRange = getCaretRangeFromPoint(touch.clientX, touch.clientY);
+                hlGesture = { active: true, mode: null, startX: touch.clientX, startY: touch.clientY, container, anchorRange: getCaretRangeFromPoint(touch.clientX, touch.clientY) };
             }
-
             function onReaderTouchMove(e) {
                 if (!hlGesture.active) return;
-                const touch = e.touches[0];
-                if (!touch) return;
-                const dx = touch.clientX - hlGesture.startX;
-                const dy = touch.clientY - hlGesture.startY;
-
+                const touch = e.touches[0], dx = touch.clientX - hlGesture.startX, dy = touch.clientY - hlGesture.startY;
                 if (hlGesture.mode === null) {
                     if (Math.abs(dx) < 8 && Math.abs(dy) < 8) return; 
                     hlGesture.mode = (Math.abs(dx) > Math.abs(dy)) ? 'highlight' : 'scroll';
-                    if (hlGesture.mode === 'scroll') {
-                        hlGesture.active = false; 
-                        return;
-                    }
+                    if (hlGesture.mode === 'scroll') { hlGesture.active = false; return; }
                 }
-
                 if (hlGesture.mode === 'highlight') {
                     e.preventDefault(); 
-                    const currentRange = getCaretRangeFromPoint(touch.clientX, touch.clientY);
-                    const liveRange = buildOrderedRange(hlGesture.anchorRange, currentRange);
-                    if (liveRange && !liveRange.collapsed) {
-                        const sel = window.getSelection();
-                        sel.removeAllRanges();
-                        sel.addRange(liveRange);
-                    }
+                    const liveRange = buildOrderedRange(hlGesture.anchorRange, getCaretRangeFromPoint(touch.clientX, touch.clientY));
+                    if (liveRange && !liveRange.collapsed) { const sel = window.getSelection(); sel.removeAllRanges(); sel.addRange(liveRange); }
                 }
             }
-
             function onReaderTouchEnd() {
                 if (hlGesture.active && hlGesture.mode === 'highlight') {
                     const sel = window.getSelection();
-                    if (sel && sel.rangeCount > 0 && !sel.isCollapsed) {
-                        const range = sel.getRangeAt(0);
-                        applyHighlightToRange(range, STATE.armedColor, hlGesture.container);
-                        sel.removeAllRanges();
-                    }
+                    if (sel && sel.rangeCount > 0 && !sel.isCollapsed) { applyHighlightToRange(sel.getRangeAt(0), STATE.armedColor, hlGesture.container); sel.removeAllRanges(); }
                 }
-                hlGesture.active = false;
-                hlGesture.mode = null;
-                hlGesture.anchorRange = null;
-                hlGesture.container = null;
+                hlGesture.active = false; hlGesture.mode = null; hlGesture.anchorRange = null; hlGesture.container = null;
             }
 
             // ==================== NAVIGATION ====================
-            window.goNext = function() {
-                document.getElementById('explanationModal').style.display = 'none';
-                if (STATE.currentIdx < STATE.questions.length - 1) { 
-                    STATE.currentIdx++;
-                    renderQuestion();
-                    saveProgress(); 
-                } else {
-                    showEndScreen();
-                }
-            }
-
-            window.goPrev = function() {
-                document.getElementById('explanationModal').style.display = 'none';
-                if (STATE.currentIdx > 0) { 
-                    STATE.currentIdx--;
-                    renderQuestion();
-                    saveProgress(); 
-                }
-            }
-
-            function jumpTo(i) {
-                if (i >= 0 && i < STATE.questions.length) { 
-                    STATE.currentIdx = i;
-                    renderQuestion();
-                    saveProgress(); 
-                }
-            }
-
+            window.goNext = function() { document.getElementById('explanationModal').style.display = 'none'; if (STATE.currentIdx < STATE.questions.length - 1) { STATE.currentIdx++; renderQuestion(); saveProgress(); } else { showEndScreen(); } }
+            window.goPrev = function() { document.getElementById('explanationModal').style.display = 'none'; if (STATE.currentIdx > 0) { STATE.currentIdx--; renderQuestion(); saveProgress(); } }
+            function jumpTo(i) { if (i >= 0 && i < STATE.questions.length) { STATE.currentIdx = i; renderQuestion(); saveProgress(); } }
+            
             function toggleBookmark() {
                 if(!STATE.session[STATE.currentIdx]) return;
                 STATE.session[STATE.currentIdx].mark = !STATE.session[STATE.currentIdx].mark;
-                updateBookmarkIcon();
-                renderDots();
-                saveProgress();
+                updateBookmarkIcon(); renderDots('paletteGridMobile'); renderDots('dotsDisplayDesktop'); saveProgress();
             }
 
             function showEndScreen() {
                 document.getElementById('quizArea').style.display = 'none';
                 document.getElementById('desktopSidebarWrapper').style.display = 'none';
-                document.getElementById('dotsDisplay').style.display = 'none';
+                document.getElementById('mobileBottomNav').style.display = 'none';
                 document.getElementById('endScreen').style.display = 'block';
             }
 
             window.retakeQuiz = function() {
-                if (confirm('Erase your progress for this set and restart?')) {
+                if (confirm('Reset module progress and start over?')) {
                     STATE.session = STATE.questions.map(() => ({ sel: null, ok: null, mark: false, caseHtml: null, questionHtml: null, optionsHtml: null, note: null }));
-                    STATE.currentIdx = 0;
-                    saveProgress();
-                    document.getElementById('quizArea').style.display = '';
-                    document.getElementById('desktopSidebarWrapper').style.display = '';
-                    document.getElementById('dotsDisplay').style.display = ''; 
+                    STATE.currentIdx = 0; STATE.toastTriggeredFor = {}; saveProgress();
+                    document.getElementById('quizArea').style.display = 'flex';
                     document.getElementById('endScreen').style.display = 'none';
+                    if (document.body.classList.contains('desktop-view')) document.getElementById('desktopSidebarWrapper').style.display = 'flex';
+                    document.getElementById('mobileBottomNav').style.display = 'flex';
+                    document.getElementById('lifelineDropdown').style.display = 'none';
                     renderQuestion();
                 }
             }
 
-            // ==================== SHEETS ====================
-            window.openSheet = function(id) {
-                const sheet = document.getElementById(id);
-                sheet.style.display = 'block';
-                void sheet.offsetWidth;
-                sheet.classList.add('show');
-            }
-            window.closeSheet = function(id) {
-                const sheet = document.getElementById(id);
-                sheet.classList.remove('show');
-                setTimeout(() => sheet.style.display = 'none', 300);
-            }
-
-            window.buildPalette = function() {
-                const grid = document.getElementById('paletteGrid');
-                grid.innerHTML = '';
-                STATE.questions.forEach((_, i) => {
-                    const st = STATE.session[i];
-                    const dot = document.createElement('button');
-                    dot.className = 'dot-btn';
-                    dot.style.width = '100%';
-                    dot.style.aspectRatio = '1';
-                    dot.textContent = i + 1;
-                    
-                    if (i === STATE.currentIdx) dot.classList.add('current');
-                    if (st.sel !== null) {
-                        if (st.ok === true) dot.classList.add('correct-answer');
-                        else if (st.ok === false) dot.classList.add('wrong-answer');
-                        else dot.classList.add('attempted');
-                    } else dot.classList.add('unattempted');
-                    
-                    if (st.mark) dot.innerHTML += `<span class="bookmark-indicator"></span>`;
-                    
-                    dot.addEventListener('click', () => { jumpTo(i); closeSheet('paletteSheet'); });
-                    grid.appendChild(dot);
-                });
-                openSheet('paletteSheet');
-            }
+            window.openSheet = function(id) { const sheet = document.getElementById(id); sheet.style.display = 'block'; void sheet.offsetWidth; sheet.classList.add('show'); }
+            window.closeSheet = function(id) { const sheet = document.getElementById(id); sheet.classList.remove('show'); setTimeout(() => sheet.style.display = 'none', 300); }
 
             window.buildReview = function() {
-                const list = document.getElementById('reviewList');
-                list.innerHTML = '';
+                const list = document.getElementById('reviewList'); list.innerHTML = '';
                 STATE.questions.forEach((q, i) => {
-                    const st = STATE.session[i];
-                    let icon = '⚪';
-                    if (st.sel !== null) icon = st.ok ? '✅' : '❌';
-                    
+                    const st = STATE.session[i]; let icon = '⚪'; if (st.sel !== null) icon = st.ok ? '✅' : '❌';
                     const div = document.createElement('div');
-                    div.style.cssText = 'padding:14px; border:1px solid #e2e8f0; border-radius:14px; background:white; cursor:pointer; margin-bottom:10px; display:flex; gap:12px; align-items:flex-start;';
-                    div.innerHTML = `
-                        <span style="font-size:1.2rem; flex-shrink:0;">${icon}</span>
+                    div.style.cssText = 'padding:16px; border:1px solid var(--border); border-radius:16px; background:white; cursor:pointer; margin-bottom:12px; display:flex; gap:12px; align-items:flex-start;';
+                    div.innerHTML = `<span style="font-size:1.2rem; flex-shrink:0;">${icon}</span>
                         <div style="flex:1;">
-                            <h4 style="font-size:0.85rem; font-weight:600; color:#1e293b; margin-bottom:4px;">Q${i+1}: ${q.question.substring(0, 80)}${q.question.length>80?'...':''}</h4>
-                            <p style="font-size:0.75rem; color:#64748b;">
-                                Your Ans: <b style="color:${st.sel!==null?(st.ok?'#059669':'#dc2626'):'#64748b'}">${st.sel!==null?String.fromCharCode(65+st.sel):'-'}</b> 
-                                | Correct: <b style="color:#059669">${String.fromCharCode(65+q.correct)}</b>
-                                ${st.mark?' | <span style="color:#d97706;">🔖 Marked</span>':''}
+                            <h4 style="font-size:0.9rem; font-weight:600; color:var(--text); margin-bottom:6px; line-height:1.4;">Q${i+1}: ${q.question.substring(0, 80)}${q.question.length>80?'...':''}</h4>
+                            <p style="font-size:0.8rem; color:var(--text-secondary);">
+                                Your Ans: <b style="color:${st.sel!==null?(st.ok?'var(--correct)':'var(--wrong)'):'#64748b'}">${st.sel!==null?String.fromCharCode(65+st.sel):'-'}</b> 
+                                | Correct: <b style="color:var(--correct)">${String.fromCharCode(65+q.correct)}</b>
+                                ${st.mark?' | <span style="color:var(--marked);">🔖 Marked</span>':''}
                                 ${st.note?' | <span style="color:var(--primary);"><i class="fa-solid fa-pen"></i> Note</span>':''}
                             </p>
                         </div>`;
-                    
-                    div.addEventListener('click', () => { jumpTo(i); closeSheet('reviewSheet'); });
-                    list.appendChild(div);
+                    div.addEventListener('click', () => { jumpTo(i); closeSheet('reviewSheet'); }); list.appendChild(div);
                 });
                 openSheet('reviewSheet');
             }
 
-            // ==================== LIFELINES ====================
-            function toggleLifelineMenu() {
-                const dd = document.getElementById('lifelineDropdown');
-                dd.style.display = dd.style.display === 'block' ? 'none' : 'block';
-            }
-
+            function toggleLifelineMenu() { const dd = document.getElementById('lifelineDropdown'); dd.style.display = dd.style.display === 'block' ? 'none' : 'block'; }
             function use5050() {
-                toggleLifelineMenu();
-                if (STATE.isAnswered) return;
-                const q = STATE.questions[STATE.currentIdx];
-                const wrong = [0,1,2,3].filter(i => i !== q.correct);
-                wrong.sort(() => Math.random() - 0.5);
-                wrong.slice(0, 2).forEach(i => {
-                    const btn = document.getElementById('optBtn' + i);
-                    if (btn) { btn.style.opacity = '0.3'; btn.disabled = true; }
-                });
+                toggleLifelineMenu(); if (STATE.isAnswered) return;
+                const wrong = [0,1,2,3].filter(i => i !== STATE.questions[STATE.currentIdx].correct).sort(() => Math.random() - 0.5);
+                wrong.slice(0, 2).forEach(i => { const btn = document.getElementById('optBtn' + i); if (btn) { btn.style.opacity = '0.3'; btn.disabled = true; } });
             }
+            function useExpert() { toggleLifelineMenu(); showExplanationModal(false, true); }
 
-            function useExpert() {
-                toggleLifelineMenu();
-                showExplanationModal(false, true); 
-            }
-
-            // ==================== SWIPE LOGIC (question navigation) ====================
-            let touchStartX = 0;
-            let touchStartY = 0;
-            let touchEndX = 0;
-            let touchEndY = 0;
-
+            let tX = 0, tY = 0, eX = 0, eY = 0;
             function handleSwipe() {
-                const xDiff = touchStartX - touchEndX;
-                const yDiff = touchStartY - touchEndY;
-                
-                if (Math.abs(xDiff) > Math.abs(yDiff) && Math.abs(xDiff) > 50) {
-                    if (xDiff > 0) goNext(); 
-                    else goPrev(); 
-                }
+                if (Math.abs(tX - eX) > Math.abs(tY - eY) && Math.abs(tX - eX) > 50) { if (tX - eX > 0) goNext(); else goPrev(); }
             }
 
-            // ==================== ANALYTICS & IMPORT/EXPORT ====================
             window.showAnalytics = async function() {
                 showLoader('Crunching numbers...');
                 try {
                     const allData = await getAllStates();
-                    let totalQs = 0;
-                    let correct = 0;
-                    let wrong = 0;
-                    let setStatsHtml = '';
-
-                    const modMap = { 'easy': 'Easy Set', 'medium': 'Medium Set', 'hard': 'Case Studies' };
-                    const cols = { 'easy': '#10b981', 'medium': '#3b82f6', 'hard': '#ef4444' };
-
+                    let totalQs = 0, correct = 0, wrong = 0, setStatsHtml = '';
+                    const modMap = { 'easy': 'Core Basics', 'medium': 'Standard MCQs', 'hard': 'Case Scenarios' };
+                    
                     for(let mode of ['easy', 'medium', 'hard']) {
                         let data = allData[mode];
                         if(data && data.session) {
-                            let s_ans = data.session.filter(s => s.sel !== null);
-                            let s_cor = s_ans.filter(s => s.ok).length;
-                            
-                            totalQs += s_ans.length;
-                            correct += s_cor;
-                            wrong += (s_ans.length - s_cor);
-
+                            let s_ans = data.session.filter(s => s.sel !== null), s_cor = s_ans.filter(s => s.ok).length;
+                            totalQs += s_ans.length; correct += s_cor; wrong += (s_ans.length - s_cor);
                             let pct = s_ans.length > 0 ? Math.round((s_cor / s_ans.length) * 100) : 0;
-                            
-                            setStatsHtml += `
-                            <div style="background: white; border: 1px solid var(--border); border-radius: 12px; padding: 12px; display:flex; align-items:center; gap: 12px;">
-                                <div style="width:40px; height:40px; border-radius:10px; background:${cols[mode]}20; color:${cols[mode]}; display:flex; align-items:center; justify-content:center; font-weight:800;">${pct}%</div>
-                                <div style="flex:1;">
-                                    <div style="font-weight:600; font-size:0.85rem;">${modMap[mode]}</div>
-                                    <div style="font-size:0.75rem; color:#64748b;">${s_ans.length} attempted | ${s_cor} correct</div>
-                                </div>
+                            setStatsHtml += `<div style="background:var(--surface); border:1px solid var(--border); border-radius:16px; padding:16px; display:flex; align-items:center; gap:16px; box-shadow:0 2px 5px rgba(0,0,0,0.02);">
+                                <div style="width:48px; height:48px; border-radius:12px; background:var(--primary-light); color:var(--primary); display:flex; align-items:center; justify-content:center; font-weight:800; font-size:1.1rem;">${pct}%</div>
+                                <div style="flex:1;"><div style="font-weight:700; font-size:0.95rem; font-family:'Poppins';">${modMap[mode]}</div><div style="font-size:0.8rem; color:var(--text-secondary); margin-top:2px;">${s_ans.length} attempted | ${s_cor} correct</div></div>
                             </div>`;
                         }
                     }
-
-                    document.getElementById('statTotal').textContent = totalQs;
-                    document.getElementById('statRight').textContent = correct;
-                    document.getElementById('statWrong').textContent = wrong;
-                    document.getElementById('statAcc').textContent = totalQs > 0 ? Math.round((correct/totalQs)*100) + '%' : '0%';
-                    
-                    document.getElementById('setStatsBreakdown').innerHTML = setStatsHtml || '<p style="font-size:0.8rem; color:#64748b;">No data yet. Start a quiz module to generate analytics.</p>';
-
+                    document.getElementById('statTotal').textContent = totalQs; document.getElementById('statRight').textContent = correct;
+                    document.getElementById('statWrong').textContent = wrong; document.getElementById('statAcc').textContent = totalQs > 0 ? Math.round((correct/totalQs)*100) + '%' : '0%';
+                    document.getElementById('setStatsBreakdown').innerHTML = setStatsHtml || '<p style="font-size:0.85rem; color:var(--text-secondary);">No data yet. Complete modules to see stats.</p>';
                     switchScreen('analyticsScreen');
-                } catch(e) {
-                    alert('Could not load analytics.');
-                } finally {
-                    hideLoader();
-                }
+                } catch(e) { alert('Could not load analytics.'); } finally { hideLoader(); }
             }
 
             window.exportData = async function() {
                 try {
-                    const allData = await getAllStates();
-                    const jsonStr = JSON.stringify(allData);
-                    const blob = new Blob([jsonStr], { type: "application/json" });
-                    const url = URL.createObjectURL(blob);
-                    
-                    const a = document.createElement('a');
-                    a.href = url;
-                    a.download = `CAAuditPro_Backup_${new Date().toISOString().split('T')[0]}.json`;
-                    a.click();
-                    URL.revokeObjectURL(url);
-                    alert("✅ Progress backed up successfully!");
-                } catch (e) {
-                    alert("Failed to export data.");
-                }
+                    const allData = await getAllStates(); const url = URL.createObjectURL(new Blob([JSON.stringify(allData)], { type: "application/json" }));
+                    const a = document.createElement('a'); a.href = url; a.download = `AuditPro_Backup_${new Date().toISOString().split('T')[0]}.json`;
+                    a.click(); URL.revokeObjectURL(url); alert("✅ Progress backed up!");
+                } catch (e) { alert("Failed to export."); }
             }
 
             document.getElementById('importFile').addEventListener('change', async function(e) {
-                const file = e.target.files[0];
-                if (!file) return;
-
-                showLoader('Restoring data...');
-                const reader = new FileReader();
+                const file = e.target.files[0]; if (!file) return;
+                showLoader('Restoring data...'); const reader = new FileReader();
                 reader.onload = async function(ev) {
                     try {
                         const data = JSON.parse(ev.target.result);
-                        for (let mode of Object.keys(data)) {
-                            await saveState(mode, data[mode]);
-                        }
-                        alert("✅ Progress restored successfully!");
-                        document.getElementById('importFile').value = ""; 
-                    } catch (err) {
-                        alert("❌ Invalid backup file format.");
-                    } finally {
-                        hideLoader();
-                    }
-                };
-                reader.readAsText(file);
+                        for (let m of Object.keys(data)) await saveState(m, data[m]);
+                        alert("✅ Progress restored successfully!"); e.target.value = ""; 
+                    } catch (err) { alert("❌ Invalid format."); } finally { hideLoader(); }
+                }; reader.readAsText(file);
             });
 
-            // ==================== EVENT BINDINGS ====================
             function bindEvents() {
-                document.getElementById('btnPrev').addEventListener('click', goPrev);
-                document.getElementById('btnNext').addEventListener('click', goNext);
-                document.getElementById('btnPalette').addEventListener('click', buildPalette);
-                document.getElementById('btnReview').addEventListener('click', buildReview);
-                document.getElementById('bookmarkBtn').addEventListener('click', toggleBookmark);
+                document.getElementById('btnPrev').addEventListener('click', goPrev); document.getElementById('btnNext').addEventListener('click', goNext);
+                document.getElementById('btnPalette').addEventListener('click', () => openSheet('paletteSheet'));
+                document.getElementById('btnReview').addEventListener('click', buildReview); document.getElementById('bookmarkBtn').addEventListener('click', toggleBookmark);
+                document.getElementById('lifelineBtn').addEventListener('click', toggleLifelineMenu); document.getElementById('btn5050').addEventListener('click', use5050);
+                document.getElementById('btnExpert').addEventListener('click', useExpert); document.getElementById('explanationNextBtn').addEventListener('click', goNext);
                 
-                document.getElementById('lifelineBtn').addEventListener('click', toggleLifelineMenu);
-                document.getElementById('btn5050').addEventListener('click', use5050);
-                document.getElementById('btnExpert').addEventListener('click', useExpert);
-                
-                document.getElementById('explanationNextBtn').addEventListener('click', goNext);
-
                 const touchArea = document.getElementById('mainContent');
-                touchArea.addEventListener('touchstart', e => {
-                    touchStartX = e.changedTouches[0].screenX;
-                    touchStartY = e.changedTouches[0].screenY;
-                }, { passive: true });
+                touchArea.addEventListener('touchstart', e => { tX = e.changedTouches[0].screenX; tY = e.changedTouches[0].screenY; }, { passive: true });
+                touchArea.addEventListener('touchend', e => { eX = e.changedTouches[0].screenX; eY = e.changedTouches[0].screenY; handleSwipe(); }, { passive: true });
                 
-                touchArea.addEventListener('touchend', e => {
-                    touchEndX = e.changedTouches[0].screenX;
-                    touchEndY = e.changedTouches[0].screenY;
-                    handleSwipe();
-                }, { passive: true });
-
-                // Highlighter swipe/scroll gesture handling inside Reading Mode
-                const readerContentEl = document.getElementById('readerContent');
-                readerContentEl.addEventListener('touchstart', onReaderTouchStart, { passive: true });
-                readerContentEl.addEventListener('touchmove', onReaderTouchMove, { passive: false });
-                readerContentEl.addEventListener('touchend', onReaderTouchEnd, { passive: true });
-                readerContentEl.addEventListener('touchcancel', onReaderTouchEnd, { passive: true });
-
-                document.addEventListener('click', e => {
-                    const dd = document.getElementById('lifelineDropdown');
-                    const lb = document.getElementById('lifelineBtn');
-                    if (dd.style.display === 'block' && !dd.contains(e.target) && e.target !== lb && !lb.contains(e.target)) {
-                        dd.style.display = 'none';
-                    }
-                });
-
-                document.addEventListener('keydown', e => {
-                    if (document.getElementById('quizScreen').classList.contains('active')) {
-                        if (e.key === 'ArrowRight') { e.preventDefault(); goNext(); }
-                        if (e.key === 'ArrowLeft') { e.preventDefault(); goPrev(); }
-                    }
-                });
+                const rContent = document.getElementById('readerContent');
+                rContent.addEventListener('touchstart', onReaderTouchStart, { passive: true }); rContent.addEventListener('touchmove', onReaderTouchMove, { passive: false });
+                rContent.addEventListener('touchend', onReaderTouchEnd, { passive: true }); rContent.addEventListener('touchcancel', onReaderTouchEnd, { passive: true });
                 
-                if (window.innerWidth > 900) {
-                    document.body.classList.add('desktop-view');
-                    document.getElementById('desktopToggleIcon').className = 'fa-solid fa-mobile-screen';
-                }
+                document.addEventListener('click', e => { const dd = document.getElementById('lifelineDropdown'), lb = document.getElementById('lifelineBtn'); if (dd.style.display === 'block' && !dd.contains(e.target) && e.target !== lb && !lb.contains(e.target)) dd.style.display = 'none'; });
+                document.addEventListener('keydown', e => { if (document.getElementById('quizScreen').classList.contains('active')) { if (e.key === 'ArrowRight') { e.preventDefault(); goNext(); } if (e.key === 'ArrowLeft') { e.preventDefault(); goPrev(); } } });
+                
+                if (window.innerWidth > 900) { document.body.classList.add('desktop-view'); document.getElementById('desktopToggleIcon').className = 'fa-solid fa-mobile-screen'; applyDesktopLayout(); }
+                window.addEventListener('resize', () => { if (document.body.classList.contains('desktop-view')) applyDesktopLayout(); });
             }
 
-            // ==================== INIT ====================
-            window.addEventListener('DOMContentLoaded', () => {
-                initDB();
-                bindEvents();
-                switchScreen('welcomeScreen');
-            });
+            window.addEventListener('DOMContentLoaded', () => { initDB(); bindEvents(); switchScreen('welcomeScreen'); });
         })();
     </script>
 </body>
