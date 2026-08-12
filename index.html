@@ -24,8 +24,6 @@
             --wrong-bg: #fef2f2;
             --marked: #f59e0b;
             --marked-bg: #fffbeb;
-            --answered: #3b82f6;
-            --unattempted: #cbd5e1;
             --app-max-width: 600px;
         }
 
@@ -106,18 +104,24 @@
         /* Quiz Elements */
         #quizArea { padding: 16px; display: flex; flex-direction: column; gap: 16px; }
         
+        /* Reading Mode Hint */
+        .double-tap-hint {
+            display: inline-flex; align-items: center; gap: 8px; font-size: 0.7rem; color: var(--primary); background: var(--primary-light); padding: 6px 12px; border-radius: 20px; font-weight: 600; margin-bottom: 8px; border: 1px solid #bfdbfe; animation: gentleBounce 2s infinite; pointer-events: none;
+        }
+        @keyframes gentleBounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-3px); } }
+
         .case-study-box { 
             background: var(--primary-light); border-radius: 16px; padding: 16px; 
-            font-size: 0.85rem; line-height: 1.6; max-height: 25vh; overflow-y: auto; 
+            font-size: 0.85rem; line-height: 1.6; max-height: 30vh; overflow-y: auto; 
             color: var(--text); border-left: 4px solid var(--primary); cursor: pointer; position: relative;
         }
         .case-study-box .case-label { color: var(--primary); font-weight: 700; font-size: 0.75rem; margin-bottom: 8px; font-family: 'Poppins', sans-serif;}
         
-        .question-card { background: transparent; padding: 0 4px; cursor: pointer; }
+        .question-card { background: transparent; padding: 0 4px; cursor: pointer; margin-top: 8px;}
         .question-text { font-size: 1rem; line-height: 1.6; font-weight: 500; color: var(--text); }
         .question-text .q-number { color: var(--primary); font-weight: 700; margin-right: 4px; }
         
-        .options-list { display: flex; flex-direction: column; gap: 10px; margin-top: 8px;}
+        .options-list { display: flex; flex-direction: column; gap: 10px; margin-top: 12px;}
         .option-btn { 
             display: flex; align-items: flex-start; gap: 12px; width: 100%; 
             padding: 14px 16px; background: var(--surface); border: 1px solid var(--border); 
@@ -139,14 +143,15 @@
         .option-btn:disabled { cursor: default; }
 
         /* ================= DESKTOP / LAPTOP ENHANCED LAYOUT ================= */
-        body.desktop-view { background: #cbd5e1; padding: 0; }
+        /* If forced on mobile, it allows scrolling to see full undistorted desktop layout */
+        body.desktop-view { background: #cbd5e1; padding: 0; overflow: auto; }
         body.desktop-view .app-container {
-            max-width: 100vw; width: 100vw; height: 100vh; border-radius: 0;
-            display: grid; grid-template-columns: 1fr 320px; grid-template-rows: 60px 1fr;
-            background: var(--bg);
+            min-width: 1024px; max-width: 1400px; width: 100%; height: 100dvh; min-height: 700px; border-radius: 0;
+            display: grid; grid-template-columns: 1fr 340px; grid-template-rows: 64px 1fr;
+            background: var(--bg); margin: 0 auto;
         }
 
-        body.desktop-view .header { grid-column: 1 / 3; grid-row: 1; padding: 0 24px; box-shadow: 0 1px 4px rgba(0,0,0,0.05); border-bottom: none;}
+        body.desktop-view .header { grid-column: 1 / 3; grid-row: 1; padding: 0 32px; box-shadow: 0 1px 4px rgba(0,0,0,0.05); border-bottom: none;}
         body.desktop-view .main-content { grid-column: 1; grid-row: 2; padding: 24px; height: 100%; display: flex; justify-content: center; }
         
         body.desktop-view #quizArea { flex-direction: row; gap: 32px; max-width: 1200px; width: 100%; padding: 0;}
@@ -159,7 +164,7 @@
         body.desktop-view .question-text { font-size: 1.15rem; line-height: 1.8; margin-bottom: 24px;}
         body.desktop-view .option-btn { font-size: 1rem; padding: 18px 20px; border-radius: 16px;}
         
-        body.desktop-view .bottom-nav { display: none; } /* Hide bottom nav on true desktop */
+        body.desktop-view .bottom-nav { display: none !important; }
         
         /* Desktop Sidebar Palette */
         .desktop-sidebar-wrapper { display: none; }
@@ -170,7 +175,6 @@
         }
         body.desktop-view .desktop-sidebar-title { font-size: 1.1rem; font-weight: 700; margin-bottom: 20px; font-family: 'Poppins'; }
         
-        /* Desktop specific Nav overrides inside Sidebar */
         .desktop-nav-controls { display: flex; gap: 12px; margin-top: auto; padding-top: 20px; border-top: 1px solid var(--border); }
         .desktop-nav-controls button { flex: 1; padding: 14px; border-radius: 12px; border: none; font-weight: 600; cursor: pointer; transition: 0.2s;}
         .desktop-nav-controls .btn-prev { background: var(--bg); color: var(--text); }
@@ -198,7 +202,7 @@
         .btn-primary { width: 100%; padding: 16px; background: var(--primary); color: white; border: none; border-radius: 14px; font-weight: 600; font-size: 1rem; cursor: pointer; transition: 0.2s; font-family: 'Inter', sans-serif;}
         .btn-primary:active { transform: scale(0.98); background: #1d4ed8; }
 
-        .bottom-sheet { position: fixed; inset: 0; top: auto; background: white; border-radius: 24px 24px 0 0; max-height: 85vh; overflow-y: auto; z-index: 180; padding: 20px; box-shadow: 0 -10px 40px rgba(0,0,0,0.1); transform: translateY(100%); transition: transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1); }
+        .bottom-sheet { position: fixed; inset: 0; top: auto; background: white; border-radius: 24px 24px 0 0; max-height: 85vh; overflow-y: auto; z-index: 180; padding: 20px; padding-bottom: calc(20px + env(safe-area-inset-bottom)); box-shadow: 0 -10px 40px rgba(0,0,0,0.1); transform: translateY(100%); transition: transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1); }
         .bottom-sheet.show { transform: translateY(0); }
         .sheet-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; position: sticky; top: 0; background: white; padding-bottom: 12px; z-index: 1; border-bottom: 1px solid var(--border); }
         .sheet-header h3 { font-size: 1.1rem; font-weight: 700; font-family: 'Poppins', sans-serif; }
@@ -206,7 +210,7 @@
         .close-btn:active { background: var(--wrong-bg); color: var(--wrong); }
 
         /* Fullscreen Reader */
-        .fullscreen-reader { position: fixed; inset: 0; background: var(--surface); z-index: 250; display: none; flex-direction: column; animation: fadeIn 0.2s ease;}
+        .fullscreen-reader { position: fixed; inset: 0; background: var(--surface); z-index: 250; display: none; flex-direction: column; animation: fadeIn 0.2s ease; padding-bottom: env(safe-area-inset-bottom);}
         .fullscreen-reader .reader-header { display: flex; justify-content: space-between; align-items: center; padding: 12px 16px; border-bottom: 1px solid var(--border); background: var(--surface); box-shadow: 0 2px 10px rgba(0,0,0,0.02); gap: 10px; flex-wrap: wrap;}
         .fullscreen-reader .reader-content { flex: 1; overflow-y: auto; padding: 20px; max-width: 800px; margin: 0 auto; width: 100%;}
         @keyframes fadeIn { from{opacity:0;} to{opacity:1;} }
@@ -225,28 +229,36 @@
 
         /* CREATIVE YT TOAST (Bottom positioned) */
         .yt-toast { 
-            position: fixed; bottom: 80px; left: 50%; transform: translateX(-50%) translateY(150%); 
+            position: fixed; bottom: calc(80px + env(safe-area-inset-bottom)); left: 50%; 
+            transform: translateX(-50%) translateY(200%); 
             background: rgba(15, 23, 42, 0.95); backdrop-filter: blur(8px);
             border: 1px solid rgba(255,255,255,0.1); border-radius: 20px; padding: 14px 18px; 
             z-index: 1000; display: flex; align-items: center; gap: 14px; 
             box-shadow: 0 10px 40px rgba(0,0,0,0.25); transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1); 
-            width: 92%; max-width: 400px; color: white;
+            width: 92%; max-width: 400px; color: white; pointer-events: none;
         }
         body.desktop-view .yt-toast { bottom: 30px; left: 30px; transform: translateX(-150%); width: auto; max-width: 380px;}
-        body.desktop-view .yt-toast.show { transform: translateX(0); }
-        .yt-toast.show { transform: translateX(-50%) translateY(0); }
+        body.desktop-view .yt-toast.show { transform: translateX(0); pointer-events: auto;}
+        .yt-toast.show { transform: translateX(-50%) translateY(0); pointer-events: auto;}
         .yt-toast i.fa-youtube { color: #ff0000; font-size: 2.2rem; filter: drop-shadow(0 0 8px rgba(255,0,0,0.4));}
         .yt-toast-content { flex: 1; }
         .yt-toast-title { font-weight: 700; font-size: 0.95rem; margin-bottom: 2px; font-family:'Poppins';}
         .yt-toast-desc { font-size: 0.75rem; color: #cbd5e1; line-height: 1.4; }
         .yt-toast-close { width: 28px; height: 28px; border-radius: 50%; background: rgba(255,255,255,0.1); border: none; color: white; cursor: pointer; display: flex; align-items: center; justify-content: center;}
 
+        /* Welcome & Analytics Static Footers */
+        .yt-footer-static { 
+            text-align: center; padding: 24px 20px; padding-bottom: calc(24px + env(safe-area-inset-bottom));
+            margin-top: auto; background: white; border-top: 1px solid var(--border); width: 100%; flex-shrink: 0;
+        }
+        .yt-footer-static a { display: inline-flex; align-items: center; gap: 10px; color: var(--text); text-decoration: none; font-weight: 600; font-size: 0.85rem; padding: 12px 20px; background: #fff1f2; border: 1px solid #fecdd3; border-radius: 30px;}
+
         /* Welcome Screen & Cards */
-        .welcome-header { padding: 40px 24px; text-align: center; background: white; border-bottom: 1px solid var(--border); margin-bottom: 16px;}
+        .welcome-header { padding: 40px 24px; padding-top: max(40px, env(safe-area-inset-top)); text-align: center; background: white; border-bottom: 1px solid var(--border); margin-bottom: 16px; flex-shrink: 0;}
         .welcome-header h1 { font-family: 'Poppins'; font-size: 1.6rem; font-weight: 800; color: var(--text); margin-bottom: 6px;}
         .welcome-header p { font-size: 0.9rem; color: var(--text-secondary); }
         
-        .mode-cards { padding: 0 16px; display: flex; flex-direction: column; gap: 12px; }
+        .mode-cards { padding: 0 16px; display: flex; flex-direction: column; gap: 12px; flex-shrink: 0;}
         .mode-card { background: white; border: 1px solid var(--border); border-radius: 16px; padding: 18px; cursor: pointer; display: flex; align-items: center; gap: 16px; transition: 0.2s; box-shadow: 0 2px 8px rgba(0,0,0,0.02);}
         .mode-card:active { transform: scale(0.98); background: var(--bg); }
         .mode-icon { width: 48px; height: 48px; border-radius: 14px; display: flex; align-items: center; justify-content: center; font-size: 1.4rem; flex-shrink: 0; }
@@ -256,18 +268,16 @@
         .mode-text h3 { font-family: 'Poppins'; font-size: 1.05rem; font-weight: 700; color: var(--text); margin-bottom: 4px;}
         .mode-text p { font-size: 0.8rem; color: var(--text-secondary); line-height: 1.4; }
 
-        .tools-section { padding: 24px 16px; display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+        .tools-section { padding: 24px 16px; display: grid; grid-template-columns: 1fr 1fr; gap: 12px; flex-shrink: 0; }
         .tool-btn { background: white; border: 1px solid var(--border); border-radius: 14px; padding: 16px; text-align: center; cursor: pointer; transition: 0.2s; }
         .tool-btn:active { transform: scale(0.96); background: var(--bg); }
         .tool-btn i { font-size: 1.4rem; color: var(--primary); margin-bottom: 8px; }
         .tool-btn h4 { font-size: 0.8rem; font-weight: 600; color: var(--text); }
-
-        .yt-footer { text-align: center; padding: 24px 20px; margin-top: auto; background: white; border-top: 1px solid var(--border); }
-        .yt-footer a { display: inline-flex; align-items: center; gap: 10px; color: var(--text); text-decoration: none; font-weight: 600; font-size: 0.85rem; padding: 12px 20px; background: #fff1f2; border: 1px solid #fecdd3; border-radius: 30px;}
         
         .screen { display: none; height: 100%; width: 100%; flex-direction: column; }
         .screen.active { display: flex; }
-        
+        .scrollable-screen-content { flex: 1; overflow-y: auto; display: flex; flex-direction: column; -webkit-overflow-scrolling: touch; }
+
         .loader-overlay { position: fixed; inset: 0; background: rgba(255,255,255,0.9); z-index: 999; display: flex; flex-direction: column; align-items: center; justify-content: center; display: none;}
         .spinner { width: 40px; height: 40px; border: 4px solid var(--primary-light); border-top: 4px solid var(--primary); border-radius: 50%; animation: spin 1s linear infinite; margin-bottom: 16px; }
         @keyframes spin { 100% { transform: rotate(360deg); } }
@@ -288,66 +298,68 @@
     <div class="app-container" id="appContainer">
         
         <!-- ================= WELCOME SCREEN ================= -->
-        <div id="welcomeScreen" class="screen active" style="background: var(--bg); overflow-y: auto;">
-            <div class="welcome-header">
-                <h1>CA Final Audit Pro</h1>
-                <p>Master concepts with intelligent simulation</p>
-            </div>
-            
-            <div class="mode-cards" style="flex:1;">
-                <div class="mode-card easy" onclick="startApp('easy')">
-                    <div class="mode-icon"><i class="fa-solid fa-seedling"></i></div>
-                    <div class="mode-text">
-                        <h3>Core Basics</h3>
-                        <p>Direct MCQs for strong foundation.</p>
+        <div id="welcomeScreen" class="screen active">
+            <div class="scrollable-screen-content">
+                <div class="welcome-header">
+                    <h1>CA Final Audit Pro</h1>
+                    <p>Master concepts with intelligent simulation</p>
+                </div>
+                
+                <div class="mode-cards">
+                    <div class="mode-card easy" onclick="startApp('easy')">
+                        <div class="mode-icon"><i class="fa-solid fa-seedling"></i></div>
+                        <div class="mode-text">
+                            <h3>Core Basics</h3>
+                            <p>Direct MCQs for strong foundation.</p>
+                        </div>
+                    </div>
+                    <div class="mode-card medium" onclick="startApp('medium')">
+                        <div class="mode-icon"><i class="fa-solid fa-fire"></i></div>
+                        <div class="mode-text">
+                            <h3>Advanced Application</h3>
+                            <p>Standard exam-level challenges.</p>
+                        </div>
+                    </div>
+                    <div class="mode-card hard" onclick="startApp('hard')">
+                        <div class="mode-icon"><i class="fa-solid fa-briefcase"></i></div>
+                        <div class="mode-text">
+                            <h3>Case Scenarios</h3>
+                            <p>Complex integrated case studies.</p>
+                        </div>
                     </div>
                 </div>
-                <div class="mode-card medium" onclick="startApp('medium')">
-                    <div class="mode-icon"><i class="fa-solid fa-fire"></i></div>
-                    <div class="mode-text">
-                        <h3>Advanced Application</h3>
-                        <p>Standard exam-level challenges.</p>
-                    </div>
-                </div>
-                <div class="mode-card hard" onclick="startApp('hard')">
-                    <div class="mode-icon"><i class="fa-solid fa-briefcase"></i></div>
-                    <div class="mode-text">
-                        <h3>Case Scenarios</h3>
-                        <p>Complex integrated case studies.</p>
-                    </div>
-                </div>
-            </div>
 
-            <div class="tools-section">
-                <div class="tool-btn" onclick="showAnalytics()">
-                    <i class="fa-solid fa-chart-pie"></i>
-                    <h4>Analytics</h4>
-                </div>
-                <div class="tool-btn" onclick="exportData()">
-                    <i class="fa-solid fa-cloud-arrow-down"></i>
-                    <h4>Backup</h4>
-                </div>
-                <div class="tool-btn" onclick="document.getElementById('importFile').click()" style="grid-column: span 2;">
-                    <i class="fa-solid fa-clock-rotate-left"></i>
-                    <h4>Restore Progress</h4>
-                </div>
-            </div>
-            
-            <div class="yt-footer">
-                <a href="https://youtube.com/@observe_with_satyam?si=8p90ukUsKvLJaZvh" target="_blank">
-                    <i class="fa-brands fa-youtube" style="color: #ef4444; font-size:1.4rem;"></i>
-                    <div style="text-align: left; line-height: 1.2;">
-                        <span>Observe with Satyam</span><br>
-                        <span style="font-size:0.7rem; color: #64748b; font-weight:500;">Made with love. Support the channel ❤️</span>
+                <div class="tools-section">
+                    <div class="tool-btn" onclick="showAnalytics()">
+                        <i class="fa-solid fa-chart-pie"></i>
+                        <h4>Analytics</h4>
                     </div>
-                </a>
+                    <div class="tool-btn" onclick="exportData()">
+                        <i class="fa-solid fa-cloud-arrow-down"></i>
+                        <h4>Backup</h4>
+                    </div>
+                    <div class="tool-btn" onclick="document.getElementById('importFile').click()" style="grid-column: span 2;">
+                        <i class="fa-solid fa-clock-rotate-left"></i>
+                        <h4>Restore Progress</h4>
+                    </div>
+                </div>
+                
+                <div class="yt-footer-static">
+                    <a href="https://youtube.com/@observe_with_satyam?si=8p90ukUsKvLJaZvh" target="_blank">
+                        <i class="fa-brands fa-youtube" style="color: #ef4444; font-size:1.4rem;"></i>
+                        <div style="text-align: left; line-height: 1.2;">
+                            <span>Observe with Satyam</span><br>
+                            <span style="font-size:0.7rem; color: #64748b; font-weight:500;">Made with love. Support the channel ❤️</span>
+                        </div>
+                    </a>
+                </div>
             </div>
         </div>
 
         <!-- ================= MAIN QUIZ APP ================= -->
         <div id="quizScreen" class="screen">
             
-            <div class="header">
+            <div class="header" style="padding-top: max(12px, env(safe-area-inset-top));">
                 <div class="header-left">
                     <button class="home-btn" onclick="goHome()" title="Back"><i class="fa-solid fa-arrow-left"></i></button>
                     <div class="header-title">
@@ -356,7 +368,7 @@
                     </div>
                 </div>
                 <div class="header-actions">
-                    <button class="icon-btn desktop-toggle" id="desktopToggleBtn" title="Toggle Desktop" onclick="toggleDesktopView()">
+                    <button class="icon-btn desktop-toggle" id="desktopToggleBtn" title="Toggle Desktop Mode" onclick="toggleDesktopView()">
                         <i class="fa-solid fa-desktop" id="desktopToggleIcon"></i>
                     </button>
                     <button class="icon-btn" id="bookmarkBtn" title="Bookmark">
@@ -379,6 +391,7 @@
                     <div id="caseStudyContainer"></div>
                     <div id="questionAndOptionsContainer">
                         <div class="question-card" ondblclick="openFullscreenReader()" title="Double click to read fullscreen">
+                            <div class="double-tap-hint" id="readerHint"><i class="fa-solid fa-hand-pointer"></i> Double tap for Reading & Highlight Mode</div>
                             <div id="questionDisplay" style="position:relative;"></div>
                         </div>
                         <div class="options-list" id="optionsDisplay"></div>
@@ -414,9 +427,52 @@
             </div>
         </div>
 
+        <!-- ================= ANALYTICS SCREEN ================= -->
+        <div id="analyticsScreen" class="screen" style="background: var(--bg);">
+            <div class="scrollable-screen-content">
+                <div class="header" style="box-shadow:none; border-bottom:1px solid var(--border); padding-top: max(12px, env(safe-area-inset-top)); flex-shrink: 0; background:white;">
+                    <div class="header-left">
+                        <button class="home-btn" onclick="goHome()"><i class="fa-solid fa-arrow-left"></i></button>
+                        <div class="header-title"><h2>Performance Analytics</h2></div>
+                    </div>
+                </div>
+                <div style="padding: 24px 16px; max-width: 800px; margin: 0 auto; width: 100%; flex: 1;">
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 32px;">
+                        <div class="stat-box" style="background: var(--primary-light); border:none;">
+                            <div class="stat-val" style="color: var(--primary);" id="statTotal">0</div>
+                            <div class="stat-label">Attempted</div>
+                        </div>
+                        <div class="stat-box" style="background: var(--correct-bg); border:none;">
+                            <div class="stat-val" style="color: var(--correct);" id="statAcc">0%</div>
+                            <div class="stat-label">Accuracy</div>
+                        </div>
+                        <div class="stat-box" style="border-color: #a7f3d0; background: white;">
+                            <div class="stat-val" style="color: var(--correct);" id="statRight">0</div>
+                            <div class="stat-label">Correct</div>
+                        </div>
+                        <div class="stat-box" style="border-color: #fca5a5; background: white;">
+                            <div class="stat-val" style="color: var(--wrong);" id="statWrong">0</div>
+                            <div class="stat-label">Wrong</div>
+                        </div>
+                    </div>
+                    <h4 style="font-weight: 700; font-family:'Poppins'; margin-bottom:16px;">Module Breakdown</h4>
+                    <div id="setStatsBreakdown" style="display: flex; flex-direction: column; gap: 12px; padding-bottom: 30px;"></div>
+                </div>
+                <div class="yt-footer-static">
+                    <a href="https://youtube.com/@observe_with_satyam?si=8p90ukUsKvLJaZvh" target="_blank">
+                        <i class="fa-brands fa-youtube" style="color: #ef4444; font-size:1.4rem;"></i>
+                        <div style="text-align: left; line-height: 1.2;">
+                            <span>Watch Latest Videos</span><br>
+                            <span style="font-size:0.7rem; color: #64748b; font-weight:500;">Support the creator ❤️</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
     </div> <!-- App Container -->
 
-    <!-- SMART YT TOAST (Bottom positioned, non-intrusive) -->
+    <!-- SMART YT TOAST (Bottom positioned in Quiz Screen, never overlaps static footer) -->
     <div id="ytToast" class="yt-toast">
         <i class="fa-brands fa-youtube"></i>
         <div class="yt-toast-content">
@@ -474,7 +530,7 @@
 
     <!-- FULLSCREEN READER (INTERACTIVE WITH HIGHLIGHTER) -->
     <div id="fullscreenReader" class="fullscreen-reader">
-        <div class="reader-header">
+        <div class="reader-header" style="padding-top: max(12px, env(safe-area-inset-top));">
             <h3 style="font-weight:700; font-family:'Poppins', sans-serif; font-size:1.1rem;">📖 Reading Mode</h3>
             
             <div class="highlighter-tools" id="highlighterTools">
@@ -497,38 +553,6 @@
         <div class="reader-content" id="readerContent"></div>
     </div>
 
-    <!-- ANALYTICS SCREEN -->
-    <div id="analyticsScreen" class="screen" style="background: white;">
-        <div class="header" style="box-shadow:none; border-bottom:1px solid var(--border);">
-            <div class="header-left">
-                <button class="home-btn" onclick="goHome()"><i class="fa-solid fa-arrow-left"></i></button>
-                <div class="header-title"><h2>Performance Analytics</h2></div>
-            </div>
-        </div>
-        <div style="padding: 24px 16px; max-width: 800px; margin: 0 auto; width: 100%; flex: 1; overflow-y:auto;">
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 32px;">
-                <div class="stat-box" style="background: var(--primary-light); border:none;">
-                    <div class="stat-val" style="color: var(--primary);" id="statTotal">0</div>
-                    <div class="stat-label">Attempted</div>
-                </div>
-                <div class="stat-box" style="background: var(--correct-bg); border:none;">
-                    <div class="stat-val" style="color: var(--correct);" id="statAcc">0%</div>
-                    <div class="stat-label">Accuracy</div>
-                </div>
-                <div class="stat-box" style="border-color: #a7f3d0;">
-                    <div class="stat-val" style="color: var(--correct);" id="statRight">0</div>
-                    <div class="stat-label">Correct</div>
-                </div>
-                <div class="stat-box" style="border-color: #fca5a5;">
-                    <div class="stat-val" style="color: var(--wrong);" id="statWrong">0</div>
-                    <div class="stat-label">Wrong</div>
-                </div>
-            </div>
-            <h4 style="font-weight: 700; font-family:'Poppins'; margin-bottom:16px;">Module Breakdown</h4>
-            <div id="setStatsBreakdown" style="display: flex; flex-direction: column; gap: 12px; padding-bottom: 30px;"></div>
-        </div>
-    </div>
-
     <script>
         (function() {
             // ==================== STATE ====================
@@ -540,7 +564,7 @@
                 isAnswered: false,
                 audioCtx: null,
                 armedColor: null,
-                toastTriggeredFor: {} // Keep track of milestones hit
+                toastTriggeredFor: {} // Track milestones
             };
 
             const DB_NAME = 'CAAuditProDB';
@@ -639,6 +663,7 @@
 
             window.goHome = function() {
                 if(STATE.currentMode) saveProgress();
+                closeYtToast();
                 switchScreen('welcomeScreen');
             }
 
@@ -734,6 +759,9 @@
             }
             
             function checkYtAppeal() {
+                // Ensure toast only shows inside the quiz screen.
+                if (!document.getElementById('quizScreen').classList.contains('active')) return;
+                
                 let answeredCount = STATE.session.filter(s => s.sel !== null).length;
                 if (answeredCount > 0 && answeredCount % 50 === 0 && !STATE.toastTriggeredFor[answeredCount]) {
                     STATE.toastTriggeredFor[answeredCount] = true;
@@ -1217,5 +1245,6 @@
     </script>
 </body>
 </html>
+
 
 
