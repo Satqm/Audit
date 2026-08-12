@@ -309,13 +309,6 @@
         .nav-btn.next-btn:active { background: #1d4ed8; }
         .score-badge { font-size: 0.85rem; font-weight: 700; color: var(--primary); background: #eff6ff; padding: 8px 14px; border-radius: 10px; border: 1.5px solid #bfdbfe; white-space: nowrap; }
 
-        /* NOTES FAB */
-        .notes-fab { position: fixed; bottom: 80px; right: 20px; width: 52px; height: 52px; background: var(--primary); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.25rem; box-shadow: 0 6px 16px rgba(37,99,235,0.4); cursor: pointer; z-index: 100; transition: transform 0.2s, background 0.2s; }
-        .notes-fab:active { transform: scale(0.9); background: #1d4ed8; }
-        body.desktop-view .notes-fab { bottom: 40px; right: 40px; }
-        .notes-badge { position: absolute; top: 0; right: 0; width: 14px; height: 14px; background: var(--marked); border-radius: 50%; border: 2px solid white; display: none; }
-        .notes-badge.show { display: block; }
-
         /* MODALS & SHEETS */
         .modal-overlay { position: fixed; inset: 0; background: rgba(15, 23, 42, 0.7); display: flex; align-items: center; justify-content: center; z-index: 200; padding: 20px; backdrop-filter: blur(4px); }
         .modal-card { background: white; border-radius: 20px; padding: 24px; max-width: 400px; width: 100%; text-align: center; box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2); max-height: 90vh; overflow-y: auto; display: flex; flex-direction: column; }
@@ -338,7 +331,7 @@
         .fullscreen-reader .reader-content { flex: 1; overflow-y: auto; padding: 8px; max-width: 800px; margin: 0 auto; width: 100%;}
         @keyframes fadeIn { from{opacity:0;} to{opacity:1;} }
         
-        /* HIGHLIGHTER TOOLBAR */
+        /* HIGHLIGHTER TOOLBAR & NOTES BUTTON */
         .highlighter-tools { display: flex; gap: 8px; align-items: center; background: #f8fafc; padding: 6px 10px; border-radius: 18px; border: 1px solid var(--border); flex-wrap: wrap; }
         .hl-btn { width: 28px; height: 28px; border-radius: 50%; border: 2px solid white; cursor: pointer; box-shadow: 0 1px 3px rgba(0,0,0,0.15); transition: transform 0.15s, box-shadow 0.15s; display: flex; align-items: center; justify-content: center; touch-action: manipulation; }
         .hl-btn:active { transform: scale(0.9); }
@@ -349,6 +342,11 @@
         .hl-pink { background: #fbcfe8; }
         .hl-eraser { background: #f1f5f9; border: 2px solid var(--border); color: #64748b; font-size: 0.8rem; box-shadow: none; }
         .hl-eraser.armed { box-shadow: 0 0 0 3px rgba(220,38,38,0.45); }
+        
+        .toolbar-notes-btn { background: #eff6ff; border: 1px solid #bfdbfe; color: var(--primary); font-size: 0.85rem; position: relative; box-shadow: none;}
+        .notes-badge { position: absolute; top: -2px; right: -2px; width: 10px; height: 10px; background: var(--marked); border-radius: 50%; border: 2px solid white; display: none; }
+        .notes-badge.show { display: block; }
+        
         .highlight-hint { width: 100%; font-size: 0.68rem; color: var(--primary); font-weight: 600; padding: 2px 2px 0; display: none; }
         .highlight-hint.show { display: block; }
 
@@ -551,12 +549,6 @@
                         Restart this Set
                     </button>
                 </div>
-
-                <!-- NOTES FLOATING ACTION BUTTON -->
-                <div class="notes-fab" onclick="openNotesModal()">
-                    <i class="fa-solid fa-pen"></i>
-                    <div class="notes-badge" id="notesBadge"></div>
-                </div>
             </div>
 
             <!-- BOTTOM NAV -->
@@ -592,8 +584,8 @@
         </div>
     </div>
 
-    <!-- NOTES MODAL -->
-    <div id="notesModal" class="modal-overlay" style="display:none; z-index:300;">
+    <!-- NOTES MODAL (Renders over Reading Mode) -->
+    <div id="notesModal" class="modal-overlay" style="display:none; z-index: 300;">
         <div class="modal-card">
             <div class="sheet-header" style="border-bottom:none; margin-bottom:8px;">
                 <h3 id="notesTitle" style="margin-bottom:0;">📝 My Notes</h3>
@@ -640,6 +632,15 @@
                 <button class="hl-btn hl-blue" data-color="#bfdbfe" onclick="selectHighlightColor(this)" title="Blue"></button>
                 <button class="hl-btn hl-pink" data-color="#fbcfe8" onclick="selectHighlightColor(this)" title="Pink"></button>
                 <button class="hl-btn hl-eraser" data-color="transparent" onclick="selectHighlightColor(this)" title="Eraser"><i class="fa-solid fa-eraser"></i></button>
+                
+                <div style="width: 1px; height: 20px; background: var(--border); margin: 0 4px;"></div>
+                
+                <!-- NOTES BUTTON IN READING MODE TOOLBAR -->
+                <button class="hl-btn toolbar-notes-btn" onclick="openNotesModal()" title="Take Notes for this question">
+                    <i class="fa-solid fa-pen"></i>
+                    <div class="notes-badge" id="notesBadge"></div>
+                </button>
+
                 <span class="highlight-hint" id="highlightHint">✏️ Mode ON — swipe across text, or select text first. Tap the colour again to stop.</span>
             </div>
 
@@ -877,7 +878,6 @@
                         STATE.session = saved.session;
                         STATE.currentIdx = saved.idx || 0;
                     } else {
-                        // caseHtml, questionHtml hold any saved highlighted markup, note holds user note
                         STATE.session = STATE.questions.map(() => ({ sel: null, ok: null, mark: false, caseHtml: null, questionHtml: null, optionsHtml: null, note: null }));
                         STATE.currentIdx = 0;
                     }
@@ -894,7 +894,7 @@
                         setTimeout(() => {
                             triggerYtAppeal();
                             STATE.ytToastShown = true;
-                        }, 5000); // Popup appears 5s into the first session
+                        }, 5000); 
                     }
 
                 } catch (e) {
@@ -920,7 +920,7 @@
                 const toast = document.getElementById('ytToast');
                 toast.classList.add('show');
                 beep(800, 'sine', 0.1);
-                setTimeout(() => { closeYtToast(); }, 10000); // Stays for 10s
+                setTimeout(() => { closeYtToast(); }, 10000); 
             }
             
             window.closeYtToast = function() {
@@ -972,7 +972,6 @@
                 const st = STATE.session[STATE.currentIdx] || { sel: null, ok: null, mark: false, caseHtml: null, questionHtml: null, optionsHtml: null, note: null };
                 if (st.note === undefined) st.note = null;
 
-                // Use the custom saved HTML if the user highlighted something previously
                 const caseContentToRender = st.caseHtml || q.caseStudy;
                 const questionContentToRender = st.questionHtml || q.question;
 
@@ -1230,9 +1229,7 @@
                 if (sel) sel.removeAllRanges();
             }
 
-            // ==================== CUSTOM HIGHLIGHTER (TAP-TO-SELECT + SWIPE) ====================
-            // Works on any element with class "highlightable"
-
+            // ==================== CUSTOM HIGHLIGHTER (TAP-TO-SELECT + SWIPE + ERASE) ====================
             function getHighlightableContainer(node) {
                 let el = (node && node.nodeType === 3) ? node.parentElement : node;
                 while (el && el !== document.body && el !== document) {
@@ -1280,7 +1277,6 @@
                     range.surroundContents(span);
                     return true;
                 } catch (e) {
-                    // Selection crosses element boundaries - fall back to extract+insert
                     try {
                         const frag = range.extractContents();
                         span.appendChild(frag);
@@ -1323,11 +1319,10 @@
                 let erased = false;
                 
                 spans.forEach(span => {
-                    // Create a range for the span to check for intersection
                     const spanRange = document.createRange();
                     spanRange.selectNodeContents(span);
                     
-                    // If range and spanRange intersect at all, unwrap
+                    // Check intersection
                     if (range.compareBoundaryPoints(Range.END_TO_START, spanRange) <= 0 &&
                         range.compareBoundaryPoints(Range.START_TO_END, spanRange) >= 0) {
                         
@@ -1365,7 +1360,7 @@
 
             function updateHighlightSwatchUI() {
                 document.querySelectorAll('#highlighterTools .hl-btn').forEach(btn => {
-                    btn.classList.toggle('armed', STATE.armedColor === btn.dataset.color);
+                    if(btn.dataset.color) btn.classList.toggle('armed', STATE.armedColor === btn.dataset.color);
                 });
                 const hint = document.getElementById('highlightHint');
                 if (hint) hint.classList.toggle('show', !!STATE.armedColor);
@@ -1521,7 +1516,6 @@
                 document.getElementById('quizArea').style.display = 'none';
                 document.getElementById('desktopSidebarWrapper').style.display = 'none';
                 document.getElementById('dotsDisplay').style.display = 'none';
-                document.querySelector('.notes-fab').style.display = 'none'; // hide notes FAB
                 document.getElementById('endScreen').style.display = 'block';
             }
 
@@ -1533,7 +1527,6 @@
                     document.getElementById('quizArea').style.display = '';
                     document.getElementById('desktopSidebarWrapper').style.display = '';
                     document.getElementById('dotsDisplay').style.display = ''; 
-                    document.querySelector('.notes-fab').style.display = 'flex'; 
                     document.getElementById('endScreen').style.display = 'none';
                     renderQuestion();
                 }
@@ -1801,4 +1794,5 @@
     </script>
 </body>
 </html>
+
 
