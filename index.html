@@ -1,2430 +1,1934 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
-    <title>CA Final Audit - Pro Simulator</title>
-    <script src="https://cdn.tailwindcss.com">
-    </script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CA Final Audit - Saransh Quick View</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap');
+        :root { --primary: #1e272e; --accent: #0fb9b1; --bg: #f1f2f6; --text-light: #d2dae2; }
+        body { margin: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; display: flex; background: var(--bg); overflow-x: hidden; }
+        
+        /* Sidebar Toggle Button */
+        .menu-btn { position: fixed; top: 15px; left: 15px; background: var(--accent); color: white; border: none; font-size: 24px; padding: 8px 12px; border-radius: 6px; cursor: pointer; z-index: 1000; box-shadow: 0 4px 6px rgba(0,0,0,0.2); transition: 0.3s; }
+        .menu-btn:hover { background: #0c9c95; }
 
-        :root {
-            --bg: #f1f5f9;
-            --surface: #ffffff;
-            --text: #0f172a;
-            --text-secondary: #475569;
-            --border: #e2e8f0;
-            --primary: #2563eb;
-            --primary-light: #dbeafe;
-            --correct: #059669;
-            --correct-bg: #d1fae5;
-            --wrong: #dc2626;
-            --wrong-bg: #fee2e2;
-            --marked: #d97706;
-            --marked-bg: #fef3c7;
-            --answered: #3b82f6;
-            --answered-bg: #dbeafe;
-            --unattempted: #94a3b8;
-            --study-badge: #7c3aed;
-            --study-badge-bg: #f3e8ff;
-        }
-
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            -webkit-tap-highlight-color: transparent;
-        }
-
-        html,
-        body {
-            height: 100%;
-            overflow: hidden;
-            font-family: 'Inter', sans-serif;
-            background: var(--bg);
-            color: var(--text);
-            user-select: none;
-            -webkit-user-select: none;
-            transition: background 0.3s ease;
-        }
-
-        .reader-content,
-        .case-study-box,
-        #readerCaseStudy,
-        .highlightable {
-            user-select: text;
-            -webkit-user-select: text;
-        }
-        .highlightable {
-            touch-action: pan-y;
-        }
-
-        /* ---- FIXED HIGHLIGHTER ---- 
-           Smooth inline overlay that NEVER breaks text flow.
-           Uses inline-block with zero padding/margin and preserves
-           original line-height and vertical alignment perfectly. */
-        .user-highlight {
-            display: inline !important;
-            border-radius: 2px;
-            padding: 0 !important;
-            margin: 0 !important;
-            line-height: inherit !important;
-            vertical-align: baseline !important;
-            white-space: normal !important;
-            word-break: normal !important;
-            overflow-wrap: normal !important;
-            background-clip: padding-box !important;
-            box-decoration-break: clone;
-            -webkit-box-decoration-break: clone;
-        }
-
-        .app-container {
-            display: flex;
-            flex-direction: column;
-            height: 100dvh;
-            max-width: 500px;
-            margin: 0 auto;
-            background: var(--bg);
-            position: relative;
-            transition: all 0.3s ease;
-        }
-
-        body.desktop-view {
-            background: #cbd5e1;
-            padding: 16px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        body.desktop-view .app-container {
-            max-width: 1400px;
-            width: 100%;
-            height: calc(100vh - 32px);
-            border-radius: 22px;
-            box-shadow: 0 25px 60px -12px rgba(0, 0, 0, 0.3);
-            overflow: hidden;
-            background: var(--bg);
-            display: flex;
-            flex-direction: column;
-        }
-
-        body.desktop-view .header {
-            margin: 14px 18px 0;
-            padding: 14px 22px;
-            border-radius: 16px;
-        }
-        body.desktop-view .bottom-nav {
-            margin: 0 18px 16px;
-            padding: 10px 20px;
-            border-radius: 16px;
-            z-index: 10;
-        }
-        body.desktop-view .stats-bar {
-            margin: 0 18px 4px;
-            padding: 8px 16px;
-            border-radius: 12px;
-        }
-
-        body.desktop-view .main-content {
-            padding: 20px 28px;
-            display: flex;
-            flex-direction: row;
-            gap: 28px;
-            height: 100%;
-            overflow: hidden;
-        }
-
-        body.desktop-view #quizArea {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-            max-width: 820px;
-            margin: 0 auto;
-            height: 100%;
-            overflow-y: auto;
-            padding-right: 10px;
-            scrollbar-width: thin;
-        }
-
-        body.desktop-view #quizArea.has-case {
-            flex-direction: row;
-            max-width: 100%;
-            align-items: flex-start;
-            gap: 24px;
-        }
-
-        body.desktop-view #caseStudyContainer {
-            flex: 1.2;
-            max-width: 55%;
-            position: sticky;
-            top: 0;
-            max-height: 100%;
-            overflow-y: auto;
-            padding-right: 14px;
-            scrollbar-width: thin;
-        }
-
-        body.desktop-view .case-study-box {
-            max-height: none;
-            font-size: 0.92rem;
-            margin-bottom: 0;
-            padding: 22px;
-            line-height: 1.75;
-            border-radius: 14px;
-        }
-
-        body.desktop-view #questionAndOptionsContainer {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            max-width: 780px;
-            margin: 0 auto;
-            width: 100%;
-            gap: 14px;
-        }
-
-        body.desktop-view .question-text {
-            font-size: 1.05rem;
-            line-height: 1.7;
-        }
-        body.desktop-view .option-btn {
-            font-size: 0.95rem;
-            padding: 13px 18px;
-            border-radius: 12px;
-        }
-
-        .desktop-sidebar-wrapper {
-            display: contents;
-        }
-        .desktop-sidebar-title {
-            display: none;
-        }
-
-        body.desktop-view .desktop-sidebar-wrapper {
-            display: flex;
-            flex-direction: column;
-            width: 320px;
-            flex-shrink: 0;
-            background: var(--surface);
-            border: 1px solid var(--border);
-            border-radius: 16px;
-            padding: 18px;
-            height: 100%;
-            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
-            animation: fadeIn 0.3s ease;
-            overflow: hidden;
-        }
-
-        body.desktop-view .desktop-sidebar-title {
-            display: block;
-            font-size: 1rem;
-            font-weight: 700;
-            color: var(--text);
-            margin-bottom: 14px;
-            padding-bottom: 10px;
-            border-bottom: 2px solid var(--border);
-            text-align: center;
-            font-family: 'Poppins', sans-serif;
-        }
-
-        body.desktop-view .dots-container {
-            flex: 1;
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(44px, 1fr));
-            gap: 7px;
-            align-content: start;
-            overflow-y: auto;
-            padding: 4px;
-            margin-top: 0;
-            scrollbar-width: thin;
-        }
-
-        body.desktop-view .dots-container::-webkit-scrollbar {
-            display: block;
-            width: 6px;
-        }
-        body.desktop-view .dots-container::-webkit-scrollbar-thumb {
-            background: #cbd5e1;
-            border-radius: 4px;
-        }
-
-        body.desktop-view #btnPalette {
-            display: none;
-        }
-        body.desktop-view #endScreen {
-            margin: auto;
-            width: 100%;
-            max-width: 500px;
-        }
-
-        .screen {
-            display: none;
-            height: 100%;
-            width: 100%;
-            flex-direction: column;
-            overflow-y: auto;
-            padding-bottom: 16px;
-        }
-        .screen.active {
-            display: flex;
-        }
-
-        .welcome-header {
-            padding: 38px 20px 20px;
-            text-align: center;
-            background: linear-gradient(135deg, #1e3a8a, #2563eb);
-            color: white;
-            border-radius: 0 0 28px 28px;
-            box-shadow: 0 8px 24px rgba(37, 99, 235, 0.22);
-            margin-bottom: 22px;
-        }
-        .welcome-header h1 {
-            font-family: 'Poppins', sans-serif;
-            font-size: 1.75rem;
-            font-weight: 800;
-            line-height: 1.2;
-            margin-bottom: 6px;
-        }
-        .welcome-header p {
-            font-size: 0.88rem;
-            opacity: 0.9;
-        }
-
-        body.desktop-view .welcome-header {
-            border-radius: 0;
-            margin-bottom: 28px;
-            padding: 50px 20px 32px;
-        }
-        body.desktop-view .mode-cards {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            max-width: 1100px;
-            margin: 0 auto;
-            gap: 16px;
-        }
-        body.desktop-view .tools-section {
-            max-width: 1100px;
-            margin: 0 auto;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 16px;
-        }
-
-        .mode-cards {
-            padding: 0 18px;
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-            flex: 1;
-        }
-        .mode-card {
-            background: var(--surface);
-            border: 2px solid var(--border);
-            border-radius: 18px;
-            padding: 18px;
-            cursor: pointer;
-            transition: all 0.2s;
-            display: flex;
-            align-items: center;
-            gap: 14px;
-            position: relative;
-            overflow: hidden;
-            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02);
-        }
-        .mode-card:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
-        }
-        .mode-card:active {
-            transform: scale(0.97);
-        }
-        .mode-card.easy {
-            border-color: #a7f3d0;
-            background: #ecfdf5;
-        }
-        .mode-card.medium {
-            border-color: #bfdbfe;
-            background: #eff6ff;
-        }
-        .mode-card.hard {
-            border-color: #fca5a5;
-            background: #fef2f2;
-        }
-        .mode-icon {
-            width: 48px;
-            height: 48px;
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.4rem;
-            color: white;
-            flex-shrink: 0;
-        }
-        .easy .mode-icon {
-            background: #10b981;
-        }
-        .medium .mode-icon {
-            background: #3b82f6;
-        }
-        .hard .mode-icon {
-            background: #ef4444;
-        }
-        .mode-text h3 {
-            font-family: 'Poppins', sans-serif;
-            font-size: 1.05rem;
-            font-weight: 700;
-            color: #1e293b;
-            margin-bottom: 3px;
-        }
-        .mode-text p {
-            font-size: 0.78rem;
-            color: var(--text-secondary);
-            line-height: 1.35;
-        }
-
-        .tools-section {
-            padding: 20px 18px;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 10px;
-        }
-        .tool-btn {
-            background: white;
-            border: 1px solid var(--border);
-            border-radius: 14px;
-            padding: 14px;
-            text-align: center;
-            cursor: pointer;
-            transition: 0.2s;
-            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
-        }
-        .tool-btn:active {
-            transform: scale(0.95);
-            background: #f8fafc;
-        }
-        .tool-btn i {
-            font-size: 1.4rem;
-            margin-bottom: 6px;
-            color: var(--primary);
-        }
-        .tool-btn h4 {
-            font-size: 0.8rem;
-            font-weight: 600;
-            color: var(--text);
-        }
-
-        .header {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 10px 14px;
-            margin: 8px 10px 0;
-            background: var(--surface);
-            border-radius: 14px;
-            border: 1px solid var(--border);
-            flex-shrink: 0;
-            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
-            transition: all 0.3s ease;
-        }
-        .header-left {
-            display: flex;
-            align-items: center;
-            gap: 9px;
-            min-width: 0;
-        }
-        .home-btn {
-            width: 36px;
-            height: 36px;
-            border-radius: 10px;
-            background: #f1f5f9;
-            border: 1.5px solid var(--border);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--text-secondary);
-            cursor: pointer;
-            font-size: 0.85rem;
-            transition: 0.2s;
-            flex-shrink: 0;
-        }
-        .home-btn:active {
-            transform: scale(0.9);
-            background: #e2e8f0;
-        }
-        .header-title {
-            min-width: 0;
-        }
-        .header-title h2 {
-            font-size: 0.85rem;
-            font-weight: 700;
-            color: var(--text);
-            line-height: 1.2;
-            font-family: 'Poppins', sans-serif;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-        }
-        .header-title p {
-            font-size: 0.62rem;
-            color: var(--text-secondary);
-            text-transform: uppercase;
-            font-weight: 600;
-            letter-spacing: 0.4px;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-        }
-        .study-badge-inline {
-            display: none;
-            font-size: 0.58rem;
-            font-weight: 700;
-            color: var(--study-badge);
-            background: var(--study-badge-bg);
-            border: 1px solid #d8b4fe;
-            padding: 2px 7px;
-            border-radius: 20px;
-            margin-left: 6px;
-            white-space: nowrap;
-        }
-        .study-badge-inline.show {
-            display: inline-block;
-        }
-
-        .header-actions {
-            display: flex;
-            gap: 6px;
-            flex-shrink: 0;
-        }
-        .icon-btn {
-            width: 36px;
-            height: 36px;
-            border-radius: 10px;
-            border: 1.5px solid var(--border);
-            background: #f8fafc;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            font-size: 0.8rem;
-            color: var(--text-secondary);
-            transition: all 0.2s;
-            position: relative;
-            flex-shrink: 0;
-        }
-        .icon-btn:active {
-            transform: scale(0.92);
-            background: #e2e8f0;
-        }
-        .icon-btn.lifeline {
-            background: #eff6ff;
-            border-color: #93c5fd;
-            color: var(--primary);
-        }
-        .icon-btn.retake {
-            background: #fef2f2;
-            border-color: #fca5a5;
-            color: #ef4444;
-        }
-        .icon-btn.desktop-toggle {
-            background: #f3e8ff;
-            border-color: #d8b4fe;
-            color: #9333ea;
-        }
-        .icon-btn.study-toggle {
-            background: #faf5ff;
-            border-color: #d8b4fe;
-            color: #7c3aed;
-            transition: all 0.25s;
-        }
-        .icon-btn.study-toggle.active {
-            background: #7c3aed;
-            border-color: #7c3aed;
-            color: white;
-            box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.3);
-        }
-
-        .main-content {
-            flex: 1;
-            overflow-y: auto;
-            -webkit-overflow-scrolling: touch;
-            padding: 8px 10px;
-            min-height: 0;
-            position: relative;
-        }
-
-        .case-study-box {
-            background: #f8fafc;
-            border: 1px solid var(--border);
-            border-radius: 12px;
-            padding: 12px 14px;
-            margin-bottom: 10px;
-            font-size: 0.83rem;
-            line-height: 1.6;
-            max-height: 28vh;
-            overflow-y: auto;
-            color: #334155;
-            position: relative;
-            border-left: 4px solid var(--primary);
-            cursor: pointer;
-            transition: 0.2s;
-        }
-        .case-study-box:active {
-            background: #f1f5f9;
-        }
-        .case-study-box .case-label {
-            color: var(--primary);
-            font-weight: 700;
-            font-size: 0.68rem;
-            text-transform: uppercase;
-            margin-bottom: 5px;
-            letter-spacing: 0.4px;
-        }
-        .expand-btn {
-            position: absolute;
-            top: 8px;
-            right: 8px;
-            width: 28px;
-            height: 28px;
-            border-radius: 8px;
-            border: 1px solid var(--border);
-            background: white;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 0.7rem;
-            color: var(--text-secondary);
-            z-index: 5;
-            pointer-events: none;
-        }
-
-        .question-card {
-            background: var(--surface);
-            border: 1px solid var(--border);
-            border-radius: 12px;
-            padding: 13px;
-            margin-bottom: 8px;
-            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
-            position: relative;
-            cursor: pointer;
-            transition: 0.2s;
-        }
-        .question-card:active {
-            background: #f8fafc;
-        }
-        .question-text {
-            font-size: 0.88rem;
-            line-height: 1.6;
-            color: var(--text);
-            padding-right: 28px;
-        }
-        .question-text .q-number {
-            color: var(--primary);
-            font-weight: 700;
-            font-size: 0.82rem;
-        }
-        .question-expand-btn {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            width: 26px;
-            height: 26px;
-            border-radius: 6px;
-            border: 1px solid var(--border);
-            background: #f8fafc;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 0.65rem;
-            color: var(--text-secondary);
-            transition: 0.2s;
-            pointer-events: none;
-        }
-
-        .options-list {
-            display: flex;
-            flex-direction: column;
-            gap: 7px;
-        }
-        .option-btn {
-            display: flex;
-            align-items: flex-start;
-            gap: 10px;
-            width: 100%;
-            padding: 11px 13px;
-            background: var(--surface);
-            border: 2px solid var(--border);
-            border-radius: 11px;
-            font-size: 0.85rem;
-            cursor: pointer;
-            text-align: left;
-            transition: all 0.2s;
-            line-height: 1.45;
-            position: relative;
-        }
-        .option-btn:hover:not(:disabled) {
-            border-color: #94a3b8;
-        }
-        .option-btn:active:not(:disabled) {
-            transform: scale(0.98);
-            border-color: var(--primary);
-        }
-        .option-letter {
-            width: 30px;
-            height: 30px;
-            border-radius: 7px;
-            background: #f1f5f9;
-            border: 1.5px solid var(--border);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: 700;
-            font-size: 0.75rem;
-            flex-shrink: 0;
-            color: var(--text-secondary);
-            transition: all 0.2s;
-        }
-
-        .option-btn.correct {
-            border-color: var(--correct) !important;
-            background: var(--correct-bg) !important;
-            animation: pulse-green 0.4s ease;
-        }
-        .option-btn.correct .option-letter {
-            background: #a7f3d0;
-            border-color: var(--correct);
-            color: var(--correct);
-        }
-        .option-btn.wrong {
-            border-color: var(--wrong) !important;
-            background: var(--wrong-bg) !important;
-            animation: shake 0.5s ease;
-        }
-        .option-btn.wrong .option-letter {
-            background: #fecaca;
-            border-color: var(--wrong);
-            color: var(--wrong);
-        }
-        .option-btn.selected {
-            border-color: var(--marked) !important;
-            background: var(--marked-bg) !important;
-            box-shadow: 0 0 0 3px rgba(217, 119, 6, 0.15);
-        }
-        .option-btn.selected .option-letter {
-            background: #fde68a;
-            border-color: var(--marked);
-            color: #92400e;
-        }
-        .option-btn:disabled {
-            cursor: default;
-            opacity: 0.92;
-        }
-        .option-btn.study-correct-preview {
-            border-color: var(--correct) !important;
-            background: var(--correct-bg) !important;
-            box-shadow: 0 0 0 2px rgba(5, 150, 105, 0.2);
-        }
-        .option-btn.study-correct-preview .option-letter {
-            background: #a7f3d0;
-            border-color: var(--correct);
-            color: var(--correct);
-        }
-
-        @keyframes pulse-green {
-            0%,
-            100% {
-                transform: scale(1);
-            }
-            50% {
-                transform: scale(1.02);
-            }
-        }
-        @keyframes shake {
-            0%,
-            100% {
-                transform: translateX(0);
-            }
-            25% {
-                transform: translateX(-4px);
-            }
-            75% {
-                transform: translateX(4px);
-            }
-        }
-
-        .dots-container {
-            display: flex;
-            gap: 6px;
-            overflow-x: auto;
-            padding: 10px 2px;
-            -webkit-overflow-scrolling: touch;
-            scrollbar-width: none;
-            margin-top: 8px;
-        }
-        .dots-container::-webkit-scrollbar {
-            display: none;
-        }
-        .dot-btn {
-            min-width: 38px;
-            width: 38px;
-            height: 38px;
-            border-radius: 9px;
-            border: 2px solid var(--border);
-            background: var(--surface);
-            font-size: 0.72rem;
-            font-weight: 700;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-shrink: 0;
-            cursor: pointer;
-            position: relative;
-            color: var(--text-secondary);
-            transition: all 0.2s;
-        }
-        .dot-btn:active {
-            transform: scale(0.88);
-        }
-        .dot-btn.current {
-            border-color: var(--primary);
-            background: #eff6ff;
-            color: var(--primary);
-            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.18);
-            transform: scale(1.05);
-        }
-        .dot-btn.correct-answer {
-            background: #d1fae5 !important;
-            border-color: #059669 !important;
-            color: #065f46 !important;
-        }
-        .dot-btn.wrong-answer {
-            background: #fee2e2 !important;
-            border-color: #dc2626 !important;
-            color: #991b1b !important;
-        }
-        .dot-btn.attempted {
-            background: #dbeafe !important;
-            border-color: #3b82f6 !important;
-            color: #1e40af !important;
-        }
-        .bookmark-indicator {
-            position: absolute;
-            top: -3px;
-            right: -3px;
-            width: 11px;
-            height: 11px;
-            background: var(--marked);
-            border-radius: 50%;
-            border: 2px solid white;
-            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
-        }
-
-        /* ---- BOTTOM STATS BAR ---- */
-        .stats-bar {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 8px;
-            padding: 6px 12px;
-            margin: 4px 10px 0;
-            background: var(--surface);
-            border-radius: 10px;
-            border: 1px solid var(--border);
-            flex-shrink: 0;
-            font-size: 0.72rem;
-            font-weight: 600;
-            flex-wrap: wrap;
-            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03);
-            transition: all 0.3s ease;
-        }
-        .stats-item {
-            display: flex;
-            align-items: center;
-            gap: 4px;
-            color: var(--text-secondary);
-            white-space: nowrap;
-        }
-        .stats-item.correct {
-            color: var(--correct);
-        }
-        .stats-item.wrong {
-            color: var(--wrong);
-        }
-        .stats-item.unanswered {
-            color: var(--unattempted);
-        }
-        .stats-item.bookmarked {
-            color: var(--marked);
-        }
-        .review-wrong-btn {
-            background: #fef2f2;
-            border: 1.5px solid #fca5a5;
-            color: #dc2626;
-            font-size: 0.68rem;
-            font-weight: 700;
-            padding: 4px 10px;
-            border-radius: 16px;
-            cursor: pointer;
-            transition: all 0.2s;
-            white-space: nowrap;
-        }
-        .review-wrong-btn:active {
-            transform: scale(0.93);
-            background: #fee2e2;
-        }
-
-        .bottom-nav {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 5px;
-            padding: 7px 9px;
-            margin: 0 10px 10px;
-            background: var(--surface);
-            border-radius: 14px;
-            border: 1px solid var(--border);
-            flex-shrink: 0;
-            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
-            transition: all 0.3s ease;
-        }
-        .nav-btn {
-            width: 40px;
-            height: 40px;
-            border-radius: 9px;
-            border: 1.5px solid var(--border);
-            background: #f8fafc;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            font-size: 0.88rem;
-            color: var(--text-secondary);
-            transition: all 0.2s;
-            flex-shrink: 0;
-        }
-        .nav-btn:active {
-            background: #e2e8f0;
-            transform: scale(0.92);
-        }
-        .nav-btn.next-btn {
-            background: var(--primary);
-            color: white;
-            border-color: var(--primary);
-            font-size: 0.95rem;
-        }
-        .nav-btn.next-btn:active {
-            background: #1d4ed8;
-        }
-        .score-badge {
-            font-size: 0.8rem;
-            font-weight: 700;
-            color: var(--primary);
-            background: #eff6ff;
-            padding: 7px 12px;
-            border-radius: 9px;
-            border: 1.5px solid #bfdbfe;
-            white-space: nowrap;
-        }
-
-        .modal-overlay {
-            position: fixed;
-            inset: 0;
-            background: rgba(15, 23, 42, 0.7);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            z-index: 200;
-            padding: 18px;
-            backdrop-filter: blur(4px);
-        }
-        .modal-card {
-            background: white;
-            border-radius: 18px;
-            padding: 22px;
-            max-width: 420px;
-            width: 100%;
-            text-align: center;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
-            max-height: 90vh;
-            overflow-y: auto;
-            display: flex;
-            flex-direction: column;
-        }
-        .modal-card h3 {
-            font-size: 1.2rem;
-            font-weight: 800;
-            margin-bottom: 10px;
-            color: var(--text);
-        }
-        .modal-card .modal-body {
-            font-size: 0.9rem;
-            color: var(--text-secondary);
-            margin-bottom: 18px;
-            line-height: 1.55;
-            text-align: left;
-            background: #f8fafc;
-            padding: 14px;
-            border-radius: 10px;
-            border: 1px solid var(--border);
-            word-break: break-word;
-        }
-        .modal-card button.btn-primary {
-            width: 100%;
-            padding: 13px;
-            background: var(--primary);
-            color: white;
-            border: none;
-            border-radius: 11px;
-            font-weight: 600;
-            font-size: 0.9rem;
-            cursor: pointer;
-            transition: 0.2s;
-        }
-        .modal-card button.btn-primary:active {
-            background: #1d4ed8;
-            transform: scale(0.98);
-        }
-
-        .modal-card.custom-dialog {
-            padding: 22px;
-        }
-        .modal-card.custom-dialog .modal-body {
-            text-align: center;
-            background: none;
-            border: none;
-            padding: 0 8px;
-            margin-bottom: 20px;
-            color: var(--text-secondary);
-        }
-        .dialog-actions {
-            display: flex;
-            gap: 10px;
-        }
-        .btn-outline {
-            width: 100%;
-            padding: 13px;
-            background: white;
-            color: var(--text);
-            border: 2px solid var(--border);
-            border-radius: 11px;
-            font-weight: 600;
-            font-size: 0.9rem;
-            cursor: pointer;
-            transition: 0.2s;
-        }
-        .btn-outline:active {
-            background: #f1f5f9;
-            transform: scale(0.98);
-        }
-
-        .bottom-sheet {
-            position: fixed;
-            inset: 0;
-            top: auto;
-            background: white;
-            border-radius: 22px 22px 0 0;
-            max-height: 85vh;
-            overflow-y: auto;
-            z-index: 180;
-            padding: 18px;
-            box-shadow: 0 -8px 40px rgba(0, 0, 0, 0.15);
-            transform: translateY(100%);
-            transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-        }
-        .bottom-sheet.show {
-            transform: translateY(0);
-        }
-        .sheet-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 14px;
-            position: sticky;
-            top: 0;
-            background: white;
-            padding-bottom: 10px;
-            z-index: 1;
-            border-bottom: 1px solid var(--border);
-        }
-        .sheet-header h3 {
-            font-size: 1.08rem;
-            font-weight: 700;
-            font-family: 'Poppins', sans-serif;
-        }
-        .close-btn {
-            width: 38px;
-            height: 38px;
-            border-radius: 50%;
-            border: 1.5px solid var(--border);
-            background: #f8fafc;
-            font-size: 1.3rem;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--text-secondary);
-            transition: all 0.2s;
-        }
-        .close-btn:active {
-            background: #fee2e2;
-            color: #ef4444;
-            border-color: #fca5a5;
-            transform: scale(0.88);
-        }
-
-        .fullscreen-reader {
-            position: fixed;
-            inset: 0;
-            background: white;
-            z-index: 250;
-            display: none;
-            flex-direction: column;
-            animation: fadeIn 0.2s ease;
-        }
-
-        .fullscreen-reader .reader-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 8px 14px;
-            border-bottom: 1px solid var(--border);
-            background: #f8fafc;
-            gap: 10px;
-            flex-wrap: wrap;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
-            flex-shrink: 0;
-        }
-        .reader-header h3 {
-            font-family: 'Poppins', sans-serif;
-            font-size: 1.05rem;
-            color: var(--text);
-            margin: 0;
-            white-space: nowrap;
-        }
-        .reader-header .right-controls {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            flex-wrap: wrap;
-        }
-
-        .highlighter-tools {
-            display: flex;
-            gap: 5px;
-            align-items: center;
-            background: white;
-            padding: 3px 7px;
-            border-radius: 10px;
-            border: 1px solid var(--border);
-            flex-wrap: wrap;
-        }
-        .hl-btn {
-            width: 24px;
-            height: 24px;
-            border-radius: 50%;
-            border: 2px solid white;
-            cursor: pointer;
-            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
-            transition: transform 0.15s, box-shadow 0.15s;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            touch-action: manipulation;
-            flex-shrink: 0;
-        }
-        .hl-btn:active {
-            transform: scale(0.88);
-        }
-        .hl-btn.armed {
-            transform: scale(1.15);
-            box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.5), 0 1px 3px rgba(0, 0, 0, 0.15);
-        }
-        .hl-yellow {
-            background: #fef08a;
-        }
-        .hl-green {
-            background: #bbf7d0;
-        }
-        .hl-blue {
-            background: #bfdbfe;
-        }
-        .hl-pink {
-            background: #fbcfe8;
-        }
-        .hl-eraser {
-            background: #f1f5f9;
-            border: 1px solid var(--border);
-            color: #64748b;
-            font-size: 0.68rem;
-            box-shadow: none;
-        }
-        .hl-eraser.armed {
-            box-shadow: 0 0 0 2px rgba(220, 38, 38, 0.45);
-        }
-        .toolbar-notes-btn {
-            background: #eff6ff;
-            border: 1px solid #bfdbfe;
-            color: var(--primary);
-            font-size: 0.72rem;
-            position: relative;
-            box-shadow: none;
-        }
-        .notes-badge {
-            position: absolute;
-            top: -2px;
-            right: -2px;
-            width: 9px;
-            height: 9px;
-            background: var(--marked);
-            border-radius: 50%;
-            border: 2px solid white;
-            display: none;
-        }
-        .notes-badge.show {
-            display: block;
-        }
-
-        .reader-close-btn {
-            width: 32px;
-            height: 32px;
-            border-radius: 9px;
-            background: #e2e8f0;
-            border: 1px solid #cbd5e1;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--text-secondary);
-            cursor: pointer;
-            transition: 0.2s;
-            flex-shrink: 0;
-        }
-        .reader-close-btn:active {
-            transform: scale(0.88);
-            background: #cbd5e1;
-        }
-
-        .fullscreen-reader .reader-content {
-            flex: 1;
-            overflow-y: auto;
-            padding: 14px 16px;
-            max-width: 800px;
-            margin: 0 auto;
-            width: 100%;
-            -webkit-overflow-scrolling: touch;
-        }
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
-            to {
-                opacity: 1;
-            }
-        }
-
-        .highlight-hint {
-            width: 100%;
-            font-size: 0.68rem;
-            color: var(--primary);
-            font-weight: 600;
-            padding-top: 3px;
-            display: none;
-            margin-bottom: -3px;
-        }
-        .highlight-hint.show {
-            display: block;
-        }
-
-        .lifeline-dropdown {
-            display: none;
-            position: absolute;
-            top: 62px;
-            right: 14px;
-            background: white;
-            border: 1px solid var(--border);
-            border-radius: 13px;
-            padding: 6px;
-            z-index: 220;
-            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
-            min-width: 165px;
-        }
-        .lifeline-dropdown button {
-            display: flex;
-            align-items: center;
-            gap: 9px;
-            width: 100%;
-            padding: 11px 13px;
-            border: none;
-            background: none;
-            font-size: 0.82rem;
-            cursor: pointer;
-            text-align: left;
-            border-radius: 8px;
-            font-weight: 600;
-            color: #334155;
-            transition: background 0.15s;
-        }
-        .lifeline-dropdown button:active {
-            background: #f1f5f9;
-        }
-
-        .stat-box {
-            background: white;
-            border: 1px solid var(--border);
-            border-radius: 14px;
-            padding: 14px;
-            text-align: center;
-        }
-        .stat-val {
-            font-size: 1.6rem;
-            font-weight: 800;
-            font-family: 'Poppins', sans-serif;
-            margin-bottom: 3px;
-        }
-        .stat-label {
-            font-size: 0.7rem;
-            color: var(--text-secondary);
-            text-transform: uppercase;
-            font-weight: 600;
-            letter-spacing: 0.4px;
-        }
-
-        .loader-overlay {
-            position: fixed;
-            inset: 0;
-            background: rgba(255, 255, 255, 0.9);
-            z-index: 999;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            display: none;
-        }
-        .spinner {
-            width: 38px;
-            height: 38px;
-            border: 4px solid var(--primary-light);
-            border-top: 4px solid var(--primary);
-            border-radius: 50%;
-            animation: spin 1s linear infinite;
-            margin-bottom: 14px;
-        }
-
-        .subtle-toast {
-            position: fixed;
-            bottom: 18px;
-            left: 50%;
-            transform: translateX(-50%) translateY(150px);
-            background: #1e293b;
-            color: white;
-            border-radius: 12px;
-            padding: 11px 14px;
-            z-index: 1000;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-            transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            width: max-content;
-            max-width: 90%;
-        }
-        .subtle-toast.show {
-            transform: translateX(-50%) translateY(0);
-        }
-        .subtle-toast-text {
-            font-size: 0.8rem;
-            line-height: 1.35;
-            font-weight: 500;
-        }
-        .subtle-toast-text a {
-            color: #60a5fa;
-            font-weight: 700;
-            text-decoration: none;
-        }
-        .subtle-toast-close {
-            background: none;
-            border: none;
-            color: #94a3b8;
-            font-size: 1.1rem;
-            cursor: pointer;
-            padding: 0 3px;
-            transition: color 0.2s;
-        }
-        .subtle-toast-close:hover {
-            color: white;
-        }
-
-        .yt-footer {
-            text-align: center;
-            padding: 20px 16px;
-            margin-top: auto;
-            background: var(--surface);
-            border-top: 1px solid var(--border);
-        }
-        .yt-footer a {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-            color: var(--text);
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 0.8rem;
-            padding: 11px 18px;
-            background: #fff1f2;
-            border: 1px solid #fecdd3;
-            border-radius: 28px;
-            transition: 0.2s;
-            max-width: 100%;
-            line-height: 1.35;
-        }
-        .yt-footer a:active {
-            transform: scale(0.95);
-            background: #ffe4e6;
-        }
-        .yt-footer a i {
-            color: #ef4444;
-            font-size: 1.3rem;
-        }
-
-        @keyframes spin {
-            0% {
-                transform: rotate(0deg);
-            }
-            100% {
-                transform: rotate(360deg);
-            }
+        /* Sidebar Styling */
+        .sidebar { width: 340px; height: 100vh; background: var(--primary); color: white; position: fixed; left: 0; top: 0; overflow-y: auto; padding-bottom: 20px; box-shadow: 4px 0 15px rgba(0,0,0,0.2); transition: transform 0.3s ease; z-index: 500; }
+        .sidebar.closed { transform: translateX(-100%); }
+        .sidebar h2 { padding: 20px 20px 20px 70px; margin: 0; font-size: 1.2rem; color: white; background: #2f3640; position: sticky; top: 0; z-index: 10; border-bottom: 2px solid var(--accent); }
+        
+        .nav-link { display: block; padding: 12px 20px; color: var(--text-light); text-decoration: none; transition: 0.2s; border-left: 4px solid transparent; line-height: 1.4; }
+        .nav-link:hover { background: #485460; color: white; border-left-color: var(--accent); }
+        
+        .level-1 { font-size: 1rem; font-weight: bold; color: white; margin-top: 5px; padding-top: 12px; border-top: 1px solid #485460; }
+        
+        /* Main Content */
+        .main-content { margin-left: 340px; padding: 30px; padding-top: 70px; width: calc(100% - 340px); display: flex; flex-direction: column; align-items: center; box-sizing: border-box; transition: margin-left 0.3s ease, width 0.3s ease; }
+        .main-content.expanded { margin-left: 0; width: 100%; }
+        
+        .page-container { background: white; padding: 15px; margin-bottom: 40px; border-radius: 8px; position: relative; max-width: 1400px; width: 100%; box-shadow: 0 8px 16px rgba(0,0,0,0.06); }
+        .page-container img { width: 100%; height: auto; border-radius: 4px; display: block; }
+        .page-badge { position: absolute; top: -12px; left: -12px; background: var(--accent); color: white; padding: 6px 14px; border-radius: 20px; font-size: 0.85rem; font-weight: bold; box-shadow: 0 4px 8px rgba(0,0,0,0.15); }
+        
+        html { scroll-behavior: smooth; }
+        
+        /* Mobile Responsiveness */
+        @media (max-width: 850px) {
+            .sidebar { transform: translateX(-100%); width: 280px; }
+            .sidebar.open { transform: translateX(0); }
+            .main-content { margin-left: 0; width: 100%; padding: 15px; padding-top: 70px; }
+            .main-content.expanded { margin-left: 0; width: 100%; }
+            .level-1 { margin-top: 0; border-top: none; }
         }
     </style>
 </head>
 <body>
-    <input type="file" id="importFile" accept=".json" style="display: none;" />
+    <button class="menu-btn" onclick="toggleNav()">☰</button>
 
-    <div class="loader-overlay" id="loader">
-        <div class="spinner"></div>
-        <p style="font-weight:600; color:var(--text-secondary);" id="loaderText">Loading...</p>
+    <div class="sidebar" id="sidebar">
+        <h2>📑 Audit Index</h2>
+        <a href="#page-10" class="nav-link level-1">Chapter 1 - Quality Control</a>
+<a href="#page-16" class="nav-link level-1">Chapter 2 - General Auditing Principles and Auditors Responsibilities</a>
+<a href="#page-29" class="nav-link level-1">Chapter 3 - Audit Planning, Strategy & Execution</a>
+<a href="#page-47" class="nav-link level-1">Chapter 4 - Materiality, Risk Assessment & Internal Control</a>
+<a href="#page-71" class="nav-link level-1">Chapter 5 - Audit Evidence</a>
+<a href="#page-85" class="nav-link level-1">Chapter 6 - Completion and Review</a>
+<a href="#page-95" class="nav-link level-1">Chapter 7 - Reporting</a>
+<a href="#page-126" class="nav-link level-1">Chapter 8 - Specialised Areas</a>
+<a href="#page-137" class="nav-link level-1">Chapter 9 - Related Services</a>
+<a href="#page-145" class="nav-link level-1">Chapter 10 - Review of Financial Information</a>
+<a href="#page-150" class="nav-link level-1">Chapter 11 - Prospective Financial Information and Other Assurance Services</a>
+<a href="#page-153" class="nav-link level-1">Chapter 12 - Digital Auditing and Assurance</a>
+<a href="#page-172" class="nav-link level-1">Chapter 13 - Group Audits</a>
+<a href="#page-186" class="nav-link level-1">Chapter 14 - Special Features of Audit of Bank & NBFCs</a>
+<a href="#page-235" class="nav-link level-1">Chapter 15 - Overview of Audit of Public Sector Undertakings</a>
+<a href="#page-247" class="nav-link level-1">Chapter 16 - Internal Audit</a>
+<a href="#page-264" class="nav-link level-1">Chapter 17 - Due Diligence, Investigation & Forensic Accounting</a>
+<a href="#page-289" class="nav-link level-1">Chapter 18 - Sustainable Development Goals & Environment, Social & Governance Assurance</a>
+<a href="#page-307" class="nav-link level-1">Chapter 19 - Professional Ethics and liabilities of Auditors</a>
+
     </div>
-
-    <!-- CUSTOM ALERT -->
-    <div id="customAlertModal" class="modal-overlay" style="display:none; z-index:9999;">
-        <div class="modal-card custom-dialog">
-            <h3 id="alertTitle">Notice</h3>
-            <div class="modal-body" id="alertMessage"></div>
-            <button class="btn-primary" onclick="closeCustomAlert()">OK</button>
+    
+    <div class="main-content" id="main-content">
+        
+        <div id="page-1" class="page-container">
+            <span class="page-badge">Page 1</span>
+            <img src="pages/page_1.jpg" alt="Page 1" loading="lazy">
         </div>
-    </div>
-
-    <!-- CUSTOM CONFIRM -->
-    <div id="customConfirmModal" class="modal-overlay" style="display:none; z-index:9999;">
-        <div class="modal-card custom-dialog">
-            <h3 id="confirmTitle">Confirm</h3>
-            <div class="modal-body" id="confirmMessage"></div>
-            <div class="dialog-actions">
-                <button class="btn-outline" onclick="handleConfirm(false)">Cancel</button>
-                <button class="btn-primary" onclick="handleConfirm(true)">Yes, Proceed</button>
-            </div>
+    
+        <div id="page-2" class="page-container">
+            <span class="page-badge">Page 2</span>
+            <img src="pages/page_2.jpg" alt="Page 2" loading="lazy">
         </div>
-    </div>
-
-    <!-- SUPPORT TOAST -->
-    <div id="subtleToast" class="subtle-toast">
-        <div class="subtle-toast-text">Support <a href="https://youtube.com/@observe_with_satyam?si=8p90ukUsKvLJaZvh" target="_blank">Observe with Satyam</a> ❤️</div>
-        <button class="subtle-toast-close" onclick="document.getElementById('subtleToast').classList.remove('show')"><i class="fa-solid fa-xmark"></i></button>
-    </div>
-
-    <div class="app-container" id="appContainer">
-        <!-- WELCOME SCREEN -->
-        <div id="welcomeScreen" class="screen active">
-            <div class="welcome-header">
-                <h1>CA Final Audit</h1>
-                <p>Master your concepts with the Pro Simulator</p>
-            </div>
-            <div class="mode-cards">
-                <div class="mode-card easy" onclick="startApp('easy')">
-                    <div class="mode-icon"><i class="fa-solid fa-seedling"></i></div>
-                    <div class="mode-text"><h3>Easy Set</h3><p>Core concepts & direct MCQs</p></div>
-                </div>
-                <div class="mode-card medium" onclick="startApp('medium')">
-                    <div class="mode-icon"><i class="fa-solid fa-fire"></i></div>
-                    <div class="mode-text"><h3>Medium Set FR</h3><p>Advanced standard questions</p></div>
-                </div>
-                <div class="mode-card hard" onclick="startApp('hard')">
-                    <div class="mode-icon"><i class="fa-solid fa-briefcase"></i></div>
-                    <div class="mode-text"><h3>Case Studies</h3><p>Complex scenario challenges</p></div>
-                </div>
-            </div>
-            <div class="tools-section">
-                <div class="tool-btn" onclick="showAnalytics()"><i class="fa-solid fa-chart-pie"></i><h4>Analytics</h4></div>
-                <div class="tool-btn" onclick="exportData()"><i class="fa-solid fa-cloud-arrow-down"></i><h4>Backup DB</h4></div>
-                <div class="tool-btn" onclick="document.getElementById('importFile').click()" style="grid-column:span 2;"><i class="fa-solid fa-cloud-arrow-up"></i><h4>Restore from File</h4></div>
-            </div>
-            <div class="yt-footer" style="background:white;border-top:none;">
-                <a href="https://youtube.com/@observe_with_satyam?si=8p90ukUsKvLJaZvh" target="_blank"><i class="fa-brands fa-youtube"></i><span>Observe with Satyam<br><span style="font-size:0.72rem;color:#475569;">Made with love ❤️</span></span></a>
-            </div>
+    
+        <div id="page-3" class="page-container">
+            <span class="page-badge">Page 3</span>
+            <img src="pages/page_3.jpg" alt="Page 3" loading="lazy">
         </div>
-
-        <!-- ANALYTICS SCREEN -->
-        <div id="analyticsScreen" class="screen" style="background:white;">
-            <div class="sheet-header" style="padding:14px 18px;box-shadow:0 1px 3px rgba(0,0,0,0.05);margin-bottom:16px;">
-                <h3>📊 Performance Analytics</h3>
-                <button class="close-btn" onclick="goHome()"><i class="fa-solid fa-xmark"></i></button>
-            </div>
-            <div style="padding:0 18px;max-width:800px;margin:0 auto;width:100%;flex:1;">
-                <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:10px;">
-                    <div class="stat-box" style="border-color:#bfdbfe;background:#eff6ff;"><div class="stat-val" style="color:var(--primary);" id="statTotal">0</div><div class="stat-label">Total Attempted</div></div>
-                    <div class="stat-box" style="border-color:#a7f3d0;background:#ecfdf5;"><div class="stat-val" style="color:var(--correct);" id="statAcc">0%</div><div class="stat-label">Accuracy</div></div>
-                    <div class="stat-box" style="border-color:#a7f3d0;"><div class="stat-val" style="color:var(--correct);" id="statRight">0</div><div class="stat-label">Correct</div></div>
-                    <div class="stat-box" style="border-color:#fca5a5;"><div class="stat-val" style="color:var(--wrong);" id="statWrong">0</div><div class="stat-label">Wrong</div></div>
-                </div>
-                <h4 style="margin:18px 0 8px;font-weight:700;font-size:0.9rem;">Set Performance</h4>
-                <div id="setStatsBreakdown" style="display:flex;flex-direction:column;gap:8px;margin-bottom:24px;"></div>
-            </div>
+    
+        <div id="page-4" class="page-container">
+            <span class="page-badge">Page 4</span>
+            <img src="pages/page_4.jpg" alt="Page 4" loading="lazy">
         </div>
-
-        <!-- QUIZ SCREEN -->
-        <div id="quizScreen" class="screen" style="overflow:hidden;">
-            <div class="header">
-                <div class="header-left">
-                    <button class="home-btn" onclick="goHome()"><i class="fa-solid fa-house"></i></button>
-                    <div class="header-title">
-                        <h2>FINAL AUDIT <span class="study-badge-inline" id="studyBadgeInline">📖 STUDY</span></h2>
-                        <p id="currentModeLabel">Mode: Easy</p>
-                    </div>
-                </div>
-                <div class="header-actions">
-                    <button class="icon-btn desktop-toggle" id="desktopToggleBtn" title="Toggle Desktop View" onclick="toggleDesktopView()"><i class="fa-solid fa-desktop" id="desktopToggleIcon"></i></button>
-                    <button class="icon-btn study-toggle" id="studyToggleBtn" title="Study Mode - Show correct answers" onclick="toggleStudyMode()"><i class="fa-solid fa-graduation-cap"></i></button>
-                    <button class="icon-btn" id="bookmarkBtn" title="Mark for review"><i class="fa-regular fa-bookmark" id="bookmarkIcon" style="color:#94a3b8;"></i></button>
-                    <button class="icon-btn lifeline" id="lifelineBtn" title="Lifelines"><i class="fa-solid fa-wand-magic-sparkles"></i></button>
-                    <button class="icon-btn retake" title="Retake Set" onclick="retakeQuiz()"><i class="fa-solid fa-rotate-right"></i></button>
-                </div>
-            </div>
-
-            <div id="lifelineDropdown" class="lifeline-dropdown">
-                <button id="btn5050">🎯 <span>50:50 Eliminator</span></button>
-                <button id="btnExpert">👔 <span>Direct Explanation</span></button>
-            </div>
-
-            <div class="main-content" id="mainContent">
-                <div id="quizArea">
-                    <div id="caseStudyContainer"></div>
-                    <div id="questionAndOptionsContainer">
-                        <div class="question-card" ondblclick="openFullscreenReader()" title="Double click to read fullscreen"><div id="questionDisplay" style="position:relative;"></div></div>
-                        <div class="options-list" id="optionsDisplay"></div>
-                    </div>
-                </div>
-
-                <div class="desktop-sidebar-wrapper" id="desktopSidebarWrapper">
-                    <h3 class="desktop-sidebar-title">📋 Question Palette</h3>
-                    <div class="dots-container" id="dotsDisplay"></div>
-                </div>
-
-                <div id="endScreen" style="display:none;text-align:center;padding:36px 16px;max-width:500px;margin:0 auto;">
-                    <div style="font-size:3.6rem;margin-bottom:14px;">🏆</div>
-                    <h2 style="font-size:1.4rem;font-weight:800;margin-bottom:6px;">Set Completed!</h2>
-                    <p style="color:#64748b;margin-bottom:20px;">You've reached the end.</p>
-                    <button onclick="goHome()" style="padding:12px 26px;background:var(--primary);color:white;border:none;border-radius:28px;font-weight:600;font-size:0.88rem;cursor:pointer;width:100%;margin-bottom:10px;">Return to Dashboard</button>
-                    <button onclick="retakeQuiz()" style="padding:12px 26px;border:2px solid var(--border);border-radius:28px;background:white;font-weight:600;font-size:0.88rem;cursor:pointer;width:100%;">Restart this Set</button>
-                </div>
-            </div>
-
-            <!-- BOTTOM STATS BAR -->
-            <div class="stats-bar" id="statsBar">
-                <span class="stats-item correct"><i class="fa-solid fa-check-circle"></i> <span id="statCorrectCount">0</span></span>
-                <span class="stats-item wrong"><i class="fa-solid fa-xmark-circle"></i> <span id="statWrongCount">0</span></span>
-                <span class="stats-item unanswered"><i class="fa-regular fa-circle"></i> <span id="statUnansweredCount">0</span></span>
-                <span class="stats-item bookmarked"><i class="fa-solid fa-bookmark"></i> <span id="statBookmarkedCount">0</span></span>
-                <button class="review-wrong-btn" id="reviewWrongBtn" onclick="openReviewWrong()">📋 Review Incorrect</button>
-            </div>
-
-            <!-- BOTTOM NAV -->
-            <div class="bottom-nav">
-                <button class="nav-btn" id="btnPrev" title="Previous"><i class="fa-solid fa-chevron-left"></i></button>
-                <button class="nav-btn" id="btnPalette" title="Question Palette"><i class="fa-solid fa-table-cells"></i></button>
-                <div class="score-badge" id="scoreDisplay">1/10</div>
-                <button class="nav-btn" id="btnReview" title="Review All"><i class="fa-solid fa-list-check"></i></button>
-                <button class="nav-btn next-btn" id="btnNext" title="Next"><i class="fa-solid fa-chevron-right"></i></button>
-            </div>
+    
+        <div id="page-5" class="page-container">
+            <span class="page-badge">Page 5</span>
+            <img src="pages/page_5.jpg" alt="Page 5" loading="lazy">
         </div>
-    </div>
-
-    <!-- EXPLANATION MODAL -->
-    <div id="explanationModal" class="modal-overlay" style="display:none;">
-        <div class="modal-card">
-            <h3 id="explanationTitle"></h3>
-            <div class="modal-body" id="explanationBody"></div>
-            <button class="btn-primary" id="explanationNextBtn">Next Question →</button>
+    
+        <div id="page-6" class="page-container">
+            <span class="page-badge">Page 6</span>
+            <img src="pages/page_6.jpg" alt="Page 6" loading="lazy">
         </div>
-    </div>
-
-    <!-- NOTES MODAL -->
-    <div id="notesModal" class="modal-overlay" style="display:none;z-index:300;">
-        <div class="modal-card">
-            <div class="sheet-header" style="border-bottom:none;margin-bottom:6px;">
-                <h3 id="notesTitle" style="margin-bottom:0;">📝 My Notes</h3>
-                <button class="close-btn" onclick="closeNotesModal()"><i class="fa-solid fa-xmark"></i></button>
-            </div>
-            <textarea id="notesTextarea" placeholder="Jot down important points..." style="width:100%;height:160px;padding:14px;border:2px solid var(--border);border-radius:10px;resize:none;margin-bottom:14px;font-family:inherit;font-size:0.88rem;outline:none;transition:0.2s;" onfocus="this.style.borderColor='var(--primary)'" onblur="this.style.borderColor='var(--border)'"></textarea>
-            <button class="btn-primary" onclick="saveNotes()">Save Note</button>
+    
+        <div id="page-7" class="page-container">
+            <span class="page-badge">Page 7</span>
+            <img src="pages/page_7.jpg" alt="Page 7" loading="lazy">
         </div>
-    </div>
-
-    <!-- PALETTE SHEET -->
-    <div id="paletteSheet" class="bottom-sheet">
-        <div class="sheet-header"><h3>📋 Question Palette</h3><button class="close-btn" onclick="closeSheet('paletteSheet')"><i class="fa-solid fa-xmark"></i></button></div>
-        <div id="paletteGrid" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(40px,1fr));gap:7px;"></div>
-        <div class="palette-legend" style="display:flex;flex-wrap:wrap;gap:8px;margin-top:16px;font-size:0.75rem;color:var(--text-secondary);">
-            <div><span style="display:inline-block;width:11px;height:11px;border-radius:3px;background:#d1fae5;border:1px solid #059669;margin-right:4px;"></span>Correct</div>
-            <div><span style="display:inline-block;width:11px;height:11px;border-radius:3px;background:#fee2e2;border:1px solid #dc2626;margin-right:4px;"></span>Wrong</div>
-            <div><span style="display:inline-block;width:11px;height:11px;border-radius:3px;background:#dbeafe;border:1px solid #3b82f6;margin-right:4px;"></span>Answered</div>
-            <div><span style="display:inline-block;width:11px;height:11px;border-radius:50%;background:var(--marked);margin-right:4px;"></span>Marked</div>
+    
+        <div id="page-8" class="page-container">
+            <span class="page-badge">Page 8</span>
+            <img src="pages/page_8.jpg" alt="Page 8" loading="lazy">
         </div>
-    </div>
-
-    <!-- REVIEW SHEET -->
-    <div id="reviewSheet" class="bottom-sheet" style="height:88vh;">
-        <div class="sheet-header"><h3>📝 Review All Questions</h3><button class="close-btn" onclick="closeSheet('reviewSheet')"><i class="fa-solid fa-xmark"></i></button></div>
-        <div id="reviewList" style="max-width:800px;margin:0 auto;"></div>
-    </div>
-
-    <!-- REVIEW INCORRECT SHEET -->
-    <div id="reviewWrongSheet" class="bottom-sheet" style="height:85vh;">
-        <div class="sheet-header"><h3>❌ Incorrect Answers Review</h3><button class="close-btn" onclick="closeSheet('reviewWrongSheet')"><i class="fa-solid fa-xmark"></i></button></div>
-        <div id="reviewWrongList" style="max-width:800px;margin:0 auto;"></div>
-    </div>
-
-    <!-- FULLSCREEN READER -->
-    <div id="fullscreenReader" class="fullscreen-reader">
-        <div class="reader-header">
-            <h3>📖 Reading Mode</h3>
-            <div class="right-controls">
-                <div class="highlighter-tools" id="highlighterTools">
-                    <span style="font-size:0.7rem;color:#64748b;font-weight:600;">Highlight:</span>
-                    <button class="hl-btn hl-yellow" data-color="#fef08a" onclick="selectHighlightColor(this)"></button>
-                    <button class="hl-btn hl-green" data-color="#bbf7d0" onclick="selectHighlightColor(this)"></button>
-                    <button class="hl-btn hl-blue" data-color="#bfdbfe" onclick="selectHighlightColor(this)"></button>
-                    <button class="hl-btn hl-pink" data-color="#fbcfe8" onclick="selectHighlightColor(this)"></button>
-                    <button class="hl-btn hl-eraser" data-color="transparent" onclick="selectHighlightColor(this)"><i class="fa-solid fa-eraser"></i></button>
-                    <div style="width:1px;height:14px;background:var(--border);margin:0 3px;"></div>
-                    <button class="hl-btn toolbar-notes-btn" onclick="openNotesModal()"><i class="fa-solid fa-pen"></i><div class="notes-badge" id="notesBadge"></div></button>
-                </div>
-                <button class="reader-close-btn" onclick="closeFullscreenReader()"><i class="fa-solid fa-xmark"></i></button>
-            </div>
-            <span class="highlight-hint" id="highlightHint">✏️ Mode ON — swipe across text or select text first.</span>
+    
+        <div id="page-9" class="page-container">
+            <span class="page-badge">Page 9</span>
+            <img src="pages/page_9.jpg" alt="Page 9" loading="lazy">
         </div>
-        <div class="reader-content" id="readerContent"></div>
+    
+        <div id="page-10" class="page-container">
+            <span class="page-badge">Page 10</span>
+            <img src="pages/page_10.jpg" alt="Page 10" loading="lazy">
+        </div>
+    
+        <div id="page-11" class="page-container">
+            <span class="page-badge">Page 11</span>
+            <img src="pages/page_11.jpg" alt="Page 11" loading="lazy">
+        </div>
+    
+        <div id="page-12" class="page-container">
+            <span class="page-badge">Page 12</span>
+            <img src="pages/page_12.jpg" alt="Page 12" loading="lazy">
+        </div>
+    
+        <div id="page-13" class="page-container">
+            <span class="page-badge">Page 13</span>
+            <img src="pages/page_13.jpg" alt="Page 13" loading="lazy">
+        </div>
+    
+        <div id="page-14" class="page-container">
+            <span class="page-badge">Page 14</span>
+            <img src="pages/page_14.jpg" alt="Page 14" loading="lazy">
+        </div>
+    
+        <div id="page-15" class="page-container">
+            <span class="page-badge">Page 15</span>
+            <img src="pages/page_15.jpg" alt="Page 15" loading="lazy">
+        </div>
+    
+        <div id="page-16" class="page-container">
+            <span class="page-badge">Page 16</span>
+            <img src="pages/page_16.jpg" alt="Page 16" loading="lazy">
+        </div>
+    
+        <div id="page-17" class="page-container">
+            <span class="page-badge">Page 17</span>
+            <img src="pages/page_17.jpg" alt="Page 17" loading="lazy">
+        </div>
+    
+        <div id="page-18" class="page-container">
+            <span class="page-badge">Page 18</span>
+            <img src="pages/page_18.jpg" alt="Page 18" loading="lazy">
+        </div>
+    
+        <div id="page-19" class="page-container">
+            <span class="page-badge">Page 19</span>
+            <img src="pages/page_19.jpg" alt="Page 19" loading="lazy">
+        </div>
+    
+        <div id="page-20" class="page-container">
+            <span class="page-badge">Page 20</span>
+            <img src="pages/page_20.jpg" alt="Page 20" loading="lazy">
+        </div>
+    
+        <div id="page-21" class="page-container">
+            <span class="page-badge">Page 21</span>
+            <img src="pages/page_21.jpg" alt="Page 21" loading="lazy">
+        </div>
+    
+        <div id="page-22" class="page-container">
+            <span class="page-badge">Page 22</span>
+            <img src="pages/page_22.jpg" alt="Page 22" loading="lazy">
+        </div>
+    
+        <div id="page-23" class="page-container">
+            <span class="page-badge">Page 23</span>
+            <img src="pages/page_23.jpg" alt="Page 23" loading="lazy">
+        </div>
+    
+        <div id="page-24" class="page-container">
+            <span class="page-badge">Page 24</span>
+            <img src="pages/page_24.jpg" alt="Page 24" loading="lazy">
+        </div>
+    
+        <div id="page-25" class="page-container">
+            <span class="page-badge">Page 25</span>
+            <img src="pages/page_25.jpg" alt="Page 25" loading="lazy">
+        </div>
+    
+        <div id="page-26" class="page-container">
+            <span class="page-badge">Page 26</span>
+            <img src="pages/page_26.jpg" alt="Page 26" loading="lazy">
+        </div>
+    
+        <div id="page-27" class="page-container">
+            <span class="page-badge">Page 27</span>
+            <img src="pages/page_27.jpg" alt="Page 27" loading="lazy">
+        </div>
+    
+        <div id="page-28" class="page-container">
+            <span class="page-badge">Page 28</span>
+            <img src="pages/page_28.jpg" alt="Page 28" loading="lazy">
+        </div>
+    
+        <div id="page-29" class="page-container">
+            <span class="page-badge">Page 29</span>
+            <img src="pages/page_29.jpg" alt="Page 29" loading="lazy">
+        </div>
+    
+        <div id="page-30" class="page-container">
+            <span class="page-badge">Page 30</span>
+            <img src="pages/page_30.jpg" alt="Page 30" loading="lazy">
+        </div>
+    
+        <div id="page-31" class="page-container">
+            <span class="page-badge">Page 31</span>
+            <img src="pages/page_31.jpg" alt="Page 31" loading="lazy">
+        </div>
+    
+        <div id="page-32" class="page-container">
+            <span class="page-badge">Page 32</span>
+            <img src="pages/page_32.jpg" alt="Page 32" loading="lazy">
+        </div>
+    
+        <div id="page-33" class="page-container">
+            <span class="page-badge">Page 33</span>
+            <img src="pages/page_33.jpg" alt="Page 33" loading="lazy">
+        </div>
+    
+        <div id="page-34" class="page-container">
+            <span class="page-badge">Page 34</span>
+            <img src="pages/page_34.jpg" alt="Page 34" loading="lazy">
+        </div>
+    
+        <div id="page-35" class="page-container">
+            <span class="page-badge">Page 35</span>
+            <img src="pages/page_35.jpg" alt="Page 35" loading="lazy">
+        </div>
+    
+        <div id="page-36" class="page-container">
+            <span class="page-badge">Page 36</span>
+            <img src="pages/page_36.jpg" alt="Page 36" loading="lazy">
+        </div>
+    
+        <div id="page-37" class="page-container">
+            <span class="page-badge">Page 37</span>
+            <img src="pages/page_37.jpg" alt="Page 37" loading="lazy">
+        </div>
+    
+        <div id="page-38" class="page-container">
+            <span class="page-badge">Page 38</span>
+            <img src="pages/page_38.jpg" alt="Page 38" loading="lazy">
+        </div>
+    
+        <div id="page-39" class="page-container">
+            <span class="page-badge">Page 39</span>
+            <img src="pages/page_39.jpg" alt="Page 39" loading="lazy">
+        </div>
+    
+        <div id="page-40" class="page-container">
+            <span class="page-badge">Page 40</span>
+            <img src="pages/page_40.jpg" alt="Page 40" loading="lazy">
+        </div>
+    
+        <div id="page-41" class="page-container">
+            <span class="page-badge">Page 41</span>
+            <img src="pages/page_41.jpg" alt="Page 41" loading="lazy">
+        </div>
+    
+        <div id="page-42" class="page-container">
+            <span class="page-badge">Page 42</span>
+            <img src="pages/page_42.jpg" alt="Page 42" loading="lazy">
+        </div>
+    
+        <div id="page-43" class="page-container">
+            <span class="page-badge">Page 43</span>
+            <img src="pages/page_43.jpg" alt="Page 43" loading="lazy">
+        </div>
+    
+        <div id="page-44" class="page-container">
+            <span class="page-badge">Page 44</span>
+            <img src="pages/page_44.jpg" alt="Page 44" loading="lazy">
+        </div>
+    
+        <div id="page-45" class="page-container">
+            <span class="page-badge">Page 45</span>
+            <img src="pages/page_45.jpg" alt="Page 45" loading="lazy">
+        </div>
+    
+        <div id="page-46" class="page-container">
+            <span class="page-badge">Page 46</span>
+            <img src="pages/page_46.jpg" alt="Page 46" loading="lazy">
+        </div>
+    
+        <div id="page-47" class="page-container">
+            <span class="page-badge">Page 47</span>
+            <img src="pages/page_47.jpg" alt="Page 47" loading="lazy">
+        </div>
+    
+        <div id="page-48" class="page-container">
+            <span class="page-badge">Page 48</span>
+            <img src="pages/page_48.jpg" alt="Page 48" loading="lazy">
+        </div>
+    
+        <div id="page-49" class="page-container">
+            <span class="page-badge">Page 49</span>
+            <img src="pages/page_49.jpg" alt="Page 49" loading="lazy">
+        </div>
+    
+        <div id="page-50" class="page-container">
+            <span class="page-badge">Page 50</span>
+            <img src="pages/page_50.jpg" alt="Page 50" loading="lazy">
+        </div>
+    
+        <div id="page-51" class="page-container">
+            <span class="page-badge">Page 51</span>
+            <img src="pages/page_51.jpg" alt="Page 51" loading="lazy">
+        </div>
+    
+        <div id="page-52" class="page-container">
+            <span class="page-badge">Page 52</span>
+            <img src="pages/page_52.jpg" alt="Page 52" loading="lazy">
+        </div>
+    
+        <div id="page-53" class="page-container">
+            <span class="page-badge">Page 53</span>
+            <img src="pages/page_53.jpg" alt="Page 53" loading="lazy">
+        </div>
+    
+        <div id="page-54" class="page-container">
+            <span class="page-badge">Page 54</span>
+            <img src="pages/page_54.jpg" alt="Page 54" loading="lazy">
+        </div>
+    
+        <div id="page-55" class="page-container">
+            <span class="page-badge">Page 55</span>
+            <img src="pages/page_55.jpg" alt="Page 55" loading="lazy">
+        </div>
+    
+        <div id="page-56" class="page-container">
+            <span class="page-badge">Page 56</span>
+            <img src="pages/page_56.jpg" alt="Page 56" loading="lazy">
+        </div>
+    
+        <div id="page-57" class="page-container">
+            <span class="page-badge">Page 57</span>
+            <img src="pages/page_57.jpg" alt="Page 57" loading="lazy">
+        </div>
+    
+        <div id="page-58" class="page-container">
+            <span class="page-badge">Page 58</span>
+            <img src="pages/page_58.jpg" alt="Page 58" loading="lazy">
+        </div>
+    
+        <div id="page-59" class="page-container">
+            <span class="page-badge">Page 59</span>
+            <img src="pages/page_59.jpg" alt="Page 59" loading="lazy">
+        </div>
+    
+        <div id="page-60" class="page-container">
+            <span class="page-badge">Page 60</span>
+            <img src="pages/page_60.jpg" alt="Page 60" loading="lazy">
+        </div>
+    
+        <div id="page-61" class="page-container">
+            <span class="page-badge">Page 61</span>
+            <img src="pages/page_61.jpg" alt="Page 61" loading="lazy">
+        </div>
+    
+        <div id="page-62" class="page-container">
+            <span class="page-badge">Page 62</span>
+            <img src="pages/page_62.jpg" alt="Page 62" loading="lazy">
+        </div>
+    
+        <div id="page-63" class="page-container">
+            <span class="page-badge">Page 63</span>
+            <img src="pages/page_63.jpg" alt="Page 63" loading="lazy">
+        </div>
+    
+        <div id="page-64" class="page-container">
+            <span class="page-badge">Page 64</span>
+            <img src="pages/page_64.jpg" alt="Page 64" loading="lazy">
+        </div>
+    
+        <div id="page-65" class="page-container">
+            <span class="page-badge">Page 65</span>
+            <img src="pages/page_65.jpg" alt="Page 65" loading="lazy">
+        </div>
+    
+        <div id="page-66" class="page-container">
+            <span class="page-badge">Page 66</span>
+            <img src="pages/page_66.jpg" alt="Page 66" loading="lazy">
+        </div>
+    
+        <div id="page-67" class="page-container">
+            <span class="page-badge">Page 67</span>
+            <img src="pages/page_67.jpg" alt="Page 67" loading="lazy">
+        </div>
+    
+        <div id="page-68" class="page-container">
+            <span class="page-badge">Page 68</span>
+            <img src="pages/page_68.jpg" alt="Page 68" loading="lazy">
+        </div>
+    
+        <div id="page-69" class="page-container">
+            <span class="page-badge">Page 69</span>
+            <img src="pages/page_69.jpg" alt="Page 69" loading="lazy">
+        </div>
+    
+        <div id="page-70" class="page-container">
+            <span class="page-badge">Page 70</span>
+            <img src="pages/page_70.jpg" alt="Page 70" loading="lazy">
+        </div>
+    
+        <div id="page-71" class="page-container">
+            <span class="page-badge">Page 71</span>
+            <img src="pages/page_71.jpg" alt="Page 71" loading="lazy">
+        </div>
+    
+        <div id="page-72" class="page-container">
+            <span class="page-badge">Page 72</span>
+            <img src="pages/page_72.jpg" alt="Page 72" loading="lazy">
+        </div>
+    
+        <div id="page-73" class="page-container">
+            <span class="page-badge">Page 73</span>
+            <img src="pages/page_73.jpg" alt="Page 73" loading="lazy">
+        </div>
+    
+        <div id="page-74" class="page-container">
+            <span class="page-badge">Page 74</span>
+            <img src="pages/page_74.jpg" alt="Page 74" loading="lazy">
+        </div>
+    
+        <div id="page-75" class="page-container">
+            <span class="page-badge">Page 75</span>
+            <img src="pages/page_75.jpg" alt="Page 75" loading="lazy">
+        </div>
+    
+        <div id="page-76" class="page-container">
+            <span class="page-badge">Page 76</span>
+            <img src="pages/page_76.jpg" alt="Page 76" loading="lazy">
+        </div>
+    
+        <div id="page-77" class="page-container">
+            <span class="page-badge">Page 77</span>
+            <img src="pages/page_77.jpg" alt="Page 77" loading="lazy">
+        </div>
+    
+        <div id="page-78" class="page-container">
+            <span class="page-badge">Page 78</span>
+            <img src="pages/page_78.jpg" alt="Page 78" loading="lazy">
+        </div>
+    
+        <div id="page-79" class="page-container">
+            <span class="page-badge">Page 79</span>
+            <img src="pages/page_79.jpg" alt="Page 79" loading="lazy">
+        </div>
+    
+        <div id="page-80" class="page-container">
+            <span class="page-badge">Page 80</span>
+            <img src="pages/page_80.jpg" alt="Page 80" loading="lazy">
+        </div>
+    
+        <div id="page-81" class="page-container">
+            <span class="page-badge">Page 81</span>
+            <img src="pages/page_81.jpg" alt="Page 81" loading="lazy">
+        </div>
+    
+        <div id="page-82" class="page-container">
+            <span class="page-badge">Page 82</span>
+            <img src="pages/page_82.jpg" alt="Page 82" loading="lazy">
+        </div>
+    
+        <div id="page-83" class="page-container">
+            <span class="page-badge">Page 83</span>
+            <img src="pages/page_83.jpg" alt="Page 83" loading="lazy">
+        </div>
+    
+        <div id="page-84" class="page-container">
+            <span class="page-badge">Page 84</span>
+            <img src="pages/page_84.jpg" alt="Page 84" loading="lazy">
+        </div>
+    
+        <div id="page-85" class="page-container">
+            <span class="page-badge">Page 85</span>
+            <img src="pages/page_85.jpg" alt="Page 85" loading="lazy">
+        </div>
+    
+        <div id="page-86" class="page-container">
+            <span class="page-badge">Page 86</span>
+            <img src="pages/page_86.jpg" alt="Page 86" loading="lazy">
+        </div>
+    
+        <div id="page-87" class="page-container">
+            <span class="page-badge">Page 87</span>
+            <img src="pages/page_87.jpg" alt="Page 87" loading="lazy">
+        </div>
+    
+        <div id="page-88" class="page-container">
+            <span class="page-badge">Page 88</span>
+            <img src="pages/page_88.jpg" alt="Page 88" loading="lazy">
+        </div>
+    
+        <div id="page-89" class="page-container">
+            <span class="page-badge">Page 89</span>
+            <img src="pages/page_89.jpg" alt="Page 89" loading="lazy">
+        </div>
+    
+        <div id="page-90" class="page-container">
+            <span class="page-badge">Page 90</span>
+            <img src="pages/page_90.jpg" alt="Page 90" loading="lazy">
+        </div>
+    
+        <div id="page-91" class="page-container">
+            <span class="page-badge">Page 91</span>
+            <img src="pages/page_91.jpg" alt="Page 91" loading="lazy">
+        </div>
+    
+        <div id="page-92" class="page-container">
+            <span class="page-badge">Page 92</span>
+            <img src="pages/page_92.jpg" alt="Page 92" loading="lazy">
+        </div>
+    
+        <div id="page-93" class="page-container">
+            <span class="page-badge">Page 93</span>
+            <img src="pages/page_93.jpg" alt="Page 93" loading="lazy">
+        </div>
+    
+        <div id="page-94" class="page-container">
+            <span class="page-badge">Page 94</span>
+            <img src="pages/page_94.jpg" alt="Page 94" loading="lazy">
+        </div>
+    
+        <div id="page-95" class="page-container">
+            <span class="page-badge">Page 95</span>
+            <img src="pages/page_95.jpg" alt="Page 95" loading="lazy">
+        </div>
+    
+        <div id="page-96" class="page-container">
+            <span class="page-badge">Page 96</span>
+            <img src="pages/page_96.jpg" alt="Page 96" loading="lazy">
+        </div>
+    
+        <div id="page-97" class="page-container">
+            <span class="page-badge">Page 97</span>
+            <img src="pages/page_97.jpg" alt="Page 97" loading="lazy">
+        </div>
+    
+        <div id="page-98" class="page-container">
+            <span class="page-badge">Page 98</span>
+            <img src="pages/page_98.jpg" alt="Page 98" loading="lazy">
+        </div>
+    
+        <div id="page-99" class="page-container">
+            <span class="page-badge">Page 99</span>
+            <img src="pages/page_99.jpg" alt="Page 99" loading="lazy">
+        </div>
+    
+        <div id="page-100" class="page-container">
+            <span class="page-badge">Page 100</span>
+            <img src="pages/page_100.jpg" alt="Page 100" loading="lazy">
+        </div>
+    
+        <div id="page-101" class="page-container">
+            <span class="page-badge">Page 101</span>
+            <img src="pages/page_101.jpg" alt="Page 101" loading="lazy">
+        </div>
+    
+        <div id="page-102" class="page-container">
+            <span class="page-badge">Page 102</span>
+            <img src="pages/page_102.jpg" alt="Page 102" loading="lazy">
+        </div>
+    
+        <div id="page-103" class="page-container">
+            <span class="page-badge">Page 103</span>
+            <img src="pages/page_103.jpg" alt="Page 103" loading="lazy">
+        </div>
+    
+        <div id="page-104" class="page-container">
+            <span class="page-badge">Page 104</span>
+            <img src="pages/page_104.jpg" alt="Page 104" loading="lazy">
+        </div>
+    
+        <div id="page-105" class="page-container">
+            <span class="page-badge">Page 105</span>
+            <img src="pages/page_105.jpg" alt="Page 105" loading="lazy">
+        </div>
+    
+        <div id="page-106" class="page-container">
+            <span class="page-badge">Page 106</span>
+            <img src="pages/page_106.jpg" alt="Page 106" loading="lazy">
+        </div>
+    
+        <div id="page-107" class="page-container">
+            <span class="page-badge">Page 107</span>
+            <img src="pages/page_107.jpg" alt="Page 107" loading="lazy">
+        </div>
+    
+        <div id="page-108" class="page-container">
+            <span class="page-badge">Page 108</span>
+            <img src="pages/page_108.jpg" alt="Page 108" loading="lazy">
+        </div>
+    
+        <div id="page-109" class="page-container">
+            <span class="page-badge">Page 109</span>
+            <img src="pages/page_109.jpg" alt="Page 109" loading="lazy">
+        </div>
+    
+        <div id="page-110" class="page-container">
+            <span class="page-badge">Page 110</span>
+            <img src="pages/page_110.jpg" alt="Page 110" loading="lazy">
+        </div>
+    
+        <div id="page-111" class="page-container">
+            <span class="page-badge">Page 111</span>
+            <img src="pages/page_111.jpg" alt="Page 111" loading="lazy">
+        </div>
+    
+        <div id="page-112" class="page-container">
+            <span class="page-badge">Page 112</span>
+            <img src="pages/page_112.jpg" alt="Page 112" loading="lazy">
+        </div>
+    
+        <div id="page-113" class="page-container">
+            <span class="page-badge">Page 113</span>
+            <img src="pages/page_113.jpg" alt="Page 113" loading="lazy">
+        </div>
+    
+        <div id="page-114" class="page-container">
+            <span class="page-badge">Page 114</span>
+            <img src="pages/page_114.jpg" alt="Page 114" loading="lazy">
+        </div>
+    
+        <div id="page-115" class="page-container">
+            <span class="page-badge">Page 115</span>
+            <img src="pages/page_115.jpg" alt="Page 115" loading="lazy">
+        </div>
+    
+        <div id="page-116" class="page-container">
+            <span class="page-badge">Page 116</span>
+            <img src="pages/page_116.jpg" alt="Page 116" loading="lazy">
+        </div>
+    
+        <div id="page-117" class="page-container">
+            <span class="page-badge">Page 117</span>
+            <img src="pages/page_117.jpg" alt="Page 117" loading="lazy">
+        </div>
+    
+        <div id="page-118" class="page-container">
+            <span class="page-badge">Page 118</span>
+            <img src="pages/page_118.jpg" alt="Page 118" loading="lazy">
+        </div>
+    
+        <div id="page-119" class="page-container">
+            <span class="page-badge">Page 119</span>
+            <img src="pages/page_119.jpg" alt="Page 119" loading="lazy">
+        </div>
+    
+        <div id="page-120" class="page-container">
+            <span class="page-badge">Page 120</span>
+            <img src="pages/page_120.jpg" alt="Page 120" loading="lazy">
+        </div>
+    
+        <div id="page-121" class="page-container">
+            <span class="page-badge">Page 121</span>
+            <img src="pages/page_121.jpg" alt="Page 121" loading="lazy">
+        </div>
+    
+        <div id="page-122" class="page-container">
+            <span class="page-badge">Page 122</span>
+            <img src="pages/page_122.jpg" alt="Page 122" loading="lazy">
+        </div>
+    
+        <div id="page-123" class="page-container">
+            <span class="page-badge">Page 123</span>
+            <img src="pages/page_123.jpg" alt="Page 123" loading="lazy">
+        </div>
+    
+        <div id="page-124" class="page-container">
+            <span class="page-badge">Page 124</span>
+            <img src="pages/page_124.jpg" alt="Page 124" loading="lazy">
+        </div>
+    
+        <div id="page-125" class="page-container">
+            <span class="page-badge">Page 125</span>
+            <img src="pages/page_125.jpg" alt="Page 125" loading="lazy">
+        </div>
+    
+        <div id="page-126" class="page-container">
+            <span class="page-badge">Page 126</span>
+            <img src="pages/page_126.jpg" alt="Page 126" loading="lazy">
+        </div>
+    
+        <div id="page-127" class="page-container">
+            <span class="page-badge">Page 127</span>
+            <img src="pages/page_127.jpg" alt="Page 127" loading="lazy">
+        </div>
+    
+        <div id="page-128" class="page-container">
+            <span class="page-badge">Page 128</span>
+            <img src="pages/page_128.jpg" alt="Page 128" loading="lazy">
+        </div>
+    
+        <div id="page-129" class="page-container">
+            <span class="page-badge">Page 129</span>
+            <img src="pages/page_129.jpg" alt="Page 129" loading="lazy">
+        </div>
+    
+        <div id="page-130" class="page-container">
+            <span class="page-badge">Page 130</span>
+            <img src="pages/page_130.jpg" alt="Page 130" loading="lazy">
+        </div>
+    
+        <div id="page-131" class="page-container">
+            <span class="page-badge">Page 131</span>
+            <img src="pages/page_131.jpg" alt="Page 131" loading="lazy">
+        </div>
+    
+        <div id="page-132" class="page-container">
+            <span class="page-badge">Page 132</span>
+            <img src="pages/page_132.jpg" alt="Page 132" loading="lazy">
+        </div>
+    
+        <div id="page-133" class="page-container">
+            <span class="page-badge">Page 133</span>
+            <img src="pages/page_133.jpg" alt="Page 133" loading="lazy">
+        </div>
+    
+        <div id="page-134" class="page-container">
+            <span class="page-badge">Page 134</span>
+            <img src="pages/page_134.jpg" alt="Page 134" loading="lazy">
+        </div>
+    
+        <div id="page-135" class="page-container">
+            <span class="page-badge">Page 135</span>
+            <img src="pages/page_135.jpg" alt="Page 135" loading="lazy">
+        </div>
+    
+        <div id="page-136" class="page-container">
+            <span class="page-badge">Page 136</span>
+            <img src="pages/page_136.jpg" alt="Page 136" loading="lazy">
+        </div>
+    
+        <div id="page-137" class="page-container">
+            <span class="page-badge">Page 137</span>
+            <img src="pages/page_137.jpg" alt="Page 137" loading="lazy">
+        </div>
+    
+        <div id="page-138" class="page-container">
+            <span class="page-badge">Page 138</span>
+            <img src="pages/page_138.jpg" alt="Page 138" loading="lazy">
+        </div>
+    
+        <div id="page-139" class="page-container">
+            <span class="page-badge">Page 139</span>
+            <img src="pages/page_139.jpg" alt="Page 139" loading="lazy">
+        </div>
+    
+        <div id="page-140" class="page-container">
+            <span class="page-badge">Page 140</span>
+            <img src="pages/page_140.jpg" alt="Page 140" loading="lazy">
+        </div>
+    
+        <div id="page-141" class="page-container">
+            <span class="page-badge">Page 141</span>
+            <img src="pages/page_141.jpg" alt="Page 141" loading="lazy">
+        </div>
+    
+        <div id="page-142" class="page-container">
+            <span class="page-badge">Page 142</span>
+            <img src="pages/page_142.jpg" alt="Page 142" loading="lazy">
+        </div>
+    
+        <div id="page-143" class="page-container">
+            <span class="page-badge">Page 143</span>
+            <img src="pages/page_143.jpg" alt="Page 143" loading="lazy">
+        </div>
+    
+        <div id="page-144" class="page-container">
+            <span class="page-badge">Page 144</span>
+            <img src="pages/page_144.jpg" alt="Page 144" loading="lazy">
+        </div>
+    
+        <div id="page-145" class="page-container">
+            <span class="page-badge">Page 145</span>
+            <img src="pages/page_145.jpg" alt="Page 145" loading="lazy">
+        </div>
+    
+        <div id="page-146" class="page-container">
+            <span class="page-badge">Page 146</span>
+            <img src="pages/page_146.jpg" alt="Page 146" loading="lazy">
+        </div>
+    
+        <div id="page-147" class="page-container">
+            <span class="page-badge">Page 147</span>
+            <img src="pages/page_147.jpg" alt="Page 147" loading="lazy">
+        </div>
+    
+        <div id="page-148" class="page-container">
+            <span class="page-badge">Page 148</span>
+            <img src="pages/page_148.jpg" alt="Page 148" loading="lazy">
+        </div>
+    
+        <div id="page-149" class="page-container">
+            <span class="page-badge">Page 149</span>
+            <img src="pages/page_149.jpg" alt="Page 149" loading="lazy">
+        </div>
+    
+        <div id="page-150" class="page-container">
+            <span class="page-badge">Page 150</span>
+            <img src="pages/page_150.jpg" alt="Page 150" loading="lazy">
+        </div>
+    
+        <div id="page-151" class="page-container">
+            <span class="page-badge">Page 151</span>
+            <img src="pages/page_151.jpg" alt="Page 151" loading="lazy">
+        </div>
+    
+        <div id="page-152" class="page-container">
+            <span class="page-badge">Page 152</span>
+            <img src="pages/page_152.jpg" alt="Page 152" loading="lazy">
+        </div>
+    
+        <div id="page-153" class="page-container">
+            <span class="page-badge">Page 153</span>
+            <img src="pages/page_153.jpg" alt="Page 153" loading="lazy">
+        </div>
+    
+        <div id="page-154" class="page-container">
+            <span class="page-badge">Page 154</span>
+            <img src="pages/page_154.jpg" alt="Page 154" loading="lazy">
+        </div>
+    
+        <div id="page-155" class="page-container">
+            <span class="page-badge">Page 155</span>
+            <img src="pages/page_155.jpg" alt="Page 155" loading="lazy">
+        </div>
+    
+        <div id="page-156" class="page-container">
+            <span class="page-badge">Page 156</span>
+            <img src="pages/page_156.jpg" alt="Page 156" loading="lazy">
+        </div>
+    
+        <div id="page-157" class="page-container">
+            <span class="page-badge">Page 157</span>
+            <img src="pages/page_157.jpg" alt="Page 157" loading="lazy">
+        </div>
+    
+        <div id="page-158" class="page-container">
+            <span class="page-badge">Page 158</span>
+            <img src="pages/page_158.jpg" alt="Page 158" loading="lazy">
+        </div>
+    
+        <div id="page-159" class="page-container">
+            <span class="page-badge">Page 159</span>
+            <img src="pages/page_159.jpg" alt="Page 159" loading="lazy">
+        </div>
+    
+        <div id="page-160" class="page-container">
+            <span class="page-badge">Page 160</span>
+            <img src="pages/page_160.jpg" alt="Page 160" loading="lazy">
+        </div>
+    
+        <div id="page-161" class="page-container">
+            <span class="page-badge">Page 161</span>
+            <img src="pages/page_161.jpg" alt="Page 161" loading="lazy">
+        </div>
+    
+        <div id="page-162" class="page-container">
+            <span class="page-badge">Page 162</span>
+            <img src="pages/page_162.jpg" alt="Page 162" loading="lazy">
+        </div>
+    
+        <div id="page-163" class="page-container">
+            <span class="page-badge">Page 163</span>
+            <img src="pages/page_163.jpg" alt="Page 163" loading="lazy">
+        </div>
+    
+        <div id="page-164" class="page-container">
+            <span class="page-badge">Page 164</span>
+            <img src="pages/page_164.jpg" alt="Page 164" loading="lazy">
+        </div>
+    
+        <div id="page-165" class="page-container">
+            <span class="page-badge">Page 165</span>
+            <img src="pages/page_165.jpg" alt="Page 165" loading="lazy">
+        </div>
+    
+        <div id="page-166" class="page-container">
+            <span class="page-badge">Page 166</span>
+            <img src="pages/page_166.jpg" alt="Page 166" loading="lazy">
+        </div>
+    
+        <div id="page-167" class="page-container">
+            <span class="page-badge">Page 167</span>
+            <img src="pages/page_167.jpg" alt="Page 167" loading="lazy">
+        </div>
+    
+        <div id="page-168" class="page-container">
+            <span class="page-badge">Page 168</span>
+            <img src="pages/page_168.jpg" alt="Page 168" loading="lazy">
+        </div>
+    
+        <div id="page-169" class="page-container">
+            <span class="page-badge">Page 169</span>
+            <img src="pages/page_169.jpg" alt="Page 169" loading="lazy">
+        </div>
+    
+        <div id="page-170" class="page-container">
+            <span class="page-badge">Page 170</span>
+            <img src="pages/page_170.jpg" alt="Page 170" loading="lazy">
+        </div>
+    
+        <div id="page-171" class="page-container">
+            <span class="page-badge">Page 171</span>
+            <img src="pages/page_171.jpg" alt="Page 171" loading="lazy">
+        </div>
+    
+        <div id="page-172" class="page-container">
+            <span class="page-badge">Page 172</span>
+            <img src="pages/page_172.jpg" alt="Page 172" loading="lazy">
+        </div>
+    
+        <div id="page-173" class="page-container">
+            <span class="page-badge">Page 173</span>
+            <img src="pages/page_173.jpg" alt="Page 173" loading="lazy">
+        </div>
+    
+        <div id="page-174" class="page-container">
+            <span class="page-badge">Page 174</span>
+            <img src="pages/page_174.jpg" alt="Page 174" loading="lazy">
+        </div>
+    
+        <div id="page-175" class="page-container">
+            <span class="page-badge">Page 175</span>
+            <img src="pages/page_175.jpg" alt="Page 175" loading="lazy">
+        </div>
+    
+        <div id="page-176" class="page-container">
+            <span class="page-badge">Page 176</span>
+            <img src="pages/page_176.jpg" alt="Page 176" loading="lazy">
+        </div>
+    
+        <div id="page-177" class="page-container">
+            <span class="page-badge">Page 177</span>
+            <img src="pages/page_177.jpg" alt="Page 177" loading="lazy">
+        </div>
+    
+        <div id="page-178" class="page-container">
+            <span class="page-badge">Page 178</span>
+            <img src="pages/page_178.jpg" alt="Page 178" loading="lazy">
+        </div>
+    
+        <div id="page-179" class="page-container">
+            <span class="page-badge">Page 179</span>
+            <img src="pages/page_179.jpg" alt="Page 179" loading="lazy">
+        </div>
+    
+        <div id="page-180" class="page-container">
+            <span class="page-badge">Page 180</span>
+            <img src="pages/page_180.jpg" alt="Page 180" loading="lazy">
+        </div>
+    
+        <div id="page-181" class="page-container">
+            <span class="page-badge">Page 181</span>
+            <img src="pages/page_181.jpg" alt="Page 181" loading="lazy">
+        </div>
+    
+        <div id="page-182" class="page-container">
+            <span class="page-badge">Page 182</span>
+            <img src="pages/page_182.jpg" alt="Page 182" loading="lazy">
+        </div>
+    
+        <div id="page-183" class="page-container">
+            <span class="page-badge">Page 183</span>
+            <img src="pages/page_183.jpg" alt="Page 183" loading="lazy">
+        </div>
+    
+        <div id="page-184" class="page-container">
+            <span class="page-badge">Page 184</span>
+            <img src="pages/page_184.jpg" alt="Page 184" loading="lazy">
+        </div>
+    
+        <div id="page-185" class="page-container">
+            <span class="page-badge">Page 185</span>
+            <img src="pages/page_185.jpg" alt="Page 185" loading="lazy">
+        </div>
+    
+        <div id="page-186" class="page-container">
+            <span class="page-badge">Page 186</span>
+            <img src="pages/page_186.jpg" alt="Page 186" loading="lazy">
+        </div>
+    
+        <div id="page-187" class="page-container">
+            <span class="page-badge">Page 187</span>
+            <img src="pages/page_187.jpg" alt="Page 187" loading="lazy">
+        </div>
+    
+        <div id="page-188" class="page-container">
+            <span class="page-badge">Page 188</span>
+            <img src="pages/page_188.jpg" alt="Page 188" loading="lazy">
+        </div>
+    
+        <div id="page-189" class="page-container">
+            <span class="page-badge">Page 189</span>
+            <img src="pages/page_189.jpg" alt="Page 189" loading="lazy">
+        </div>
+    
+        <div id="page-190" class="page-container">
+            <span class="page-badge">Page 190</span>
+            <img src="pages/page_190.jpg" alt="Page 190" loading="lazy">
+        </div>
+    
+        <div id="page-191" class="page-container">
+            <span class="page-badge">Page 191</span>
+            <img src="pages/page_191.jpg" alt="Page 191" loading="lazy">
+        </div>
+    
+        <div id="page-192" class="page-container">
+            <span class="page-badge">Page 192</span>
+            <img src="pages/page_192.jpg" alt="Page 192" loading="lazy">
+        </div>
+    
+        <div id="page-193" class="page-container">
+            <span class="page-badge">Page 193</span>
+            <img src="pages/page_193.jpg" alt="Page 193" loading="lazy">
+        </div>
+    
+        <div id="page-194" class="page-container">
+            <span class="page-badge">Page 194</span>
+            <img src="pages/page_194.jpg" alt="Page 194" loading="lazy">
+        </div>
+    
+        <div id="page-195" class="page-container">
+            <span class="page-badge">Page 195</span>
+            <img src="pages/page_195.jpg" alt="Page 195" loading="lazy">
+        </div>
+    
+        <div id="page-196" class="page-container">
+            <span class="page-badge">Page 196</span>
+            <img src="pages/page_196.jpg" alt="Page 196" loading="lazy">
+        </div>
+    
+        <div id="page-197" class="page-container">
+            <span class="page-badge">Page 197</span>
+            <img src="pages/page_197.jpg" alt="Page 197" loading="lazy">
+        </div>
+    
+        <div id="page-198" class="page-container">
+            <span class="page-badge">Page 198</span>
+            <img src="pages/page_198.jpg" alt="Page 198" loading="lazy">
+        </div>
+    
+        <div id="page-199" class="page-container">
+            <span class="page-badge">Page 199</span>
+            <img src="pages/page_199.jpg" alt="Page 199" loading="lazy">
+        </div>
+    
+        <div id="page-200" class="page-container">
+            <span class="page-badge">Page 200</span>
+            <img src="pages/page_200.jpg" alt="Page 200" loading="lazy">
+        </div>
+    
+        <div id="page-201" class="page-container">
+            <span class="page-badge">Page 201</span>
+            <img src="pages/page_201.jpg" alt="Page 201" loading="lazy">
+        </div>
+    
+        <div id="page-202" class="page-container">
+            <span class="page-badge">Page 202</span>
+            <img src="pages/page_202.jpg" alt="Page 202" loading="lazy">
+        </div>
+    
+        <div id="page-203" class="page-container">
+            <span class="page-badge">Page 203</span>
+            <img src="pages/page_203.jpg" alt="Page 203" loading="lazy">
+        </div>
+    
+        <div id="page-204" class="page-container">
+            <span class="page-badge">Page 204</span>
+            <img src="pages/page_204.jpg" alt="Page 204" loading="lazy">
+        </div>
+    
+        <div id="page-205" class="page-container">
+            <span class="page-badge">Page 205</span>
+            <img src="pages/page_205.jpg" alt="Page 205" loading="lazy">
+        </div>
+    
+        <div id="page-206" class="page-container">
+            <span class="page-badge">Page 206</span>
+            <img src="pages/page_206.jpg" alt="Page 206" loading="lazy">
+        </div>
+    
+        <div id="page-207" class="page-container">
+            <span class="page-badge">Page 207</span>
+            <img src="pages/page_207.jpg" alt="Page 207" loading="lazy">
+        </div>
+    
+        <div id="page-208" class="page-container">
+            <span class="page-badge">Page 208</span>
+            <img src="pages/page_208.jpg" alt="Page 208" loading="lazy">
+        </div>
+    
+        <div id="page-209" class="page-container">
+            <span class="page-badge">Page 209</span>
+            <img src="pages/page_209.jpg" alt="Page 209" loading="lazy">
+        </div>
+    
+        <div id="page-210" class="page-container">
+            <span class="page-badge">Page 210</span>
+            <img src="pages/page_210.jpg" alt="Page 210" loading="lazy">
+        </div>
+    
+        <div id="page-211" class="page-container">
+            <span class="page-badge">Page 211</span>
+            <img src="pages/page_211.jpg" alt="Page 211" loading="lazy">
+        </div>
+    
+        <div id="page-212" class="page-container">
+            <span class="page-badge">Page 212</span>
+            <img src="pages/page_212.jpg" alt="Page 212" loading="lazy">
+        </div>
+    
+        <div id="page-213" class="page-container">
+            <span class="page-badge">Page 213</span>
+            <img src="pages/page_213.jpg" alt="Page 213" loading="lazy">
+        </div>
+    
+        <div id="page-214" class="page-container">
+            <span class="page-badge">Page 214</span>
+            <img src="pages/page_214.jpg" alt="Page 214" loading="lazy">
+        </div>
+    
+        <div id="page-215" class="page-container">
+            <span class="page-badge">Page 215</span>
+            <img src="pages/page_215.jpg" alt="Page 215" loading="lazy">
+        </div>
+    
+        <div id="page-216" class="page-container">
+            <span class="page-badge">Page 216</span>
+            <img src="pages/page_216.jpg" alt="Page 216" loading="lazy">
+        </div>
+    
+        <div id="page-217" class="page-container">
+            <span class="page-badge">Page 217</span>
+            <img src="pages/page_217.jpg" alt="Page 217" loading="lazy">
+        </div>
+    
+        <div id="page-218" class="page-container">
+            <span class="page-badge">Page 218</span>
+            <img src="pages/page_218.jpg" alt="Page 218" loading="lazy">
+        </div>
+    
+        <div id="page-219" class="page-container">
+            <span class="page-badge">Page 219</span>
+            <img src="pages/page_219.jpg" alt="Page 219" loading="lazy">
+        </div>
+    
+        <div id="page-220" class="page-container">
+            <span class="page-badge">Page 220</span>
+            <img src="pages/page_220.jpg" alt="Page 220" loading="lazy">
+        </div>
+    
+        <div id="page-221" class="page-container">
+            <span class="page-badge">Page 221</span>
+            <img src="pages/page_221.jpg" alt="Page 221" loading="lazy">
+        </div>
+    
+        <div id="page-222" class="page-container">
+            <span class="page-badge">Page 222</span>
+            <img src="pages/page_222.jpg" alt="Page 222" loading="lazy">
+        </div>
+    
+        <div id="page-223" class="page-container">
+            <span class="page-badge">Page 223</span>
+            <img src="pages/page_223.jpg" alt="Page 223" loading="lazy">
+        </div>
+    
+        <div id="page-224" class="page-container">
+            <span class="page-badge">Page 224</span>
+            <img src="pages/page_224.jpg" alt="Page 224" loading="lazy">
+        </div>
+    
+        <div id="page-225" class="page-container">
+            <span class="page-badge">Page 225</span>
+            <img src="pages/page_225.jpg" alt="Page 225" loading="lazy">
+        </div>
+    
+        <div id="page-226" class="page-container">
+            <span class="page-badge">Page 226</span>
+            <img src="pages/page_226.jpg" alt="Page 226" loading="lazy">
+        </div>
+    
+        <div id="page-227" class="page-container">
+            <span class="page-badge">Page 227</span>
+            <img src="pages/page_227.jpg" alt="Page 227" loading="lazy">
+        </div>
+    
+        <div id="page-228" class="page-container">
+            <span class="page-badge">Page 228</span>
+            <img src="pages/page_228.jpg" alt="Page 228" loading="lazy">
+        </div>
+    
+        <div id="page-229" class="page-container">
+            <span class="page-badge">Page 229</span>
+            <img src="pages/page_229.jpg" alt="Page 229" loading="lazy">
+        </div>
+    
+        <div id="page-230" class="page-container">
+            <span class="page-badge">Page 230</span>
+            <img src="pages/page_230.jpg" alt="Page 230" loading="lazy">
+        </div>
+    
+        <div id="page-231" class="page-container">
+            <span class="page-badge">Page 231</span>
+            <img src="pages/page_231.jpg" alt="Page 231" loading="lazy">
+        </div>
+    
+        <div id="page-232" class="page-container">
+            <span class="page-badge">Page 232</span>
+            <img src="pages/page_232.jpg" alt="Page 232" loading="lazy">
+        </div>
+    
+        <div id="page-233" class="page-container">
+            <span class="page-badge">Page 233</span>
+            <img src="pages/page_233.jpg" alt="Page 233" loading="lazy">
+        </div>
+    
+        <div id="page-234" class="page-container">
+            <span class="page-badge">Page 234</span>
+            <img src="pages/page_234.jpg" alt="Page 234" loading="lazy">
+        </div>
+    
+        <div id="page-235" class="page-container">
+            <span class="page-badge">Page 235</span>
+            <img src="pages/page_235.jpg" alt="Page 235" loading="lazy">
+        </div>
+    
+        <div id="page-236" class="page-container">
+            <span class="page-badge">Page 236</span>
+            <img src="pages/page_236.jpg" alt="Page 236" loading="lazy">
+        </div>
+    
+        <div id="page-237" class="page-container">
+            <span class="page-badge">Page 237</span>
+            <img src="pages/page_237.jpg" alt="Page 237" loading="lazy">
+        </div>
+    
+        <div id="page-238" class="page-container">
+            <span class="page-badge">Page 238</span>
+            <img src="pages/page_238.jpg" alt="Page 238" loading="lazy">
+        </div>
+    
+        <div id="page-239" class="page-container">
+            <span class="page-badge">Page 239</span>
+            <img src="pages/page_239.jpg" alt="Page 239" loading="lazy">
+        </div>
+    
+        <div id="page-240" class="page-container">
+            <span class="page-badge">Page 240</span>
+            <img src="pages/page_240.jpg" alt="Page 240" loading="lazy">
+        </div>
+    
+        <div id="page-241" class="page-container">
+            <span class="page-badge">Page 241</span>
+            <img src="pages/page_241.jpg" alt="Page 241" loading="lazy">
+        </div>
+    
+        <div id="page-242" class="page-container">
+            <span class="page-badge">Page 242</span>
+            <img src="pages/page_242.jpg" alt="Page 242" loading="lazy">
+        </div>
+    
+        <div id="page-243" class="page-container">
+            <span class="page-badge">Page 243</span>
+            <img src="pages/page_243.jpg" alt="Page 243" loading="lazy">
+        </div>
+    
+        <div id="page-244" class="page-container">
+            <span class="page-badge">Page 244</span>
+            <img src="pages/page_244.jpg" alt="Page 244" loading="lazy">
+        </div>
+    
+        <div id="page-245" class="page-container">
+            <span class="page-badge">Page 245</span>
+            <img src="pages/page_245.jpg" alt="Page 245" loading="lazy">
+        </div>
+    
+        <div id="page-246" class="page-container">
+            <span class="page-badge">Page 246</span>
+            <img src="pages/page_246.jpg" alt="Page 246" loading="lazy">
+        </div>
+    
+        <div id="page-247" class="page-container">
+            <span class="page-badge">Page 247</span>
+            <img src="pages/page_247.jpg" alt="Page 247" loading="lazy">
+        </div>
+    
+        <div id="page-248" class="page-container">
+            <span class="page-badge">Page 248</span>
+            <img src="pages/page_248.jpg" alt="Page 248" loading="lazy">
+        </div>
+    
+        <div id="page-249" class="page-container">
+            <span class="page-badge">Page 249</span>
+            <img src="pages/page_249.jpg" alt="Page 249" loading="lazy">
+        </div>
+    
+        <div id="page-250" class="page-container">
+            <span class="page-badge">Page 250</span>
+            <img src="pages/page_250.jpg" alt="Page 250" loading="lazy">
+        </div>
+    
+        <div id="page-251" class="page-container">
+            <span class="page-badge">Page 251</span>
+            <img src="pages/page_251.jpg" alt="Page 251" loading="lazy">
+        </div>
+    
+        <div id="page-252" class="page-container">
+            <span class="page-badge">Page 252</span>
+            <img src="pages/page_252.jpg" alt="Page 252" loading="lazy">
+        </div>
+    
+        <div id="page-253" class="page-container">
+            <span class="page-badge">Page 253</span>
+            <img src="pages/page_253.jpg" alt="Page 253" loading="lazy">
+        </div>
+    
+        <div id="page-254" class="page-container">
+            <span class="page-badge">Page 254</span>
+            <img src="pages/page_254.jpg" alt="Page 254" loading="lazy">
+        </div>
+    
+        <div id="page-255" class="page-container">
+            <span class="page-badge">Page 255</span>
+            <img src="pages/page_255.jpg" alt="Page 255" loading="lazy">
+        </div>
+    
+        <div id="page-256" class="page-container">
+            <span class="page-badge">Page 256</span>
+            <img src="pages/page_256.jpg" alt="Page 256" loading="lazy">
+        </div>
+    
+        <div id="page-257" class="page-container">
+            <span class="page-badge">Page 257</span>
+            <img src="pages/page_257.jpg" alt="Page 257" loading="lazy">
+        </div>
+    
+        <div id="page-258" class="page-container">
+            <span class="page-badge">Page 258</span>
+            <img src="pages/page_258.jpg" alt="Page 258" loading="lazy">
+        </div>
+    
+        <div id="page-259" class="page-container">
+            <span class="page-badge">Page 259</span>
+            <img src="pages/page_259.jpg" alt="Page 259" loading="lazy">
+        </div>
+    
+        <div id="page-260" class="page-container">
+            <span class="page-badge">Page 260</span>
+            <img src="pages/page_260.jpg" alt="Page 260" loading="lazy">
+        </div>
+    
+        <div id="page-261" class="page-container">
+            <span class="page-badge">Page 261</span>
+            <img src="pages/page_261.jpg" alt="Page 261" loading="lazy">
+        </div>
+    
+        <div id="page-262" class="page-container">
+            <span class="page-badge">Page 262</span>
+            <img src="pages/page_262.jpg" alt="Page 262" loading="lazy">
+        </div>
+    
+        <div id="page-263" class="page-container">
+            <span class="page-badge">Page 263</span>
+            <img src="pages/page_263.jpg" alt="Page 263" loading="lazy">
+        </div>
+    
+        <div id="page-264" class="page-container">
+            <span class="page-badge">Page 264</span>
+            <img src="pages/page_264.jpg" alt="Page 264" loading="lazy">
+        </div>
+    
+        <div id="page-265" class="page-container">
+            <span class="page-badge">Page 265</span>
+            <img src="pages/page_265.jpg" alt="Page 265" loading="lazy">
+        </div>
+    
+        <div id="page-266" class="page-container">
+            <span class="page-badge">Page 266</span>
+            <img src="pages/page_266.jpg" alt="Page 266" loading="lazy">
+        </div>
+    
+        <div id="page-267" class="page-container">
+            <span class="page-badge">Page 267</span>
+            <img src="pages/page_267.jpg" alt="Page 267" loading="lazy">
+        </div>
+    
+        <div id="page-268" class="page-container">
+            <span class="page-badge">Page 268</span>
+            <img src="pages/page_268.jpg" alt="Page 268" loading="lazy">
+        </div>
+    
+        <div id="page-269" class="page-container">
+            <span class="page-badge">Page 269</span>
+            <img src="pages/page_269.jpg" alt="Page 269" loading="lazy">
+        </div>
+    
+        <div id="page-270" class="page-container">
+            <span class="page-badge">Page 270</span>
+            <img src="pages/page_270.jpg" alt="Page 270" loading="lazy">
+        </div>
+    
+        <div id="page-271" class="page-container">
+            <span class="page-badge">Page 271</span>
+            <img src="pages/page_271.jpg" alt="Page 271" loading="lazy">
+        </div>
+    
+        <div id="page-272" class="page-container">
+            <span class="page-badge">Page 272</span>
+            <img src="pages/page_272.jpg" alt="Page 272" loading="lazy">
+        </div>
+    
+        <div id="page-273" class="page-container">
+            <span class="page-badge">Page 273</span>
+            <img src="pages/page_273.jpg" alt="Page 273" loading="lazy">
+        </div>
+    
+        <div id="page-274" class="page-container">
+            <span class="page-badge">Page 274</span>
+            <img src="pages/page_274.jpg" alt="Page 274" loading="lazy">
+        </div>
+    
+        <div id="page-275" class="page-container">
+            <span class="page-badge">Page 275</span>
+            <img src="pages/page_275.jpg" alt="Page 275" loading="lazy">
+        </div>
+    
+        <div id="page-276" class="page-container">
+            <span class="page-badge">Page 276</span>
+            <img src="pages/page_276.jpg" alt="Page 276" loading="lazy">
+        </div>
+    
+        <div id="page-277" class="page-container">
+            <span class="page-badge">Page 277</span>
+            <img src="pages/page_277.jpg" alt="Page 277" loading="lazy">
+        </div>
+    
+        <div id="page-278" class="page-container">
+            <span class="page-badge">Page 278</span>
+            <img src="pages/page_278.jpg" alt="Page 278" loading="lazy">
+        </div>
+    
+        <div id="page-279" class="page-container">
+            <span class="page-badge">Page 279</span>
+            <img src="pages/page_279.jpg" alt="Page 279" loading="lazy">
+        </div>
+    
+        <div id="page-280" class="page-container">
+            <span class="page-badge">Page 280</span>
+            <img src="pages/page_280.jpg" alt="Page 280" loading="lazy">
+        </div>
+    
+        <div id="page-281" class="page-container">
+            <span class="page-badge">Page 281</span>
+            <img src="pages/page_281.jpg" alt="Page 281" loading="lazy">
+        </div>
+    
+        <div id="page-282" class="page-container">
+            <span class="page-badge">Page 282</span>
+            <img src="pages/page_282.jpg" alt="Page 282" loading="lazy">
+        </div>
+    
+        <div id="page-283" class="page-container">
+            <span class="page-badge">Page 283</span>
+            <img src="pages/page_283.jpg" alt="Page 283" loading="lazy">
+        </div>
+    
+        <div id="page-284" class="page-container">
+            <span class="page-badge">Page 284</span>
+            <img src="pages/page_284.jpg" alt="Page 284" loading="lazy">
+        </div>
+    
+        <div id="page-285" class="page-container">
+            <span class="page-badge">Page 285</span>
+            <img src="pages/page_285.jpg" alt="Page 285" loading="lazy">
+        </div>
+    
+        <div id="page-286" class="page-container">
+            <span class="page-badge">Page 286</span>
+            <img src="pages/page_286.jpg" alt="Page 286" loading="lazy">
+        </div>
+    
+        <div id="page-287" class="page-container">
+            <span class="page-badge">Page 287</span>
+            <img src="pages/page_287.jpg" alt="Page 287" loading="lazy">
+        </div>
+    
+        <div id="page-288" class="page-container">
+            <span class="page-badge">Page 288</span>
+            <img src="pages/page_288.jpg" alt="Page 288" loading="lazy">
+        </div>
+    
+        <div id="page-289" class="page-container">
+            <span class="page-badge">Page 289</span>
+            <img src="pages/page_289.jpg" alt="Page 289" loading="lazy">
+        </div>
+    
+        <div id="page-290" class="page-container">
+            <span class="page-badge">Page 290</span>
+            <img src="pages/page_290.jpg" alt="Page 290" loading="lazy">
+        </div>
+    
+        <div id="page-291" class="page-container">
+            <span class="page-badge">Page 291</span>
+            <img src="pages/page_291.jpg" alt="Page 291" loading="lazy">
+        </div>
+    
+        <div id="page-292" class="page-container">
+            <span class="page-badge">Page 292</span>
+            <img src="pages/page_292.jpg" alt="Page 292" loading="lazy">
+        </div>
+    
+        <div id="page-293" class="page-container">
+            <span class="page-badge">Page 293</span>
+            <img src="pages/page_293.jpg" alt="Page 293" loading="lazy">
+        </div>
+    
+        <div id="page-294" class="page-container">
+            <span class="page-badge">Page 294</span>
+            <img src="pages/page_294.jpg" alt="Page 294" loading="lazy">
+        </div>
+    
+        <div id="page-295" class="page-container">
+            <span class="page-badge">Page 295</span>
+            <img src="pages/page_295.jpg" alt="Page 295" loading="lazy">
+        </div>
+    
+        <div id="page-296" class="page-container">
+            <span class="page-badge">Page 296</span>
+            <img src="pages/page_296.jpg" alt="Page 296" loading="lazy">
+        </div>
+    
+        <div id="page-297" class="page-container">
+            <span class="page-badge">Page 297</span>
+            <img src="pages/page_297.jpg" alt="Page 297" loading="lazy">
+        </div>
+    
+        <div id="page-298" class="page-container">
+            <span class="page-badge">Page 298</span>
+            <img src="pages/page_298.jpg" alt="Page 298" loading="lazy">
+        </div>
+    
+        <div id="page-299" class="page-container">
+            <span class="page-badge">Page 299</span>
+            <img src="pages/page_299.jpg" alt="Page 299" loading="lazy">
+        </div>
+    
+        <div id="page-300" class="page-container">
+            <span class="page-badge">Page 300</span>
+            <img src="pages/page_300.jpg" alt="Page 300" loading="lazy">
+        </div>
+    
+        <div id="page-301" class="page-container">
+            <span class="page-badge">Page 301</span>
+            <img src="pages/page_301.jpg" alt="Page 301" loading="lazy">
+        </div>
+    
+        <div id="page-302" class="page-container">
+            <span class="page-badge">Page 302</span>
+            <img src="pages/page_302.jpg" alt="Page 302" loading="lazy">
+        </div>
+    
+        <div id="page-303" class="page-container">
+            <span class="page-badge">Page 303</span>
+            <img src="pages/page_303.jpg" alt="Page 303" loading="lazy">
+        </div>
+    
+        <div id="page-304" class="page-container">
+            <span class="page-badge">Page 304</span>
+            <img src="pages/page_304.jpg" alt="Page 304" loading="lazy">
+        </div>
+    
+        <div id="page-305" class="page-container">
+            <span class="page-badge">Page 305</span>
+            <img src="pages/page_305.jpg" alt="Page 305" loading="lazy">
+        </div>
+    
+        <div id="page-306" class="page-container">
+            <span class="page-badge">Page 306</span>
+            <img src="pages/page_306.jpg" alt="Page 306" loading="lazy">
+        </div>
+    
+        <div id="page-307" class="page-container">
+            <span class="page-badge">Page 307</span>
+            <img src="pages/page_307.jpg" alt="Page 307" loading="lazy">
+        </div>
+    
+        <div id="page-308" class="page-container">
+            <span class="page-badge">Page 308</span>
+            <img src="pages/page_308.jpg" alt="Page 308" loading="lazy">
+        </div>
+    
+        <div id="page-309" class="page-container">
+            <span class="page-badge">Page 309</span>
+            <img src="pages/page_309.jpg" alt="Page 309" loading="lazy">
+        </div>
+    
+        <div id="page-310" class="page-container">
+            <span class="page-badge">Page 310</span>
+            <img src="pages/page_310.jpg" alt="Page 310" loading="lazy">
+        </div>
+    
+        <div id="page-311" class="page-container">
+            <span class="page-badge">Page 311</span>
+            <img src="pages/page_311.jpg" alt="Page 311" loading="lazy">
+        </div>
+    
+        <div id="page-312" class="page-container">
+            <span class="page-badge">Page 312</span>
+            <img src="pages/page_312.jpg" alt="Page 312" loading="lazy">
+        </div>
+    
+        <div id="page-313" class="page-container">
+            <span class="page-badge">Page 313</span>
+            <img src="pages/page_313.jpg" alt="Page 313" loading="lazy">
+        </div>
+    
+        <div id="page-314" class="page-container">
+            <span class="page-badge">Page 314</span>
+            <img src="pages/page_314.jpg" alt="Page 314" loading="lazy">
+        </div>
+    
+        <div id="page-315" class="page-container">
+            <span class="page-badge">Page 315</span>
+            <img src="pages/page_315.jpg" alt="Page 315" loading="lazy">
+        </div>
+    
+        <div id="page-316" class="page-container">
+            <span class="page-badge">Page 316</span>
+            <img src="pages/page_316.jpg" alt="Page 316" loading="lazy">
+        </div>
+    
+        <div id="page-317" class="page-container">
+            <span class="page-badge">Page 317</span>
+            <img src="pages/page_317.jpg" alt="Page 317" loading="lazy">
+        </div>
+    
+        <div id="page-318" class="page-container">
+            <span class="page-badge">Page 318</span>
+            <img src="pages/page_318.jpg" alt="Page 318" loading="lazy">
+        </div>
+    
+        <div id="page-319" class="page-container">
+            <span class="page-badge">Page 319</span>
+            <img src="pages/page_319.jpg" alt="Page 319" loading="lazy">
+        </div>
+    
+        <div id="page-320" class="page-container">
+            <span class="page-badge">Page 320</span>
+            <img src="pages/page_320.jpg" alt="Page 320" loading="lazy">
+        </div>
+    
+        <div id="page-321" class="page-container">
+            <span class="page-badge">Page 321</span>
+            <img src="pages/page_321.jpg" alt="Page 321" loading="lazy">
+        </div>
+    
+        <div id="page-322" class="page-container">
+            <span class="page-badge">Page 322</span>
+            <img src="pages/page_322.jpg" alt="Page 322" loading="lazy">
+        </div>
+    
+        <div id="page-323" class="page-container">
+            <span class="page-badge">Page 323</span>
+            <img src="pages/page_323.jpg" alt="Page 323" loading="lazy">
+        </div>
+    
+        <div id="page-324" class="page-container">
+            <span class="page-badge">Page 324</span>
+            <img src="pages/page_324.jpg" alt="Page 324" loading="lazy">
+        </div>
+    
+        <div id="page-325" class="page-container">
+            <span class="page-badge">Page 325</span>
+            <img src="pages/page_325.jpg" alt="Page 325" loading="lazy">
+        </div>
+    
+        <div id="page-326" class="page-container">
+            <span class="page-badge">Page 326</span>
+            <img src="pages/page_326.jpg" alt="Page 326" loading="lazy">
+        </div>
+    
+        <div id="page-327" class="page-container">
+            <span class="page-badge">Page 327</span>
+            <img src="pages/page_327.jpg" alt="Page 327" loading="lazy">
+        </div>
+    
+        <div id="page-328" class="page-container">
+            <span class="page-badge">Page 328</span>
+            <img src="pages/page_328.jpg" alt="Page 328" loading="lazy">
+        </div>
+    
+        <div id="page-329" class="page-container">
+            <span class="page-badge">Page 329</span>
+            <img src="pages/page_329.jpg" alt="Page 329" loading="lazy">
+        </div>
+    
+        <div id="page-330" class="page-container">
+            <span class="page-badge">Page 330</span>
+            <img src="pages/page_330.jpg" alt="Page 330" loading="lazy">
+        </div>
+    
+        <div id="page-331" class="page-container">
+            <span class="page-badge">Page 331</span>
+            <img src="pages/page_331.jpg" alt="Page 331" loading="lazy">
+        </div>
+    
+        <div id="page-332" class="page-container">
+            <span class="page-badge">Page 332</span>
+            <img src="pages/page_332.jpg" alt="Page 332" loading="lazy">
+        </div>
+    
+        <div id="page-333" class="page-container">
+            <span class="page-badge">Page 333</span>
+            <img src="pages/page_333.jpg" alt="Page 333" loading="lazy">
+        </div>
+    
+        <div id="page-334" class="page-container">
+            <span class="page-badge">Page 334</span>
+            <img src="pages/page_334.jpg" alt="Page 334" loading="lazy">
+        </div>
+    
+        <div id="page-335" class="page-container">
+            <span class="page-badge">Page 335</span>
+            <img src="pages/page_335.jpg" alt="Page 335" loading="lazy">
+        </div>
+    
+        <div id="page-336" class="page-container">
+            <span class="page-badge">Page 336</span>
+            <img src="pages/page_336.jpg" alt="Page 336" loading="lazy">
+        </div>
+    
+        <div id="page-337" class="page-container">
+            <span class="page-badge">Page 337</span>
+            <img src="pages/page_337.jpg" alt="Page 337" loading="lazy">
+        </div>
+    
+        <div id="page-338" class="page-container">
+            <span class="page-badge">Page 338</span>
+            <img src="pages/page_338.jpg" alt="Page 338" loading="lazy">
+        </div>
+    
+        <div id="page-339" class="page-container">
+            <span class="page-badge">Page 339</span>
+            <img src="pages/page_339.jpg" alt="Page 339" loading="lazy">
+        </div>
+    
+        <div id="page-340" class="page-container">
+            <span class="page-badge">Page 340</span>
+            <img src="pages/page_340.jpg" alt="Page 340" loading="lazy">
+        </div>
+    
+        <div id="page-341" class="page-container">
+            <span class="page-badge">Page 341</span>
+            <img src="pages/page_341.jpg" alt="Page 341" loading="lazy">
+        </div>
+    
+        <div id="page-342" class="page-container">
+            <span class="page-badge">Page 342</span>
+            <img src="pages/page_342.jpg" alt="Page 342" loading="lazy">
+        </div>
+    
+        <div id="page-343" class="page-container">
+            <span class="page-badge">Page 343</span>
+            <img src="pages/page_343.jpg" alt="Page 343" loading="lazy">
+        </div>
+    
+        <div id="page-344" class="page-container">
+            <span class="page-badge">Page 344</span>
+            <img src="pages/page_344.jpg" alt="Page 344" loading="lazy">
+        </div>
+    
+        <div id="page-345" class="page-container">
+            <span class="page-badge">Page 345</span>
+            <img src="pages/page_345.jpg" alt="Page 345" loading="lazy">
+        </div>
+    
+        <div id="page-346" class="page-container">
+            <span class="page-badge">Page 346</span>
+            <img src="pages/page_346.jpg" alt="Page 346" loading="lazy">
+        </div>
+    
+        <div id="page-347" class="page-container">
+            <span class="page-badge">Page 347</span>
+            <img src="pages/page_347.jpg" alt="Page 347" loading="lazy">
+        </div>
+    
+        <div id="page-348" class="page-container">
+            <span class="page-badge">Page 348</span>
+            <img src="pages/page_348.jpg" alt="Page 348" loading="lazy">
+        </div>
+    
+        <div id="page-349" class="page-container">
+            <span class="page-badge">Page 349</span>
+            <img src="pages/page_349.jpg" alt="Page 349" loading="lazy">
+        </div>
+    
+        <div id="page-350" class="page-container">
+            <span class="page-badge">Page 350</span>
+            <img src="pages/page_350.jpg" alt="Page 350" loading="lazy">
+        </div>
+    
+        <div id="page-351" class="page-container">
+            <span class="page-badge">Page 351</span>
+            <img src="pages/page_351.jpg" alt="Page 351" loading="lazy">
+        </div>
+    
+        <div id="page-352" class="page-container">
+            <span class="page-badge">Page 352</span>
+            <img src="pages/page_352.jpg" alt="Page 352" loading="lazy">
+        </div>
+    
+        <div id="page-353" class="page-container">
+            <span class="page-badge">Page 353</span>
+            <img src="pages/page_353.jpg" alt="Page 353" loading="lazy">
+        </div>
+    
+        <div id="page-354" class="page-container">
+            <span class="page-badge">Page 354</span>
+            <img src="pages/page_354.jpg" alt="Page 354" loading="lazy">
+        </div>
+    
+        <div id="page-355" class="page-container">
+            <span class="page-badge">Page 355</span>
+            <img src="pages/page_355.jpg" alt="Page 355" loading="lazy">
+        </div>
+    
+        <div id="page-356" class="page-container">
+            <span class="page-badge">Page 356</span>
+            <img src="pages/page_356.jpg" alt="Page 356" loading="lazy">
+        </div>
+    
+        <div id="page-357" class="page-container">
+            <span class="page-badge">Page 357</span>
+            <img src="pages/page_357.jpg" alt="Page 357" loading="lazy">
+        </div>
+    
+        <div id="page-358" class="page-container">
+            <span class="page-badge">Page 358</span>
+            <img src="pages/page_358.jpg" alt="Page 358" loading="lazy">
+        </div>
+    
+        <div id="page-359" class="page-container">
+            <span class="page-badge">Page 359</span>
+            <img src="pages/page_359.jpg" alt="Page 359" loading="lazy">
+        </div>
+    
+        <div id="page-360" class="page-container">
+            <span class="page-badge">Page 360</span>
+            <img src="pages/page_360.jpg" alt="Page 360" loading="lazy">
+        </div>
+    
+        <div id="page-361" class="page-container">
+            <span class="page-badge">Page 361</span>
+            <img src="pages/page_361.jpg" alt="Page 361" loading="lazy">
+        </div>
+    
+        <div id="page-362" class="page-container">
+            <span class="page-badge">Page 362</span>
+            <img src="pages/page_362.jpg" alt="Page 362" loading="lazy">
+        </div>
+    
+        <div id="page-363" class="page-container">
+            <span class="page-badge">Page 363</span>
+            <img src="pages/page_363.jpg" alt="Page 363" loading="lazy">
+        </div>
+    
+        <div id="page-364" class="page-container">
+            <span class="page-badge">Page 364</span>
+            <img src="pages/page_364.jpg" alt="Page 364" loading="lazy">
+        </div>
+    
+        <div id="page-365" class="page-container">
+            <span class="page-badge">Page 365</span>
+            <img src="pages/page_365.jpg" alt="Page 365" loading="lazy">
+        </div>
+    
+        <div id="page-366" class="page-container">
+            <span class="page-badge">Page 366</span>
+            <img src="pages/page_366.jpg" alt="Page 366" loading="lazy">
+        </div>
+    
+        <div id="page-367" class="page-container">
+            <span class="page-badge">Page 367</span>
+            <img src="pages/page_367.jpg" alt="Page 367" loading="lazy">
+        </div>
+    
     </div>
 
     <script>
-        (function() {
-            // ==================== STATE ====================
-            const STATE = {
-                currentMode: null,
-                questions: [],
-                currentIdx: 0,
-                session: [],
-                isAnswered: false,
-                audioCtx: null,
-                armedColor: null,
-                studyMode: false,
-                readerScrollPos: 0,
-                lastReaderIdx: -1
-            };
-
-            const DB_NAME = 'CAAuditProDB';
-            const STORE_NAME = 'progress';
-            const FILES = { easy: 'study.json', medium: 'mcqs.json', hard: 'audit_case_scenarios.json' };
-
-            let totalAnsweredGlobally = parseInt(localStorage.getItem('auditPro_totalAnswered')) || 0;
-            let supportToastShown = localStorage.getItem('auditPro_supportShown') === 'true';
-
-            // ==================== CUSTOM MODALS ====================
-            window.showCustomAlert = function(title, message) {
-                document.getElementById('alertTitle').innerHTML = title;
-                document.getElementById('alertMessage').innerHTML = message;
-                document.getElementById('customAlertModal').style.display = 'flex';
-            };
-            window.closeCustomAlert = function() { document.getElementById('customAlertModal').style.display = 'none'; };
-
-            let confirmCallback = null;
-            window.showCustomConfirm = function(title, message, cb) {
-                document.getElementById('confirmTitle').innerHTML = title;
-                document.getElementById('confirmMessage').innerHTML = message;
-                confirmCallback = cb;
-                document.getElementById('customConfirmModal').style.display = 'flex';
-            };
-            window.handleConfirm = function(r) { document.getElementById('customConfirmModal').style.display = 'none';
-                confirmCallback && confirmCallback(r);
-                confirmCallback = null; };
-
-            // ==================== INDEXEDDB ====================
-            function initDB() { return new Promise((res, rej) => { const r = indexedDB.open(DB_NAME, 1);
-                    r.onupgradeneeded = e => { const d = e.target.result; if (!d.objectStoreNames.contains(STORE_NAME)) d
-                            .createObjectStore(STORE_NAME); };
-                    r.onsuccess = e => res(e.target.result);
-                    r.onerror = e => rej(e); }); }
-
-            async function saveState(mode, data) { const db = await initDB(); return new Promise((res, rej) => { const tx = db
-                        .transaction(STORE_NAME, 'readwrite'); const st = tx.objectStore(STORE_NAME); st.put(data, mode);
-                    tx.oncomplete = () => res();
-                    tx.onerror = () => rej(); }); }
-
-            async function loadState(mode) { const db = await initDB(); return new Promise(res => { const tx = db
-                        .transaction(STORE_NAME, 'readonly'); const st = tx.objectStore(STORE_NAME); const r = st.get(mode);
-                    r.onsuccess = e => res(e.target.result || null);
-                    r.onerror = () => res(null); }); }
-
-            async function getAllStates() { const db = await initDB(); return new Promise(res => { const tx = db
-                        .transaction(STORE_NAME, 'readonly'); const st = tx.objectStore(STORE_NAME); const rq = st
-                        .getAll(); const kq = st.getAllKeys();
-                    rq.onsuccess = () => { kq.onsuccess = () => { let o = {};
-                            kq.result.forEach((k, i) => o[k] = rq.result[i]);
-                            res(o); }; }; }); }
-
-            // ==================== AUDIO ====================
-            function getAudio() { if (!STATE.audioCtx) STATE.audioCtx = new(window.AudioContext || window
-                    .webkitAudioContext)(); if (STATE.audioCtx.state === 'suspended') STATE.audioCtx.resume(); return STATE
-                    .audioCtx; }
-
-            function beep(f, t, d) { try { const c = getAudio(); const o = c.createOscillator(); const g = c
-                    .createGain();
-                    o.type = t || 'sine';
-                    o.frequency.value = f || 440;
-                    g.gain.setValueAtTime(0.05, c.currentTime);
-                    g.gain.exponentialRampToValueAtTime(0.001, c.currentTime + (d || 0.08));
-                    o.connect(g);
-                    g.connect(c.destination);
-                    o.start();
-                    o.stop(c.currentTime + (d || 0.08)); } catch (e) {} }
-
-            const esc = s => String(s || '').replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[
-                c]));
-
-            function showLoader(t) { document.getElementById('loaderText').textContent = t; document.getElementById(
-                    'loader').style.display = 'flex'; }
-
-            function hideLoader() { document.getElementById('loader').style.display = 'none'; }
-
-            function switchScreen(id) { document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
-                document.getElementById(id).classList.add('active'); if (document.body.classList.contains(
-                        'desktop-view') && id === 'quizScreen') applyDesktopLayout(); }
-
-            window.goHome = function() { if (STATE.currentMode) saveProgress();
-                switchScreen('welcomeScreen'); };
-
-            // ==================== DESKTOP TOGGLE ====================
-            window.toggleDesktopView = function() { const b = document.body; b.classList.toggle('desktop-view'); const ic =
-                    document.getElementById('desktopToggleIcon');
-                ic.className = b.classList.contains('desktop-view') ? 'fa-solid fa-mobile-screen' : 'fa-solid fa-desktop'; if (b
-                    .classList.contains('desktop-view')) applyDesktopLayout();
-                else removeDesktopLayout(); };
-
-            function applyDesktopLayout() { if (STATE.questions[STATE.currentIdx]?.caseStudy) document.getElementById(
-                    'quizArea').classList.add('has-case'); }
-
-            function removeDesktopLayout() { document.getElementById('quizArea').classList.remove('has-case'); }
-
-            // ==================== STUDY MODE TOGGLE ====================
-            window.toggleStudyMode = function() {
-                STATE.studyMode = !STATE.studyMode;
-                const btn = document.getElementById('studyToggleBtn');
-                const badge = document.getElementById('studyBadgeInline');
-                btn.classList.toggle('active', STATE.studyMode);
-                badge.classList.toggle('show', STATE.studyMode);
-                if (STATE.studyMode) {
-                    beep(660, 'sine', 0.08);
-                    setTimeout(() => beep(880, 'sine', 0.08), 100);
-                } else { beep(440, 'sine', 0.08); }
-                renderQuestion();
-                if (STATE.questions.length > 0) updateStatsBar();
-            };
-
-            // ==================== DATA NORMALIZATION ====================
-            function normalizeData(rawData) {
-                let parsed = [];
-                const ds = Array.isArray(rawData) ? rawData : (rawData.caseScenarios || rawData.questions || []);
-                ds.forEach((item, i) => {
-                    if (item.questions && Array.isArray(item.questions)) {
-                        const ct = item.passage_html || item.caseStudy || item.scenario || '';
-                        const cti = item.title || `CASE SCENARIO ${item.scenario_number || (i + 1)}`;
-                        item.questions.forEach((q, j) => parsed.push(parseSingleQuestion(q, ct, cti, `${i + 1}.${j + 1}`)));
-                    } else parsed.push(parseSingleQuestion(item, '', '', `${i + 1}`));
-                });
-                return parsed;
+        function toggleNav() {
+            const sidebar = document.getElementById('sidebar');
+            const main = document.getElementById('main-content');
+            
+            if (window.innerWidth <= 850) {
+                sidebar.classList.toggle('open');
+            } else {
+                sidebar.classList.toggle('closed');
+                main.classList.toggle('expanded');
             }
+        }
 
-            function parseSingleQuestion(q, ct, cti, qNum) {
-                let opts = [];
-                let ci = 0;
-                if (Array.isArray(q.options)) {
-                    opts = q.options;
-                    if (typeof q.correctOption === 'string' && isNaN(parseInt(q.correctOption))) ci = q.correctOption
-                        .toLowerCase().charCodeAt(0) - 97;
-                    else ci = parseInt(q.correctOption) || parseInt(q.correct_option) || 0;
-                } else if (typeof q.options === 'object' && q.options !== null) {
-                    const ks = ['a', 'b', 'c', 'd'];
-                    opts = ks.map(k => q.options[k]).filter(Boolean);
-                    const ansKey = (q.correct_option || q.correctOption || 'a').toLowerCase();
-                    ci = ks.indexOf(ansKey);
-                    if (ci === -1) ci = 0;
+        // Auto-close sidebar on mobile when a chapter is clicked
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                if (window.innerWidth <= 850) {
+                    document.getElementById('sidebar').classList.remove('open');
                 }
-                return { question: q.question_text || q.question || '', options: opts, correct: ci, explain: q
-                        .explanation_html || q.explanation || q.explain || '', caseStudy: ct, caseTitle: cti, qNum: q
-                        .question_number || q.questionNumber || qNum };
-            }
-
-            // ==================== APP START ====================
-            window.startApp = async function(mode) {
-                showLoader(`Loading ${mode.toUpperCase()}...`);
-                STATE.currentMode = mode;
-                const labels = { easy: 'Basic Concepts', medium: 'Standard Questions', hard: 'Case Scenarios' };
-                document.getElementById('currentModeLabel').textContent = labels[mode] || mode;
-                try {
-                    const res = await fetch(FILES[mode]);
-                    if (!res.ok) throw new Error("File missing");
-                    const rawData = await res.json();
-                    STATE.questions = normalizeData(rawData);
-                    const saved = await loadState(mode);
-                    if (saved && saved.session && saved.session.length === STATE.questions.length) {
-                        STATE.session = saved.session;
-                        STATE.currentIdx = saved.idx || 0;
-                    } else {
-                        STATE.session = STATE.questions.map(() => ({ sel: null, ok: null, mark: false, caseHtml: null,
-                            questionHtml: null, optionsHtml: null, note: null }));
-                        STATE.currentIdx = 0;
-                    }
-                    switchScreen('quizScreen');
-                    document.getElementById('quizArea').style.display = '';
-                    document.getElementById('desktopSidebarWrapper').style.display = '';
-                    document.getElementById('dotsDisplay').style.display = '';
-                    document.getElementById('endScreen').style.display = 'none';
-                    renderQuestion();
-                    updateStatsBar();
-                } catch (e) {
-                    showCustomAlert("Error", `Could not load ${FILES[mode]}. Ensure the file exists.`);
-                } finally { hideLoader(); }
-            };
-
-            async function saveProgress() { if (!STATE.currentMode) return;
-                await saveState(STATE.currentMode, { idx: STATE.currentIdx, session: STATE.session }); }
-
-            // ==================== NOTES ====================
-            window.openNotesModal = function() { const st = STATE.session[STATE.currentIdx]; if (!st) return;
-                document.getElementById('notesTitle').textContent = `📝 Notes (Q${STATE.questions[STATE.currentIdx].qNum})`;
-                document.getElementById('notesTextarea').value = st.note || '';
-                document.getElementById('notesModal').style.display = 'flex';
-                setTimeout(() => document.getElementById('notesTextarea').focus(), 100); };
-            window.closeNotesModal = function() { document.getElementById('notesModal').style.display = 'none'; };
-            window.saveNotes = function() { const st = STATE.session[STATE.currentIdx]; if (!st) return; const v = document
-                    .getElementById('notesTextarea').value.trim();
-                st.note = v;
-                saveProgress();
-                closeNotesModal();
-                updateNotesBadge(); if (v) beep(523, 'triangle', 0.08); };
-
-            function updateNotesBadge() { const st = STATE.session[STATE.currentIdx]; const b = document.getElementById(
-                    'notesBadge'); if (st && st.note && st.note.length > 0) b.classList.add('show');
-                else b.classList.remove('show'); }
-
-            // ==================== STATS BAR ====================
-            function updateStatsBar() {
-                const s = STATE.session;
-                const c = s.filter(x => x.ok === true).length;
-                const w = s.filter(x => x.ok === false).length;
-                const u = s.filter(x => x.sel === null).length;
-                const bm = s.filter(x => x.mark).length;
-                document.getElementById('statCorrectCount').textContent = c;
-                document.getElementById('statWrongCount').textContent = w;
-                document.getElementById('statUnansweredCount').textContent = u;
-                document.getElementById('statBookmarkedCount').textContent = bm;
-            }
-
-            // ==================== RENDER QUESTION ====================
-            function renderQuestion() {
-                const q = STATE.questions[STATE.currentIdx];
-                if (!q) return;
-                STATE.isAnswered = false;
-                const st = STATE.session[STATE.currentIdx] || { sel: null, ok: null, mark: false, caseHtml: null,
-                    questionHtml: null, optionsHtml: null, note: null };
-                if (st.note === undefined) st.note = null;
-                if (!st.optionsHtml) st.optionsHtml = [];
-
-                const cc = document.getElementById('caseStudyContainer');
-                const qa = document.getElementById('quizArea');
-
-                if (q.caseStudy) {
-                    cc.innerHTML =
-                        `<div class="case-study-box" ondblclick="openFullscreenReader()" title="Double click to read"><div class="case-label">📋 ${esc(q.caseTitle)}</div><div id="mainCaseStudyContent">${st.caseHtml || q.caseStudy}</div><div class="expand-btn"><i class="fa-solid fa-expand"></i></div></div>`;
-                    cc.style.display = 'block';
-                    if (document.body.classList.contains('desktop-view')) qa.classList.add('has-case');
-                } else { cc.innerHTML = '';
-                    cc.style.display = 'none';
-                    qa.classList.remove('has-case'); }
-
-                document.getElementById('questionDisplay').innerHTML =
-                    `<div class="question-text"><span class="q-number">Q${esc(String(q.qNum))}.</span> <span id="mainQuestionContent">${st.questionHtml || q.question}</span><button class="question-expand-btn" title="Double click card"><i class="fa-solid fa-expand"></i></button></div>`;
-
-                const oa = document.getElementById('optionsDisplay');
-                oa.innerHTML = '';
-                q.options.forEach((o, i) => {
-                    const btn = document.createElement('button');
-                    btn.className = 'option-btn';
-                    btn.innerHTML = `<span class="option-letter">${String.fromCharCode(65+i)}</span><span id="mainOptionText${i}">${st.optionsHtml[i] || o}</span>`;
-                    btn.id = 'optBtn' + i;
-
-                    if (STATE.studyMode) {
-                        btn.disabled = true;
-                        if (i === q.correct) btn.classList.add('study-correct-preview');
-                    } else if (st.sel !== null) {
-                        btn.disabled = true;
-                        if (i === st.sel && !st.ok) btn.classList.add('wrong');
-                        if (i === q.correct) btn.classList.add('correct');
-                        STATE.isAnswered = true;
-                    }
-                    if (!STATE.studyMode && st.sel === null) btn.addEventListener('click', () => handleOptionClick(i));
-                    oa.appendChild(btn);
-                });
-
-                renderDots();
-                updateBookmarkIcon();
-                updateNotesBadge();
-                document.getElementById('scoreDisplay').textContent = `${STATE.currentIdx+1}/${STATE.questions.length}`;
-                document.getElementById('mainContent').scrollTop = 0;
-                if (cc) cc.scrollTop = 0;
-                updateStatsBar();
-            }
-
-            function renderDots() {
-                const c = document.getElementById('dotsDisplay');
-                c.innerHTML = '';
-                STATE.questions.forEach((_, i) => {
-                    const st = STATE.session[i];
-                    const dot = document.createElement('button');
-                    dot.className = 'dot-btn';
-                    dot.textContent = i + 1;
-                    if (i === STATE.currentIdx) dot.classList.add('current');
-                    if (st.sel !== null) { if (st.ok === true) dot.classList.add('correct-answer');
-                        else if (st.ok === false) dot.classList.add('wrong-answer');
-                        else dot.classList.add('attempted'); } else dot.classList.add('unattempted');
-                    if (st.mark) dot.innerHTML += `<span class="bookmark-indicator"></span>`;
-                    dot.addEventListener('click', () => jumpTo(i));
-                    c.appendChild(dot);
-                });
-                setTimeout(() => { const cd = c.querySelector('.dot-btn.current'); if (cd) cd.scrollIntoView({ behavior: 'smooth',
-                        block: 'nearest', inline: 'center' }); }, 80);
-            }
-
-            function updateBookmarkIcon() { const st = STATE.session[STATE.currentIdx]; const ic = document.getElementById(
-                    'bookmarkIcon'); if (st && st.mark) { ic.className = 'fa-solid fa-bookmark';
-                    ic.style.color = '#d97706'; } else { ic.className = 'fa-regular fa-bookmark';
-                    ic.style.color = '#94a3b8'; } }
-
-            // ==================== OPTION HANDLING ====================
-            function handleOptionClick(idx) {
-                if (STATE.isAnswered || STATE.studyMode) return;
-                beep(400, 'sine', 0.04);
-                document.querySelectorAll('#optionsDisplay .option-btn').forEach(b => b.classList.remove('selected'));
-                const btn = document.getElementById('optBtn' + idx);
-                if (btn) btn.classList.add('selected');
-                setTimeout(() => lockAnswer(idx), 300);
-            }
-
-            function lockAnswer(idx, fromReader = false) {
-                if (STATE.isAnswered || STATE.studyMode) return;
-                STATE.isAnswered = true;
-                const q = STATE.questions[STATE.currentIdx];
-                const ok = idx === q.correct;
-                STATE.session[STATE.currentIdx].sel = idx;
-                STATE.session[STATE.currentIdx].ok = ok;
-                const btns = document.querySelectorAll(fromReader ? '#readerContent .option-btn' :
-                    '#optionsDisplay .option-btn');
-                btns.forEach(b => { b.disabled = true;
-                    b.classList.remove('selected'); });
-                const sb = document.getElementById(fromReader ? 'readerOptBtn' + idx : 'optBtn' + idx);
-                const cb = document.getElementById(fromReader ? 'readerOptBtn' + q.correct : 'optBtn' + q.correct);
-                if (ok) { sb && sb.classList.add('correct');
-                    beep(523, 'triangle', 0.12);
-                    setTimeout(() => beep(659, 'triangle', 0.12), 100); } else { sb && sb.classList.add('wrong');
-                    cb && cb !== sb && cb.classList.add('correct');
-                    beep(200, 'sawtooth', 0.18); }
-                renderDots();
-                updateStatsBar();
-                saveProgress();
-                totalAnsweredGlobally++;
-                localStorage.setItem('auditPro_totalAnswered', totalAnsweredGlobally);
-                if (totalAnsweredGlobally === 50 && !supportToastShown) {
-                    document.getElementById('subtleToast').classList.add('show');
-                    localStorage.setItem('auditPro_supportShown', 'true');
-                    supportToastShown = true;
-                    setTimeout(() => document.getElementById('subtleToast').classList.remove('show'), 7000);
-                }
-                if (fromReader) {
-                    setTimeout(() => { if (STATE.currentIdx < STATE.questions.length - 1) { STATE.currentIdx++;
-                            renderQuestion();
-                            saveProgress();
-                            openFullscreenReader(); } else { closeFullscreenReader();
-                            showEndScreen(); } }, 1000);
-                } else setTimeout(() => showExplanationModal(ok), 500);
-            }
-
-            function showExplanationModal(ok, expert = false) {
-                const q = STATE.questions[STATE.currentIdx];
-                document.getElementById('explanationTitle').innerHTML = expert ? '👔 Expert Advice' : (ok ?
-                    '✅ Excellent!' : '❌ Incorrect');
-                let html = `<div style="margin-bottom:10px;"><b>Correct Answer:</b> Option ${String.fromCharCode(65+q.correct)}</div>`;
-                html += q.explain ?
-                    `<div style="padding-top:8px;border-top:1px dashed #cbd5e1;"><b>Explanation:</b><br/>${q.explain}</div>` :
-                    `<div style="padding-top:8px;border-top:1px dashed #cbd5e1;font-style:italic;color:#64748b;">No explanation provided.</div>`;
-                document.getElementById('explanationBody').innerHTML = html;
-                document.getElementById('explanationNextBtn').textContent = STATE.currentIdx >= STATE.questions.length - 1 ?
-                    'Finish Set' : 'Next Question →';
-                document.getElementById('explanationModal').style.display = 'flex';
-            }
-
-            // ==================== FULLSCREEN READER (FIXED SCROLL) ====================
-            window.openFullscreenReader = function() {
-                const q = STATE.questions[STATE.currentIdx];
-                const st = STATE.session[STATE.currentIdx] || { sel: null, ok: null, mark: false, caseHtml: null,
-                    questionHtml: null, optionsHtml: null, note: null };
-                if (!st.optionsHtml) st.optionsHtml = [];
-                STATE.armedColor = null;
-                pendingSelectionRange = null;
-                pendingSelectionContainer = null;
-                updateHighlightSwatchUI();
-
-                const isNewQuestion = STATE.lastReaderIdx !== STATE.currentIdx;
-                if (isNewQuestion) {
-                    STATE.readerScrollPos = 0;
-                    STATE.lastReaderIdx = STATE.currentIdx;
-                } else {
-                    STATE.readerScrollPos = document.getElementById('readerContent').scrollTop || 0;
-                }
-
-                let content = '';
-                if (q.caseStudy) {
-                    content +=
-                        `<h3 style="color:var(--primary);margin-bottom:10px;font-size:0.95rem;">${esc(q.caseTitle)}</h3><div id="readerCaseStudy" class="highlightable" style="background:#f8fafc;padding:14px;border-radius:10px;border:1px solid #e2e8f0;margin-bottom:20px;line-height:1.65;">${st.caseHtml || q.caseStudy}</div>`;
-                }
-                content +=
-                    `<h3 style="color:var(--text);margin-bottom:10px;font-weight:700;font-size:0.95rem;">Question ${esc(String(q.qNum))}</h3><div id="readerQuestion" class="highlightable" style="font-size:1rem;margin-bottom:16px;line-height:1.6;">${st.questionHtml || q.question}</div><div class="options-list" id="readerOptions" style="margin-bottom:24px;">`;
-                q.options.forEach((o, i) => {
-                    let extra = '';
-                    if (STATE.studyMode && i === q.correct) extra = 'study-correct-preview';
-                    else if (st.sel !== null) { if (i === st.sel && !st.ok) extra = 'wrong'; if (i === q.correct) extra =
-                            'correct'; }
-                    const disabled = (STATE.studyMode || st.sel !== null) ? 'disabled' : '';
-                    content +=
-                        `<button class="option-btn ${extra}" id="readerOptBtn${i}" onclick="handleReaderOptionClick(${i})" ${disabled}><span class="option-letter">${String.fromCharCode(65+i)}</span><span id="readerOptText${i}" style="flex:1;">${st.optionsHtml[i] || o}</span></button>`;
-                });
-                content += `</div>`;
-                document.getElementById('readerContent').innerHTML = content;
-                document.getElementById('fullscreenReader').style.display = 'flex';
-                const rc = document.getElementById('readerContent');
-                rc.scrollTop = STATE.readerScrollPos || 0;
-            };
-
-            window.handleReaderOptionClick = function(idx) {
-                if (STATE.isAnswered || STATE.studyMode) return;
-                beep(400, 'sine', 0.04);
-                document.querySelectorAll('#readerContent .option-btn').forEach(b => b.classList.remove('selected'));
-                const btn = document.getElementById('readerOptBtn' + idx);
-                if (btn) btn.classList.add('selected');
-                setTimeout(() => lockAnswer(idx, true), 300);
-            };
-
-            window.closeFullscreenReader = function() {
-                STATE.readerScrollPos = document.getElementById('readerContent').scrollTop || 0;
-                document.getElementById('fullscreenReader').style.display = 'none';
-                STATE.armedColor = null;
-                const sel = window.getSelection();
-                sel && sel.removeAllRanges();
-            };
-
-            // ==================== HIGHLIGHTER (FIXED – NO TEXT BREAK) ====================
-            function getHighlightableContainer(node) { let el = (node && node.nodeType === 3) ? node.parentElement : node;
-                while (el && el !== document.body && el !== document) { if (el.classList && el.classList.contains(
-                        'highlightable')) return el;
-                    el = el.parentElement; } return null; }
-
-            function getCaretRangeFromPoint(x, y) { if (document.caretRangeFromPoint) return document
-                    .caretRangeFromPoint(x, y); if (document.caretPositionFromPoint) { const p = document
-                        .caretPositionFromPoint(x, y); if (!p || !p.offsetNode) return null; const r = document
-                        .createRange();
-                    r.setStart(p.offsetNode, p.offset);
-                    r.collapse(true); return r; } return null; }
-
-            function buildOrderedRange(a, b) { if (!a || !b) return null; const r = document.createRange(); try { if (a
-                        .compareBoundaryPoints(Range.START_TO_START, b) <= 0) { r.setStart(a.startContainer, a
-                        .startOffset);
-                        r.setEnd(b.startContainer, b.startOffset); } else { r.setStart(b.startContainer, b.startOffset);
-                        r.setEnd(a.startContainer, a.startOffset); } } catch (e) { return null; } return r; }
-
-            // FIXED: Wrap each text node individually to NEVER break block flow
-            function wrapRangeSafe(range, color) {
-                if (!range || range.collapsed) return false;
-                const span = document.createElement('span');
-                span.className = 'user-highlight';
-                span.style.backgroundColor = color;
-                span.style.display = 'inline';
-                span.style.padding = '0';
-                span.style.margin = '0';
-                try { range.surroundContents(span); return true; } catch (e) {
-                    try {
-                        const walker = document.createTreeWalker(range.commonAncestorContainer, NodeFilter.SHOW_TEXT, {
-                            acceptNode: nd => { const nr = document.createRange();
-                                nr.selectNodeContents(nd); return range.intersectsNode(nd) ? NodeFilter
-                                    .FILTER_ACCEPT : NodeFilter.FILTER_REJECT; } });
-                        const nodes = [];
-                        let n;
-                        while (n = walker.nextNode()) nodes.push(n);
-                        if (nodes.length === 0) return false;
-                        let ok = false;
-                        nodes.forEach(tn => {
-                            const nr = document.createRange();
-                            nr.selectNodeContents(tn);
-                            const st = range.compareBoundaryPoints(Range.START_TO_START, nr) > 0 ? range
-                                .startOffset : 0;
-                            const en = range.compareBoundaryPoints(Range.END_TO_END, nr) < 0 ? range
-                                .endOffset : tn.length;
-                            if (st < en) { const pr = document.createRange();
-                                pr.setStart(tn, st);
-                                pr.setEnd(tn, en); try { const s2 = document.createElement('span');
-                                    s2.className = 'user-highlight';
-                                    s2.style.backgroundColor = color;
-                                    s2.style.display = 'inline';
-                                    s2.style.padding = '0';
-                                    s2.style.margin = '0';
-                                    pr.surroundContents(s2);
-                                    ok = true; } catch (e2) {} }
-                        });
-                        return ok;
-                    } catch (e2) { return false; }
-                }
-            }
-
-            function syncHighlightToState(container) {
-                if (!container) return;
-                const cq = STATE.questions[STATE.currentIdx];
-                const st = STATE.session[STATE.currentIdx];
-                if (!st) return;
-                const html = container.innerHTML;
-                if (container.id === 'readerCaseStudy') { STATE.questions.forEach((q, idx) => { if (q.caseTitle === cq
-                            .caseTitle) { if (!STATE.session[idx]) STATE.session[idx] = { sel: null, ok: null,
-                                mark: false, caseHtml: null, questionHtml: null, optionsHtml: null,
-                            note: null };
-                            STATE.session[idx].caseHtml = html; } }); const mb = document.getElementById(
-                            'mainCaseStudyContent'); if (mb) mb.innerHTML = html; } else if (container.id ===
-                    'readerQuestion') { st.questionHtml = html; const mb = document.getElementById(
-                        'mainQuestionContent'); if (mb) mb.innerHTML = html; }
-                saveProgress();
-            }
-
-            function eraseHighlights(range, container) {
-                const spans = container.querySelectorAll('.user-highlight');
-                let erased = false;
-                spans.forEach(sp => { const sr = document.createRange();
-                    sr.selectNodeContents(sp); if (range.compareBoundaryPoints(Range.END_TO_START, sr) <= 0 && range
-                        .compareBoundaryPoints(Range.START_TO_END, sr) >= 0) { const p = sp.parentNode; while (sp
-                            .firstChild) p.insertBefore(sp.firstChild, sp);
-                        p.removeChild(sp);
-                        erased = true; } });
-                if (erased) { container.normalize();
-                    beep(260, 'sine', 0.04);
-                    syncHighlightToState(container); }
-            }
-
-            function applyHighlightToRange(range, color, container) {
-                if (!container) container = getHighlightableContainer(range.commonAncestorContainer);
-                if (!container) return;
-                if (color === 'transparent') { eraseHighlights(range, container); return; }
-                const ok = wrapRangeSafe(range, color);
-                if (ok) { beep(520, 'sine', 0.04);
-                    syncHighlightToState(container); }
-            }
-
-            function updateHighlightSwatchUI() { document.querySelectorAll('#highlighterTools .hl-btn').forEach(b => { if (b
-                        .dataset.color) b.classList.toggle('armed', STATE.armedColor === b.dataset.color); });
-                document.getElementById('highlightHint').classList.toggle('show', !!STATE.armedColor); }
-
-            let pendingSelectionRange = null;
-            let pendingSelectionContainer = null;
-            let pendingSelectionTime = 0;
-            document.addEventListener('selectionchange', () => { const sel = window.getSelection(); if (sel && sel
-                    .rangeCount > 0 && !sel.isCollapsed) { const r = sel.getRangeAt(0); const c =
-                    getHighlightableContainer(r.commonAncestorContainer); if (c) { try { pendingSelectionRange = r
-                            .cloneRange();
-                        pendingSelectionContainer = c;
-                        pendingSelectionTime = Date.now(); } catch (e) {} } } });
-
-            window.selectHighlightColor = function(btnEl) {
-                const color = btnEl.dataset.color;
-                let range = null,
-                    container = null;
-                const sel = window.getSelection();
-                if (sel && sel.rangeCount > 0 && !sel.isCollapsed) { const r = sel.getRangeAt(0); const c =
-                        getHighlightableContainer(r.commonAncestorContainer); if (c) { range = r;
-                        container = c; } }
-                if (!range && pendingSelectionRange && (Date.now() - pendingSelectionTime < 4000)) { range =
-                        pendingSelectionRange;
-                    container = pendingSelectionContainer; }
-                if (range) { applyHighlightToRange(range, color, container);
-                    sel && sel.removeAllRanges();
-                    pendingSelectionRange = null;
-                    pendingSelectionContainer = null;
-                    STATE.armedColor = color;
-                    updateHighlightSwatchUI(); return; }
-                STATE.armedColor = (STATE.armedColor === color) ? null : color;
-                updateHighlightSwatchUI();
-            };
-
-            let hlGesture = { active: false, mode: null, sx: 0, sy: 0, anchor: null, container: null };
-            function onReaderTouchStart(e) { if (!STATE.armedColor) return; const t = e.touches[0]; if (!t) return; const
-                    target = document.elementFromPoint(t.clientX, t.clientY); const c = target ?
-                    getHighlightableContainer(target) : null; if (!c) return;
-                hlGesture.active = true;
-                hlGesture.mode = null;
-                hlGesture.sx = t.clientX;
-                hlGesture.sy = t.clientY;
-                hlGesture.container = c;
-                hlGesture.anchor = getCaretRangeFromPoint(t.clientX, t.clientY); }
-            function onReaderTouchMove(e) { if (!hlGesture.active) return; const t = e.touches[0]; if (!t) return; const dx = t
-                    .clientX - hlGesture.sx; const dy = t.clientY - hlGesture.sy; if (hlGesture.mode === null) { if (Math
-                        .abs(dx) < 8 && Math.abs(dy) < 8) return;
-                    hlGesture.mode = (Math.abs(dx) > Math.abs(dy)) ? 'highlight' : 'scroll'; if (hlGesture.mode ===
-                        'scroll') { hlGesture.active = false; return; } } if (hlGesture.mode === 'highlight') { e
-                        .preventDefault(); const cr = getCaretRangeFromPoint(t.clientX, t.clientY); const lr =
-                        buildOrderedRange(hlGesture.anchor, cr); if (lr && !lr.collapsed) { const sel = window
-                            .getSelection();
-                        sel.removeAllRanges();
-                        sel.addRange(lr); } } }
-            function onReaderTouchEnd() { if (hlGesture.active && hlGesture.mode === 'highlight') { const sel = window
-                    .getSelection(); if (sel && sel.rangeCount > 0 && !sel.isCollapsed) { const range = sel.getRangeAt(0);
-                    applyHighlightToRange(range, STATE.armedColor, hlGesture.container);
-                    sel.removeAllRanges(); } }
-                hlGesture.active = false;
-                hlGesture.mode = null;
-                hlGesture.anchor = null;
-                hlGesture.container = null; }
-
-            // ==================== NAVIGATION ====================
-            window.goNext = function() { document.getElementById('explanationModal').style.display = 'none'; if (STATE
-                    .currentIdx < STATE.questions.length - 1) { STATE.currentIdx++;
-                    renderQuestion();
-                    saveProgress(); if (document.getElementById('fullscreenReader').style.display === 'flex')
-                    openFullscreenReader(); } else showEndScreen(); };
-            window.goPrev = function() { document.getElementById('explanationModal').style.display = 'none'; if (STATE
-                    .currentIdx > 0) { STATE.currentIdx--;
-                    renderQuestion();
-                    saveProgress(); if (document.getElementById('fullscreenReader').style.display === 'flex')
-                    openFullscreenReader(); } };
-            function jumpTo(i) { if (i >= 0 && i < STATE.questions.length) { STATE.currentIdx = i;
-                    renderQuestion();
-                    saveProgress();
-                    updateStatsBar(); } }
-
-            function toggleBookmark() { if (!STATE.session[STATE.currentIdx]) return;
-                STATE.session[STATE.currentIdx].mark = !STATE.session[STATE.currentIdx].mark;
-                updateBookmarkIcon();
-                renderDots();
-                updateStatsBar();
-                saveProgress();
-                beep(600, 'sine', 0.06); }
-
-            function showEndScreen() { document.getElementById('quizArea').style.display = 'none';
-                document.getElementById('desktopSidebarWrapper').style.display = 'none';
-                document.getElementById('dotsDisplay').style.display = 'none';
-                document.getElementById('endScreen').style.display = 'block';
-                document.getElementById('statsBar').style.opacity = '0.5'; }
-
-            window.retakeQuiz = function() { showCustomConfirm('Restart', 'Erase progress and restart this set?', r => { if (
-                    r) { STATE.session = STATE.questions.map(() => ({ sel: null, ok: null, mark: false,
-                        caseHtml: null, questionHtml: null, optionsHtml: null, note: null }));
-                    STATE.currentIdx = 0;
-                    saveProgress();
-                    document.getElementById('quizArea').style.display = '';
-                    document.getElementById('desktopSidebarWrapper').style.display = '';
-                    document.getElementById('dotsDisplay').style.display = '';
-                    document.getElementById('endScreen').style.display = 'none';
-                    document.getElementById('statsBar').style.opacity = '1';
-                    renderQuestion();
-                    updateStatsBar(); } }); };
-
-            // ==================== SHEETS ====================
-            window.openSheet = function(id) { const s = document.getElementById(id);
-                s.style.display = 'block';
-                void s.offsetWidth;
-                s.classList.add('show'); };
-            window.closeSheet = function(id) { const s = document.getElementById(id);
-                s.classList.remove('show');
-                setTimeout(() => s.style.display = 'none', 280); };
-
-            window.buildPalette = function() { const g = document.getElementById('paletteGrid');
-                g.innerHTML = '';
-                STATE.questions.forEach((_, i) => { const st = STATE.session[i]; const d = document.createElement(
-                        'button');
-                    d.className = 'dot-btn';
-                    d.style.width = '100%';
-                    d.style.aspectRatio = '1';
-                    d.textContent = i + 1; if (i === STATE.currentIdx) d.classList.add('current'); if (st.sel !== null) {
-                        if (st.ok === true) d.classList.add('correct-answer');
-                        else if (st.ok === false) d.classList.add('wrong-answer');
-                        else d.classList.add('attempted'); } else d.classList.add('unattempted'); if (st.mark) d
-                        .innerHTML += `<span class="bookmark-indicator"></span>`;
-                    d.addEventListener('click', () => { jumpTo(i);
-                        closeSheet('paletteSheet'); });
-                    g.appendChild(d); });
-                openSheet('paletteSheet'); };
-
-            window.buildReview = function() { const l = document.getElementById('reviewList');
-                l.innerHTML = '';
-                STATE.questions.forEach((q, i) => { const st = STATE.session[i]; let ic = '⚪'; if (st.sel !== null) ic = st
-                        .ok ? '✅' : '❌'; const div = document.createElement('div');
-                    div.style.cssText =
-                        'padding:12px;border:1px solid #e2e8f0;border-radius:12px;background:white;cursor:pointer;margin-bottom:8px;display:flex;gap:10px;align-items:flex-start;';
-                    div.innerHTML =
-                        `<span style="font-size:1.1rem;flex-shrink:0;">${ic}</span><div style="flex:1;"><h4 style="font-size:0.82rem;font-weight:600;color:#1e293b;margin-bottom:3px;">Q${i+1}: ${q.question.substring(0,70)}${q.question.length>70?'...':''}</h4><p style="font-size:0.72rem;color:#64748b;">Your Ans: <b style="color:${st.sel!==null?(st.ok?'#059669':'#dc2626'):'#64748b'}">${st.sel!==null?String.fromCharCode(65+st.sel):'-'}</b> | Correct: <b style="color:#059669">${String.fromCharCode(65+q.correct)}</b>${st.mark?' | <span style="color:#d97706;">🔖</span>':''}${st.note?' | <span style="color:var(--primary);"><i class="fa-solid fa-pen"></i></span>':''}</p></div>`;
-                    div.addEventListener('click', () => { jumpTo(i);
-                        closeSheet('reviewSheet'); });
-                    l.appendChild(div); });
-                openSheet('reviewSheet'); };
-
-            // ==================== REVIEW INCORRECT ====================
-            window.openReviewWrong = function() {
-                const l = document.getElementById('reviewWrongList');
-                l.innerHTML = '';
-                const wrongQs = STATE.session.map((st, i) => ({ st, i })).filter(x => x.st.ok === false);
-                if (wrongQs.length === 0) { l.innerHTML =
-                        '<div style="text-align:center;padding:30px;color:#64748b;font-size:0.9rem;">No incorrect answers yet! 🎉</div>'; } else {
-                    wrongQs.forEach(({ st, i }) => { const q = STATE.questions[i]; const div = document.createElement(
-                            'div');
-                        div.style.cssText =
-                            'padding:12px;border:1px solid #fecaca;border-radius:12px;background:#fef2f2;cursor:pointer;margin-bottom:8px;display:flex;gap:10px;align-items:flex-start;';
-                        div.innerHTML =
-                            `<span style="font-size:1.1rem;">❌</span><div style="flex:1;"><h4 style="font-size:0.82rem;font-weight:600;color:#1e293b;margin-bottom:3px;">Q${i+1}: ${q.question.substring(0,70)}${q.question.length>70?'...':''}</h4><p style="font-size:0.72rem;color:#64748b;">Your Ans: <b style="color:#dc2626">${String.fromCharCode(65+st.sel)}</b> | Correct: <b style="color:#059669">${String.fromCharCode(65+q.correct)}</b></p>${q.explain?'<p style="font-size:0.7rem;color:#475569;margin-top:4px;"><b>Hint:</b> '+q.explain.substring(0,100)+'</p>':''}</div>`;
-                        div.addEventListener('click', () => { jumpTo(i);
-                            closeSheet('reviewWrongSheet'); });
-                        l.appendChild(div); });
-                }
-                openSheet('reviewWrongSheet');
-            };
-
-            // ==================== LIFELINES ====================
-            function toggleLifelineMenu() { const dd = document.getElementById('lifelineDropdown');
-                dd.style.display = dd.style.display === 'block' ? 'none' : 'block'; }
-
-            function use5050() { toggleLifelineMenu(); if (STATE.isAnswered || STATE.studyMode) return; const q = STATE
-                    .questions[STATE.currentIdx]; const wrong = [0, 1, 2, 3].filter(i => i !== q.correct);
-                wrong.sort(() => Math.random() - 0.5);
-                wrong.slice(0, 2).forEach(i => { const b = document.getElementById('optBtn' + i); if (b) { b.style.opacity =
-                        '0.3';
-                        b.disabled = true; } }); }
-
-            function useExpert() { toggleLifelineMenu();
-                showExplanationModal(false, true); }
-
-            // ==================== SWIPE ====================
-            let ssx = 0,
-                ssy = 0,
-                sex = 0,
-                sey = 0;
-            function handleSwipe() { const xd = ssx - sex,
-                    yd = ssy - sey; if (Math.abs(xd) > Math.abs(yd) && Math.abs(xd) > 50) { if (xd > 0) goNext();
-                    else goPrev(); } }
-
-            // ==================== ANALYTICS & EXPORT ====================
-            window.showAnalytics = async function() {
-                showLoader('Crunching...');
-                try {
-                    const all = await getAllStates();
-                    let tq = 0,
-                        cr = 0,
-                        wr = 0;
-                    let html = '';
-                    const mm = { easy: 'Easy Set', medium: 'Medium Set FR', hard: 'Case Studies' };
-                    const cc = { easy: '#10b981', medium: '#3b82f6', hard: '#ef4444' };
-                    for (let md of ['easy', 'medium', 'hard']) { const d = all[md]; if (d && d.session) { const ans = d
-                                .session.filter(s => s.sel !== null); const c = ans.filter(s => s.ok).length;
-                            tq += ans.length;
-                            cr += c;
-                            wr += ans.length - c; const pct = ans.length ? Math.round(c / ans.length * 100) : 0;
-                            html +=
-                                `<div style="background:white;border:1px solid var(--border);border-radius:10px;padding:10px;display:flex;align-items:center;gap:10px;"><div style="width:36px;height:36px;border-radius:8px;background:${cc[md]}20;color:${cc[md]};display:flex;align-items:center;justify-content:center;font-weight:800;font-size:0.8rem;">${pct}%</div><div style="flex:1;"><div style="font-weight:600;font-size:0.8rem;">${mm[md]}</div><div style="font-size:0.7rem;color:#64748b;">${ans.length} attempted | ${c} correct</div></div></div>`; } }
-                    document.getElementById('statTotal').textContent = tq;
-                    document.getElementById('statRight').textContent = cr;
-                    document.getElementById('statWrong').textContent = wr;
-                    document.getElementById('statAcc').textContent = tq ? Math.round(cr / tq * 100) + '%' : '0%';
-                    document.getElementById('setStatsBreakdown').innerHTML = html ||
-                        '<p style="font-size:0.78rem;color:#64748b;">No data yet.</p>';
-                    switchScreen('analyticsScreen');
-                } catch (e) { showCustomAlert("Error", 'Could not load analytics.'); } finally { hideLoader(); } };
-
-            window.exportData = async function() { try { const all = await getAllStates(); const blob = new Blob([JSON
-                        .stringify(all)], { type: 'application/json' }); const url = URL.createObjectURL(blob);
-                    const a = document.createElement('a');
-                    a.href = url;
-                    a.download = `CAAuditPro_Backup_${new Date().toISOString().split('T')[0]}.json`;
-                    a.click();
-                    URL.revokeObjectURL(url);
-                    showCustomAlert("Success", "✅ Progress backed up!"); } catch (e) { showCustomAlert("Error",
-                        "Failed to export."); } };
-
-            document.getElementById('importFile').addEventListener('change', async function(e) { const f = e.target
-                    .files[0]; if (!f) return;
-                showLoader('Restoring...');
-                const rd = new FileReader();
-                rd.onload = async function(ev) { try { const d = JSON.parse(ev.target.result); for (let md of Object
-                            .keys(d)) await saveState(md, d[md]);
-                        showCustomAlert("Success", "✅ Progress restored!");
-                        document.getElementById('importFile').value = ""; } catch (er) { showCustomAlert("Error",
-                        "❌ Invalid backup file."); } finally { hideLoader(); } };
-                rd.readAsText(f); });
-
-            // ==================== EVENT BINDINGS ====================
-            function bindEvents() {
-                document.getElementById('btnPrev').addEventListener('click', goPrev);
-                document.getElementById('btnNext').addEventListener('click', goNext);
-                document.getElementById('btnPalette').addEventListener('click', buildPalette);
-                document.getElementById('btnReview').addEventListener('click', buildReview);
-                document.getElementById('bookmarkBtn').addEventListener('click', toggleBookmark);
-                document.getElementById('lifelineBtn').addEventListener('click', toggleLifelineMenu);
-                document.getElementById('btn5050').addEventListener('click', use5050);
-                document.getElementById('btnExpert').addEventListener('click', useExpert);
-                document.getElementById('explanationNextBtn').addEventListener('click', goNext);
-
-                const ta = document.getElementById('mainContent');
-                ta.addEventListener('touchstart', e => { ssx = e.changedTouches[0].screenX;
-                    ssy = e.changedTouches[0].screenY; }, { passive: true });
-                ta.addEventListener('touchend', e => { sex = e.changedTouches[0].screenX;
-                    sey = e.changedTouches[0].screenY;
-                    handleSwipe(); }, { passive: true });
-
-                const rc = document.getElementById('readerContent');
-                rc.addEventListener('touchstart', onReaderTouchStart, { passive: true });
-                rc.addEventListener('touchmove', onReaderTouchMove, { passive: false });
-                rc.addEventListener('touchend', onReaderTouchEnd, { passive: true });
-                rc.addEventListener('touchcancel', onReaderTouchEnd, { passive: true });
-
-                document.addEventListener('click', e => { const dd = document.getElementById('lifelineDropdown'); const lb =
-                        document.getElementById('lifelineBtn'); if (dd.style.display === 'block' && !dd.contains(e
-                            .target) && e.target !== lb && !lb.contains(e.target)) dd.style.display = 'none'; });
-
-                document.addEventListener('keydown', e => { if (document.getElementById('quizScreen').classList
-                        .contains('active')) { if (e.key === 'ArrowRight') { e.preventDefault();
-                            goNext(); } if (e.key === 'ArrowLeft') { e.preventDefault();
-                            goPrev(); } } });
-
-                if (window.innerWidth > 900) { document.body.classList.add('desktop-view');
-                    document.getElementById('desktopToggleIcon').className = 'fa-solid fa-mobile-screen'; }
-            }
-
-            window.addEventListener('DOMContentLoaded', () => { initDB();
-                bindEvents();
-                switchScreen('welcomeScreen'); });
-        })();
+            });
+        });
     </script>
 </body>
-    </html>
+</html>
