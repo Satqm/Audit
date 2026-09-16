@@ -1399,6 +1399,486 @@
                 transform: rotate(360deg);
             }
         }
+
+        /* ============================================================
+           SYLLABUS TRACKER
+           ============================================================ */
+        .syl-body {
+            padding: 16px 16px 30px;
+            max-width: 860px;
+            margin: 0 auto;
+            width: 100%;
+        }
+        .syl-hero {
+            background: linear-gradient(135deg, #4c1d95, #7c3aed 55%, #6366f1);
+            border-radius: 18px;
+            padding: 18px;
+            color: #fff;
+            margin-bottom: 14px;
+            box-shadow: 0 10px 26px rgba(124, 58, 237, 0.28);
+            position: relative;
+            overflow: hidden;
+        }
+        .syl-hero::after {
+            content: '';
+            position: absolute;
+            top: -40px;
+            right: -30px;
+            width: 130px;
+            height: 130px;
+            background: rgba(255, 255, 255, 0.09);
+            border-radius: 50%;
+        }
+        .syl-hero h2 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1rem;
+            font-weight: 700;
+            line-height: 1.35;
+            margin-bottom: 3px;
+            position: relative;
+            z-index: 1;
+        }
+        .syl-hero p {
+            font-size: 0.72rem;
+            opacity: 0.88;
+            margin-bottom: 14px;
+            position: relative;
+            z-index: 1;
+        }
+        .syl-bar {
+            height: 9px;
+            border-radius: 6px;
+            background: rgba(255, 255, 255, 0.25);
+            overflow: hidden;
+            position: relative;
+            z-index: 1;
+        }
+        .syl-bar > div {
+            height: 100%;
+            border-radius: 6px;
+            background: #fff;
+            width: 0%;
+            transition: width 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .syl-hero-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            font-size: 0.7rem;
+            font-weight: 700;
+            margin-top: 8px;
+            position: relative;
+            z-index: 1;
+            letter-spacing: 0.2px;
+        }
+        .syl-swipe-all {
+            width: 100%;
+            padding: 13px;
+            border-radius: 13px;
+            border: 1.5px solid #ddd6fe;
+            background: #faf5ff;
+            color: #6d28d9;
+            font-weight: 700;
+            font-size: 0.81rem;
+            margin-bottom: 14px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 9px;
+            transition: 0.2s;
+            font-family: inherit;
+        }
+        .syl-swipe-all:active {
+            transform: scale(0.98);
+            background: #f3e8ff;
+        }
+
+        .syl-module {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 15px;
+            margin-bottom: 11px;
+            overflow: hidden;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
+        }
+        .syl-module-head {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 13px 14px;
+            cursor: pointer;
+            background: #f8fafc;
+            user-select: none;
+        }
+        .syl-module-head h4 {
+            font-size: 0.8rem;
+            font-weight: 700;
+            flex: 1;
+            color: var(--text);
+            font-family: 'Poppins', sans-serif;
+        }
+        .syl-pct {
+            font-size: 0.68rem;
+            font-weight: 800;
+            color: var(--study-badge);
+            background: var(--study-badge-bg);
+            padding: 3px 9px;
+            border-radius: 20px;
+        }
+        .syl-chev {
+            font-size: 0.7rem;
+            color: #94a3b8;
+            transition: transform 0.25s;
+        }
+        .syl-module.open .syl-chev {
+            transform: rotate(180deg);
+        }
+        .syl-module-body {
+            display: none;
+            padding: 7px;
+        }
+        .syl-module.open .syl-module-body {
+            display: block;
+            animation: fadeIn 0.2s ease;
+        }
+        .syl-chapter {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px;
+            border-radius: 11px;
+            cursor: pointer;
+            transition: 0.15s;
+        }
+        .syl-chapter:hover {
+            background: #f8fafc;
+        }
+        .syl-chapter:active {
+            transform: scale(0.985);
+            background: #f1f5f9;
+        }
+        .syl-num {
+            width: 32px;
+            height: 32px;
+            border-radius: 9px;
+            background: #eef2ff;
+            color: #4f46e5;
+            font-weight: 800;
+            font-size: 0.72rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+        .syl-chapter.done .syl-num {
+            background: #d1fae5;
+            color: #059669;
+        }
+        .syl-ch-info {
+            flex: 1;
+            min-width: 0;
+        }
+        .syl-ch-info h5 {
+            font-size: 0.775rem;
+            font-weight: 600;
+            color: var(--text);
+            line-height: 1.35;
+            margin-bottom: 5px;
+        }
+        .syl-mini {
+            height: 5px;
+            border-radius: 4px;
+            background: #e2e8f0;
+            overflow: hidden;
+        }
+        .syl-mini > div {
+            height: 100%;
+            width: 0%;
+            border-radius: 4px;
+            background: linear-gradient(90deg, #8b5cf6, #6366f1);
+            transition: width 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .syl-ch-count {
+            font-size: 0.64rem;
+            font-weight: 800;
+            color: var(--text-secondary);
+            flex-shrink: 0;
+            min-width: 34px;
+            text-align: right;
+        }
+
+        /* ============================================================
+           FLASHCARD DECK
+           ============================================================ */
+        .flash-overlay {
+            position: fixed;
+            inset: 0;
+            background: radial-gradient(circle at 50% 0%, #1e293b, #0b1120 70%);
+            z-index: 400;
+            display: none;
+            flex-direction: column;
+        }
+        .flash-overlay.show {
+            display: flex;
+            animation: fadeIn 0.22s ease;
+        }
+        .flash-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 14px;
+            color: #fff;
+            flex-shrink: 0;
+        }
+        .flash-header .reader-close-btn {
+            background: rgba(255, 255, 255, 0.12);
+            border-color: rgba(255, 255, 255, 0.2);
+            color: #fff;
+        }
+        .flash-header .icon-btn {
+            background: rgba(255, 255, 255, 0.12);
+            border-color: rgba(255, 255, 255, 0.2);
+            color: #e2e8f0;
+        }
+        .flash-header-info {
+            flex: 1;
+            min-width: 0;
+            text-align: center;
+        }
+        .flash-header-info h3 {
+            font-size: 0.84rem;
+            font-weight: 700;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            font-family: 'Poppins', sans-serif;
+        }
+        .flash-header-info p {
+            font-size: 0.66rem;
+            opacity: 0.65;
+            margin-top: 2px;
+        }
+        .flash-progress-track {
+            height: 4px;
+            background: rgba(255, 255, 255, 0.14);
+            margin: 0 16px;
+            border-radius: 4px;
+            overflow: hidden;
+            flex-shrink: 0;
+        }
+        .flash-progress-track > div {
+            height: 100%;
+            width: 0%;
+            background: linear-gradient(90deg, #34d399, #10b981);
+            border-radius: 4px;
+            transition: width 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .flash-stage {
+            flex: 1;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px 16px;
+            min-height: 0;
+            touch-action: none;
+            overflow: hidden;
+        }
+        .flash-card {
+            position: absolute;
+            width: min(88%, 420px);
+            height: min(60vh, 460px);
+            perspective: 1400px;
+            will-change: transform, opacity;
+            transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s;
+        }
+        .flash-card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            transform-style: preserve-3d;
+            transition: transform 0.55s cubic-bezier(0.16, 1, 0.3, 1);
+            border-radius: 22px;
+        }
+        .flash-card.flipped .flash-card-inner {
+            transform: rotateY(180deg);
+        }
+        .flash-face {
+            position: absolute;
+            inset: 0;
+            border-radius: 22px;
+            backface-visibility: hidden;
+            -webkit-backface-visibility: hidden;
+            display: flex;
+            flex-direction: column;
+            padding: 24px 22px;
+            box-shadow: 0 22px 50px rgba(0, 0, 0, 0.45);
+            overflow: hidden;
+        }
+        .flash-front {
+            background: linear-gradient(160deg, #ffffff, #f8fafc);
+            color: var(--text);
+        }
+        .flash-back {
+            background: linear-gradient(150deg, #312e81, #4c1d95 60%, #5b21b6);
+            color: #fff;
+            transform: rotateY(180deg);
+        }
+        .flash-badge {
+            align-self: flex-start;
+            font-size: 0.6rem;
+            font-weight: 800;
+            letter-spacing: 0.7px;
+            text-transform: uppercase;
+            padding: 5px 11px;
+            border-radius: 20px;
+            background: #eef2ff;
+            color: #4f46e5;
+            margin-bottom: 16px;
+            max-width: 100%;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+        .flash-title {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.06rem;
+            font-weight: 700;
+            line-height: 1.5;
+            flex: 1;
+            overflow-y: auto;
+            padding-right: 4px;
+            -webkit-overflow-scrolling: touch;
+        }
+        .flash-parent {
+            font-size: 0.76rem;
+            color: var(--text-secondary);
+            margin-top: 12px;
+            line-height: 1.5;
+            display: flex;
+            gap: 7px;
+            align-items: flex-start;
+        }
+        .flash-parent i {
+            margin-top: 3px;
+            color: #a5b4fc;
+            flex-shrink: 0;
+        }
+        .flash-foot {
+            font-size: 0.66rem;
+            color: #94a3b8;
+            margin-top: 10px;
+            font-weight: 600;
+            letter-spacing: 0.2px;
+        }
+        .flash-state-chip {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 0.68rem;
+            font-weight: 700;
+            padding: 6px 12px;
+            border-radius: 20px;
+            margin-top: 16px;
+            align-self: flex-start;
+        }
+        .chip-done {
+            background: #d1fae5;
+            color: #059669;
+        }
+        .chip-todo {
+            background: #f1f5f9;
+            color: #64748b;
+        }
+        .flash-stamp {
+            position: absolute;
+            top: 24px;
+            font-size: 0.78rem;
+            font-weight: 900;
+            letter-spacing: 1.5px;
+            padding: 9px 15px;
+            border-radius: 11px;
+            border: 3px solid;
+            opacity: 0;
+            pointer-events: none;
+        }
+        .stamp-yes {
+            right: 22px;
+            color: #059669;
+            border-color: #059669;
+            transform: rotate(12deg);
+        }
+        .stamp-no {
+            left: 22px;
+            color: #dc2626;
+            border-color: #dc2626;
+            transform: rotate(-12deg);
+        }
+        .flash-actions {
+            display: flex;
+            gap: 10px;
+            padding: 14px 16px calc(18px + env(safe-area-inset-bottom));
+            justify-content: center;
+            align-items: stretch;
+            flex-shrink: 0;
+        }
+        .flash-btn {
+            flex: 1;
+            max-width: 160px;
+            border: none;
+            border-radius: 15px;
+            padding: 13px 8px;
+            font-weight: 700;
+            font-size: 0.74rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 5px;
+            cursor: pointer;
+            transition: 0.2s;
+            font-family: inherit;
+        }
+        .flash-btn i {
+            font-size: 1.15rem;
+        }
+        .flash-btn:active {
+            transform: scale(0.94);
+        }
+        .flash-btn.yes {
+            background: linear-gradient(135deg, #10b981, #059669);
+            color: #fff;
+            box-shadow: 0 8px 22px rgba(16, 185, 129, 0.35);
+        }
+        .flash-btn.no {
+            background: rgba(255, 255, 255, 0.12);
+            color: #e2e8f0;
+        }
+        .flash-btn.flip {
+            background: rgba(255, 255, 255, 0.08);
+            color: #cbd5e1;
+            flex: 0 0 84px;
+            max-width: 84px;
+        }
+        .flash-empty {
+            color: #cbd5e1;
+            text-align: center;
+            padding: 26px;
+            max-width: 340px;
+            animation: fadeIn 0.3s ease;
+        }
+        .flash-empty h3 {
+            color: #fff;
+            font-size: 1.15rem;
+            font-weight: 800;
+            margin-bottom: 7px;
+            font-family: 'Poppins', sans-serif;
+        }
+        .flash-empty p {
+            font-size: 0.83rem;
+            margin-bottom: 20px;
+            line-height: 1.5;
+        }
     </style>
 </head>
 <body>
@@ -1458,12 +1938,40 @@
                 </div>
             </div>
             <div class="tools-section">
+                <div class="tool-btn" onclick="openSyllabus()" style="grid-column:span 2;background:linear-gradient(135deg,#7c3aed,#6366f1);border:none;display:flex;align-items:center;justify-content:center;gap:10px;padding:16px;box-shadow:0 8px 22px rgba(124,58,237,0.3);">
+                    <i class="fa-solid fa-book-bookmark" style="color:#fff;font-size:1.15rem;margin:0;"></i>
+                    <h4 style="color:#fff;font-size:0.86rem;">Syllabus Tracker</h4>
+                    <span id="sylChip" style="font-size:0.66rem;font-weight:800;background:rgba(255,255,255,0.22);color:#fff;padding:3px 9px;border-radius:20px;">0%</span>
+                </div>
                 <div class="tool-btn" onclick="showAnalytics()"><i class="fa-solid fa-chart-pie"></i><h4>Analytics</h4></div>
                 <div class="tool-btn" onclick="exportData()"><i class="fa-solid fa-cloud-arrow-down"></i><h4>Backup DB</h4></div>
                 <div class="tool-btn" onclick="document.getElementById('importFile').click()" style="grid-column:span 2;"><i class="fa-solid fa-cloud-arrow-up"></i><h4>Restore from File</h4></div>
             </div>
             <div class="yt-footer" style="background:white;border-top:none;">
                 <a href="https://youtube.com/@observe_with_satyam?si=8p90ukUsKvLJaZvh" target="_blank"><i class="fa-brands fa-youtube"></i><span>Observe with Satyam<br><span style="font-size:0.72rem;color:#475569;">Made with love ❤️</span></span></a>
+            </div>
+        </div>
+
+        <!-- SYLLABUS SCREEN -->
+        <div id="syllabusScreen" class="screen" style="background:var(--bg);">
+            <div class="sheet-header" style="padding:14px 18px;box-shadow:0 1px 3px rgba(0,0,0,0.05);margin-bottom:0;background:white;">
+                <h3>📚 Syllabus Tracker</h3>
+                <button class="close-btn" onclick="goHome()"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <div class="syl-body">
+                <div class="syl-hero">
+                    <h2 id="sylCourseTitle">Advanced Auditing, Assurance &amp; Professional Ethics</h2>
+                    <p>CA Final · Paper 3 · 3 Modules · 19 Chapters</p>
+                    <div class="syl-bar"><div id="sylOverallBar"></div></div>
+                    <div class="syl-hero-row">
+                        <span id="sylOverallText">0 of 0 topics completed</span>
+                        <span id="sylOverallPct">0%</span>
+                    </div>
+                </div>
+                <button class="syl-swipe-all" onclick="openAllFlashcards()">
+                    <i class="fa-solid fa-layer-group"></i> Swipe through all topics
+                </button>
+                <div id="sylModules"></div>
             </div>
         </div>
 
@@ -1617,6 +2125,25 @@
             <span class="highlight-hint" id="highlightHint">✏️ Mode ON — swipe across text or select text first.</span>
         </div>
         <div class="reader-content" id="readerContent"></div>
+    </div>
+
+    <!-- ==================== FLASHCARD OVERLAY ==================== -->
+    <div id="flashOverlay" class="flash-overlay">
+        <div class="flash-header">
+            <button class="reader-close-btn" onclick="closeFlashcards()"><i class="fa-solid fa-xmark"></i></button>
+            <div class="flash-header-info">
+                <h3 id="flashChapterTitle">Chapter</h3>
+                <p id="flashProgressText">0 / 0</p>
+            </div>
+            <button class="icon-btn" onclick="flashMarkAll()" title="Mark all as completed"><i class="fa-solid fa-check-double"></i></button>
+        </div>
+        <div class="flash-progress-track"><div id="flashProgressFill"></div></div>
+        <div class="flash-stage" id="flashStage"></div>
+        <div class="flash-actions" id="flashActions">
+            <button class="flash-btn no" onclick="flashSwipe(false)"><i class="fa-solid fa-xmark"></i><span>Not Yet</span></button>
+            <button class="flash-btn flip" onclick="flashFlip()"><i class="fa-solid fa-rotate"></i><span>Info</span></button>
+            <button class="flash-btn yes" onclick="flashSwipe(true)"><i class="fa-solid fa-check"></i><span>Completed</span></button>
+        </div>
     </div>
 
     <script>
@@ -2128,7 +2655,7 @@
                 let erased = false;
                 spans.forEach(sp => { const sr = document.createRange();
                     sr.selectNodeContents(sp); if (range.compareBoundaryPoints(Range.END_TO_START, sr) <= 0 && range
-                        .compareBoundaryPoints(Range.START_TO_END, sr) >= 0) { const p = sp.parentNode; while (sp
+                            .compareBoundaryPoints(Range.START_TO_END, sr) >= 0) { const p = sp.parentNode; while (sp
                             .firstChild) p.insertBefore(sp.firstChild, sp);
                         p.removeChild(sp);
                         erased = true; } });
@@ -2383,6 +2910,658 @@
                         "❌ Invalid backup file."); } finally { hideLoader(); } };
                 rd.readAsText(f); });
 
+            /* ============================================================
+               ============  SYLLABUS TRACKER + FLASHCARDS  ===============
+               ============================================================ */
+
+            const SYL_STORE_KEY = 'auditPro_syllabusProgress';
+            let SYL_PROGRESS = {};
+            try { SYL_PROGRESS = JSON.parse(localStorage.getItem(SYL_STORE_KEY) || '{}') || {}; } catch (e) { SYL_PROGRESS = {}; }
+
+            function saveSylProgress() { try { localStorage.setItem(SYL_STORE_KEY, JSON.stringify(SYL_PROGRESS)); } catch (e) {} }
+
+            // ---------- DEFAULT SYLLABUS (used if syllabus.json is unavailable) ----------
+            const DEFAULT_SYLLABUS = {
+                course_title: "Advanced Auditing, Assurance and Professional Ethics",
+                modules: [{
+                    module_number: 1,
+                    chapters: [{
+                        chapter_number: 1,
+                        chapter_title: "Quality Control",
+                        topics: [
+                            { topic_number: "1", title: "Audit Quality" },
+                            { topic_number: "2", title: "SQC 1 – Quality Control for Firms that Perform Audits and Reviews of Historical Financial Information", subtopics: [
+                                { topic_number: "2.1", title: "Elements of a System of Quality Control" },
+                                { topic_number: "2.2", title: "Leadership Responsibilities for Quality within the Firm" },
+                                { topic_number: "2.3", title: "Ethical Requirements" },
+                                { topic_number: "2.4", title: "Acceptance and Continuance of Client Relationships" },
+                                { topic_number: "2.5", title: "Human Resources" },
+                                { topic_number: "2.6", title: "Engagement Performance" },
+                                { topic_number: "2.7", title: "Monitoring" }
+                            ] },
+                            { topic_number: "3", title: "SA 220 – Quality Control for an Audit of Financial Statements", subtopics: [
+                                { topic_number: "3.1", title: "Leadership Responsibility for Quality of Audits" },
+                                { topic_number: "3.2", title: "Relevant Ethical Requirements" },
+                                { topic_number: "3.3", title: "Acceptance and Continuance of Client Relationships and Audit Engagements" },
+                                { topic_number: "3.4", title: "Assignment of Engagement Teams" },
+                                { topic_number: "3.5", title: "Engagement Performance" },
+                                { topic_number: "3.6", title: "Engagement Quality Control Review" },
+                                { topic_number: "3.7", title: "Monitoring and Documentation" }
+                            ] }
+                        ]
+                    }, {
+                        chapter_number: 2,
+                        chapter_title: "General Auditing Principles and Auditors' Responsibilities",
+                        topics: [
+                            { topic_number: "1", title: "SA 200 – Overall Objectives of the Independent Auditor" },
+                            { topic_number: "2", title: "SA 210 – Agreeing the Terms of Audit Engagements" },
+                            { topic_number: "3", title: "SA 230 – Audit Documentation" },
+                            { topic_number: "4", title: "SA 240 – Auditor's Responsibilities Relating to Fraud" },
+                            { topic_number: "5", title: "SA 250 – Consideration of Laws and Regulations in an Audit" },
+                            { topic_number: "6", title: "SA 260 – Communication with Those Charged with Governance" },
+                            { topic_number: "7", title: "SA 265 – Communicating Deficiencies in Internal Control" },
+                            { topic_number: "8", title: "SA 299 – Joint Audit of Financial Statements" },
+                            { topic_number: "9", title: "SA 402 – Audit Considerations Relating to an Entity Using a Service Organisation" },
+                            { topic_number: "10", title: "Professional Skepticism and Professional Judgment" }
+                        ]
+                    }, {
+                        chapter_number: 3,
+                        chapter_title: "Audit Planning, Strategy and Execution",
+                        topics: [
+                            { topic_number: "1", title: "Audit Planning – Concept and Benefits" },
+                            { topic_number: "2", title: "SA 300 – Planning an Audit of Financial Statements" },
+                            { topic_number: "3", title: "Audit Strategy and Audit Plan" },
+                            { topic_number: "4", title: "Audit Programme" },
+                            { topic_number: "5", title: "Direction, Supervision and Review" },
+                            { topic_number: "6", title: "Execution of Audit and Time Budgeting" }
+                        ]
+                    }, {
+                        chapter_number: 4,
+                        chapter_title: "Materiality, Risk Assessment and Internal Control",
+                        topics: [
+                            { topic_number: "1", title: "SA 315 – Identifying and Assessing Risks of Material Misstatement" },
+                            { topic_number: "2", title: "SA 320 – Materiality in Planning and Performing an Audit" },
+                            { topic_number: "3", title: "SA 330 – The Auditor's Responses to Assessed Risks" },
+                            { topic_number: "4", title: "Internal Control – Components and the COSO Framework" },
+                            { topic_number: "5", title: "Understanding the Entity and Its Environment" },
+                            { topic_number: "6", title: "Risk Assessment Procedures and Documentation" }
+                        ]
+                    }, {
+                        chapter_number: 5,
+                        chapter_title: "Audit Evidence",
+                        topics: [
+                            { topic_number: "1", title: "SA 500 – Audit Evidence" },
+                            { topic_number: "2", title: "SA 501 – Audit Evidence – Specific Considerations" },
+                            { topic_number: "3", title: "SA 505 – External Confirmations" },
+                            { topic_number: "4", title: "SA 510 – Initial Audit Engagements – Opening Balances" },
+                            { topic_number: "5", title: "SA 520 – Analytical Procedures" },
+                            { topic_number: "6", title: "SA 530 – Audit Sampling" },
+                            { topic_number: "7", title: "SA 540 – Auditing Accounting Estimates and Related Disclosures" },
+                            { topic_number: "8", title: "SA 550 – Related Parties" },
+                            { topic_number: "9", title: "SA 570 – Going Concern" }
+                        ]
+                    }, {
+                        chapter_number: 6,
+                        chapter_title: "Completion and Review",
+                        topics: [
+                            { topic_number: "1", title: "SA 450 – Evaluation of Misstatements Identified during the Audit" },
+                            { topic_number: "2", title: "SA 560 – Subsequent Events" },
+                            { topic_number: "3", title: "SA 580 – Written Representations" },
+                            { topic_number: "4", title: "SA 620 – Using the Work of an Auditor's Expert" },
+                            { topic_number: "5", title: "Completion Procedures and Overall Review of Financial Statements" }
+                        ]
+                    }, {
+                        chapter_number: 7,
+                        chapter_title: "Reporting",
+                        topics: [
+                            { topic_number: "1", title: "SA 700 – Forming an Opinion and Reporting on Financial Statements" },
+                            { topic_number: "2", title: "SA 701 – Communicating Key Audit Matters" },
+                            { topic_number: "3", title: "SA 705 – Modifications to the Opinion in the Independent Auditor's Report" },
+                            { topic_number: "4", title: "SA 706 – Emphasis of Matter and Other Matter Paragraphs" },
+                            { topic_number: "5", title: "SA 710 – Comparative Information" },
+                            { topic_number: "6", title: "SA 720 – The Auditor's Responsibilities Relating to Other Information" },
+                            { topic_number: "7", title: "CARO 2020 – Reporting Requirements" },
+                            { topic_number: "8", title: "Reporting under the Companies Act, 2013" }
+                        ]
+                    }]
+                }, {
+                    module_number: 2,
+                    chapters: [{
+                        chapter_number: 8,
+                        chapter_title: "Specialised Areas",
+                        topics: [
+                            { topic_number: "1", title: "Overview of Specialised Audits" },
+                            { topic_number: "2", title: "Audit of Limited Liability Partnerships (LLPs)" },
+                            { topic_number: "3", title: "Audit of Non-Governmental Organisations (NGOs)" },
+                            { topic_number: "4", title: "Audit of Co-operative Societies" },
+                            { topic_number: "5", title: "Audit of Insurance Companies" },
+                            { topic_number: "6", title: "Tax Audit under Section 44AB" },
+                            { topic_number: "7", title: "Audit of Mutual Funds and Asset Management Companies" }
+                        ]
+                    }, {
+                        chapter_number: 9,
+                        chapter_title: "Related Services",
+                        topics: [
+                            { topic_number: "1", title: "Overview of Related Services" },
+                            { topic_number: "2", title: "SRS 4400 – Engagements to Perform Agreed-Upon Procedures" },
+                            { topic_number: "3", title: "SRS 4410 – Compilation Engagements" },
+                            { topic_number: "4", title: "SAE 3402 – Assurance Reports on Controls at a Service Organisation" },
+                            { topic_number: "5", title: "Difference between Audit, Review and Related Services" }
+                        ]
+                    }, {
+                        chapter_number: 10,
+                        chapter_title: "Review of Financial Information",
+                        topics: [
+                            { topic_number: "1", title: "SRE 2400 – Engagements to Review Historical Financial Statements" },
+                            { topic_number: "2", title: "SRE 2410 – Review of Interim Financial Information" },
+                            { topic_number: "3", title: "Review Procedures and Negative Assurance" },
+                            { topic_number: "4", title: "Reporting in Review Engagements" }
+                        ]
+                    }, {
+                        chapter_number: 11,
+                        chapter_title: "Prospective Financial Information and Other Assurance Services",
+                        topics: [
+                            { topic_number: "1", title: "Prospective Financial Information – Concepts" },
+                            { topic_number: "2", title: "SAE 3400 – The Examination of Prospective Financial Information" },
+                            { topic_number: "3", title: "Other Assurance Services – Overview" },
+                            { topic_number: "4", title: "Assurance on Non-Financial Information" }
+                        ]
+                    }, {
+                        chapter_number: 12,
+                        chapter_title: "Digital Auditing & Assurance",
+                        topics: [
+                            { topic_number: "1", title: "Digital Auditing – Concepts and Challenges" },
+                            { topic_number: "2", title: "Computer Assisted Audit Techniques (CAAT)" },
+                            { topic_number: "3", title: "Data Analytics in Audit" },
+                            { topic_number: "4", title: "IT General Controls and Application Controls" },
+                            { topic_number: "5", title: "Audit in ERP / Automated Environments" },
+                            { topic_number: "6", title: "Cyber Security and Emerging Digital Risks" }
+                        ]
+                    }, {
+                        chapter_number: 13,
+                        chapter_title: "Group Audits",
+                        topics: [
+                            { topic_number: "1", title: "Group Audit – Concepts and Terminology" },
+                            { topic_number: "2", title: "SA 600 – Using the Work of Another Auditor" },
+                            { topic_number: "3", title: "Principal Auditor and Component Auditors" },
+                            { topic_number: "4", title: "Consolidation Process and Group Financial Statements" },
+                            { topic_number: "5", title: "Communication and Documentation in Group Audits" }
+                        ]
+                    }, {
+                        chapter_number: 14,
+                        chapter_title: "Special Features of Audit of Banks & Non-Banking Financial Companies",
+                        topics: [
+                            { topic_number: "1", title: "Audit of Banks – Legal and Regulatory Framework" },
+                            { topic_number: "2", title: "Income Recognition and Asset Classification (IRAC) Norms" },
+                            { topic_number: "3", title: "Audit of Advances and NPA Classification" },
+                            { topic_number: "4", title: "Long Form Audit Report (LFAR)" },
+                            { topic_number: "5", title: "Audit of Non-Banking Financial Companies (NBFCs)" },
+                            { topic_number: "6", title: "Regulatory Reporting and RBI Guidelines" }
+                        ]
+                    }]
+                }, {
+                    module_number: 3,
+                    chapters: [{
+                        chapter_number: 15,
+                        chapter_title: "Overview of Audit of Public Sector Undertakings",
+                        topics: [
+                            { topic_number: "1", title: "Public Sector Undertakings – Overview" },
+                            { topic_number: "2", title: "CAG and the DPC Act, 1971" },
+                            { topic_number: "3", title: "Propriety Audit and Performance Audit" },
+                            { topic_number: "4", title: "Audit of Government Companies" },
+                            { topic_number: "5", title: "Reporting by the Comptroller and Auditor General" }
+                        ]
+                    }, {
+                        chapter_number: 16,
+                        chapter_title: "Internal Audit",
+                        topics: [
+                            { topic_number: "1", title: "Internal Audit – Concepts, Scope and Objectives" },
+                            { topic_number: "2", title: "SA 610 – Using the Work of Internal Auditors" },
+                            { topic_number: "3", title: "Standards on Internal Audit (SIAs)" },
+                            { topic_number: "4", title: "Risk Based Internal Audit" },
+                            { topic_number: "5", title: "Internal Audit vs Statutory Audit" },
+                            { topic_number: "6", title: "Internal Financial Controls (IFC) and IFC Reporting" }
+                        ]
+                    }, {
+                        chapter_number: 17,
+                        chapter_title: "Due Diligence, Investigation & Forensic Accounting",
+                        topics: [
+                            { topic_number: "1", title: "Due Diligence – Concepts and Types" },
+                            { topic_number: "2", title: "Financial Due Diligence Procedures" },
+                            { topic_number: "3", title: "Investigation – Concepts and Types" },
+                            { topic_number: "4", title: "Forensic Accounting and Fraud Investigation" },
+                            { topic_number: "5", title: "Reporting in Investigation and Forensic Engagements" }
+                        ]
+                    }, {
+                        chapter_number: 18,
+                        chapter_title: "Emerging Areas: SDG & Environment, Social and Governance (ESG) Assurance",
+                        topics: [
+                            { topic_number: "1", title: "Sustainable Development Goals (SDGs) – Overview" },
+                            { topic_number: "2", title: "Environment, Social and Governance (ESG) Framework" },
+                            { topic_number: "3", title: "BRSR and Sustainability Reporting" },
+                            { topic_number: "4", title: "ESG Assurance Engagements" },
+                            { topic_number: "5", title: "Greenwashing and Related Risks" }
+                        ]
+                    }, {
+                        chapter_number: 19,
+                        chapter_title: "Professional Ethics & Liabilities of Auditors",
+                        topics: [
+                            { topic_number: "1", title: "Code of Ethics – ICAI and IESBA" },
+                            { topic_number: "2", title: "Independence and Conflict of Interest" },
+                            { topic_number: "3", title: "Professional Misconduct – First and Second Schedules" },
+                            { topic_number: "4", title: "Liabilities of Auditors – Civil, Criminal and Disciplinary" },
+                            { topic_number: "5", title: "Penalties under the Companies Act, 2013" },
+                            { topic_number: "6", title: "Ethical Requirements in Specialised Engagements" }
+                        ]
+                    }]
+                }]
+            };
+
+            let SYLLABUS = DEFAULT_SYLLABUS;
+            let sylOpenModules = { 1: true, 2: false, 3: false };
+
+            function normalizeSyllabus(raw) {
+                const out = { modules: [] };
+                const mods = Array.isArray(raw) ? raw : (raw.modules || []);
+                mods.forEach((m, mi) => {
+                    const mod = {
+                        module_number: m.module_number || (mi + 1),
+                        title: m.title || ('Module ' + (mi + 1)),
+                        chapters: []
+                    };
+                    (m.chapters || []).forEach((c, ci) => {
+                        const ch = {
+                            chapter_number: c.chapter_number || (ci + 1),
+                            chapter_title: c.chapter_title || c.title || ('Chapter ' + (ci + 1)),
+                            topics: []
+                        };
+                        (c.topics || []).forEach((t, ti) => {
+                            const tp = {
+                                topic_number: t.topic_number || String(ti + 1),
+                                title: t.title || t.topic_title || ''
+                            };
+                            if (Array.isArray(t.subtopics) && t.subtopics.length) {
+                                tp.subtopics = t.subtopics.map((s, si) => ({
+                                    topic_number: s.topic_number || (tp.topic_number + '.' + (si + 1)),
+                                    title: s.title || ''
+                                })).filter(s => s.title);
+                            }
+                            if (tp.title) ch.topics.push(tp);
+                        });
+                        mod.chapters.push(ch);
+                    });
+                    out.modules.push(mod);
+                });
+                out.course_title = raw.course_title || DEFAULT_SYLLABUS.course_title;
+                return out;
+            }
+
+            async function loadSyllabusData() {
+                try {
+                    const res = await fetch('syllabus.json', { cache: 'no-store' });
+                    if (!res.ok) throw new Error('missing');
+                    const j = await res.json();
+                    const n = normalizeSyllabus(j);
+                    if (n.modules && n.modules.length) return n;
+                } catch (e) { /* fallback */ }
+                return DEFAULT_SYLLABUS;
+            }
+
+            function sylCardsForChapter(mod, ch) {
+                const cards = [];
+                const m = mod.module_number,
+                    c = ch.chapter_number;
+                (ch.topics || []).forEach(t => {
+                    if (Array.isArray(t.subtopics) && t.subtopics.length) {
+                        t.subtopics.forEach(s => {
+                            cards.push({
+                                id: 'm' + m + 'c' + c + 't' + t.topic_number + 's' + s.topic_number,
+                                title: s.title,
+                                parent: t.title,
+                                mod: m,
+                                chNum: c,
+                                chTitle: ch.chapter_title,
+                                tag: 'Subtopic ' + s.topic_number
+                            });
+                        });
+                    } else {
+                        cards.push({
+                            id: 'm' + m + 'c' + c + 't' + t.topic_number,
+                            title: t.title,
+                            parent: '',
+                            mod: m,
+                            chNum: c,
+                            chTitle: ch.chapter_title,
+                            tag: 'Topic ' + t.topic_number
+                        });
+                    }
+                });
+                if (!cards.length) {
+                    cards.push({
+                        id: 'm' + m + 'c' + c,
+                        title: ch.chapter_title,
+                        parent: '',
+                        mod: m,
+                        chNum: c,
+                        chTitle: ch.chapter_title,
+                        tag: 'Chapter ' + c
+                    });
+                }
+                return cards;
+            }
+
+            function sylAllCards() {
+                const src = SYLLABUS || DEFAULT_SYLLABUS;
+                let all = [];
+                (src.modules || []).forEach(mod => {
+                    (mod.chapters || []).forEach(ch => { all = all.concat(sylCardsForChapter(mod, ch)); });
+                });
+                return all;
+            }
+
+            function sylOverallPct() {
+                const all = sylAllCards();
+                if (!all.length) return 0;
+                const dn = all.filter(c => SYL_PROGRESS[c.id]).length;
+                return Math.round(dn / all.length * 100);
+            }
+
+            function updateSylChip() {
+                const chip = document.getElementById('sylChip');
+                if (chip) chip.textContent = sylOverallPct() + '%';
+            }
+
+            window.openSyllabus = async function() {
+                showLoader('Loading syllabus...');
+                try {
+                    SYLLABUS = await loadSyllabusData();
+                    document.getElementById('sylCourseTitle').textContent = SYLLABUS.course_title ||
+                        'Advanced Auditing, Assurance and Professional Ethics';
+                    renderSyllabus();
+                    switchScreen('syllabusScreen');
+                } catch (e) {
+                    showCustomAlert('Error', 'Could not load the syllabus.');
+                } finally { hideLoader(); }
+            };
+
+            function renderSyllabus() {
+                if (!SYLLABUS) return;
+                const all = sylAllCards();
+                const doneAll = all.filter(c => SYL_PROGRESS[c.id]).length;
+                const pct = all.length ? Math.round(doneAll / all.length * 100) : 0;
+
+                const bar = document.getElementById('sylOverallBar');
+                if (bar) bar.style.width = pct + '%';
+                const txt = document.getElementById('sylOverallText');
+                if (txt) txt.textContent = doneAll + ' of ' + all.length + ' topics completed';
+                const pc = document.getElementById('sylOverallPct');
+                if (pc) pc.textContent = pct + '%';
+                updateSylChip();
+
+                const wrap = document.getElementById('sylModules');
+                if (!wrap) return;
+                wrap.innerHTML = '';
+
+                (SYLLABUS.modules || []).forEach(mod => {
+                    const chs = mod.chapters || [];
+                    let modCards = 0,
+                        modDone = 0;
+                    chs.forEach(ch => {
+                        const cs = sylCardsForChapter(mod, ch);
+                        modCards += cs.length;
+                        modDone += cs.filter(c => SYL_PROGRESS[c.id]).length;
+                    });
+                    const mpct = modCards ? Math.round(modDone / modCards * 100) : 0;
+
+                    const el = document.createElement('div');
+                    el.className = 'syl-module' + (sylOpenModules[mod.module_number] ? ' open' : '');
+                    el.innerHTML =
+                        '<div class="syl-module-head">' +
+                        '<i class="fa-solid fa-layer-group" style="color:#7c3aed;font-size:0.85rem;"></i>' +
+                        '<h4>Module ' + mod.module_number + ' · ' + chs.length + ' Chapters</h4>' +
+                        '<span class="syl-pct">' + mpct + '%</span>' +
+                        '<i class="fa-solid fa-chevron-down syl-chev"></i>' +
+                        '</div><div class="syl-module-body"></div>';
+
+                    const body = el.querySelector('.syl-module-body');
+                    chs.forEach(ch => {
+                        const cs = sylCardsForChapter(mod, ch);
+                        const dn = cs.filter(c => SYL_PROGRESS[c.id]).length;
+                        const cp = cs.length ? Math.round(dn / cs.length * 100) : 0;
+                        const row = document.createElement('div');
+                        row.className = 'syl-chapter' + (cp === 100 ? ' done' : '');
+                        row.innerHTML =
+                            '<div class="syl-num">' + (cp === 100 ? '<i class="fa-solid fa-check"></i>' : ch.chapter_number) + '</div>' +
+                            '<div class="syl-ch-info">' +
+                            '<h5>' + esc(ch.chapter_title) + '</h5>' +
+                            '<div class="syl-mini"><div style="width:' + cp + '%"></div></div>' +
+                            '</div>' +
+                            '<div class="syl-ch-count">' + dn + '/' + cs.length + '</div>' +
+                            '<i class="fa-solid fa-chevron-right" style="font-size:0.6rem;color:#cbd5e1;"></i>';
+                        row.addEventListener('click', () => {
+                            openFlashcards(cs, 'Ch ' + ch.chapter_number + ': ' + ch.chapter_title, 'Module ' + mod.module_number);
+                        });
+                        body.appendChild(row);
+                    });
+
+                    el.querySelector('.syl-module-head').addEventListener('click', () => {
+                        sylOpenModules[mod.module_number] = !sylOpenModules[mod.module_number];
+                        el.classList.toggle('open');
+                    });
+
+                    wrap.appendChild(el);
+                });
+            }
+
+            // ---------- FLASHCARD ENGINE ----------
+            const FLASH = { deck: [], idx: 0, title: '', sub: '', lock: false };
+
+            window.openFlashcards = function(deck, title, sub) {
+                if (!deck || !deck.length) return;
+                FLASH.deck = deck;
+                FLASH.idx = 0;
+                FLASH.title = title || 'Deck';
+                FLASH.sub = sub || '';
+                document.getElementById('flashChapterTitle').textContent = title || 'Deck';
+                document.getElementById('flashOverlay').classList.add('show');
+                renderFlash();
+            };
+
+            window.openAllFlashcards = function() {
+                const all = sylAllCards();
+                if (!all.length) return;
+                openFlashcards(all, 'All Chapters', 'Complete Syllabus');
+            };
+
+            window.closeFlashcards = function() {
+                document.getElementById('flashOverlay').classList.remove('show');
+                if (document.getElementById('syllabusScreen').classList.contains('active')) renderSyllabus();
+            };
+
+            function flashCommit(done) {
+                if (FLASH.lock) return;
+                FLASH.lock = true;
+                setTimeout(() => { FLASH.lock = false; }, 220);
+                const d = FLASH.deck[FLASH.idx];
+                if (d) {
+                    if (done) { SYL_PROGRESS[d.id] = true;
+                        beep(720, 'sine', 0.07); } else { delete SYL_PROGRESS[d.id];
+                        beep(320, 'sine', 0.07); }
+                    saveSylProgress();
+                }
+                FLASH.idx++;
+                renderFlash();
+            }
+
+            window.flashSwipe = function(done) {
+                const top = document.querySelector('#flashStage .flash-card[data-top="1"]');
+                if (!top) { flashCommit(done); return; }
+                top.style.transition = 'transform .28s ease-out, opacity .28s ease-out';
+                top.style.transform = 'translate(' + (done ? 640 : -640) + 'px, -18px) rotate(' + (done ? 26 : -26) + 'deg)';
+                top.style.opacity = '0';
+                setTimeout(() => flashCommit(done), 200);
+            };
+
+            window.flashFlip = function() {
+                const top = document.querySelector('#flashStage .flash-card[data-top="1"]');
+                if (top) { top.classList.toggle('flipped');
+                    beep(560, 'sine', 0.04); }
+            };
+
+            window.flashMarkAll = function() {
+                if (!FLASH.deck.length) return;
+                showCustomConfirm('Mark All', 'Mark every card in this deck as completed?', r => {
+                    if (!r) return;
+                    FLASH.deck.forEach(d => { SYL_PROGRESS[d.id] = true; });
+                    saveSylProgress();
+                    FLASH.idx = FLASH.deck.length;
+                    renderFlash();
+                });
+            };
+
+            window.restartFlashDeck = function() {
+                FLASH.idx = 0;
+                renderFlash();
+            };
+
+            function renderFlash() {
+                const stage = document.getElementById('flashStage');
+                const actions = document.getElementById('flashActions');
+                if (!stage) return;
+                stage.innerHTML = '';
+
+                const total = FLASH.deck.length;
+                const doneCount = FLASH.deck.filter(d => SYL_PROGRESS[d.id]).length;
+                const shown = Math.min(FLASH.idx + 1, total);
+                document.getElementById('flashProgressText').textContent =
+                    shown + ' / ' + total + '  ·  ' + doneCount + ' completed';
+                document.getElementById('flashProgressFill').style.width =
+                    (total ? (FLASH.idx / total * 100) : 0) + '%';
+
+                if (FLASH.idx >= total) {
+                    actions.style.display = 'none';
+                    const pct = total ? Math.round(doneCount / total * 100) : 0;
+                    stage.innerHTML =
+                        '<div class="flash-empty">' +
+                        '<div style="font-size:3.2rem;margin-bottom:12px;">' + (pct === 100 ? '🎉' : '👍') + '</div>' +
+                        '<h3>Deck Complete</h3>' +
+                        '<p>' + doneCount + ' of ' + total + ' marked as completed (' + pct + '%)</p>' +
+                        '<button class="flash-btn yes" style="max-width:230px;margin:0 auto;flex-direction:row;justify-content:center;gap:9px;" onclick="restartFlashDeck()"><i class="fa-solid fa-rotate-right"></i><span>Review Again</span></button>' +
+                        '<button class="flash-btn no" style="max-width:230px;margin:10px auto 0;flex-direction:row;justify-content:center;gap:9px;" onclick="closeFlashcards()"><i class="fa-solid fa-check"></i><span>Done</span></button>' +
+                        '</div>';
+                    return;
+                }
+
+                actions.style.display = 'flex';
+
+                const maxK = Math.min(total - 1, FLASH.idx + 2);
+                for (let k = maxK; k >= FLASH.idx; k--) {
+                    const d = FLASH.deck[k];
+                    const off = k - FLASH.idx;
+                    const isTop = off === 0;
+                    const isDone = !!SYL_PROGRESS[d.id];
+
+                    const card = document.createElement('div');
+                    card.className = 'flash-card';
+                    card.dataset.top = isTop ? '1' : '0';
+                    card.style.zIndex = String(30 - off);
+                    card.style.transform = 'translateY(' + (off * 14) + 'px) scale(' + (1 - off * 0.06) + ')';
+                    card.style.opacity = off > 1 ? '0' : '1';
+                    card.style.pointerEvents = isTop ? 'auto' : 'none';
+
+                    card.innerHTML =
+                        '<div class="flash-card-inner">' +
+                        '<div class="flash-face flash-front">' +
+                        (isTop ? '<div class="flash-stamp stamp-yes">DONE</div><div class="flash-stamp stamp-no">LATER</div>' : '') +
+                        '<div class="flash-badge">' + esc(d.tag) + '</div>' +
+                        '<div class="flash-title">' + esc(d.title) + '</div>' +
+                        (d.parent ? '<div class="flash-parent"><i class="fa-solid fa-turn-up"></i><span>' + esc(d.parent) + '</span></div>' : '') +
+                        '<div class="flash-foot">Ch ' + d.chNum + ' · ' + esc(d.chTitle) + '</div>' +
+                        '<div class="flash-state-chip ' + (isDone ? 'chip-done' : 'chip-todo') + '">' +
+                        (isDone ? '<i class="fa-solid fa-circle-check"></i> Completed' : '<i class="fa-regular fa-circle"></i> Not marked') +
+                        '</div>' +
+                        '</div>' +
+                        '<div class="flash-face flash-back">' +
+                        '<div class="flash-badge" style="background:rgba(255,255,255,0.16);color:#ddd6fe;">Context</div>' +
+                        '<div style="font-size:0.97rem;font-weight:700;line-height:1.5;margin-bottom:16px;">' + esc(d.title) + '</div>' +
+                        '<div style="font-size:0.79rem;line-height:1.85;opacity:0.92;">' +
+                        '<div><b>Module:</b> ' + d.mod + '</div>' +
+                        '<div><b>Chapter ' + d.chNum + ':</b> ' + esc(d.chTitle) + '</div>' +
+                        (d.parent ? '<div><b>Parent topic:</b> ' + esc(d.parent) + '</div>' : '') +
+                        '</div>' +
+                        '<div style="margin-top:auto;font-size:0.71rem;opacity:0.72;">Swipe right once you have mastered this.</div>' +
+                        '</div>' +
+                        '</div>';
+
+                    stage.appendChild(card);
+                    if (isTop) attachFlashDrag(card);
+                }
+            }
+
+            function attachFlashDrag(card) {
+                let sx = 0, sy = 0, dx = 0, dy = 0;
+                let dragging = false, decided = false;
+                const BASE = 'translateY(0px) scale(1)';
+                const yes = card.querySelector('.stamp-yes');
+                const no = card.querySelector('.stamp-no');
+
+                function reset() {
+                    card.style.transition = 'transform .34s cubic-bezier(.16,1,.3,1), opacity .2s';
+                    card.style.transform = BASE;
+                    if (yes) yes.style.opacity = 0;
+                    if (no) no.style.opacity = 0;
+                }
+
+                card.addEventListener('pointerdown', e => {
+                    if (e.button && e.button !== 0) return;
+                    dragging = true;
+                    decided = false;
+                    dx = 0;
+                    dy = 0;
+                    sx = e.clientX;
+                    sy = e.clientY;
+                    card.style.transition = 'none';
+                    try { card.setPointerCapture(e.pointerId); } catch (err) {}
+                });
+
+                card.addEventListener('pointermove', e => {
+                    if (!dragging) return;
+                    dx = e.clientX - sx;
+                    dy = e.clientY - sy;
+                    if (!decided) {
+                        if (Math.abs(dx) < 6 && Math.abs(dy) < 6) return;
+                        decided = true;
+                        if (Math.abs(dy) > Math.abs(dx)) { dragging = false;
+                            reset(); return; }
+                    }
+                    card.style.transform = 'translate(' + dx + 'px, ' + (dy * 0.3) + 'px) rotate(' + (dx / 16) + 'deg)';
+                    if (yes) yes.style.opacity = Math.max(0, Math.min(1, dx / 80));
+                    if (no) no.style.opacity = Math.max(0, Math.min(1, -dx / 80));
+                });
+
+                function finish() {
+                    if (!dragging) return;
+                    dragging = false;
+                    if (Math.abs(dx) > 85) {
+                        const dir = dx > 0;
+                        card.style.transition = 'transform .28s ease-out, opacity .28s ease-out';
+                        card.style.transform = 'translate(' + (dir ? 640 : -640) + 'px, ' + (dy * 0.4) + 'px) rotate(' + (dir ? 26 : -26) + 'deg)';
+                        card.style.opacity = '0';
+                        setTimeout(() => flashCommit(dir), 190);
+                    } else {
+                        dx = 0;
+                        dy = 0;
+                        reset();
+                    }
+                }
+
+                card.addEventListener('pointerup', finish);
+                card.addEventListener('pointercancel', () => { dragging = false;
+                    dx = 0;
+                    dy = 0;
+                    reset(); });
+            }
+
             // ==================== EVENT BINDINGS ====================
             function bindEvents() {
                 document.getElementById('btnPrev').addEventListener('click', goPrev);
@@ -2412,19 +3591,39 @@
                         document.getElementById('lifelineBtn'); if (dd.style.display === 'block' && !dd.contains(e
                             .target) && e.target !== lb && !lb.contains(e.target)) dd.style.display = 'none'; });
 
-                document.addEventListener('keydown', e => { if (document.getElementById('quizScreen').classList
-                        .contains('active')) { if (e.key === 'ArrowRight') { e.preventDefault();
-                            goNext(); } if (e.key === 'ArrowLeft') { e.preventDefault();
-                            goPrev(); } } });
+                document.addEventListener('keydown', e => {
+                    // Flashcard shortcuts
+                    if (document.getElementById('flashOverlay').classList.contains('show')) {
+                        if (e.key === 'ArrowRight') { e.preventDefault();
+                            flashSwipe(true); }
+                        else if (e.key === 'ArrowLeft') { e.preventDefault();
+                            flashSwipe(false); }
+                        else if (e.key === ' ' || e.key === 'Enter') { e.preventDefault();
+                            flashFlip(); }
+                        else if (e.key === 'Escape') { closeFlashcards(); }
+                        return;
+                    }
+                    if (document.getElementById('quizScreen').classList.contains('active')) {
+                        if (e.key === 'ArrowRight') { e.preventDefault();
+                            goNext(); }
+                        if (e.key === 'ArrowLeft') { e.preventDefault();
+                            goPrev(); }
+                    }
+                });
 
-                if (window.innerWidth > 900) { document.body.classList.add('desktop-view');
-                    document.getElementById('desktopToggleIcon').className = 'fa-solid fa-mobile-screen'; }
+                if (window.innerWidth > 900) {
+                    document.body.classList.add('desktop-view');
+                    document.getElementById('desktopToggleIcon').className = 'fa-solid fa-mobile-screen';
+                }
             }
 
-            window.addEventListener('DOMContentLoaded', () => { initDB();
+            window.addEventListener('DOMContentLoaded', () => {
+                initDB();
                 bindEvents();
-                switchScreen('welcomeScreen'); });
+                switchScreen('welcomeScreen');
+                updateSylChip();
+            });
         })();
     </script>
 </body>
-    </html>
+</html>
