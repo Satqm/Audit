@@ -1,0 +1,2558 @@
+{
+  "course_title": "Advanced Auditing Standards and Specialized Assurance Services",
+  "total_modules": 3,
+  "total_chapters": 19,
+  "modules": [
+    {
+      "module_number": 1,
+      "source_pdf": "audit 1.pdf",
+      "chapters": [
+        {
+          "chapter_number": 1,
+          "chapter_title": "Quality Control",
+          "topics": [
+            {
+              "topic_number": "1",
+              "title": "Audit Quality",
+              "completed": false
+            },
+            {
+              "topic_number": "2",
+              "title": "SQC 1 Quality Control for Firms that Perform Audits and Reviews of Historical Financial Information, and other Assurance and Related Services Engagements",
+              "completed": false,
+              "subtopics": [
+                {
+                  "topic_number": "2.1",
+                  "title": "Elements of System of Quality Control",
+                  "completed": false
+                }
+              ]
+            },
+            {
+              "topic_number": "3",
+              "title": "SA 220 Quality Control for an Audit of Financial Statements",
+              "completed": false,
+              "subtopics": [
+                {
+                  "topic_number": "3.1",
+                  "title": "Leadership Responsibility for Quality of Audits",
+                  "completed": false
+                },
+                {
+                  "topic_number": "3.2",
+                  "title": "Relevant Ethical Requirements",
+                  "completed": false
+                },
+                {
+                  "topic_number": "3.3",
+                  "title": "Acceptance and Continuance of Client Relationships and Audit Engagements",
+                  "completed": false
+                },
+                {
+                  "topic_number": "3.4",
+                  "title": "Assignment of Engagement Teams",
+                  "completed": false
+                },
+                {
+                  "topic_number": "3.5",
+                  "title": "Engagement Performance",
+                  "completed": false
+                },
+                {
+                  "topic_number": "3.6",
+                  "title": "Engagement Quality Control Review",
+                  "completed": false
+                },
+                {
+                  "topic_number": "3.7",
+                  "title": "Monitoring",
+                  "completed": false
+                },
+                {
+                  "topic_number": "3.8",
+                  "title": "Documentation",
+                  "completed": false
+                }
+              ]
+            },
+            {
+              "topic_number": "4",
+              "title": "SQC 1 Vs. SA 220 Key Differences in Nature, Scope and Applicability",
+              "completed": false
+            },
+            {
+              "topic_number": "5",
+              "title": "Mechanisms for Review of Quality Control",
+              "completed": false,
+              "subtopics": [
+                {
+                  "topic_number": "5.1",
+                  "title": "Peer Review Board",
+                  "completed": false
+                },
+                {
+                  "topic_number": "5.2",
+                  "title": "Quality Review Board",
+                  "completed": false
+                },
+                {
+                  "topic_number": "5.3",
+                  "title": "National Financial Reporting Authority (NFRA)",
+                  "completed": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "chapter_number": 2,
+          "chapter_title": "General Auditing Principles and Auditor's Responsibilities",
+          "topics": [
+            {
+              "topic_number": "1",
+              "title": "General Auditing Principles and Auditor's Responsibilities",
+              "completed": false
+            },
+            {
+              "topic_number": "2",
+              "title": "SA 240 \"The Auditor's Responsibilities Relating to Fraud in an Audit of Financial Statements\"",
+              "completed": false,
+              "subtopics": [
+                {
+                  "topic_number": "2.1",
+                  "title": "Objectives of the Auditor in accordance with SA 240",
+                  "completed": false
+                },
+                {
+                  "topic_number": "2.2",
+                  "title": "How Fraudulent Financial Reporting may be caused by Entities?",
+                  "completed": false
+                },
+                {
+                  "topic_number": "2.3",
+                  "title": "How Misappropriation of Assets may be Accomplished by Entities?",
+                  "completed": false
+                },
+                {
+                  "topic_number": "2.4",
+                  "title": "Whose Primary Responsibility is to Prevent and Detect Fraud?",
+                  "completed": false
+                },
+                {
+                  "topic_number": "2.5",
+                  "title": "Responsibilities of the Auditor",
+                  "completed": false
+                },
+                {
+                  "topic_number": "2.6",
+                  "title": "Maintaining Professional Skepticism",
+                  "completed": false
+                },
+                {
+                  "topic_number": "2.7",
+                  "title": "Discussion among the Engagement Team",
+                  "completed": false
+                },
+                {
+                  "topic_number": "2.8",
+                  "title": "Risk Assessment Procedures and related Activities be geared towards obtaining Information for use in Identifying Risk of Material Misstatement due to Fraud",
+                  "completed": false
+                },
+                {
+                  "topic_number": "2.9",
+                  "title": "Responses to the Assessed Risks of Material misstatement due to Fraud at the Financial Statement Level",
+                  "completed": false
+                },
+                {
+                  "topic_number": "2.10",
+                  "title": "Audit Procedures Responsive to Assessed risks of Material Misstatement due to Fraud at the Assertion Level",
+                  "completed": false
+                },
+                {
+                  "topic_number": "2.11",
+                  "title": "Audit Procedures Responsive to Risks related to Management override of Controls",
+                  "completed": false
+                },
+                {
+                  "topic_number": "2.12",
+                  "title": "Evaluation of Audit Evidence",
+                  "completed": false
+                },
+                {
+                  "topic_number": "2.13",
+                  "title": "Auditor is unable to continue the engagement",
+                  "completed": false
+                },
+                {
+                  "topic_number": "2.14",
+                  "title": "Management Representations",
+                  "completed": false
+                },
+                {
+                  "topic_number": "2.15",
+                  "title": "Communications to Management and with Those Charged with Governance",
+                  "completed": false
+                },
+                {
+                  "topic_number": "2.16",
+                  "title": "Communications to Regulatory and Enforcement Authorities",
+                  "completed": false
+                },
+                {
+                  "topic_number": "2.17",
+                  "title": "Documentation",
+                  "completed": false
+                }
+              ]
+            },
+            {
+              "topic_number": "3",
+              "title": "SA 250, \"Consideration of Laws and Regulations in an Audit of Financial Statements\"",
+              "completed": false,
+              "subtopics": [
+                {
+                  "topic_number": "3.1",
+                  "title": "Effect of Laws and Regulations of Financial Statements of an Entity",
+                  "completed": false
+                },
+                {
+                  "topic_number": "3.2",
+                  "title": "Objectives of Auditor in accordance with SA 250",
+                  "completed": false
+                },
+                {
+                  "topic_number": "3.3",
+                  "title": "Responsibility of Management for Compliance with Laws and Regulations",
+                  "completed": false
+                },
+                {
+                  "topic_number": "3.4",
+                  "title": "Responsibility of the Auditor",
+                  "completed": false
+                },
+                {
+                  "topic_number": "3.5",
+                  "title": "Audit Procedures when Non-Compliance is Identified or Suspected",
+                  "completed": false
+                },
+                {
+                  "topic_number": "3.6",
+                  "title": "Reporting of Identified or Suspected Non-Compliance",
+                  "completed": false
+                },
+                {
+                  "topic_number": "3.7",
+                  "title": "Documentation",
+                  "completed": false
+                }
+              ]
+            },
+            {
+              "topic_number": "4",
+              "title": "SA 260 \"Communication with Those Charged with Governance\"",
+              "completed": false,
+              "subtopics": [
+                {
+                  "topic_number": "4.1",
+                  "title": "Objectives of Auditor in Accordance with SA 260",
+                  "completed": false
+                },
+                {
+                  "topic_number": "4.2",
+                  "title": "Matters to be Communicated by the Auditor",
+                  "completed": false
+                },
+                {
+                  "topic_number": "4.3",
+                  "title": "Communication of Auditor's Independence in case of Listed Entities",
+                  "completed": false
+                },
+                {
+                  "topic_number": "4.4",
+                  "title": "Documentation",
+                  "completed": false
+                }
+              ]
+            },
+            {
+              "topic_number": "5",
+              "title": "SA 299 \"Joint Audit of Financial Statements\"",
+              "completed": false,
+              "subtopics": [
+                {
+                  "topic_number": "5.1",
+                  "title": "Objectives in accordance with SA 299",
+                  "completed": false
+                },
+                {
+                  "topic_number": "5.2",
+                  "title": "Audit planning, Risk Assessment and Allocation of Work",
+                  "completed": false
+                },
+                {
+                  "topic_number": "5.3",
+                  "title": "Responsibility and Co-ordination among Joint Auditors",
+                  "completed": false
+                },
+                {
+                  "topic_number": "5.4",
+                  "title": "Audit Conclusion and Reporting",
+                  "completed": false
+                },
+                {
+                  "topic_number": "5.5",
+                  "title": "Communication with Those Charged with Governance",
+                  "completed": false
+                }
+              ]
+            },
+            {
+              "topic_number": "6",
+              "title": "SA 402 \"Audit Considerations Relating to an Entity Using a Service Organisation\"",
+              "completed": false,
+              "subtopics": [
+                {
+                  "topic_number": "6.1",
+                  "title": "Objectives of User Auditor in accordance with SA 402",
+                  "completed": false
+                },
+                {
+                  "topic_number": "6.2",
+                  "title": "Type 1 report and Type 2 report",
+                  "completed": false
+                },
+                {
+                  "topic_number": "6.3",
+                  "title": "Obtaining an Understanding of the Services",
+                  "completed": false
+                },
+                {
+                  "topic_number": "6.4",
+                  "title": "Using Type 1 or Type 2 Report",
+                  "completed": false
+                },
+                {
+                  "topic_number": "6.5",
+                  "title": "Responding to the Assessed Risks of Material Misstatement",
+                  "completed": false
+                },
+                {
+                  "topic_number": "6.6",
+                  "title": "Tests of Controls",
+                  "completed": false
+                },
+                {
+                  "topic_number": "6.7",
+                  "title": "Fraud, Non-compliance with Laws and Regulations and Uncorrected Misstatements in relation to Activities at the Service Organisation",
+                  "completed": false
+                },
+                {
+                  "topic_number": "6.8",
+                  "title": "Reporting by the User Auditor",
+                  "completed": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "chapter_number": 3,
+          "chapter_title": "Audit Planning, Strategy & Execution",
+          "topics": [
+            {
+              "topic_number": "1",
+              "title": "Commencing An Audit",
+              "completed": false,
+              "subtopics": [
+                {
+                  "topic_number": "1.1",
+                  "title": "Benefits/Advantages of Planning in an Audit of Financial Statements",
+                  "completed": false
+                },
+                {
+                  "topic_number": "1.2",
+                  "title": "Nature and Extent of Planning",
+                  "completed": false
+                },
+                {
+                  "topic_number": "1.3",
+                  "title": "Planning - A Continuous Process",
+                  "completed": false
+                },
+                {
+                  "topic_number": "1.4",
+                  "title": "Overall Audit Strategy and Audit Plan - Responsibility of the Auditor",
+                  "completed": false
+                },
+                {
+                  "topic_number": "1.5",
+                  "title": "Acceptance and Continuance of Client Relationships and Audit Engagements",
+                  "completed": false
+                },
+                {
+                  "topic_number": "1.6",
+                  "title": "Contents of an Audit Plan",
+                  "completed": false
+                },
+                {
+                  "topic_number": "1.7",
+                  "title": "Changes to Planning Decisions",
+                  "completed": false
+                }
+              ]
+            },
+            {
+              "topic_number": "2",
+              "title": "Overall Audit Strategy",
+              "completed": false,
+              "subtopics": [
+                {
+                  "topic_number": "2.1",
+                  "title": "Factors while establishing Overall Audit Strategy",
+                  "completed": false
+                },
+                {
+                  "topic_number": "2.2",
+                  "title": "Benefits of Overall Audit Strategy",
+                  "completed": false
+                },
+                {
+                  "topic_number": "2.3",
+                  "title": "Considerations in Establishing the Overall Audit Strategy",
+                  "completed": false
+                },
+                {
+                  "topic_number": "2.4",
+                  "title": "Documenting the Audit Plan",
+                  "completed": false
+                },
+                {
+                  "topic_number": "2.5",
+                  "title": "Relationship between the Overall Audit Strategy and the Audit Plan",
+                  "completed": false
+                }
+              ]
+            },
+            {
+              "topic_number": "3",
+              "title": "Audit Programme",
+              "completed": false,
+              "subtopics": [
+                {
+                  "topic_number": "3.1",
+                  "title": "Formulating an Audit Programme",
+                  "completed": false
+                },
+                {
+                  "topic_number": "3.2",
+                  "title": "Drawing up the Audit Programme",
+                  "completed": false
+                }
+              ]
+            },
+            {
+              "topic_number": "4",
+              "title": "Audit Execution",
+              "completed": false,
+              "subtopics": [
+                {
+                  "topic_number": "4.1",
+                  "title": "Execution Planning",
+                  "completed": false
+                },
+                {
+                  "topic_number": "4.2",
+                  "title": "Risk and Control Evaluation",
+                  "completed": false
+                },
+                {
+                  "topic_number": "4.3",
+                  "title": "Testing",
+                  "completed": false
+                },
+                {
+                  "topic_number": "4.4",
+                  "title": "Reporting",
+                  "completed": false
+                },
+                {
+                  "topic_number": "4.5",
+                  "title": "Other Important Considerations",
+                  "completed": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "chapter_number": 4,
+          "chapter_title": "Materiality, Risk Assessment and Internal Control",
+          "topics": [
+            {
+              "topic_number": "1",
+              "title": "Materiality & Risk Assessment",
+              "completed": false,
+              "subtopics": [
+                {
+                  "topic_number": "1.1",
+                  "title": "Identification of Risks",
+                  "completed": false
+                },
+                {
+                  "topic_number": "1.2",
+                  "title": "Audit Risk Components",
+                  "completed": false
+                },
+                {
+                  "topic_number": "1.3",
+                  "title": "Steps for Risk Identification",
+                  "completed": false
+                }
+              ]
+            },
+            {
+              "topic_number": "2",
+              "title": "Risk-Based Audit Approach",
+              "completed": false,
+              "subtopics": [
+                {
+                  "topic_number": "2.1",
+                  "title": "Audit Risk Analysis",
+                  "completed": false
+                },
+                {
+                  "topic_number": "2.2",
+                  "title": "General Steps in the Conduct of Risk Based Audit",
+                  "completed": false
+                }
+              ]
+            },
+            {
+              "topic_number": "3",
+              "title": "Internal Control System - Nature, Scope, Objectives and Structure",
+              "completed": false,
+              "subtopics": [
+                {
+                  "topic_number": "3.1",
+                  "title": "Nature of Internal Control",
+                  "completed": false
+                },
+                {
+                  "topic_number": "3.2",
+                  "title": "Scope of Internal Controls",
+                  "completed": false
+                },
+                {
+                  "topic_number": "3.3",
+                  "title": "Objectives of Internal Control System",
+                  "completed": false
+                },
+                {
+                  "topic_number": "3.4",
+                  "title": "Structure of Internal Control",
+                  "completed": false
+                }
+              ]
+            },
+            {
+              "topic_number": "4",
+              "title": "Components of Internal Controls",
+              "completed": false,
+              "subtopics": [
+                {
+                  "topic_number": "4.1",
+                  "title": "Control Environment",
+                  "completed": false
+                },
+                {
+                  "topic_number": "4.2",
+                  "title": "Entity's Risk Assessment Process",
+                  "completed": false
+                },
+                {
+                  "topic_number": "4.3",
+                  "title": "Control Activities",
+                  "completed": false
+                },
+                {
+                  "topic_number": "4.4",
+                  "title": "Information System, Including the Related Business Processes, Relevant to Financial Reporting, and Communication",
+                  "completed": false
+                },
+                {
+                  "topic_number": "4.5",
+                  "title": "Monitoring of Controls",
+                  "completed": false
+                }
+              ]
+            },
+            {
+              "topic_number": "5",
+              "title": "Review of the System of Internal Controls",
+              "completed": false
+            },
+            {
+              "topic_number": "6",
+              "title": "Internal Control Assessment & Evaluation",
+              "completed": false,
+              "subtopics": [
+                {
+                  "topic_number": "6.1",
+                  "title": "Techniques of Evaluation of Internal Control",
+                  "completed": false
+                }
+              ]
+            },
+            {
+              "topic_number": "7",
+              "title": "Reporting To Clients on Internal Control Weaknesses",
+              "completed": false
+            },
+            {
+              "topic_number": "8",
+              "title": "Frameworks of Internal Control",
+              "completed": false,
+              "subtopics": [
+                {
+                  "topic_number": "8.1",
+                  "title": "International Internal Control Frameworks",
+                  "completed": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "chapter_number": 5,
+          "chapter_title": "Audit Evidence",
+          "topics": [
+            {
+              "topic_number": "1",
+              "title": "SA 500 Audit Evidence",
+              "completed": false
+            },
+            {
+              "topic_number": "2",
+              "title": "SA 501 Audit Evidence - Specific Considerations for Selected Items",
+              "completed": false
+            },
+            {
+              "topic_number": "3",
+              "title": "SA 505 External Confirmations",
+              "completed": false
+            },
+            {
+              "topic_number": "4",
+              "title": "SA 510 Initial Audit Engagements - Opening Balances",
+              "completed": false
+            },
+            {
+              "topic_number": "5",
+              "title": "SA 530 Audit Sampling",
+              "completed": false
+            },
+            {
+              "topic_number": "6",
+              "title": "SA 550 Related Parties",
+              "completed": false
+            }
+          ]
+        },
+        {
+          "chapter_number": 6,
+          "chapter_title": "Completion & Review",
+          "topics": [
+            {
+              "topic_number": "1",
+              "title": "SA 560 Subsequent Events",
+              "completed": false
+            },
+            {
+              "topic_number": "2",
+              "title": "SA 570 Going Concern",
+              "completed": false
+            },
+            {
+              "topic_number": "3",
+              "title": "SA 580 Written Representations",
+              "completed": false
+            }
+          ]
+        },
+        {
+          "chapter_number": 7,
+          "chapter_title": "Reporting",
+          "topics": [
+            {
+              "topic_number": "1",
+              "title": "Introduction",
+              "completed": false
+            },
+            {
+              "topic_number": "2",
+              "title": "The Auditor's Report on Financial Statements",
+              "completed": false
+            },
+            {
+              "topic_number": "3",
+              "title": "SA 700 Forming an Opinion and Reporting on the Financial Statements",
+              "completed": false,
+              "subtopics": [
+                {
+                  "topic_number": "3.1",
+                  "title": "Purpose",
+                  "completed": false
+                },
+                {
+                  "topic_number": "3.2",
+                  "title": "Basic Elements of the Auditor's Report",
+                  "completed": false
+                },
+                {
+                  "topic_number": "3.3",
+                  "title": "Auditor's Report Prescribed by Law or Regulation",
+                  "completed": false
+                },
+                {
+                  "topic_number": "3.4",
+                  "title": "Auditor's Report for Audits Conducted in Accordance with Both Standards on Auditing Issued by ICAI and International Standards on Auditing or Auditing Standards of Any Other Jurisdiction",
+                  "completed": false
+                },
+                {
+                  "topic_number": "3.5",
+                  "title": "Supplementary Information Presented with the Financial Statements",
+                  "completed": false
+                }
+              ]
+            },
+            {
+              "topic_number": "4",
+              "title": "SA 701 Communicating Key Audit Matters in the Independent Auditor's Report",
+              "completed": false,
+              "subtopics": [
+                {
+                  "topic_number": "4.1",
+                  "title": "Purpose",
+                  "completed": false
+                },
+                {
+                  "topic_number": "4.2",
+                  "title": "Scope",
+                  "completed": false
+                },
+                {
+                  "topic_number": "4.3",
+                  "title": "Determining Key Audit Matters",
+                  "completed": false
+                },
+                {
+                  "topic_number": "4.4",
+                  "title": "Communicating Key Audit Matters",
+                  "completed": false
+                }
+              ]
+            },
+            {
+              "topic_number": "5",
+              "title": "SA 705 Modifications to the Opinion in the Independent Auditor's Report",
+              "completed": false,
+              "subtopics": [
+                {
+                  "topic_number": "5.1",
+                  "title": "Types of Modified Opinions",
+                  "completed": false
+                },
+                {
+                  "topic_number": "5.2",
+                  "title": "Objective",
+                  "completed": false
+                },
+                {
+                  "topic_number": "5.3",
+                  "title": "Circumstances When a Modification to the Auditor's Opinion is Required",
+                  "completed": false
+                },
+                {
+                  "topic_number": "5.4",
+                  "title": "Determining the Type of Modification to the Auditor's Opinion",
+                  "completed": false
+                },
+                {
+                  "topic_number": "5.5",
+                  "title": "Consequence of an Inability to Obtain Sufficient Appropriate Audit Evidence Due to a Management-Imposed Limitation after the Auditor Has Accepted the Engagement",
+                  "completed": false
+                },
+                {
+                  "topic_number": "5.6",
+                  "title": "If the Auditor Decides to Withdraw",
+                  "completed": false
+                },
+                {
+                  "topic_number": "5.7",
+                  "title": "Other Considerations Relating to an Adverse Opinion or Disclaimer of Opinion",
+                  "completed": false
+                },
+                {
+                  "topic_number": "5.8",
+                  "title": "Form and Content of the Auditor's Report When the Opinion is Modified",
+                  "completed": false
+                },
+                {
+                  "topic_number": "5.9",
+                  "title": "Communication with Those Charged with Governance",
+                  "completed": false
+                }
+              ]
+            },
+            {
+              "topic_number": "6",
+              "title": "SA 706 Emphasis of Matter Paragraphs and Other Matter Paragraphs in the Independent Auditor's Report",
+              "completed": false,
+              "subtopics": [
+                {
+                  "topic_number": "6.1",
+                  "title": "Objective",
+                  "completed": false
+                },
+                {
+                  "topic_number": "6.2",
+                  "title": "When to give Emphasis of Matter Paragraphs in the Auditor's Report?",
+                  "completed": false
+                },
+                {
+                  "topic_number": "6.3",
+                  "title": "Inclusion of an Emphasis of Matter Paragraph in the Auditor's Report",
+                  "completed": false
+                }
+              ]
+            },
+            {
+              "topic_number": "7",
+              "title": "Distinction Between Notes on Accounts and Qualifications",
+              "completed": false
+            },
+            {
+              "topic_number": "8",
+              "title": "Distinction Between Audit Report and Certificate",
+              "completed": false
+            },
+            {
+              "topic_number": "9",
+              "title": "Communication to Management and those Charged with Governance",
+              "completed": false,
+              "subtopics": [
+                {
+                  "topic_number": "9.1",
+                  "title": "When All of Those Charged with Governance Are Involved in Managing the Entity",
+                  "completed": false
+                },
+                {
+                  "topic_number": "9.2",
+                  "title": "Matters to be Communicated",
+                  "completed": false
+                },
+                {
+                  "topic_number": "9.3",
+                  "title": "Planned Scope and Timing of the Audit",
+                  "completed": false
+                },
+                {
+                  "topic_number": "9.4",
+                  "title": "Significant Findings from the Audit",
+                  "completed": false
+                }
+              ]
+            },
+            {
+              "topic_number": "10",
+              "title": "Reporting Requirements in Case of Comparative Information",
+              "completed": false,
+              "subtopics": [
+                {
+                  "topic_number": "10.1",
+                  "title": "Audit Procedures for Comparative Information",
+                  "completed": false
+                },
+                {
+                  "topic_number": "10.2",
+                  "title": "Audit Reporting",
+                  "completed": false
+                }
+              ]
+            },
+            {
+              "topic_number": "11",
+              "title": "SA 720 The Auditor's Responsibilities Relating to Other Information",
+              "completed": false,
+              "subtopics": [
+                {
+                  "topic_number": "11.1",
+                  "title": "Objective",
+                  "completed": false
+                },
+                {
+                  "topic_number": "11.2",
+                  "title": "Obtaining the Other Information",
+                  "completed": false
+                },
+                {
+                  "topic_number": "11.3",
+                  "title": "Responding When a Material Inconsistency Appears to Exist or Other Information Appears to be Materially Misstated",
+                  "completed": false
+                },
+                {
+                  "topic_number": "11.4",
+                  "title": "Responding When the Auditor Concludes that a Material Misstatement of the other Information Exists",
+                  "completed": false
+                },
+                {
+                  "topic_number": "11.5",
+                  "title": "Responding When a Material Misstatement in the Financial Statements Exists or the Auditor's Understanding of the Entity and its Environment Needs to be updated",
+                  "completed": false
+                },
+                {
+                  "topic_number": "11.6",
+                  "title": "Reporting",
+                  "completed": false
+                },
+                {
+                  "topic_number": "11.7",
+                  "title": "Reporting Prescribed by Law or Regulation",
+                  "completed": false
+                }
+              ]
+            },
+            {
+              "topic_number": "12",
+              "title": "Duties of Auditors",
+              "completed": false,
+              "subtopics": [
+                {
+                  "topic_number": "12.1",
+                  "title": "Reporting under CARO, 2020",
+                  "completed": false
+                }
+              ]
+            },
+            {
+              "topic_number": "13",
+              "title": "Illustrative Audit Reports",
+              "completed": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "module_number": 2,
+      "source_pdf": "audit2.pdf",
+      "chapters": [
+        {
+          "chapter_number": 8,
+          "chapter_title": "Specialised Areas",
+          "topics": [
+            {
+              "topic_number": "1",
+              "title": "Introduction",
+              "completed": false
+            },
+            {
+              "topic_number": "2",
+              "title": "SA 800 - Special Considerations - Audits of Financial Statements Prepared in Accordance with Special Purpose Frameworks",
+              "completed": false,
+              "subtopics": [
+                {
+                  "topic_number": "2.1",
+                  "title": "What is Special Purpose framework?",
+                  "completed": false
+                },
+                {
+                  "topic_number": "2.2",
+                  "title": "Considerations When Accepting Such Engagement",
+                  "completed": false
+                },
+                {
+                  "topic_number": "2.3",
+                  "title": "Considerations When Planning and Performing such Audit",
+                  "completed": false
+                },
+                {
+                  "topic_number": "2.4",
+                  "title": "Description of the Applicable Financial Reporting Framework",
+                  "completed": false
+                },
+                {
+                  "topic_number": "2.5",
+                  "title": "Alerting Readers that the Financial Statements Are Prepared in Accordance with a Special Purpose Framework",
+                  "completed": false
+                },
+                {
+                  "topic_number": "2.6",
+                  "title": "Restriction on Distribution or Use",
+                  "completed": false
+                }
+              ]
+            },
+            {
+              "topic_number": "3",
+              "title": "SA 805 - Special Considerations—Audits of Single Financial Statements and Specific Elements, Accounts or Items of a Financial Statement",
+              "completed": false,
+              "subtopics": [
+                {
+                  "topic_number": "3.1",
+                  "title": "What is a Single Financial Statement?",
+                  "completed": false
+                },
+                {
+                  "topic_number": "3.2",
+                  "title": "What is Element of a Financial Statement?",
+                  "completed": false
+                },
+                {
+                  "topic_number": "3.3",
+                  "title": "Considerations When Accepting Such Engagement",
+                  "completed": false
+                },
+                {
+                  "topic_number": "3.4",
+                  "title": "Considerations When planning and performing the Audit",
+                  "completed": false
+                },
+                {
+                  "topic_number": "3.5",
+                  "title": "Form of Opinion",
+                  "completed": false
+                },
+                {
+                  "topic_number": "3.6",
+                  "title": "Forming an Opinion and Reporting Considerations",
+                  "completed": false
+                }
+              ]
+            },
+            {
+              "topic_number": "4",
+              "title": "SA 810 - Engagements to Report on Summary Financial Statements",
+              "completed": false,
+              "subtopics": [
+                {
+                  "topic_number": "4.1",
+                  "title": "What do Summary Financial Statements Reflect?",
+                  "completed": false
+                },
+                {
+                  "topic_number": "4.2",
+                  "title": "Engagement Acceptance",
+                  "completed": false
+                },
+                {
+                  "topic_number": "4.3",
+                  "title": "Nature of Procedures to be Performed by Auditor",
+                  "completed": false
+                },
+                {
+                  "topic_number": "4.4",
+                  "title": "Form of Opinion",
+                  "completed": false
+                },
+                {
+                  "topic_number": "4.5",
+                  "title": "Auditor's Report on Summary Financial Statements",
+                  "completed": false
+                },
+                {
+                  "topic_number": "4.6",
+                  "title": "Modifications to the Opinion, Emphasis of Matter Paragraph or other Matter Paragraph in the Auditor's Report on the Audited Financial Statements",
+                  "completed": false
+                },
+                {
+                  "topic_number": "4.7",
+                  "title": "Restriction on Distribution or Use or Alerting Readers to the Basis of Accounting",
+                  "completed": false
+                },
+                {
+                  "topic_number": "4.8",
+                  "title": "Comparatives",
+                  "completed": false
+                },
+                {
+                  "topic_number": "4.9",
+                  "title": "Unaudited Supplementary Information Presented with Summary Financial Statements",
+                  "completed": false
+                },
+                {
+                  "topic_number": "4.10",
+                  "title": "Information in Documents Containing Summary Financial Statements",
+                  "completed": false
+                },
+                {
+                  "topic_number": "4.11",
+                  "title": "Auditor Association",
+                  "completed": false
+                },
+                {
+                  "topic_number": "4.12",
+                  "title": "Timing of Work and Events Subsequent to the Date of the Auditor's Report on the Audited Financial Statements",
+                  "completed": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "chapter_number": 9,
+          "chapter_title": "Related Services",
+          "topics": [
+            {
+              "topic_number": "1",
+              "title": "Introduction",
+              "completed": false
+            },
+            {
+              "topic_number": "2",
+              "title": "SRS 4400 Engagements to Perform Agreed-upon Procedures regarding Financial Information",
+              "completed": false,
+              "subtopics": [
+                {
+                  "topic_number": "2.1",
+                  "title": "Objective in Accordance with SRS 4400",
+                  "completed": false
+                },
+                {
+                  "topic_number": "2.2",
+                  "title": "Audit vs. Agreed-upon Procedures",
+                  "completed": false
+                },
+                {
+                  "topic_number": "2.3",
+                  "title": "General Principles of an Agreed-upon Procedures Engagement",
+                  "completed": false
+                },
+                {
+                  "topic_number": "2.4",
+                  "title": "Reporting",
+                  "completed": false
+                },
+                {
+                  "topic_number": "2.5",
+                  "title": "Documentation",
+                  "completed": false
+                }
+              ]
+            },
+            {
+              "topic_number": "3",
+              "title": "SRS 4410 Compilation Engagements",
+              "completed": false,
+              "subtopics": [
+                {
+                  "topic_number": "3.1",
+                  "title": "Objectives in accordance with SRS 4410",
+                  "completed": false
+                },
+                {
+                  "topic_number": "3.2",
+                  "title": "Scope of Compilation Engagements",
+                  "completed": false
+                },
+                {
+                  "topic_number": "3.3",
+                  "title": "Ethical Requirements",
+                  "completed": false
+                },
+                {
+                  "topic_number": "3.4",
+                  "title": "Engagement Acceptance and Continuance",
+                  "completed": false
+                },
+                {
+                  "topic_number": "3.5",
+                  "title": "Performing the Engagement",
+                  "completed": false
+                },
+                {
+                  "topic_number": "3.6",
+                  "title": "Communication with Management and Those Charged with Governance",
+                  "completed": false
+                },
+                {
+                  "topic_number": "3.7",
+                  "title": "The Practitioner's Report",
+                  "completed": false
+                },
+                {
+                  "topic_number": "3.8",
+                  "title": "Engagement Level Quality Control",
+                  "completed": false
+                },
+                {
+                  "topic_number": "3.9",
+                  "title": "Documentation",
+                  "completed": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "chapter_number": 10,
+          "chapter_title": "Review of Financial Information",
+          "topics": [
+            {
+              "topic_number": "1",
+              "title": "Introduction",
+              "completed": false,
+              "subtopics": [
+                {
+                  "topic_number": "1.1",
+                  "title": "Standards on Review Engagements",
+                  "completed": false
+                }
+              ]
+            },
+            {
+              "topic_number": "2",
+              "title": "SRE 2400 Engagements to Review Historical Financial Statements",
+              "completed": false,
+              "subtopics": [
+                {
+                  "topic_number": "2.1",
+                  "title": "Objectives in a review of financial statements in accordance with SRE 2400",
+                  "completed": false
+                },
+                {
+                  "topic_number": "2.2",
+                  "title": "Compliance with Ethical Requirements and Engagement Level Quality Control",
+                  "completed": false
+                },
+                {
+                  "topic_number": "2.3",
+                  "title": "Preconditions for Accepting a Review Engagement",
+                  "completed": false
+                },
+                {
+                  "topic_number": "2.4",
+                  "title": "Agreeing to the Terms of Engagement",
+                  "completed": false
+                },
+                {
+                  "topic_number": "2.5",
+                  "title": "Emphasis of Matter and Other Matter Paragraphs in the Practitioner's Report",
+                  "completed": false
+                },
+                {
+                  "topic_number": "2.6",
+                  "title": "Other Reporting Responsibilities",
+                  "completed": false
+                },
+                {
+                  "topic_number": "2.7",
+                  "title": "Documentation",
+                  "completed": false
+                },
+                {
+                  "topic_number": "2.8",
+                  "title": "Audit Vs. Review",
+                  "completed": false
+                }
+              ]
+            },
+            {
+              "topic_number": "3",
+              "title": "SRE 2410 Review of Interim Financial Information Performed by the Independent Auditor of the Entity",
+              "completed": false,
+              "subtopics": [
+                {
+                  "topic_number": "3.1",
+                  "title": "Objective of an Engagement to Review Interim Financial Information in Accordance with SRE 2410",
+                  "completed": false
+                },
+                {
+                  "topic_number": "3.2",
+                  "title": "Agreeing the Terms of the Engagement",
+                  "completed": false
+                },
+                {
+                  "topic_number": "3.3",
+                  "title": "Understanding the Entity and its Environment including its Internal Control",
+                  "completed": false
+                },
+                {
+                  "topic_number": "3.4",
+                  "title": "Inquiries, Analytical and other Review procedures",
+                  "completed": false
+                },
+                {
+                  "topic_number": "3.5",
+                  "title": "Evaluation of Misstatements",
+                  "completed": false
+                },
+                {
+                  "topic_number": "3.6",
+                  "title": "Management representations",
+                  "completed": false
+                },
+                {
+                  "topic_number": "3.7",
+                  "title": "Auditor's Responsibility for Accompanying Information",
+                  "completed": false
+                },
+                {
+                  "topic_number": "3.8",
+                  "title": "Communication",
+                  "completed": false
+                },
+                {
+                  "topic_number": "3.9",
+                  "title": "Reporting the Nature, Extent and Results of the Review of Interim Financial Information",
+                  "completed": false
+                },
+                {
+                  "topic_number": "3.10",
+                  "title": "Departure from the Applicable Financial Reporting Framework",
+                  "completed": false
+                },
+                {
+                  "topic_number": "3.11",
+                  "title": "Limitation on Scope",
+                  "completed": false
+                },
+                {
+                  "topic_number": "3.12",
+                  "title": "Going Concern and Significant Uncertainties",
+                  "completed": false
+                },
+                {
+                  "topic_number": "3.13",
+                  "title": "Other Considerations",
+                  "completed": false
+                },
+                {
+                  "topic_number": "3.14",
+                  "title": "Documentation",
+                  "completed": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "chapter_number": 11,
+          "chapter_title": "Prospective Financial Information and Other Assurance Services",
+          "topics": [
+            {
+              "topic_number": "1",
+              "title": "Introduction",
+              "completed": false,
+              "subtopics": [
+                {
+                  "topic_number": "1.1",
+                  "title": "Standards on Assurance Engagements",
+                  "completed": false
+                }
+              ]
+            },
+            {
+              "topic_number": "2",
+              "title": "SAE 3400 \"The Examination of Prospective Financial Information\"",
+              "completed": false,
+              "subtopics": [
+                {
+                  "topic_number": "2.1",
+                  "title": "Scope of SAE-3400",
+                  "completed": false
+                },
+                {
+                  "topic_number": "2.2",
+                  "title": "Nature of Assurance Regarding Prospective Financial Information",
+                  "completed": false
+                },
+                {
+                  "topic_number": "2.3",
+                  "title": "Responsibility of Preparation and Presentation of Prospective Financial Information",
+                  "completed": false
+                },
+                {
+                  "topic_number": "2.4",
+                  "title": "Duties of Member who is Examining the Prospective Financial Information",
+                  "completed": false
+                },
+                {
+                  "topic_number": "2.5",
+                  "title": "Nature of Assurance regarding Prospective Financial Information",
+                  "completed": false
+                },
+                {
+                  "topic_number": "2.6",
+                  "title": "Acceptance of Engagement: Precautions to be taken by Auditor Before Accepting such an Engagement",
+                  "completed": false
+                },
+                {
+                  "topic_number": "2.7",
+                  "title": "Examination Procedures",
+                  "completed": false
+                },
+                {
+                  "topic_number": "2.8",
+                  "title": "Presentation and Disclosure",
+                  "completed": false
+                },
+                {
+                  "topic_number": "2.9",
+                  "title": "Report on Examination of Prospective Financial Information",
+                  "completed": false
+                },
+                {
+                  "topic_number": "2.10",
+                  "title": "Documentation",
+                  "completed": false
+                }
+              ]
+            },
+            {
+              "topic_number": "3",
+              "title": "SAE 3402 \"Assurance Reports on Controls at a Service Organisation\"",
+              "completed": false,
+              "subtopics": [
+                {
+                  "topic_number": "3.1",
+                  "title": "Scope of SAE 3402",
+                  "completed": false
+                },
+                {
+                  "topic_number": "3.2",
+                  "title": "Objectives of Service Auditor in Accordance with SAE 3402",
+                  "completed": false
+                },
+                {
+                  "topic_number": "3.3",
+                  "title": "Type 1 Report & Type 2 Report",
+                  "completed": false
+                },
+                {
+                  "topic_number": "3.4",
+                  "title": "How such an Engagement is Proceeded with?",
+                  "completed": false
+                },
+                {
+                  "topic_number": "3.5",
+                  "title": "Reporting",
+                  "completed": false
+                },
+                {
+                  "topic_number": "3.6",
+                  "title": "Documentation",
+                  "completed": false
+                }
+              ]
+            },
+            {
+              "topic_number": "4",
+              "title": "SAE 3420 Assurance Engagements to Report on the Compilation of Pro Forma Financial Information Included in a Prospectus",
+              "completed": false,
+              "subtopics": [
+                {
+                  "topic_number": "4.1",
+                  "title": "Objectives in Accordance with SA 3420",
+                  "completed": false
+                },
+                {
+                  "topic_number": "4.2",
+                  "title": "Compilation of Pro forma financial information",
+                  "completed": false
+                },
+                {
+                  "topic_number": "4.3",
+                  "title": "Nature of the Practitioner's Responsibility",
+                  "completed": false
+                },
+                {
+                  "topic_number": "4.4",
+                  "title": "Steps involved in such an engagement",
+                  "completed": false
+                },
+                {
+                  "topic_number": "4.5",
+                  "title": "Documentation",
+                  "completed": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "chapter_number": 12,
+          "chapter_title": "Digital Auditing and Assurance",
+          "topics": [
+            {
+              "topic_number": "1",
+              "title": "Digital Audit",
+              "completed": false,
+              "subtopics": [
+                {
+                  "topic_number": "1.1",
+                  "title": "What is a Digital Audit?",
+                  "completed": false
+                },
+                {
+                  "topic_number": "1.2",
+                  "title": "Key Features of a Digital Audit",
+                  "completed": false
+                },
+                {
+                  "topic_number": "1.3",
+                  "title": "Advantages of Digital Audit",
+                  "completed": false
+                },
+                {
+                  "topic_number": "1.4",
+                  "title": "Consideration and Challenges of Digital Audit",
+                  "completed": false
+                }
+              ]
+            },
+            {
+              "topic_number": "2",
+              "title": "Auditing Digitally",
+              "completed": false,
+              "subtopics": [
+                {
+                  "topic_number": "2.1",
+                  "title": "What is the concept of auditing digitally?",
+                  "completed": false
+                },
+                {
+                  "topic_number": "2.2",
+                  "title": "Key Features or Advantages of Auditing Digitally",
+                  "completed": false
+                },
+                {
+                  "topic_number": "2.3",
+                  "title": "Considerations in Auditing Digitally",
+                  "completed": false
+                }
+              ]
+            },
+            {
+              "topic_number": "3",
+              "title": "Understand The IT Environment",
+              "completed": false,
+              "subtopics": [
+                {
+                  "topic_number": "3.1",
+                  "title": "Key Areas for an Auditor to Understand IT Environment",
+                  "completed": false
+                }
+              ]
+            },
+            {
+              "topic_number": "4",
+              "title": "Identifying the Risks Arising from Usage of IT",
+              "completed": false,
+              "subtopics": [
+                {
+                  "topic_number": "4.1",
+                  "title": "How to identify the IT Risks?",
+                  "completed": false
+                },
+                {
+                  "topic_number": "4.2",
+                  "title": "Risks arising from use of IT",
+                  "completed": false
+                },
+                {
+                  "topic_number": "4.3",
+                  "title": "Know How to Identify the IT Dependencies Impacting the Audit",
+                  "completed": false
+                }
+              ]
+            },
+            {
+              "topic_number": "5",
+              "title": "Assessing Cyber Risks (Including Remote Audit)",
+              "completed": false,
+              "subtopics": [
+                {
+                  "topic_number": "5.1",
+                  "title": "What is Cyber Risk",
+                  "completed": false
+                },
+                {
+                  "topic_number": "5.2",
+                  "title": "Stages of Cyber Risks",
+                  "completed": false
+                },
+                {
+                  "topic_number": "5.3",
+                  "title": "Cyber Security Framework",
+                  "completed": false
+                },
+                {
+                  "topic_number": "5.4",
+                  "title": "Control considerations for Cyber Risks",
+                  "completed": false
+                },
+                {
+                  "topic_number": "5.5",
+                  "title": "Remote Audit",
+                  "completed": false
+                }
+              ]
+            },
+            {
+              "topic_number": "6",
+              "title": "Emerging Technologies in Audit",
+              "completed": false
+            },
+            {
+              "topic_number": "7",
+              "title": "Automated Tools in Audit",
+              "completed": false,
+              "subtopics": [
+                {
+                  "topic_number": "7.1",
+                  "title": "Internet of Things",
+                  "completed": false
+                },
+                {
+                  "topic_number": "7.2",
+                  "title": "AI (Artificial intelligence)",
+                  "completed": false
+                },
+                {
+                  "topic_number": "7.3",
+                  "title": "Blockchain",
+                  "completed": false
+                },
+                {
+                  "topic_number": "7.4",
+                  "title": "Robotic Process Automation",
+                  "completed": false
+                }
+              ]
+            },
+            {
+              "topic_number": "8",
+              "title": "Control Considerations or Objectives of Auditing Digitally",
+              "completed": false,
+              "subtopics": [
+                {
+                  "topic_number": "8.1",
+                  "title": "Key Steps for Auditors in a Changing Technology Environment",
+                  "completed": false
+                }
+              ]
+            },
+            {
+              "topic_number": "9",
+              "title": "Next Generation Audit",
+              "completed": false
+            },
+            {
+              "topic_number": "10",
+              "title": "Conclusion",
+              "completed": false
+            }
+          ]
+        },
+        {
+          "chapter_number": 13,
+          "chapter_title": "Group Audits",
+          "topics": [
+            {
+              "topic_number": "1",
+              "title": "Introduction",
+              "completed": false,
+              "subtopics": [
+                {
+                  "topic_number": "1.1",
+                  "title": "Consolidation of Financial Statements - Mandatory under the Companies Act, 2013",
+                  "completed": false
+                }
+              ]
+            },
+            {
+              "topic_number": "2",
+              "title": "Responsibility of Parent",
+              "completed": false
+            },
+            {
+              "topic_number": "3",
+              "title": "Responsibility of the Auditor of the Consolidated Financial Statements",
+              "completed": false
+            },
+            {
+              "topic_number": "4",
+              "title": "Audit Considerations",
+              "completed": false
+            },
+            {
+              "topic_number": "5",
+              "title": "Auditing the Consolidation",
+              "completed": false
+            },
+            {
+              "topic_number": "6",
+              "title": "Special Considerations",
+              "completed": false,
+              "subtopics": [
+                {
+                  "topic_number": "6.1",
+                  "title": "Permanent Consolidation Adjustments",
+                  "completed": false
+                },
+                {
+                  "topic_number": "6.2",
+                  "title": "Current Period Consolidation Adjustments",
+                  "completed": false
+                }
+              ]
+            },
+            {
+              "topic_number": "7",
+              "title": "Management Representations",
+              "completed": false
+            },
+            {
+              "topic_number": "8",
+              "title": "Reporting",
+              "completed": false,
+              "subtopics": [
+                {
+                  "topic_number": "8.1",
+                  "title": "When the Parent's Auditor is also the Auditor of all its Components",
+                  "completed": false
+                },
+                {
+                  "topic_number": "8.2",
+                  "title": "When the Parent's Auditor is not the Auditor of all its Components",
+                  "completed": false
+                },
+                {
+                  "topic_number": "8.3",
+                  "title": "When the Component(s) Auditor Reports on Financial Statements under an Accounting Framework Different than that of the Parent",
+                  "completed": false
+                },
+                {
+                  "topic_number": "8.4",
+                  "title": "When the Component(s) Auditor Reports under an Auditing Framework Different than that of the Parent",
+                  "completed": false
+                },
+                {
+                  "topic_number": "8.5",
+                  "title": "Components Not Audited",
+                  "completed": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "chapter_number": 14,
+          "chapter_title": "Special Features of Audit of Banks & Non-Banking Financial Companies",
+          "units": [
+            {
+              "unit_name": "UNIT 1 – SPECIAL FEATURES OF AUDIT OF BANKS",
+              "topics": [
+                {
+                  "topic_number": "1",
+                  "title": "Introduction",
+                  "completed": false
+                },
+                {
+                  "topic_number": "2",
+                  "title": "Legal Framework",
+                  "completed": false
+                },
+                {
+                  "topic_number": "3",
+                  "title": "Form and Content of Financial Statements",
+                  "completed": false,
+                  "subtopics": [
+                    {
+                      "topic_number": "3.1",
+                      "title": "Audit of Accounts & Appointment of Auditor",
+                      "completed": false
+                    }
+                  ]
+                },
+                {
+                  "topic_number": "4",
+                  "title": "Conducting an Audit",
+                  "completed": false,
+                  "subtopics": [
+                    {
+                      "topic_number": "4.1",
+                      "title": "Special Considerations in IT Environment",
+                      "completed": false
+                    },
+                    {
+                      "topic_number": "4.2",
+                      "title": "Internal Audit and Inspection",
+                      "completed": false
+                    }
+                  ]
+                },
+                {
+                  "topic_number": "5",
+                  "title": "Internal Control in Certain Selected Areas",
+                  "completed": false
+                },
+                {
+                  "topic_number": "6",
+                  "title": "Compliance with CRR and SLR requirements",
+                  "completed": false
+                },
+                {
+                  "topic_number": "7",
+                  "title": "Verification of Assets",
+                  "completed": false
+                },
+                {
+                  "topic_number": "8",
+                  "title": "Verification of Capital & Liabilities",
+                  "completed": false,
+                  "subtopics": [
+                    {
+                      "topic_number": "8.1",
+                      "title": "Stress Testing",
+                      "completed": false
+                    },
+                    {
+                      "topic_number": "8.2",
+                      "title": "BASEL III framework",
+                      "completed": false
+                    }
+                  ]
+                },
+                {
+                  "topic_number": "9",
+                  "title": "Auditor's Report",
+                  "completed": false,
+                  "subtopics": [
+                    {
+                      "topic_number": "9.1",
+                      "title": "Format of Audit Report",
+                      "completed": false
+                    },
+                    {
+                      "topic_number": "9.2",
+                      "title": "Long Form Audit Report",
+                      "completed": false
+                    },
+                    {
+                      "topic_number": "9.3",
+                      "title": "Other Reporting Requirements",
+                      "completed": false
+                    },
+                    {
+                      "topic_number": "9.4",
+                      "title": "Reports and certificates",
+                      "completed": false
+                    }
+                  ]
+                },
+                {
+                  "topic_number": "10",
+                  "title": "Concurrent Audit",
+                  "completed": false,
+                  "subtopics": [
+                    {
+                      "topic_number": "10.1",
+                      "title": "Scope of Concurrent Audit",
+                      "completed": false
+                    },
+                    {
+                      "topic_number": "10.2",
+                      "title": "Concurrent Audit System in Commercial Banks",
+                      "completed": false
+                    },
+                    {
+                      "topic_number": "10.3",
+                      "title": "Coverage of Business/Branches",
+                      "completed": false
+                    },
+                    {
+                      "topic_number": "10.4",
+                      "title": "Types of Activities to be Covered",
+                      "completed": false
+                    },
+                    {
+                      "topic_number": "10.5",
+                      "title": "Appointment of Concurrent Auditors and Accountability",
+                      "completed": false
+                    },
+                    {
+                      "topic_number": "10.6",
+                      "title": "Remuneration of Concurrent Auditor",
+                      "completed": false
+                    },
+                    {
+                      "topic_number": "10.7",
+                      "title": "Reporting Systems",
+                      "completed": false
+                    }
+                  ]
+                },
+                {
+                  "topic_number": "11",
+                  "title": "Audit Committee",
+                  "completed": false
+                }
+              ]
+            },
+            {
+              "unit_name": "UNIT 2 – SPECIAL FEATURES OF AUDIT OF NON-BANKING FINANCIAL COMPANIES (NBFCS)",
+              "topics": [
+                {
+                  "topic_number": "1",
+                  "title": "Introduction",
+                  "completed": false
+                },
+                {
+                  "topic_number": "2",
+                  "title": "Difference between Banks and NBFCs",
+                  "completed": false
+                },
+                {
+                  "topic_number": "3",
+                  "title": "Prudential Norms",
+                  "completed": false,
+                  "subtopics": [
+                    {
+                      "topic_number": "3.1",
+                      "title": "Capital Requirements",
+                      "completed": false
+                    },
+                    {
+                      "topic_number": "3.2",
+                      "title": "Income Recognition",
+                      "completed": false
+                    },
+                    {
+                      "topic_number": "3.3",
+                      "title": "Provisioning Requirements",
+                      "completed": false
+                    }
+                  ]
+                },
+                {
+                  "topic_number": "4",
+                  "title": "Audit Procedures",
+                  "completed": false
+                },
+                {
+                  "topic_number": "5",
+                  "title": "Classification of Frauds by NBFC",
+                  "completed": false
+                },
+                {
+                  "topic_number": "6",
+                  "title": "Audit Check-List",
+                  "completed": false
+                },
+                {
+                  "topic_number": "7",
+                  "title": "Auditor's Duty",
+                  "completed": false,
+                  "subtopics": [
+                    {
+                      "topic_number": "7.1",
+                      "title": "Compliance with NBFC Auditor's Report - RBI Directions",
+                      "completed": false
+                    },
+                    {
+                      "topic_number": "7.2",
+                      "title": "Compliance with CARO 2020",
+                      "completed": false
+                    }
+                  ]
+                },
+                {
+                  "topic_number": "8",
+                  "title": "Indian Accounting Standards (IND AS)",
+                  "completed": false,
+                  "subtopics": [
+                    {
+                      "topic_number": "8.1",
+                      "title": "Applicability of Indian Accounting Standards (Ind AS) on NBFCs",
+                      "completed": false
+                    },
+                    {
+                      "topic_number": "8.2",
+                      "title": "Format for preparation of financial statements by NBFCs under Ind-AS",
+                      "completed": false
+                    },
+                    {
+                      "topic_number": "8.3",
+                      "title": "Differences between Division II (Ind-AS- Other than NBFCs) and Division III (Ind-AS- NBFCs) of Schedule III",
+                      "completed": false
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "module_number": 3,
+      "source_pdf": "audit 3.pdf",
+      "chapters": [
+        {
+          "chapter_number": 15,
+          "chapter_title": "Overview of Audit of Public Sector Undertakings",
+          "topics": [
+            {
+              "topic_number": "1",
+              "title": "Introduction",
+              "completed": false
+            },
+            {
+              "topic_number": "2",
+              "title": "Framework for Government Audit",
+              "completed": false
+            },
+            {
+              "topic_number": "3",
+              "title": "Objective and Scope of Public Enterprises Audit",
+              "completed": false,
+              "subtopics": [
+                {
+                  "topic_number": "3.1",
+                  "title": "Elements of PSU Audits",
+                  "completed": false
+                },
+                {
+                  "topic_number": "3.2",
+                  "title": "Principles of PSU Audits",
+                  "completed": false
+                }
+              ]
+            },
+            {
+              "topic_number": "4",
+              "title": "Financial Audit",
+              "completed": false
+            },
+            {
+              "topic_number": "5",
+              "title": "Compliance Audit",
+              "completed": false
+            },
+            {
+              "topic_number": "6",
+              "title": "Performance Audit",
+              "completed": false,
+              "subtopics": [
+                {
+                  "topic_number": "6.1",
+                  "title": "Objectives of Performance Audit",
+                  "completed": false
+                },
+                {
+                  "topic_number": "6.2",
+                  "title": "Planning for Performance Audit",
+                  "completed": false
+                }
+              ]
+            },
+            {
+              "topic_number": "7",
+              "title": "Comprehensive Audit",
+              "completed": false
+            },
+            {
+              "topic_number": "8",
+              "title": "Propriety Audit",
+              "completed": false,
+              "subtopics": [
+                {
+                  "topic_number": "8.1",
+                  "title": "Definition and Principles",
+                  "completed": false
+                }
+              ]
+            },
+            {
+              "topic_number": "9",
+              "title": "Audit Report of the Comptroller and Auditor General",
+              "completed": false
+            }
+          ]
+        },
+        {
+          "chapter_number": 16,
+          "chapter_title": "Internal Audit",
+          "topics": [
+            {
+              "topic_number": "1",
+              "title": "Internal Audit",
+              "completed": false
+            },
+            {
+              "topic_number": "2",
+              "title": "Management Functions and Scope of Internal Auditing",
+              "completed": false
+            },
+            {
+              "topic_number": "3",
+              "title": "Integrity, Objectivity and Independence of Internal Auditor",
+              "completed": false
+            },
+            {
+              "topic_number": "4",
+              "title": "Qualities of Internal Auditor",
+              "completed": false
+            },
+            {
+              "topic_number": "5",
+              "title": "Performing Internal Audit Engagement",
+              "completed": false
+            },
+            {
+              "topic_number": "6",
+              "title": "Internal Audit Report",
+              "completed": false,
+              "subtopics": [
+                {
+                  "topic_number": "6.1",
+                  "title": "Follow-up",
+                  "completed": false
+                }
+              ]
+            },
+            {
+              "topic_number": "7",
+              "title": "Relationship between Internal and External Auditors",
+              "completed": false,
+              "subtopics": [
+                {
+                  "topic_number": "7.1",
+                  "title": "Determining whether, in which areas, and to what extent the work of the Internal Audit function can be used",
+                  "completed": false
+                },
+                {
+                  "topic_number": "7.2",
+                  "title": "Determining the Nature and Extent of work of the Internal Audit function that can be used",
+                  "completed": false
+                },
+                {
+                  "topic_number": "7.3",
+                  "title": "Determining whether in which areas, and to what extent Internal Auditors can be used to provide direct assistance",
+                  "completed": false
+                },
+                {
+                  "topic_number": "7.4",
+                  "title": "If the External Auditor uses Internal Auditors to provide direct assistance on the audit, the External Auditor shall include in the Audit Documentation",
+                  "completed": false
+                }
+              ]
+            },
+            {
+              "topic_number": "8",
+              "title": "Internal Audit as a Management Function",
+              "completed": false
+            },
+            {
+              "topic_number": "9",
+              "title": "Audit Trail",
+              "completed": false
+            }
+          ]
+        },
+        {
+          "chapter_number": 17,
+          "chapter_title": "Due Diligence, Investigation & Forensic Accounting",
+          "topics": [
+            {
+              "topic_number": "1",
+              "title": "Due Diligence Review",
+              "completed": false
+            },
+            {
+              "topic_number": "2",
+              "title": "Importance of Due Diligence",
+              "completed": false
+            },
+            {
+              "topic_number": "3",
+              "title": "Classification of Due Diligence",
+              "completed": false
+            },
+            {
+              "topic_number": "4",
+              "title": "Work Approach to Due Diligence",
+              "completed": false
+            },
+            {
+              "topic_number": "5",
+              "title": "How to Conduct Due Diligence",
+              "completed": false
+            },
+            {
+              "topic_number": "6",
+              "title": "Contents of a Due Diligence Report",
+              "completed": false
+            },
+            {
+              "topic_number": "7",
+              "title": "Investigation",
+              "completed": false,
+              "subtopics": [
+                {
+                  "topic_number": "7.1",
+                  "title": "Audit versus Investigation",
+                  "completed": false
+                }
+              ]
+            },
+            {
+              "topic_number": "8",
+              "title": "Steps in Investigation",
+              "completed": false
+            },
+            {
+              "topic_number": "9",
+              "title": "Special Issues in Investigations",
+              "completed": false
+            },
+            {
+              "topic_number": "10",
+              "title": "Special Aspects in Connection with Business Investigations",
+              "completed": false
+            },
+            {
+              "topic_number": "11",
+              "title": "Types of Investigation",
+              "completed": false,
+              "subtopics": [
+                {
+                  "topic_number": "11.1",
+                  "title": "Investigation on behalf of an incoming partner",
+                  "completed": false
+                },
+                {
+                  "topic_number": "11.2",
+                  "title": "Investigation for valuation of shares in private companies",
+                  "completed": false
+                },
+                {
+                  "topic_number": "11.3",
+                  "title": "Investigation on behalf of a bank/Financial Institution proposing to advance/ loan to a Company",
+                  "completed": false
+                },
+                {
+                  "topic_number": "11.4",
+                  "title": "Investigation of Frauds",
+                  "completed": false
+                },
+                {
+                  "topic_number": "11.5",
+                  "title": "Investigation on behalf of an Individual or Firm proposing to buy a Business",
+                  "completed": false
+                },
+                {
+                  "topic_number": "11.6",
+                  "title": "Investigation in connection with review of Profit/Financial Forecasts",
+                  "completed": false
+                }
+              ]
+            },
+            {
+              "topic_number": "12",
+              "title": "Forensic Accounting",
+              "completed": false
+            },
+            {
+              "topic_number": "13",
+              "title": "Forensic Accountant Professional",
+              "completed": false
+            },
+            {
+              "topic_number": "14",
+              "title": "Process of Forensic Accounting",
+              "completed": false
+            },
+            {
+              "topic_number": "15",
+              "title": "Forensic Accounting and Investigation Report",
+              "completed": false
+            },
+            {
+              "topic_number": "16",
+              "title": "Overview of Forensic Accounting and Investigation Standards (FAIS)",
+              "completed": false
+            }
+          ]
+        },
+        {
+          "chapter_number": 18,
+          "chapter_title": "Sustainable Development Goals (SDG) & Environment, Social and Governance (ESG) Assurance",
+          "topics": [
+            {
+              "topic_number": "1",
+              "title": "Introduction",
+              "completed": false
+            },
+            {
+              "topic_number": "2",
+              "title": "Sustainable Developments Goals",
+              "completed": false
+            },
+            {
+              "topic_number": "3",
+              "title": "Global Trends in Sustainable Reporting",
+              "completed": false
+            },
+            {
+              "topic_number": "4",
+              "title": "Integrated Reporting",
+              "completed": false
+            },
+            {
+              "topic_number": "5",
+              "title": "Global Scenario in Various Countries",
+              "completed": false,
+              "subtopics": [
+                {
+                  "topic_number": "5.1",
+                  "title": "United States",
+                  "completed": false
+                },
+                {
+                  "topic_number": "5.2",
+                  "title": "United Kingdom",
+                  "completed": false
+                }
+              ]
+            },
+            {
+              "topic_number": "6",
+              "title": "Evolution of ESG in India",
+              "completed": false
+            },
+            {
+              "topic_number": "7",
+              "title": "Initiatives By ICAI",
+              "completed": false,
+              "subtopics": [
+                {
+                  "topic_number": "7.1",
+                  "title": "Business Responsibility and Sustainability Report (BRSR)",
+                  "completed": false
+                }
+              ]
+            },
+            {
+              "topic_number": "8",
+              "title": "Role of Auditor - Consideration of Climate Related Risks in an Audit of Financial Statements",
+              "completed": false
+            },
+            {
+              "topic_number": "9",
+              "title": "Conclusion",
+              "completed": false
+            }
+          ]
+        },
+        {
+          "chapter_number": 19,
+          "chapter_title": "Professional Ethics & Liabilities of Auditors",
+          "topics": [
+            {
+              "topic_number": "1",
+              "title": "Introduction",
+              "completed": false
+            },
+            {
+              "topic_number": "2",
+              "title": "Overview of the Code of Ethics",
+              "completed": false,
+              "subtopics": [
+                {
+                  "topic_number": "2.1",
+                  "title": "Fundamental Principles",
+                  "completed": false
+                },
+                {
+                  "topic_number": "2.2",
+                  "title": "Threats, Evaluation of Threats and Safeguards",
+                  "completed": false
+                },
+                {
+                  "topic_number": "2.3",
+                  "title": "Non-Compliance with Laws and Regulations (NOCLAR)",
+                  "completed": false
+                }
+              ]
+            },
+            {
+              "topic_number": "3",
+              "title": "Membership of the Institute",
+              "completed": false,
+              "subtopics": [
+                {
+                  "topic_number": "3.1",
+                  "title": "Disabilities for the Purpose of Membership",
+                  "completed": false
+                },
+                {
+                  "topic_number": "3.2",
+                  "title": "Types of Members of the Institute",
+                  "completed": false
+                },
+                {
+                  "topic_number": "3.3",
+                  "title": "Removal of Name from the Register",
+                  "completed": false
+                },
+                {
+                  "topic_number": "3.4",
+                  "title": "Restoration of Membership",
+                  "completed": false
+                },
+                {
+                  "topic_number": "3.5",
+                  "title": "Penalty for Falsely Claiming to be a Member etc.",
+                  "completed": false
+                }
+              ]
+            },
+            {
+              "topic_number": "4",
+              "title": "Chartered Accountants in Practice",
+              "completed": false,
+              "subtopics": [
+                {
+                  "topic_number": "4.1",
+                  "title": "Significance of the Certificate of Practice",
+                  "completed": false
+                },
+                {
+                  "topic_number": "4.2",
+                  "title": "Cancellation and Restoration of Certificate of Practice",
+                  "completed": false
+                },
+                {
+                  "topic_number": "4.3",
+                  "title": "Members - deemed to be in Practice",
+                  "completed": false
+                },
+                {
+                  "topic_number": "4.4",
+                  "title": "Companies not to Engage in Accountancy",
+                  "completed": false
+                },
+                {
+                  "topic_number": "4.5",
+                  "title": "Member in Practice Prohibited from using a designation other than Chartered Accountant",
+                  "completed": false
+                },
+                {
+                  "topic_number": "4.6",
+                  "title": "Maintenance of Branch Offices",
+                  "completed": false
+                },
+                {
+                  "topic_number": "4.7",
+                  "title": "KYC Norms for CA in Practice",
+                  "completed": false
+                }
+              ]
+            },
+            {
+              "topic_number": "5",
+              "title": "Chartered Accountants in Service",
+              "completed": false
+            },
+            {
+              "topic_number": "6",
+              "title": "Disciplinary Procedure",
+              "completed": false
+            },
+            {
+              "topic_number": "7",
+              "title": "Types of Misconduct- Professional or Other Misconduct",
+              "completed": false,
+              "subtopics": [
+                {
+                  "topic_number": "7.1",
+                  "title": "Professional Misconduct",
+                  "completed": false
+                },
+                {
+                  "topic_number": "7.2",
+                  "title": "Other Misconduct",
+                  "completed": false
+                }
+              ]
+            },
+            {
+              "topic_number": "8",
+              "title": "Schedules to the Act",
+              "completed": false,
+              "subtopics": [
+                {
+                  "topic_number": "8.1",
+                  "title": "The First Schedule",
+                  "completed": false
+                },
+                {
+                  "topic_number": "8.2",
+                  "title": "The Second Schedule",
+                  "completed": false
+                }
+              ]
+            },
+            {
+              "topic_number": "9",
+              "title": "Council Guidelines",
+              "completed": false,
+              "subtopics": [
+                {
+                  "topic_number": "9.1",
+                  "title": "Council Guidelines for Advertisement, 2008",
+                  "completed": false
+                }
+              ]
+            },
+            {
+              "topic_number": "10",
+              "title": "Recommended Self-Regulatory Measures",
+              "completed": false,
+              "subtopics": [
+                {
+                  "topic_number": "10.1",
+                  "title": "Branch Audits",
+                  "completed": false
+                },
+                {
+                  "topic_number": "10.2",
+                  "title": "Joint Audit",
+                  "completed": false
+                },
+                {
+                  "topic_number": "10.3",
+                  "title": "Ratio Between Qualified and Unqualified Staff",
+                  "completed": false
+                },
+                {
+                  "topic_number": "10.4",
+                  "title": "Disclosure of Interest by Auditors in other Firms",
+                  "completed": false
+                },
+                {
+                  "topic_number": "10.5",
+                  "title": "Recommended Minimum Scale of Fees",
+                  "completed": false
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
