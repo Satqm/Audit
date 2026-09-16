@@ -321,6 +321,33 @@ body.desktop-view .tools-section{max-width:1100px;margin:0 auto;grid-template-co
 /* Modal textarea */
 .kt-add-modal textarea{width:100%;height:130px;padding:14px;border:2px solid var(--border);border-radius:10px;resize:none;margin-bottom:14px;font-family:inherit;font-size:.9rem;outline:none;transition:.2s}
 .kt-add-modal textarea:focus{border-color:#f59e0b}
+/* Keyword highlighting inside KT cards */
+.kt-deck-text .kw {
+    background: linear-gradient(180deg, transparent 60%, #fde68a 60%);
+    color: #78350f;
+    font-weight: 800;
+    padding: 0 2px;
+    border-radius: 3px;
+}
+.kt-deck-card-inner.custom .kt-deck-text .kw {
+    background: linear-gradient(180deg, transparent 60%, #ddd6fe 60%);
+    color: #5b21b6;
+}
+.kt-deck-text .kw-std {
+    background: rgba(251, 191, 36, 0.35);
+    color: #7c2d12;
+    font-weight: 800;
+    padding: 1px 5px;
+    border-radius: 5px;
+    font-family: 'Inter', monospace;
+    letter-spacing: 0.3px;
+    border: 1px solid rgba(180, 83, 9, 0.2);
+}
+.kt-deck-card-inner.custom .kt-deck-text .kw-std {
+    background: rgba(139, 92, 246, 0.25);
+    color: #4c1d95;
+    border-color: rgba(109, 40, 217, 0.25);
+}
 </style>
 </head>
 <body>
@@ -1278,6 +1305,40 @@ function renderKTDeck(){
     stage.innerHTML='';
     const total=KT_DECK.deck.length;
     if(!total){return;}
+    // Auto-highlight standards + key terms inside KT card text
+function highlightKT(text){
+    let out = esc(text);
+    // 1) Wrap standard references (SA 220, SQC 1, SRE 2400, SRS 4400, SAE 3400, CARO 2020, Ind AS 110, AS 21, Section 138, etc.)
+    out = out.replace(
+        /\b(SA|SQC|SRE|SRS|SAE)\s?\d{1,4}\b/g,
+        m => '<span class="kw-std">'+m+'</span>'
+    );
+    out = out.replace(
+        /\b(CARO\s?20\d{2}|Ind\s?AS\s?\d{1,4}|AS\s?\d{1,3}|NFRA|ICAI|RBI|C&amp;AG|C&AG|BRSR|ESG|SDG|SDGs)\b/g,
+        m => '<span class="kw-std">'+m+'</span>'
+    );
+    out = out.replace(
+        /\b(Section\s?\d{1,4}(?:\(\d+\))?)\b/g,
+        m => '<span class="kw-std">'+m+'</span>'
+    );
+    // 2) Highlight a few concept keywords (only first occurrence to avoid visual noise)
+    const concepts = [
+        'audit risk','inherent risk','control risk','detection risk',
+        'material misstatement','going concern','professional skepticism',
+        'internal control','fraud','materiality','key audit matters',
+        'qualified opinion','adverse opinion','disclaimer of opinion',
+        'emphasis of matter','other matter paragraph','written representation',
+        'subsequent events','opening balances','related party',
+        'due diligence','investigation','forensic accounting',
+        'sustainable development','integrated reporting','six capitals',
+        'engagement quality control review','quality control'
+    ];
+    concepts.forEach(term=>{
+        const re = new RegExp('\\b('+term.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')+')\\b','i');
+        out = out.replace(re, m => '<span class="kw">'+m+'</span>');
+    });
+    return out;
+}
 
     // Clamp
     if(KT_DECK.idx<0)KT_DECK.idx=0;
@@ -1317,7 +1378,7 @@ function renderKTDeck(){
                     '<button class="kt-fav-btn'+(isFav?' active':'')+'" data-id="'+esc(d.id)+'" title="Bookmark"><i class="'+(isFav?'fa-solid':'fa-regular')+' fa-star"></i></button>'+
                     (d.custom?'<button class="kt-del-btn" data-id="'+esc(d.id)+'" data-ch="'+esc(d.chapterNum)+'" data-uid="'+esc(d.uid||'')+'" title="Delete"><i class="fa-solid fa-trash"></i></button>':'')+
                 '</div>'+
-                '<div class="kt-deck-text">'+esc(d.text)+'</div>'+
+                '<div class="kt-deck-text">'+highlightKT(d.text)+'</div>'+
                 '<div class="kt-deck-foot">'+(d.custom?'✎ Added by you':'Chapter '+d.chapterNum+' · '+esc(d.chapterTitle||''))+'</div>'+
             '</div>';
 
