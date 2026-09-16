@@ -314,21 +314,37 @@
       ]
     },
     {
-      "chapter_number": 17,
-      "chapter_title": "Due Diligence, Investigation & Forensic Accounting",
-      "total_takeaways": 9,
-      "key_takeaways": [
-        "Sustainable development is development that strives to meet the needs of developing countries seeking to achieve a more sustainable world. Sustainable development addresses the needs of the present moment without compromising current and future generations to meet their own sustainable lifestyles.",
-        "Environment, social and governance form three pillars of ESG. Environmental, social and governance (ESG) reporting is all about disclosure of information, data, metrics that explain",
-        "and added value in these three areas. ESG reporting can be both quantitative and qualitative in nature.",
-        "Sustainable Development Goals (SDGs) are set of 17 goals in line with the 2030 Agenda for Sustainable Development” adopted by UN.",
-        "International investors with global investment portfolios are increasingly calling for high quality, transparent, reliable, and comparable reporting by companies on climate and other environmental, social and governance (ESG) matters.",
-        "The Integrated Reporting Framework is used to connect financial statements and sustainability-related financial disclosures. It has been established to develop high-quality, understandable, enforceable and globally accepted accounting and sustainability disclosure standards.",
-        "The Integrated reporting framework identifies 6 capitals- financial capital, manufactured capital, natural capital, human capital, social capital and intellectual capital.",
-        "ESG disclosure and reporting is mandatory for top 1000 listed companies in form of Business responsibility and sustainability reports. (BRSR).",
-        "As reporting of sustainability information becomes the trend being observed globally, the demand for independent assurance of sustainability information is anticipated to grow as entities around the globe look to enhance the integrity of their sustainability reporting."
-      ]
-    },
+  "chapter_number": 17,
+  "chapter_title": "Due Diligence, Investigation & Forensic Accounting",
+  "total_takeaways": 10,
+  "key_takeaways": [
+    "Due Diligence implies a general duty to exercise care in any transaction. It is a measure of prudence, activity, or dedication, as is properly to be expected from, and ordinarily exercised by, a reasonable and prudent person under the particular circumstance; it is not measured by any absolute standard but depends on the relative facts of the special case.",
+    "Due Diligence may also require to be performed in cases of corporate restructuring, venture capital financing, lending, leveraged buyouts, public offerings, disinvestment, corporatisation, etc.",
+    "Contents of a due diligence report vary with individual circumstances and the purpose of such exercise.",
+    "Investigation implies a systematic and in-depth examination or inquiry to establish a fact or to evaluate a specific situation. It is the systematic and critical examination of facts, records and documents for a specific purpose.",
+    "Investigation differs substantially from an audit assignment. Audit aims at collection of sufficient appropriate audit evidence to enable the auditor to form a judgement and express an opinion on the financial statements or other data under examination. An investigation, on the other hand, requires special in-depth examination of the particular records or transaction with the objective of establishing a fact or happening or assessing a particular situation. The scope of audit is broad based and general in nature whereas investigation is narrow and specific.",
+    "Investigation by Chartered Accountants can be statutory or non-statutory. Non-statutory investigations could include investigation of frauds or investigations in case of proposals to buy a business, etc.",
+    "Forensic accounting is the use of professional accounting skills in matters involving the possibility of a fraud, in order to collect relevant evidence and facts which could help support an expert view for potential or actual civil or criminal litigation. It is also called forensic accounting.",
+    "Forensic accounting is different from audit of financial statements. A Forensic Professional will often look for indications of fraud that are not subject to the scope of a financial statement audit. Forensic accounting has an investigative mentality; however, auditing is done with professional skepticism. A Forensic Professional will often require more extensive corroboration and may focus more on seemingly immaterial transactions.",
+    "Services of forensic professionals may be used by banks, insurance companies, government agencies, courts and even by the business community.",
+    "Forensic Accounting and Investigation Standards (FAIS) aim to preserve and enhance the quality of practice of a member of the Institute of Chartered Accountants of India (ICAI) performing forensic accounting and investigation services."
+  ]
+},
+    {
+  "chapter_number": 18,
+  "chapter_title": "Sustainable Development Goals (SDG) & Environment, Social and Governance (ESG) Assurance",
+  "total_takeaways": 8,
+  "key_takeaways": [
+    "Sustainable development is development that strives to meet the needs of developing countries seeking to achieve a more sustainable world. Sustainable development addresses the needs of the present moment without compromising current and future generations to meet their own sustainable lifestyles.",
+    "Environment, social and governance form three pillars of ESG. Environmental, social and governance (ESG) reporting is all about disclosure of information, data, metrics that explain and add value in these three areas. ESG reporting can be both quantitative and qualitative in nature.",
+    "Sustainable Development Goals (SDGs) are a set of 17 goals in line with the 2030 Agenda for Sustainable Development adopted by the UN.",
+    "International investors with global investment portfolios are increasingly calling for high quality, transparent, reliable, and comparable reporting by companies on climate and other environmental, social and governance (ESG) matters.",
+    "The Integrated Reporting Framework is used to connect financial statements and sustainability-related financial disclosures. It has been established to develop high-quality, understandable, enforceable and globally accepted accounting and sustainability disclosure standards.",
+    "The Integrated Reporting Framework identifies 6 capitals — financial capital, manufactured capital, natural capital, human capital, social capital and intellectual capital.",
+    "ESG disclosure and reporting is mandatory for top 1000 listed companies in the form of Business Responsibility and Sustainability Reports (BRSR).",
+    "As reporting of sustainability information becomes the trend being observed globally, the demand for independent assurance of sustainability information is anticipated to grow as entities around the globe look to enhance the integrity of their sustainability reporting."
+  ]
+},
     {
       "chapter_number": 19,
       "chapter_title": "Professional Ethics & Liabilities of Auditors",
