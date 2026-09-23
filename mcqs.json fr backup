@@ -2,7 +2,7 @@
   {
     "id": 1,
     "type": "independent",
-    "question": "A Ltd is following Ind AS for the first time for the year ended 31st March, 20X4. What all period balance sheet to be covered in its first Ind AS financial statements? Answer:",
+    "question": "A Ltd is following Ind AS for the first time for the year ended 31st March, 20X4. What all period balance sheet to be covered in its first Ind AS financial statements? ",
     "options": [
       "(a) 1st April 20X2",
       "(b) 31st March 20X3",
@@ -15,7 +15,7 @@
   {
     "id": 2,
     "type": "independent",
-    "question": "Company XYZ Pvt Ltd was having its net worth of ₹ 230 Crores as on 31st March 2020. It made a profit of ₹ 30 Crores in FY 20-21 and made a loss of ₹ 15 crores in FY 21-22. From which date it is required to apply Ind AS? Answer:",
+    "question": "Company XYZ Pvt Ltd was having its net worth of ₹ 230 Crores as on 31st March 2020. It made a profit of ₹ 30 Crores in FY 20-21 and made a loss of ₹ 15 crores in FY 21-22. From which date it is required to apply Ind AS? ",
     "options": [
       "(a) Accounting periods beginning on or after 1st April 2020",
       "(b) Accounting periods beginning on or after 1st April 2021",
@@ -28,7 +28,7 @@
   {
     "id": 3,
     "type": "independent",
-    "question": "Ind AS 103 contains additional guidance on common control transaction which is not there in IFRS 3. How this can be termed? Answer:",
+    "question": "Ind AS 103 contains additional guidance on common control transaction which is not there in IFRS 3. How this can be termed? ",
     "options": [
       "(a) Carve in",
       "(b) Carve out",
@@ -41,7 +41,7 @@
   {
     "id": 4,
     "type": "independent",
-    "question": "Which one of the following is the benefit of implementation of Indian Accounting Standards (Ind AS) in India? Answer:",
+    "question": "Which one of the following is the benefit of implementation of Indian Accounting Standards (Ind AS) in India? ",
     "options": [
       "(a) Increase in net profitability",
       "(b) Minimised disclosure requirements",
@@ -54,7 +54,7 @@
   {
     "id": 5,
     "type": "independent",
-    "question": "For preparing Ind AS based financial statements with transition date 1st April, 20X5, what all guidance needs to be referred by A Ltd.? Answer:",
+    "question": "For preparing Ind AS based financial statements with transition date 1st April, 20X5, what all guidance needs to be referred by A Ltd.? ",
     "options": [
       "(a) Ind AS 1",
       "(b) Division II of Schedule III to the Companies Act, 2013",
@@ -67,7 +67,7 @@
   {
     "id": 6,
     "type": "independent",
-    "question": "Country X has taken approach of implementing Global Accounting Standards in its country with some significant changes in line with their national economic policies. This would be termed as Answer:",
+    "question": "Country X has taken approach of implementing Global Accounting Standards in its country with some significant changes in line with their national economic policies. This would be termed as ",
     "options": [
       "(a) Adoption of Global Accounting Standards",
       "(b) Convergence with Global Accounting standards",
@@ -80,7 +80,7 @@
   {
     "id": 7,
     "type": "independent",
-    "question": "Company ABC Insurance Pvt Ltd is engaged in the business of insurance and is having a net worth of ₹ 1,000 crores as on 31st March 2017. From which financial year it is required to apply Ind AS? Answer:",
+    "question": "Company ABC Insurance Pvt Ltd is engaged in the business of insurance and is having a net worth of ₹ 1,000 crores as on 31st March 2017. From which financial year it is required to apply Ind AS? ",
     "options": [
       "(a) FY 2016-17",
       "(b) FY 2017-18",
@@ -93,7 +93,7 @@
   {
     "id": 8,
     "type": "independent",
-    "question": "Which of the following statements is FALSE with respect to Reporting Period? Answer:",
+    "question": "Which of the following statements is FALSE with respect to Reporting Period? ",
     "options": [
       "(a) Financial statements are prepared for a specified period of time",
       "(b) It helps users of financial statements to identify and assess changes and trends",
@@ -106,7 +106,7 @@
   {
     "id": 9,
     "type": "independent",
-    "question": "Which of the following statements is FALSE with respect to CONTROL? An entity controls an economic resource if: Answer:",
+    "question": "Which of the following statements is FALSE with respect to CONTROL? An entity controls an economic resource if: ",
     "options": [
       "(a) it has the present ability to direct the use of the economic resource",
       "(b) it obtains the economic benefits that may flow from it",
@@ -119,7 +119,7 @@
   {
     "id": 10,
     "type": "independent",
-    "question": "The usefulness of financial information is enhanced if it is: Answer:",
+    "question": "The usefulness of financial information is enhanced if it is: ",
     "options": [
       "(a) comparable, verifiable, perfect and understandable",
       "(b) comparable, verifiable, timely and objective",
@@ -132,7 +132,7 @@
   {
     "id": 11,
     "type": "independent",
-    "question": "Which of the following statements is FALSE for Consolidated and unconsolidated financial statements? Answer:",
+    "question": "Which of the following statements is FALSE for Consolidated and unconsolidated financial statements? ",
     "options": [
       "(a) Consolidated financial statements provide information of both the parent and its subsidiaries as a single reporting entity",
       "(b) Unconsolidated financial statements are designed to provide parents information and not about those of its subsidiaries",
@@ -145,7 +145,7 @@
   {
     "id": 12,
     "type": "independent",
-    "question": "Which of the following statements are TRUE with respect to The Reporting Entity? Answer:",
+    "question": "Which of the following statements are TRUE with respect to The Reporting Entity? ",
     "options": [
       "(a) A reporting entity has to be a single entity only and it cannot comprise more than one entity",
       "(b) A reporting entity is an entity that is required, or chooses, to prepare financial statements",
@@ -158,7 +158,7 @@
   {
     "id": 13,
     "type": "independent",
-    "question": "Which of the following definitions is incorrect? Answer:",
+    "question": "Which of the following definitions is incorrect? ",
     "options": [
       "(a) An Asset is a present economic resource controlled by the entity as a result of past events",
       "(b) A Liability is a past obligation of the entity to transfer an economic resource as a result of present events",
@@ -171,7 +171,7 @@
   {
     "id": 14,
     "type": "independent",
-    "question": "To be a perfectly faithful representation, a depiction would not have the following characteristic: Answer:",
+    "question": "To be a perfectly faithful representation, a depiction would not have the following characteristic: ",
     "options": [
       "(a) Complete",
       "(b) Unintentional error is allowed",
@@ -184,7 +184,7 @@
   {
     "id": 15,
     "type": "independent",
-    "question": "Which of the following is true with respect to the cost constraint on useful financial information? Answer:",
+    "question": "Which of the following is true with respect to the cost constraint on useful financial information? ",
     "options": [
       "(a) Cost is a pervasive constraint on the information that can be provided by financial reporting",
       "(b) IASB considers costs and benefits in individual reporting entities only",
@@ -197,7 +197,7 @@
   {
     "id": 16,
     "type": "independent",
-    "question": "Which of the following is not the limitation of 'General Purpose Financial Reporting'? Answer:",
+    "question": "Which of the following is not the limitation of 'General Purpose Financial Reporting'? ",
     "options": [
       "(a) It cannot provide all of the information that existing and potential investors need",
       "(b) The users of reports need to consider pertinent information from other sources",
@@ -210,7 +210,7 @@
   {
     "id": 17,
     "type": "independent",
-    "question": "Which of the following statements is FALSE with respect to Going concern assumption? Answer:",
+    "question": "Which of the following statements is FALSE with respect to Going concern assumption? ",
     "options": [
       "(a) There is fundamental assumption that the reporting entity is a going concern",
       "(b) Reporting entity will continue in operation for the foreseeable future",
@@ -223,7 +223,7 @@
   {
     "id": 18,
     "type": "independent",
-    "question": "An entity whose financial statements comply with Ind AS shall make an _________ statement of such compliance in the notes Answer:",
+    "question": "An entity whose financial statements comply with Ind AS shall make an _________ statement of such compliance in the notes ",
     "options": [
       "(a) Explicit and reserved",
       "(b) Implicit and unreserved",
@@ -236,7 +236,7 @@
   {
     "id": 19,
     "type": "independent",
-    "question": "Application of Ind AS 1 is important for: Answer:",
+    "question": "Application of Ind AS 1 is important for: ",
     "options": [
       "(a) Preparation of general-purpose financial statements",
       "(b) Presentation of general-purpose financial statements",
@@ -249,7 +249,7 @@
   {
     "id": 20,
     "type": "independent",
-    "question": "Which of the following information of the entity is not mandatory to be displayed prominently, and is to be repeated when necessary for the information presented to be understandable? Answer:",
+    "question": "Which of the following information of the entity is not mandatory to be displayed prominently, and is to be repeated when necessary for the information presented to be understandable? ",
     "options": [
       "(a) Name of the reporting entity or other means of identification, and any change in that information from the end of the preceding reporting period",
       "(b) Whether the financial statements cover the individual entity or a group of entities",
@@ -262,7 +262,7 @@
   {
     "id": 21,
     "type": "independent",
-    "question": "An inappropriate accounting policy of the entity cannot be rectified by the following ways: Answer:",
+    "question": "An inappropriate accounting policy of the entity cannot be rectified by the following ways: ",
     "options": [
       "(a) Disclosure of the accounting policies used",
       "(b) By notes",
@@ -275,7 +275,7 @@
   {
     "id": 22,
     "type": "independent",
-    "question": "An entity presents an analysis of expenses recognised in the profit or loss using a classification based on the nature of expenses method. Which of the following is not the classification using the nature of expense? Answer:",
+    "question": "An entity presents an analysis of expenses recognised in the profit or loss using a classification based on the nature of expenses method. Which of the following is not the classification using the nature of expense? ",
     "options": [
       "(a) Employee benefits expense",
       "(b) Selling and distribution expenses",
@@ -288,7 +288,7 @@
   {
     "id": 23,
     "type": "independent",
-    "question": "Ind AS 1 applies to all entities except: Answer:",
+    "question": "Ind AS 1 applies to all entities except: ",
     "options": [
       "(a) Those that present consolidated financial statements",
       "(b) Those present separate financial statements",
@@ -301,7 +301,7 @@
   {
     "id": 24,
     "type": "independent",
-    "question": "An entity shall present a third balance sheet as at the beginning of the preceding period in addition to the minimum comparative financial statements if: Answer:",
+    "question": "An entity shall present a third balance sheet as at the beginning of the preceding period in addition to the minimum comparative financial statements if: ",
     "options": [
       "(a) It applies an accounting policy retrospectively",
       "(b) If there is change in accounting estimates",
@@ -314,7 +314,7 @@
   {
     "id": 25,
     "type": "independent",
-    "question": "As per Ind AS 1, the amount in the other comprehensive income will __________ Answer:",
+    "question": "As per Ind AS 1, the amount in the other comprehensive income will __________ ",
     "options": [
       "(a) Not be reclassified subsequently to profit or loss",
       "(b) Be reclassified subsequently to profit or loss when specific conditions are met",
@@ -327,7 +327,7 @@
   {
     "id": 26,
     "type": "independent",
-    "question": "Income tax expense should be accrued using the best estimate of the weighted average annual income tax rate expected for the __________ Answer:",
+    "question": "Income tax expense should be accrued using the best estimate of the weighted average annual income tax rate expected for the __________ ",
     "options": [
       "(a) Interim period",
       "(b) Year to date period",
@@ -340,7 +340,7 @@
   {
     "id": 27,
     "type": "independent",
-    "question": "An entity may reverse an impairment loss recognized in a previous interim period in respect of goodwill in the subsequent period. Answer:",
+    "question": "An entity may reverse an impairment loss recognized in a previous interim period in respect of goodwill in the subsequent period. ",
     "options": [
       "(a) TRUE",
       "(b) FALSE",
@@ -353,7 +353,7 @@
   {
     "id": 28,
     "type": "independent",
-    "question": "The standard defines Interim Financial Report as a financial report for an interim period that contains a set of __________ financial statements. Answer:",
+    "question": "The standard defines Interim Financial Report as a financial report for an interim period that contains a set of __________ financial statements. ",
     "options": [
       "(a) Complete",
       "(b) Condensed",
@@ -366,7 +366,7 @@
   {
     "id": 29,
     "type": "independent",
-    "question": "Which of the following events and transaction is not mandatorily required to disclose in Interim financial statements in accordance with Ind AS 34? Answer:",
+    "question": "Which of the following events and transaction is not mandatorily required to disclose in Interim financial statements in accordance with Ind AS 34? ",
     "options": [
       "(a) The reversal of any provisions for the costs of restructuring",
       "(b) The assumptions used in the actuarial valuation of defined benefit plan",
@@ -379,7 +379,7 @@
   {
     "id": 30,
     "type": "independent",
-    "question": "Which of the following is not the minimum components of an interim financial report? Answer:",
+    "question": "Which of the following is not the minimum components of an interim financial report? ",
     "options": [
       "(a) Condensed balance sheet",
       "(b) Condensed statement of changes in equity",
@@ -392,7 +392,7 @@
   {
     "id": 31,
     "type": "independent",
-    "question": "According to Ind AS 34, interim period is a financial reporting period Answer:",
+    "question": "According to Ind AS 34, interim period is a financial reporting period ",
     "options": [
       "(a) Shorter than 12 months",
       "(b) Shorter than a full financial year",
@@ -405,7 +405,7 @@
   {
     "id": 32,
     "type": "independent",
-    "question": "An entity is not required to present basic and diluted earnings per share as the components of profit or loss for an interim period. Answer:",
+    "question": "An entity is not required to present basic and diluted earnings per share as the components of profit or loss for an interim period. ",
     "options": [
       "(a) TRUE",
       "(b) FALSE"
@@ -416,7 +416,7 @@
   {
     "id": 33,
     "type": "independent",
-    "question": "Ind AS 34 mandates the following in relation to interim financial reports Answer:",
+    "question": "Ind AS 34 mandates the following in relation to interim financial reports ",
     "options": [
       "(a) Which entities should publish interim financial reports",
       "(b) How frequently it should publish",
@@ -429,7 +429,7 @@
   {
     "id": 34,
     "type": "independent",
-    "question": "An entity prepares quarterly interim financial reports in accordance with AS 25. The entity is engaged in sale of mobile phones and normally 5% of customers claim on their warranty. The provision in the first quarter was calculated as 5% of sales to date, which was ₹ 10 million. However, in the second quarter, a fault was found and warranty claims were expected to be 10% for the whole of the year. Sales in the second quarter were ₹ 15 million. What would be the provision charged in the second quarters interim financial statements? Answer:",
+    "question": "An entity prepares quarterly interim financial reports in accordance with AS 25. The entity is engaged in sale of mobile phones and normally 5% of customers claim on their warranty. The provision in the first quarter was calculated as 5% of sales to date, which was ₹ 10 million. However, in the second quarter, a fault was found and warranty claims were expected to be 10% for the whole of the year. Sales in the second quarter were ₹ 15 million. What would be the provision charged in the second quarters interim financial statements? ",
     "options": [
       "(a) ₹ 1 million",
       "(b) ₹ 2 million",
@@ -442,7 +442,7 @@
   {
     "id": 35,
     "type": "independent",
-    "question": "If an entity publishes a set of condensed financial statements in its interim financial report, those condensed statements shall include, at a minimum, each of the headings and subtotals that were included in its most recent annual financial statements and the selected explanatory notes as required by this Standard. Answer:",
+    "question": "If an entity publishes a set of condensed financial statements in its interim financial report, those condensed statements shall include, at a minimum, each of the headings and subtotals that were included in its most recent annual financial statements and the selected explanatory notes as required by this Standard. ",
     "options": [
       "(a) TRUE",
       "(b) FALSE"
@@ -453,7 +453,7 @@
   {
     "id": 36,
     "type": "independent",
-    "question": "As per Ind AS 7, for non-financial entities in the statement of cashflows, interest paid and interest and dividend received is classified as Answer:",
+    "question": "As per Ind AS 7, for non-financial entities in the statement of cashflows, interest paid and interest and dividend received is classified as ",
     "options": [
       "(a) Cash flows from financing activities and operating activities respectively",
       "(b) Cash flows from investing activities and operating activities respectively",
@@ -466,7 +466,7 @@
   {
     "id": 37,
     "type": "independent",
-    "question": "Cash flow is based upon: Answer:",
+    "question": "Cash flow is based upon: ",
     "options": [
       "(a) Accrual basis of accounting",
       "(b) Cash basis of accounting",
@@ -479,7 +479,7 @@
   {
     "id": 38,
     "type": "independent",
-    "question": "An entity shall report Answer:",
+    "question": "An entity shall report ",
     "options": [
       "(a) Separately major classes of net cash receipts or net cash payments as the case may be arising from investing and financing activities",
       "(b) Separately major classes of gross cash receipts and gross cash payments arising from investing and financing activities",
@@ -492,7 +492,7 @@
   {
     "id": 39,
     "type": "independent",
-    "question": "An entity has bank balance in foreign currency aggregating to USD 100 (equivalent to ₹ 4,500) at the beginning of the year. Presuming no other transaction taking place, the entity reported a profit before tax of ₹ 100 on account of exchange gain on the bank balance in foreign currency at the end of the year. What would be the closing cash and cash equivalents as per the balance sheet? Answer:",
+    "question": "An entity has bank balance in foreign currency aggregating to USD 100 (equivalent to ₹ 4,500) at the beginning of the year. Presuming no other transaction taking place, the entity reported a profit before tax of ₹ 100 on account of exchange gain on the bank balance in foreign currency at the end of the year. What would be the closing cash and cash equivalents as per the balance sheet? ",
     "options": [
       "(a) ₹ 4,700",
       "(b) ₹ 4,500",
@@ -505,7 +505,7 @@
   {
     "id": 40,
     "type": "independent",
-    "question": "Under Ind AS 7 Statement of Cash Flows, cash flows arising from the following operating, investing or financing activities may be reported on a net basis: Answer:",
+    "question": "Under Ind AS 7 Statement of Cash Flows, cash flows arising from the following operating, investing or financing activities may be reported on a net basis: ",
     "options": [
       "(a) Cash receipts and payments on behalf of customers when the cash flows reflect the activities of the customer rather than those of the entity",
       "(b) Entity has a legally enforceable right to set off the recognised amounts",
@@ -518,7 +518,7 @@
   {
     "id": 41,
     "type": "independent",
-    "question": "During the financial year 20X1-20X2, ABC Limited have paid various taxes & reproduced the below mentioned records for your perusal: - Capital gain tax of ₹ 2 crore on sale of office premises at a sale consideration of ₹ 100 crore. - Income Tax of ₹ 3 crore on Business profits amounting ₹ 30 crore (assume entire business profit as cash profit). - Dividend Distribution Tax of ₹ 1 crore on payment of dividend amounting ₹ 10 crore to its shareholders. - Income tax Refund of ₹ 2 crore (Refund on taxes paid in earlier periods for business profits) Calculate cashflow from investing activities. Answer:",
+    "question": "During the financial year 20X1-20X2, ABC Limited have paid various taxes & reproduced the below mentioned records for your perusal: - Capital gain tax of ₹ 2 crore on sale of office premises at a sale consideration of ₹ 100 crore. - Income Tax of ₹ 3 crore on Business profits amounting ₹ 30 crore (assume entire business profit as cash profit). - Dividend Distribution Tax of ₹ 1 crore on payment of dividend amounting ₹ 10 crore to its shareholders. - Income tax Refund of ₹ 2 crore (Refund on taxes paid in earlier periods for business profits) Calculate cashflow from investing activities. ",
     "options": [
       "(a) ₹ 29 crore",
       "(b) ₹ 32 crore",
@@ -531,7 +531,7 @@
   {
     "id": 42,
     "type": "independent",
-    "question": "Cash flows from operations will increase due to: Answer:",
+    "question": "Cash flows from operations will increase due to: ",
     "options": [
       "(a) Increase in current assets",
       "(b) Decrease in current liabilities",
@@ -544,7 +544,7 @@
   {
     "id": 43,
     "type": "independent",
-    "question": "Which of the following is incorrect? Answer:",
+    "question": "Which of the following is incorrect? ",
     "options": [
       "(a) Equity investments are excluded from cash equivalents unless they are, in substance, cash equivalents, for example in the case of preference shares acquired within a short period of their maturity and with a specified redemption date",
       "(b) Bank borrowings are generally considered to be investing activities",
@@ -557,7 +557,7 @@
   {
     "id": 44,
     "type": "independent",
-    "question": "Which of the following is not a characteristic of an entitys cash equivalents, as defined by Ind AS 7? Answer:",
+    "question": "Which of the following is not a characteristic of an entitys cash equivalents, as defined by Ind AS 7? ",
     "options": [
       "(a) A short-term investment",
       "(b) A highly liquid investment",
@@ -570,7 +570,7 @@
   {
     "id": 45,
     "type": "independent",
-    "question": "Under indirect cash flow method Answer:",
+    "question": "Under indirect cash flow method ",
     "options": [
       "(a) Profit or loss is adjusted for the effects of transactions of a cash nature, any deferrals or accruals of past or future operating cash receipts or payments",
       "(b) Statement of changes in net assets/equity is adjusted for the effects of transactions of a cash nature, any deferrals or accruals of past or future operating cash receipts or payments",
@@ -583,7 +583,7 @@
   {
     "id": 46,
     "type": "independent",
-    "question": "The selection and application of accounting policies for similar transactions, other events and conditions shall be: Answer:",
+    "question": "The selection and application of accounting policies for similar transactions, other events and conditions shall be: ",
     "options": [
       "(a) Consistent always",
       "(b) Consistent unless an Ind AS specifically requires or permits categorisation of items for which different policies may be appropriate",
@@ -596,7 +596,7 @@
   {
     "id": 47,
     "type": "independent",
-    "question": "Which of the following is treated as a change in the accounting policies in accordance with Ind AS 8, Accounting Policies, Changes in Accounting Estimates and Errors? Answer:",
+    "question": "Which of the following is treated as a change in the accounting policies in accordance with Ind AS 8, Accounting Policies, Changes in Accounting Estimates and Errors? ",
     "options": [
       "(a) Change in composition of reportable segments",
       "(b) Changes in functional currency",
@@ -609,7 +609,7 @@
   {
     "id": 48,
     "type": "independent",
-    "question": "Which of the following shall be considered as a change in accounting policy? Answer:",
+    "question": "Which of the following shall be considered as a change in accounting policy? ",
     "options": [
       "(a) the application of an accounting policy for transactions, other events or conditions that differ in substance from those previously occurring; and",
       "(b) the application of a new accounting policy for transactions, other events or conditions that occurred previously or material",
@@ -622,7 +622,7 @@
   {
     "id": 49,
     "type": "independent",
-    "question": "Which of the following items are examples of changes in accounting estimates? (i) A loss allowance for expected credit losses, applying Ind AS 109, Financial Instruments; (ii) The net realisable value of an item of inventory, applying Ind AS 2 Inventories; (iii) The depreciation expense for an item of property, plant and equipment, applying Ind AS 16; and (iv) A provision for warranty obligations, applying Ind AS 37, Provisions, Contingent Liabilities and Contingent Assets. Answer:",
+    "question": "Which of the following items are examples of changes in accounting estimates? (i) A loss allowance for expected credit losses, applying Ind AS 109, Financial Instruments; (ii) The net realisable value of an item of inventory, applying Ind AS 2 Inventories; (iii) The depreciation expense for an item of property, plant and equipment, applying Ind AS 16; and (iv) A provision for warranty obligations, applying Ind AS 37, Provisions, Contingent Liabilities and Contingent Assets. ",
     "options": [
       "(a) (i), (ii), (iii)",
       "(b) (i), (ii), (iv)",
@@ -635,7 +635,7 @@
   {
     "id": 50,
     "type": "independent",
-    "question": "According to Ind AS 8, when a change in accounting policy is applied retrospectively, the entity shall adjust: (i) Opening balance of each affected component of equity for the earliest prior period presented. (ii) Other comparative amounts disclosed for earliest prior period presented. (iii) Other comparative amounts disclosed for each prior period presented. (iv) Opening balance of each affected component of equity for each prior period presented. State which of the above statements are correct. Answer:",
+    "question": "According to Ind AS 8, when a change in accounting policy is applied retrospectively, the entity shall adjust: (i) Opening balance of each affected component of equity for the earliest prior period presented. (ii) Other comparative amounts disclosed for earliest prior period presented. (iii) Other comparative amounts disclosed for each prior period presented. (iv) Opening balance of each affected component of equity for each prior period presented. State which of the above statements are correct. ",
     "options": [
       "(a) (i) and (ii)",
       "(b) (i) and (iii)",
@@ -648,7 +648,7 @@
   {
     "id": 51,
     "type": "independent",
-    "question": "Some new standards and amendments have been issued in the month of March 20X2, but it was effective from 1st April 20X2. In accordance with Ind AS 8, what is the provision in this regard when the entity has not applied a new Ind AS that has been issued but is not yet effective? Answer:",
+    "question": "Some new standards and amendments have been issued in the month of March 20X2, but it was effective from 1st April 20X2. In accordance with Ind AS 8, what is the provision in this regard when the entity has not applied a new Ind AS that has been issued but is not yet effective? ",
     "options": [
       "(a) Treated as change in accounting policy in the subsequent year",
       "(b) Only disclosure of the facts is required",
@@ -661,7 +661,7 @@
   {
     "id": 52,
     "type": "independent",
-    "question": "According to Ind AS 8, prior period errors shall be corrected: Answer:",
+    "question": "According to Ind AS 8, prior period errors shall be corrected: ",
     "options": [
       "(a) Prospectively",
       "(b) Retrospectively",
@@ -674,7 +674,7 @@
   {
     "id": 53,
     "type": "independent",
-    "question": "In some cases, it is difficult to distinguish between a change of estimate and a change in accounting policy. How should the entity treat the same? Answer:",
+    "question": "In some cases, it is difficult to distinguish between a change of estimate and a change in accounting policy. How should the entity treat the same? ",
     "options": [
       "(a) Entire change as a change in accounting policy",
       "(b) Entire change as a change in accounting estimate with appropriate disclosure",
@@ -687,7 +687,7 @@
   {
     "id": 54,
     "type": "independent",
-    "question": "A company made some changes in accounting policies and accounted for them in financial year 20X1 20X2. Due to changes in accounting policies, retrospective adjustment has tax effect related to previous years along with effect on the transaction. How will this be accounted for and disclosed? Answer:",
+    "question": "A company made some changes in accounting policies and accounted for them in financial year 20X1 20X2. Due to changes in accounting policies, retrospective adjustment has tax effect related to previous years along with effect on the transaction. How will this be accounted for and disclosed? ",
     "options": [
       "(a) In accordance with Ind AS 8",
       "(b) In accordance with Ind AS 12",
@@ -700,7 +700,7 @@
   {
     "id": 55,
     "type": "independent",
-    "question": "Applying a new accounting policy to transactions, other events and conditions as if that policy had always been applied is considered as __________ Answer:",
+    "question": "Applying a new accounting policy to transactions, other events and conditions as if that policy had always been applied is considered as __________ ",
     "options": [
       "(a) Correction of error",
       "(b) Retrospective application",
@@ -713,7 +713,7 @@
   {
     "id": 56,
     "type": "independent",
-    "question": "The objective of Ind AS 10 is to prescribe: Answer:",
+    "question": "The objective of Ind AS 10 is to prescribe: ",
     "options": [
       "(a) The disclosures that an entity should give about the date when the financial statements were approved for issue",
       "(b) The disclosures about events after the reporting period",
@@ -726,7 +726,7 @@
   {
     "id": 57,
     "type": "independent",
-    "question": "What is the date of approval for issue of the financial statements prepared for the reporting period from 1st April, 20X1 to 31st March, 20X2, in a situation where following dates are available? Answer:",
+    "question": "What is the date of approval for issue of the financial statements prepared for the reporting period from 1st April, 20X1 to 31st March, 20X2, in a situation where following dates are available? ",
     "options": [
       "(a) Completion of preparation of financial statements 15th April, 20X2",
       "(b) Board reviews and approves for issue 25th April, 20X2",
@@ -739,7 +739,7 @@
   {
     "id": 58,
     "type": "independent",
-    "question": "On 15th April, 20X2, a major earthquake disrupted the entire operations of a reputed company. The Company suffered huge loss due to the damage caused to its factories and other business premises. The Companys insurance policy does not cover the risk of loss arising from natural disasters. The Company does not have sufficient internal funds or the availability of external finance to rebuild the infrastructure necessary for it to resume its business operations. The Board of the company is also not sure about the future of the company. The Company has prepared the financial statements for the year ending 31st March, 20X2 which is approved in the board meeting dated 20th April, 20X2. How this event impact the financial statement of the company? Answer:",
+    "question": "On 15th April, 20X2, a major earthquake disrupted the entire operations of a reputed company. The Company suffered huge loss due to the damage caused to its factories and other business premises. The Companys insurance policy does not cover the risk of loss arising from natural disasters. The Company does not have sufficient internal funds or the availability of external finance to rebuild the infrastructure necessary for it to resume its business operations. The Board of the company is also not sure about the future of the company. The Company has prepared the financial statements for the year ending 31st March, 20X2 which is approved in the board meeting dated 20th April, 20X2. How this event impact the financial statement of the company? ",
     "options": [
       "(a) Adjustment in financials are required",
       "(b) Disclosure is required",
@@ -752,7 +752,7 @@
   {
     "id": 59,
     "type": "independent",
-    "question": "According to Ind AS 10, when management of an entity is required to issue its financial statements to a supervisory board for issue, the financial statements are said to be approved when: Answer:",
+    "question": "According to Ind AS 10, when management of an entity is required to issue its financial statements to a supervisory board for issue, the financial statements are said to be approved when: ",
     "options": [
       "(a) Shareholders approve the financial statements",
       "(b) Filed with the regulatory authorities",
@@ -765,7 +765,7 @@
   {
     "id": 60,
     "type": "independent",
-    "question": "A company XYZ took a long-term loan from bank. Before the end of the reporting date there is a breach in the terms which are material for this loan. The amount stands payable on demand by the company to bank. After the reporting date but before approval of the financial statements for issue, company entered into an agreement with the bank, pursuant to which the loan is not payable on demand. This loan will be treated as: Answer:",
+    "question": "A company XYZ took a long-term loan from bank. Before the end of the reporting date there is a breach in the terms which are material for this loan. The amount stands payable on demand by the company to bank. After the reporting date but before approval of the financial statements for issue, company entered into an agreement with the bank, pursuant to which the loan is not payable on demand. This loan will be treated as: ",
     "options": [
       "(a) Adjusting event",
       "(b) Non-adjusting event",
@@ -778,7 +778,7 @@
   {
     "id": 61,
     "type": "independent",
-    "question": "The management of a company decided and announced a plan to discontinue the operations and liquidate the company after the reporting date. According to Ind AS 10 Events after the reporting period the company shall: Answer:",
+    "question": "The management of a company decided and announced a plan to discontinue the operations and liquidate the company after the reporting date. According to Ind AS 10 Events after the reporting period the company shall: ",
     "options": [
       "(a) Prepare its financial statements on a going concern basis",
       "(b) Not prepare its financial statements on a going concern basis",
@@ -791,7 +791,7 @@
   {
     "id": 62,
     "type": "independent",
-    "question": "Moon Ltd having issued share capital of 15,00,000 shares decided to offer two options for dividend per share- Option (i)- 10 Bottles of perfume (Fair Market Value (FMV) per bottle= ₹ 75) Option (ii)- Dividend payment of ₹ 700 The probability of shareholders selecting non-cash vis--vis cash option is estimated at 60:40. Calculate the amount at which dividend shall be initially recognised. Later on, if on date of settlement the FMV of bottle is ₹ 90 and accordingly, the ratio for non-cash vis--vis cash option becomes 80:20, then how much amount shall be debited to equity? Answer:",
+    "question": "Moon Ltd having issued share capital of 15,00,000 shares decided to offer two options for dividend per share- Option (i)- 10 Bottles of perfume (Fair Market Value (FMV) per bottle= ₹ 75) Option (ii)- Dividend payment of ₹ 700 The probability of shareholders selecting non-cash vis--vis cash option is estimated at 60:40. Calculate the amount at which dividend shall be initially recognised. Later on, if on date of settlement the FMV of bottle is ₹ 90 and accordingly, the ratio for non-cash vis--vis cash option becomes 80:20, then how much amount shall be debited to equity? ",
     "options": [
       "(a) ₹ 1,05,00,00,000; ₹ 24,00,00,000",
       "(b) ₹ 1,12,50,00,000, ₹ 16,50,00,000",
@@ -804,7 +804,7 @@
   {
     "id": 63,
     "type": "independent",
-    "question": "Event after the reporting period are those events that occur between the end of the reporting period and the date ...................... Answer:",
+    "question": "Event after the reporting period are those events that occur between the end of the reporting period and the date ...................... ",
     "options": [
       "(a) When the financial statements are approved by the Board of Directors",
       "(b) Of Annual General Meeting",
@@ -817,7 +817,7 @@
   {
     "id": 64,
     "type": "independent",
-    "question": "On 15th January, 20X2, Alpha Ltd. filed a suit against Beta Ltd. for recovery of ₹ 10 lakhs. On 15th April, 20X2, the court case confirms that Beta Ltd. will have to pay the amount to Alpha Ltd. The financial statements are approved by the Board on 20th May, 20X2. What will be the treatment of ₹ 10 lakhs in the financial statements of Beta Ltd. on the reporting date i.e. 31st March, 20X2 as per Ind AS 10? Answer:",
+    "question": "On 15th January, 20X2, Alpha Ltd. filed a suit against Beta Ltd. for recovery of ₹ 10 lakhs. On 15th April, 20X2, the court case confirms that Beta Ltd. will have to pay the amount to Alpha Ltd. The financial statements are approved by the Board on 20th May, 20X2. What will be the treatment of ₹ 10 lakhs in the financial statements of Beta Ltd. on the reporting date i.e. 31st March, 20X2 as per Ind AS 10? ",
     "options": [
       "(a) Disclose it as a contingent liability",
       "(b) Recognise liability for ₹ 10 lakhs",
@@ -830,7 +830,7 @@
   {
     "id": 65,
     "type": "independent",
-    "question": "The financial statements of Star Ltd. for financial year 20X1-20X2 were approved by the Board for issue on 24th May, 20X2. The management discovered a major fraud and decided to reopen the books of account. The financial statements were subsequently approved by the Board of Directors on 31st May, 20X2. What is the date of approval for issue as per Ind AS 10 in the given case? Answer:",
+    "question": "The financial statements of Star Ltd. for financial year 20X1-20X2 were approved by the Board for issue on 24th May, 20X2. The management discovered a major fraud and decided to reopen the books of account. The financial statements were subsequently approved by the Board of Directors on 31st May, 20X2. What is the date of approval for issue as per Ind AS 10 in the given case? ",
     "options": [
       "(a) 24th May, 20X2",
       "(b) 31st May, 20X2",
@@ -843,7 +843,7 @@
   {
     "id": 66,
     "type": "independent",
-    "question": "Characteristics of the asset or liability are considered if market participants would take those characteristics into account when pricing the asset or liability at the measurement date. Such characteristics include: Answer:",
+    "question": "Characteristics of the asset or liability are considered if market participants would take those characteristics into account when pricing the asset or liability at the measurement date. Such characteristics include: ",
     "options": [
       "(a) condition of the asset",
       "(b) location of the asset",
@@ -856,7 +856,7 @@
   {
     "id": 67,
     "type": "independent",
-    "question": "The asset or liability measured at fair value shall be: Answer:",
+    "question": "The asset or liability measured at fair value shall be: ",
     "options": [
       "(a) a standalone asset or liability",
       "(b) a group of assets, a group of liabilities or a group of assets and liabilities",
@@ -869,7 +869,7 @@
   {
     "id": 68,
     "type": "independent",
-    "question": "Revisions resulting from a change in the valuation technique or its application shall be accounted for as Answer:",
+    "question": "Revisions resulting from a change in the valuation technique or its application shall be accounted for as ",
     "options": [
       "(a) Change in accounting policy as per Ind AS 8",
       "(b) Change in accounting estimate as per Ind AS 8",
@@ -882,7 +882,7 @@
   {
     "id": 69,
     "type": "independent",
-    "question": "The market that maximises the amount that would be received to sell the asset or minimises the amount that would be paid to transfer the liability, after taking into account transaction costs and transport costs is called ___________ Answer:",
+    "question": "The market that maximises the amount that would be received to sell the asset or minimises the amount that would be paid to transfer the liability, after taking into account transaction costs and transport costs is called ___________ ",
     "options": [
       "(a) Principal market",
       "(b) Most advantageous market",
@@ -895,7 +895,7 @@
   {
     "id": 70,
     "type": "independent",
-    "question": "The basic rule related to inputs to valuation techniques as per Ind AS 113 are Answer:",
+    "question": "The basic rule related to inputs to valuation techniques as per Ind AS 113 are ",
     "options": [
       "(a) maximising the use of relevant observable and unobservable inputs",
       "(b) minimising the use of relevant observable and unobservable inputs",
@@ -908,7 +908,7 @@
   {
     "id": 71,
     "type": "independent",
-    "question": "The measurement requirements of Ind AS 113 applies to Answer:",
+    "question": "The measurement requirements of Ind AS 113 applies to ",
     "options": [
       "(a) share based payment transactions within the scope of IFRS 2 Share?based Payment",
       "(b) leasing transactions accounted for in accordance with IFRS 16 Leases",
@@ -921,7 +921,7 @@
   {
     "id": 72,
     "type": "independent",
-    "question": "The highest and best use of a non? financial asset while measuring the fair value takes into account the use of the asset that is Answer:",
+    "question": "The highest and best use of a non? financial asset while measuring the fair value takes into account the use of the asset that is ",
     "options": [
       "(a) physically possible",
       "(b) legally permissible",
@@ -934,7 +934,7 @@
   {
     "id": 73,
     "type": "independent",
-    "question": "A fair value measurement assumes that the transaction to sell the asset or transfer the liability takes place either: Answer:",
+    "question": "A fair value measurement assumes that the transaction to sell the asset or transfer the liability takes place either: ",
     "options": [
       "(a) in the principal market or in the most advantageous market",
       "(b) in the principal market or in the primary market",
@@ -947,7 +947,7 @@
   {
     "id": 74,
     "type": "independent",
-    "question": "The price paid to acquire the asset or received to assume the liability is called Answer:",
+    "question": "The price paid to acquire the asset or received to assume the liability is called ",
     "options": [
       "(a) transaction price (an entry price)",
       "(b) transaction price (an exit price)",
@@ -960,7 +960,7 @@
   {
     "id": 75,
     "type": "independent",
-    "question": "As per Ind AS 113, which of the followings is not a widely used valuation technique? Answer:",
+    "question": "As per Ind AS 113, which of the followings is not a widely used valuation technique? ",
     "options": [
       "(a) Net present value approach",
       "(b) Cost approach",
@@ -973,7 +973,7 @@
   {
     "id": 76,
     "type": "independent",
-    "question": "Which of the following criteria is not correct in case of identification of contract with the customer to be accounted for under Ind AS 115? Answer:",
+    "question": "Which of the following criteria is not correct in case of identification of contract with the customer to be accounted for under Ind AS 115? ",
     "options": [
       "(a) the parties to the contract have approved the contract in writing only",
       "(b) the entity can identify each partys rights regarding the goods or services to be transferred",
@@ -986,7 +986,7 @@
   {
     "id": 77,
     "type": "independent",
-    "question": "As per Ind AS 115, an entity shall combine two or more contracts entered into at or near the same time with the same customer and account for the contracts as a single contract when Answer:",
+    "question": "As per Ind AS 115, an entity shall combine two or more contracts entered into at or near the same time with the same customer and account for the contracts as a single contract when ",
     "options": [
       "(a) the contracts are negotiated as a package with a single commercial objective",
       "(b) the amount of consideration to be paid in one contract depends on the price or performance of the other contract",
@@ -999,7 +999,7 @@
   {
     "id": 78,
     "type": "independent",
-    "question": "An entity shall account for a contract modification as a separate contract when Answer:",
+    "question": "An entity shall account for a contract modification as a separate contract when ",
     "options": [
       "(a) the scope of the contract increases because of the addition of promised goods or services that are distinct",
       "(b) the price of the contract increases by an amount of consideration that reflects the entitys stand-alone selling prices of the additional promised goods or services",
@@ -1012,7 +1012,7 @@
   {
     "id": 79,
     "type": "independent",
-    "question": "Impairment loss as per Ind AS 115 shall be recognised in Answer:",
+    "question": "Impairment loss as per Ind AS 115 shall be recognised in ",
     "options": [
       "(a) Other Comprehensive Income",
       "(b) Profit or Loss",
@@ -1025,7 +1025,7 @@
   {
     "id": 80,
     "type": "independent",
-    "question": "Ind AS 115 applies to Answer:",
+    "question": "Ind AS 115 applies to ",
     "options": [
       "(a) Lease contracts within the scope of Ind AS 116 Leases",
       "(b) Financial instruments and other contractual rights or obligations within the scope of Ind AS 109, Ind AS 110, Ind AS 111, Ind AS 27 and Ind AS 28",
@@ -1038,7 +1038,7 @@
   {
     "id": 81,
     "type": "independent",
-    "question": "_________ is the amount of consideration to which an entity expects to be entitled in exchange for transferring promised goods or services to a customer, excluding amounts collected on behalf of third parties Answer:",
+    "question": "_________ is the amount of consideration to which an entity expects to be entitled in exchange for transferring promised goods or services to a customer, excluding amounts collected on behalf of third parties ",
     "options": [
       "(a) Transaction price",
       "(b) Market price",
@@ -1051,7 +1051,7 @@
   {
     "id": 82,
     "type": "independent",
-    "question": "Where the penalty is inherent in determination of transaction price of a contract, it shall form part of Answer:",
+    "question": "Where the penalty is inherent in determination of transaction price of a contract, it shall form part of ",
     "options": [
       "(a) Fixed consideration",
       "(b) Variable consideration",
@@ -1064,7 +1064,7 @@
   {
     "id": 83,
     "type": "independent",
-    "question": "Which of the following cost shall be recognises as an asset while obtaining a contract with a customer if the entity expects to recover those costs Answer:",
+    "question": "Which of the following cost shall be recognises as an asset while obtaining a contract with a customer if the entity expects to recover those costs ",
     "options": [
       "(a) Sales commission",
       "(b) General and administrative costs",
@@ -1077,7 +1077,7 @@
   {
     "id": 84,
     "type": "independent",
-    "question": "An entity has entered into a contract with a customer which does not meet the criteria for identifying the contract and the entity has received consideration from the customer. In such a case the entity shall recognise the consideration as revenue only when Answer:",
+    "question": "An entity has entered into a contract with a customer which does not meet the criteria for identifying the contract and the entity has received consideration from the customer. In such a case the entity shall recognise the consideration as revenue only when ",
     "options": [
       "(a) the entity has no remaining obligations to transfer goods or services to the customer and consideration promised by the customer has been received by the entity and is non-refundable",
       "(b) the contract has been terminated and the consideration received from the customer is non-refundable",
@@ -1103,7 +1103,7 @@
   {
     "id": 86,
     "type": "independent",
-    "question": "Hari Limited is a manufacturer of Carton Boxes. The cost of the stock as on 31.12.20X1 was ₹ 50 per box. The accountant noted that the subsequent sale was made on 31.1.20X2 at ₹ 40 per box. The accountant also noted that there were subsequent expenses for some rectification on the entire physical stock that was available as at year end at the rate of ₹ 15 per box to saleable condition. The company seeks your opinion as to the amount of net realisable value and written down loss for the closing stock as per Ind AS 2. Answer:",
+    "question": "Hari Limited is a manufacturer of Carton Boxes. The cost of the stock as on 31.12.20X1 was ₹ 50 per box. The accountant noted that the subsequent sale was made on 31.1.20X2 at ₹ 40 per box. The accountant also noted that there were subsequent expenses for some rectification on the entire physical stock that was available as at year end at the rate of ₹ 15 per box to saleable condition. The company seeks your opinion as to the amount of net realisable value and written down loss for the closing stock as per Ind AS 2. ",
     "options": [
       "(a) ₹ 25 and ₹ 10",
       "(b) ₹ 25 and ₹ 25",
@@ -1116,7 +1116,7 @@
   {
     "id": 87,
     "type": "independent",
-    "question": "At the end of an accounting period, the cost of a company's inventory is ₹ 4,50,000. This includes damaged items with a cost of ₹ 25,000 which are expected to be sold for only ₹ 10,000 (less selling expenses of 5%). All other items of inventory have a net realisable value which exceeds cost. As per Ind AS 2, the amount at which the company's inventory should be recognized at the end of the period is: Answer:",
+    "question": "At the end of an accounting period, the cost of a company's inventory is ₹ 4,50,000. This includes damaged items with a cost of ₹ 25,000 which are expected to be sold for only ₹ 10,000 (less selling expenses of 5%). All other items of inventory have a net realisable value which exceeds cost. As per Ind AS 2, the amount at which the company's inventory should be recognized at the end of the period is: ",
     "options": [
       "(a) ₹ 4,25,000",
       "(b) ₹ 4,50,000",
@@ -1129,7 +1129,7 @@
   {
     "id": 88,
     "type": "independent",
-    "question": "W Limited, a company manufactures and sells towels and bedsheets using cotton, yarn, dyes and chemicals. W limited also sells cotton and intermediator product yarn occasionally in exceptional cases. Which of the following items are to be classified as inventories in books of accounts of W limited: Answer:",
+    "question": "W Limited, a company manufactures and sells towels and bedsheets using cotton, yarn, dyes and chemicals. W limited also sells cotton and intermediator product yarn occasionally in exceptional cases. Which of the following items are to be classified as inventories in books of accounts of W limited: ",
     "options": [
       "(a) Cotton, yarn, towel, bedsheets, dyes and Chemicals",
       "(b) Towel and Bedsheets only",
@@ -1142,7 +1142,7 @@
   {
     "id": 89,
     "type": "independent",
-    "question": "Which of the following inventory would be measured at lower of cost and net realisable value? Answer:",
+    "question": "Which of the following inventory would be measured at lower of cost and net realisable value? ",
     "options": [
       "(a) Sand",
       "(b) Barite",
@@ -1155,7 +1155,7 @@
   {
     "id": 90,
     "type": "independent",
-    "question": "Normal Annual Capacity of the Plant X is 1,000 Units. During the year ended 31st March 20X2, the company is able to produce only 700 units (due to sudden strike of union labour). During the current year, company have incurred ₹ 21,000 of fixed over heads. Inventory Quantity as at 31.3.20X2 is 200 Units. Determine the amount of fixed overheads allocation that needs to be done on the inventory lying in hand as at 31.3.20X2 as per Ind AS 2? Answer:",
+    "question": "Normal Annual Capacity of the Plant X is 1,000 Units. During the year ended 31st March 20X2, the company is able to produce only 700 units (due to sudden strike of union labour). During the current year, company have incurred ₹ 21,000 of fixed over heads. Inventory Quantity as at 31.3.20X2 is 200 Units. Determine the amount of fixed overheads allocation that needs to be done on the inventory lying in hand as at 31.3.20X2 as per Ind AS 2? ",
     "options": [
       "(a) ₹ 6,000",
       "(b) ₹ 10,000",
@@ -1168,7 +1168,7 @@
   {
     "id": 91,
     "type": "independent",
-    "question": "P Ltd. has a plant with the normal capacity to produce 5,00,000 units of a product per annum and the expected fixed overhead is ₹ 15,00,000. However, actual production is 3,75,000 units. Amount of fixed overhead to be included in the cost of inventory would be Answer:",
+    "question": "P Ltd. has a plant with the normal capacity to produce 5,00,000 units of a product per annum and the expected fixed overhead is ₹ 15,00,000. However, actual production is 3,75,000 units. Amount of fixed overhead to be included in the cost of inventory would be ",
     "options": [
       "(a) ₹ 15,00,000",
       "(b) ₹ 11,25,000",
@@ -1181,7 +1181,7 @@
   {
     "id": 92,
     "type": "independent",
-    "question": "A Ltd shipped inventory on consignment to B Ltd. How should the consigned inventory to be treated assuming the inventory is unsold by B Ltd.? Answer:",
+    "question": "A Ltd shipped inventory on consignment to B Ltd. How should the consigned inventory to be treated assuming the inventory is unsold by B Ltd.? ",
     "options": [
       "(a) To be measured as Inventory in A Ltd book",
       "(b) To be measured as Inventory in B Ltd book",
@@ -1194,7 +1194,7 @@
   {
     "id": 93,
     "type": "independent",
-    "question": "V Ltd. purchases cars from several countries and sells them to Asian countries. V Ltd. incurred many expenses during the period on such cars from their purchase to sale. Which of the following cost is allowed for inclusion in the cost of inventory? Answer:",
+    "question": "V Ltd. purchases cars from several countries and sells them to Asian countries. V Ltd. incurred many expenses during the period on such cars from their purchase to sale. Which of the following cost is allowed for inclusion in the cost of inventory? ",
     "options": [
       "(a) ₹ 20,00,000 as Salaries of accounting department",
       "(b) ₹ 15,00,000 of Sales commission paid to sales agents",
@@ -1207,7 +1207,7 @@
   {
     "id": 94,
     "type": "independent",
-    "question": "Progress Ltd chooses to revalue property under Ind AS 16. On 31st March 20X1, their head office building is valued at ₹ 30 lakh when it is recorded in the financial statements at historical cost of ₹ 25 lakh with ₹ 4.5 lakh of accumulated depreciation charged against it. Which of the following statements is true regarding the accounting treatment of the property? Answer:",
+    "question": "Progress Ltd chooses to revalue property under Ind AS 16. On 31st March 20X1, their head office building is valued at ₹ 30 lakh when it is recorded in the financial statements at historical cost of ₹ 25 lakh with ₹ 4.5 lakh of accumulated depreciation charged against it. Which of the following statements is true regarding the accounting treatment of the property? ",
     "options": [
       "(a) A revaluation gain of ₹ 5 lakh should be recorded through other comprehensive income, grouped with other items that will not subsequently be reclassified to profit or loss",
       "(b) A revaluation gain of ₹ 5 lakh should be recorded through profit or loss",
@@ -1220,7 +1220,7 @@
   {
     "id": 95,
     "type": "independent",
-    "question": "Under Ind AS 16, which two subsequent accounting treatments are allowed subsequently to initial recognition? Answer:",
+    "question": "Under Ind AS 16, which two subsequent accounting treatments are allowed subsequently to initial recognition? ",
     "options": [
       "(a) Cost model and present value model",
       "(b) Cost model and revaluation model",
@@ -1233,7 +1233,7 @@
   {
     "id": 96,
     "type": "independent",
-    "question": "When it is _____that future economic benefits associated with an asset will flow to the entity, and the cost of the asset can be _____ measured, it should be recognized as an asset. Answer:",
+    "question": "When it is _____that future economic benefits associated with an asset will flow to the entity, and the cost of the asset can be _____ measured, it should be recognized as an asset. ",
     "options": [
       "(a) Possible, reasonably",
       "(b) Possible, reliably",
@@ -1246,7 +1246,7 @@
   {
     "id": 97,
     "type": "independent",
-    "question": "Which of these is an allowable cost of an asset for capitalisation under Ind AS 16? Answer:",
+    "question": "Which of these is an allowable cost of an asset for capitalisation under Ind AS 16? ",
     "options": [
       "(a) Professional fees",
       "(b) General overheads",
@@ -1259,7 +1259,7 @@
   {
     "id": 98,
     "type": "independent",
-    "question": "Under Ind AS 16, how often should the useful life of an asset be reviewed? Answer:",
+    "question": "Under Ind AS 16, how often should the useful life of an asset be reviewed? ",
     "options": [
       "(a) At least at each financial year end",
       "(b) Every six months",
@@ -1272,7 +1272,7 @@
   {
     "id": 99,
     "type": "independent",
-    "question": "When an asset is sold or disposed of, where is the gain or loss recognized? Answer:",
+    "question": "When an asset is sold or disposed of, where is the gain or loss recognized? ",
     "options": [
       "(a) Asset disposal account",
       "(b) Profit and loss",
@@ -1285,7 +1285,7 @@
   {
     "id": 100,
     "type": "independent",
-    "question": "A Limited has stopped manufacturing operations in its plant for 3 months in the year ended 31st March, 20X1. How should A limited account for depreciation relating to the 3 months in which plant was idle under Ind AS 16? Answer:",
+    "question": "A Limited has stopped manufacturing operations in its plant for 3 months in the year ended 31st March, 20X1. How should A limited account for depreciation relating to the 3 months in which plant was idle under Ind AS 16? ",
     "options": [
       "(a) No depreciation should be charged for 3 months",
       "(b) Depreciation for 3 months in which plant was idle should be recognized in other comprehensive income",
@@ -1298,7 +1298,7 @@
   {
     "id": 101,
     "type": "independent",
-    "question": "If one large asset has a number of individual components with different useful lives, how should this be depreciated? Answer:",
+    "question": "If one large asset has a number of individual components with different useful lives, how should this be depreciated? ",
     "options": [
       "(a) Treat as one asset and depreciate in accordance with highest useful life of the component",
       "(b) Break down into different components and depreciate every component separately as per the useful life of that component",
@@ -1311,7 +1311,7 @@
   {
     "id": 102,
     "type": "independent",
-    "question": "India Turnings Limited has adopted revaluation model, as per Ind AS, since 1st April, 20X1 to measure its property, plant and equipment (PPE) and have revalued it as follows: (i) As on 1st April, 20X1 PPE has been revalued up by ₹ 3,00,000. (ii) As on 31st March, 20X2 PPE has been revalued down by ₹ 3,60,000 (iii) As on 31st March, 20X3 PPE has been revalued up by ₹ 5,00,000 How will the increase in year 20X2-20X3 be recognized in the financials of India Turnings Limited? Answer:",
+    "question": "India Turnings Limited has adopted revaluation model, as per Ind AS, since 1st April, 20X1 to measure its property, plant and equipment (PPE) and have revalued it as follows: (i) As on 1st April, 20X1 PPE has been revalued up by ₹ 3,00,000. (ii) As on 31st March, 20X2 PPE has been revalued down by ₹ 3,60,000 (iii) As on 31st March, 20X3 PPE has been revalued up by ₹ 5,00,000 How will the increase in year 20X2-20X3 be recognized in the financials of India Turnings Limited? ",
     "options": [
       "(a) ₹ 5,00,000 is credited to other comprehensive income",
       "(b) ₹ 60,000 is credited to profit and loss account and ₹ 4,40,000 is credited to other comprehensive income",
@@ -1324,7 +1324,7 @@
   {
     "id": 103,
     "type": "independent",
-    "question": "When the revaluation model is used for PPE the gain on revaluation should be treated as Answer:",
+    "question": "When the revaluation model is used for PPE the gain on revaluation should be treated as ",
     "options": [
       "(a) Income in the Statement of profit and loss for the period",
       "(b) Gain from revaluation in the income statement",
@@ -1337,7 +1337,7 @@
   {
     "id": 104,
     "type": "independent",
-    "question": "Borrowing costs do not include Answer:",
+    "question": "Borrowing costs do not include ",
     "options": [
       "(a) Interest expense calculated using the effective interest rate method as described in Ind AS 109 Financial Instruments",
       "(b) Interest in respect of lease liabilities recognized in accordance with Ind AS 116, Leases",
@@ -1350,7 +1350,7 @@
   {
     "id": 105,
     "type": "independent",
-    "question": "In determining the borrowing costs to be capitalised, the amount of expenditure on a qualifying asset include only those expenditures that have resulted in Answer:",
+    "question": "In determining the borrowing costs to be capitalised, the amount of expenditure on a qualifying asset include only those expenditures that have resulted in ",
     "options": [
       "(a) Payments of cash",
       "(b) Transfers of other assets",
@@ -1363,7 +1363,7 @@
   {
     "id": 106,
     "type": "independent",
-    "question": "In determining the borrowing costs to be capitalised, the amount of expenditure on a qualifying asset are not reduced by Answer:",
+    "question": "In determining the borrowing costs to be capitalised, the amount of expenditure on a qualifying asset are not reduced by ",
     "options": [
       "(a) Progress payments received",
       "(b) Grants received in connection with the asset",
@@ -1376,7 +1376,7 @@
   {
     "id": 107,
     "type": "independent",
-    "question": "Which of the following would be considered as borrowing cost to be capitalised? Answer:",
+    "question": "Which of the following would be considered as borrowing cost to be capitalised? ",
     "options": [
       "(a) Interest on working capital",
       "(b) Interest on borrowings used for manufacturing inventories in large quantities on a repetitive basis",
@@ -1389,7 +1389,7 @@
   {
     "id": 108,
     "type": "independent",
-    "question": "What will be the treatment of exchange difference resulting into unrealised gain while capitalising the borrowing cost on foreign currency borrowings taken for construction of a qualifying asset? Answer:",
+    "question": "What will be the treatment of exchange difference resulting into unrealised gain while capitalising the borrowing cost on foreign currency borrowings taken for construction of a qualifying asset? ",
     "options": [
       "(a) It would not be adjusted to interest even if there was an adjustment to interest in the previous year on account of unrealised exchange loss on settlement or translation of same borrowings",
       "(b) It would be adjusted to interest to the extent of an adjustment to interest in the previous year on account of unrealised exchange loss on settlement or translation of same borrowings",
@@ -1402,7 +1402,7 @@
   {
     "id": 109,
     "type": "independent",
-    "question": "Which of the following is not a qualifying asset? Answer:",
+    "question": "Which of the following is not a qualifying asset? ",
     "options": [
       "(a) Financial assets",
       "(b) Investment properties",
@@ -1415,7 +1415,7 @@
   {
     "id": 110,
     "type": "independent",
-    "question": "Adit Labs are planning to expand their business and open two more branches in the vicinity of two new hospitals being built in the area. The enterprise is using funds from their general borrowings for this expansion project. The finance director of the company has briefly read about the capitalisation of the interest paid on the borrowings. He has sought your clarification on this matter if his entity can capitalise interest of 10% which is the highest interest rate of all the borrowings they have made during the year. Which of the following are correct about the capitalisation of interest on borrowings made by a company as per Ind AS 23 Borrowing Costs? Answer:",
+    "question": "Adit Labs are planning to expand their business and open two more branches in the vicinity of two new hospitals being built in the area. The enterprise is using funds from their general borrowings for this expansion project. The finance director of the company has briefly read about the capitalisation of the interest paid on the borrowings. He has sought your clarification on this matter if his entity can capitalise interest of 10% which is the highest interest rate of all the borrowings they have made during the year. Which of the following are correct about the capitalisation of interest on borrowings made by a company as per Ind AS 23 Borrowing Costs? ",
     "options": [
       "(a) Finance director is right, and he can use 10% as capitalisation rate for calculating the eligible borrowing costs to be capitalised on the qualifying asset",
       "(b) Capitalisation rate should be weighted average of all the borrowing costs applicable to the borrowings of the enterprise that are outstanding during the period, other than borrowings made specifically for the purpose of obtaining a qualifying asset",
@@ -1428,7 +1428,7 @@
   {
     "id": 111,
     "type": "independent",
-    "question": "The capitalisation rate is Answer:",
+    "question": "The capitalisation rate is ",
     "options": [
       "(a) The weighted average of the borrowing costs applicable to all the general borrowings of the entity that are outstanding during the period",
       "(b) The weighted average of the borrowing costs applicable to all the general and specific borrowings of the entity that are outstanding during the period",
@@ -1441,7 +1441,7 @@
   {
     "id": 112,
     "type": "independent",
-    "question": "Recoverable amount of an asset or cash generating unit is ____________. Answer:",
+    "question": "Recoverable amount of an asset or cash generating unit is ____________. ",
     "options": [
       "(a) Higher of Fair value less costs of disposal and Value in use",
       "(b) Lower of net realisable value and cost",
@@ -1454,7 +1454,7 @@
   {
     "id": 113,
     "type": "independent",
-    "question": "Which of the following is not covered by Ind AS 36, Impairment of Assets? Answer:",
+    "question": "Which of the following is not covered by Ind AS 36, Impairment of Assets? ",
     "options": [
       "(a) Deferred tax assets",
       "(b) Inventory",
@@ -1467,7 +1467,7 @@
   {
     "id": 114,
     "type": "independent",
-    "question": "When a cash-generating unit has an impairment loss, the loss must be firstly applied to_________. Answer:",
+    "question": "When a cash-generating unit has an impairment loss, the loss must be firstly applied to_________. ",
     "options": [
       "(a) Asset with obvious impairment",
       "(b) Goodwill",
@@ -1480,7 +1480,7 @@
   {
     "id": 115,
     "type": "independent",
-    "question": "In case of estimation of cash flows for calculating value in use, future cash flows are estimated in the currency in which they will be generated and then discounted using a discount rate appropriate for that currency. An entity translates the present value using the ____________ at the date of the value in use calculation. Answer:",
+    "question": "In case of estimation of cash flows for calculating value in use, future cash flows are estimated in the currency in which they will be generated and then discounted using a discount rate appropriate for that currency. An entity translates the present value using the ____________ at the date of the value in use calculation. ",
     "options": [
       "(a) Closing rate",
       "(b) Spot exchange rate",
@@ -1493,7 +1493,7 @@
   {
     "id": 116,
     "type": "independent",
-    "question": "In measuring value in use, cash flow projections should be based on the budgets/forecasts covering a maximum period of _______________, unless a longer period can be justified. Answer:",
+    "question": "In measuring value in use, cash flow projections should be based on the budgets/forecasts covering a maximum period of _______________, unless a longer period can be justified. ",
     "options": [
       "(a) Three years",
       "(b) Five years",
@@ -1506,7 +1506,7 @@
   {
     "id": 117,
     "type": "independent",
-    "question": "When an impairment loss occurs, the carrying amount of the asset should be reduced to its __________. Answer:",
+    "question": "When an impairment loss occurs, the carrying amount of the asset should be reduced to its __________. ",
     "options": [
       "(a) Fair Value",
       "(b) Recoverable amount",
@@ -1519,7 +1519,7 @@
   {
     "id": 118,
     "type": "independent",
-    "question": "Smallest identifiable group of assets that generates cash inflows that are largely independent of the cash inflows from other assets or groups of assets is known as ________ Answer:",
+    "question": "Smallest identifiable group of assets that generates cash inflows that are largely independent of the cash inflows from other assets or groups of assets is known as ________ ",
     "options": [
       "(a) Cash-generating unit",
       "(b) Branch",
@@ -1532,7 +1532,7 @@
   {
     "id": 119,
     "type": "independent",
-    "question": "__________ is considered as recoverable amount when it is not possible to measure the fair value less costs of disposal for an asset. Answer:",
+    "question": "__________ is considered as recoverable amount when it is not possible to measure the fair value less costs of disposal for an asset. ",
     "options": [
       "(a) Market value",
       "(b) Replacement value",
@@ -1545,7 +1545,7 @@
   {
     "id": 120,
     "type": "independent",
-    "question": "Which of the following is not an internal indication of impairment? Answer:",
+    "question": "Which of the following is not an internal indication of impairment? ",
     "options": [
       "(a) Economic performance of the asset is worse than expected",
       "(b) Physical damage of the asset",
@@ -1558,7 +1558,7 @@
   {
     "id": 121,
     "type": "independent",
-    "question": "Which of the following is required to be tested for impairment annually irrespective of the presence of indications of impairment or not? Answer:",
+    "question": "Which of the following is required to be tested for impairment annually irrespective of the presence of indications of impairment or not? ",
     "options": [
       "(a) Intangible asset with an indefinite useful life",
       "(b) Intangible asset not yet available for use",
@@ -1571,7 +1571,7 @@
   {
     "id": 122,
     "type": "independent",
-    "question": "A newly set up dot-com entity has recently completed one of its highly publicized research and development projects. It seeks your advice on the accuracy of the following statements made by one of its stakeholders. State which one is true? Answer:",
+    "question": "A newly set up dot-com entity has recently completed one of its highly publicized research and development projects. It seeks your advice on the accuracy of the following statements made by one of its stakeholders. State which one is true? ",
     "options": [
       "(a) Costs incurred during the research phase can be capitalized",
       "(b) Costs incurred during the development phase can be capitalized if criteria such as technical feasibility of the project being established are met",
@@ -1584,7 +1584,7 @@
   {
     "id": 123,
     "type": "independent",
-    "question": "With respect to valuation of goodwill and recognition of the same on acquisition of another entity. Ind AS 38 Intangibles assets establishes general principles for the recognition and measurement of intangible assets in the financial statements. The standard requires any entity to recognize the intangible assets in the financial statements if and only if: i) it is probable that the future economic benefits which are attributable to the asset will flow to the enterprise; and ii) the cost of the asset can be reliably measured Which of the following is NOT correct about the intangible assets? Answer:",
+    "question": "With respect to valuation of goodwill and recognition of the same on acquisition of another entity. Ind AS 38 Intangibles assets establishes general principles for the recognition and measurement of intangible assets in the financial statements. The standard requires any entity to recognize the intangible assets in the financial statements if and only if: i) it is probable that the future economic benefits which are attributable to the asset will flow to the enterprise; and ii) the cost of the asset can be reliably measured Which of the following is NOT correct about the intangible assets? ",
     "options": [
       "(a) The above recognition criteria are applicable to both the costs incurred to acquire intangible assets and those generated internally",
       "(b) Internally generated goodwill is prohibited to be recognized by the standard. Only acquired goodwill can be recognized as an intangible asset in the financial statements",
@@ -1597,7 +1597,7 @@
   {
     "id": 124,
     "type": "independent",
-    "question": "Amortisation of an intangible asset ceases _________. Answer:",
+    "question": "Amortisation of an intangible asset ceases _________. ",
     "options": [
       "(a) when the asset is derecognized",
       "(b) when the asset is withdrawn from use",
@@ -1610,7 +1610,7 @@
   {
     "id": 125,
     "type": "independent",
-    "question": "AG Limited is developing a new production process. During 20X1-20X2, expenditure incurred was ₹ 11 lakhs of which ₹ 8 lakhs was incurred before 1st January, 20X2 and ₹ 3 lakhs was incurred between January and March 20X2. The company is able to demonstrate that on 1st January, 20X2, the production process met the criteria for recognition as an intangible asset. The recoverable amount of the know-how embodied in the process (including future cash outflows to complete the process before it is available for use) is estimated to be ₹ 2 lakhs as at 31st March, 20X2. What is the carrying value of intangible asset at the end of the year? Answer:",
+    "question": "AG Limited is developing a new production process. During 20X1-20X2, expenditure incurred was ₹ 11 lakhs of which ₹ 8 lakhs was incurred before 1st January, 20X2 and ₹ 3 lakhs was incurred between January and March 20X2. The company is able to demonstrate that on 1st January, 20X2, the production process met the criteria for recognition as an intangible asset. The recoverable amount of the know-how embodied in the process (including future cash outflows to complete the process before it is available for use) is estimated to be ₹ 2 lakhs as at 31st March, 20X2. What is the carrying value of intangible asset at the end of the year? ",
     "options": [
       "(a) ₹ 11 lakhs",
       "(b) ₹ 8 lakhs",
@@ -1623,7 +1623,7 @@
   {
     "id": 126,
     "type": "independent",
-    "question": "AG Limited has purchased a computer with various additional software. These are integral part of the computer. Which of the following are true in the context of Ind AS 38? Answer:",
+    "question": "AG Limited has purchased a computer with various additional software. These are integral part of the computer. Which of the following are true in the context of Ind AS 38? ",
     "options": [
       "(a) Recognize Computer and software as tangible asset",
       "(b) Recognize tangible and intangible separately",
@@ -1636,7 +1636,7 @@
   {
     "id": 127,
     "type": "independent",
-    "question": "Which of the following is not covered within the scope of Ind AS 38? Answer:",
+    "question": "Which of the following is not covered within the scope of Ind AS 38? ",
     "options": [
       "(a) Intangible assets held-for-sale in the ordinary course of business",
       "(b) Assets arising from employee benefits",
@@ -1649,7 +1649,7 @@
   {
     "id": 128,
     "type": "independent",
-    "question": "An intangible asset with a finite useful life should be amortised over Answer:",
+    "question": "An intangible asset with a finite useful life should be amortised over ",
     "options": [
       "(a) Its expected useful life",
       "(b) A period determined by management",
@@ -1662,7 +1662,7 @@
   {
     "id": 129,
     "type": "independent",
-    "question": "Which of the following is required to be tested for impairment annually irrespective of the presence of indications of impairment or not? Answer:",
+    "question": "Which of the following is required to be tested for impairment annually irrespective of the presence of indications of impairment or not? ",
     "options": [
       "(a) Intangible asset with an indefinite useful life",
       "(b) Intangible asset not yet available for use",
@@ -1675,7 +1675,7 @@
   {
     "id": 130,
     "type": "independent",
-    "question": "AG Ltd acquired copyrights for ₹ 7,50,000 on 1st April 20X1. The Management assessed the copyrights useful life at 25 years from the date of acquisition. The entity will consume the copyrights future economic benefits evenly over 25 years from the date of acquisition. The fair value of the copyright at 31st March, 20X3 is ₹ 7,00,000. The entity shall measure the carrying amount of the copyright on 31st March, 20X3 at Answer:",
+    "question": "AG Ltd acquired copyrights for ₹ 7,50,000 on 1st April 20X1. The Management assessed the copyrights useful life at 25 years from the date of acquisition. The entity will consume the copyrights future economic benefits evenly over 25 years from the date of acquisition. The fair value of the copyright at 31st March, 20X3 is ₹ 7,00,000. The entity shall measure the carrying amount of the copyright on 31st March, 20X3 at ",
     "options": [
       "(a) ₹ 7,00,000",
       "(b) ₹ 6,90,000",
@@ -1688,7 +1688,7 @@
   {
     "id": 131,
     "type": "independent",
-    "question": "Which of the following items qualify as an intangible asset under Ind AS 38? Answer:",
+    "question": "Which of the following items qualify as an intangible asset under Ind AS 38? ",
     "options": [
       "(a) Advertising and promotion on the launch of a huge product",
       "(b) Operating losses during the initial stages of the project",
@@ -1701,7 +1701,7 @@
   {
     "id": 132,
     "type": "independent",
-    "question": "Which of the following is an example of Investment Property? Answer:",
+    "question": "Which of the following is an example of Investment Property? ",
     "options": [
       "(a) Property held for sale in the ordinary course of sale or in the process of construction or development for such sale",
       "(b) Right of use asset related to property used for business purposes",
@@ -1714,7 +1714,7 @@
   {
     "id": 133,
     "type": "independent",
-    "question": "AG India Limited uses portion of building for their administrative use and let out the remainder portion. Which is not the right approach for dealing with this situation while accounting in the books of the company in accordance with Ind AS 40? Answer:",
+    "question": "AG India Limited uses portion of building for their administrative use and let out the remainder portion. Which is not the right approach for dealing with this situation while accounting in the books of the company in accordance with Ind AS 40? ",
     "options": [
       "(a) Account for the portion separately, if these portions can be sold separately",
       "(b) an investment property, if portions could not be sold separately and insignificant portion can be held for administrative use",
@@ -1727,7 +1727,7 @@
   {
     "id": 134,
     "type": "independent",
-    "question": "AG Limited has purchased a commercial building and let out the same to one of its subsidiaries. How it should be reflected in the consolidated financial statements? Answer:",
+    "question": "AG Limited has purchased a commercial building and let out the same to one of its subsidiaries. How it should be reflected in the consolidated financial statements? ",
     "options": [
       "(a) Owner-occupied from the perspective of the group",
       "(b) Investment property measured at fair value",
@@ -1740,7 +1740,7 @@
   {
     "id": 135,
     "type": "independent",
-    "question": "Which of the following is an example of investment property? Answer:",
+    "question": "Which of the following is an example of investment property? ",
     "options": [
       "(a) Land held for construction of factory",
       "(b) Building rented out to employees as staff quarters",
@@ -1753,7 +1753,7 @@
   {
     "id": 136,
     "type": "independent",
-    "question": "On 1st April 20X1, ABC Limited purchased a new head office building for ₹ 60 crore and on the same day leased out top 3 floors to its subsidiary on a long-term operating lease. The annual rent receivable was ₹ 2 crore starting from 31st March 20X2. On 1st April 20X1, the Directors of the Company estimated that the initial cost of the building should be allocated - ₹ 15 million to the top 3 floors, remainder of the building ₹ 20 million and land component ₹ 25 million. On 31st March 20X2, the property had a fair value of ₹ 64 million out of which 25% was attributable to the top 3 floors. The useful life of the building is 60 years. The carrying value of investment property in the separate / standalone financial statements of ABC Limited as at 31st March 20X2 is: Answer:",
+    "question": "On 1st April 20X1, ABC Limited purchased a new head office building for ₹ 60 crore and on the same day leased out top 3 floors to its subsidiary on a long-term operating lease. The annual rent receivable was ₹ 2 crore starting from 31st March 20X2. On 1st April 20X1, the Directors of the Company estimated that the initial cost of the building should be allocated - ₹ 15 million to the top 3 floors, remainder of the building ₹ 20 million and land component ₹ 25 million. On 31st March 20X2, the property had a fair value of ₹ 64 million out of which 25% was attributable to the top 3 floors. The useful life of the building is 60 years. The carrying value of investment property in the separate / standalone financial statements of ABC Limited as at 31st March 20X2 is: ",
     "options": [
       "(a) ₹ 16 million",
       "(b) ₹ 15 million",
@@ -1766,7 +1766,7 @@
   {
     "id": 137,
     "type": "independent",
-    "question": "At what value the reclassification or transfers between investment property and property, plant and equipment are made? Answer:",
+    "question": "At what value the reclassification or transfers between investment property and property, plant and equipment are made? ",
     "options": [
       "(a) Transfers are made at the carrying amount of the property transferred",
       "(b) Transfers are made at the fair value of the property transferred",
@@ -1779,7 +1779,7 @@
   {
     "id": 138,
     "type": "independent",
-    "question": "Which of the following is not considered as a transfer from or to investment property? Answer:",
+    "question": "Which of the following is not considered as a transfer from or to investment property? ",
     "options": [
       "(a) Commencement of operating lease from undetermined use",
       "(b) Commencement of owner-occupation",
@@ -1792,7 +1792,7 @@
   {
     "id": 139,
     "type": "independent",
-    "question": "Real Estate Limited have acquired an investment property within the meaning of Ind AS 40 Investment Property. The company has details of costs and other related expenses, but it is not sure as to what would be the correct accounting treatment of the said items. Identify the correct statement. Answer:",
+    "question": "Real Estate Limited have acquired an investment property within the meaning of Ind AS 40 Investment Property. The company has details of costs and other related expenses, but it is not sure as to what would be the correct accounting treatment of the said items. Identify the correct statement. ",
     "options": [
       "(a) Start-up costs are not to be capitalised to cost of the investment property except cases where they are necessary to bring the property to the condition necessary for it to be capable of operating in the manner intended by the management",
       "(b) Operating losses incurred before the investment property achieves the planned level of occupancy are not to be capitalised to the cost of investment property",
@@ -1805,7 +1805,7 @@
   {
     "id": 140,
     "type": "independent",
-    "question": "Which of the following characteristics distinguish investment property from owner-occupied property? Answer:",
+    "question": "Which of the following characteristics distinguish investment property from owner-occupied property? ",
     "options": [
       "(a) Property held for sale in the ordinary course of sale",
       "(b) Property held to earn rental or capital appreciation",
@@ -1818,7 +1818,7 @@
   {
     "id": 141,
     "type": "independent",
-    "question": "State which of the following statements is true. Answer:",
+    "question": "State which of the following statements is true. ",
     "options": [
       "(a) An investment property may be a qualifying asset under Ind AS 23 Borrowing Costs",
       "(b) An entity is not required to capitalise the borrowing cost in respect of investment properties even if they are qualifying assets",
@@ -1831,7 +1831,7 @@
   {
     "id": 142,
     "type": "independent",
-    "question": "Gain or loss on remeasurement of non-current asset classified as held for sale which does not meet the definition of discontinued operation should be included in Answer:",
+    "question": "Gain or loss on remeasurement of non-current asset classified as held for sale which does not meet the definition of discontinued operation should be included in ",
     "options": [
       "(a) Profit or loss from continuing operations in statement of profit and loss",
       "(b) Notes to the financial statements",
@@ -1844,7 +1844,7 @@
   {
     "id": 143,
     "type": "independent",
-    "question": "As per Ind AS 105, which of the following is not allowed as a cost to sell? Answer:",
+    "question": "As per Ind AS 105, which of the following is not allowed as a cost to sell? ",
     "options": [
       "(a) Finance cost",
       "(b) Auctioneers commission",
@@ -1857,7 +1857,7 @@
   {
     "id": 144,
     "type": "independent",
-    "question": "SA Ltd. acquires a subsidiary RA Ltd. exclusively with a view of selling it. The subsidiary meets the criteria to be classified as held for sale. The subsidiary remains unsold at the end of close of the year. It will be valued at Answer:",
+    "question": "SA Ltd. acquires a subsidiary RA Ltd. exclusively with a view of selling it. The subsidiary meets the criteria to be classified as held for sale. The subsidiary remains unsold at the end of close of the year. It will be valued at ",
     "options": [
       "(a) Lower of recoverable value or carrying value",
       "(b) Fair value less cost to sell",
@@ -1870,7 +1870,7 @@
   {
     "id": 145,
     "type": "independent",
-    "question": "The results of discontinued operation should be disclosed under Answer:",
+    "question": "The results of discontinued operation should be disclosed under ",
     "options": [
       "(a) Single amount in the statement of profit and loss",
       "(b) Part of normal trading profit and loss in the statement of profit and loss",
@@ -1883,7 +1883,7 @@
   {
     "id": 146,
     "type": "independent",
-    "question": "How to measure a non-current asset (or disposal group) that ceases to be classified as held for sale? Answer:",
+    "question": "How to measure a non-current asset (or disposal group) that ceases to be classified as held for sale? ",
     "options": [
       "(a) Lower of carrying amount which would have been had the asset not been classified as held for sale (adjusted for any depreciation, amortisation or revaluations, if any) and recoverable amount at the date of the subsequent decision not to sell or distribute",
       "(b) Lower of carrying amount on the date the asset ceased to be classified as held for sale and recoverable amount at the date of the subsequent decision not to sell or distribute",
@@ -1896,7 +1896,7 @@
   {
     "id": 147,
     "type": "independent",
-    "question": "Which of the following is not a requirement to classify an asset (or disposal group) as held for sale? Answer:",
+    "question": "Which of the following is not a requirement to classify an asset (or disposal group) as held for sale? ",
     "options": [
       "(a) Appropriate level of management has an intention to sell the asset",
       "(b) Active programme to locate a buyer have been initiated",
@@ -1909,7 +1909,7 @@
   {
     "id": 148,
     "type": "independent",
-    "question": "SA Ltd. bought 30% share in RA Ltd. with a view of selling that investment within six months. The investment has been classified as held for sale in accordance with Ind AS 105. How should the investment be treated in the financial statement of the entity? Answer:",
+    "question": "SA Ltd. bought 30% share in RA Ltd. with a view of selling that investment within six months. The investment has been classified as held for sale in accordance with Ind AS 105. How should the investment be treated in the financial statement of the entity? ",
     "options": [
       "(a) It should be accounted as per the equity method",
       "(b) The assets and liabilities should be presented separately from other assets in the balance sheet under Ind AS 105",
@@ -1922,7 +1922,7 @@
   {
     "id": 149,
     "type": "independent",
-    "question": "Non-current asset is classified as held for sale, if it is available for _________ sale and sale is ___________ Answer:",
+    "question": "Non-current asset is classified as held for sale, if it is available for _________ sale and sale is ___________ ",
     "options": [
       "(a) Instant, most likely",
       "(b) Immediate, probable",
@@ -1935,7 +1935,7 @@
   {
     "id": 150,
     "type": "independent",
-    "question": "A disposal group is a group of assets Answer:",
+    "question": "A disposal group is a group of assets ",
     "options": [
       "(a) To be disposed in one single transaction",
       "(b) Falling in cash generating unit",
@@ -1948,7 +1948,7 @@
   {
     "id": 151,
     "type": "independent",
-    "question": "How to present a non-current asset (or disposal group) classified as held for sale in the balance sheet? Answer:",
+    "question": "How to present a non-current asset (or disposal group) classified as held for sale in the balance sheet? ",
     "options": [
       "(a) Pooled with other current assets",
       "(b) Pooled with other non-current assets",
@@ -1961,7 +1961,7 @@
   {
     "id": 152,
     "type": "independent",
-    "question": "Lease term includes the periods covered by an extension option if exercise of that option by the lessee is Answer:",
+    "question": "Lease term includes the periods covered by an extension option if exercise of that option by the lessee is ",
     "options": [
       "(a) remote",
       "(b) highly probable",
@@ -1974,7 +1974,7 @@
   {
     "id": 153,
     "type": "independent",
-    "question": "An entity is required to assess whether the contract is or contains, a lease at/on _________ Answer:",
+    "question": "An entity is required to assess whether the contract is or contains, a lease at/on _________ ",
     "options": [
       "(a) Commencement of lease term",
       "(b) Obtaining the possession of identified asset",
@@ -1987,7 +1987,7 @@
   {
     "id": 154,
     "type": "independent",
-    "question": "SA Ltd. has taken a building on lease from RA Ltd. for 10 years to operate a restaurant. As per the contract, SA Ltd. has decision-making right regarding all the operations and usage of the restaurant. However, as per the contract, RA Ltd. has a right to restrict SA Ltd. from selling any kind of non-vegetarian item in the restaurant. The restriction rights of RA Ltd. will become exercisable only after 6 years. Whether the contract contains a lease? Answer:",
+    "question": "SA Ltd. has taken a building on lease from RA Ltd. for 10 years to operate a restaurant. As per the contract, SA Ltd. has decision-making right regarding all the operations and usage of the restaurant. However, as per the contract, RA Ltd. has a right to restrict SA Ltd. from selling any kind of non-vegetarian item in the restaurant. The restriction rights of RA Ltd. will become exercisable only after 6 years. Whether the contract contains a lease? ",
     "options": [
       "(a) contract contains a lease for 10 years as the rights of the lessor are protective in nature",
       "(b) contract contains a lease for 6 years as the lessee has a right to control the use of the asset for a portion of period",
@@ -2000,7 +2000,7 @@
   {
     "id": 155,
     "type": "independent",
-    "question": "According to Ind AS 116, lease liability does not include Answer:",
+    "question": "According to Ind AS 116, lease liability does not include ",
     "options": [
       "(a) Present value of fixed payment",
       "(b) Guaranteed residual value",
@@ -2013,7 +2013,7 @@
   {
     "id": 156,
     "type": "independent",
-    "question": "In case of a contract that contains a lease component and one or more additional lease or non-lease component, lessee is required to allocate the contract consideration to each lease component on the basis of their relative: Answer:",
+    "question": "In case of a contract that contains a lease component and one or more additional lease or non-lease component, lessee is required to allocate the contract consideration to each lease component on the basis of their relative: ",
     "options": [
       "(a) value in use",
       "(b) stand-alone price",
@@ -2026,7 +2026,7 @@
   {
     "id": 157,
     "type": "independent",
-    "question": "According to Ind AS 116, the right of use asset in the books of Lessee shall be depreciated over the Answer:",
+    "question": "According to Ind AS 116, the right of use asset in the books of Lessee shall be depreciated over the ",
     "options": [
       "(a) Lower of the lease term and the asset's useful life",
       "(b) Higher of the lease term and the asset's useful life",
@@ -2039,7 +2039,7 @@
   {
     "id": 158,
     "type": "independent",
-    "question": "According to Ind AS 116, initial measurement of the right of use asset does not include: Answer:",
+    "question": "According to Ind AS 116, initial measurement of the right of use asset does not include: ",
     "options": [
       "(a) Lease liability",
       "(b) Initial direct cost",
@@ -2052,7 +2052,7 @@
   {
     "id": 159,
     "type": "independent",
-    "question": "The lease payments shall be discounted using the Answer:",
+    "question": "The lease payments shall be discounted using the ",
     "options": [
       "(a) Interest rate implicit in the lease or general borrowing rate",
       "(b) Weighted average cost of capital or interest rate implicit in the lease",
@@ -2065,7 +2065,7 @@
   {
     "id": 160,
     "type": "independent",
-    "question": "An entity shall revise the lease term if there is a change in Answer:",
+    "question": "An entity shall revise the lease term if there is a change in ",
     "options": [
       "(a) Non-cancellable period",
       "(b) Economic life of underlying asset",
@@ -2078,7 +2078,7 @@
   {
     "id": 161,
     "type": "independent",
-    "question": "A conditional government grant related to a biological asset measured at its fair value less costs to sell shall be recognised in profit or loss when and only when ____________ Answer:",
+    "question": "A conditional government grant related to a biological asset measured at its fair value less costs to sell shall be recognised in profit or loss when and only when ____________ ",
     "options": [
       "(a) Grant becomes receivable",
       "(b) Conditions attaching to grant are met",
@@ -2091,7 +2091,7 @@
   {
     "id": 162,
     "type": "independent",
-    "question": "Fresho Vineyards Ltd owns a vineyard in the outskirts of Satara city in western Maharashtra. The grape vine plants and the grapes have a combined fair value of ₹. 10,00,000. The purchase cost of vine plants was ₹. 3,00,000 and the fair value of grapes on the plants is ₹ 2,40,000. The company uses the cost model to measure assets classified under Ind AS 16 Property, Plant and Equipment. Which of the following options is the measurement of bearer plants and bearer fruits respectively? Answer:",
+    "question": "Fresho Vineyards Ltd owns a vineyard in the outskirts of Satara city in western Maharashtra. The grape vine plants and the grapes have a combined fair value of ₹. 10,00,000. The purchase cost of vine plants was ₹. 3,00,000 and the fair value of grapes on the plants is ₹ 2,40,000. The company uses the cost model to measure assets classified under Ind AS 16 Property, Plant and Equipment. Which of the following options is the measurement of bearer plants and bearer fruits respectively? ",
     "options": [
       "(a) ₹ 3,00,000, ₹ 2,40,000",
       "(b) ₹ 7,60,000, ₹ 2,40,000",
@@ -2104,7 +2104,7 @@
   {
     "id": 163,
     "type": "independent",
-    "question": "Which of the following are considered as bearer plants and not to be accounted in accordance with Ind AS 41? Answer:",
+    "question": "Which of the following are considered as bearer plants and not to be accounted in accordance with Ind AS 41? ",
     "options": [
       "(a) Plants cultivated to be harvested as agricultural produce (for example trees grown for use as lumber)",
       "(b) Plants which gives fruits in a particular season for more than one year (for example mango tree)",
@@ -2117,7 +2117,7 @@
   {
     "id": 164,
     "type": "independent",
-    "question": "Generally, biological assets relating to agricultural activity should be measured using Answer:",
+    "question": "Generally, biological assets relating to agricultural activity should be measured using ",
     "options": [
       "(a) Historical cost",
       "(b) Cost less depreciation less impairment",
@@ -2130,7 +2130,7 @@
   {
     "id": 165,
     "type": "independent",
-    "question": "Which of the following combination is false regarding the definition of a biological asset and agriculture produce in Ind AS 41? Answer:",
+    "question": "Which of the following combination is false regarding the definition of a biological asset and agriculture produce in Ind AS 41? ",
     "options": [
       "(a) Agricultural land, Paddy",
       "(b) Bushes, Leaf",
@@ -2143,7 +2143,7 @@
   {
     "id": 166,
     "type": "independent",
-    "question": "Agricultural activity involves biological transformation and harvest of biological asset Answer:",
+    "question": "Agricultural activity involves biological transformation and harvest of biological asset ",
     "options": [
       "(a) for sale",
       "(b) for conversion into agricultural produce",
@@ -2156,7 +2156,7 @@
   {
     "id": 167,
     "type": "independent",
-    "question": "Gain/Loss arising from initial recognition of a biological asset and from a change in the value of biological assets should be recognised in Answer:",
+    "question": "Gain/Loss arising from initial recognition of a biological asset and from a change in the value of biological assets should be recognised in ",
     "options": [
       "(a) Statement of profit and loss for the period in which it arises",
       "(b) Recognised through statement of profit and loss as other comprehensive income item",
@@ -2169,7 +2169,7 @@
   {
     "id": 168,
     "type": "independent",
-    "question": "Which of the following is the criteria for recognizing the biological asset in books according to Ind AS 41? Answer:",
+    "question": "Which of the following is the criteria for recognizing the biological asset in books according to Ind AS 41? ",
     "options": [
       "(a) Control the asset",
       "(b) Future economic benefit will flow",
@@ -2182,7 +2182,7 @@
   {
     "id": 169,
     "type": "independent",
-    "question": "Which of the following is not dealt with by Ind AS 41 Agriculture? Answer:",
+    "question": "Which of the following is not dealt with by Ind AS 41 Agriculture? ",
     "options": [
       "(a) biological assets",
       "(b) agriculture produce at the point of harvest",
@@ -2195,7 +2195,7 @@
   {
     "id": 170,
     "type": "independent",
-    "question": "Fair value less costs to sell at the point of harvest of Agricultural produce becomes_______ at that date when applying Ind AS 2 or other Ind AS Answer:",
+    "question": "Fair value less costs to sell at the point of harvest of Agricultural produce becomes_______ at that date when applying Ind AS 2 or other Ind AS ",
     "options": [
       "(a) Cost",
       "(b) Market Value",
@@ -2208,7 +2208,7 @@
   {
     "id": 171,
     "type": "independent",
-    "question": "How is a grant recognized in profit or loss when it is set up as deferred income? Answer:",
+    "question": "How is a grant recognized in profit or loss when it is set up as deferred income? ",
     "options": [
       "(a) It is recognized as income in the year the grant is received",
       "(b) It is recognized in profit or loss on a systematic basis over the useful life of the asset",
@@ -2221,7 +2221,7 @@
   {
     "id": 172,
     "type": "independent",
-    "question": "According to Ind AS 20 , when should government grants be recognized by an entity? Answer:",
+    "question": "According to Ind AS 20 , when should government grants be recognized by an entity? ",
     "options": [
       "(a) As soon as the grant is offered by the government",
       "(b) Once the entity fulfills the conditions attached to the grants",
@@ -2234,7 +2234,7 @@
   {
     "id": 173,
     "type": "independent",
-    "question": "According to Ind AS 20, which of the following is included in the definition of \"government\"? Answer:",
+    "question": "According to Ind AS 20, which of the following is included in the definition of \"government\"? ",
     "options": [
       "(a) Local and national bodies only",
       "(b) Government agencies only",
@@ -2247,7 +2247,7 @@
   {
     "id": 174,
     "type": "independent",
-    "question": "Which Ind AS provides guidance on accounting for government grants and disclosure of government assistance? Answer:",
+    "question": "Which Ind AS provides guidance on accounting for government grants and disclosure of government assistance? ",
     "options": [
       "(a) Ind AS 115",
       "(b) Ind AS 20",
@@ -2260,7 +2260,7 @@
   {
     "id": 175,
     "type": "independent",
-    "question": "In respect of an entity which is a first-time adopter of Ind AS, Ind AS 102 would not necessarily be required to be applied to which of the following equity instruments? Answer:",
+    "question": "In respect of an entity which is a first-time adopter of Ind AS, Ind AS 102 would not necessarily be required to be applied to which of the following equity instruments? ",
     "options": [
       "(a) Equity instruments that vested before date of transition to Ind AS",
       "(b) Equity instruments that vested after date of transition to Ind AS",
@@ -2273,7 +2273,7 @@
   {
     "id": 176,
     "type": "independent",
-    "question": "Silver Jubilee Motors granted 2,000 share options to each of its three Branch Manager on 1 April 2017, subject to the Branch Managers being in employment till 31 March 2020. The options will vest on 31 March 2020 only if the company’s share price reaches INR 14 per share at that time. The fair value of each option on 1 April 2017 is INR 10. The share price at 31 March 2018 is INR 8 and it is not anticipated that it will rise over the next two years. Further, it is anticipated on 31 March 2018 that only two Branch Managers will be in employment by 31 March 2020. Determine the value of share option to be recorded per Ind AS 102 Share Based Payment in the Balance Sheet for the year ended 31 March 2018. Answer:",
+    "question": "Silver Jubilee Motors granted 2,000 share options to each of its three Branch Manager on 1 April 2017, subject to the Branch Managers being in employment till 31 March 2020. The options will vest on 31 March 2020 only if the company’s share price reaches INR 14 per share at that time. The fair value of each option on 1 April 2017 is INR 10. The share price at 31 March 2018 is INR 8 and it is not anticipated that it will rise over the next two years. Further, it is anticipated on 31 March 2018 that only two Branch Managers will be in employment by 31 March 2020. Determine the value of share option to be recorded per Ind AS 102 Share Based Payment in the Balance Sheet for the year ended 31 March 2018. ",
     "options": [
       "(a) INR 20,000",
       "(b) INR 13,333",
@@ -2286,7 +2286,7 @@
   {
     "id": 177,
     "type": "independent",
-    "question": "On 1 April 20X1, ABC Ltd acquired an item of plant for an agreed consideration of its own 1,000 shares. The plant was received on same date and the obligation to transfer shares was to be settled on 1 May 20X1. The fair value of the item of the plant was ₹ 10,000 on 1 April 20X1. ABC Ltd. share price was INR 8.00 on 1 April 20X1 and INR 9.00 on 31 March 20X2. In accordance with Ind AS 102 Share-based Payment, ABC Ltd should: Answer:",
+    "question": "On 1 April 20X1, ABC Ltd acquired an item of plant for an agreed consideration of its own 1,000 shares. The plant was received on same date and the obligation to transfer shares was to be settled on 1 May 20X1. The fair value of the item of the plant was ₹ 10,000 on 1 April 20X1. ABC Ltd. share price was INR 8.00 on 1 April 20X1 and INR 9.00 on 31 March 20X2. In accordance with Ind AS 102 Share-based Payment, ABC Ltd should: ",
     "options": [
       "(a) remeasure the equity to 9,000 on 31 March 20X2",
       "(b) initially recognise the plant and equity at 8,000 on 1 April 20X1",
@@ -2299,7 +2299,7 @@
   {
     "id": 178,
     "type": "independent",
-    "question": "While recognizing the expenses for paid leave to employees which are carried forward to next year if unutilized. An employee can utilize such carry forward leaves anytime subject to maximum of 30 accumulated leaves. How should the Company recognize re-measurement of liability comprising the actuarial gain/loss? Answer:",
+    "question": "While recognizing the expenses for paid leave to employees which are carried forward to next year if unutilized. An employee can utilize such carry forward leaves anytime subject to maximum of 30 accumulated leaves. How should the Company recognize re-measurement of liability comprising the actuarial gain/loss? ",
     "options": [
       "(a) In the statement of profit or loss",
       "(b) In other comprehensive income as item to be reclassified to profit or loss",
@@ -2312,7 +2312,7 @@
   {
     "id": 179,
     "type": "independent",
-    "question": "An entity has decided to improve its defined benefit pension scheme. The benefit payable will be determined by reference to 60 years of service rather than 80 years of service. As a result the deemed benefit pension liability will increase by ₹ 2 Crores. The average remaining service lives of its employees is 10 years. The Company wants to understand as to how should the increase in pension liability by ₹ 2 Crores be treated in the financial statements? Answer:",
+    "question": "An entity has decided to improve its defined benefit pension scheme. The benefit payable will be determined by reference to 60 years of service rather than 80 years of service. As a result the deemed benefit pension liability will increase by ₹ 2 Crores. The average remaining service lives of its employees is 10 years. The Company wants to understand as to how should the increase in pension liability by ₹ 2 Crores be treated in the financial statements? ",
     "options": [
       "(a) The past service cost should be charged against retained profit",
       "(b) The past service cost should be charged against profit or loss for the year",
@@ -2325,7 +2325,7 @@
   {
     "id": 180,
     "type": "independent",
-    "question": "How should we treat maternity or paternity leaves while accruing liability for compensated absences as per actuarial valuation? Answer:",
+    "question": "How should we treat maternity or paternity leaves while accruing liability for compensated absences as per actuarial valuation? ",
     "options": [
       "(a) Depends on accounting policy of the company",
       "(b) Should be included for actuarial valuation",
@@ -2338,7 +2338,7 @@
   {
     "id": 181,
     "type": "independent",
-    "question": "From the following items, identify what must be classified as other long-term benefits under Ind AS 19? Answer:",
+    "question": "From the following items, identify what must be classified as other long-term benefits under Ind AS 19? ",
     "options": [
       "(a) Paid maternity leave",
       "(b) Cash bonus payable in August 20X3 for results obtained up to 31st March, 20X3",
@@ -2351,7 +2351,7 @@
   {
     "id": 182,
     "type": "independent",
-    "question": "While accounting for a defined benefit obligation, there is net interest to be recognized in profit or loss. Based on the prevailing accounting practices, which of the following statement is true? Answer:",
+    "question": "While accounting for a defined benefit obligation, there is net interest to be recognized in profit or loss. Based on the prevailing accounting practices, which of the following statement is true? ",
     "options": [
       "(a) Net interest cost shall be recognized as 'employee benefit expenses' in the statement of profit or loss",
       "(b) Net interest cost shall be recognized as 'finance cost' in the statement of profit or loss",
@@ -2364,7 +2364,7 @@
   {
     "id": 183,
     "type": "independent",
-    "question": "As per Ind AS 37 Provisions, Contingent Liabilities and Contingent Assets, where measurement uncertainty exists, which one of the following methods is NOT an appropriate valuation for a provision based on accounting standards? Answer:",
+    "question": "As per Ind AS 37 Provisions, Contingent Liabilities and Contingent Assets, where measurement uncertainty exists, which one of the following methods is NOT an appropriate valuation for a provision based on accounting standards? ",
     "options": [
       "(a) the mid-point of a range of equally likely outcomes of expenditure",
       "(b) no provision should be recognised where measurement uncertainty exists",
@@ -2377,7 +2377,7 @@
   {
     "id": 184,
     "type": "independent",
-    "question": "Which one of the following represents an appropriate discount rate for measuring a provision based on Ind AS 37 Provisions, Contingent Liabilities and Contingent Assets? Answer:",
+    "question": "Which one of the following represents an appropriate discount rate for measuring a provision based on Ind AS 37 Provisions, Contingent Liabilities and Contingent Assets? ",
     "options": [
       "(a) market yields on national government bonds",
       "(b) market yields on high-quality corporate bonds",
@@ -2390,7 +2390,7 @@
   {
     "id": 185,
     "type": "independent",
-    "question": "As at 31 March 20X1 (reporting date), ABC Ltd is involved in a legal dispute with one of its supplier in relation to the early termination of the exclusive licence agreement between the two companies. The supplier seeks damages of ₹ 50 crore. The directors of ABC believe that, they will be successful in defending this claim. ABCs lawyers have advised that there is 90% chances that the entity would not be made liable for this claim. In accordance with Ind AS 37 Provisions, Contingent Liabilities and Contingent Assets, which one of the following is the most appropriate option for ABC while preparing its financial statements for 31 March 20X1? Answer:",
+    "question": "As at 31 March 20X1 (reporting date), ABC Ltd is involved in a legal dispute with one of its supplier in relation to the early termination of the exclusive licence agreement between the two companies. The supplier seeks damages of ₹ 50 crore. The directors of ABC believe that, they will be successful in defending this claim. ABCs lawyers have advised that there is 90% chances that the entity would not be made liable for this claim. In accordance with Ind AS 37 Provisions, Contingent Liabilities and Contingent Assets, which one of the following is the most appropriate option for ABC while preparing its financial statements for 31 March 20X1? ",
     "options": [
       "(a) Neither recognition of provision nor disclosure of contingent liability is required",
       "(b) Disclose information about the possible liability as a contingent liability",
@@ -2403,7 +2403,7 @@
   {
     "id": 186,
     "type": "independent",
-    "question": "Which one of the following is a correct statement in relation to provisions and contingencies? Answer:",
+    "question": "Which one of the following is a correct statement in relation to provisions and contingencies? ",
     "options": [
       "(a) An item of a contingent nature may be recognised, but not disclosed, in the body of the financial statements",
       "(b) Ind AS 37 Provisions, Contingent Liabilities and Contingent Assets applies to provisions to perform land rehabilitation activity",
@@ -2416,7 +2416,7 @@
   {
     "id": 187,
     "type": "independent",
-    "question": "Entity A has calculated taxable temporary differences of ₹ 50,00,000 and deductible temporary differences of ₹ 20,00,000 on separate items. The tax rate of the current year is 35%. However, tax rate in the previous year is 30% and it is expected that in future the tax rate would be 40%. What basis should be used for measurement of deferred tax assets and liabilities? Answer:",
+    "question": "Entity A has calculated taxable temporary differences of ₹ 50,00,000 and deductible temporary differences of ₹ 20,00,000 on separate items. The tax rate of the current year is 35%. However, tax rate in the previous year is 30% and it is expected that in future the tax rate would be 40%. What basis should be used for measurement of deferred tax assets and liabilities? ",
     "options": [
       "(a) 30%",
       "(b) 35%",
@@ -2429,7 +2429,7 @@
   {
     "id": 188,
     "type": "independent",
-    "question": "During the year ended 31 March 20X1, Zee Ltd has acquired 60% shares of Global. In accordance with Ind AS 103 Business Combinations, goodwill arising on acquisition of subsidiary amounted to INR 20 lakh. The tax rate applicable for Zee Ltd is 30% The deferred tax liability relating to goodwill will be: Answer:",
+    "question": "During the year ended 31 March 20X1, Zee Ltd has acquired 60% shares of Global. In accordance with Ind AS 103 Business Combinations, goodwill arising on acquisition of subsidiary amounted to INR 20 lakh. The tax rate applicable for Zee Ltd is 30% The deferred tax liability relating to goodwill will be: ",
     "options": [
       "(a) INR 6,00,000",
       "(b) INR 36,000",
@@ -2442,7 +2442,7 @@
   {
     "id": 189,
     "type": "independent",
-    "question": "To calculate the tax base of a liability for employee benefits, which one of the following formulas would be used? Answer:",
+    "question": "To calculate the tax base of a liability for employee benefits, which one of the following formulas would be used? ",
     "options": [
       "(a) Carrying amount + Future assessable amounts",
       "(b) Carrying amount ? Future non-assessable amounts of revenue",
@@ -2455,7 +2455,7 @@
   {
     "id": 190,
     "type": "independent",
-    "question": "Star Ltd expects that it will earn a minimum of ₹ 250 lakh per year for the anticipatable future and will be subject to 30% tax. A liability for ₹ 50 lakh in respect of accrued product warranty costs has been recognised by Star Ltd. For tax purposes, the product warranty costs will be deductible when the enterprise claims or incurs the costs. In accordance with Ind AS 12 Income Taxes, which of the following Star Ltd should recognise as a deferred tax asset /liability? Answer:",
+    "question": "Star Ltd expects that it will earn a minimum of ₹ 250 lakh per year for the anticipatable future and will be subject to 30% tax. A liability for ₹ 50 lakh in respect of accrued product warranty costs has been recognised by Star Ltd. For tax purposes, the product warranty costs will be deductible when the enterprise claims or incurs the costs. In accordance with Ind AS 12 Income Taxes, which of the following Star Ltd should recognise as a deferred tax asset /liability? ",
     "options": [
       "(a) A deferred tax asset of ₹ 15 lakh",
       "(b) A deferred tax liability of ₹ 15 lakh",
@@ -2468,7 +2468,7 @@
   {
     "id": 191,
     "type": "independent",
-    "question": "XYZ Ltd., during the financial year ended 31 March 20X2, disposed of an investment in a foreign operation. Up to the date of disposal, XYZ had to translate the financial statement of the foreign operation from another currency for inclusion in its consolidated financial statements. During prior reporting periods, ₹ 14,000 of exchange difference gains net of tax (pre-tax exchange difference gains ₹ 20,000) had been recognised in OCI in the consolidated financial statements of XYZ Ltd. During the year 20X2 reporting period, ₹ 3,500 exchange difference gain net of tax (pre-tax exchange difference gain ₹ 5,000) up to the date of disposal of the foreign operation had been recognised in OCI. Which one of the following statements is correct in relation to the treatment of the disposal of the foreign operation in the consolidated statement of profit or loss and OCI of XYZ for the year ended 31 March 20X2? Answer:",
+    "question": "XYZ Ltd., during the financial year ended 31 March 20X2, disposed of an investment in a foreign operation. Up to the date of disposal, XYZ had to translate the financial statement of the foreign operation from another currency for inclusion in its consolidated financial statements. During prior reporting periods, ₹ 14,000 of exchange difference gains net of tax (pre-tax exchange difference gains ₹ 20,000) had been recognised in OCI in the consolidated financial statements of XYZ Ltd. During the year 20X2 reporting period, ₹ 3,500 exchange difference gain net of tax (pre-tax exchange difference gain ₹ 5,000) up to the date of disposal of the foreign operation had been recognised in OCI. Which one of the following statements is correct in relation to the treatment of the disposal of the foreign operation in the consolidated statement of profit or loss and OCI of XYZ for the year ended 31 March 20X2? ",
     "options": [
       "(a) OCI would include an exchange difference net of tax gain of ₹ 3,500",
       "(b) OCI would include a reclassification adjustment net of tax of ₹ 14,000",
@@ -2481,7 +2481,7 @@
   {
     "id": 192,
     "type": "independent",
-    "question": "XYZ Ltd prepares consolidated financial statements. During the financial year ended 31st March 20X2, XYZ disposed of an investment in a foreign operation. Up to the date of disposal, XYZ had to translate the financial statement of the foreign operation from another currency for inclusion in its consolidated financial statements. During prior reporting periods, ₹ 14,000 of exchange difference gains net of tax (pre-tax exchange difference gains ₹ 20,000) had been recognised in other comprehensive income in the consolidated financial statements of XYZ Ltd. During the reporting period ending on 31st March, 20X2, ₹ 3,500 exchange difference gain net of tax (pre-tax exchange difference gain ₹ 5,000) up to the date of disposal of the foreign operation had been recognised in other comprehensive income. Which one of the following statements is correct in relation to the treatment of the disposal of the foreign operation in the consolidated statement of profit and loss and other comprehensive income of XYZ Ltd. for the year ended 31st March 20X2? Answer:",
+    "question": "XYZ Ltd prepares consolidated financial statements. During the financial year ended 31st March 20X2, XYZ disposed of an investment in a foreign operation. Up to the date of disposal, XYZ had to translate the financial statement of the foreign operation from another currency for inclusion in its consolidated financial statements. During prior reporting periods, ₹ 14,000 of exchange difference gains net of tax (pre-tax exchange difference gains ₹ 20,000) had been recognised in other comprehensive income in the consolidated financial statements of XYZ Ltd. During the reporting period ending on 31st March, 20X2, ₹ 3,500 exchange difference gain net of tax (pre-tax exchange difference gain ₹ 5,000) up to the date of disposal of the foreign operation had been recognised in other comprehensive income. Which one of the following statements is correct in relation to the treatment of the disposal of the foreign operation in the consolidated statement of profit and loss and other comprehensive income of XYZ Ltd. for the year ended 31st March 20X2? ",
     "options": [
       "(a) Other comprehensive income would include an exchange difference net of tax gain of ₹ 3,500",
       "(b) Other comprehensive income would include a reclassification adjustment net of tax of ₹ 14,000",
@@ -2494,7 +2494,7 @@
   {
     "id": 193,
     "type": "independent",
-    "question": "Parent P owns 80% of the net assets of Subsidiary S. S functional currency is Dinar. S was acquired on 30th September, 20X1 and its net assets fair value was Dinar 40,000. P has recognised a cost of investment amounting to CU 10,675 in its financial statements. The groups accounting policy for goodwill is to recognise it on a proportionate basis. Exchange rates are as follows: 30th September, 20X1 CU 1= 6.5 Dinar 31st December, 20X2 CU 1= 6.0 Dinar Calculate the goodwill to be recognised in the consolidated statement of balance sheet as at 31st December, 20X2 under Ind AS 21 Answer:",
+    "question": "Parent P owns 80% of the net assets of Subsidiary S. S functional currency is Dinar. S was acquired on 30th September, 20X1 and its net assets fair value was Dinar 40,000. P has recognised a cost of investment amounting to CU 10,675 in its financial statements. The groups accounting policy for goodwill is to recognise it on a proportionate basis. Exchange rates are as follows: 30th September, 20X1 CU 1= 6.5 Dinar 31st December, 20X2 CU 1= 6.0 Dinar Calculate the goodwill to be recognised in the consolidated statement of balance sheet as at 31st December, 20X2 under Ind AS 21 ",
     "options": [
       "(a) CU 3,207",
       "(b) CU 3,918",
@@ -2507,7 +2507,7 @@
   {
     "id": 194,
     "type": "independent",
-    "question": "Casper Ltd is a New York based company engaged in the business of manufacturing mobile handsets. Caspers functional currency is the dollar. Casper purchased a machine on credit from a Europian supplier for 6 million on 31 January 2018. At this date the exchange rate was 2 = $1. Casper did not settle the dues until its reporting date i.e. 31 March 20X1. At this date the closing exchange rate was 1.5 = $1. Casper follows cost model for measuring its non-current assets. Which one of the following statements is correct in accordance with Ind AS 21 The Effects of Changes in Foreign Exchange Rates for the period ending 31 March 20X1? Answer:",
+    "question": "Casper Ltd is a New York based company engaged in the business of manufacturing mobile handsets. Caspers functional currency is the dollar. Casper purchased a machine on credit from a Europian supplier for 6 million on 31 January 2018. At this date the exchange rate was 2 = $1. Casper did not settle the dues until its reporting date i.e. 31 March 20X1. At this date the closing exchange rate was 1.5 = $1. Casper follows cost model for measuring its non-current assets. Which one of the following statements is correct in accordance with Ind AS 21 The Effects of Changes in Foreign Exchange Rates for the period ending 31 March 20X1? ",
     "options": [
       "(a) Cost of machine $ 4 million, trade payable $ 3 million, exchange gain $ 1 million",
       "(b) Cost of machine $ 3.0 million, trade payable $ 4 million, exchange loss $ 1 million",
@@ -2520,7 +2520,7 @@
   {
     "id": 195,
     "type": "independent",
-    "question": "Zed Ltd. imported an item of Property, plant and equipment i.e. machinery costing USD 100,000. The exchange rate as at the date of receipt of the Plant and Machinery in India was ₹ 60 = 1 USD. However, at the time of remitting the payment to the foreign vendor [30 days after receipt of the Plant and machinery in India] the exchange rate was ₹ 62 = 1 USD. Accordingly, ZED Ltd. passed a journal entry debiting Vendor account for ₹ 60,00,000, debiting Exchange loss for ₹ 2,00,000 and crediting bank account for ₹ 62,00,000. At the first balance sheet date after the acquisition of the aforesaid Plant and Machinery, Zed Ltd. opted to use the Revaluation model. The accounting treatment as per Ind AS 21 as regards the exchange loss of ₹ 2,00,000 is as follows: Answer:",
+    "question": "Zed Ltd. imported an item of Property, plant and equipment i.e. machinery costing USD 100,000. The exchange rate as at the date of receipt of the Plant and Machinery in India was ₹ 60 = 1 USD. However, at the time of remitting the payment to the foreign vendor [30 days after receipt of the Plant and machinery in India] the exchange rate was ₹ 62 = 1 USD. Accordingly, ZED Ltd. passed a journal entry debiting Vendor account for ₹ 60,00,000, debiting Exchange loss for ₹ 2,00,000 and crediting bank account for ₹ 62,00,000. At the first balance sheet date after the acquisition of the aforesaid Plant and Machinery, Zed Ltd. opted to use the Revaluation model. The accounting treatment as per Ind AS 21 as regards the exchange loss of ₹ 2,00,000 is as follows: ",
     "options": [
       "(a) ₹ 2,00,000 being a realised exchange loss on a monetary item, it should be recognized in Profit or Loss account",
       "(b) ₹ 2,00,000 being an unrealised exchange loss on a monetary item, it should be recognised in Profit or Loss account",
@@ -2533,7 +2533,7 @@
   {
     "id": 196,
     "type": "independent",
-    "question": "In the context of Ind AS 21, which of the following is not a monetary item? Answer:",
+    "question": "In the context of Ind AS 21, which of the following is not a monetary item? ",
     "options": [
       "(a) Cash and bank balances",
       "(b) Fixed deposits",
@@ -2546,7 +2546,7 @@
   {
     "id": 197,
     "type": "independent",
-    "question": "Pursuant to Ind AS 21, which factor will not be used in determining the entity’s functional currency? Answer:",
+    "question": "Pursuant to Ind AS 21, which factor will not be used in determining the entity’s functional currency? ",
     "options": [
       "(a) The currency that primarily influences the prices at which goods and services are sold",
       "(b) The currency in which the costs of the entity are mainly denominated",
@@ -2559,7 +2559,7 @@
   {
     "id": 198,
     "type": "independent",
-    "question": "Era is a director of Titanic Ltd. She also owns 60% of Gracious Ltd and is a director of, but not a shareholder in, Fortuner Ltd. Eras husband is the sole shareholder in Kite Ltd. Era's daughter holds 6% of the shares in Bluebell Ltd. The only involvement she has in the company is to receive dividends. Which of the following companies would be classified under Ind AS 24 Related Party Disclosures as related parties of Titanic Ltd? Answer:",
+    "question": "Era is a director of Titanic Ltd. She also owns 60% of Gracious Ltd and is a director of, but not a shareholder in, Fortuner Ltd. Eras husband is the sole shareholder in Kite Ltd. Era's daughter holds 6% of the shares in Bluebell Ltd. The only involvement she has in the company is to receive dividends. Which of the following companies would be classified under Ind AS 24 Related Party Disclosures as related parties of Titanic Ltd? ",
     "options": [
       "(a) Gracious Ltd and Kite Ltd",
       "(b) Gracious Ltd only",
@@ -2572,7 +2572,7 @@
   {
     "id": 199,
     "type": "independent",
-    "question": "Mr. K owns all of the issued share capital of entity L. He is also a member of the key management personnel of entity M which, in turn, owns all of the issued share capital of entity N. Which of the following is true about the related party relationships from the above structure? Answer:",
+    "question": "Mr. K owns all of the issued share capital of entity L. He is also a member of the key management personnel of entity M which, in turn, owns all of the issued share capital of entity N. Which of the following is true about the related party relationships from the above structure? ",
     "options": [
       "(a) K is not a related party of L & M",
       "(b) L & M are related parties",
@@ -2585,7 +2585,7 @@
   {
     "id": 200,
     "type": "independent",
-    "question": "Sunbeam Ltd has a 70% subsidiary Hexa Ltd and is a venturer in Texotech, a joint venture company. During the financial year to 31 March 2018, Sunbeam sold goods to both companies. Consolidated financial statements are prepared combining the financial statements of Sunbeam Ltd and Hexa Ltd. Under Ind AS 24 Related Party Disclosures, in the separate financial statements of Sunbeam Ltd for the year ended 31 March 2018, disclosure is required of transactions with Answer:",
+    "question": "Sunbeam Ltd has a 70% subsidiary Hexa Ltd and is a venturer in Texotech, a joint venture company. During the financial year to 31 March 2018, Sunbeam sold goods to both companies. Consolidated financial statements are prepared combining the financial statements of Sunbeam Ltd and Hexa Ltd. Under Ind AS 24 Related Party Disclosures, in the separate financial statements of Sunbeam Ltd for the year ended 31 March 2018, disclosure is required of transactions with ",
     "options": [
       "(a) Neither Hexa Ltd nor Texotech Ltd.",
       "(b) Hexa Ltd only",
@@ -2598,7 +2598,7 @@
   {
     "id": 201,
     "type": "independent",
-    "question": "Following information is available for A Ltd: 1 January - Shares in issue 1,000,000 Profit for the year ended 31 March ₹ 2,000,000 Average fair value during the period ₹8 Weighed Average number of shares under options during the year = 2,00,000 shares Exercise price ₹6 Calculate Diluted earnings per shares (DEPS) for the year. Answer:",
+    "question": "Following information is available for A Ltd: 1 January - Shares in issue 1,000,000 Profit for the year ended 31 March ₹ 2,000,000 Average fair value during the period ₹8 Weighed Average number of shares under options during the year = 2,00,000 shares Exercise price ₹6 Calculate Diluted earnings per shares (DEPS) for the year. ",
     "options": [
       "(a) ₹ 2.50",
       "(b) ₹ 2.10",
@@ -2611,7 +2611,7 @@
   {
     "id": 202,
     "type": "independent",
-    "question": "A Limited has the following options with regards to its own equity shares. Which of these should be included in the calculation of diluted earnings per share? Answer:",
+    "question": "A Limited has the following options with regards to its own equity shares. Which of these should be included in the calculation of diluted earnings per share? ",
     "options": [
       "(a) In the money purchased put options",
       "(b) In the money purchased call options",
@@ -2624,7 +2624,7 @@
   {
     "id": 203,
     "type": "independent",
-    "question": "As per Ind AS 108 Operating Segments, if a financial statement contains both the consolidated financial statements of a parent, as well as parents separate financial statements, segment information is required: Answer:",
+    "question": "As per Ind AS 108 Operating Segments, if a financial statement contains both the consolidated financial statements of a parent, as well as parents separate financial statements, segment information is required: ",
     "options": [
       "(a) Only in the consolidated financial statements",
       "(b) Only in the parents separate financial statements",
@@ -2637,7 +2637,7 @@
   {
     "id": 204,
     "type": "independent",
-    "question": "Entity A and Entity B both manufacture and distribute furniture and electrical products used in residential and commercial units. Entity A is structured such that decisions are made and performance is evaluated on a regional basis (e.g., India, Asia Pacific), whereas Entity B makes decisions and evaluates performance on a product-line basis (e.g., furniture, electrical products). How should Entity A and Entity B report operating segments as per Ind AS 108, Operating Segments? Answer:",
+    "question": "Entity A and Entity B both manufacture and distribute furniture and electrical products used in residential and commercial units. Entity A is structured such that decisions are made and performance is evaluated on a regional basis (e.g., India, Asia Pacific), whereas Entity B makes decisions and evaluates performance on a product-line basis (e.g., furniture, electrical products). How should Entity A and Entity B report operating segments as per Ind AS 108, Operating Segments? ",
     "options": [
       "(a) Entity A and B should report similar operating segments",
       "(b) Entity A should report operating segments based on regions and Entity B should report operating segments based on product lines",
@@ -2650,7 +2650,7 @@
   {
     "id": 205,
     "type": "independent",
-    "question": "As per Ind AS 108 Operating Segments, if a financial statement contains both the consolidated financial statements of a parent, as well as parents separate financial statements, segment information is required: Answer:",
+    "question": "As per Ind AS 108 Operating Segments, if a financial statement contains both the consolidated financial statements of a parent, as well as parents separate financial statements, segment information is required: ",
     "options": [
       "(a) Only in the consolidated financial statements",
       "(b) Only in the parents separate financial statements",
@@ -2663,7 +2663,7 @@
   {
     "id": 206,
     "type": "independent",
-    "question": "From the below list of instruments held by Swan Limited as at 31.03.20X2, you need to identify the financial instrument which does not meet the contractual cash flow characteristics test as per the provisions of Ind AS 109: Answer:",
+    "question": "From the below list of instruments held by Swan Limited as at 31.03.20X2, you need to identify the financial instrument which does not meet the contractual cash flow characteristics test as per the provisions of Ind AS 109: ",
     "options": [
       "(a) Variable rate instrument with a stated maturity date that permits the borrower to choose to pay three-month LIBOR for a three-month term or one-month LIBOR for a one-month term",
       "(b) A fixed term variable market interest rate bond where the variable market interest rate is capped",
@@ -2676,7 +2676,7 @@
   {
     "id": 207,
     "type": "independent",
-    "question": "New Age Technology Limited has taken loan from a bank which has debt to equity ratio as one of its financial covenants. Any new fund raise could have a direct implication on the covenants of existing loans. Therefore, the CFO wants to understand which amongst the following instruments is an equity instrument as per Ind AS 32 Financial Instruments: Presentation? Answer:",
+    "question": "New Age Technology Limited has taken loan from a bank which has debt to equity ratio as one of its financial covenants. Any new fund raise could have a direct implication on the covenants of existing loans. Therefore, the CFO wants to understand which amongst the following instruments is an equity instrument as per Ind AS 32 Financial Instruments: Presentation? ",
     "options": [
       "(a) Non-redeemable preference shares with payment of dividend at market rates",
       "(b) Preference shares redeemable at the option of the issuer with payment of dividend at the discretion of the issuer",
@@ -2689,7 +2689,7 @@
   {
     "id": 208,
     "type": "independent",
-    "question": "Which of the following categories of financial assets is NOT subject to impairment requirements of Ind AS 109 \"Financial Instruments\"? Answer:",
+    "question": "Which of the following categories of financial assets is NOT subject to impairment requirements of Ind AS 109 \"Financial Instruments\"? ",
     "options": [
       "(a) Equity instruments measured at fair value through profit or loss",
       "(b) Investment in debentures where (i) Contractual cash flows represent solely payment of principal and interest; and (ii) entity's business model is to hold financial assets in order to collect contractual cash flows",
@@ -2702,7 +2702,7 @@
   {
     "id": 209,
     "type": "independent",
-    "question": "A Ltd. has invested in debentures whose interest rate is floating in nature and as per the terms of the instrument interest will be reset every month. Terms of interest is 0.5 x (MIBOR + 2%). Classify the financial asset and determine the subsequent measurement for the aforesaid instrument. Chapter 11 Accounting and Reporting of Financial Instruments 61 Answer:",
+    "question": "A Ltd. has invested in debentures whose interest rate is floating in nature and as per the terms of the instrument interest will be reset every month. Terms of interest is 0.5 x (MIBOR + 2%). Classify the financial asset and determine the subsequent measurement for the aforesaid instrument. Chapter 11 Accounting and Reporting of Financial Instruments 61 ",
     "options": [
       "(a) Financial asset measured at amortised cost",
       "(b) Financial asset measured at FVOCI without recycling",
@@ -2715,7 +2715,7 @@
   {
     "id": 210,
     "type": "independent",
-    "question": "Entity A has issued preference shares to the investors which has similar voting rights and dividend rights and will be converted into one is to one equity shares at the time of IPO. As per the terms of the agreement, if the IPO does not happen by the end of the 7th year, then the Company will have to buy back the shares from the investors. The Company is growing very fast and is confident of going through the IPO within 3 years itself. How will the company classify the above instrument in the financial statement? Answer:",
+    "question": "Entity A has issued preference shares to the investors which has similar voting rights and dividend rights and will be converted into one is to one equity shares at the time of IPO. As per the terms of the agreement, if the IPO does not happen by the end of the 7th year, then the Company will have to buy back the shares from the investors. The Company is growing very fast and is confident of going through the IPO within 3 years itself. How will the company classify the above instrument in the financial statement? ",
     "options": [
       "(a) Equity",
       "(b) Liability",
@@ -2728,7 +2728,7 @@
   {
     "id": 211,
     "type": "independent",
-    "question": "On 1 January 20X6, XYZ Ltd issues a new instrument with the following characteristics. Face value ₹ 100, issue price ₹ 90. Cumulative dividend payable at 5% per annum for 10 years. After 10 years, the dividend is payable at the discretion of the issuer. The holder of the note has the option to convert to ordinary shares of XYZ Ltd. after 10 years, and conversion will be 10 ordinary shares for each instrument. The holder can demand redemption for the face value at any time, with six months notice up until the end of 10 years. After 10 years, redemption is at the discretion of the issuer. There is no fixed maturity date. How should the instrument be classified by XYZ Ltd. in the first 10 years in accordance with Ind AS 32? Select which one of the following is correct. Answer:",
+    "question": "On 1 January 20X6, XYZ Ltd issues a new instrument with the following characteristics. Face value ₹ 100, issue price ₹ 90. Cumulative dividend payable at 5% per annum for 10 years. After 10 years, the dividend is payable at the discretion of the issuer. The holder of the note has the option to convert to ordinary shares of XYZ Ltd. after 10 years, and conversion will be 10 ordinary shares for each instrument. The holder can demand redemption for the face value at any time, with six months notice up until the end of 10 years. After 10 years, redemption is at the discretion of the issuer. There is no fixed maturity date. How should the instrument be classified by XYZ Ltd. in the first 10 years in accordance with Ind AS 32? Select which one of the following is correct. ",
     "options": [
       "(a) as equity",
       "(b) as a liability",
@@ -2741,7 +2741,7 @@
   {
     "id": 212,
     "type": "independent",
-    "question": "Entity C acquires Entity D as per the principles of Ind AS 103 Business Combinations. Fair Value of identifiable assets is ₹ 10,00,000. Fair Value of Liability assumed is ₹ 6,00,000. Consideration paid for the acquisition of Entity D is ₹ 5,00,000 Goodwill on acquisition is deductible for tax purposes. You need to compute the Goodwill amount to be recognised the books of Acquirer i.e. Entity C at acquisition date? (Assume tax rate @ 30%) Answer:",
+    "question": "Entity C acquires Entity D as per the principles of Ind AS 103 Business Combinations. Fair Value of identifiable assets is ₹ 10,00,000. Fair Value of Liability assumed is ₹ 6,00,000. Consideration paid for the acquisition of Entity D is ₹ 5,00,000 Goodwill on acquisition is deductible for tax purposes. You need to compute the Goodwill amount to be recognised the books of Acquirer i.e. Entity C at acquisition date? (Assume tax rate @ 30%) ",
     "options": [
       "(a) ₹ 1,00,000",
       "(b) ₹ 1,30,000",
@@ -2754,7 +2754,7 @@
   {
     "id": 213,
     "type": "independent",
-    "question": "P Ltd acquires 95% of the issued share capital of S Ltd on 1 October 2017 by way of a share for share exchange. The profits before tax of P and S for the year ended 31 March 2018 are ₹ 2,00,000 and ₹ 1,50,000 respectively. How much profit before tax would be shown in the consolidated statement of profit or loss of P Ltd for the year ended 31 March 2018, in accordance with Ind AS 103 'Business Combinations'? Answer:",
+    "question": "P Ltd acquires 95% of the issued share capital of S Ltd on 1 October 2017 by way of a share for share exchange. The profits before tax of P and S for the year ended 31 March 2018 are ₹ 2,00,000 and ₹ 1,50,000 respectively. How much profit before tax would be shown in the consolidated statement of profit or loss of P Ltd for the year ended 31 March 2018, in accordance with Ind AS 103 'Business Combinations'? ",
     "options": [
       "(a) ₹ 271,250",
       "(b) ₹ 275,000",
@@ -2767,7 +2767,7 @@
   {
     "id": 214,
     "type": "independent",
-    "question": "PQR Holdings Limited enters into a number of transactions each year. The accountant has requested your help to identify which of these must be accounted for as a business combination: Answer:",
+    "question": "PQR Holdings Limited enters into a number of transactions each year. The accountant has requested your help to identify which of these must be accounted for as a business combination: ",
     "options": [
       "(a) PQR Holdings Limited purchases 30% equity in TP Ltd, an unlisted company",
       "(b) PQR Holdings Limited purchases a 45% interest which gives it control over TR Ltd.",
@@ -2780,7 +2780,7 @@
   {
     "id": 215,
     "type": "independent",
-    "question": "You are the finance manager of Vassar, a listed company which prepares consolidated financial statements as per AS. The newly appointed managing director who is not an accountant, reviewed the draft financial statements for the year ended 31 March 20X1 which were due to be published shortly. The managing director had a query out of the review regarding the exclusion of certain investment in subsidiaries from preparing consolidated financial statements. Which of the following statements are correct about the exclusion of subsidiary from consolidation? Answer:",
+    "question": "You are the finance manager of Vassar, a listed company which prepares consolidated financial statements as per AS. The newly appointed managing director who is not an accountant, reviewed the draft financial statements for the year ended 31 March 20X1 which were due to be published shortly. The managing director had a query out of the review regarding the exclusion of certain investment in subsidiaries from preparing consolidated financial statements. Which of the following statements are correct about the exclusion of subsidiary from consolidation? ",
     "options": [
       "(a) Vassar had acquired a subsidiary Aqua on 1 October 20X0. This acquisition was temporary in nature and that it had held exclusively with a view to its subsequent disposal in near future",
       "(b) There was another subsidiary acquired in the first quarter of the year, which had huge losses. Vassar believed that due to change in management and other synergies, it could turn around the losses into profits in few years. But, due to the losses in the current year, you had not consolidated this subsidiary",
@@ -2793,7 +2793,7 @@
   {
     "id": 216,
     "type": "independent",
-    "question": "On 1st March 20X2, Quixote Ltd acquired 30% of the shares of Tintin Ltd. The investment was accounted for as an associate in Quixotes consolidated financial statements. Both Quixote and Tintin have an accounting year ending at 31st October 20X2. Quixote Ltd has no other investments in associates. Net profit for the year in Tintins income statement for the year ended 31st October 20X2 was ₹ 2,30,000. It declared and paid dividend of ₹100,000 on 1st July 20X2. No other dividends were paid in the year. What amount will be shown as an inflow in respect of earnings from the associate in the consolidated cash flow statement of Alpha for the year ended 31st October 20X2? Answer:",
+    "question": "On 1st March 20X2, Quixote Ltd acquired 30% of the shares of Tintin Ltd. The investment was accounted for as an associate in Quixotes consolidated financial statements. Both Quixote and Tintin have an accounting year ending at 31st October 20X2. Quixote Ltd has no other investments in associates. Net profit for the year in Tintins income statement for the year ended 31st October 20X2 was ₹ 2,30,000. It declared and paid dividend of ₹100,000 on 1st July 20X2. No other dividends were paid in the year. What amount will be shown as an inflow in respect of earnings from the associate in the consolidated cash flow statement of Alpha for the year ended 31st October 20X2? ",
     "options": [
       "(a) ₹ 20,000",
       "(b) ₹ 26,000",
@@ -2806,7 +2806,7 @@
   {
     "id": 217,
     "type": "independent",
-    "question": "A Ltd. controls another entity B Ltd., owning 60% of its ordinary share capital. At the groups year end, 31st December 20X1, B Ltd. included ₹ 6,000 in its receivables in respect of goods supplied to A Ltd. However, the payables of A Ltd. included only ₹ 4,000 in respect of amounts due to B Ltd. The difference arose because, on 31st December 20X1, A Ltd. sent a cheque of ₹ 2,000, which was not received by B Ltd. until 3rd January 20X2. Which one of the following sets of consolidation adjustments to current assets and current liabilities is correct? Answer:",
+    "question": "A Ltd. controls another entity B Ltd., owning 60% of its ordinary share capital. At the groups year end, 31st December 20X1, B Ltd. included ₹ 6,000 in its receivables in respect of goods supplied to A Ltd. However, the payables of A Ltd. included only ₹ 4,000 in respect of amounts due to B Ltd. The difference arose because, on 31st December 20X1, A Ltd. sent a cheque of ₹ 2,000, which was not received by B Ltd. until 3rd January 20X2. Which one of the following sets of consolidation adjustments to current assets and current liabilities is correct? ",
     "options": [
       "(a) Deduct ₹ 6,000 from both consolidated receivables and consolidated payables",
       "(b) Deduct ₹ 3,600 from both consolidated receivables and consolidated payables",
@@ -2819,7 +2819,7 @@
   {
     "id": 218,
     "type": "independent",
-    "question": "In consolidated financial statements of PQR Ltd., non-controlling interest should be presented: Answer:",
+    "question": "In consolidated financial statements of PQR Ltd., non-controlling interest should be presented: ",
     "options": [
       "(a) Within long-term liabilities",
       "(b) In between long-term liabilities and current liabilities",
@@ -2832,7 +2832,7 @@
   {
     "id": 219,
     "type": "independent",
-    "question": "P owns a controlling investment of 70% of S. During the year, P sold goods to S for ₹ 60,000 at cost plus 20%. At the year end, S still had half of the goods in their inventory. P?s total inventory at the year-end was ₹ 120,000, and S?s total inventory was ₹ 80,000. How much inventory should be recognised in Ps consolidated statement of financial position prepared in accordance with Ind AS? Answer:",
+    "question": "P owns a controlling investment of 70% of S. During the year, P sold goods to S for ₹ 60,000 at cost plus 20%. At the year end, S still had half of the goods in their inventory. P?s total inventory at the year-end was ₹ 120,000, and S?s total inventory was ₹ 80,000. How much inventory should be recognised in Ps consolidated statement of financial position prepared in accordance with Ind AS? ",
     "options": [
       "(a) ₹ 1,95,000",
       "(b) ₹ 2,00,000",
@@ -2845,7 +2845,7 @@
   {
     "id": 220,
     "type": "independent",
-    "question": "According to Ind AS 101, when should the accounting under Ind AS be applied? Answer:",
+    "question": "According to Ind AS 101, when should the accounting under Ind AS be applied? ",
     "options": [
       "(a) Prospectively from the date of adoption",
       "(b) Retrospectively at the time of transition to Ind AS",
@@ -2858,7 +2858,7 @@
   {
     "id": 221,
     "type": "independent",
-    "question": "Under Ind AS 101, what is the treatment of items that are not permitted to be recognized as assets or liabilities under Ind AS? Answer:",
+    "question": "Under Ind AS 101, what is the treatment of items that are not permitted to be recognized as assets or liabilities under Ind AS? ",
     "options": [
       "(a) They should be recognized as assets or liabilities in the opening Ind AS Balance Sheet",
       "(b) They should not be recognized as assets or liabilities in the opening Ind AS Balance Sheet",
@@ -2871,7 +2871,7 @@
   {
     "id": 222,
     "type": "independent",
-    "question": "What is the purpose of Ind AS 101? Answer:",
+    "question": "What is the purpose of Ind AS 101? ",
     "options": [
       "(a) To prescribe accounting principles for first-time adoption of Ind AS",
       "(b) To provide exemptions from disclosure requirements in Ind AS",
@@ -2884,7 +2884,7 @@
   {
     "id": 223,
     "type": "independent",
-    "question": "Jatin purchases investment properties and funds this by issuing bonds in the market. The liability in respect of the bonds is designated to be measured at fair value through profit or loss. The bonds had an overall fair value decline of ₹ 50 crores in the year, out of which ₹ 5 crores relates to decrease in Jatins credit worthiness. Which of the following is the correct accounting treatment? Answer:",
+    "question": "Jatin purchases investment properties and funds this by issuing bonds in the market. The liability in respect of the bonds is designated to be measured at fair value through profit or loss. The bonds had an overall fair value decline of ₹ 50 crores in the year, out of which ₹ 5 crores relates to decrease in Jatins credit worthiness. Which of the following is the correct accounting treatment? ",
     "options": [
       "(a) ₹ 50 crores should be recorded in P&L",
       "(b) ₹ 50 crores should be recorded in OCI",
@@ -2897,7 +2897,7 @@
   {
     "id": 224,
     "type": "independent",
-    "question": "A Ltd is a public sector entity under the Ministry of Defence and is in the business of construction of warships. The contracts are awarded on fixed price basis except certain variable components, such as, foreign exchange variation and cost of spares etc. The payment for fixed price part is on the basis of completion of milestones. The payment for variable component is based on actual cost to the shipyard. The payment terms for the fixed price portion of the contract are generally spread over 10-12 milestones starting with initial payment of 10% on signing of the contract. As the gestation period of the contracts for shipbuilding is longer, it so happens that during initial period when funds are made available, at times, become temporary surplus funds, which are deployed in short-term fixed deposits. However, in the later part of the execution of the contract, the cost incurred on the project exceeds the stage payments received on the vessel leading to a negative cash flow. Further, the last stage payment of the project is deferred till one year after the delivery of the vessel. Thus, the interest earned initially on the temporary surplus compensates to a certain extent for the period of deficit cash flow, especially at the later part of the execution of the project. A Ltd wants to check the presentation requirement of interest earned on deposits made out of temporary surplus as per AS? Answer:",
+    "question": "A Ltd is a public sector entity under the Ministry of Defence and is in the business of construction of warships. The contracts are awarded on fixed price basis except certain variable components, such as, foreign exchange variation and cost of spares etc. The payment for fixed price part is on the basis of completion of milestones. The payment for variable component is based on actual cost to the shipyard. The payment terms for the fixed price portion of the contract are generally spread over 10-12 milestones starting with initial payment of 10% on signing of the contract. As the gestation period of the contracts for shipbuilding is longer, it so happens that during initial period when funds are made available, at times, become temporary surplus funds, which are deployed in short-term fixed deposits. However, in the later part of the execution of the contract, the cost incurred on the project exceeds the stage payments received on the vessel leading to a negative cash flow. Further, the last stage payment of the project is deferred till one year after the delivery of the vessel. Thus, the interest earned initially on the temporary surplus compensates to a certain extent for the period of deficit cash flow, especially at the later part of the execution of the project. A Ltd wants to check the presentation requirement of interest earned on deposits made out of temporary surplus as per AS? ",
     "options": [
       "(a) To be presented as Other income",
       "(b) To be presented as Other operating revenue",
@@ -2910,7 +2910,7 @@
   {
     "id": 225,
     "type": "independent",
-    "question": "An asset had a carrying value of ₹10,00,000 as on 1st April 20X1. It was revalued at ₹11,00,000 as on 31st March 20X2 by crediting the increase of ₹ 1,00,000 to revaluation surplus. Later it was sold for ₹ 12,50,000 on 30 June 20X2. The amount to be taken to retained earnings would be: Answer:",
+    "question": "An asset had a carrying value of ₹10,00,000 as on 1st April 20X1. It was revalued at ₹11,00,000 as on 31st March 20X2 by crediting the increase of ₹ 1,00,000 to revaluation surplus. Later it was sold for ₹ 12,50,000 on 30 June 20X2. The amount to be taken to retained earnings would be: ",
     "options": [
       "(a) ₹ 2,50,000",
       "(b) ₹ 1,00,000",
@@ -2923,7 +2923,7 @@
   {
     "id": 226,
     "type": "independent",
-    "question": "What should a Chartered Accountant do to comply with the principle of Professional Behaviour? Answer:",
+    "question": "What should a Chartered Accountant do to comply with the principle of Professional Behaviour? ",
     "options": [
       "(a) Discredit the profession to raise awareness",
       "(b) Follow relevant laws and regulations",
@@ -2936,7 +2936,7 @@
   {
     "id": 227,
     "type": "independent",
-    "question": "What is the primary responsibility of a Chartered Accountant in relation to pressure to breach the fundamental principles? Answer:",
+    "question": "What is the primary responsibility of a Chartered Accountant in relation to pressure to breach the fundamental principles? ",
     "options": [
       "(a) Succumb to the pressure if it comes from a superior",
       "(b) Resist the pressure and report it to higher management",
@@ -2949,7 +2949,7 @@
   {
     "id": 228,
     "type": "independent",
-    "question": "Which principle emphasizes being straightforward and honest in professional and business relationships? Answer:",
+    "question": "Which principle emphasizes being straightforward and honest in professional and business relationships? ",
     "options": [
       "(a) Integrity",
       "(b) Objectivity",
@@ -2962,7 +2962,7 @@
   {
     "id": 229,
     "type": "independent",
-    "question": "What is the stance of a Chartered Accountant regarding conflicts of interest? Answer:",
+    "question": "What is the stance of a Chartered Accountant regarding conflicts of interest? ",
     "options": [
       "(a) Conflicts of interest are acceptable if managed properly",
       "(b) Conflicts of interest should be disclosed but can still compromise judgment",
@@ -2975,7 +2975,7 @@
   {
     "id": 230,
     "type": "independent",
-    "question": "Which principle is violated if a conflict of interest compromises professional or business judgment? Answer:",
+    "question": "Which principle is violated if a conflict of interest compromises professional or business judgment? ",
     "options": [
       "(a) Integrity",
       "(b) Objectivity",
@@ -2988,7 +2988,7 @@
   {
     "id": 231,
     "type": "independent",
-    "question": "Which of the following statements best describes cloud computing? Answer:",
+    "question": "Which of the following statements best describes cloud computing? ",
     "options": [
       "(a) The use of physical servers located in a company's premises to store and process data",
       "(b) The delivery of computing services over the internet, allowing access to data and software from any device with an internet connection",
@@ -3001,7 +3001,7 @@
   {
     "id": 232,
     "type": "independent",
-    "question": "Which of the following best describes AI? Answer:",
+    "question": "Which of the following best describes AI? ",
     "options": [
       "(a) The simulation of human intelligence in machines, enabling them to perform tasks that would typically require human intervention",
       "(b) The process of programming computers to perform tasks without learning",
@@ -3014,7 +3014,7 @@
   {
     "id": 233,
     "type": "independent",
-    "question": "Which of the following is NOT a benefit of automation processes? Answer:",
+    "question": "Which of the following is NOT a benefit of automation processes? ",
     "options": [
       "(a) Streamlining data entry",
       "(b) Enhancing accuracy in accounting processes",
