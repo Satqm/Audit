@@ -356,11 +356,7 @@
       ]
     },
     {
-  "source": "CA Final All SA Names & Objectives (ICAI)",
-  "total_chapters_found": 46,
-  "chapters": [
-    {
-      "chapter_number": 1,
+      "chapter_number": "SQC 1",
       "chapter_title": "SQC 1 – Quality Control for Firms that Perform Audits and Reviews of Historical Financial Information, and Other Assurance and Related Services Engagements",
       "total_takeaways": 2,
       "key_takeaways": [
@@ -369,7 +365,7 @@
       ]
     },
     {
-      "chapter_number": 2,
+      "chapter_number": "SA 200",
       "chapter_title": "SA 200 – Overall Objectives of the Independent Auditor and the Conduct of an Audit in Accordance with Standards on Auditing",
       "total_takeaways": 3,
       "key_takeaways": [
@@ -379,7 +375,7 @@
       ]
     },
     {
-      "chapter_number": 3,
+      "chapter_number": "SA 210",
       "chapter_title": "SA 210 – Agreeing the Terms of Audit Engagements",
       "total_takeaways": 3,
       "key_takeaways": [
@@ -389,7 +385,7 @@
       ]
     },
     {
-      "chapter_number": 4,
+      "chapter_number": "SA 220",
       "chapter_title": "SA 220 – Quality Control for an Audit of Financial Statements",
       "total_takeaways": 2,
       "key_takeaways": [
@@ -398,7 +394,7 @@
       ]
     },
     {
-      "chapter_number": 5,
+      "chapter_number": "SA 230",
       "chapter_title": "SA 230 – Audit Documentation",
       "total_takeaways": 2,
       "key_takeaways": [
@@ -407,7 +403,7 @@
       ]
     },
     {
-      "chapter_number": 6,
+      "chapter_number": "SA 240",
       "chapter_title": "SA 240 – The Auditor's Responsibilities Relating to Fraud in an Audit of Financial Statements",
       "total_takeaways": 3,
       "key_takeaways": [
@@ -418,7 +414,7 @@
       ]
     },
     {
-      "chapter_number": 7,
+      "chapter_number": "SA 250",
       "chapter_title": "SA 250 – Consideration of Laws and Regulations in an Audit of Financial Statements",
       "total_takeaways": 2,
       "key_takeaways": [
@@ -428,7 +424,7 @@
       ]
     },
     {
-      "chapter_number": 8,
+      "chapter_number": "SA 260",
       "chapter_title": "SA 260 – Communication with Those Charged with Governance",
       "total_takeaways": 3,
       "key_takeaways": [
@@ -439,7 +435,7 @@
       ]
     },
     {
-      "chapter_number": 9,
+      "chapter_number": "SA 265",
       "chapter_title": "SA 265 – Communicating Deficiencies in Internal Control to Those Charged with Governance and Management",
       "total_takeaways": 2,
       "key_takeaways": [
@@ -448,7 +444,7 @@
       ]
     },
     {
-      "chapter_number": 10,
+      "chapter_number": "SA 299",
       "chapter_title": "SA 299 – Joint Audit of Financial Statements",
       "total_takeaways": 4,
       "key_takeaways": [
@@ -459,7 +455,7 @@
       ]
     },
     {
-      "chapter_number": 11,
+      "chapter_number": "SA 300",
       "chapter_title": "SA 300 – Planning an Audit of Financial Statements",
       "total_takeaways": 1,
       "key_takeaways": [
@@ -467,7 +463,7 @@
       ]
     },
     {
-      "chapter_number": 12,
+      "chapter_number": "SA 315",
       "chapter_title": "SA 315 – Identifying and Assessing the Risks of Material Misstatement Through Understanding the Entity and Its Environment",
       "total_takeaways": 1,
       "key_takeaways": [
@@ -475,7 +471,7 @@
       ]
     },
     {
-      "chapter_number": 13,
+      "chapter_number": "SA 320",
       "chapter_title": "SA 320 – Materiality in Planning and Performing an Audit",
       "total_takeaways": 1,
       "key_takeaways": [
@@ -483,7 +479,7 @@
       ]
     },
     {
-      "chapter_number": 14,
+      "chapter_number": "SA 330",
       "chapter_title": "SA 330 – The Auditor's Responses to Assessed Risks",
       "total_takeaways": 1,
       "key_takeaways": [
@@ -491,7 +487,7 @@
       ]
     },
     {
-      "chapter_number": 15,
+      "chapter_number": "SA 402",
       "chapter_title": "SA 402 – Audit Considerations Relating to an Entity Using a Service Organisation",
       "total_takeaways": 2,
       "key_takeaways": [
@@ -500,7 +496,7 @@
       ]
     },
     {
-      "chapter_number": 16,
+      "chapter_number": "SA 450",
       "chapter_title": "SA 450 – Evaluation of Misstatements Identified During the Audit",
       "total_takeaways": 2,
       "key_takeaways": [
@@ -509,7 +505,7 @@
       ]
     },
     {
-      "chapter_number": 17,
+      "chapter_number": "SA 500",
       "chapter_title": "SA 500 – Audit Evidence",
       "total_takeaways": 1,
       "key_takeaways": [
@@ -517,7 +513,7 @@
       ]
     },
     {
-      "chapter_number": 18,
+      "chapter_number": "SA 501",
       "chapter_title": "SA 501 – Audit Evidence: Specific Considerations for Selected Items",
       "total_takeaways": 3,
       "key_takeaways": [
@@ -527,7 +523,7 @@
       ]
     },
     {
-      "chapter_number": 19,
+      "chapter_number": "SA 505",
       "chapter_title": "SA 505 – External Confirmations",
       "total_takeaways": 1,
       "key_takeaways": [
@@ -535,7 +531,7 @@
       ]
     },
     {
-      "chapter_number": 20,
+      "chapter_number": "SA 510",
       "chapter_title": "SA 510 – Initial Audit Engagements: Opening Balances",
       "total_takeaways": 2,
       "key_takeaways": [
@@ -544,7 +540,7 @@
       ]
     },
     {
-      "chapter_number": 21,
+      "chapter_number": "SA 520",
       "chapter_title": "SA 520 – Analytical Procedures",
       "total_takeaways": 2,
       "key_takeaways": [
@@ -553,7 +549,7 @@
       ]
     },
     {
-      "chapter_number": 22,
+      "chapter_number": "SA 530",
       "chapter_title": "SA 530 – Audit Sampling",
       "total_takeaways": 1,
       "key_takeaways": [
@@ -561,7 +557,7 @@
       ]
     },
     {
-      "chapter_number": 23,
+      "chapter_number": "SA 540",
       "chapter_title": "SA 540 – Auditing Accounting Estimates and Related Disclosures",
       "total_takeaways": 1,
       "key_takeaways": [
@@ -569,7 +565,7 @@
       ]
     },
     {
-      "chapter_number": 24,
+      "chapter_number": "SA 550",
       "chapter_title": "SA 550 – Related Parties",
       "total_takeaways": 2,
       "key_takeaways": [
@@ -578,7 +574,7 @@
       ]
     },
     {
-      "chapter_number": 25,
+      "chapter_number": "SA 560",
       "chapter_title": "SA 560 – Subsequent Events",
       "total_takeaways": 2,
       "key_takeaways": [
@@ -587,7 +583,7 @@
       ]
     },
     {
-      "chapter_number": 26,
+      "chapter_number": "SA 570",
       "chapter_title": "SA 570 – Going Concern",
       "total_takeaways": 3,
       "key_takeaways": [
@@ -597,7 +593,7 @@
       ]
     },
     {
-      "chapter_number": 27,
+      "chapter_number": "SA 580",
       "chapter_title": "SA 580 – Written Representations",
       "total_takeaways": 3,
       "key_takeaways": [
@@ -607,7 +603,7 @@
       ]
     },
     {
-      "chapter_number": 28,
+      "chapter_number": "SA 600",
       "chapter_title": "SA 600 – Using the Work of Another Auditor",
       "total_takeaways": 2,
       "key_takeaways": [
@@ -616,7 +612,7 @@
       ]
     },
     {
-      "chapter_number": 29,
+      "chapter_number": "SA 610",
       "chapter_title": "SA 610 – Using the Work of Internal Auditors",
       "total_takeaways": 3,
       "key_takeaways": [
@@ -626,7 +622,7 @@
       ]
     },
     {
-      "chapter_number": 30,
+      "chapter_number": "SA 620",
       "chapter_title": "SA 620 – Using the Work of an Auditor's Expert",
       "total_takeaways": 2,
       "key_takeaways": [
@@ -635,7 +631,7 @@
       ]
     },
     {
-      "chapter_number": 31,
+      "chapter_number": "SA 700",
       "chapter_title": "SA 700 – Forming an Opinion and Reporting on Financial Statements",
       "total_takeaways": 2,
       "key_takeaways": [
@@ -644,7 +640,7 @@
       ]
     },
     {
-      "chapter_number": 32,
+      "chapter_number": "SA 701",
       "chapter_title": "SA 701 – Communicating Key Audit Matters in the Independent Auditor's Report",
       "total_takeaways": 1,
       "key_takeaways": [
@@ -652,7 +648,7 @@
       ]
     },
     {
-      "chapter_number": 33,
+      "chapter_number": "SA 705",
       "chapter_title": "SA 705 – Modifications to the Opinion in the Independent Auditor's Report",
       "total_takeaways": 2,
       "key_takeaways": [
@@ -661,7 +657,7 @@
       ]
     },
     {
-      "chapter_number": 34,
+      "chapter_number": "SA 706",
       "chapter_title": "SA 706 – Emphasis of Matter Paragraphs and Other Matter Paragraphs in the Independent Auditor's Report",
       "total_takeaways": 2,
       "key_takeaways": [
@@ -670,7 +666,7 @@
       ]
     },
     {
-      "chapter_number": 35,
+      "chapter_number": "SA 710",
       "chapter_title": "SA 710 – Comparative Information: Corresponding Figures and Comparative Financial Statements",
       "total_takeaways": 2,
       "key_takeaways": [
@@ -679,7 +675,7 @@
       ]
     },
     {
-      "chapter_number": 36,
+      "chapter_number": "SA 720",
       "chapter_title": "SA 720 – The Auditor's Responsibilities Relating to Other Information",
       "total_takeaways": 4,
       "key_takeaways": [
@@ -690,7 +686,7 @@
       ]
     },
     {
-      "chapter_number": 37,
+      "chapter_number": "SA 800",
       "chapter_title": "SA 800 – Special Considerations: Audits of Financial Statements Prepared in Accordance with Special Purpose Frameworks",
       "total_takeaways": 2,
       "key_takeaways": [
@@ -699,7 +695,7 @@
       ]
     },
     {
-      "chapter_number": 38,
+      "chapter_number": "SA 805",
       "chapter_title": "SA 805 – Special Considerations: Audits of Single Financial Statements and Specific Elements, Accounts or Items of a Financial Statement",
       "total_takeaways": 2,
       "key_takeaways": [
@@ -708,7 +704,7 @@
       ]
     },
     {
-      "chapter_number": 39,
+      "chapter_number": "SA 810",
       "chapter_title": "SA 810 – Engagements to Report on Summary Financial Statements",
       "total_takeaways": 3,
       "key_takeaways": [
@@ -718,7 +714,7 @@
       ]
     },
     {
-      "chapter_number": 40,
+      "chapter_number": "SRE 2400",
       "chapter_title": "SRE 2400 – Engagements to Review Historical Financial Statements",
       "total_takeaways": 2,
       "key_takeaways": [
@@ -727,7 +723,7 @@
       ]
     },
     {
-      "chapter_number": 41,
+      "chapter_number": "SRE 2410",
       "chapter_title": "SRE 2410 – Review of Interim Financial Information Performed by the Independent Auditor of the Entity",
       "total_takeaways": 2,
       "key_takeaways": [
@@ -736,7 +732,7 @@
       ]
     },
     {
-      "chapter_number": 42,
+      "chapter_number": "SAE 3400",
       "chapter_title": "SAE 3400 – The Examination of Prospective Financial Information",
       "total_takeaways": 1,
       "key_takeaways": [
@@ -744,7 +740,7 @@
       ]
     },
     {
-      "chapter_number": 43,
+      "chapter_number": "SAE 3402",
       "chapter_title": "SAE 3402 – Assurance Reports on Controls at a Service Organisation",
       "total_takeaways": 3,
       "key_takeaways": [
@@ -754,7 +750,7 @@
       ]
     },
     {
-      "chapter_number": 44,
+      "chapter_number": "SAE 3420",
       "chapter_title": "SAE 3420 – Assurance Engagements to Report on the Compilation of Pro Forma Financial Information Included in a Prospectus",
       "total_takeaways": 2,
       "key_takeaways": [
@@ -763,7 +759,7 @@
       ]
     },
     {
-      "chapter_number": 45,
+      "chapter_number": "SRS 4400",
       "chapter_title": "SRS 4400 – Engagements to Perform Agreed-Upon Procedures Regarding Financial Information",
       "total_takeaways": 1,
       "key_takeaways": [
@@ -771,7 +767,7 @@
       ]
     },
     {
-      "chapter_number": 46,
+      "chapter_number": "SRS 4410",
       "chapter_title": "SRS 4410 – Compilation Engagements",
       "total_takeaways": 2,
       "key_takeaways": [
