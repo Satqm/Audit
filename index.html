@@ -95,7 +95,7 @@ body.desktop-view .section-title{max-width:1100px;margin:0 auto;width:100%}
 .icon-btn.study-toggle{background:#faf5ff;border-color:#d8b4fe;color:#7c3aed;transition:all .25s}
 .icon-btn.study-toggle.active{background:#7c3aed;border-color:#7c3aed;color:#fff;box-shadow:0 0 0 3px rgba(124,58,237,.3)}
 .main-content{flex:1;overflow-y:auto;-webkit-overflow-scrolling:touch;padding:8px 10px;min-height:0;position:relative}
-.case-study-box{background:#f8fafc;border:1px solid var(--border);border-radius:12px;padding:12px 14px;margin-bottom:10px;font-size:.83rem;line-height:1.6;max-height:28vh;overflow-y:auto;color:#334155;position:relative;border-left:4px solid var(--primary);cursor:pointer;transition:.2s}
+.case-study-box{background:#f8fafc;border:1px solid var(--border);border-radius:12px;padding:12px 14px;margin-bottom:10px;font-size:.83rem;line-height:1.6;max-height:34vh;overflow-y:auto;color:#334155;position:relative;border-left:4px solid var(--primary);cursor:pointer;transition:.2s}
 .case-study-box:active{background:#f1f5f9}
 .case-study-box .case-label{color:var(--primary);font-weight:700;font-size:.68rem;text-transform:uppercase;margin-bottom:5px;letter-spacing:.4px}
 .expand-btn{position:absolute;top:8px;right:8px;width:28px;height:28px;border-radius:8px;border:1px solid var(--border);background:#fff;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:.7rem;color:var(--text-secondary);z-index:5;pointer-events:none}
@@ -176,14 +176,12 @@ body.desktop-view .section-title{max-width:1100px;margin:0 auto;width:100%}
 .notes-badge.show{display:block}
 .reader-close-btn{width:32px;height:32px;border-radius:9px;background:#e2e8f0;border:1px solid #cbd5e1;display:flex;align-items:center;justify-content:center;color:var(--text-secondary);cursor:pointer;transition:.2s;flex-shrink:0}
 .reader-close-btn:active{transform:scale(.88);background:#cbd5e1}
-/* === NEW: reader question navigation === */
+/* Reader nav group */
 .reader-nav-group{display:flex;align-items:center;gap:5px;background:#fff;border:1px solid var(--border);border-radius:10px;padding:3px 6px;flex-shrink:0}
 .reader-nav-btn{width:28px;height:28px;border-radius:8px;border:none;background:#eff6ff;color:var(--primary);display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:.72rem;transition:.18s;flex-shrink:0}
 .reader-nav-btn:active{transform:scale(.88);background:#dbeafe}
 .reader-nav-btn:disabled{opacity:.35;cursor:default}
 .reader-nav-pos{font-size:.68rem;font-weight:800;color:var(--text-secondary);min-width:44px;text-align:center;letter-spacing:.2px}
-.reader-tips{flex-shrink:0;font-size:.63rem;color:#64748b;text-align:center;padding:5px 10px;background:#eff6ff;border-bottom:1px solid #dbeafe;font-weight:600;letter-spacing:.2px}
-.reader-tips b{color:var(--primary)}
 .fullscreen-reader .reader-content{flex:1;overflow-y:auto;padding:14px 16px;max-width:800px;margin:0 auto;width:100%;-webkit-overflow-scrolling:touch}
 @keyframes fadeIn{from{opacity:0}to{opacity:1}}
 .highlight-hint{width:100%;font-size:.68rem;color:var(--primary);font-weight:600;padding-top:3px;display:none;margin-bottom:-3px}
@@ -207,6 +205,51 @@ body.desktop-view .section-title{max-width:1100px;margin:0 auto;width:100%}
 .yt-footer a:active{transform:scale(.95);background:#ffe4e6}
 .yt-footer a i{color:#ef4444;font-size:1.3rem}
 @keyframes spin{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}
+
+/* ============ TABLE FORMATTING (GST-style passages) ============ */
+.table-wrap{
+    max-width:100%;overflow-x:auto;margin:10px 0;border:1px solid var(--border);
+    border-radius:10px;background:#fff;-webkit-overflow-scrolling:touch;
+}
+.pdf-table{
+    border-collapse:collapse;width:max-content;min-width:100%;font-size:.82rem;border-style:hidden;
+}
+.pdf-table th,.pdf-table td{
+    border:1px solid var(--border);padding:8px 10px;vertical-align:top;text-align:left;
+}
+.pdf-table th{background:#f1f5f9;color:var(--text);font-weight:700}
+.pdf-table tr:nth-child(even) td{background:#f8fafc}
+/* Slightly compact table on mobile inside case study box */
+.case-study-box .pdf-table{font-size:.78rem}
+.case-study-box .pdf-table th,.case-study-box .pdf-table td{padding:6px 8px}
+/* Table inside reader */
+.reader-content .pdf-table{font-size:.88rem}
+
+/* ============ ONE-TIME READER KEY GUIDE (floating toast) ============ */
+.reader-key-guide{
+    position:fixed;bottom:22px;left:50%;
+    transform:translateX(-50%) translateY(140%);
+    background:rgba(15,23,42,.94);color:#fff;
+    padding:11px 16px;border-radius:14px;z-index:420;
+    box-shadow:0 12px 32px rgba(0,0,0,.35);
+    backdrop-filter:blur(10px);
+    -webkit-backdrop-filter:blur(10px);
+    display:flex;flex-direction:column;gap:7px;align-items:center;
+    opacity:0;pointer-events:none;max-width:92vw;
+    transition:transform .5s cubic-bezier(.16,1,.3,1),opacity .35s ease;
+    border:1px solid rgba(255,255,255,.08);
+}
+.reader-key-guide.show{transform:translateX(-50%) translateY(0);opacity:1}
+.rkg-title{font-size:.62rem;font-weight:800;letter-spacing:.8px;text-transform:uppercase;color:#94a3b8;display:flex;align-items:center;gap:6px}
+.rkg-title i{color:#fbbf24;font-size:.75rem}
+.rkg-keys{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;font-size:.72rem;font-weight:600}
+.rkg-keys span{display:flex;align-items:center;gap:5px;color:#cbd5e1}
+.rkg-keys b{
+    background:#fff;color:#0f172a;padding:2px 7px;border-radius:5px;
+    font-size:.68rem;font-weight:900;min-width:18px;text-align:center;
+    box-shadow:0 1px 2px rgba(0,0,0,.2);
+}
+.rkg-keys b.rkg-group{padding:2px 4px;margin-right:-3px}
 
 /* ============ SYLLABUS ============ */
 .syl-body{padding:16px 16px 30px;max-width:860px;margin:0 auto;width:100%}
@@ -337,32 +380,10 @@ body.desktop-view .section-title{max-width:1100px;margin:0 auto;width:100%}
 .kt-add-modal textarea{width:100%;height:130px;padding:14px;border:2px solid var(--border);border-radius:10px;resize:none;margin-bottom:14px;font-family:inherit;font-size:.9rem;outline:none;transition:.2s}
 .kt-add-modal textarea:focus{border-color:#f59e0b}
 /* Keyword highlighting inside KT cards */
-.kt-deck-text .kw {
-    background: linear-gradient(180deg, transparent 60%, #fde68a 60%);
-    color: #78350f;
-    font-weight: 800;
-    padding: 0 2px;
-    border-radius: 3px;
-}
-.kt-deck-card-inner.custom .kt-deck-text .kw {
-    background: linear-gradient(180deg, transparent 60%, #ddd6fe 60%);
-    color: #5b21b6;
-}
-.kt-deck-text .kw-std {
-    background: rgba(251, 191, 36, 0.35);
-    color: #7c2d12;
-    font-weight: 800;
-    padding: 1px 5px;
-    border-radius: 5px;
-    font-family: 'Inter', monospace;
-    letter-spacing: 0.3px;
-    border: 1px solid rgba(180, 83, 9, 0.2);
-}
-.kt-deck-card-inner.custom .kt-deck-text .kw-std {
-    background: rgba(139, 92, 246, 0.25);
-    color: #4c1d95;
-    border-color: rgba(109, 40, 217, 0.25);
-}
+.kt-deck-text .kw{background:linear-gradient(180deg,transparent 60%,#fde68a 60%);color:#78350f;font-weight:800;padding:0 2px;border-radius:3px}
+.kt-deck-card-inner.custom .kt-deck-text .kw{background:linear-gradient(180deg,transparent 60%,#ddd6fe 60%);color:#5b21b6}
+.kt-deck-text .kw-std{background:rgba(251,191,36,.35);color:#7c2d12;font-weight:800;padding:1px 5px;border-radius:5px;font-family:'Inter',monospace;letter-spacing:.3px;border:1px solid rgba(180,83,9,.2)}
+.kt-deck-card-inner.custom .kt-deck-text .kw-std{background:rgba(139,92,246,.25);color:#4c1d95;border-color:rgba(109,40,217,.25)}
 </style>
 </head>
 <body>
@@ -624,8 +645,18 @@ body.desktop-view .section-title{max-width:1100px;margin:0 auto;width:100%}
         </div>
         <span class="highlight-hint" id="highlightHint">✏️ Mode ON — swipe across text or select text first.</span>
     </div>
-    <div class="reader-tips" id="readerTips">↔ <b>Swipe left / right</b> to change question &nbsp;·&nbsp; <b>1-4</b> answer &nbsp;·&nbsp; <b>9</b> next &nbsp;·&nbsp; <b>0</b> prev &nbsp;·&nbsp; <b>7</b> back</div>
     <div class="reader-content" id="readerContent"></div>
+</div>
+
+<!-- ONE-TIME KEYBOARD SHORTCUT GUIDE (floats, auto-dismisses) -->
+<div id="readerKeyGuide" class="reader-key-guide">
+    <div class="rkg-title"><i class="fa-solid fa-keyboard"></i> Keyboard Shortcuts</div>
+    <div class="rkg-keys">
+        <span><b>1</b><b>2</b><b>3</b><b>4</b> Answer</span>
+        <span><b>9</b> Next</span>
+        <span><b>0</b> Prev</span>
+        <span><b>7</b> Back</span>
+    </div>
 </div>
 
 <!-- TOPIC FLASHCARD OVERLAY -->
@@ -672,7 +703,6 @@ body.desktop-view .section-title{max-width:1100px;margin:0 auto;width:100%}
 // ==================== STATE ====================
 const STATE={currentMode:null,questions:[],currentIdx:0,session:[],isAnswered:false,audioCtx:null,armedColor:null,studyMode:false,readerScrollPos:0,lastReaderIdx:-1};
 const DB_NAME='CAAuditProDB',STORE_NAME='progress';
-/* ===== FILES: added GST + FR ===== */
 const FILES={easy:'study.json',medium:'mcqs.json',hard:'audit_case_scenarios.json',gst:'gstcase_scenarios.json',fr:'fr.json'};
 const MODE_LABELS={easy:'Basic Concepts',medium:'Standard Questions',hard:'Case Scenarios',gst:'GST Case Scenarios',fr:'Financial Reporting'};
 const MODE_KEYS=['easy','medium','hard','gst','fr'];
@@ -726,16 +756,36 @@ function removeDesktopLayout(){document.getElementById('quizArea').classList.rem
 
 window.toggleStudyMode=function(){STATE.studyMode=!STATE.studyMode;const btn=document.getElementById('studyToggleBtn');const badge=document.getElementById('studyBadgeInline');btn.classList.toggle('active',STATE.studyMode);badge.classList.toggle('show',STATE.studyMode);if(STATE.studyMode){beep(660,'sine',.08);setTimeout(()=>beep(880,'sine',.08),100);}else{beep(440,'sine',.08);}renderQuestion();if(STATE.questions.length>0)updateStatsBar();};
 
-/* ===== more tolerant normalizer (works for GST/FR json shapes too) ===== */
+/* ==================== TABLE PREPROCESSING (for GST-style passages) ==================== */
+function prepareTables(container){
+    if(!container)return;
+    container.querySelectorAll('table').forEach(table=>{
+        if(!table.classList.contains('pdf-table'))table.classList.add('pdf-table');
+        if(table.parentElement&&table.parentElement.classList.contains('table-wrap'))return;
+        const wrap=document.createElement('div');
+        wrap.className='table-wrap';
+        table.before(wrap);
+        wrap.append(table);
+        const rows=[...table.rows];
+        if(!rows.length)return;
+        // remove fully-empty columns
+        for(let c=rows[0].cells.length-1;c>=0;c--){
+            const hasText=rows.some(row=>row.cells[c]&&row.cells[c].textContent.trim());
+            if(!hasText)rows.forEach(row=>{if(row.cells[c])row.cells[c].remove();});
+        }
+        // remove fully-empty rows
+        [...table.rows].forEach(row=>{if(![...row.cells].some(cell=>cell.textContent.trim()))row.remove();});
+    });
+}
+
+/* ==================== NORMALIZER (supports GST/FR too) ==================== */
 function normalizeData(rawData){
     let parsed=[];
     let ds;
     if(Array.isArray(rawData)){ds=rawData;}
     else{
         ds=rawData.caseScenarios||rawData.questions||rawData.scenarios||rawData.data||rawData.items||null;
-        if(!ds){
-            for(const k in rawData){if(Array.isArray(rawData[k])){ds=rawData[k];break;}}
-        }
+        if(!ds){for(const k in rawData){if(Array.isArray(rawData[k])){ds=rawData[k];break;}}}
         ds=ds||[];
     }
     ds.forEach((item,i)=>{
@@ -755,15 +805,12 @@ function parseSingleQuestion(q,ct,cti,qNum){
              :(q.correct_option!==undefined&&q.correct_option!==null)?q.correct_option
              :(q.answer!==undefined&&q.answer!==null)?q.answer
              :(q.correct!==undefined&&q.correct!==null)?q.correct:0;
-
     if(Array.isArray(q.options)){
         opts=q.options.slice();
         if(typeof ansRaw==='string'&&isNaN(parseInt(ansRaw,10))){
             const ch=ansRaw.trim().toLowerCase().charAt(0);
             ci=ch.charCodeAt(0)-97;
-        }else{
-            ci=parseInt(ansRaw,10);if(isNaN(ci))ci=0;
-        }
+        }else{ci=parseInt(ansRaw,10);if(isNaN(ci))ci=0;}
     }else if(q.options&&typeof q.options==='object'){
         const lower={};
         Object.keys(q.options).forEach(k=>{lower[String(k).toLowerCase()]=q.options[k];});
@@ -825,9 +872,18 @@ function renderQuestion(){
     if(st.note===undefined)st.note=null;
     if(!st.optionsHtml)st.optionsHtml=[];
     const cc=document.getElementById('caseStudyContainer');const qa=document.getElementById('quizArea');
-    if(q.caseStudy){cc.innerHTML=`<div class="case-study-box" ondblclick="openFullscreenReader()"><div class="case-label">📋 ${esc(q.caseTitle)}</div><div id="mainCaseStudyContent">${st.caseHtml||q.caseStudy}</div><div class="expand-btn"><i class="fa-solid fa-expand"></i></div></div>`;cc.style.display='block';if(document.body.classList.contains('desktop-view'))qa.classList.add('has-case');}
-    else{cc.innerHTML='';cc.style.display='none';qa.classList.remove('has-case');}
+    if(q.caseStudy){
+        cc.innerHTML=`<div class="case-study-box" ondblclick="openFullscreenReader()"><div class="case-label">📋 ${esc(q.caseTitle)}</div><div id="mainCaseStudyContent">${st.caseHtml||q.caseStudy}</div><div class="expand-btn"><i class="fa-solid fa-expand"></i></div></div>`;
+        cc.style.display='block';
+        if(document.body.classList.contains('desktop-view'))qa.classList.add('has-case');
+        // ⬇ Format tables inside the case study box (crucial for GST big passages)
+        prepareTables(document.getElementById('mainCaseStudyContent'));
+    }else{
+        cc.innerHTML='';cc.style.display='none';qa.classList.remove('has-case');
+    }
     document.getElementById('questionDisplay').innerHTML=`<div class="question-text"><span class="q-number">Q${esc(String(q.qNum))}.</span> <span id="mainQuestionContent">${st.questionHtml||q.question}</span><button class="question-expand-btn"><i class="fa-solid fa-expand"></i></button></div>`;
+    // Format tables inside question text too
+    prepareTables(document.getElementById('mainQuestionContent'));
     const oa=document.getElementById('optionsDisplay');oa.innerHTML='';
     q.options.forEach((o,i)=>{
         const btn=document.createElement('button');btn.className='option-btn';
@@ -866,7 +922,17 @@ function lockAnswer(idx,fromReader=false){
     else setTimeout(()=>showExplanationModal(ok),500);
 }
 
-function showExplanationModal(ok,expert=false){const q=STATE.questions[STATE.currentIdx];document.getElementById('explanationTitle').innerHTML=expert?'👔 Expert Advice':(ok?'✅ Excellent!':'❌ Incorrect');let html=`<div style="margin-bottom:10px"><b>Correct Answer:</b> Option ${String.fromCharCode(65+q.correct)}</div>`;html+=q.explain?`<div style="padding-top:8px;border-top:1px dashed #cbd5e1"><b>Explanation:</b><br/>${q.explain}</div>`:`<div style="padding-top:8px;border-top:1px dashed #cbd5e1;font-style:italic;color:#64748b">No explanation provided.</div>`;document.getElementById('explanationBody').innerHTML=html;document.getElementById('explanationNextBtn').textContent=STATE.currentIdx>=STATE.questions.length-1?'Finish Set':'Next Question →';document.getElementById('explanationModal').style.display='flex';}
+function showExplanationModal(ok,expert=false){
+    const q=STATE.questions[STATE.currentIdx];
+    document.getElementById('explanationTitle').innerHTML=expert?'👔 Expert Advice':(ok?'✅ Excellent!':'❌ Incorrect');
+    let html=`<div style="margin-bottom:10px"><b>Correct Answer:</b> Option ${String.fromCharCode(65+q.correct)}</div>`;
+    html+=q.explain?`<div style="padding-top:8px;border-top:1px dashed #cbd5e1"><b>Explanation:</b><br/>${q.explain}</div>`:`<div style="padding-top:8px;border-top:1px dashed #cbd5e1;font-style:italic;color:#64748b">No explanation provided.</div>`;
+    const body=document.getElementById('explanationBody');
+    body.innerHTML=html;
+    prepareTables(body);
+    document.getElementById('explanationNextBtn').textContent=STATE.currentIdx>=STATE.questions.length-1?'Finish Set':'Next Question →';
+    document.getElementById('explanationModal').style.display='flex';
+}
 
 // ==================== FULLSCREEN READER ====================
 window.openFullscreenReader=function(){
@@ -877,17 +943,40 @@ window.openFullscreenReader=function(){
     const isNewQuestion=STATE.lastReaderIdx!==STATE.currentIdx;
     if(isNewQuestion){STATE.readerScrollPos=0;STATE.lastReaderIdx=STATE.currentIdx;}else{STATE.readerScrollPos=document.getElementById('readerContent').scrollTop||0;}
     let content='';
-    if(q.caseStudy){content+=`<h3 style="color:var(--primary);margin-bottom:10px;font-size:.95rem">${esc(q.caseTitle)}</h3><div id="readerCaseStudy" class="highlightable" style="background:#f8fafc;padding:14px;border-radius:10px;border:1px solid #e2e8f0;margin-bottom:20px;line-height:1.65">${st.caseHtml||q.caseStudy}</div>`;}
+    if(q.caseStudy){
+        content+=`<h3 style="color:var(--primary);margin-bottom:10px;font-size:.95rem">${esc(q.caseTitle)}</h3><div id="readerCaseStudy" class="highlightable" style="background:#f8fafc;padding:14px;border-radius:10px;border:1px solid #e2e8f0;margin-bottom:20px;line-height:1.65">${st.caseHtml||q.caseStudy}</div>`;
+    }
     content+=`<h3 style="color:var(--text);margin-bottom:10px;font-weight:700;font-size:.95rem">Question ${esc(String(q.qNum))}</h3><div id="readerQuestion" class="highlightable" style="font-size:1rem;margin-bottom:16px;line-height:1.6">${st.questionHtml||q.question}</div><div class="options-list" id="readerOptions" style="margin-bottom:24px">`;
-    q.options.forEach((o,i)=>{let extra='';if(STATE.studyMode&&i===q.correct)extra='study-correct-preview';else if(st.sel!==null){if(i===st.sel&&!st.ok)extra='wrong';if(i===q.correct)extra='correct';}const disabled=(STATE.studyMode||st.sel!==null)?'disabled':'';content+=`<button class="option-btn ${extra}" id="readerOptBtn${i}" onclick="handleReaderOptionClick(${i})" ${disabled}><span class="option-letter">${String.fromCharCode(65+i)}</span><span id="readerOptText${i}" style="flex:1">${st.optionsHtml[i]||o}</span></button>`;});
+    q.options.forEach((o,i)=>{
+        let extra='';
+        if(STATE.studyMode&&i===q.correct)extra='study-correct-preview';
+        else if(st.sel!==null){if(i===st.sel&&!st.ok)extra='wrong';if(i===q.correct)extra='correct';}
+        const disabled=(STATE.studyMode||st.sel!==null)?'disabled':'';
+        content+=`<button class="option-btn ${extra}" id="readerOptBtn${i}" onclick="handleReaderOptionClick(${i})" ${disabled}><span class="option-letter">${String.fromCharCode(65+i)}</span><span id="readerOptText${i}" style="flex:1">${st.optionsHtml[i]||o}</span></button>`;
+    });
     content+=`</div>`;
-    document.getElementById('readerContent').innerHTML=content;
+    const rc=document.getElementById('readerContent');
+    rc.innerHTML=content;
     document.getElementById('fullscreenReader').style.display='flex';
-    document.getElementById('readerContent').scrollTop=STATE.readerScrollPos||0;
+    rc.scrollTop=STATE.readerScrollPos||0;
+    // ⬇ Format tables inside reader (case study + question)
+    prepareTables(rc);
     updateReaderNavUI();
+    showReaderKeyGuide();
 };
 
-/* ===== NEW: reader question navigation (swipe + keys + buttons) ===== */
+/* ===== One-time keyboard shortcut guide (floating, auto-dismiss) ===== */
+function showReaderKeyGuide(){
+    const key='auditPro_readerKeyGuideShown';
+    if(sessionStorage.getItem(key)==='1')return;
+    sessionStorage.setItem(key,'1');
+    const g=document.getElementById('readerKeyGuide');
+    if(!g)return;
+    setTimeout(()=>g.classList.add('show'),500);
+    setTimeout(()=>g.classList.remove('show'),5500);
+}
+
+/* ===== Reader question navigation ===== */
 function updateReaderNavUI(){
     const total=STATE.questions.length;
     const pos=document.getElementById('readerNavPos');
@@ -902,7 +991,7 @@ window.readerNav=function(dir){
     const target=STATE.currentIdx+dir;
     if(target<0||target>=STATE.questions.length){beep(240,'sine',.07);return;}
     STATE.currentIdx=target;
-    STATE.lastReaderIdx=-1;            // force fresh scroll position
+    STATE.lastReaderIdx=-1;
     renderQuestion();
     saveProgress();
     openFullscreenReader();
@@ -962,9 +1051,7 @@ const SYL_STORE_KEY='auditPro_syllabusProgress';
 let SYL_PROGRESS={};try{SYL_PROGRESS=JSON.parse(localStorage.getItem(SYL_STORE_KEY)||'{}')||{};}catch(e){SYL_PROGRESS={};}
 function saveSylProgress(){try{localStorage.setItem(SYL_STORE_KEY,JSON.stringify(SYL_PROGRESS));}catch(e){}}
 
-// KT storage
-let KT_DATA={};
-let KT_LOADED=false;
+let KT_DATA={};let KT_LOADED=false;
 const CUSTOM_KT_KEY='auditPro_customKT';
 const FAV_KT_KEY='auditPro_favKT';
 let CUSTOM_KT={};try{CUSTOM_KT=JSON.parse(localStorage.getItem(CUSTOM_KT_KEY)||'{}')||{};}catch(e){CUSTOM_KT={};}
@@ -982,29 +1069,21 @@ async function loadKTData(){
         const chs=j.chapters||[];
         chs.forEach(ch=>{
             if(!ch||!ch.chapter_number)return;
-            KT_DATA[String(ch.chapter_number)]={
-                title:ch.chapter_title||'',
-                takeaways:Array.isArray(ch.key_takeaways)?ch.key_takeaways:[]
-            };
+            KT_DATA[String(ch.chapter_number)]={title:ch.chapter_title||'',takeaways:Array.isArray(ch.key_takeaways)?ch.key_takeaways:[]};
         });
     }catch(e){
-        KT_DATA['1']={
-            title:'Quality Control',
-            takeaways:[
-                "SQC 1 requires that the firm should establish a system of quality control designed to provide it with reasonable assurance that the firm and its personnel comply with professional standards and regulatory and legal requirements and that reports issued by the firm or engagement partners are appropriate in the circumstances.",
-                "SQC 1 is applicable to audits, reviews of historical financial Information, and other assurance and related services engagements. It is applicable to all firms irrespective of their constitution.",
-                "Elements of system of quality control envisaged in SQC 1 include establishing leadership responsibilities for quality within the firm, complying with ethical requirements, acceptance and continuance of client relationships and specific engagements, establishing policies and procedures addressing issues of capabilities, competence, and commitment of human resources in firm to carry out engagements, engagement performance and monitoring.",
-                "In respect of difficult or contentious matters, consultation may be required at the appropriate professional level, with individuals within or outside the firm who have specialized expertise, to resolve a difficult or contentious matter.",
-                "Significant judgments made in an engagement should be reviewed by an engagement quality control reviewer for taking an objective view before the report is issued. The review does not reduce the responsibilities of the engagement partner.",
-                "Engagement quality control review is mandatory in respect of listed entities.",
-                "The firm should establish policies and procedures for engagement teams to complete the assembly of final engagement files on a timely basis after the engagement reports have been finalized. Engagement files should be completed in not more than 60 days after date of auditor's report in case of audit engagements and in other cases within the limits appropriate to engagements.",
-                "Engagement documentation has to be retained for a period of time sufficient to permit those performing monitoring procedures to evaluate the firm's compliance with its system of quality control, or for a longer period if required by law or regulation.",
-                "In the specific case of audit engagements, the retention period ordinarily is no shorter than seven years from the date of the auditor's report, or, if later, the date of the group auditor's report.",
-                "SA 220 is applicable to audit engagements only. It deals with responsibilities of engagement teams to implement quality control procedures that are applicable to audit engagements.",
-                "SA 220 is premised on the basis that firm is subject to SQC 1. It is within the overall context of a firm's system of quality control, engagement teams implement quality control procedures applicable to audit engagements.",
-                "Besides SQC 1 and SA 220, other Standards on Auditing, Code of Ethics issued by ICAI and certain provisions in the Companies Act, 2013 facilitate quality control process. There also exists mechanism for review of quality control through Peer Review Board, Quality Review Board and NFRA (National Financial Reporting Authority)."
-            ]
-        };
+        KT_DATA['1']={title:'Quality Control',takeaways:[
+            "SQC 1 requires that the firm should establish a system of quality control designed to provide it with reasonable assurance that the firm and its personnel comply with professional standards and regulatory and legal requirements.",
+            "SQC 1 is applicable to audits, reviews of historical financial Information, and other assurance and related services engagements.",
+            "Elements of system of quality control include leadership responsibilities, ethical requirements, acceptance and continuance, human resources, engagement performance and monitoring.",
+            "Significant judgments made in an engagement should be reviewed by an engagement quality control reviewer before the report is issued.",
+            "Engagement quality control review is mandatory in respect of listed entities.",
+            "Engagement files should be completed in not more than 60 days after date of auditor's report in case of audit engagements.",
+            "In the specific case of audit engagements, the retention period ordinarily is no shorter than seven years from the date of the auditor's report.",
+            "SA 220 is applicable to audit engagements only. It deals with responsibilities of engagement teams to implement quality control procedures.",
+            "Besides SQC 1 and SA 220, other SAs, Code of Ethics and the Companies Act, 2013 facilitate quality control process.",
+            "Mechanism for review of quality control exists through Peer Review Board, Quality Review Board and NFRA."
+        ]};
     }
 }
 function getChapterKT(chNum){return KT_DATA[String(chNum)]||null;}
@@ -1286,11 +1365,7 @@ function renderSyllabus(){
             });
             const ktBtn=row.querySelector('.syl-kt-btn');
             if(ktBtn&&hasKT){
-                ktBtn.addEventListener('click',e=>{
-                    e.stopPropagation();
-                    e.preventDefault();
-                    openKTDeckForChapter(ch.chapter_number);
-                });
+                ktBtn.addEventListener('click',e=>{e.stopPropagation();e.preventDefault();openKTDeckForChapter(ch.chapter_number);});
             }
             body.appendChild(row);
         });
@@ -1313,27 +1388,12 @@ function buildKTDeckForChapter(chNum){
     const out=[];
     if(kt&&kt.takeaways.length){
         kt.takeaways.forEach((t,i)=>{
-            out.push({
-                id:'d_'+chNum+'_'+i,
-                chapterNum:String(chNum),
-                chapterTitle:chTitle,
-                text:t,
-                custom:false,
-                idx:i+1
-            });
+            out.push({id:'d_'+chNum+'_'+i,chapterNum:String(chNum),chapterTitle:chTitle,text:t,custom:false,idx:i+1});
         });
     }
     const customs=CUSTOM_KT[String(chNum)]||[];
     customs.forEach((c,i)=>{
-        out.push({
-            id:'c_'+chNum+'_'+c.uid,
-            uid:c.uid,
-            chapterNum:String(chNum),
-            chapterTitle:chTitle,
-            text:c.text,
-            custom:true,
-            idx:i+1
-        });
+        out.push({id:'c_'+chNum+'_'+c.uid,uid:c.uid,chapterNum:String(chNum),chapterTitle:chTitle,text:c.text,custom:true,idx:i+1});
     });
     return out;
 }
@@ -1341,19 +1401,14 @@ function buildKTDeckForChapter(chNum){
 function buildKTDeckAll(){
     const all=[];
     const src=SYLLABUS||DEFAULT_SYLLABUS;
-    (src.modules||[]).forEach(mod=>(mod.chapters||[]).forEach(ch=>{
-        all.push(...buildKTDeckForChapter(ch.chapter_number));
-    }));
+    (src.modules||[]).forEach(mod=>(mod.chapters||[]).forEach(ch=>{all.push(...buildKTDeckForChapter(ch.chapter_number));}));
     return all;
 }
 
 window.openKTDeckForChapter=function(chNum){
     loadKTData().then(()=>{
         const deck=buildKTDeckForChapter(chNum);
-        if(!deck.length){
-            showCustomAlert('No takeaways','Key takeaways for this chapter are not available yet. Tap the + button to add your own!');
-            return;
-        }
+        if(!deck.length){showCustomAlert('No takeaways','Key takeaways for this chapter are not available yet. Tap the + button to add your own!');return;}
         const kt=getChapterKT(chNum);
         const title=kt?('Ch '+chNum+' · '+kt.title):('Ch '+chNum);
         openKTDeck(deck,title,'Key Takeaways');
@@ -1364,48 +1419,30 @@ window.openOverallKT=function(){
     showLoader('Loading takeaways...');
     loadSyllabusData().then(()=>{
         const deck=buildKTDeckAll();
-        if(!deck.length){
-            showCustomAlert('No takeaways','No Key Takeaways available yet.');
-            hideLoader();
-            return;
-        }
+        if(!deck.length){showCustomAlert('No takeaways','No Key Takeaways available yet.');hideLoader();return;}
         openKTDeck(deck,'📚 All Key Takeaways',deck.length+' across all chapters');
     }).finally(()=>hideLoader());
 };
 
 function openKTDeck(deck,title,sub){
-    KT_DECK.deck=deck;
-    KT_DECK.idx=0;
-    KT_DECK.title=title;
-    KT_DECK.sub=sub;
+    KT_DECK.deck=deck;KT_DECK.idx=0;KT_DECK.title=title;KT_DECK.sub=sub;
     KT_DECK.chapter=deck[0]?deck[0].chapterNum:null;
     document.getElementById('ktDeckTitle').textContent=title;
     document.getElementById('ktDeckOverlay').classList.add('show');
     renderKTDeck();
 }
 
-window.closeKTDeck=function(){
-    document.getElementById('ktDeckOverlay').classList.remove('show');
-};
+window.closeKTDeck=function(){document.getElementById('ktDeckOverlay').classList.remove('show');};
 
 window.ktDeckNav=function(dir){
     const newIdx=KT_DECK.idx+dir;
     if(newIdx<0||newIdx>=KT_DECK.deck.length){
         const top=document.querySelector('#ktDeckStage .kt-deck-card[data-top="1"]');
-        if(top){
-            top.style.transition='transform .2s';
-            top.style.transform='translate3d('+(dir>0?-30:30)+'px,0,0)';
-            setTimeout(()=>{top.style.transform='translate3d(0,0,0)';},180);
-        }
-        beep(280,'sine',.05);
-        return;
+        if(top){top.style.transition='transform .2s';top.style.transform='translate3d('+(dir>0?-30:30)+'px,0,0)';setTimeout(()=>{top.style.transform='translate3d(0,0,0)';},180);}
+        beep(280,'sine',.05);return;
     }
     const top=document.querySelector('#ktDeckStage .kt-deck-card[data-top="1"]');
-    if(top){
-        top.style.transition='transform .22s ease-out, opacity .22s ease-out';
-        top.style.transform='translate3d('+(dir>0?-640:640)+'px,0,0) rotate('+(dir>0?-15:15)+'deg)';
-        top.style.opacity='0';
-    }
+    if(top){top.style.transition='transform .22s ease-out, opacity .22s ease-out';top.style.transform='translate3d('+(dir>0?-640:640)+'px,0,0) rotate('+(dir>0?-15:15)+'deg)';top.style.opacity='0';}
     KT_DECK.idx=newIdx;
     KT_DECK.chapter=KT_DECK.deck[KT_DECK.idx]?KT_DECK.deck[KT_DECK.idx].chapterNum:null;
     beep(420,'sine',.04);
@@ -1418,165 +1455,60 @@ function renderKTDeck(){
     stage.innerHTML='';
     const total=KT_DECK.deck.length;
     if(!total){return;}
-    // Auto-highlight standards + key terms inside KT card text.
     function highlightKT(text){
-        const str = String(text || '');
-        if (/<\s*[a-z][^>]*>/i.test(str)) { return str; }
-        let out = esc(str);
-        out = out.replace(/\b(SA|SQC|SRE|SRS|SAE)\s?\d{1,4}\b/g, m => '<span class="kw-std">' + m + '</span>');
-        out = out.replace(/\b(CARO\s?20\d{2}|Ind\s?AS\s?\d{1,4}|AS\s?\d{1,3}|NFRA|ICAI|RBI|C&amp;AG|C&AG|BRSR|ESG|SDG|SDGs)\b/g, m => '<span class="kw-std">' + m + '</span>');
-        out = out.replace(/\b(Section\s?\d{1,4}(?:\(\d+\))?)\b/g, m => '<span class="kw-std">' + m + '</span>');
-        const concepts = ['audit risk','inherent risk','control risk','detection risk','material misstatement','going concern','professional skepticism','internal control','fraud','materiality','key audit matters','qualified opinion','adverse opinion','disclaimer of opinion','emphasis of matter','other matter paragraph','written representation','subsequent events','opening balances','related party','due diligence','investigation','forensic accounting','sustainable development','integrated reporting','six capitals','engagement quality control review','quality control'];
+        const str=String(text||'');
+        if(/<\s*[a-z][^>]*>/i.test(str)){return str;}
+        let out=esc(str);
+        out=out.replace(/\b(SA|SQC|SRE|SRS|SAE)\s?\d{1,4}\b/g,m=>'<span class="kw-std">'+m+'</span>');
+        out=out.replace(/\b(CARO\s?20\d{2}|Ind\s?AS\s?\d{1,4}|AS\s?\d{1,3}|NFRA|ICAI|RBI|C&amp;AG|C&AG|BRSR|ESG|SDG|SDGs)\b/g,m=>'<span class="kw-std">'+m+'</span>');
+        out=out.replace(/\b(Section\s?\d{1,4}(?:\(\d+\))?)\b/g,m=>'<span class="kw-std">'+m+'</span>');
+        const concepts=['audit risk','inherent risk','control risk','detection risk','material misstatement','going concern','professional skepticism','internal control','fraud','materiality','key audit matters','qualified opinion','adverse opinion','disclaimer of opinion','emphasis of matter','other matter paragraph','written representation','subsequent events','opening balances','related party','due diligence','investigation','forensic accounting','sustainable development','integrated reporting','six capitals','engagement quality control review','quality control'];
         concepts.forEach(term=>{
-            const re = new RegExp('\\b(' + term.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + ')\\b', 'i');
-            out = out.replace(re, m => '<span class="kw">' + m + '</span>');
+            const re=new RegExp('\\b('+term.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')+')\\b','i');
+            out=out.replace(re,m=>'<span class="kw">'+m+'</span>');
         });
         return out;
     }
-
     if(KT_DECK.idx<0)KT_DECK.idx=0;
     if(KT_DECK.idx>=total)KT_DECK.idx=total-1;
-
     const shown=KT_DECK.idx+1;
     document.getElementById('ktDeckProgress').textContent=shown+' / '+total;
     document.getElementById('ktDeckProgressFill').style.width=((shown/total)*100)+'%';
-
     const maxK=Math.min(total-1,KT_DECK.idx+2);
     for(let k=maxK;k>=KT_DECK.idx;k--){
-        const d=KT_DECK.deck[k];
-        const off=k-KT_DECK.idx;
-        const isTop=off===0;
-        const isFav=FAV_KT.has(d.id);
-
+        const d=KT_DECK.deck[k];const off=k-KT_DECK.idx;const isTop=off===0;const isFav=FAV_KT.has(d.id);
         const card=document.createElement('div');
-        card.className='kt-deck-card';
-        card.dataset.top=isTop?'1':'0';
+        card.className='kt-deck-card';card.dataset.top=isTop?'1':'0';
         card.style.zIndex=String(30-off);
         card.style.transform='translate3d(0,'+(off*14)+'px,0) scale('+(1-off*.06)+')';
         card.style.opacity=off>1?'0':'1';
         card.style.pointerEvents=isTop?'auto':'none';
-
         const innerCls='kt-deck-card-inner'+(d.custom?' custom':'')+(isFav?' fav':'');
-
         let chBadgeLabel=esc(d.chapterTitle||('Chapter '+d.chapterNum));
-        if(KT_DECK.title&&KT_DECK.title.indexOf('All')>-1){
-            chBadgeLabel='Ch '+d.chapterNum+' · '+esc(d.chapterTitle||'');
-        }
-
-        card.innerHTML=
-            '<div class="'+innerCls+'">'+
-                '<div class="kt-deck-top">'+
-                    '<span class="kt-ch-badge">'+chBadgeLabel+'</span>'+
-                    '<span class="kt-num-badge">'+(d.custom?'✎ My ':'KT ')+d.idx+'</span>'+
-                    '<button class="kt-fav-btn'+(isFav?' active':'')+'" data-id="'+esc(d.id)+'" title="Bookmark"><i class="'+(isFav?'fa-solid':'fa-regular')+' fa-star"></i></button>'+
-                    (d.custom?'<button class="kt-del-btn" data-id="'+esc(d.id)+'" data-ch="'+esc(d.chapterNum)+'" data-uid="'+esc(d.uid||'')+'" title="Delete"><i class="fa-solid fa-trash"></i></button>':'')+
-                '</div>'+
-                '<div class="kt-deck-text">'+highlightKT(d.text)+'</div>'+
-                '<div class="kt-deck-foot">'+(d.custom?'✎ Added by you':'Chapter '+d.chapterNum+' · '+esc(d.chapterTitle||''))+'</div>'+
-            '</div>';
-
+        if(KT_DECK.title&&KT_DECK.title.indexOf('All')>-1){chBadgeLabel='Ch '+d.chapterNum+' · '+esc(d.chapterTitle||'');}
+        card.innerHTML='<div class="'+innerCls+'"><div class="kt-deck-top"><span class="kt-ch-badge">'+chBadgeLabel+'</span><span class="kt-num-badge">'+(d.custom?'✎ My ':'KT ')+d.idx+'</span><button class="kt-fav-btn'+(isFav?' active':'')+'" data-id="'+esc(d.id)+'" title="Bookmark"><i class="'+(isFav?'fa-solid':'fa-regular')+' fa-star"></i></button>'+(d.custom?'<button class="kt-del-btn" data-id="'+esc(d.id)+'" data-ch="'+esc(d.chapterNum)+'" data-uid="'+esc(d.uid||'')+'" title="Delete"><i class="fa-solid fa-trash"></i></button>':'')+'</div><div class="kt-deck-text">'+highlightKT(d.text)+'</div><div class="kt-deck-foot">'+(d.custom?'✎ Added by you':'Chapter '+d.chapterNum+' · '+esc(d.chapterTitle||''))+'</div></div>';
         stage.appendChild(card);
         if(isTop)attachKTDrag(card);
-
         const favBtn=card.querySelector('.kt-fav-btn');
-        if(favBtn){
-            favBtn.addEventListener('click',e=>{
-                e.stopPropagation();
-                const id=favBtn.dataset.id;
-                if(FAV_KT.has(id)){FAV_KT.delete(id);beep(320,'sine',.05);}
-                else{FAV_KT.add(id);beep(720,'triangle',.08);}
-                saveFavKT();
-                renderKTDeck();
-            });
-        }
+        if(favBtn){favBtn.addEventListener('click',e=>{e.stopPropagation();const id=favBtn.dataset.id;if(FAV_KT.has(id)){FAV_KT.delete(id);beep(320,'sine',.05);}else{FAV_KT.add(id);beep(720,'triangle',.08);}saveFavKT();renderKTDeck();});}
         const delBtn=card.querySelector('.kt-del-btn');
-        if(delBtn){
-            delBtn.addEventListener('click',e=>{
-                e.stopPropagation();
-                const chNum=delBtn.dataset.ch;
-                const uid=delBtn.dataset.uid;
-                if(!chNum||!uid)return;
-                showCustomConfirm('Delete takeaway','Remove this custom takeaway? This cannot be undone.',r=>{
-                    if(!r)return;
-                    const arr=CUSTOM_KT[chNum]||[];
-                    CUSTOM_KT[chNum]=arr.filter(x=>x.uid!==uid);
-                    if(!CUSTOM_KT[chNum].length)delete CUSTOM_KT[chNum];
-                    saveCustomKT();
-                    KT_DECK.deck=KT_DECK.deck.filter(x=>x.id!==delBtn.dataset.id);
-                    if(KT_DECK.idx>=KT_DECK.deck.length)KT_DECK.idx=Math.max(0,KT_DECK.deck.length-1);
-                    renderKTDeck();
-                    beep(280,'sawtooth',.12);
-                });
-            });
-        }
+        if(delBtn){delBtn.addEventListener('click',e=>{e.stopPropagation();const chNum=delBtn.dataset.ch;const uid=delBtn.dataset.uid;if(!chNum||!uid)return;showCustomConfirm('Delete takeaway','Remove this custom takeaway? This cannot be undone.',r=>{if(!r)return;const arr=CUSTOM_KT[chNum]||[];CUSTOM_KT[chNum]=arr.filter(x=>x.uid!==uid);if(!CUSTOM_KT[chNum].length)delete CUSTOM_KT[chNum];saveCustomKT();KT_DECK.deck=KT_DECK.deck.filter(x=>x.id!==delBtn.dataset.id);if(KT_DECK.idx>=KT_DECK.deck.length)KT_DECK.idx=Math.max(0,KT_DECK.deck.length-1);renderKTDeck();beep(280,'sawtooth',.12);});});}
     }
-
     if(KT_DECK.idx===0){
-        const hint=document.createElement('div');
-        hint.className='flash-hint';
-        hint.innerHTML=
-            '<span class="hint-l"><i class="fa-solid fa-arrow-left"></i></span>'+
-            '<span>SWIPE TO NAVIGATE</span>'+
-            '<span class="hint-r"><i class="fa-solid fa-arrow-right"></i></span>';
+        const hint=document.createElement('div');hint.className='flash-hint';
+        hint.innerHTML='<span class="hint-l"><i class="fa-solid fa-arrow-left"></i></span><span>SWIPE TO NAVIGATE</span><span class="hint-r"><i class="fa-solid fa-arrow-right"></i></span>';
         stage.appendChild(hint);
     }
 }
 
 function attachKTDrag(card){
-    let sx=0,sy=0,dx=0,dy=0;
-    let dragging=false,decided=false;
-    let rafId=null;
+    let sx=0,sy=0,dx=0,dy=0;let dragging=false,decided=false;let rafId=null;
     const BASE='translate3d(0,0,0) scale(1)';
-
-    function paint(){
-        rafId=null;
-        const rot=dx/18;
-        card.style.transform='translate3d('+dx+'px,'+(dy*.25)+'px,0) rotate('+rot+'deg)';
-    }
-    function reset(){
-        card.style.transition='transform .3s cubic-bezier(.16,1,.3,1), opacity .2s';
-        card.style.transform=BASE;
-    }
-
-    card.addEventListener('pointerdown',e=>{
-        if(e.button&&e.button!==0)return;
-        if(e.target.closest('.kt-fav-btn')||e.target.closest('.kt-del-btn'))return;
-        dragging=true;decided=false;dx=0;dy=0;
-        sx=e.clientX;sy=e.clientY;
-        card.style.transition='none';
-        try{card.setPointerCapture(e.pointerId);}catch(err){}
-    });
-
-    card.addEventListener('pointermove',e=>{
-        if(!dragging)return;
-        dx=e.clientX-sx;
-        dy=e.clientY-sy;
-        if(!decided){
-            if(Math.abs(dx)<6&&Math.abs(dy)<6)return;
-            decided=true;
-            if(Math.abs(dy)>Math.abs(dx)){dragging=false;reset();return;}
-        }
-        if(rafId)return;
-        rafId=requestAnimationFrame(paint);
-    });
-
-    function finish(){
-        if(!dragging)return;
-        dragging=false;
-        if(rafId){cancelAnimationFrame(rafId);rafId=null;}
-        if(Math.abs(dx)>70){
-            const dir=dx>0?-1:1;
-            card.style.transition='transform .22s ease-out, opacity .22s ease-out';
-            card.style.transform='translate3d('+(dx>0?640:-640)+'px,'+(dy*.4)+'px,0) rotate('+(dx>0?18:-18)+'deg)';
-            card.style.opacity='0';
-            KT_DECK.idx=Math.max(0,Math.min(KT_DECK.deck.length-1,KT_DECK.idx+dir));
-            KT_DECK.chapter=KT_DECK.deck[KT_DECK.idx]?KT_DECK.deck[KT_DECK.idx].chapterNum:null;
-            beep(dir>0?520:400,'sine',.05);
-            setTimeout(renderKTDeck,120);
-        }else{
-            dx=0;dy=0;reset();
-        }
-    }
+    function paint(){rafId=null;const rot=dx/18;card.style.transform='translate3d('+dx+'px,'+(dy*.25)+'px,0) rotate('+rot+'deg)';}
+    function reset(){card.style.transition='transform .3s cubic-bezier(.16,1,.3,1), opacity .2s';card.style.transform=BASE;}
+    card.addEventListener('pointerdown',e=>{if(e.button&&e.button!==0)return;if(e.target.closest('.kt-fav-btn')||e.target.closest('.kt-del-btn'))return;dragging=true;decided=false;dx=0;dy=0;sx=e.clientX;sy=e.clientY;card.style.transition='none';try{card.setPointerCapture(e.pointerId);}catch(err){}});
+    card.addEventListener('pointermove',e=>{if(!dragging)return;dx=e.clientX-sx;dy=e.clientY-sy;if(!decided){if(Math.abs(dx)<6&&Math.abs(dy)<6)return;decided=true;if(Math.abs(dy)>Math.abs(dx)){dragging=false;reset();return;}}if(rafId)return;rafId=requestAnimationFrame(paint);});
+    function finish(){if(!dragging)return;dragging=false;if(rafId){cancelAnimationFrame(rafId);rafId=null;}if(Math.abs(dx)>70){const dir=dx>0?-1:1;card.style.transition='transform .22s ease-out, opacity .22s ease-out';card.style.transform='translate3d('+(dx>0?640:-640)+'px,'+(dy*.4)+'px,0) rotate('+(dx>0?18:-18)+'deg)';card.style.opacity='0';KT_DECK.idx=Math.max(0,Math.min(KT_DECK.deck.length-1,KT_DECK.idx+dir));KT_DECK.chapter=KT_DECK.deck[KT_DECK.idx]?KT_DECK.deck[KT_DECK.idx].chapterNum:null;beep(dir>0?520:400,'sine',.05);setTimeout(renderKTDeck,120);}else{dx=0;dy=0;reset();}}
     card.addEventListener('pointerup',finish);
     card.addEventListener('pointercancel',()=>{dragging=false;if(rafId){cancelAnimationFrame(rafId);rafId=null;}dx=0;dy=0;reset();});
 }
@@ -1586,29 +1518,19 @@ window.promptAddKT=function(){
     const chNum=card?card.chapterNum:(KT_DECK.chapter||'1');
     const kt=getChapterKT(chNum);
     const chName=kt?kt.title:('Chapter '+chNum);
-    showCustomPrompt(
-        'Add Your Takeaway',
-        'Adding to '+(chName||'this chapter'),
-        'Write your own key takeaway...',
-        txt=>{
-            if(!txt)return;
-            const uid='u'+Date.now()+Math.random().toString(36).slice(2,6);
-            if(!CUSTOM_KT[String(chNum)])CUSTOM_KT[String(chNum)]=[];
-            CUSTOM_KT[String(chNum)].push({uid:uid,text:txt,added:Date.now()});
-            saveCustomKT();
-            beep(660,'triangle',.12);
-            const wasAll=KT_DECK.title&&KT_DECK.title.indexOf('All')>-1;
-            if(wasAll){
-                KT_DECK.deck=buildKTDeckAll();
-            }else{
-                KT_DECK.deck=buildKTDeckForChapter(chNum);
-            }
-            const newId='c_'+chNum+'_'+uid;
-            const newIdx=KT_DECK.deck.findIndex(x=>x.id===newId);
-            if(newIdx>=0)KT_DECK.idx=newIdx;
-            renderKTDeck();
-        }
-    );
+    showCustomPrompt('Add Your Takeaway','Adding to '+(chName||'this chapter'),'Write your own key takeaway...',txt=>{
+        if(!txt)return;
+        const uid='u'+Date.now()+Math.random().toString(36).slice(2,6);
+        if(!CUSTOM_KT[String(chNum)])CUSTOM_KT[String(chNum)]=[];
+        CUSTOM_KT[String(chNum)].push({uid:uid,text:txt,added:Date.now()});
+        saveCustomKT();beep(660,'triangle',.12);
+        const wasAll=KT_DECK.title&&KT_DECK.title.indexOf('All')>-1;
+        if(wasAll){KT_DECK.deck=buildKTDeckAll();}else{KT_DECK.deck=buildKTDeckForChapter(chNum);}
+        const newId='c_'+chNum+'_'+uid;
+        const newIdx=KT_DECK.deck.findIndex(x=>x.id===newId);
+        if(newIdx>=0)KT_DECK.idx=newIdx;
+        renderKTDeck();
+    });
 };
 
 /* ============================================================
@@ -1618,15 +1540,11 @@ const FLASH={deck:[],idx:0,title:'',sub:'',lock:false,chapter:null};
 
 window.openFlashcards=function(deck,title,sub){
     if(!deck||!deck.length)return;
-    FLASH.deck=deck;
-    FLASH.idx=0;
-    FLASH.title=title||'Deck';
-    FLASH.sub=sub||'';
+    FLASH.deck=deck;FLASH.idx=0;FLASH.title=title||'Deck';FLASH.sub=sub||'';
     FLASH.chapter=deck[0].chNum||null;
     document.getElementById('flashChapterTitle').textContent=title||'Deck';
     document.getElementById('flashOverlay').classList.add('show');
-    updateFlashKTBtn();
-    renderFlash();
+    updateFlashKTBtn();renderFlash();
 };
 
 function updateFlashKTBtn(){
@@ -1661,13 +1579,8 @@ function flashCommit(done){
     FLASH.lock=true;
     setTimeout(()=>{FLASH.lock=false;},180);
     const d=FLASH.deck[FLASH.idx];
-    if(d){
-        if(done){SYL_PROGRESS[d.id]=true;beep(720,'sine',.07);}
-        else{delete SYL_PROGRESS[d.id];beep(320,'sine',.07);}
-        saveSylProgress();
-    }
-    FLASH.idx++;
-    renderFlash();
+    if(d){if(done){SYL_PROGRESS[d.id]=true;beep(720,'sine',.07);}else{delete SYL_PROGRESS[d.id];beep(320,'sine',.07);}saveSylProgress();}
+    FLASH.idx++;renderFlash();
 }
 
 window.flashSwipe=function(done){
@@ -1678,18 +1591,13 @@ window.flashSwipe=function(done){
     top.style.opacity='0';
     setTimeout(()=>flashCommit(done),140);
 };
-window.flashFlip=function(){
-    const top=document.querySelector('#flashStage .flash-card[data-top="1"]');
-    if(top){top.classList.toggle('flipped');beep(560,'sine',.04);}
-};
+window.flashFlip=function(){const top=document.querySelector('#flashStage .flash-card[data-top="1"]');if(top){top.classList.toggle('flipped');beep(560,'sine',.04);}};
 window.flashMarkAll=function(){
     if(!FLASH.deck.length)return;
     showCustomConfirm('Mark All','Mark every card in this deck as completed?',r=>{
         if(!r)return;
         FLASH.deck.forEach(d=>{SYL_PROGRESS[d.id]=true;});
-        saveSylProgress();
-        FLASH.idx=FLASH.deck.length;
-        renderFlash();
+        saveSylProgress();FLASH.idx=FLASH.deck.length;renderFlash();
     });
 };
 window.restartFlashDeck=function(){FLASH.idx=0;renderFlash();};
@@ -1698,8 +1606,7 @@ function renderFlash(){
     const stage=document.getElementById('flashStage');
     const actions=document.getElementById('flashActions');
     if(!stage)return;
-    stage.innerHTML='';
-    updateFlashKTBtn();
+    stage.innerHTML='';updateFlashKTBtn();
     const total=FLASH.deck.length;
     const doneCount=FLASH.deck.filter(d=>SYL_PROGRESS[d.id]).length;
     const shown=Math.min(FLASH.idx+1,total);
@@ -1714,13 +1621,9 @@ function renderFlash(){
     actions.style.display='flex';
     const maxK=Math.min(total-1,FLASH.idx+2);
     for(let k=maxK;k>=FLASH.idx;k--){
-        const d=FLASH.deck[k];
-        const off=k-FLASH.idx;
-        const isTop=off===0;
-        const isDone=!!SYL_PROGRESS[d.id];
+        const d=FLASH.deck[k];const off=k-FLASH.idx;const isTop=off===0;const isDone=!!SYL_PROGRESS[d.id];
         const card=document.createElement('div');
-        card.className='flash-card';
-        card.dataset.top=isTop?'1':'0';
+        card.className='flash-card';card.dataset.top=isTop?'1':'0';
         card.style.zIndex=String(30-off);
         card.style.transform='translate3d(0,'+(off*14)+'px,0) scale('+(1-off*.06)+')';
         card.style.opacity=off>1?'0':'1';
@@ -1730,20 +1633,16 @@ function renderFlash(){
         if(isTop)attachFlashDrag(card);
     }
     if(FLASH.idx===0){
-        const hint=document.createElement('div');
-        hint.className='flash-hint';
+        const hint=document.createElement('div');hint.className='flash-hint';
         hint.innerHTML='<span class="hint-l"><i class="fa-solid fa-arrow-left"></i></span><span>SWIPE</span><span class="hint-r"><i class="fa-solid fa-arrow-right"></i></span>';
         stage.appendChild(hint);
     }
 }
 
 function attachFlashDrag(card){
-    let sx=0,sy=0,dx=0,dy=0;
-    let dragging=false,decided=false;
-    let rafId=null;
+    let sx=0,sy=0,dx=0,dy=0;let dragging=false,decided=false;let rafId=null;
     const BASE='translate3d(0,0,0) scale(1)';
-    const yes=card.querySelector('.stamp-yes');
-    const no=card.querySelector('.stamp-no');
+    const yes=card.querySelector('.stamp-yes');const no=card.querySelector('.stamp-no');
     function paint(){rafId=null;card.style.transform='translate3d('+dx+'px,'+(dy*.3)+'px,0) rotate('+(dx/16)+'deg)';if(yes)yes.style.opacity=Math.max(0,Math.min(1,dx/80));if(no)no.style.opacity=Math.max(0,Math.min(1,-dx/80));}
     function reset(){card.style.transition='transform .3s cubic-bezier(.16,1,.3,1), opacity .2s';card.style.transform=BASE;if(yes)yes.style.opacity=0;if(no)no.style.opacity=0;}
     card.addEventListener('pointerdown',e=>{if(e.button&&e.button!==0)return;dragging=true;decided=false;dx=0;dy=0;sx=e.clientX;sy=e.clientY;card.style.transition='none';try{card.setPointerCapture(e.pointerId);}catch(err){}});
@@ -1767,19 +1666,17 @@ function bindEvents(){
     document.getElementById('btnExpert').addEventListener('click',useExpert);
     document.getElementById('explanationNextBtn').addEventListener('click',goNext);
 
-    // Main content swipe (quiz)
     const ta=document.getElementById('mainContent');
     ta.addEventListener('touchstart',e=>{ssx=e.changedTouches[0].screenX;ssy=e.changedTouches[0].screenY;},{passive:true});
     ta.addEventListener('touchend',e=>{sex=e.changedTouches[0].screenX;sey=e.changedTouches[0].screenY;handleSwipe();},{passive:true});
 
-    // Reader touch — highlight gestures
     const rc=document.getElementById('readerContent');
     rc.addEventListener('touchstart',onReaderTouchStart,{passive:true});
     rc.addEventListener('touchmove',onReaderTouchMove,{passive:false});
     rc.addEventListener('touchend',onReaderTouchEnd,{passive:true});
     rc.addEventListener('touchcancel',onReaderTouchEnd,{passive:true});
 
-    /* ===== NEW: reader swipe left/right to change question ===== */
+    /* Reader swipe left/right to change question */
     let rdSwipe={x:0,y:0,active:false};
     rc.addEventListener('touchstart',e=>{
         if(STATE.armedColor)return;
@@ -1792,23 +1689,17 @@ function bindEvents(){
         if(STATE.armedColor)return;
         const t=e.changedTouches[0];if(!t)return;
         const dx=t.clientX-rdSwipe.x, dy=t.clientY-rdSwipe.y;
-        if(Math.abs(dx)>80 && Math.abs(dx)>Math.abs(dy)*1.5){
-            readerNav(dx<0?1:-1);
-        }
+        if(Math.abs(dx)>80 && Math.abs(dx)>Math.abs(dy)*1.5){readerNav(dx<0?1:-1);}
     },{passive:true});
 
     document.addEventListener('click',e=>{const dd=document.getElementById('lifelineDropdown');const lb=document.getElementById('lifelineBtn');if(dd.style.display==='block'&&!dd.contains(e.target)&&e.target!==lb&&!lb.contains(e.target))dd.style.display='none';});
 
-    /* ===== GLOBAL KEYBOARD SHORTCUTS (TV remote / desktop) =====
-       1 = A, 2 = B, 3 = C, 4 = D
-       9 = next question, 0 = previous question, 7 = go back
-    ============================================================ */
+    /* Global keyboard shortcuts */
     document.addEventListener('keydown',e=>{
         const key=e.key;
         const tag=(document.activeElement&&document.activeElement.tagName)||'';
-        if(tag==='TEXTAREA'||tag==='INPUT')return;   // don't hijack typing
+        if(tag==='TEXTAREA'||tag==='INPUT')return;
 
-        // ---- Flashcard overlay ----
         if(document.getElementById('flashOverlay').classList.contains('show')){
             if(key==='ArrowRight'){e.preventDefault();flashSwipe(true);}
             else if(key==='ArrowLeft'){e.preventDefault();flashSwipe(false);}
@@ -1816,20 +1707,17 @@ function bindEvents(){
             else if(key==='Escape'||key==='7'){e.preventDefault();closeFlashcards();}
             return;
         }
-        // ---- KT deck overlay ----
         if(document.getElementById('ktDeckOverlay').classList.contains('show')){
             if(key==='ArrowRight'||key==='9'){e.preventDefault();ktDeckNav(1);}
             else if(key==='ArrowLeft'||key==='0'){e.preventDefault();ktDeckNav(-1);}
             else if(key==='Escape'||key==='7'){e.preventDefault();closeKTDeck();}
             return;
         }
-        // ---- Custom modals ----
         if(document.getElementById('customAlertModal').style.display==='flex'||
            document.getElementById('customConfirmModal').style.display==='flex'||
            document.getElementById('customPromptModal').style.display==='flex'||
            document.getElementById('notesModal').style.display==='flex'){return;}
 
-        // ---- Fullscreen Reading Mode ----
         if(document.getElementById('fullscreenReader').style.display==='flex'){
             if(key==='ArrowRight'||key==='9'){e.preventDefault();readerNav(1);return;}
             if(key==='ArrowLeft'||key==='0'){e.preventDefault();readerNav(-1);return;}
@@ -1844,7 +1732,6 @@ function bindEvents(){
             return;
         }
 
-        // ---- Quiz screen ----
         if(document.getElementById('quizScreen').classList.contains('active')){
             const modalOpen=document.getElementById('explanationModal').style.display==='flex';
             if(key==='9'){e.preventDefault();goNext();return;}
@@ -1880,4 +1767,4 @@ window.addEventListener('DOMContentLoaded',()=>{
 })();
 </script>
 </body>
-</html>
+    </html>
