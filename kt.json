@@ -1,12 +1,16 @@
 {
-  "source_pdf": "C:\\Users\\satqm\\OneDrive\\Desktop\\STUDY\\ICAI_Final_Paper3_Merged.pdf",
+  "source": "CA Final Audit — Syllabus + SA Objectives (ICAI)",
   "total_chapters_found": 19,
   "chapters": [
     {
       "chapter_number": 1,
       "chapter_title": "Quality Control",
-      "total_takeaways": 12,
+      "total_takeaways": 16,
       "key_takeaways": [
+        "<span class=\"kw-std\">SQC 1</span> — The firm should establish a system of <mark class=\"kw\">quality control</mark> designed to provide it with <strong>reasonable assurance</strong> that the firm and its personnel comply with <mark class=\"kw\">professional standards</mark> and regulatory and legal requirements, and that reports issued by the firm or engagement partners are <strong>appropriate in the circumstances</strong>.",
+        "<span class=\"kw-std\">SQC 1</span> — The system of quality control should include policies and procedures addressing each of the following elements: <strong>Leadership responsibilities for quality within the firm</strong>, <strong>Ethical requirements</strong>, <strong>Acceptance and continuance of client relationships and specific engagements</strong>, <strong>Human resources</strong>, <strong>Engagement performance</strong>, and <strong>Monitoring</strong>.",
+        "<span class=\"kw-std\">SA 220</span> — The objective of the auditor is to implement <mark class=\"kw\">quality control procedures</mark> at the <strong>engagement level</strong> that provide the auditor with reasonable assurance that the audit complies with professional standards and legal requirements, and that the <strong>auditor's report</strong> issued is appropriate in the circumstances.",
+        "<span class=\"kw-std\">SA 220</span> — The engagement partner shall take responsibility for the overall quality of the audit engagement, including <strong>leadership responsibilities</strong>, <strong>relevant ethical requirements</strong>, <strong>acceptance and continuance</strong>, <strong>assignment of engagement teams</strong>, <strong>engagement performance</strong>, and <strong>monitoring</strong>.",
         "SQC 1 requires that the firm should establish a system of quality control designed to provide it with reasonable assurance that the firm and its personnel comply with professional standards and regulatory and legal requirements and that reports issued by the firm or engagement partners are appropriate in the circumstances.",
         "SQC 1 is applicable to audits, reviews of historical financial information, and other assurance and related services engagements. It is applicable to all firms irrespective of their constitution.",
         "Elements of system of quality control envisaged in SQC 1 include establishing leadership responsibilities for quality within the firm, complying with ethical requirements, acceptance and continuance of client relationships and specific engagements, establishing policies and procedures addressing issues of capabilities, competence, and commitment of human resources in firm to carry out engagements, engagement performance and monitoring.",
@@ -24,8 +28,33 @@
     {
       "chapter_number": 2,
       "chapter_title": "General Auditing Principles and Auditors Responsibilities",
-      "total_takeaways": 11,
+      "total_takeaways": 36,
       "key_takeaways": [
+        "<span class=\"kw-std\">SA 200</span> — To obtain <strong>reasonable assurance</strong> about whether the financial statements as a whole are free from <mark class=\"kw\">material misstatement</mark>, whether due to <mark class=\"kw\">fraud</mark> or <mark class=\"kw\">error</mark>, thereby enabling the auditor to express an opinion on whether the financial statements are prepared, in all material respects, in accordance with an applicable <mark class=\"kw\">financial reporting framework</mark>.",
+        "<span class=\"kw-std\">SA 200</span> — To <strong>report on the financial statements</strong>, and communicate as required by the SAs, in accordance with the auditor's findings.",
+        "<span class=\"kw-std\">SA 200</span> — The auditor shall comply with <strong>relevant ethical requirements</strong>, including those pertaining to <strong>independence</strong>, and shall plan and perform the audit with <mark class=\"kw\">professional skepticism</mark>, exercising <strong>professional judgment</strong> throughout.",
+        "<span class=\"kw-std\">SA 210</span> — To accept or continue an <mark class=\"kw\">audit engagement</mark> only when the <strong>preconditions for an audit</strong> are present — namely, that the financial reporting framework to be applied is acceptable and that management acknowledges its responsibility for the financial statements, for internal control, and for providing the auditor with access to information.",
+        "<span class=\"kw-std\">SA 210</span> — To <strong>agree the terms of the audit engagement</strong> with management or those charged with governance and record them in an <mark class=\"kw\">audit engagement letter</mark> or other suitable form of written agreement.",
+        "<span class=\"kw-std\">SA 210</span> — To determine whether there is any indication that an <strong>understanding of the terms of the engagement</strong> by management is required, and to revise the terms of engagement when circumstances warrant.",
+        "<span class=\"kw-std\">SA 240</span> — To identify and assess the <mark class=\"kw\">risks of material misstatement</mark> in the financial statements due to <mark class=\"kw\">fraud</mark>, and to respond appropriately.",
+        "<span class=\"kw-std\">SA 240</span> — To obtain <strong>sufficient appropriate audit evidence</strong> regarding the assessed risks of material misstatement due to fraud, through designing and implementing appropriate responses.",
+        "<span class=\"kw-std\">SA 240</span> — To respond appropriately to <strong>fraud or suspected fraud</strong> identified during the audit.",
+        "<span class=\"kw-std\">SA 240</span> — The auditor shall maintain <mark class=\"kw\">professional skepticism</mark> throughout the audit, recognising the possibility that a <mark class=\"kw\">material misstatement</mark> due to fraud may exist, notwithstanding the auditor's past experience with the entity.",
+        "<span class=\"kw-std\">SA 250</span> — To obtain <strong>sufficient appropriate audit evidence</strong> regarding compliance with those <mark class=\"kw\">laws and regulations</mark> that are generally recognised to have a <strong>direct effect</strong> on the determination of material amounts and disclosures in the financial statements.",
+        "<span class=\"kw-std\">SA 250</span> — To perform specified <strong>audit procedures</strong> to help identify instances of <strong>non-compliance</strong> with other laws and regulations that may have a <strong>material effect</strong> on the financial statements.",
+        "<span class=\"kw-std\">SA 250</span> — To respond appropriately to identified or suspected <strong>non-compliance</strong> during the audit.",
+        "<span class=\"kw-std\">SA 260</span> — To communicate clearly with <mark class=\"kw\">those charged with governance</mark> the responsibilities of the auditor in relation to the <mark class=\"kw\">financial statement audit</mark>, and an <strong>overview of the planned scope and timing</strong> of the audit.",
+        "<span class=\"kw-std\">SA 260</span> — To obtain from those charged with governance <strong>information relevant to the audit</strong>.",
+        "<span class=\"kw-std\">SA 260</span> — To provide those charged with governance with <strong>timely observations</strong> arising from the audit that are significant and relevant to their responsibility to oversee the financial reporting process.",
+        "<span class=\"kw-std\">SA 260</span> — To promote <strong>effective two-way communication</strong> between the auditor and those charged with governance.",
+        "<span class=\"kw-std\">SA 265</span> — The objective of the auditor is to communicate appropriately to <mark class=\"kw\">those charged with governance</mark> and management <strong>deficiencies in internal control</strong> that the auditor has identified during the audit and that, in the auditor's professional judgment, are of sufficient importance to merit their respective attentions.",
+        "<span class=\"kw-std\">SA 265</span> — The written communication of <strong>significant deficiencies</strong> shall include a description of the deficiencies and an explanation of their <strong>potential effects</strong>, along with sufficient information to enable those charged with governance and management to understand the context of the communication.",
+        "<span class=\"kw-std\">SA 299</span> — To lay down broad principles for the <mark class=\"kw\">joint auditors</mark> in conducting the <mark class=\"kw\">joint audit</mark>.",
+        "<span class=\"kw-std\">SA 299</span> — To provide a uniform approach to the process of <mark class=\"kw\">joint audit</mark>.",
+        "<span class=\"kw-std\">SA 299</span> — To identify the distinct areas of work and coverage thereof by each <mark class=\"kw\">joint auditor</mark>.",
+        "<span class=\"kw-std\">SA 299</span> — To identify <strong>individual responsibility</strong> and <strong>joint responsibility</strong> of the <mark class=\"kw\">joint auditors</mark> in relation to audit.",
+        "<span class=\"kw-std\">SA 402</span> — To obtain an understanding of the <strong>nature and significance</strong> of the services provided by the <mark class=\"kw\">service organisation</mark> and their effect on the user entity's <mark class=\"kw\">internal control</mark> relevant to the audit, sufficient to <strong>identify and assess the risks of material misstatement</strong>.",
+        "<span class=\"kw-std\">SA 402</span> — To design and perform <strong>audit procedures</strong> responsive to those risks.",
         "Fraud is an intentional act by one or more individuals among management, those charged with governance, employees, or third parties, involving the use of deception to obtain an unjust or illegal advantage.",
         "SA 240 deals with the auditor's responsibilities relating to fraud in an audit of financial statements. Its requirements assist the auditor in identifying and assessing the risks of material misstatement due to fraud and in designing procedures to detect such misstatement.",
         "Fraud risk factors are events or conditions that indicate an incentive or pressure to commit fraud or provide an opportunity to commit fraud.",
@@ -42,8 +71,9 @@
     {
       "chapter_number": 3,
       "chapter_title": "Audit Planning, Strategy and Execution",
-      "total_takeaways": 9,
+      "total_takeaways": 10,
       "key_takeaways": [
+        "<span class=\"kw-std\">SA 300</span> — The objective of the auditor is to <strong>plan the audit</strong> so that it will be performed in an <strong>effective manner</strong>.",
         "Planning an audit involves establishing the overall audit strategy for the engagement and developing an audit plan.",
         "The auditor shall establish an overall audit strategy that sets the scope, timing and direction of the audit, and that guides the development of the audit plan.",
         "The audit plan is more detailed than the overall audit strategy that includes the nature, timing and extent of audit procedures to be performed by engagement team members.",
@@ -58,8 +88,11 @@
     {
       "chapter_number": 4,
       "chapter_title": "Materiality, Risk Assessment and Internal Control",
-      "total_takeaways": 11,
+      "total_takeaways": 14,
       "key_takeaways": [
+        "<span class=\"kw-std\">SA 315</span> — The objective of the auditor is to <strong>identify and assess the risks of material misstatement</strong>, whether due to <mark class=\"kw\">fraud</mark> or <mark class=\"kw\">error</mark>, at the <strong>financial statement level</strong> and <strong>assertion level</strong>, through understanding the entity and its environment, including the entity's <mark class=\"kw\">internal control</mark>, thereby providing a basis for designing and implementing responses to the assessed <mark class=\"kw\">risks of material misstatement</mark>. This will help the auditor to reduce the <mark class=\"kw\">risk of material misstatement</mark> to an acceptably low level.",
+        "<span class=\"kw-std\">SA 320</span> — The objective of the auditor is to apply the concept of <mark class=\"kw\">materiality</mark> appropriately in <strong>planning</strong> and <strong>performing</strong> the audit.",
+        "<span class=\"kw-std\">SA 330</span> — The objective of the auditor is to obtain <mark class=\"kw\">sufficient appropriate audit evidence</mark> about the assessed <mark class=\"kw\">risks of material misstatement</mark>, through designing and implementing <strong>appropriate responses</strong> to those risks.",
         "Audit risk is the risk of expressing an inappropriate audit opinion on financial statements that are materially misstated. The components of audit risk include inherent risk, control risk and detection risk. Audit Risk (AR) can be expressed as a product of Inherent Risk (IR), Control Risk (CR) and Detection Risk (DR), i.e. AR = IR × CR × DR.",
         "Auditors are required to assess the risks of material misstatement at two levels. The first is at the overall financial statement level, which refers to risks of material misstatement that relate pervasively to the financial statements as a whole and potentially affect many assertions; the second relates to risks identifiable with specific assertions at the class of transactions, account balance, or disclosure level.",
         "A set of internally generated policies and procedures adopted by the management of an enterprise is a prerequisite for an organisation's efficient and effective performance. It is thus a primary responsibility of every management to create and maintain an adequate system of internal control appropriate to the size and nature of the business entity.",
@@ -76,8 +109,21 @@
     {
       "chapter_number": 5,
       "chapter_title": "Audit Evidence",
-      "total_takeaways": 16,
+      "total_takeaways": 29,
       "key_takeaways": [
+        "<span class=\"kw-std\">SA 500</span> — The objective of the auditor is to design and perform <strong>audit procedures</strong> in such a way as to enable the auditor to obtain <mark class=\"kw\">sufficient appropriate audit evidence</mark> to be able to draw <strong>reasonable conclusions</strong> on which to base the auditor's opinion.",
+        "<span class=\"kw-std\">SA 501</span> — <strong>Existence and condition of inventory</strong>.",
+        "<span class=\"kw-std\">SA 501</span> — <strong>Completeness of litigation and claims</strong> involving the entity.",
+        "<span class=\"kw-std\">SA 501</span> — <strong>Presentation and disclosure of segment information</strong> in accordance with the applicable financial reporting framework.",
+        "<span class=\"kw-std\">SA 505</span> — The objective of the auditor, when using <mark class=\"kw\">external confirmation procedures</mark>, is to design and perform such procedures to obtain <strong>relevant and reliable audit evidence</strong>.",
+        "<span class=\"kw-std\">SA 510</span> — Whether <mark class=\"kw\">opening balances</mark> contain <strong>misstatements</strong> that materially affect the current period's financial statements.",
+        "<span class=\"kw-std\">SA 510</span> — Whether <strong>appropriate accounting policies</strong> reflected in the opening balances have been consistently applied in the current period's financial statements, or changes thereto are properly accounted for and adequately presented and disclosed in accordance with the applicable financial reporting framework.",
+        "<span class=\"kw-std\">SA 520</span> — To obtain <strong>relevant and reliable audit evidence</strong> when using <mark class=\"kw\">substantive analytical procedures</mark>.",
+        "<span class=\"kw-std\">SA 520</span> — To design and perform <mark class=\"kw\">analytical procedures</mark> near the end of the audit that assist the auditor when forming an <strong>overall conclusion</strong> as to whether the financial statements are consistent with the auditor's understanding of the entity.",
+        "<span class=\"kw-std\">SA 530</span> — The objective of the auditor when using <mark class=\"kw\">audit sampling</mark> is to provide a <strong>reasonable basis</strong> for the auditor to draw conclusions about the <strong>population</strong> from which the sample is selected.",
+        "<span class=\"kw-std\">SA 540</span> — The objective of the auditor is to obtain <mark class=\"kw\">sufficient appropriate audit evidence</mark> about whether <mark class=\"kw\">accounting estimates</mark> and related disclosures in the financial statements are <strong>reasonable</strong> in the context of the applicable financial reporting framework, and whether the financial statements achieve <strong>fair presentation</strong>.",
+        "<span class=\"kw-std\">SA 550</span> — To obtain an understanding of <mark class=\"kw\">related party</mark> relationships and transactions sufficient to be able to <strong>identify and assess the risks of material misstatement</strong> associated with related party relationships and transactions.",
+        "<span class=\"kw-std\">SA 550</span> — To obtain <mark class=\"kw\">sufficient appropriate audit evidence</mark> about whether related party relationships and transactions have been appropriately identified, accounted for and disclosed in the financial statements in accordance with the applicable financial reporting framework.",
         "SA 500 deals with the auditor's responsibility to design and perform audit procedures to obtain sufficient appropriate audit evidence to be able to draw reasonable conclusions on which to base the auditor's opinion.",
         "The quality of all audit evidence is affected by the relevance and reliability of the information upon which it is based.",
         "Relevance deals with the logical connection with, or bearing upon, the purpose of the audit procedure and, where appropriate, the assertion under consideration. The relevance of information to be used as audit evidence may be affected by the direction of testing.",
@@ -99,8 +145,16 @@
     {
       "chapter_number": 6,
       "chapter_title": "Completion and Review",
-      "total_takeaways": 11,
+      "total_takeaways": 19,
       "key_takeaways": [
+        "<span class=\"kw-std\">SA 560</span> — To obtain <mark class=\"kw\">sufficient appropriate audit evidence</mark> about whether events occurring between the <strong>date of the financial statements</strong> and the <strong>date of the auditor's report</strong> that require adjustment of, or disclosure in, the financial statements are appropriately reflected in those financial statements.",
+        "<span class=\"kw-std\">SA 560</span> — To respond appropriately to facts that become known to the auditor after the date of the auditor's report that, had they been known to the auditor at that date, may have caused the auditor to <strong>amend the auditor's report</strong>.",
+        "<span class=\"kw-std\">SA 570</span> — To obtain <mark class=\"kw\">sufficient appropriate audit evidence</mark> regarding, and to conclude on, the appropriateness of management's use of the <mark class=\"kw\">going concern basis of accounting</mark> in the preparation of the financial statements.",
+        "<span class=\"kw-std\">SA 570</span> — To conclude, based on the audit evidence obtained, whether a <strong>material uncertainty</strong> exists related to events or conditions that may cast significant doubt on the entity's ability to continue as a going concern.",
+        "<span class=\"kw-std\">SA 570</span> — To report in accordance with this SA.",
+        "<span class=\"kw-std\">SA 580</span> — To obtain <mark class=\"kw\">written representations</mark> from management and, where appropriate, those charged with governance that they believe that they have fulfilled their <strong>responsibility for the preparation of the financial statements</strong> and for the <strong>completeness of the information</strong> provided to the auditor.",
+        "<span class=\"kw-std\">SA 580</span> — To support other audit evidence relevant to the financial statements or specific assertions in the financial statements by means of <mark class=\"kw\">written representations</mark>, if determined necessary by the auditor or required by other SAs.",
+        "<span class=\"kw-std\">SA 580</span> — To respond appropriately to written representations provided by management and, where appropriate, those charged with governance, or if management or those charged with governance <strong>do not provide</strong> the written representations requested by the auditor.",
         "Events occurring between the date of the financial statements and the date of the auditor's report and facts that become known to the auditor after the date of the auditor's report are known as subsequent events.",
         "Such events may be those that provide evidence of conditions that existed at the date of the financial statements and those that provide evidence of conditions that arose after the date of the financial statements.",
         "SA 560 deals with the auditor's responsibilities relating to subsequent events in an audit of financial statements.",
@@ -117,8 +171,21 @@
     {
       "chapter_number": 7,
       "chapter_title": "Reporting",
-      "total_takeaways": 17,
+      "total_takeaways": 30,
       "key_takeaways": [
+        "<span class=\"kw-std\">SA 700</span> — To <strong>form an opinion</strong> on the financial statements based on an evaluation of the conclusions drawn from the <mark class=\"kw\">audit evidence</mark> obtained.",
+        "<span class=\"kw-std\">SA 700</span> — To express clearly that opinion through a <strong>written report</strong>.",
+        "<span class=\"kw-std\">SA 701</span> — To determine <mark class=\"kw\">key audit matters</mark> and, having formed an opinion on the financial statements, communicate those matters by describing them in the auditor's report.",
+        "<span class=\"kw-std\">SA 705</span> — The auditor concludes, based on the audit evidence obtained, that the financial statements as a whole are <strong>not free from material misstatement</strong>.",
+        "<span class=\"kw-std\">SA 705</span> — The auditor is <strong>unable to obtain sufficient appropriate audit evidence</strong> to conclude that the financial statements as a whole are free from material misstatement.",
+        "<span class=\"kw-std\">SA 706</span> — A matter, although appropriately presented or disclosed in the financial statements, that is of such importance that it is <strong>fundamental to users' understanding</strong> of the financial statements.",
+        "<span class=\"kw-std\">SA 706</span> — Any other matter that is relevant to users' understanding of the <strong>audit</strong>, the <strong>auditor's responsibilities</strong> or the <strong>auditor's report</strong>.",
+        "<span class=\"kw-std\">SA 710</span> — To obtain <mark class=\"kw\">sufficient appropriate audit evidence</mark> about whether the <strong>comparative information</strong> included in the financial statements has been presented, in all material respects, in accordance with the requirements for comparative information in the applicable financial reporting framework.",
+        "<span class=\"kw-std\">SA 710</span> — To report in accordance with the auditor's reporting responsibilities.",
+        "<span class=\"kw-std\">SA 720</span> — To consider whether there is a <strong>material inconsistency</strong> between the <mark class=\"kw\">other information</mark> and the financial statements.",
+        "<span class=\"kw-std\">SA 720</span> — To consider whether there is a <strong>material inconsistency</strong> between the <mark class=\"kw\">other information</mark> and the auditor's knowledge obtained in the audit.",
+        "<span class=\"kw-std\">SA 720</span> — To respond appropriately when the auditor identifies that such material inconsistencies appear to exist or when the auditor otherwise becomes aware that other information appears to be materially misstated.",
+        "<span class=\"kw-std\">SA 720</span> — To report in accordance with this SA.",
         "SA 700 deals with the auditor's responsibility to form an opinion on the financial statements. It also deals with the form and content of the auditor's report issued as a result of an audit of financial statements.",
         "The objectives of the auditor in accordance with SA 700 are to form an opinion on the financial statements based on an evaluation of the conclusions drawn from the audit evidence obtained, and to express clearly that opinion through a written report.",
         "As per SA 700, the auditor's report shall be in writing and shall include the basic elements which ordinarily include (in case of auditor's Report for audits conducted in accordance with Standards on Auditing) a title, addressee, opinion section, basis for opinion, going concern, key audit matters, responsibilities and other reporting responsibilities.",
@@ -141,8 +208,15 @@
     {
       "chapter_number": 8,
       "chapter_title": "Specialised Areas",
-      "total_takeaways": 16,
+      "total_takeaways": 23,
       "key_takeaways": [
+        "<span class=\"kw-std\">SA 800</span> — To address appropriately the special considerations that are relevant to the <strong>acceptance of the engagement</strong>, the <strong>planning</strong> and <strong>performance</strong> of that engagement, and the <strong>forming of an opinion</strong> and <strong>reporting</strong> on the financial statements prepared in accordance with a <mark class=\"kw\">special purpose framework</mark>.",
+        "<span class=\"kw-std\">SA 800</span> — The auditor shall apply all SAs relevant to the audit, and shall alert users that the financial statements are prepared in accordance with a <mark class=\"kw\">special purpose framework</mark> and may not be suitable for another purpose.",
+        "<span class=\"kw-std\">SA 805</span> — To address appropriately the special considerations that are relevant to the <strong>acceptance of the engagement</strong>, the <strong>planning</strong> and <strong>performance</strong> of that engagement, and the <strong>forming of an opinion</strong> and <strong>reporting</strong> on a <mark class=\"kw\">single financial statement</mark> or a <mark class=\"kw\">specific element, account or item</mark> of a financial statement.",
+        "<span class=\"kw-std\">SA 805</span> — The auditor shall adapt all SAs relevant to the audit as necessary in the circumstances of the engagement.",
+        "<span class=\"kw-std\">SA 810</span> — To determine whether it is appropriate to accept the engagement to report on <mark class=\"kw\">summary financial statements</mark>.",
+        "<span class=\"kw-std\">SA 810</span> — To form an opinion on the summary financial statements based on an evaluation of the conclusions drawn from the audit evidence obtained.",
+        "<span class=\"kw-std\">SA 810</span> — To express clearly that opinion through a <strong>written report</strong> that also describes the basis for that opinion.",
         "SA 800 deals with special considerations applicable in respect of audit of financial statements prepared in accordance with special purpose framework.",
         "SA 800 defines special purpose framework as a financial reporting framework designed to meet the financial information needs of specific users. The financial reporting framework may be a fair presentation framework or a compliance framework.",
         "SA 800 addresses special considerations that are relevant to the acceptance of the engagement, the planning and performance of that engagement and forming an opinion and reporting on the financial statements, but not for the purpose of expressing an opinion on the effectiveness of the entity's internal control.",
@@ -164,8 +238,11 @@
     {
       "chapter_number": 9,
       "chapter_title": "Related Services",
-      "total_takeaways": 6,
+      "total_takeaways": 9,
       "key_takeaways": [
+        "<span class=\"kw-std\">SRS 4400</span> — The objective of an <mark class=\"kw\">agreed-upon procedures</mark> engagement is for the auditor to carry out procedures of an audit nature to which the auditor and the entity and any appropriate third parties have agreed and to report on <strong>factual findings</strong>.",
+        "<span class=\"kw-std\">SRS 4410</span> — To apply <strong>accounting and financial reporting expertise</strong> to assist management in the <strong>preparation and presentation</strong> of financial information in accordance with an applicable financial reporting framework based on information provided by management.",
+        "<span class=\"kw-std\">SRS 4410</span> — To report in accordance with the requirements of this SRS.",
         "Related Services engagements are not assurance engagements. In such types of engagements, no assurance is provided by the practitioner.",
         "In an engagement to perform agreed-upon procedures, the auditor is engaged by the client to issue a report of factual findings, based on specified procedures performed on specified subject matter of specified elements, accounts or items of a financial statement.",
         "SRS 4400 provides guidance on the auditor's professional responsibilities when an engagement to perform agreed-upon procedures regarding financial information is undertaken and on the form and content of the report that the auditor issues in connection with such an engagement.",
@@ -177,8 +254,12 @@
     {
       "chapter_number": 10,
       "chapter_title": "Review of Financial Information",
-      "total_takeaways": 12,
+      "total_takeaways": 16,
       "key_takeaways": [
+        "<span class=\"kw-std\">SRE 2400</span> — To obtain <strong>limited assurance</strong>, primarily through <strong>inquiry</strong> and <strong>analytical procedures</strong>, about whether the financial statements as a whole are free from material misstatement, thereby enabling the practitioner to express a <strong>conclusion</strong> on whether anything has come to the practitioner's attention that causes the practitioner to believe that the financial statements are not prepared, in all material respects, in accordance with an applicable financial reporting framework.",
+        "<span class=\"kw-std\">SRE 2400</span> — To report on the financial statements as a whole and communicate as required by <mark class=\"kw\">SRE 2400</mark>.",
+        "<span class=\"kw-std\">SRE 2410</span> — The objective of an engagement to review <mark class=\"kw\">interim financial information</mark> is to enable the auditor to express a <strong>conclusion</strong> whether, on the basis of the review, anything has come to the auditor's attention that causes the auditor to believe that the interim financial information is not prepared, in all material respects, in accordance with an applicable financial reporting framework.",
+        "<span class=\"kw-std\">SRE 2410</span> — The auditor makes <strong>inquiries</strong> and performs <strong>analytical and other review procedures</strong> in order to reduce to a <strong>moderate level</strong> the risk of expressing an inappropriate conclusion when the interim financial information is materially misstated.",
         "'Review' is a limited assurance engagement. Limited assurance engagement provides a lower level of assurance than audit. It involves fewer procedures and gathers sufficient appropriate evidence on the basis of which limited conclusions can be drawn up.",
         "Standards on review engagements apply where 'review' of financial information is undertaken by the practitioner. SRE 2400 and SRE 2410 have been issued in this regard.",
         "SRE 2400 deals with the practitioner's responsibilities when performing a review of historical financial statements when the practitioner is not the auditor of the entity's financial statements.",
@@ -196,8 +277,14 @@
     {
       "chapter_number": 11,
       "chapter_title": "Prospective Financial Information and Other Assurance Services",
-      "total_takeaways": 10,
+      "total_takeaways": 16,
       "key_takeaways": [
+        "<span class=\"kw-std\">SAE 3400</span> — To examine and report on <strong>assumptions</strong> and <strong>preparation</strong> of <mark class=\"kw\">prospective financial information</mark>.",
+        "<span class=\"kw-std\">SAE 3402</span> — To obtain <strong>reasonable assurance</strong> about whether, in all material respects, based on suitable criteria: (i) the <mark class=\"kw\">service organisation's description</mark> of its system fairly presents the system as designed and implemented throughout the specified period (or, in the case of a <strong>Type 1 report</strong>, as at a specified date); (ii) the <strong>controls</strong> related to the control objectives stated in the service organisation's description were suitably designed throughout the specified period (or, in the case of a <strong>Type 1 report</strong>, as at a specified date).",
+        "<span class=\"kw-std\">SAE 3402</span> — Where included in the scope of the engagement, the <strong>controls operated effectively</strong> to provide reasonable assurance that the control objectives were achieved throughout the specified period.",
+        "<span class=\"kw-std\">SAE 3402</span> — To report on the matters above in accordance with the <mark class=\"kw\">service auditor's</mark> findings.",
+        "<span class=\"kw-std\">SAE 3420</span> — To obtain <strong>reasonable assurance</strong> about whether the <mark class=\"kw\">pro forma financial information</mark> has been compiled, in all material respects, by the responsible party on the basis of the applicable criteria.",
+        "<span class=\"kw-std\">SAE 3420</span> — To report in accordance with the practitioner's findings.",
         "An assurance engagement may relate to the examination of subject matters other than an examination of financial statements prepared on the basis of 'historical financial information'. In such types of assurance engagements, the examination may relate to prospective financial information or to providing assurance regarding non-financial matters like the design and operation of internal control in an entity. Standards on Assurance Engagements deal with the responsibilities of professional accountants in assurance engagements dealing with such matters.",
         "'Prospective financial information' means financial information based on assumptions about events that may occur in the future and possible actions by an entity. It can be in the form of a forecast, a projection, or a combination of both.",
         "SAE 3400 provides guidance on engagements to examine and report on prospective financial information including examination procedures for best-estimate and hypothetical assumptions.",
@@ -230,8 +317,10 @@
     {
       "chapter_number": 13,
       "chapter_title": "Group Audits",
-      "total_takeaways": 15,
+      "total_takeaways": 17,
       "key_takeaways": [
+        "<span class=\"kw-std\">SA 600</span> — To perform roles and responsibilities of <strong>principal auditor</strong> and <strong>other auditor</strong>.",
+        "<span class=\"kw-std\">SA 600</span> — To report appropriately when there is another auditor.",
         "Whenever a parent decides to, or is required to, prepare and present consolidated financial statements, it should do so in accordance with the requirements of applicable Accounting Standards under the relevant financial reporting framework.",
         "Accounting Standard (AS) 21 'Consolidated Financial Statements' and Indian Accounting Standard (Ind AS) 110 'Consolidated Financial Statements' lay down principles and procedures for preparation and presentation of consolidated financial statements under AS and Ind AS respectively.",
         "Consolidated financial statements are presented, to the extent possible, in the same format as adopted by the parent for its separate financial statements.",
@@ -296,8 +385,11 @@
     {
       "chapter_number": 16,
       "chapter_title": "Internal Audit",
-      "total_takeaways": 3,
+      "total_takeaways": 6,
       "key_takeaways": [
+        "<span class=\"kw-std\">SA 610</span> — To determine whether the work of the <mark class=\"kw\">internal audit function</mark> or direct assistance from <mark class=\"kw\">internal auditors</mark> can be used, and if so, in which areas and to what extent.",
+        "<span class=\"kw-std\">SA 610</span> — If using the work of the internal audit function, to determine whether that work is <strong>adequate</strong> for purposes of the audit.",
+        "<span class=\"kw-std\">SA 610</span> — If using internal auditors to provide <strong>direct assistance</strong>, to appropriately direct, supervise and review their work.",
         "Internal Audit provides independent assurance on the effectiveness of internal controls and risk management processes to enhance governance and achieve organisational objectives.",
         "It is mandatory for all listed companies, and for unlisted public companies/private companies fulfilling certain criteria, to appoint an internal auditor in accordance with provisions of Section 138 of the Companies Act, 2013 and relevant rules.",
         "The internal auditor shall either be a chartered accountant or a cost accountant (whether engaged in the practice or not), or such other professional as may be decided by the Board to conduct an internal audit of the functions and activities of the company in terms of Section 138 of the Companies Act, 2013. He may or may not be an employee of the company."
@@ -353,426 +445,6 @@
         "The First Schedule is divided into four parts. Part I of the First Schedule deals with the misconduct of a member in practice which would have the effect generally of compromising his position as an independent person. Part II deals with misconduct of members in service.",
         "Part III deals with the misconduct of members generally and Part IV deals with other misconduct in relation to members of the Institute generally.",
         "The Second Schedule is divided into three parts. Part I deals with misconduct in relation to a member in practice, Part II deals with misconduct of members generally and Part III deals with other misconduct in relation to members of the Institute generally."
-      ]
-    },
-    {
-      "chapter_number": "SQC 1",
-      "chapter_title": "SQC 1 – Quality Control for Firms that Perform Audits and Reviews of Historical Financial Information, and Other Assurance and Related Services Engagements",
-      "total_takeaways": 2,
-      "key_takeaways": [
-        "The firm should establish a system of <mark class=\"kw\">quality control</mark> designed to provide it with <strong>reasonable assurance</strong> that the firm and its personnel comply with <mark class=\"kw\">professional standards</mark> and regulatory and legal requirements, and that reports issued by the firm or engagement partners are <strong>appropriate in the circumstances</strong>.",
-        "The system of quality control should include policies and procedures addressing each of the following elements: <strong>Leadership responsibilities for quality within the firm</strong>, <strong>Ethical requirements</strong>, <strong>Acceptance and continuance of client relationships and specific engagements</strong>, <strong>Human resources</strong>, <strong>Engagement performance</strong>, and <strong>Monitoring</strong>."
-      ]
-    },
-    {
-      "chapter_number": "SA 200",
-      "chapter_title": "SA 200 – Overall Objectives of the Independent Auditor and the Conduct of an Audit in Accordance with Standards on Auditing",
-      "total_takeaways": 3,
-      "key_takeaways": [
-        "To obtain <strong>reasonable assurance</strong> about whether the financial statements as a whole are free from <mark class=\"kw\">material misstatement</mark>, whether due to <mark class=\"kw\">fraud</mark> or <mark class=\"kw\">error</mark>, thereby enabling the auditor to express an opinion on whether the financial statements are prepared, in all material respects, in accordance with an applicable <mark class=\"kw\">financial reporting framework</mark>.",
-        "To <strong>report on the financial statements</strong>, and communicate as required by the SAs, in accordance with the auditor's findings.",
-        "The auditor shall comply with <strong>relevant ethical requirements</strong>, including those pertaining to <strong>independence</strong>, and shall plan and perform the audit with <mark class=\"kw\">professional skepticism</mark>, exercising <strong>professional judgment</strong> throughout."
-      ]
-    },
-    {
-      "chapter_number": "SA 210",
-      "chapter_title": "SA 210 – Agreeing the Terms of Audit Engagements",
-      "total_takeaways": 3,
-      "key_takeaways": [
-        "To accept or continue an <mark class=\"kw\">audit engagement</mark> only when the <strong>preconditions for an audit</strong> are present — namely, that the financial reporting framework to be applied is acceptable and that management acknowledges its responsibility for the financial statements, for internal control, and for providing the auditor with access to information.",
-        "To <strong>agree the terms of the audit engagement</strong> with management or those charged with governance and record them in an <mark class=\"kw\">audit engagement letter</mark> or other suitable form of written agreement.",
-        "To determine whether there is any indication that an <strong>understanding of the terms of the engagement</strong> by management is required, and to revise the terms of engagement when circumstances warrant."
-      ]
-    },
-    {
-      "chapter_number": "SA 220",
-      "chapter_title": "SA 220 – Quality Control for an Audit of Financial Statements",
-      "total_takeaways": 2,
-      "key_takeaways": [
-        "The objective of the auditor is to implement <mark class=\"kw\">quality control procedures</mark> at the <strong>engagement level</strong> that provide the auditor with reasonable assurance that the audit complies with professional standards and legal requirements, and that the <strong>auditor's report</strong> issued is appropriate in the circumstances.",
-        "The engagement partner shall take responsibility for the overall quality of the audit engagement, including <strong>leadership responsibilities</strong>, <strong>relevant ethical requirements</strong>, <strong>acceptance and continuance</strong>, <strong>assignment of engagement teams</strong>, <strong>engagement performance</strong>, and <strong>monitoring</strong>."
-      ]
-    },
-    {
-      "chapter_number": "SA 230",
-      "chapter_title": "SA 230 – Audit Documentation",
-      "total_takeaways": 2,
-      "key_takeaways": [
-        "The objective of the auditor is to prepare documentation that provides a <strong>sufficient and appropriate record</strong> of the basis for the <mark class=\"kw\">auditor's report</mark> and evidence that the audit was planned and performed in accordance with <mark class=\"kw\">SAs</mark> and applicable legal and regulatory requirements.",
-        "<mark class=\"kw\">Audit documentation</mark> also assists the engagement team to plan and perform the audit, to supervise, to retain a record of matters of continuing significance, and to enable <strong>quality control reviews</strong> and <strong>inspections</strong> to be conducted."
-      ]
-    },
-    {
-      "chapter_number": "SA 240",
-      "chapter_title": "SA 240 – The Auditor's Responsibilities Relating to Fraud in an Audit of Financial Statements",
-      "total_takeaways": 3,
-      "key_takeaways": [
-        "To identify and assess the <mark class=\"kw\">risks of material misstatement</mark> in the financial statements due to <mark class=\"kw\">fraud</mark>, and to respond appropriately.",
-        "To obtain <strong>sufficient appropriate audit evidence</strong> regarding the assessed risks of material misstatement due to fraud, through designing and implementing appropriate responses.",
-        "To respond appropriately to <strong>fraud or suspected fraud</strong> identified during the audit.",
-        "The auditor shall maintain <mark class=\"kw\">professional skepticism</mark> throughout the audit, recognising the possibility that a <mark class=\"kw\">material misstatement</mark> due to fraud may exist, notwithstanding the auditor's past experience with the entity."
-      ]
-    },
-    {
-      "chapter_number": "SA 250",
-      "chapter_title": "SA 250 – Consideration of Laws and Regulations in an Audit of Financial Statements",
-      "total_takeaways": 2,
-      "key_takeaways": [
-        "To obtain <strong>sufficient appropriate audit evidence</strong> regarding compliance with those <mark class=\"kw\">laws and regulations</mark> that are generally recognised to have a <strong>direct effect</strong> on the determination of material amounts and disclosures in the financial statements.",
-        "To perform specified <strong>audit procedures</strong> to help identify instances of <strong>non-compliance</strong> with other laws and regulations that may have a <strong>material effect</strong> on the financial statements.",
-        "To respond appropriately to identified or suspected <strong>non-compliance</strong> during the audit."
-      ]
-    },
-    {
-      "chapter_number": "SA 260",
-      "chapter_title": "SA 260 – Communication with Those Charged with Governance",
-      "total_takeaways": 3,
-      "key_takeaways": [
-        "To communicate clearly with <mark class=\"kw\">those charged with governance</mark> the responsibilities of the auditor in relation to the <mark class=\"kw\">financial statement audit</mark>, and an <strong>overview of the planned scope and timing</strong> of the audit.",
-        "To obtain from those charged with governance <strong>information relevant to the audit</strong>.",
-        "To provide those charged with governance with <strong>timely observations</strong> arising from the audit that are significant and relevant to their responsibility to oversee the financial reporting process.",
-        "To promote <strong>effective two-way communication</strong> between the auditor and those charged with governance."
-      ]
-    },
-    {
-      "chapter_number": "SA 265",
-      "chapter_title": "SA 265 – Communicating Deficiencies in Internal Control to Those Charged with Governance and Management",
-      "total_takeaways": 2,
-      "key_takeaways": [
-        "The objective of the auditor is to communicate appropriately to <mark class=\"kw\">those charged with governance</mark> and management <strong>deficiencies in internal control</strong> that the auditor has identified during the audit and that, in the auditor's professional judgment, are of sufficient importance to merit their respective attentions.",
-        "The written communication of <strong>significant deficiencies</strong> shall include a description of the deficiencies and an explanation of their <strong>potential effects</strong>, along with sufficient information to enable those charged with governance and management to understand the context of the communication."
-      ]
-    },
-    {
-      "chapter_number": "SA 299",
-      "chapter_title": "SA 299 – Joint Audit of Financial Statements",
-      "total_takeaways": 4,
-      "key_takeaways": [
-        "To lay down broad principles for the <mark class=\"kw\">joint auditors</mark> in conducting the <mark class=\"kw\">joint audit</mark>.",
-        "To provide a uniform approach to the process of <mark class=\"kw\">joint audit</mark>.",
-        "To identify the distinct areas of work and coverage thereof by each <mark class=\"kw\">joint auditor</mark>.",
-        "To identify <strong>individual responsibility</strong> and <strong>joint responsibility</strong> of the <mark class=\"kw\">joint auditors</mark> in relation to audit."
-      ]
-    },
-    {
-      "chapter_number": "SA 300",
-      "chapter_title": "SA 300 – Planning an Audit of Financial Statements",
-      "total_takeaways": 1,
-      "key_takeaways": [
-        "The objective of the auditor is to <strong>plan the audit</strong> so that it will be performed in an <strong>effective manner</strong>."
-      ]
-    },
-    {
-      "chapter_number": "SA 315",
-      "chapter_title": "SA 315 – Identifying and Assessing the Risks of Material Misstatement Through Understanding the Entity and Its Environment",
-      "total_takeaways": 1,
-      "key_takeaways": [
-        "The objective of the auditor is to <strong>identify and assess the risks of material misstatement</strong>, whether due to <mark class=\"kw\">fraud</mark> or <mark class=\"kw\">error</mark>, at the <strong>financial statement level</strong> and <strong>assertion level</strong>, through understanding the entity and its environment, including the entity's <mark class=\"kw\">internal control</mark>, thereby providing a basis for designing and implementing responses to the assessed <mark class=\"kw\">risks of material misstatement</mark>. This will help the auditor to reduce the <mark class=\"kw\">risk of material misstatement</mark> to an acceptably low level."
-      ]
-    },
-    {
-      "chapter_number": "SA 320",
-      "chapter_title": "SA 320 – Materiality in Planning and Performing an Audit",
-      "total_takeaways": 1,
-      "key_takeaways": [
-        "The objective of the auditor is to apply the concept of <mark class=\"kw\">materiality</mark> appropriately in <strong>planning</strong> and <strong>performing</strong> the audit."
-      ]
-    },
-    {
-      "chapter_number": "SA 330",
-      "chapter_title": "SA 330 – The Auditor's Responses to Assessed Risks",
-      "total_takeaways": 1,
-      "key_takeaways": [
-        "The objective of the auditor is to obtain <mark class=\"kw\">sufficient appropriate audit evidence</mark> about the assessed <mark class=\"kw\">risks of material misstatement</mark>, through designing and implementing <strong>appropriate responses</strong> to those risks."
-      ]
-    },
-    {
-      "chapter_number": "SA 402",
-      "chapter_title": "SA 402 – Audit Considerations Relating to an Entity Using a Service Organisation",
-      "total_takeaways": 2,
-      "key_takeaways": [
-        "To obtain an understanding of the <strong>nature and significance</strong> of the services provided by the <mark class=\"kw\">service organisation</mark> and their effect on the user entity's <mark class=\"kw\">internal control</mark> relevant to the audit, sufficient to <strong>identify and assess the risks of material misstatement</strong>.",
-        "To design and perform <strong>audit procedures</strong> responsive to those risks."
-      ]
-    },
-    {
-      "chapter_number": "SA 450",
-      "chapter_title": "SA 450 – Evaluation of Misstatements Identified During the Audit",
-      "total_takeaways": 2,
-      "key_takeaways": [
-        "The effect of <strong>identified misstatements</strong> on the audit.",
-        "The effect of <strong>uncorrected misstatements</strong>, if any, on the financial statements."
-      ]
-    },
-    {
-      "chapter_number": "SA 500",
-      "chapter_title": "SA 500 – Audit Evidence",
-      "total_takeaways": 1,
-      "key_takeaways": [
-        "The objective of the auditor is to design and perform <strong>audit procedures</strong> in such a way as to enable the auditor to obtain <mark class=\"kw\">sufficient appropriate audit evidence</mark> to be able to draw <strong>reasonable conclusions</strong> on which to base the auditor's opinion."
-      ]
-    },
-    {
-      "chapter_number": "SA 501",
-      "chapter_title": "SA 501 – Audit Evidence: Specific Considerations for Selected Items",
-      "total_takeaways": 3,
-      "key_takeaways": [
-        "<strong>Existence and condition of inventory</strong>.",
-        "<strong>Completeness of litigation and claims</strong> involving the entity.",
-        "<strong>Presentation and disclosure of segment information</strong> in accordance with the applicable financial reporting framework."
-      ]
-    },
-    {
-      "chapter_number": "SA 505",
-      "chapter_title": "SA 505 – External Confirmations",
-      "total_takeaways": 1,
-      "key_takeaways": [
-        "The objective of the auditor, when using <mark class=\"kw\">external confirmation procedures</mark>, is to design and perform such procedures to obtain <strong>relevant and reliable audit evidence</strong>."
-      ]
-    },
-    {
-      "chapter_number": "SA 510",
-      "chapter_title": "SA 510 – Initial Audit Engagements: Opening Balances",
-      "total_takeaways": 2,
-      "key_takeaways": [
-        "Whether <mark class=\"kw\">opening balances</mark> contain <strong>misstatements</strong> that materially affect the current period's financial statements.",
-        "Whether <strong>appropriate accounting policies</strong> reflected in the opening balances have been consistently applied in the current period's financial statements, or changes thereto are properly accounted for and adequately presented and disclosed in accordance with the applicable financial reporting framework."
-      ]
-    },
-    {
-      "chapter_number": "SA 520",
-      "chapter_title": "SA 520 – Analytical Procedures",
-      "total_takeaways": 2,
-      "key_takeaways": [
-        "To obtain <strong>relevant and reliable audit evidence</strong> when using <mark class=\"kw\">substantive analytical procedures</mark>.",
-        "To design and perform <mark class=\"kw\">analytical procedures</mark> near the end of the audit that assist the auditor when forming an <strong>overall conclusion</strong> as to whether the financial statements are consistent with the auditor's understanding of the entity."
-      ]
-    },
-    {
-      "chapter_number": "SA 530",
-      "chapter_title": "SA 530 – Audit Sampling",
-      "total_takeaways": 1,
-      "key_takeaways": [
-        "The objective of the auditor when using <mark class=\"kw\">audit sampling</mark> is to provide a <strong>reasonable basis</strong> for the auditor to draw conclusions about the <strong>population</strong> from which the sample is selected."
-      ]
-    },
-    {
-      "chapter_number": "SA 540",
-      "chapter_title": "SA 540 – Auditing Accounting Estimates and Related Disclosures",
-      "total_takeaways": 1,
-      "key_takeaways": [
-        "The objective of the auditor is to obtain <mark class=\"kw\">sufficient appropriate audit evidence</mark> about whether <mark class=\"kw\">accounting estimates</mark> and related disclosures in the financial statements are <strong>reasonable</strong> in the context of the applicable financial reporting framework, and whether the financial statements achieve <strong>fair presentation</strong>."
-      ]
-    },
-    {
-      "chapter_number": "SA 550",
-      "chapter_title": "SA 550 – Related Parties",
-      "total_takeaways": 2,
-      "key_takeaways": [
-        "To obtain an understanding of <mark class=\"kw\">related party</mark> relationships and transactions sufficient to be able to <strong>identify and assess the risks of material misstatement</strong> associated with related party relationships and transactions.",
-        "To obtain <mark class=\"kw\">sufficient appropriate audit evidence</mark> about whether related party relationships and transactions have been appropriately identified, accounted for and disclosed in the financial statements in accordance with the applicable financial reporting framework."
-      ]
-    },
-    {
-      "chapter_number": "SA 560",
-      "chapter_title": "SA 560 – Subsequent Events",
-      "total_takeaways": 2,
-      "key_takeaways": [
-        "To obtain <mark class=\"kw\">sufficient appropriate audit evidence</mark> about whether events occurring between the <strong>date of the financial statements</strong> and the <strong>date of the auditor's report</strong> that require adjustment of, or disclosure in, the financial statements are appropriately reflected in those financial statements.",
-        "To respond appropriately to facts that become known to the auditor after the date of the auditor's report that, had they been known to the auditor at that date, may have caused the auditor to <strong>amend the auditor's report</strong>."
-      ]
-    },
-    {
-      "chapter_number": "SA 570",
-      "chapter_title": "SA 570 – Going Concern",
-      "total_takeaways": 3,
-      "key_takeaways": [
-        "To obtain <mark class=\"kw\">sufficient appropriate audit evidence</mark> regarding, and to conclude on, the appropriateness of management's use of the <mark class=\"kw\">going concern basis of accounting</mark> in the preparation of the financial statements.",
-        "To conclude, based on the audit evidence obtained, whether a <strong>material uncertainty</strong> exists related to events or conditions that may cast significant doubt on the entity's ability to continue as a going concern.",
-        "To report in accordance with this SA."
-      ]
-    },
-    {
-      "chapter_number": "SA 580",
-      "chapter_title": "SA 580 – Written Representations",
-      "total_takeaways": 3,
-      "key_takeaways": [
-        "To obtain <mark class=\"kw\">written representations</mark> from management and, where appropriate, those charged with governance that they believe that they have fulfilled their <strong>responsibility for the preparation of the financial statements</strong> and for the <strong>completeness of the information</strong> provided to the auditor.",
-        "To support other audit evidence relevant to the financial statements or specific assertions in the financial statements by means of <mark class=\"kw\">written representations</mark>, if determined necessary by the auditor or required by other SAs.",
-        "To respond appropriately to written representations provided by management and, where appropriate, those charged with governance, or if management or those charged with governance <strong>do not provide</strong> the written representations requested by the auditor."
-      ]
-    },
-    {
-      "chapter_number": "SA 600",
-      "chapter_title": "SA 600 – Using the Work of Another Auditor",
-      "total_takeaways": 2,
-      "key_takeaways": [
-        "To perform roles and responsibilities of <strong>principal auditor</strong> and <strong>other auditor</strong>.",
-        "To report appropriately when there is another auditor."
-      ]
-    },
-    {
-      "chapter_number": "SA 610",
-      "chapter_title": "SA 610 – Using the Work of Internal Auditors",
-      "total_takeaways": 3,
-      "key_takeaways": [
-        "To determine whether the work of the <mark class=\"kw\">internal audit function</mark> or direct assistance from <mark class=\"kw\">internal auditors</mark> can be used, and if so, in which areas and to what extent.",
-        "If using the work of the internal audit function, to determine whether that work is <strong>adequate</strong> for purposes of the audit.",
-        "If using internal auditors to provide <strong>direct assistance</strong>, to appropriately direct, supervise and review their work."
-      ]
-    },
-    {
-      "chapter_number": "SA 620",
-      "chapter_title": "SA 620 – Using the Work of an Auditor's Expert",
-      "total_takeaways": 2,
-      "key_takeaways": [
-        "To determine whether to use the work of an <mark class=\"kw\">auditor's expert</mark>.",
-        "If using the work of an auditor's expert, to determine whether that work is <strong>adequate</strong> for the auditor's purposes."
-      ]
-    },
-    {
-      "chapter_number": "SA 700",
-      "chapter_title": "SA 700 – Forming an Opinion and Reporting on Financial Statements",
-      "total_takeaways": 2,
-      "key_takeaways": [
-        "To <strong>form an opinion</strong> on the financial statements based on an evaluation of the conclusions drawn from the <mark class=\"kw\">audit evidence</mark> obtained.",
-        "To express clearly that opinion through a <strong>written report</strong>."
-      ]
-    },
-    {
-      "chapter_number": "SA 701",
-      "chapter_title": "SA 701 – Communicating Key Audit Matters in the Independent Auditor's Report",
-      "total_takeaways": 1,
-      "key_takeaways": [
-        "To determine <mark class=\"kw\">key audit matters</mark> and, having formed an opinion on the financial statements, communicate those matters by describing them in the auditor's report."
-      ]
-    },
-    {
-      "chapter_number": "SA 705",
-      "chapter_title": "SA 705 – Modifications to the Opinion in the Independent Auditor's Report",
-      "total_takeaways": 2,
-      "key_takeaways": [
-        "The auditor concludes, based on the audit evidence obtained, that the financial statements as a whole are <strong>not free from material misstatement</strong>.",
-        "The auditor is <strong>unable to obtain sufficient appropriate audit evidence</strong> to conclude that the financial statements as a whole are free from material misstatement."
-      ]
-    },
-    {
-      "chapter_number": "SA 706",
-      "chapter_title": "SA 706 – Emphasis of Matter Paragraphs and Other Matter Paragraphs in the Independent Auditor's Report",
-      "total_takeaways": 2,
-      "key_takeaways": [
-        "A matter, although appropriately presented or disclosed in the financial statements, that is of such importance that it is <strong>fundamental to users' understanding</strong> of the financial statements.",
-        "Any other matter that is relevant to users' understanding of the <strong>audit</strong>, the <strong>auditor's responsibilities</strong> or the <strong>auditor's report</strong>."
-      ]
-    },
-    {
-      "chapter_number": "SA 710",
-      "chapter_title": "SA 710 – Comparative Information: Corresponding Figures and Comparative Financial Statements",
-      "total_takeaways": 2,
-      "key_takeaways": [
-        "To obtain <mark class=\"kw\">sufficient appropriate audit evidence</mark> about whether the <strong>comparative information</strong> included in the financial statements has been presented, in all material respects, in accordance with the requirements for comparative information in the applicable financial reporting framework.",
-        "To report in accordance with the auditor's reporting responsibilities."
-      ]
-    },
-    {
-      "chapter_number": "SA 720",
-      "chapter_title": "SA 720 – The Auditor's Responsibilities Relating to Other Information",
-      "total_takeaways": 4,
-      "key_takeaways": [
-        "To consider whether there is a <strong>material inconsistency</strong> between the <mark class=\"kw\">other information</mark> and the financial statements.",
-        "To consider whether there is a <strong>material inconsistency</strong> between the <mark class=\"kw\">other information</mark> and the auditor's knowledge obtained in the audit.",
-        "To respond appropriately when the auditor identifies that such material inconsistencies appear to exist or when the auditor otherwise becomes aware that other information appears to be materially misstated.",
-        "To report in accordance with this SA."
-      ]
-    },
-    {
-      "chapter_number": "SA 800",
-      "chapter_title": "SA 800 – Special Considerations: Audits of Financial Statements Prepared in Accordance with Special Purpose Frameworks",
-      "total_takeaways": 2,
-      "key_takeaways": [
-        "To address appropriately the special considerations that are relevant to the <strong>acceptance of the engagement</strong>, the <strong>planning</strong> and <strong>performance</strong> of that engagement, and the <strong>forming of an opinion</strong> and <strong>reporting</strong> on the financial statements prepared in accordance with a <mark class=\"kw\">special purpose framework</mark>.",
-        "The auditor shall apply all SAs relevant to the audit, and shall alert users that the financial statements are prepared in accordance with a <mark class=\"kw\">special purpose framework</mark> and may not be suitable for another purpose."
-      ]
-    },
-    {
-      "chapter_number": "SA 805",
-      "chapter_title": "SA 805 – Special Considerations: Audits of Single Financial Statements and Specific Elements, Accounts or Items of a Financial Statement",
-      "total_takeaways": 2,
-      "key_takeaways": [
-        "To address appropriately the special considerations that are relevant to the <strong>acceptance of the engagement</strong>, the <strong>planning</strong> and <strong>performance</strong> of that engagement, and the <strong>forming of an opinion</strong> and <strong>reporting</strong> on a <mark class=\"kw\">single financial statement</mark> or a <mark class=\"kw\">specific element, account or item</mark> of a financial statement.",
-        "The auditor shall adapt all SAs relevant to the audit as necessary in the circumstances of the engagement."
-      ]
-    },
-    {
-      "chapter_number": "SA 810",
-      "chapter_title": "SA 810 – Engagements to Report on Summary Financial Statements",
-      "total_takeaways": 3,
-      "key_takeaways": [
-        "To determine whether it is appropriate to accept the engagement to report on <mark class=\"kw\">summary financial statements</mark>.",
-        "To form an opinion on the summary financial statements based on an evaluation of the conclusions drawn from the audit evidence obtained.",
-        "To express clearly that opinion through a <strong>written report</strong> that also describes the basis for that opinion."
-      ]
-    },
-    {
-      "chapter_number": "SRE 2400",
-      "chapter_title": "SRE 2400 – Engagements to Review Historical Financial Statements",
-      "total_takeaways": 2,
-      "key_takeaways": [
-        "To obtain <strong>limited assurance</strong>, primarily through <strong>inquiry</strong> and <strong>analytical procedures</strong>, about whether the financial statements as a whole are free from material misstatement, thereby enabling the practitioner to express a <strong>conclusion</strong> on whether anything has come to the practitioner's attention that causes the practitioner to believe that the financial statements are not prepared, in all material respects, in accordance with an applicable financial reporting framework.",
-        "To report on the financial statements as a whole and communicate as required by <mark class=\"kw\">SRE 2400</mark>."
-      ]
-    },
-    {
-      "chapter_number": "SRE 2410",
-      "chapter_title": "SRE 2410 – Review of Interim Financial Information Performed by the Independent Auditor of the Entity",
-      "total_takeaways": 2,
-      "key_takeaways": [
-        "The objective of an engagement to review <mark class=\"kw\">interim financial information</mark> is to enable the auditor to express a <strong>conclusion</strong> whether, on the basis of the review, anything has come to the auditor's attention that causes the auditor to believe that the interim financial information is not prepared, in all material respects, in accordance with an applicable financial reporting framework.",
-        "The auditor makes <strong>inquiries</strong> and performs <strong>analytical and other review procedures</strong> in order to reduce to a <strong>moderate level</strong> the risk of expressing an inappropriate conclusion when the interim financial information is materially misstated."
-      ]
-    },
-    {
-      "chapter_number": "SAE 3400",
-      "chapter_title": "SAE 3400 – The Examination of Prospective Financial Information",
-      "total_takeaways": 1,
-      "key_takeaways": [
-        "To examine and report on <strong>assumptions</strong> and <strong>preparation</strong> of <mark class=\"kw\">prospective financial information</mark>."
-      ]
-    },
-    {
-      "chapter_number": "SAE 3402",
-      "chapter_title": "SAE 3402 – Assurance Reports on Controls at a Service Organisation",
-      "total_takeaways": 3,
-      "key_takeaways": [
-        "To obtain <strong>reasonable assurance</strong> about whether, in all material respects, based on suitable criteria: (i) the <mark class=\"kw\">service organisation's description</mark> of its system fairly presents the system as designed and implemented throughout the specified period (or, in the case of a <strong>Type 1 report</strong>, as at a specified date); (ii) the <strong>controls</strong> related to the control objectives stated in the service organisation's description were suitably designed throughout the specified period (or, in the case of a <strong>Type 1 report</strong>, as at a specified date).",
-        "Where included in the scope of the engagement, the <strong>controls operated effectively</strong> to provide reasonable assurance that the control objectives were achieved throughout the specified period.",
-        "To report on the matters above in accordance with the <mark class=\"kw\">service auditor's</mark> findings."
-      ]
-    },
-    {
-      "chapter_number": "SAE 3420",
-      "chapter_title": "SAE 3420 – Assurance Engagements to Report on the Compilation of Pro Forma Financial Information Included in a Prospectus",
-      "total_takeaways": 2,
-      "key_takeaways": [
-        "To obtain <strong>reasonable assurance</strong> about whether the <mark class=\"kw\">pro forma financial information</mark> has been compiled, in all material respects, by the responsible party on the basis of the applicable criteria.",
-        "To report in accordance with the practitioner's findings."
-      ]
-    },
-    {
-      "chapter_number": "SRS 4400",
-      "chapter_title": "SRS 4400 – Engagements to Perform Agreed-Upon Procedures Regarding Financial Information",
-      "total_takeaways": 1,
-      "key_takeaways": [
-        "The objective of an <mark class=\"kw\">agreed-upon procedures</mark> engagement is for the auditor to carry out procedures of an audit nature to which the auditor and the entity and any appropriate third parties have agreed and to report on <strong>factual findings</strong>."
-      ]
-    },
-    {
-      "chapter_number": "SRS 4410",
-      "chapter_title": "SRS 4410 – Compilation Engagements",
-      "total_takeaways": 2,
-      "key_takeaways": [
-        "To apply <strong>accounting and financial reporting expertise</strong> to assist management in the <strong>preparation and presentation</strong> of financial information in accordance with an applicable financial reporting framework based on information provided by management.",
-        "To report in accordance with the requirements of this SRS."
       ]
     }
   ]
