@@ -1305,23 +1305,35 @@ function renderKTDeck(){
     stage.innerHTML='';
     const total=KT_DECK.deck.length;
     if(!total){return;}
-    // Auto-highlight standards + key terms inside KT card text
+// Auto-highlight standards + key terms inside KT card text.
+// If the JSON already contains HTML (<mark>, <strong>, <span class="kw-std">),
+// return it as-is — don't escape it, don't re-wrap it.
 function highlightKT(text){
-    let out = esc(text);
-    // 1) Wrap standard references (SA 220, SQC 1, SRE 2400, SRS 4400, SAE 3400, CARO 2020, Ind AS 110, AS 21, Section 138, etc.)
+    const str = String(text || '');
+
+    // 🔑 GUARD: if the incoming text already contains HTML markup, trust it.
+    if (/<\s*[a-z][^>]*>/i.test(str)) {
+        return str;
+    }
+
+    // From here down: only plain-text strings get processed.
+    let out = esc(str);
+
+    // 1) Wrap standard references
     out = out.replace(
         /\b(SA|SQC|SRE|SRS|SAE)\s?\d{1,4}\b/g,
-        m => '<span class="kw-std">'+m+'</span>'
+        m => '<span class="kw-std">' + m + '</span>'
     );
     out = out.replace(
         /\b(CARO\s?20\d{2}|Ind\s?AS\s?\d{1,4}|AS\s?\d{1,3}|NFRA|ICAI|RBI|C&amp;AG|C&AG|BRSR|ESG|SDG|SDGs)\b/g,
-        m => '<span class="kw-std">'+m+'</span>'
+        m => '<span class="kw-std">' + m + '</span>'
     );
     out = out.replace(
         /\b(Section\s?\d{1,4}(?:\(\d+\))?)\b/g,
-        m => '<span class="kw-std">'+m+'</span>'
+        m => '<span class="kw-std">' + m + '</span>'
     );
-    // 2) Highlight a few concept keywords (only first occurrence to avoid visual noise)
+
+    // 2) Concept keywords
     const concepts = [
         'audit risk','inherent risk','control risk','detection risk',
         'material misstatement','going concern','professional skepticism',
@@ -1334,9 +1346,10 @@ function highlightKT(text){
         'engagement quality control review','quality control'
     ];
     concepts.forEach(term=>{
-        const re = new RegExp('\\b('+term.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')+')\\b','i');
-        out = out.replace(re, m => '<span class="kw">'+m+'</span>');
+        const re = new RegExp('\\b(' + term.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + ')\\b', 'i');
+        out = out.replace(re, m => '<span class="kw">' + m + '</span>');
     });
+
     return out;
 }
 
