@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
-<title>CA Final Audit - Pro Simulator</title>
+<title>MCQ Helper - CA Final Simulator</title>
 <script src="https://cdn.tailwindcss.com"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 <style>
@@ -169,12 +169,16 @@ body.tv-view .rkg-keys b{font-size:.85rem;padding:4px 10px;border-radius:7px}
 .mode-card.hard{border-color:#fca5a5;background:#fef2f2}
 .mode-card.gst{border-color:#fcd34d;background:#fffbeb}
 .mode-card.fr{border-color:#c4b5fd;background:#f5f3ff}
+.mode-card.afm{border-color:#a5b4fc;background:#eef2ff}
+.mode-card.dt{border-color:#f9a8d4;background:#fdf2f8}
 .mode-icon{width:48px;height:48px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.4rem;color:#fff;flex-shrink:0}
 .easy .mode-icon{background:#10b981}
 .medium .mode-icon{background:#3b82f6}
 .hard .mode-icon{background:#ef4444}
 .gst .mode-icon{background:linear-gradient(135deg,#f59e0b,#d97706)}
 .fr .mode-icon{background:linear-gradient(135deg,#8b5cf6,#6d28d9)}
+.afm .mode-icon{background:linear-gradient(135deg,#6366f1,#4338ca)}
+.dt .mode-icon{background:linear-gradient(135deg,#ec4899,#be185d)}
 .mode-text h3{font-family:'Poppins',sans-serif;font-size:1.05rem;font-weight:700;color:#1e293b;margin-bottom:3px}
 .mode-text p{font-size:.78rem;color:var(--text-secondary);line-height:1.35}
 .section-title{padding:20px 20px 6px;font-family:'Poppins',sans-serif;font-size:.72rem;font-weight:800;letter-spacing:1.4px;text-transform:uppercase;color:#64748b;display:flex;align-items:center;gap:8px}
@@ -201,6 +205,8 @@ body.tv-view .rkg-keys b{font-size:.85rem;padding:4px 10px;border-radius:7px}
 .icon-btn.desktop-toggle{background:#f3e8ff;border-color:#d8b4fe;color:#9333ea}
 .icon-btn.study-toggle{background:#faf5ff;border-color:#d8b4fe;color:#7c3aed;transition:all .25s}
 .icon-btn.study-toggle.active{background:#7c3aed;border-color:#7c3aed;color:#fff;box-shadow:0 0 0 3px rgba(124,58,237,.3)}
+.icon-btn.reader-mode{background:#ecfdf5;border-color:#6ee7b7;color:#059669}
+.icon-btn.reader-mode:active{background:#d1fae5}
 .main-content{flex:1;overflow-y:auto;-webkit-overflow-scrolling:touch;padding:8px 10px;min-height:0;position:relative;scroll-behavior:smooth}
 .case-study-box{background:#f8fafc;border:1px solid var(--border);border-radius:12px;padding:12px 14px;margin-bottom:10px;font-size:.83rem;line-height:1.6;max-height:34vh;overflow-y:auto;color:#334155;position:relative;border-left:4px solid var(--primary);cursor:pointer;transition:.2s}
 .case-study-box:active{background:#f1f5f9}
@@ -315,6 +321,58 @@ body.tv-view .rkg-keys b{font-size:.85rem;padding:4px 10px;border-radius:7px}
 .yt-footer a i{color:#ef4444;font-size:1.3rem}
 @keyframes spin{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}
 
+/* ============ SOCIAL FOOTER ============ */
+.social-footer{
+    background:linear-gradient(135deg,#0f172a,#1e293b);
+    padding:20px 18px 18px;
+    text-align:center;
+    border-top:1px solid #334155;
+}
+.social-footer .brand-line{
+    font-family:'Poppins',sans-serif;
+    font-size:.82rem;
+    font-weight:700;
+    color:#94a3b8;
+    margin-bottom:12px;
+    letter-spacing:.3px;
+}
+.social-footer .brand-line span{color:#60a5fa}
+.social-icons{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:12px;
+    margin-bottom:10px;
+}
+.social-icons a{
+    width:38px;height:38px;
+    border-radius:50%;
+    background:rgba(255,255,255,.08);
+    border:1px solid rgba(255,255,255,.12);
+    display:flex;align-items:center;justify-content:center;
+    color:#cbd5e1;
+    font-size:.95rem;
+    text-decoration:none;
+    transition:all .22s ease;
+}
+.social-icons a:hover,.social-icons a:active{
+    background:rgba(96,165,250,.2);
+    border-color:rgba(96,165,250,.4);
+    color:#60a5fa;
+    transform:translateY(-2px);
+}
+.social-footer .copyright{
+    font-size:.65rem;
+    color:#64748b;
+    font-weight:500;
+    letter-spacing:.3px;
+}
+.social-footer .copyright a{
+    color:#60a5fa;
+    text-decoration:none;
+    font-weight:700;
+}
+
 /* ============ TABLE FORMATTING ============ */
 .table-wrap{max-width:100%;overflow-x:auto;margin:10px 0;border:1px solid var(--border);border-radius:10px;background:#fff;-webkit-overflow-scrolling:touch}
 .table-wrap, .table-wrap *{touch-action:pan-x pan-y}
@@ -357,6 +415,8 @@ body.tv-view .pdf-table th,body.tv-view .pdf-table td{padding:12px 16px}
 .wr-badge.mode-hard{background:#fee2e2;color:#991b1b}
 .wr-badge.mode-gst{background:#fef3c7;color:#92400e}
 .wr-badge.mode-fr{background:#f3e8ff;color:#6d28d9}
+.wr-badge.mode-afm{background:#eef2ff;color:#4338ca}
+.wr-badge.mode-dt{background:#fdf2f8;color:#be185d}
 .wr-badge.count{background:#fee2e2;color:#991b1b}
 .wr-remove{margin-left:auto;background:none;border:1.5px solid var(--border);width:26px;height:26px;border-radius:8px;color:#94a3b8;cursor:pointer;font-size:.75rem;transition:.18s;display:flex;align-items:center;justify-content:center}
 .wr-remove:active{background:#fee2e2;color:#dc2626;border-color:#fca5a5;transform:scale(.9)}
@@ -508,6 +568,194 @@ body.tv-view .pdf-table th,body.tv-view .pdf-table td{padding:12px 16px}
 .kt-deck-card-inner.custom .kt-deck-text .kw{background:linear-gradient(180deg,transparent 60%,#ddd6fe 60%);color:#5b21b6}
 .kt-deck-text .kw-std{background:rgba(251,191,36,.35);color:#7c2d12;font-weight:800;padding:1px 5px;border-radius:5px;font-family:'Inter',monospace;letter-spacing:.3px;border:1px solid rgba(180,83,9,.2)}
 .kt-deck-card-inner.custom .kt-deck-text .kw-std{background:rgba(139,92,246,.25);color:#4c1d95;border-color:rgba(109,40,217,.25)}
+
+/* ============ FIRST-TIME GUIDE OVERLAY ============ */
+.guide-overlay{
+    position:fixed;inset:0;
+    background:rgba(15,23,42,.82);
+    z-index:600;
+    display:none;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    padding:24px;
+    backdrop-filter:blur(6px);
+    -webkit-backdrop-filter:blur(6px);
+}
+.guide-overlay.show{display:flex;animation:fadeIn .3s ease}
+.guide-card{
+    background:#fff;
+    border-radius:24px;
+    padding:28px 22px;
+    max-width:420px;
+    width:100%;
+    text-align:center;
+    box-shadow:0 25px 70px rgba(0,0,0,.35);
+    position:relative;
+    overflow:hidden;
+}
+.guide-card::before{
+    content:'';
+    position:absolute;
+    top:0;left:0;right:0;
+    height:5px;
+    background:linear-gradient(90deg,#2563eb,#7c3aed,#ec4899);
+}
+.guide-icon{
+    width:72px;height:72px;
+    border-radius:22px;
+    background:linear-gradient(135deg,#dbeafe,#ede9fe);
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    font-size:1.9rem;
+    color:#4f46e5;
+    margin-bottom:16px;
+}
+.guide-card h2{
+    font-family:'Poppins',sans-serif;
+    font-size:1.2rem;
+    font-weight:800;
+    color:#0f172a;
+    margin-bottom:6px;
+}
+.guide-card .guide-sub{
+    font-size:.82rem;
+    color:#64748b;
+    margin-bottom:20px;
+    line-height:1.5;
+}
+.guide-steps{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+    text-align:left;
+    margin-bottom:22px;
+}
+.guide-step{
+    display:flex;
+    align-items:flex-start;
+    gap:12px;
+    padding:11px 13px;
+    border-radius:12px;
+    background:#f8fafc;
+    border:1px solid #e2e8f0;
+    transition:transform .2s;
+}
+.guide-step:active{transform:scale(.98)}
+.guide-step-num{
+    width:28px;height:28px;
+    border-radius:9px;
+    background:linear-gradient(135deg,#2563eb,#4f46e5);
+    color:#fff;
+    font-weight:800;
+    font-size:.75rem;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-shrink:0;
+}
+.guide-step-text h4{
+    font-size:.82rem;
+    font-weight:700;
+    color:#1e293b;
+    margin-bottom:2px;
+}
+.guide-step-text p{
+    font-size:.72rem;
+    color:#64748b;
+    line-height:1.4;
+}
+.guide-actions{
+    display:flex;
+    gap:10px;
+}
+.guide-actions button{
+    flex:1;
+    padding:13px;
+    border-radius:13px;
+    font-weight:700;
+    font-size:.84rem;
+    cursor:pointer;
+    transition:.2s;
+    font-family:inherit;
+}
+.guide-actions .btn-skip{
+    background:#f1f5f9;
+    border:1.5px solid #e2e8f0;
+    color:#64748b;
+}
+.guide-actions .btn-skip:active{transform:scale(.97);background:#e2e8f0}
+.guide-actions .btn-start{
+    background:linear-gradient(135deg,#2563eb,#4f46e5);
+    border:none;
+    color:#fff;
+    box-shadow:0 6px 18px rgba(37,99,235,.35);
+}
+.guide-actions .btn-start:active{transform:scale(.97);box-shadow:0 3px 10px rgba(37,99,235,.3)}
+.guide-dots{
+    display:flex;
+    justify-content:center;
+    gap:6px;
+    margin-bottom:18px;
+}
+.guide-dot{
+    width:7px;height:7px;
+    border-radius:50%;
+    background:#cbd5e1;
+    transition:all .25s;
+}
+.guide-dot.active{
+    background:#2563eb;
+    width:20px;
+    border-radius:4px;
+}
+
+/* ============ KT PALETTE SHEET ============ */
+.kt-palette-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fill,minmax(40px,1fr));
+    gap:7px;
+}
+.kt-palette-item{
+    min-width:38px;height:38px;
+    border-radius:9px;
+    border:2px solid var(--border);
+    background:var(--surface);
+    font-size:.62rem;
+    font-weight:800;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    cursor:pointer;
+    position:relative;
+    color:var(--text-secondary);
+    transition:all .2s;
+    padding:2px;
+    line-height:1.1;
+    text-align:center;
+    word-break:break-word;
+}
+.kt-palette-item:active{transform:scale(.88)}
+.kt-palette-item.current{
+    border-color:#f59e0b;
+    background:#fef3c7;
+    color:#b45309;
+    box-shadow:0 0 0 3px rgba(245,158,11,.2);
+    transform:scale(1.05);
+}
+.kt-palette-item.custom-kt{
+    border-color:#c4b5fd;
+    background:#f5f3ff;
+}
+.kt-palette-item .kt-fav-dot{
+    position:absolute;
+    top:-2px;right:-2px;
+    width:8px;height:8px;
+    background:#f59e0b;
+    border-radius:50%;
+    border:1.5px solid #fff;
+}
 </style>
 </head>
 <body>
@@ -544,6 +792,49 @@ body.tv-view .pdf-table th,body.tv-view .pdf-table td{padding:12px 16px}
     </div>
 </div>
 
+<!-- FIRST-TIME GUIDE OVERLAY -->
+<div id="firstTimeGuide" class="guide-overlay">
+    <div class="guide-card">
+        <div class="guide-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+        <h2>Welcome to MCQ Helper!</h2>
+        <p class="guide-sub">Your all-in-one CA Final preparation companion</p>
+        <div class="guide-steps">
+            <div class="guide-step">
+                <div class="guide-step-num">1</div>
+                <div class="guide-step-text">
+                    <h4>Pick a Subject</h4>
+                    <p>Choose from Audit, FR, AFM, DT, GST & more.</p>
+                </div>
+            </div>
+            <div class="guide-step">
+                <div class="guide-step-num">2</div>
+                <div class="guide-step-text">
+                    <h4>Answer & Learn</h4>
+                    <p>Select options, get instant explanations.</p>
+                </div>
+            </div>
+            <div class="guide-step">
+                <div class="guide-step-num">3</div>
+                <div class="guide-step-text">
+                    <h4>Track Progress</h4>
+                    <p>Syllabus, Key Takeaways & Wrong Question bank.</p>
+                </div>
+            </div>
+            <div class="guide-step">
+                <div class="guide-step-num">4</div>
+                <div class="guide-step-text">
+                    <h4>Read & Highlight</h4>
+                    <p>Double-tap any question for distraction-free reading mode.</p>
+                </div>
+            </div>
+        </div>
+        <div class="guide-actions">
+            <button class="btn-skip" onclick="closeGuide()">Skip</button>
+            <button class="btn-start" onclick="closeGuide()">Get Started</button>
+        </div>
+    </div>
+</div>
+
 <div id="subtleToast" class="subtle-toast">
     <div class="subtle-toast-text">Support <a href="https://youtube.com/@observe_with_satyam?si=8p90ukUsKvLJaZvh" target="_blank">Observe with Satyam</a> ❤️</div>
     <button class="subtle-toast-close" onclick="document.getElementById('subtleToast').classList.remove('show')"><i class="fa-solid fa-xmark"></i></button>
@@ -553,9 +844,9 @@ body.tv-view .pdf-table th,body.tv-view .pdf-table td{padding:12px 16px}
     <!-- WELCOME -->
     <div id="welcomeScreen" class="screen active">
         <div class="welcome-hero">
-            <div class="brand-icon"><i class="fa-solid fa-shield-halved"></i></div>
-            <h1>CA Final Audit</h1>
-            <p>Master your concepts · Pro Simulator</p>
+            <div class="brand-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+            <h1>MCQ Helper</h1>
+            <p>CA Final · Pro Simulator</p>
         </div>
         <div class="welcome-stats">
             <div class="wstat" onclick="openWrongReview()">
@@ -574,27 +865,39 @@ body.tv-view .pdf-table th,body.tv-view .pdf-table td{padding:12px 16px}
         <div class="mode-cards">
             <div class="mode-card easy" onclick="startApp('easy')">
                 <div class="mode-icon"><i class="fa-solid fa-seedling"></i></div>
-                <div class="mode-text"><h3>Easy Set</h3><p>Core concepts &amp; direct MCQs</p></div>
+                <div class="mode-text"><h3>Audit - Easy Set</h3><p>Core concepts &amp; direct MCQs</p></div>
             </div>
             <div class="mode-card medium" onclick="startApp('medium')">
                 <div class="mode-icon"><i class="fa-solid fa-fire"></i></div>
-                <div class="mode-text"><h3>Medium Set</h3><p>Advanced standard questions</p></div>
+                <div class="mode-text"><h3>Audit - Medium Set</h3><p>Advanced standard questions</p></div>
             </div>
             <div class="mode-card hard" onclick="startApp('hard')">
                 <div class="mode-icon"><i class="fa-solid fa-briefcase"></i></div>
-                <div class="mode-text"><h3>Case Studies</h3><p>Complex scenario challenges</p></div>
+                <div class="mode-text"><h3>Audit - Case Studies</h3><p>Complex scenario challenges</p></div>
             </div>
         </div>
 
         <div class="section-title">Other Subjects</div>
         <div class="mode-cards">
-            <div class="mode-card gst" onclick="startApp('gst')">
-                <div class="mode-icon"><i class="fa-solid fa-file-invoice-dollar"></i></div>
-                <div class="mode-text"><h3>GST Case Scenarios</h3><p>Practical GST case studies</p></div>
-            </div>
             <div class="mode-card fr" onclick="startApp('fr')">
                 <div class="mode-icon"><i class="fa-solid fa-chart-line"></i></div>
                 <div class="mode-text"><h3>Financial Reporting</h3><p>FR MCQs &amp; concepts</p></div>
+            </div>
+            <div class="mode-card fr" onclick="startApp('fricaics')">
+                <div class="mode-icon"><i class="fa-solid fa-file-invoice"></i></div>
+                <div class="mode-text"><h3>FR ICAI Case Studies</h3><p>ICAI additional case scenarios</p></div>
+            </div>
+            <div class="mode-card afm" onclick="startApp('afm')">
+                <div class="mode-icon"><i class="fa-solid fa-coins"></i></div>
+                <div class="mode-text"><h3>Advanced Financial Mgmt</h3><p>AFM ICAI case scenarios</p></div>
+            </div>
+            <div class="mode-card dt" onclick="startApp('dt')">
+                <div class="mode-icon"><i class="fa-solid fa-landmark"></i></div>
+                <div class="mode-text"><h3>Direct Tax Laws</h3><p>DT ICAI case scenarios</p></div>
+            </div>
+            <div class="mode-card gst" onclick="startApp('gst')">
+                <div class="mode-icon"><i class="fa-solid fa-file-invoice-dollar"></i></div>
+                <div class="mode-text"><h3>GST Case Scenarios</h3><p>Practical GST case studies</p></div>
             </div>
         </div>
 
@@ -616,8 +919,29 @@ body.tv-view .pdf-table th,body.tv-view .pdf-table td{padding:12px 16px}
             <div class="tool-btn" onclick="exportData()"><i class="fa-solid fa-cloud-arrow-down"></i><h4>Backup DB</h4></div>
             <div class="tool-btn" onclick="document.getElementById('importFile').click()"><i class="fa-solid fa-cloud-arrow-up"></i><h4>Restore</h4></div>
         </div>
-        <div class="yt-footer" style="background:#fff;border-top:none">
-            <a href="https://youtube.com/@observe_with_satyam?si=8p90ukUsKvLJaZvh" target="_blank"><i class="fa-brands fa-youtube"></i><span>Observe with Satyam<br><span style="font-size:.72rem;color:#475569">Made with love ❤️</span></span></a>
+
+        <!-- SOURCE REFERENCE -->
+        <div style="padding:0 18px 12px;text-align:center">
+            <a href="https://www.icai.org/post/bos-csb-final-may2026" target="_blank" style="font-size:.7rem;color:#64748b;text-decoration:none;display:inline-flex;align-items:center;gap:5px;padding:6px 12px;border-radius:20px;background:#f1f5f9;border:1px solid #e2e8f0;transition:.2s">
+                <i class="fa-solid fa-link" style="color:#2563eb"></i>
+                Source: ICAI BoS CSB Final May 2026
+            </a>
+        </div>
+
+        <!-- SOCIAL FOOTER -->
+        <div class="social-footer">
+            <div class="brand-line">
+                Built with ❤️ by <span>Observe with Satyam</span>
+            </div>
+            <div class="social-icons">
+                <a href="https://linkedin.com/in/satyam-kumar5286o" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="https://youtube.com/@observe_with_satyam?si=xKMKJHWzcjVFeDFj" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
+                <a href="https://instagram.com/observe_with_satyam?igsh=MWdxYnp1Y283b2ZyeQ==" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://satqm.github.io/Portfolio-" target="_blank" title="Portfolio"><i class="fas fa-globe"></i></a>
+            </div>
+            <div class="copyright">
+                © 2026 MCQ Helper · <a href="https://youtube.com/@observe_with_satyam" target="_blank">Subscribe on YouTube</a>
+            </div>
         </div>
     </div>
 
@@ -687,13 +1011,14 @@ body.tv-view .pdf-table th,body.tv-view .pdf-table td{padding:12px 16px}
             <div class="header-left">
                 <button class="home-btn" onclick="goHome()"><i class="fa-solid fa-house"></i></button>
                 <div class="header-title">
-                    <h2>FINAL AUDIT <span class="study-badge-inline" id="studyBadgeInline">📖 STUDY</span></h2>
+                    <h2>MCQ HELPER <span class="study-badge-inline" id="studyBadgeInline">📖 STUDY</span></h2>
                     <p id="currentModeLabel">Mode: Easy</p>
                 </div>
             </div>
             <div class="header-actions">
                 <button class="icon-btn desktop-toggle" id="desktopToggleBtn" title="Toggle Desktop" onclick="toggleDesktopView()"><i class="fa-solid fa-desktop" id="desktopToggleIcon"></i></button>
                 <button class="icon-btn study-toggle" id="studyToggleBtn" title="Study Mode" onclick="toggleStudyMode()"><i class="fa-solid fa-graduation-cap"></i></button>
+                <button class="icon-btn reader-mode" id="readerModeBtn" title="Reading Mode (8)" onclick="openFullscreenReader()"><i class="fa-solid fa-book-open"></i></button>
                 <button class="icon-btn" id="bookmarkBtn" title="Mark for review"><i class="fa-regular fa-bookmark" id="bookmarkIcon" style="color:#94a3b8"></i></button>
                 <button class="icon-btn lifeline" id="lifelineBtn" title="Lifelines"><i class="fa-solid fa-wand-magic-sparkles"></i></button>
                 <button class="icon-btn retake" title="Retake Set" onclick="retakeQuiz()"><i class="fa-solid fa-rotate-right"></i></button>
@@ -851,6 +1176,7 @@ body.tv-view .pdf-table th,body.tv-view .pdf-table td{padding:12px 16px}
             <p id="ktDeckProgress">0 / 0</p>
         </div>
         <button class="icon-btn kt-add-btn" onclick="promptAddKT()" title="Add my takeaway"><i class="fa-solid fa-plus"></i></button>
+        <button class="icon-btn" id="ktPaletteBtn" onclick="openKTPalette()" title="Jump to takeaway"><i class="fa-solid fa-table-cells"></i></button>
     </div>
     <div class="kt-progress-track"><div id="ktDeckProgressFill"></div></div>
     <div class="kt-deck-stage" id="ktDeckStage"></div>
@@ -861,18 +1187,54 @@ body.tv-view .pdf-table th,body.tv-view .pdf-table td{padding:12px 16px}
     </div>
 </div>
 
+<!-- KT PALETTE SHEET -->
+<div id="ktPaletteSheet" class="bottom-sheet" style="height:70vh;z-index:450">
+    <div class="sheet-header"><h3>📋 Jump to Takeaway</h3><button class="close-btn" onclick="closeSheet('ktPaletteSheet')"><i class="fa-solid fa-xmark"></i></button></div>
+    <div id="ktPaletteGrid" class="kt-palette-grid" style="max-width:800px;margin:0 auto"></div>
+</div>
+
 <script>
 (function(){
 // ==================== STATE ====================
 const STATE={currentMode:null,questions:[],currentIdx:0,session:[],isAnswered:false,audioCtx:null,armedColor:null,studyMode:false,readerScrollPos:0,lastReaderIdx:-1};
 const DB_NAME='CAAuditProDB',STORE_NAME='progress',WRONG_STORE='wrongQuestions';
-const FILES={easy:'study.json',medium:'mcqs.json',hard:'audit_case_scenarios.json',gst:'gstcase_scenarios.json',fr:'fr.json'};
-const MODE_LABELS={easy:'Basic Concepts',medium:'Standard Questions',hard:'Case Scenarios',gst:'GST Case Scenarios',fr:'Financial Reporting'};
-const MODE_KEYS=['easy','medium','hard','gst','fr'];
+const FILES={
+    easy:'study.json',
+    medium:'mcqs.json',
+    hard:'audit_case_scenarios.json',
+    gst:'gstcase_scenarios.json',
+    fr:'fr.json',
+    fricaics:'fricaics.json',
+    afm:'afm_icaics.json',
+    dt:'dticaics.json'
+};
+const MODE_LABELS={
+    easy:'Basic Concepts',
+    medium:'Standard Questions',
+    hard:'Case Scenarios',
+    gst:'GST Case Scenarios',
+    fr:'Financial Reporting',
+    fricaics:'FR ICAI Case Studies',
+    afm:'Advanced Financial Management',
+    dt:'Direct Tax Laws'
+};
+const MODE_KEYS=['easy','medium','hard','gst','fr','fricaics','afm','dt'];
 let totalAnsweredGlobally=parseInt(localStorage.getItem('auditPro_totalAnswered'))||0;
 let supportToastShown=localStorage.getItem('auditPro_supportShown')==='true';
 let readerNavLocked = sessionStorage.getItem('auditPro_readerNavLocked')==='1';
 let wrongFilter='all';
+
+// ==================== FIRST-TIME GUIDE ====================
+function checkFirstTimeGuide(){
+    const seen=localStorage.getItem('mcqHelper_guideSeen');
+    if(!seen){
+        document.getElementById('firstTimeGuide').classList.add('show');
+    }
+}
+window.closeGuide=function(){
+    document.getElementById('firstTimeGuide').classList.remove('show');
+    localStorage.setItem('mcqHelper_guideSeen','true');
+};
 
 // ==================== CUSTOM MODALS ====================
 window.showCustomAlert=function(t,m){document.getElementById('alertTitle').innerHTML=t;document.getElementById('alertMessage').innerHTML=m;document.getElementById('customAlertModal').style.display='flex';};
@@ -1346,7 +1708,7 @@ function useExpert(){toggleLifelineMenu();showExplanationModal(false,true);}
 let ssx=0,ssy=0,sex=0,sey=0;
 function handleSwipe(){const xd=ssx-sex,yd=ssy-sey;if(Math.abs(xd)>Math.abs(yd)&&Math.abs(xd)>50){if(xd>0)goNext();else goPrev();}}
 
-window.showAnalytics=async function(){showLoader('Crunching...');try{const all=await getAllStates();let tq=0,cr=0,wr=0;let html='';const mm={easy:'Easy Set',medium:'Medium Set',hard:'Case Studies',gst:'GST Case Scenarios',fr:'Financial Reporting'};const cc={easy:'#10b981',medium:'#3b82f6',hard:'#ef4444',gst:'#f59e0b',fr:'#8b5cf6'};for(const md of MODE_KEYS){const d=all[md];if(d&&d.session){const ans=d.session.filter(s=>s.sel!==null);const c=ans.filter(s=>s.ok).length;tq+=ans.length;cr+=c;wr+=ans.length-c;const pct=ans.length?Math.round(c/ans.length*100):0;html+=`<div style="background:white;border:1px solid var(--border);border-radius:10px;padding:10px;display:flex;align-items:center;gap:10px"><div style="width:36px;height:36px;border-radius:8px;background:${cc[md]}20;color:${cc[md]};display:flex;align-items:center;justify-content:center;font-weight:800;font-size:.8rem">${pct}%</div><div style="flex:1"><div style="font-weight:600;font-size:.8rem">${mm[md]}</div><div style="font-size:.7rem;color:#64748b">${ans.length} attempted | ${c} correct</div></div></div>`;}}document.getElementById('statTotal').textContent=tq;document.getElementById('statRight').textContent=cr;document.getElementById('statWrong').textContent=wr;document.getElementById('statAcc').textContent=tq?Math.round(cr/tq*100)+'%':'0%';document.getElementById('setStatsBreakdown').innerHTML=html||'<p style="font-size:.78rem;color:#64748b">No data yet.</p>';switchScreen('analyticsScreen');}catch(e){showCustomAlert("Error",'Could not load analytics.');}finally{hideLoader();}};
+window.showAnalytics=async function(){showLoader('Crunching...');try{const all=await getAllStates();let tq=0,cr=0,wr=0;let html='';const mm={easy:'Easy Set',medium:'Medium Set',hard:'Case Studies',gst:'GST Case Scenarios',fr:'Financial Reporting',fricaics:'FR ICAI Case Studies',afm:'Advanced Financial Management',dt:'Direct Tax Laws'};const cc={easy:'#10b981',medium:'#3b82f6',hard:'#ef4444',gst:'#f59e0b',fr:'#8b5cf6',fricaics:'#7c3aed',afm:'#6366f1',dt:'#ec4899'};for(const md of MODE_KEYS){const d=all[md];if(d&&d.session){const ans=d.session.filter(s=>s.sel!==null);const c=ans.filter(s=>s.ok).length;tq+=ans.length;cr+=c;wr+=ans.length-c;const pct=ans.length?Math.round(c/ans.length*100):0;html+=`<div style="background:white;border:1px solid var(--border);border-radius:10px;padding:10px;display:flex;align-items:center;gap:10px"><div style="width:36px;height:36px;border-radius:8px;background:${cc[md]}20;color:${cc[md]};display:flex;align-items:center;justify-content:center;font-weight:800;font-size:.8rem">${pct}%</div><div style="flex:1"><div style="font-weight:600;font-size:.8rem">${mm[md]}</div><div style="font-size:.7rem;color:#64748b">${ans.length} attempted | ${c} correct</div></div></div>`;}}document.getElementById('statTotal').textContent=tq;document.getElementById('statRight').textContent=cr;document.getElementById('statWrong').textContent=wr;document.getElementById('statAcc').textContent=tq?Math.round(cr/tq*100)+'%':'0%';document.getElementById('setStatsBreakdown').innerHTML=html||'<p style="font-size:.78rem;color:#64748b">No data yet.</p>';switchScreen('analyticsScreen');}catch(e){showCustomAlert("Error",'Could not load analytics.');}finally{hideLoader();}};
 
 window.exportData=async function(){try{const all=await getAllStates();const wrong=await getAllWrongQuestions();const payload={progress:all,wrongQuestions:wrong,exportedAt:new Date().toISOString()};const blob=new Blob([JSON.stringify(payload,null,2)],{type:'application/json'});const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download=`CAAuditPro_Backup_${new Date().toISOString().split('T')[0]}.json`;a.click();URL.revokeObjectURL(url);showCustomAlert("Success","✅ Progress + Wrong Questions backed up!");}catch(e){showCustomAlert("Error","Failed to export.");}};
 
@@ -1694,7 +2056,7 @@ function renderSyllabus(){
 }
 
 /* ============================================================
-   KT DECK
+   KT DECK (with session memory + palette)
    ============================================================ */
 const KT_DECK={deck:[],idx:0,chapter:null,title:'',sub:'',lock:false};
 function buildKTDeckForChapter(chNum){
@@ -1727,11 +2089,22 @@ window.openOverallKT=function(){
 function openKTDeck(deck,title,sub){
     KT_DECK.deck=deck;KT_DECK.idx=0;KT_DECK.title=title;KT_DECK.sub=sub;
     KT_DECK.chapter=deck[0]?deck[0].chapterNum:null;
+    // Restore session memory
+    try{
+        const saved=sessionStorage.getItem('ktDeck_idx_'+title);
+        if(saved!==null){
+            const n=parseInt(saved,10);
+            if(!isNaN(n)&&n>=0&&n<deck.length)KT_DECK.idx=n;
+        }
+    }catch(e){}
     document.getElementById('ktDeckTitle').textContent=title;
     document.getElementById('ktDeckOverlay').classList.add('show');
     renderKTDeck();
 }
-window.closeKTDeck=function(){document.getElementById('ktDeckOverlay').classList.remove('show');};
+window.closeKTDeck=function(){
+    try{sessionStorage.setItem('ktDeck_idx_'+KT_DECK.title,String(KT_DECK.idx));}catch(e){}
+    document.getElementById('ktDeckOverlay').classList.remove('show');
+};
 window.ktDeckNav=function(dir){
     const newIdx=KT_DECK.idx+dir;
     if(newIdx<0||newIdx>=KT_DECK.deck.length){
@@ -1823,6 +2196,22 @@ window.promptAddKT=function(){
         if(newIdx>=0)KT_DECK.idx=newIdx;
         renderKTDeck();
     });
+};
+
+/* ============ KT PALETTE ============ */
+window.openKTPalette=function(){
+    const g=document.getElementById('ktPaletteGrid');
+    g.innerHTML='';
+    KT_DECK.deck.forEach((d,i)=>{
+        const b=document.createElement('button');
+        b.className='kt-palette-item'+(i===KT_DECK.idx?' current':'')+(d.custom?' custom-kt':'');
+        b.textContent=(d.custom?'✎':'')+(d.idx||i+1);
+        b.title=d.chapterTitle+' · '+d.text.substring(0,60);
+        if(FAV_KT.has(d.id)){const dot=document.createElement('span');dot.className='kt-fav-dot';b.appendChild(dot);}
+        b.addEventListener('click',()=>{KT_DECK.idx=i;KT_DECK.chapter=KT_DECK.deck[i]?KT_DECK.deck[i].chapterNum:null;closeSheet('ktPaletteSheet');renderKTDeck();beep(520,'sine',.05);});
+        g.appendChild(b);
+    });
+    openSheet('ktPaletteSheet');
 };
 
 /* ============================================================
@@ -2004,7 +2393,7 @@ function bindEvents(){
             if(key==='7'||key==='Escape'){e.preventDefault();closeFullscreenReader();return;}
             if(key==='5'){e.preventDefault();scrollReaderDown();return;}
             if(key==='6'){e.preventDefault();scrollReaderUp();return;}
-            if(key==='8'){e.preventDefault();/* already in reader — smooth scroll to top */document.getElementById('readerContent').scrollTo({top:0,behavior:'smooth'});return;}
+            if(key==='8'){e.preventDefault();document.getElementById('readerContent').scrollTo({top:0,behavior:'smooth'});return;}
             if(key==='1'||key==='2'||key==='3'||key==='4'){
                 e.preventDefault();
                 const idx=parseInt(key,10)-1;
@@ -2059,8 +2448,9 @@ window.addEventListener('DOMContentLoaded',()=>{
     loadKTData().then(refreshWelcomeStats);
     updateWrongChip();
     refreshWelcomeStats();
+    checkFirstTimeGuide();
 });
 })();
 </script>
 </body>
-  </html>
+</html>
