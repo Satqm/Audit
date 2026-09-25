@@ -46,7 +46,6 @@ body.desktop-view #endScreen{margin:auto;width:100%;max-width:500px}
 
 /* ============================================================
    TV VIEW — auto-applied at >=1400px, works alongside desktop-view
-   Makes everything bigger, roomier and easy to read from couch
    ============================================================ */
 body.tv-view{background:#0f172a;padding:20px}
 body.tv-view .app-container{max-width:1700px;height:calc(100vh - 40px);border-radius:26px;box-shadow:0 30px 80px -20px rgba(0,0,0,.6)}
@@ -95,6 +94,7 @@ body.tv-view .tool-btn{padding:22px 18px;border-radius:16px}
 body.tv-view .tool-btn i{font-size:1.9rem;margin-bottom:10px}
 body.tv-view .tool-btn h4{font-size:1.1rem}
 body.tv-view .yt-footer a{font-size:1.05rem;padding:16px 28px}
+body.tv-view .study-explanation-panel{font-size:1.05rem}
 
 /* Reader in TV view */
 body.tv-view .fullscreen-reader .reader-header{padding:18px 28px}
@@ -113,7 +113,7 @@ body.tv-view .rkg-title{font-size:.8rem}
 body.tv-view .rkg-keys{font-size:.95rem;gap:18px}
 body.tv-view .rkg-keys b{font-size:.85rem;padding:4px 10px;border-radius:7px}
 
-/* Welcome hero (all sizes) */
+/* Welcome hero */
 .welcome-hero{
     position:relative;padding:44px 24px 30px;text-align:center;
     background:linear-gradient(135deg,#1e3a8a 0%,#2563eb 55%,#3b82f6 100%);
@@ -142,7 +142,7 @@ body.tv-view .rkg-keys b{font-size:.85rem;padding:4px 10px;border-radius:7px}
 .welcome-hero h1{font-family:'Poppins',sans-serif;font-size:1.95rem;font-weight:800;line-height:1.15;margin-bottom:8px;position:relative;z-index:1;letter-spacing:-.6px}
 .welcome-hero p{font-size:.88rem;opacity:.95;position:relative;z-index:1;font-weight:500}
 
-/* Quick stats row on welcome */
+/* Welcome stats */
 .welcome-stats{
     display:grid;grid-template-columns:repeat(3,1fr);gap:10px;
     padding:0 18px;margin-top:-20px;margin-bottom:20px;position:relative;z-index:3;
@@ -188,13 +188,36 @@ body.tv-view .rkg-keys b{font-size:.85rem;padding:4px 10px;border-radius:7px}
 .tool-btn:active{transform:scale(.95);background:#f8fafc}
 .tool-btn i{font-size:1.4rem;margin-bottom:6px;color:var(--primary)}
 .tool-btn h4{font-size:.8rem;font-weight:600;color:var(--text)}
-.header{display:flex;align-items:center;justify-content:space-between;padding:10px 14px;margin:8px 10px 0;background:var(--surface);border-radius:14px;border:1px solid var(--border);flex-shrink:0;box-shadow:0 1px 3px rgba(0,0,0,.04);transition:all .3s ease}
+
+/* ============================================================
+   HEADER — static, clean, soft shadow (NOT sticky)
+   ============================================================ */
+.header{
+    display:flex;align-items:center;justify-content:space-between;
+    padding:11px 14px;
+    margin:10px 12px 0;
+    background:linear-gradient(180deg,#ffffff 0%,#fbfdff 100%);
+    border-radius:14px;
+    border:1px solid rgba(226,232,240,.85);
+    flex-shrink:0;
+    box-shadow:
+        0 1px 2px rgba(15,23,42,.02),
+        0 4px 14px rgba(15,23,42,.04),
+        0 12px 30px -12px rgba(37,99,235,.06);
+    transition:all .3s ease;
+    position:relative;
+}
+.header::after{
+    content:'';position:absolute;left:14px;right:14px;bottom:-1px;height:1px;
+    background:linear-gradient(90deg,transparent,rgba(37,99,235,.18),transparent);
+    border-radius:2px;pointer-events:none;
+}
 .header-left{display:flex;align-items:center;gap:9px;min-width:0}
-.home-btn{width:36px;height:36px;border-radius:10px;background:#f1f5f9;border:1.5px solid var(--border);display:flex;align-items:center;justify-content:center;color:var(--text-secondary);cursor:pointer;font-size:.85rem;transition:.2s;flex-shrink:0}
+.home-btn{width:36px;height:36px;border-radius:10px;background:linear-gradient(135deg,#f1f5f9,#e8eef5);border:1.5px solid var(--border);display:flex;align-items:center;justify-content:center;color:var(--text-secondary);cursor:pointer;font-size:.85rem;transition:.2s;flex-shrink:0}
 .home-btn:active{transform:scale(.9);background:#e2e8f0}
 .header-title{min-width:0}
-.header-title h2{font-size:.85rem;font-weight:700;color:var(--text);line-height:1.2;font-family:'Poppins',sans-serif;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.header-title p{font-size:.62rem;color:var(--text-secondary);text-transform:uppercase;font-weight:600;letter-spacing:.4px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.header-title h2{font-size:.88rem;font-weight:800;color:var(--text);line-height:1.2;font-family:'Poppins',sans-serif;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;letter-spacing:-.2px}
+.header-title p{font-size:.62rem;color:var(--text-secondary);text-transform:uppercase;font-weight:600;letter-spacing:.5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .study-badge-inline{display:none;font-size:.58rem;font-weight:700;color:var(--study-badge);background:var(--study-badge-bg);border:1px solid #d8b4fe;padding:2px 7px;border-radius:20px;margin-left:6px;white-space:nowrap}
 .study-badge-inline.show{display:inline-block}
 .header-actions{display:flex;gap:6px;flex-shrink:0}
@@ -233,6 +256,62 @@ body.tv-view .rkg-keys b{font-size:.85rem;padding:4px 10px;border-radius:7px}
 .option-btn.study-correct-preview .option-letter{background:#a7f3d0;border-color:var(--correct);color:var(--correct)}
 @keyframes pulse-green{0%,100%{transform:scale(1)}50%{transform:scale(1.02)}}
 @keyframes shake{0%,100%{transform:translateX(0)}25%{transform:translateX(-4px)}75%{transform:translateX(4px)}}
+
+/* ============ STUDY MODE INLINE EXPLANATION PANEL ============ */
+.study-explanation-panel{
+    margin-top:12px;
+    padding:14px 15px;
+    background:linear-gradient(135deg,#fffbeb 0%,#fef3c7 100%);
+    border:1.5px solid #fcd34d;
+    border-radius:12px;
+    animation:fadeIn .3s ease;
+    box-shadow:0 4px 14px rgba(251,191,36,.15);
+}
+.study-explanation-panel .sep-head{
+    display:flex;align-items:center;gap:8px;
+    margin-bottom:10px;
+    font-family:'Poppins',sans-serif;
+    font-weight:800;font-size:.78rem;
+    color:#92400e;
+    text-transform:uppercase;letter-spacing:.6px;
+}
+.study-explanation-panel .sep-head i{font-size:.95rem;color:#d97706}
+.study-explanation-panel .sep-correct{
+    font-size:.84rem;font-weight:700;color:#065f46;
+    background:rgba(255,255,255,.7);
+    border:1px solid #a7f3d0;
+    padding:8px 10px;border-radius:8px;
+    margin-bottom:10px;
+    display:flex;align-items:flex-start;gap:7px;
+    line-height:1.5;
+}
+.study-explanation-panel .sep-correct .sep-tag{
+    background:#059669;color:#fff;
+    font-size:.6rem;font-weight:800;
+    padding:2px 7px;border-radius:20px;
+    letter-spacing:.4px;flex-shrink:0;margin-top:1px;
+}
+.study-explanation-panel .sep-body{
+    font-size:.84rem;line-height:1.7;color:#334155;
+}
+.study-explanation-panel .sep-body b{color:#92400e}
+.study-explanation-panel .sep-empty{
+    font-size:.8rem;font-style:italic;color:#94a3b8;
+}
+.study-explanation-panel .table-wrap{margin-top:8px}
+.study-explanation-panel .pdf-table{font-size:.78rem}
+
+/* Study mode badge floating */
+.study-float-tip{
+    margin-top:10px;padding:8px 12px;
+    background:rgba(124,58,237,.08);
+    border:1px dashed rgba(124,58,237,.35);
+    border-radius:10px;
+    font-size:.72rem;font-weight:600;color:#6d28d9;
+    text-align:center;
+    display:flex;align-items:center;justify-content:center;gap:6px;
+}
+
 .dots-container{display:flex;gap:6px;overflow-x:auto;padding:10px 2px;-webkit-overflow-scrolling:touch;scrollbar-width:none;margin-top:8px}
 .dots-container::-webkit-scrollbar{display:none}
 .dot-btn{min-width:38px;width:38px;height:38px;border-radius:9px;border:2px solid var(--border);background:var(--surface);font-size:.72rem;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;cursor:pointer;position:relative;color:var(--text-secondary);transition:all .2s}
@@ -321,57 +400,119 @@ body.tv-view .rkg-keys b{font-size:.85rem;padding:4px 10px;border-radius:7px}
 .yt-footer a i{color:#ef4444;font-size:1.3rem}
 @keyframes spin{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}
 
-/* ============ SOCIAL FOOTER ============ */
+/* ============================================================
+   SOCIAL FOOTER — premium floating island (light, harmonious)
+   ============================================================ */
 .social-footer{
-    background:linear-gradient(135deg,#0f172a,#1e293b);
-    padding:20px 18px 18px;
+    margin:14px 14px 20px;
+    padding:22px 18px 18px;
+    background:linear-gradient(160deg,#ffffff 0%,#f8fafc 60%,#f1f5fb 100%);
+    border:1px solid rgba(226,232,240,.9);
+    border-radius:20px;
+    box-shadow:
+        0 1px 2px rgba(15,23,42,.02),
+        0 6px 22px rgba(15,23,42,.05),
+        0 20px 40px -20px rgba(37,99,235,.08);
     text-align:center;
-    border-top:1px solid #334155;
+    position:relative;
+    overflow:hidden;
+}
+.social-footer::before{
+    content:'';position:absolute;top:0;left:50%;transform:translateX(-50%);
+    width:60%;height:3px;
+    background:linear-gradient(90deg,transparent,#2563eb,#7c3aed,transparent);
+    border-radius:0 0 4px 4px;
+    opacity:.55;
 }
 .social-footer .brand-line{
     font-family:'Poppins',sans-serif;
-    font-size:.82rem;
+    font-size:.86rem;
     font-weight:700;
-    color:#94a3b8;
-    margin-bottom:12px;
-    letter-spacing:.3px;
+    color:#334155;
+    margin-bottom:16px;
+    letter-spacing:-.1px;
+    line-height:1.4;
 }
-.social-footer .brand-line span{color:#60a5fa}
+.social-footer .brand-line .heart{color:#ef4444;display:inline-block;animation:heartbeat 2s ease-in-out infinite}
+@keyframes heartbeat{0%,100%{transform:scale(1)}50%{transform:scale(1.15)}}
+.social-footer .brand-line span{
+    background:linear-gradient(135deg,#2563eb,#7c3aed);
+    -webkit-background-clip:text;
+    background-clip:text;
+    -webkit-text-fill-color:transparent;
+    font-weight:800;
+    letter-spacing:-.3px;
+}
 .social-icons{
     display:flex;
     align-items:center;
     justify-content:center;
-    gap:12px;
-    margin-bottom:10px;
+    gap:10px;
+    margin-bottom:14px;
 }
 .social-icons a{
-    width:38px;height:38px;
-    border-radius:50%;
-    background:rgba(255,255,255,.08);
-    border:1px solid rgba(255,255,255,.12);
+    width:42px;height:42px;
+    border-radius:13px;
+    background:rgba(37,99,235,.07);
     display:flex;align-items:center;justify-content:center;
-    color:#cbd5e1;
-    font-size:.95rem;
-    text-decoration:none;
-    transition:all .22s ease;
-}
-.social-icons a:hover,.social-icons a:active{
-    background:rgba(96,165,250,.2);
-    border-color:rgba(96,165,250,.4);
-    color:#60a5fa;
-    transform:translateY(-2px);
-}
-.social-footer .copyright{
-    font-size:.65rem;
     color:#64748b;
-    font-weight:500;
-    letter-spacing:.3px;
-}
-.social-footer .copyright a{
-    color:#60a5fa;
+    font-size:1rem;
     text-decoration:none;
-    font-weight:700;
+    transition:all .28s cubic-bezier(.16,1,.3,1);
+    position:relative;
+    overflow:hidden;
 }
+.social-icons a::before{
+    content:'';position:absolute;inset:0;
+    background:linear-gradient(135deg,#2563eb,#4f46e5);
+    opacity:0;transition:opacity .28s ease;
+    border-radius:inherit;
+}
+.social-icons a i{position:relative;z-index:1;transition:transform .28s ease}
+.social-icons a:hover,.social-icons a:active{
+    transform:translateY(-3px) scale(1.06);
+    color:#fff;
+    box-shadow:0 10px 22px -6px rgba(37,99,235,.45);
+}
+.social-icons a:hover::before,.social-icons a:active::before{opacity:1}
+.social-icons a:hover i,.social-icons a:active i{transform:scale(1.08)}
+.social-icons a[title="YouTube"]:hover{box-shadow:0 10px 22px -6px rgba(239,68,68,.5)}
+.social-icons a[title="YouTube"]::before{background:linear-gradient(135deg,#ef4444,#dc2626)}
+.social-icons a[title="Instagram"]:hover{box-shadow:0 10px 22px -6px rgba(236,72,153,.5)}
+.social-icons a[title="Instagram"]::before{background:linear-gradient(135deg,#ec4899,#be185d)}
+.social-icons a[title="LinkedIn"]:hover{box-shadow:0 10px 22px -6px rgba(37,99,235,.5)}
+.social-icons a[title="Portfolio"]:hover{box-shadow:0 10px 22px -6px rgba(124,58,237,.5)}
+.social-icons a[title="Portfolio"]::before{background:linear-gradient(135deg,#7c3aed,#4f46e5)}
+
+.social-footer .copyright{
+    font-size:.64rem;
+    color:#94a3b8;
+    font-weight:500;
+    letter-spacing:.2px;
+    line-height:1.7;
+}
+.social-footer .copyright .sep{margin:0 6px;opacity:.5}
+.social-footer .copyright a{
+    color:#64748b;
+    text-decoration:none;
+    font-weight:600;
+    transition:color .2s ease;
+    border-bottom:1px dotted transparent;
+}
+.social-footer .copyright a:hover,.social-footer .copyright a:active{
+    color:#2563eb;
+    border-bottom-color:rgba(37,99,235,.4);
+}
+
+/* Source pill */
+.source-pill{
+    display:inline-flex;align-items:center;gap:5px;
+    font-size:.68rem;color:#64748b;text-decoration:none;
+    padding:7px 13px;border-radius:20px;
+    background:#fff;border:1px solid #e2e8f0;
+    transition:.2s;font-weight:600;
+}
+.source-pill:hover,.source-pill:active{background:#f1f5f9;color:#2563eb}
 
 /* ============ TABLE FORMATTING ============ */
 .table-wrap{max-width:100%;overflow-x:auto;margin:10px 0;border:1px solid var(--border);border-radius:10px;background:#fff;-webkit-overflow-scrolling:touch}
@@ -693,23 +834,6 @@ body.tv-view .pdf-table th,body.tv-view .pdf-table td{padding:12px 16px}
     box-shadow:0 6px 18px rgba(37,99,235,.35);
 }
 .guide-actions .btn-start:active{transform:scale(.97);box-shadow:0 3px 10px rgba(37,99,235,.3)}
-.guide-dots{
-    display:flex;
-    justify-content:center;
-    gap:6px;
-    margin-bottom:18px;
-}
-.guide-dot{
-    width:7px;height:7px;
-    border-radius:50%;
-    background:#cbd5e1;
-    transition:all .25s;
-}
-.guide-dot.active{
-    background:#2563eb;
-    width:20px;
-    border-radius:4px;
-}
 
 /* ============ KT PALETTE SHEET ============ */
 .kt-palette-grid{
@@ -816,8 +940,8 @@ body.tv-view .pdf-table th,body.tv-view .pdf-table td{padding:12px 16px}
             <div class="guide-step">
                 <div class="guide-step-num">3</div>
                 <div class="guide-step-text">
-                    <h4>Track Progress</h4>
-                    <p>Syllabus, Key Takeaways & Wrong Question bank.</p>
+                    <h4>Study Mode</h4>
+                    <p>Toggle 📖 to reveal the correct answer & explanation instantly.</p>
                 </div>
             </div>
             <div class="guide-step">
@@ -921,26 +1045,27 @@ body.tv-view .pdf-table th,body.tv-view .pdf-table td{padding:12px 16px}
         </div>
 
         <!-- SOURCE REFERENCE -->
-        <div style="padding:0 18px 12px;text-align:center">
-            <a href="https://www.icai.org/post/bos-csb-final-may2026" target="_blank" style="font-size:.7rem;color:#64748b;text-decoration:none;display:inline-flex;align-items:center;gap:5px;padding:6px 12px;border-radius:20px;background:#f1f5f9;border:1px solid #e2e8f0;transition:.2s">
+        <div style="padding:0 18px 4px;text-align:center">
+            <a href="https://www.icai.org/post/bos-csb-final-may2026" target="_blank" class="source-pill">
                 <i class="fa-solid fa-link" style="color:#2563eb"></i>
                 Source: ICAI BoS CSB Final May 2026
             </a>
         </div>
 
-        <!-- SOCIAL FOOTER -->
+        <!-- SOCIAL FOOTER (redesigned premium island) -->
         <div class="social-footer">
             <div class="brand-line">
-                Built with ❤️ by <span>Observe with Satyam</span>
+                Built with <span class="heart">❤️</span> by <span>Observe with Satyam</span>
             </div>
             <div class="social-icons">
-                <a href="https://linkedin.com/in/satyam-kumar5286o" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                <a href="https://youtube.com/@observe_with_satyam?si=xKMKJHWzcjVFeDFj" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
-                <a href="https://instagram.com/observe_with_satyam?igsh=MWdxYnp1Y283b2ZyeQ==" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
-                <a href="https://satqm.github.io/Portfolio-" target="_blank" title="Portfolio"><i class="fas fa-globe"></i></a>
+                <a href="https://linkedin.com/in/satyam-kumar5286o" target="_blank" title="LinkedIn" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="https://youtube.com/@observe_with_satyam?si=xKMKJHWzcjVFeDFj" target="_blank" title="YouTube" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                <a href="https://instagram.com/observe_with_satyam?igsh=MWdxYnp1Y283b2ZyeQ==" target="_blank" title="Instagram" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://satqm.github.io/Portfolio-" target="_blank" title="Portfolio" aria-label="Portfolio"><i class="fas fa-globe"></i></a>
             </div>
             <div class="copyright">
-                © 2026 MCQ Helper · <a href="https://youtube.com/@observe_with_satyam" target="_blank">Subscribe on YouTube</a>
+                © 2026 MCQ Helper <span class="sep">·</span>
+                <a href="https://youtube.com/@observe_with_satyam" target="_blank" rel="noopener">Subscribe on YouTube</a>
             </div>
         </div>
     </div>
@@ -1034,6 +1159,7 @@ body.tv-view .pdf-table th,body.tv-view .pdf-table td{padding:12px 16px}
                 <div id="questionAndOptionsContainer">
                     <div class="question-card" ondblclick="openFullscreenReader()" title="Double click to read fullscreen"><div id="questionDisplay" style="position:relative"></div></div>
                     <div class="options-list" id="optionsDisplay"></div>
+                    <div id="studyExplanationSlot"></div>
                 </div>
             </div>
             <div class="desktop-sidebar-wrapper" id="desktopSidebarWrapper">
@@ -1331,7 +1457,20 @@ window.toggleDesktopView=function(){
 function applyDesktopLayout(){if(STATE.questions[STATE.currentIdx]&&STATE.questions[STATE.currentIdx].caseStudy)document.getElementById('quizArea').classList.add('has-case');}
 function removeDesktopLayout(){document.getElementById('quizArea').classList.remove('has-case');}
 
-window.toggleStudyMode=function(){STATE.studyMode=!STATE.studyMode;const btn=document.getElementById('studyToggleBtn');const badge=document.getElementById('studyBadgeInline');btn.classList.toggle('active',STATE.studyMode);badge.classList.toggle('show',STATE.studyMode);if(STATE.studyMode){beep(660,'sine',.08);setTimeout(()=>beep(880,'sine',.08),100);}else{beep(440,'sine',.08);}renderQuestion();if(STATE.questions.length>0)updateStatsBar();};
+window.toggleStudyMode=function(){
+    STATE.studyMode=!STATE.studyMode;
+    const btn=document.getElementById('studyToggleBtn');
+    const badge=document.getElementById('studyBadgeInline');
+    btn.classList.toggle('active',STATE.studyMode);
+    badge.classList.toggle('show',STATE.studyMode);
+    if(STATE.studyMode){beep(660,'sine',.08);setTimeout(()=>beep(880,'sine',.08),100);}else{beep(440,'sine',.08);}
+    renderQuestion();
+    if(STATE.questions.length>0)updateStatsBar();
+    if(STATE.studyMode){
+        // gentle scroll so the explanation panel is visible
+        setTimeout(()=>{const p=document.getElementById('studyExplanationSlot');if(p&&p.firstChild)p.scrollIntoView({behavior:'smooth',block:'nearest'});},200);
+    }
+};
 
 /* ============ TABLE PREPROCESSING ============ */
 function prepareTables(container){
@@ -1432,6 +1571,33 @@ function updateNotesBadge(){const st=STATE.session[STATE.currentIdx];const b=doc
 
 function updateStatsBar(){const s=STATE.session;document.getElementById('statCorrectCount').textContent=s.filter(x=>x.ok===true).length;document.getElementById('statWrongCount').textContent=s.filter(x=>x.ok===false).length;document.getElementById('statUnansweredCount').textContent=s.filter(x=>x.sel===null).length;document.getElementById('statBookmarkedCount').textContent=s.filter(x=>x.mark).length;}
 
+/* ============ RENDER STUDY MODE EXPLANATION (INLINE) ============ */
+function renderStudyExplanation(){
+    const slot=document.getElementById('studyExplanationSlot');
+    if(!slot)return;
+    slot.innerHTML='';
+    if(!STATE.studyMode)return;
+    const q=STATE.questions[STATE.currentIdx];
+    if(!q)return;
+    if(!q.explain && (q.correct===undefined || q.correct===null))return;
+
+    const panel=document.createElement('div');
+    panel.className='study-explanation-panel';
+    let html='<div class="sep-head"><i class="fa-solid fa-lightbulb"></i> Explanation &amp; Expert Advice</div>';
+    // Correct answer badge
+    const correctText=(q.options&&q.options[q.correct])?q.options[q.correct]:'—';
+    html+='<div class="sep-correct"><span class="sep-tag">CORRECT</span><span>Option '+String.fromCharCode(65+q.correct)+' — '+correctText+'</span></div>';
+    // Explanation body
+    if(q.explain){
+        html+='<div class="sep-body">'+q.explain+'</div>';
+    } else {
+        html+='<div class="sep-body sep-empty">No detailed explanation provided for this question. Refer to the correct answer above.</div>';
+    }
+    panel.innerHTML=html;
+    slot.appendChild(panel);
+    prepareTables(panel);
+}
+
 function renderQuestion(){
     const q=STATE.questions[STATE.currentIdx];if(!q)return;
     STATE.isAnswered=false;
@@ -1457,6 +1623,7 @@ function renderQuestion(){
         if(!STATE.studyMode&&st.sel===null)btn.addEventListener('click',()=>handleOptionClick(i));
         oa.appendChild(btn);
     });
+    renderStudyExplanation();
     renderDots();updateBookmarkIcon();updateNotesBadge();
     document.getElementById('scoreDisplay').textContent=`${STATE.currentIdx+1}/${STATE.questions.length}`;
     document.getElementById('mainContent').scrollTop=0;if(cc)cc.scrollTop=0;
@@ -1491,7 +1658,7 @@ function lockAnswer(idx,fromReader=false){
 function showExplanationModal(ok,expert=false){
     const q=STATE.questions[STATE.currentIdx];
     document.getElementById('explanationTitle').innerHTML=expert?'👔 Expert Advice':(ok?'✅ Excellent!':'❌ Incorrect');
-    let html=`<div style="margin-bottom:10px"><b>Correct Answer:</b> Option ${String.fromCharCode(65+q.correct)}</div>`;
+    let html=`<div style="margin-bottom:10px"><b>Correct Answer:</b> Option ${String.fromCharCode(65+q.correct)} — ${esc(q.options[q.correct]||'')}</div>`;
     html+=q.explain?`<div style="padding-top:8px;border-top:1px dashed #cbd5e1"><b>Explanation:</b><br/>${q.explain}</div>`:`<div style="padding-top:8px;border-top:1px dashed #cbd5e1;font-style:italic;color:#64748b">No explanation provided.</div>`;
     const body=document.getElementById('explanationBody');
     body.innerHTML=html;
@@ -1520,6 +1687,14 @@ window.openFullscreenReader=function(){
         content+=`<button class="option-btn ${extra}" id="readerOptBtn${i}" onclick="handleReaderOptionClick(${i})" ${disabled}><span class="option-letter">${String.fromCharCode(65+i)}</span><span id="readerOptText${i}" style="flex:1">${st.optionsHtml[i]||o}</span></button>`;
     });
     content+=`</div>`;
+    // Study Mode: inline explanation in reader
+    if(STATE.studyMode && (q.explain || q.correct!==undefined)){
+        content+='<div id="readerStudyExplanation" class="study-explanation-panel" style="margin-top:20px">';
+        content+='<div class="sep-head"><i class="fa-solid fa-lightbulb"></i> Explanation &amp; Expert Advice</div>';
+        content+='<div class="sep-correct"><span class="sep-tag">CORRECT</span><span>Option '+String.fromCharCode(65+q.correct)+' — '+esc(q.options[q.correct]||'')+'</span></div>';
+        content+=q.explain ? ('<div class="sep-body">'+q.explain+'</div>') : '<div class="sep-body sep-empty">No detailed explanation provided for this question.</div>';
+        content+='</div>';
+    }
     const rc=document.getElementById('readerContent');
     rc.innerHTML=content;
     document.getElementById('fullscreenReader').style.display='flex';
@@ -2089,7 +2264,6 @@ window.openOverallKT=function(){
 function openKTDeck(deck,title,sub){
     KT_DECK.deck=deck;KT_DECK.idx=0;KT_DECK.title=title;KT_DECK.sub=sub;
     KT_DECK.chapter=deck[0]?deck[0].chapterNum:null;
-    // Restore session memory
     try{
         const saved=sessionStorage.getItem('ktDeck_idx_'+title);
         if(saved!==null){
