@@ -404,18 +404,17 @@ body.tv-view .rkg-keys b{font-size:.85rem;padding:4px 10px;border-radius:7px}
    SOCIAL FOOTER — premium branded island (light, harmonious)
    ============================================================ */
 .social-footer{
-    margin:16px 14px 22px;
-    padding:0 0 16px;
-    background:linear-gradient(160deg,#ffffff 0%,#f8fafc 55%,#eef4ff 100%);
-    border:1px solid rgba(226,232,240,.9);
-    border-radius:22px;
-    box-shadow:
-        0 1px 2px rgba(15,23,42,.02),
-        0 6px 22px rgba(15,23,42,.05),
-        0 20px 40px -20px rgba(37,99,235,.10);
-    text-align:center;
-    position:relative;
-    overflow:hidden;
+    flex-shrink: 0; /* Prevents it from being squashed by flexbox */
+    margin: 16px 14px 22px;
+    padding: 0 0 16px;
+    background: linear-gradient(160deg,#ffffff 0%,#f8fafc 55%,#eef4ff 100%);
+    border: 1px solid rgba(226,232,240,.9);
+    border-radius: 22px;
+    box-shadow: 0 1px 2px rgba(15,23,42,.02), 0 6px 22px rgba(15,23,42,.05), 0 20px 40px -20px rgba(37,99,235,.10);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    display: block;
 }
 .social-footer::before{
     content:'';position:absolute;top:0;left:0;right:0;height:4px;
@@ -1051,7 +1050,7 @@ body.tv-view .pdf-table th,body.tv-view .pdf-table td{padding:12px 16px}
             <div class="tool-btn" onclick="document.getElementById('importFile').click()"><i class="fa-solid fa-cloud-arrow-up"></i><h4>Restore</h4></div>
         </div>
 
-                <!-- SOURCE REFERENCE -->
+        <!-- SOURCE REFERENCE -->
         <div style="padding:0 18px 10px;text-align:center">
             <a href="https://www.icai.org/post/bos-csb-final-may2026" target="_blank" rel="noopener" class="source-pill">
                 <i class="fa-solid fa-link" style="color:#2563eb"></i>
@@ -1060,10 +1059,10 @@ body.tv-view .pdf-table th,body.tv-view .pdf-table td{padding:12px 16px}
         </div>
 
         <!-- ============================================================
-             SOCIAL FOOTER — Branded, clickable links, clean layout
+             SOCIAL FOOTER — branded + clickable links
              ============================================================ -->
         <div class="social-footer">
-            <!-- Brand Header -->
+            <!-- Brand header (tap → YouTube channel) -->
             <a class="sf-brand" href="https://youtube.com/@observe_with_satyam?si=xKMKJHWzcjVFeDFj" target="_blank" rel="noopener" aria-label="Observe with Satyam on YouTube">
                 <span class="sf-avatar"><i class="fa-solid fa-graduation-cap"></i></span>
                 <span class="sf-brand-text">
@@ -1073,7 +1072,7 @@ body.tv-view .pdf-table th,body.tv-view .pdf-table td{padding:12px 16px}
                 <span class="sf-cta"><i class="fa-brands fa-youtube"></i> Subscribe</span>
             </a>
 
-            <!-- Platform Links -->
+            <!-- Platform links -->
             <div class="sf-links">
                 <a class="sf-link yt" href="https://youtube.com/@observe_with_satyam?si=xKMKJHWzcjVFeDFj" target="_blank" rel="noopener">
                     <span class="sf-ic"><i class="fa-brands fa-youtube"></i></span>
@@ -1097,7 +1096,6 @@ body.tv-view .pdf-table th,body.tv-view .pdf-table td{padding:12px 16px}
                 </a>
             </div>
 
-            <!-- Copyright -->
             <div class="copyright">
                 Built with <span class="heart">❤️</span> by
                 <a href="https://youtube.com/@observe_with_satyam" target="_blank" rel="noopener">Observe with Satyam</a>
@@ -1106,6 +1104,7 @@ body.tv-view .pdf-table th,body.tv-view .pdf-table td{padding:12px 16px}
                 <a href="https://youtube.com/@observe_with_satyam" target="_blank" rel="noopener">Subscribe on YouTube</a>
             </div>
         </div>
+    </div>
 
     <!-- SYLLABUS -->
     <div id="syllabusScreen" class="screen" style="background:var(--bg)">
