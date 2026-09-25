@@ -1,0 +1,3165 @@
+[
+  {
+    "scenario_number": 1,
+    "title": "CASE SCENARIO 1",
+    "passage_html": "Equity Researchers have estimated the rate of returns for Stock A, Stock B and Market Portfolio under each state of the economy is as under:\n\n<table class=\"pdf-table\">\n  <thead>\n    <tr>\n      <th>Economy</th>\n      <th>Probability</th>\n      <th>Return on<br>Stock A (%)</th>\n      <th>Return on<br>Stock B (%)</th>\n      <th>Market<br>Portfolio (%)</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n      <td>Boom</td>\n      <td>0.3</td>\n      <td>16</td>\n      <td>19</td>\n      <td>18</td>\n    </tr>\n    <tr>\n      <td>Normal</td>\n      <td>0.4</td>\n      <td>14</td>\n      <td>16</td>\n      <td>15</td>\n    </tr>\n    <tr>\n      <td>Recession</td>\n      <td>0.3</td>\n      <td>-9</td>\n      <td>-7</td>\n      <td>-8</td>\n    </tr>\n  </tbody>\n</table>\n\nThe risk-free rate of return is expected to be 8%. The covariance between Stock A and the Market Portfolio is 122.70, while the covariance between Stock B and the Market Portfolio is 125.40. Assume that the CAPM framework is valid in this market. From the information given above, choose the correct answer to the following questions:",
+    "questions": [
+      {
+        "question_number": 1,
+        "question_text": "The expected rate of return (percentage) for Stocks A and B………………………",
+        "options": {
+          "a": "7.70% and 9.00%",
+          "b": "10% and 9.00%",
+          "c": "7.70% and 10%",
+          "d": "13.1% and 14.20%"
+        },
+        "correct_option": "c",
+        "explanation_html": "Stock A = 0.3 x 16 + 0.4 x 14 + 0.3 x (-9) = 7.70 Stock B = 0.3 x 19 + 0.4 x 16 + 0.3 x (-7) = 10"
+      },
+      {
+        "question_number": 2,
+        "question_text": "What will be the variance of market portfolio?",
+        "options": {
+          "a": "38.4",
+          "b": "- 4.8",
+          "c": "126.8",
+          "d": "125.4"
+        },
+        "correct_option": "d",
+        "explanation_html": "(18 – 9)20.3 + (15 – 9)20.4 + (-8 – 9)20.3 = 125.4"
+      },
+      {
+        "question_number": 3,
+        "question_text": "What will be the beta of Stock A and Stock B respectively?",
+        "options": {
+          "a": "0.9542 and 1.00",
+          "b": "0.9862 and 1.24",
+          "c": "0.9785 and 1.00",
+          "d": "0.9785 and 1.24"
+        },
+        "correct_option": "c",
+        "explanation_html": "Stock A = 122.70/ 125.40 = 0.9785 Stock B = 125.40/ 125.40 = 1"
+      },
+      {
+        "question_number": 4,
+        "question_text": "Required rate of return of Stock A is _________ and Stock B is _________.",
+        "options": {
+          "a": "8.9785 % and 9%",
+          "b": "9% and 8.978%",
+          "c": "8.9875% and 9%",
+          "d": "8.9785% and 10.4%"
+        },
+        "correct_option": "a",
+        "explanation_html": "Stock A = 8% + 0.9785(9% - 8%) = 8.9785% Stock B = 8% + 1(9% - 8%) = 9%"
+      },
+      {
+        "question_number": 5,
+        "question_text": "Which of the following statements is correct for purchase or sale of Stock A and Stock B?",
+        "options": {
+          "a": "Stock A has a positive alpha, and Stock B has a negative alpha. This indicates that Stock A is underpriced and Stock B is overpriced. Therefore, purchase Stock A and sell Stock B.",
+          "b": "Both Stock A and Stock B have positive alpha values, suggesting they are underpriced. Therefore, purchase both stocks.",
+          "c": "Stock A has a negative alpha, while Stock B has a positive alpha. This means Stock A is overpriced and Stock B is underpriced. Therefore, sell Stock A and purchase Stock B.",
+          "d": "Both Stock A and Stock B have negative alpha values, indicating they are overpriced. Therefore, sell both stocks."
+        },
+        "correct_option": "c",
+        "explanation_html": "While Stock A’s expected rate of return is lower than that required return. However, for Stock B the reverse is true."
+      }
+    ]
+  },
+  {
+    "scenario_number": 2,
+    "title": "CASE SCENARIO 2",
+    "passage_html": "Steady Mutual Fund has the following assets in Scheme - Star Gold at the close of business as on 31st March, 2025:\n\n<table class=\"pdf-table\">\n  <thead>\n    <tr>\n      <th>Company</th>\n      <th>No. of Shares (units)</th>\n      <th>Market Price per share (₹ )</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n      <td>A Ltd.</td>\n      <td>20,000</td>\n      <td>25</td>\n    </tr>\n    <tr>\n      <td>B Ltd.</td>\n      <td>30,000</td>\n      <td>350</td>\n    </tr>\n    <tr>\n      <td>C Ltd.</td>\n      <td>38,000</td>\n      <td>290</td>\n    </tr>\n    <tr>\n      <td>D Ltd.</td>\n      <td>50,000</td>\n      <td>400</td>\n    </tr>\n  </tbody>\n</table>\n\nThe total numbers of units of Scheme - Star Gold are 20 lakhs. The Scheme - Star Gold has accrued expenses of ₹ 2,00,000 and other liabilities of ₹ 2,50,000. From the information given above, choose the correct answer to the following questions:",
+    "questions": [
+      {
+        "question_number": 1,
+        "question_text": "Total gross value of the Scheme - Star Gold is ………………..",
+        "options": {
+          "a": "₹ 325.00 lakhs",
+          "b": "₹ 420.20 lakhs",
+          "c": "₹ 480.40 lakhs",
+          "d": "₹ 520.30 lakhs"
+        },
+        "correct_option": "b",
+        "explanation_html": "20000 x 25 + 30000 x 350 + 38000 x 290 + 50000 x 400"
+      },
+      {
+        "question_number": 2,
+        "question_text": "Total net value of the Scheme - Star Gold is ………………..",
+        "options": {
+          "a": "₹ 422.70 lakhs",
+          "b": "₹ 420.70 lakhs",
+          "c": "₹ 415.70 lakhs",
+          "d": "₹ 424.70 lakhs"
+        },
+        "correct_option": "c",
+        "explanation_html": "₹ 420.20 lakhs - ₹ 4.50 lakhs = ₹ 415.70 lakhs"
+      },
+      {
+        "question_number": 3,
+        "question_text": "NAV per unit of the Scheme- Star Gold is……………",
+        "options": {
+          "a": "₹ 21.135",
+          "b": "₹ 21.035",
+          "c": "₹ 20.785",
+          "d": "₹ 21.235"
+        },
+        "correct_option": "c",
+        "explanation_html": "₹ 415.70 lakhs/ 20 lakhs = ₹ 20.785"
+      }
+    ]
+  },
+  {
+    "scenario_number": 3,
+    "title": "CASE SCENARIO 3",
+    "passage_html": "Mr. X, an investor buys the stocks of WBL Limited worth ₹ 21,60,000 due to very strong fundamentals. Since last 3 months, the market sentiment is weak and witnessed a significant volatility and considered to remain weak for about the next three months. Keeping in the mind volatility in the market, Mr. X is planning to hedge his portfolio in the future market. The Beta of WBL stock is 1.3 and the current value of NIFTY is 2250 and 3 months future is selling at 2310. The current market price of the WBL stock is ₹ 240. Each Nifty future can be trade in units of 240 only. Assume there is no transaction cost and M to M Margin. From the information given above, choose the correct answer to the following questions:",
+    "questions": [
+      {
+        "question_number": 1,
+        "question_text": "Number of future contract to be buy/sell to hedge WBL stock against expected fall in the market (rounded of contracts) -",
+        "options": {
+          "a": "Buy 6 future contracts",
+          "b": "Sell 5 future contracts",
+          "c": "Buy 5 future contracts",
+          "d": "Sell 6 future contracts"
+        },
+        "correct_option": "b",
+        "explanation_html": "(₹ 2160000 x 1.3)/ (2310 x ₹ 240) = 5.06 rounded off to 5"
+      },
+      {
+        "question_number": 2,
+        "question_text": "If Nifty index fall by 10% from 2250 to 2025 and WBL stock falls to ₹ 212, what will be Net Gain/Loss if portfolio was hedged on NIFTY future?",
+        "options": {
+          "a": "Net Gain ₹ 3,42,000",
+          "b": "Net Gain ₹ 3,02,100",
+          "c": "Net Gain ₹ 50,100",
+          "d": "Net Gain ₹ 90,000"
+        },
+        "correct_option": "d",
+        "explanation_html": "9000(₹ 212 – ₹ 240) + (2310 – 2025) x 5 x ₹ 240 = ₹ 90,000"
+      },
+      {
+        "question_number": 3,
+        "question_text": "If NIFTY index rises by 6% from 2250 to 2385 and WBL stock rises to ₹ 255, what will be Net Gain/Loss when portfolio was in hedged?",
+        "options": {
+          "a": "Net Loss ₹ 90,000",
+          "b": "Net Gain ₹ 45,000",
+          "c": "Net Gain ₹ 1,35,000",
+          "d": "Net Gain ₹ 90,000"
+        },
+        "correct_option": "b",
+        "explanation_html": "9000(₹ 255 – ₹ 240) + (2310 – 2385) x 5 x ₹ 240 = ₹ 45,000 9000( 255 – 240) + (2310 – 2385) x 5 x 240 = 45,000"
+      }
+    ]
+  },
+  {
+    "scenario_number": 4,
+    "title": "CASE SCENARIO 4",
+    "passage_html": "ABC Ltd., a UK firm, has a receivable $ 20 Million due in 6 months. The company wants to cover full exposure. Following information are available: Spot rate 1$ = £ 0.7720 / £ 0.7840 6 months forward rate 1$ = £ 0.7910 / £ 0.8040 Interest rates are as follows:\n\n<table class=\"pdf-table\">\n  <thead>\n    <tr>\n      <th>US</th>\n      <th>UK</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n      <td>6 months deposit rate<br>4.50% p.a.</td>\n      <td>5.50% p.a.</td>\n    </tr>\n    <tr>\n      <td>6 months borrowing rate<br>6.00% p.a.</td>\n      <td>7.50% p.a.</td>\n    </tr>\n  </tbody>\n</table>\n\nFollowing options on pound are available:\n\n<table class=\"pdf-table\">\n  <thead>\n    <tr>\n      <th>Option</th>\n      <th>Strike rate</th>\n      <th>Price</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n      <td>Call</td>\n      <td>£ 0.8100</td>\n      <td>£ 0.01</td>\n    </tr>\n    <tr>\n      <td>Put</td>\n      <td>£ 0.8100</td>\n      <td>£ 0.02</td>\n    </tr>\n  </tbody>\n</table>\n\nABC Limited has forecasted the spot rates for 6 months as follows:\n\n<table class=\"pdf-table\">\n  <thead>\n    <tr>\n      <th>Future Rates of 1$</th>\n      <th>Probability</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n      <td>£ 0.7800</td>\n      <td>30%.</td>\n    </tr>\n    <tr>\n      <td>£ 0.8100</td>\n      <td>50%</td>\n    </tr>\n    <tr>\n      <td>£ 0.8300</td>\n      <td>20%</td>\n    </tr>\n  </tbody>\n</table>\n\nFrom the information given above, choose the correct answer to the following questions:",
+    "questions": [
+      {
+        "question_number": 1,
+        "question_text": "What will be the total expected value of option hedge in pounds, if the full exposure of 20 Million is covered?",
+        "options": {
+          "a": "£ 16.125 million",
+          "b": "£ 16.50 million",
+          "c": "£ 15.88 million",
+          "d": "£ 15.70 million"
+        },
+        "correct_option": "c",
+        "explanation_html": "[(£ 0.81 x 0.30 + £ 0.81 x 0.50 + £ 0.83 x 0.20) x 20000000] - £ 400000"
+      },
+      {
+        "question_number": 2,
+        "question_text": "If ABC Ltd. is using forward hedge strategy, what will be total proceed in pound?",
+        "options": {
+          "a": "£ 15.40 million",
+          "b": "£ 15.88 million",
+          "c": "£ 16.125 million",
+          "d": "£ 15.82 million"
+        },
+        "correct_option": "d",
+        "explanation_html": "£ 0.791 x $ 20000000"
+      },
+      {
+        "question_number": 3,
+        "question_text": "What will be expected spot rate at the end of 6 months and expected cost (proceed) if no hedge strategy is adopted by the company?",
+        "options": {
+          "a": "£ 0.805/$, £ 16.10 million",
+          "b": "£ 0.85/$, £ 15.8 million",
+          "c": "£ 0.7720/$, £ 15.44 million",
+          "d": "£ 0.7910/$, £ 15.82 million"
+        },
+        "correct_option": "a",
+        "explanation_html": "(£ 0.78 x 0.30 + £ 0.81 x 0.50 + £ 0.83 x 0.20) = £ 0.805; £ 16.10 million"
+      },
+      {
+        "question_number": 4,
+        "question_text": "Identify which option gives the highest proceed.",
+        "options": {
+          "a": "Option hedge",
+          "b": "Forward hedge",
+          "c": "Money market hedge",
+          "d": "No hedge"
+        },
+        "correct_option": "d",
+        "explanation_html": "As no hedging strategy has highest receipt of £."
+      }
+    ]
+  },
+  {
+    "scenario_number": 5,
+    "title": "CASE SCENARIO 5",
+    "passage_html": "P Ltd. is considering a new project with the following details: Initial project cost ₹ 4,80,000 Annual projected sales ₹ 4,00,000 Annual projected variable cost ₹ 1,60,000 Annual projected fixed cost ₹ 60,000 Project life 4 years Cost of capital 10% p.a. Consider Cumm. PVF for 4 years @ 10% = 3.169 and @ 11% = 3.103 Note: (a) Ignore depreciation on initial project cost and taxation. (b) Calculation up to 2 decimal places. From the information given above, choose the correct answer to the following questions.",
+    "questions": [
+      {
+        "question_number": 1,
+        "question_text": "If initial project cost is varied adversely by 10%, what is the percentage change in NPV?",
+        "options": {
+          "a": "42.42%",
+          "b": "52.80%",
+          "c": "53.09%",
+          "d": "63.09%"
+        },
+        "correct_option": "c",
+        "explanation_html": "[(90420 – 42420)/90420] x 100 = 53.09%"
+      },
+      {
+        "question_number": 2,
+        "question_text": "If annual cash inflow is varied adversely by 10%, what is the percentage change in NPV?",
+        "options": {
+          "a": "33.38%",
+          "b": "53.09%",
+          "c": "63.09%",
+          "d": "52.80%"
+        },
+        "correct_option": "c",
+        "explanation_html": "[(90420 – 33378)/90420] x 100 = 63.09%"
+      },
+      {
+        "question_number": 3,
+        "question_text": "If cost of capital is varied adversely by 10%, what is the percentage change in NPV?",
+        "options": {
+          "a": "11.00%",
+          "b": "12.10%",
+          "c": "13.14%",
+          "d": "14.45%"
+        },
+        "correct_option": "c",
+        "explanation_html": "[(90420 – 78540)]/90420 x 100 = 13.14%"
+      }
+    ]
+  },
+  {
+    "scenario_number": 6,
+    "title": "CASE SCENARIO 6",
+    "passage_html": "Fair Return Mutual Fund made an issue of 5,00,000 units @ ₹ 10 each on 1st April 2024. No entry load was charged. The fund made the following investments:\n\n<table class=\"pdf-table\">\n  <thead>\n    <tr>\n      <th>Particulars</th>\n      <th>(₹)</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n      <td>25,000 Equity Shares of ₹ 100 each @ ₹ 160</td>\n      <td>40,00,000</td>\n    </tr>\n    <tr>\n      <td>7% Government Securities (At Par)</td>\n      <td>4,00,000</td>\n    </tr>\n    <tr>\n      <td>9% Debentures (Unlisted) (At Par)</td>\n      <td>2,50,000</td>\n    </tr>\n    <tr>\n      <td>10% Debentures (Listed) (At Par)</td>\n      <td>2,50,000<br>49,00,000</td>\n    </tr>\n  </tbody>\n</table>\n\nDuring the year dividend of ₹ 6,00,000 were received on equity shares. Interest on all types of debt securities was received as and when due. Operating expenses paid during the year amounted to ₹ 2,50,000. At the end of the year equity shares and 10% debentures are quoted at 175% and 90% respectively of the face value. Other investments are valued at par. From the information given above, choose the correct answer to the following questions:",
+    "questions": [
+      {
+        "question_number": 1,
+        "question_text": "What is net cash balance of the Mutual Fund at the end of the year?",
+        "options": {
+          "a": "₹ 1,00,000",
+          "b": "₹ 7,00,000",
+          "c": "₹ 7,75,500",
+          "d": "₹ 5,25,500"
+        },
+        "correct_option": "d",
+        "explanation_html": "₹ 1,00,000 + ₹ 6,00,000 + ₹ 28,000 + ₹ 22,500 + ₹ 25,000 - ₹ 2,50,000"
+      },
+      {
+        "question_number": 2,
+        "question_text": "What is Total Net Assets Value (NAV) of the Mutual Fund at the end of the year?",
+        "options": {
+          "a": "₹ 52,50,000",
+          "b": "₹ 50,25,000",
+          "c": "₹ 57,75,500",
+          "d": "₹ 49,00,500"
+        },
+        "correct_option": "c",
+        "explanation_html": "175% x ₹ 25,00,000 + ₹ 4,00,000 + ₹ 2,50,000 + 90% x ₹ 2,50,000 + ₹ 5,25,500"
+      },
+      {
+        "question_number": 3,
+        "question_text": "If the Mutual Fund distributes a dividend of ₹ 0.60 per unit during the year to the unit holders, the NAV per unit at the end of the year will be",
+        "options": {
+          "a": "₹ 11.551",
+          "b": "₹ 10.951",
+          "c": "₹ 10.051",
+          "d": "₹ 12.751"
+        },
+        "correct_option": "b",
+        "explanation_html": "(₹ 57,75,500 – 5,00,000 x ₹ 0.60)/ 5,00,000"
+      }
+    ]
+  },
+  {
+    "scenario_number": 7,
+    "title": "CASE SCENARIO 7",
+    "passage_html": "HHM & Co., is a famous consultant. It has established the following strategy on the stock of PLS Ltd: (a) Purchased one 3-month call option with a premium of ₹ 25 and an exercise price of ₹ 750. (b) Purchased one 3-month put option with a premium of ₹ 8 and an exercise price of ₹ 600. The stock of PLS Ltd is currently selling at ₹ 680. The option size is 100 shares of PLS Ltd. From the information given above, choose the correct answer to the following questions:",
+    "questions": [
+      {
+        "question_number": 1,
+        "question_text": "What is the Net gain or loss, if the price of the stock remains at ₹ 680 after 3 months?",
+        "options": {
+          "a": "Net loss of ₹ 3,300",
+          "b": "Net gain of ₹ 3,300",
+          "c": "Net gain of ₹ 6,700",
+          "d": "Net loss of ₹ 6,700"
+        },
+        "correct_option": "a",
+        "explanation_html": "₹ 25 x 100 + ₹ 8 x 100"
+      },
+      {
+        "question_number": 2,
+        "question_text": "What is the Net gain or loss, if the price of the stock falls to ₹ 500 after 3 months?",
+        "options": {
+          "a": "Net loss of ₹ 3,300",
+          "b": "Net gain of ₹ 3,300",
+          "c": "Net gain of ₹ 6,700",
+          "d": "Net loss of ₹ 6,700"
+        },
+        "correct_option": "c",
+        "explanation_html": "100 (₹ 600 - ₹ 500) - ₹ 3,300"
+      },
+      {
+        "question_number": 3,
+        "question_text": "What is the Net gain or loss, if the price of the stock rises to ₹ 820?",
+        "options": {
+          "a": "Net loss of ₹ 3,700",
+          "b": "Net gain of ₹ 3,700",
+          "c": "Net gain of ₹ 10,300",
+          "d": "Net loss of ₹ 10,300"
+        },
+        "correct_option": "b",
+        "explanation_html": "100 (₹ 820 - ₹ 750) - ₹ 3,300"
+      }
+    ]
+  },
+  {
+    "scenario_number": 8,
+    "title": "CASE SCENARIO 8",
+    "passage_html": "On 3rd April, 2025, Royal Bank quotes the following:\n\n<table class=\"pdf-table\">\n  <thead>\n    <tr>\n      <th>Bid</th>\n      <th>Ask</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n      <td>Spot Exchange Rate (US$ 1)<br>₹ 84.2525</td>\n      <td>₹ 85.5945</td>\n    </tr>\n    <tr>\n      <td>2 months’ swap points<br>60</td>\n      <td>80</td>\n    </tr>\n    <tr>\n      <td>3 months’ swap points<br>150</td>\n      <td>178</td>\n    </tr>\n  </tbody>\n</table>\n\nIn a spot transaction, delivery is made after two days. Assume spot date as 5th April, 2025 and 1 swap point = 0.0001. Calculation up to 4 decimal places. From the information given above, choose the correct answer to the following questions:",
+    "questions": [
+      {
+        "question_number": 1,
+        "question_text": "The swap points for 2 months & 15 days (i.e., for 20th June, 2025) will be",
+        "options": {
+          "a": "Bid – 90 and Ask – 98",
+          "b": "Bid – 105 and Ask – 129",
+          "c": "Bid – 98 and Ask – 90",
+          "d": "Bid – 129 and Ask – 105"
+        },
+        "correct_option": "b",
+        "explanation_html": "60 + (150 - 60)15/30; 80 + (178 - 80) 15/30"
+      },
+      {
+        "question_number": 2,
+        "question_text": "Foreign exchange rate for 20th June, 2025 will be",
+        "options": {
+          "a": "Bid – ₹ 85.2525 and Ask – ₹ 84.5945",
+          "b": "Bid – ₹ 84.5945 and Ask – ₹ 85.2525",
+          "c": "Bid – ₹ 84.2630 and Ask – ₹ 85.6074",
+          "d": "Bid – ₹ 85.6074 and Ask – ₹ 84.2630"
+        },
+        "correct_option": "c",
+        "explanation_html": "₹ 84.2525 + ₹ 0.0105; ₹ 85.5945 + ₹ 0.0129"
+      },
+      {
+        "question_number": 3,
+        "question_text": "On an average rate, the annual rate of premium/discount of US $ on Indian ₹ will be",
+        "options": {
+          "a": "Bid – 0.0498% and Ask – 0.0524% (Premium)",
+          "b": "Bid – 0.0598% and Ask – 0.0723% (Discount)",
+          "c": "Bid – 0.0723% and Ask – 0.0598 % (Premium)",
+          "d": "Bid – 0.0598% and Ask – 0.0723% (Premium)"
+        },
+        "correct_option": "d",
+        "explanation_html": "0.0105 12 0.0129 12 × ; × 84.25775 2.5 85.60095 2.5 84.25775 2.5 85.60095 2.5"
+      }
+    ]
+  },
+  {
+    "scenario_number": 9,
+    "title": "CASE SCENARIO 9",
+    "passage_html": "ABC Ltd. is planning to acquire XYZ Ltd. The following information is available in this respect:\n\n<table class=\"pdf-table\">\n  <thead>\n    <tr>\n      <th>Company</th>\n      <th>No. of Shares</th>\n      <th>Market Price Per Share (₹)</th>\n      <th>P/E Ratio</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n      <td>ABC Ltd.</td>\n      <td>12,00,000</td>\n      <td>16</td>\n      <td>20 times</td>\n    </tr>\n    <tr>\n      <td>XYZ Ltd.</td>\n      <td>4,00,000</td>\n      <td>20</td>\n      <td>10 times</td>\n    </tr>\n  </tbody>\n</table>\n\nABC Ltd. plans to acquire the whole of XYZ Ltd. by issuing shares at its market price of ₹ 16. It is expected that the price of ABC Ltd. share will remain constant after this acquisition. Purchase Consideration is ₹ 80,00,000. Calculation up to 2 decimal places. From the information given above, choose the correct answer to the following questions:",
+    "questions": [
+      {
+        "question_number": 1,
+        "question_text": "EPS of ABC Ltd. & XYZ Ltd. before acquisition are respectively",
+        "options": {
+          "a": "₹ 0.8 & ₹ 2.0",
+          "b": "₹ 2.0 & ₹ 0.8",
+          "c": "₹ 0.8 & ₹ 1.04",
+          "d": "₹ 1.04 & ₹ 0.8"
+        },
+        "correct_option": "a",
+        "explanation_html": "16/20; 20/10"
+      },
+      {
+        "question_number": 2,
+        "question_text": "EPS of ABC Ltd. after acquisition is",
+        "options": {
+          "a": "₹ 0.84",
+          "b": "₹ 0.96",
+          "c": "₹ 1.04",
+          "d": "₹ 1.14"
+        },
+        "correct_option": "c",
+        "explanation_html": "[(0.8 x 1200000) + (2.0 x 400000)]/[1200000 + (400000 x 20/16)]"
+      },
+      {
+        "question_number": 3,
+        "question_text": "P/E Ratio of ABC Ltd. after acquisition is",
+        "options": {
+          "a": "20 times",
+          "b": "15.38 times",
+          "c": "10 times",
+          "d": "14.55 times"
+        },
+        "correct_option": "b",
+        "explanation_html": "₹ 16/ ₹ 1.04"
+      }
+    ]
+  },
+  {
+    "scenario_number": 10,
+    "title": "CASE SCENARIO 10",
+    "passage_html": "A and B are two friends. Since B has earned a lot of profit from trading in financial derivative market, A is also considering speculating on G Ltd.’s shares which is currently trading at ₹ 1,400 per share through taking positions in options in stocks of same company. Accordingly, A took following contract positions in the options on G Ltd.’s stock:\n\n(i) Selling one contract of 2-month call option with a premium of ₹ 70 and an exercise price of ₹ 1,500.\n\n(ii) Purchasing one contract of 2-month put option with a premium of ₹ 50 and an exercise price of ₹ 1,200. From the information given above, choose the correct answer to the following questions:",
+    "questions": [
+      {
+        "question_number": 1,
+        "question_text": "Assuming that the contract size of each option contract is 200 and the price of G Ltd.’s share after two months falls to ₹ 1,100, the net pay-off of A will be………",
+        "options": {
+          "a": "₹ 24,000 loss",
+          "b": "₹ 24,000 profit",
+          "c": "₹ 40,000 profit",
+          "d": "₹ 40,000 loss"
+        },
+        "correct_option": "b",
+        "explanation_html": "(₹ 1,200 - ₹ 1,100) x 200 + ₹ 70 x 200 - ₹ 50 x200 = ₹ 24,000"
+      },
+      {
+        "question_number": 2,
+        "question_text": "The per share price of G Ltd.’s stock after 2 months at which A shall be at Break Even is…..",
+        "options": {
+          "a": "₹ 1,180",
+          "b": "₹ 1,200",
+          "c": "₹ 1,250",
+          "d": "₹ 1,570"
+        },
+        "correct_option": "a",
+        "explanation_html": "₹ 1,200 – (₹ 70 - ₹ 50) = ₹ 1,180"
+      },
+      {
+        "question_number": 3,
+        "question_text": "Assuming that the contract size of each option contract is 300 and the price of G Ltd.’s share after two months raises to ₹ 1,600, the net pay-off of A will be………",
+        "options": {
+          "a": "₹ 24,000 loss",
+          "b": "₹ 66,000 loss",
+          "c": "₹ 24,000 profit",
+          "d": "₹ 66,000 profit"
+        },
+        "correct_option": "a",
+        "explanation_html": "(₹ 1,500 - ₹ 1,600) x 300 + ₹ 70 x 300 - ₹ 50 x 300 = - ₹ 24,000"
+      }
+    ]
+  },
+  {
+    "scenario_number": 11,
+    "title": "CASE SCENARIO 11",
+    "passage_html": "A Ltd. wants to acquire D Ltd. and has offered a swap ratio of 1:2 (0.5 shares for every one share of D Ltd.). Following information is provided:\n\n<table class=\"pdf-table\">\n  <thead>\n    <tr>\n      <th>A Ltd.</th>\n      <th>D Ltd.</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n      <td>Profit after tax<br>₹ 72,00,000</td>\n      <td>₹ 14,40,000</td>\n    </tr>\n    <tr>\n      <td>Equity shares outstanding (Nos.)<br>24,00,000</td>\n      <td>7,20,000</td>\n    </tr>\n    <tr>\n      <td>PE Ratio<br>5 times</td>\n      <td>3.5 times</td>\n    </tr>\n    <tr>\n      <td>Market price per share<br>₹ 15</td>\n      <td>₹ 7</td>\n    </tr>\n  </tbody>\n</table>\n\nFrom the information given above, choose the correct answer to the following questions:",
+    "questions": [
+      {
+        "question_number": 1,
+        "question_text": "The number of equity shares to be issued by A Ltd. for acquisition of D Ltd. would be………………",
+        "options": {
+          "a": "3,36,000",
+          "b": "3,60,000",
+          "c": "4,80,000",
+          "d": "6,00,000"
+        },
+        "correct_option": "b",
+        "explanation_html": "720000 x 0.50 = 360000"
+      },
+      {
+        "question_number": 2,
+        "question_text": "The EPS of A Ltd. after the acquisition would be………………",
+        "options": {
+          "a": "₹ 2",
+          "b": "₹ 3",
+          "c": "₹ 3.13",
+          "d": "₹ 4.00"
+        },
+        "correct_option": "c",
+        "explanation_html": "(₹ 72,00,000 + ₹ 14,40,000)/(2400000 + 360000) = ₹ 3.13"
+      },
+      {
+        "question_number": 3,
+        "question_text": "The equivalent earnings per share of D Ltd. would be………..",
+        "options": {
+          "a": "₹ 1",
+          "b": "₹ 1.50",
+          "c": "₹ 1.57",
+          "d": "₹ 2.00"
+        },
+        "correct_option": "c",
+        "explanation_html": "₹ 3.13 x 0.50 = ₹ 1.57"
+      },
+      {
+        "question_number": 4,
+        "question_text": "If A Ltd. PE multiple remains unchanged then market capitalisation of A Ltd. after the acquisition would be………………",
+        "options": {
+          "a": "₹ 50.40 Lakh",
+          "b": "₹ 360.00 Lakh",
+          "c": "₹ 431.94 Lakh",
+          "d": "₹ 400.00 Lakh"
+        },
+        "correct_option": "c",
+        "explanation_html": "(₹ 3.13 x 5 = ₹ 15.65) x 2760000"
+      }
+    ]
+  },
+  {
+    "scenario_number": 12,
+    "title": "CASE SCENARIO 12",
+    "passage_html": "During one business meeting at ABC Ltd., one of the members presented data relating to 3 companies X Ltd., Y Ltd. and Z Ltd. whose operating Income are equal, but their capital structure is different. (in ₹ 000)\n\n<table class=\"pdf-table\">\n  <thead>\n    <tr>\n      <th>X Ltd.</th>\n      <th>Y Ltd.</th>\n      <th>Z Ltd.</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n      <td>Total invested capital<br>40,00,000</td>\n      <td>40,00,000</td>\n      <td>40,00,000</td>\n    </tr>\n    <tr>\n      <td>Debt/Assets ratio<br>0.8</td>\n      <td>0.5</td>\n      <td>0.2</td>\n    </tr>\n    <tr>\n      <td>Shares outstanding<br>1,22,000</td>\n      <td>1,66,000</td>\n      <td>2,00,000</td>\n    </tr>\n    <tr>\n      <td>Post tax Cost of Debt<br>10.40%</td>\n      <td>8.45%</td>\n      <td>9.75%</td>\n    </tr>\n    <tr>\n      <td>Cost of Equity<br>26%</td>\n      <td>22%</td>\n      <td>20%</td>\n    </tr>\n    <tr>\n      <td>Operating Income (EBIT)<br>10,00,000</td>\n      <td>10,00,000</td>\n      <td>10,00,000</td>\n    </tr>\n  </tbody>\n</table>\n\nThe Tax rate is uniform 35% in all cases. The industry PE ratio is 10X. From the information given above, choose the correct answer to the following questions:",
+    "questions": [
+      {
+        "question_number": 1,
+        "question_text": "The weighted average cost of capital of Y Ltd. shall be approximately …………….",
+        "options": {
+          "a": "13.52%",
+          "b": "15.23%",
+          "c": "17.95%",
+          "d": "18.00%"
+        },
+        "correct_option": "b",
+        "explanation_html": "8.45% x 0.50 + 22% x 0.50 = 15.23%"
+      },
+      {
+        "question_number": 2,
+        "question_text": "The Economic Valued Added (EVA) of X Ltd. is…………….",
+        "options": {
+          "a": "₹ 109200 Thousand",
+          "b": "₹ 171600 Thousand",
+          "c": "₹ 282000 Thousand",
+          "d": "₹ 391000 Thousand"
+        },
+        "correct_option": "a",
+        "explanation_html": "1000000(1 – 0.35) – [{10.40% x 0.80 + 26% x 0.20} 4000000]"
+      },
+      {
+        "question_number": 3,
+        "question_text": "The price per share of Z Ltd. shall be ……………..",
+        "options": {
+          "a": "₹ 28.60",
+          "b": "₹ 31.90",
+          "c": "₹ 31.46",
+          "d": "₹ 29.45"
+        },
+        "correct_option": "a",
+        "explanation_html": "[{1000000(1 – 0.35) – 0.20 x 4000000 x 9.75%} x 10]/200000"
+      },
+      {
+        "question_number": 4,
+        "question_text": "The estimated market capitalisation of Y Ltd. is…………….",
+        "options": {
+          "a": "₹ 80,29,900 Thousand",
+          "b": "₹ 48,10,000 Thousand",
+          "c": "₹ 52,91,000 Thousand",
+          "d": "₹ 59,41,650 Thousand"
+        },
+        "correct_option": "b",
+        "explanation_html": "[{1000000 x (1 – 0.35) – 0.50 x 4000000 x 8.45%} x 10]"
+      },
+      {
+        "question_number": 5,
+        "question_text": "Earning per share of X Ltd. approximately is……………..",
+        "options": {
+          "a": "₹ 2.60",
+          "b": "₹ 2.90",
+          "c": "₹ 2.86",
+          "d": "₹ 2.15"
+        },
+        "correct_option": "a",
+        "explanation_html": "[{1000000 x (1 – 0.35) – 0.80 x 4000000 x 10.40%} ]/ 122000"
+      }
+    ]
+  },
+  {
+    "scenario_number": 13,
+    "title": "CASE SCENARIO 13",
+    "passage_html": "XYZ Ltd. is planning to expand its business and therefore raising fund by issuing a Convertible Bond of ₹ 10 crore. An investor “Mr. A” is interested to invest in the bond of XYZ Ltd. Mr. A has following data related to the Convertible Bond. The data given below relates to a convertible bond:\n\n<table class=\"pdf-table\">\n  <thead>\n    <tr>\n      <th>Face value</th>\n      <th>₹ 1000</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n      <td>Coupon rate</td>\n      <td>12%</td>\n    </tr>\n    <tr>\n      <td>No. of shares per bond</td>\n      <td>20</td>\n    </tr>\n    <tr>\n      <td>Market price of share</td>\n      <td>₹ 48</td>\n    </tr>\n    <tr>\n      <td>Straight value of bond</td>\n      <td>₹ 940</td>\n    </tr>\n    <tr>\n      <td>Market price of convertible bond</td>\n      <td>₹ 1060</td>\n    </tr>\n    <tr>\n      <td>Maturity</td>\n      <td>5 Years</td>\n    </tr>\n  </tbody>\n</table>\n\nFrom the information given above, choose the correct answer to the following questions:",
+    "questions": [
+      {
+        "question_number": 1,
+        "question_text": "The conversion value of the convertible bond is……………..",
+        "options": {
+          "a": "₹ 960",
+          "b": "₹ 1000",
+          "c": "₹ 1060",
+          "d": "₹ 940"
+        },
+        "correct_option": "a",
+        "explanation_html": "Conversion value = Market price of share × No. of shares per bond = ₹ 48 × 20 = ₹ 960"
+      },
+      {
+        "question_number": 2,
+        "question_text": "The conversion premium of the bond in absolute terms is……………..",
+        "options": {
+          "a": "₹ 60",
+          "b": "₹ 100",
+          "c": "₹ 120",
+          "d": "₹ 80"
+        },
+        "correct_option": "b",
+        "explanation_html": "Conversion premium = Market price of convertible bond − Conversion value = ₹ 1060 − ₹ 960 = ₹ 100"
+      },
+      {
+        "question_number": 3,
+        "question_text": "The floor value of the convertible bond is represented by…………",
+        "options": {
+          "a": "Market price of share",
+          "b": "Conversion value",
+          "c": "Straight value of bond",
+          "d": "Face value of bond"
+        },
+        "correct_option": "c",
+        "explanation_html": "Straight value represents the downside protection or investment value for the investor."
+      },
+      {
+        "question_number": 4,
+        "question_text": "The upside potential of the convertible bond primarily depends on……………..",
+        "options": {
+          "a": "Coupon rate of the bond",
+          "b": "Face value of the bond",
+          "c": "Market price movement of the equity shares",
+          "d": "Remaining maturity of the bond"
+        },
+        "correct_option": "c",
+        "explanation_html": "The upside potential arises from the appreciation in the underlying equity share price."
+      },
+      {
+        "question_number": 5,
+        "question_text": "By approximately what percentage the market price of the share should rise so that the investor is indifferent between buying the share from the market and taking conversion route.",
+        "options": {
+          "a": "12.77%",
+          "b": "10.42%",
+          "c": "5.11%",
+          "d": "9.23%"
+        },
+        "correct_option": "b",
+        "explanation_html": "1060   -48  20  48"
+      }
+    ]
+  },
+  {
+    "scenario_number": 14,
+    "title": "CASE SCENARIO 14",
+    "passage_html": "A Ltd. paid a dividend of ₹ 5 for the last year. The dividend is expected to grow at 25% for the next 6 years and at 10% per annum thereafter. The standard deviation of market return and A Ltd.’s share is 12% and 18% respectively. The correlation between market return and A Ltd. share return is 0.3733. The return of government bond is 13% per annum and market return is expected to be around 20%. From the information given above, choose the correct answer to the following questions:",
+    "questions": [
+      {
+        "question_number": 1,
+        "question_text": "The beta (β) of A Ltd.’s share is closest to……………………",
+        "options": {
+          "a": "0.42",
+          "b": "0.56",
+          "c": "0.67",
+          "d": "0.84"
+        },
+        "correct_option": "b",
+        "explanation_html": "β = Correlation × (σ share / σ market) = 0.3733 × (18% / 12%) = 0.3733 × 1.5 ≈ 0.56"
+      },
+      {
+        "question_number": 2,
+        "question_text": "The equity risk premium as per the given data is…………………………",
+        "options": {
+          "a": "5%",
+          "b": "6%",
+          "c": "7%",
+          "d": "8%"
+        },
+        "correct_option": "c",
+        "explanation_html": "Equity risk premium = Market return − Risk-free rate = 20% − 13% = 7%"
+      },
+      {
+        "question_number": 3,
+        "question_text": "The valuation approach can be used to compute the intrinsic value of A Ltd. shares is……",
+        "options": {
+          "a": "Single-stage Dividend Discount Model",
+          "b": "CAPM valuation model",
+          "c": "Two-stage Dividend Discount Model",
+          "d": "Price–Earnings valuation model"
+        },
+        "correct_option": "c",
+        "explanation_html": "Different growth rates are applicable for two different phases."
+      },
+      {
+        "question_number": 4,
+        "question_text": "If the market price of A Ltd. share is higher than its intrinsic value, the share is said to be………………..",
+        "options": {
+          "a": "Under-valued",
+          "b": "Over-valued",
+          "c": "Fairly valued",
+          "d": "Speculative"
+        },
+        "correct_option": "b",
+        "explanation_html": "Very often the price of over-valued share is driven by hype, speculation, or temporary optimism rather than solid fundamentals."
+      }
+    ]
+  },
+  {
+    "scenario_number": 15,
+    "title": "CASE SCENARIO 15",
+    "passage_html": "The following information is available in respect of Bond X and Bond Y.\n\n<table class=\"pdf-table\">\n  <thead>\n    <tr>\n      <th>Bond X</th>\n      <th>Bond Y</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n      <td>Face value, redeemable at par<br>₹ 1000</td>\n      <td>₹ 1000</td>\n    </tr>\n    <tr>\n      <td>Coupon rate, payable annually (%)<br>6%</td>\n      <td>10%</td>\n    </tr>\n    <tr>\n      <td>Time to maturity (years)<br>5</td>\n      <td>3</td>\n    </tr>\n  </tbody>\n</table>\n\nMr. A, an investor has the portfolio consisting of 75% of Bond X and 25% of Bond Y. The current YTMs prevailing in the market is 10%.\n\n<table class=\"pdf-table\">\n  <thead>\n    <tr>\n      <th>Year (n) :</th>\n      <th>1</th>\n      <th>2</th>\n      <th>3</th>\n      <th>4</th>\n      <th>5</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n      <td>PVIF (10%, n) :</td>\n      <td>0.9091</td>\n      <td>0.8264</td>\n      <td>0.7513</td>\n      <td>0.6830</td>\n      <td>0.6209</td>\n    </tr>\n  </tbody>\n</table>\n\nFrom the information given above, choose the correct answer to the following questions:",
+    "questions": [
+      {
+        "question_number": 1,
+        "question_text": "At the prevailing YTM the Bond X will trade at………………..",
+        "options": {
+          "a": "Premium",
+          "b": "Discount",
+          "c": "Par",
+          "d": "Variable prices"
+        },
+        "correct_option": "b",
+        "explanation_html": "Since Coupon rate (6%)"
+      },
+      {
+        "question_number": 2,
+        "question_text": "The Macaulay duration of a bond is best described as……………",
+        "options": {
+          "a": "time to maturity of the bond.",
+          "b": "weighted average time to receive cash flows.",
+          "c": "time until bond is redeemed.",
+          "d": "average coupon period."
+        },
+        "correct_option": "b",
+        "explanation_html": "It can be understood as the average time taken to receive the cash flows on a given bond."
+      },
+      {
+        "question_number": 3,
+        "question_text": "………………… carries higher interest rate risk.",
+        "options": {
+          "a": "Bond X",
+          "b": "Bond Y",
+          "c": "Both Bonds",
+          "d": "Cannot be determined"
+        },
+        "correct_option": "a",
+        "explanation_html": "Bond X has a longer maturity and higher duration, hence higher interest rate risk."
+      },
+      {
+        "question_number": 4,
+        "question_text": "If the investor wants to reduce interest rate risk of the portfolio, he should……….",
+        "options": {
+          "a": "increase weight of Bond X.",
+          "b": "increase weight of Bond Y.",
+          "c": "increase maturity of bonds.",
+          "d": "increase coupon rate of Bond X."
+        },
+        "correct_option": "b",
+        "explanation_html": "Bond Y has shorter duration hence lower interest rate risk."
+      }
+    ]
+  },
+  {
+    "scenario_number": 16,
+    "title": "CASE SCENARIO 16",
+    "passage_html": "Following information is related to actions taken in different situation of financial options:\n\n<table class=\"pdf-table\">\n  <thead>\n    <tr>\n      <th>Situation</th>\n      <th>Action</th>\n      <th>Exercise Price</th>\n      <th>Premium</th>\n      <th>Spot Price</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n      <td>I</td>\n      <td>Exercised</td>\n      <td>2800</td>\n      <td>400</td>\n      <td>3200</td>\n    </tr>\n    <tr>\n      <td>II</td>\n      <td>Exercised</td>\n      <td>4000</td>\n      <td>300</td>\n      <td>3500</td>\n    </tr>\n    <tr>\n      <td>III</td>\n      <td>Lapsed</td>\n      <td>6000</td>\n      <td>1000</td>\n      <td>8000</td>\n    </tr>\n  </tbody>\n</table>\n\nFrom the information given above, choose the correct answer to the following questions:",
+    "questions": [
+      {
+        "question_number": 1,
+        "question_text": "The investor incurs a loss equal to the premium paid in……………..",
+        "options": {
+          "a": "Situation I",
+          "b": "Situation II",
+          "c": "Situation III",
+          "d": "Situations I and II"
+        },
+        "correct_option": "c",
+        "explanation_html": "When an option lapses, the maximum loss equals the premium paid."
+      },
+      {
+        "question_number": 2,
+        "question_text": "In which situation, the option is classified as in-the-money.",
+        "options": {
+          "a": "Situation I",
+          "b": "Situation II",
+          "c": "Situation III",
+          "d": "Situations I and II"
+        },
+        "correct_option": "d",
+        "explanation_html": "Spot price (160) > Exercise price (140), hence a call option is in-the-money. Spot price (175)"
+      },
+      {
+        "question_number": 3,
+        "question_text": "In Situation II, the intrinsic value of the option is…………………………..",
+        "options": {
+          "a": "₹ 0",
+          "b": "₹ 200",
+          "c": "₹ 300",
+          "d": "₹ 500"
+        },
+        "correct_option": "d",
+        "explanation_html": "Intrinsic value of put option = Exercise price − Spot price = ₹ 4000 − ₹ 3500 = ₹ 500"
+      },
+      {
+        "question_number": 4,
+        "question_text": "…………………….represents a breakeven outcome for the investor.",
+        "options": {
+          "a": "Situation I",
+          "b": "Situation II",
+          "c": "Situation III",
+          "d": "Situations I and II"
+        },
+        "correct_option": "a",
+        "explanation_html": "In Situation I, intrinsic value equals premium, resulting in zero profit/loss."
+      },
+      {
+        "question_number": 5,
+        "question_text": "The relationship between spot price and exercise price in Situation II indicates…………",
+        "options": {
+          "a": "Call option in-the-money",
+          "b": "Call option out-of-the-money",
+          "c": "Put option in-the-money",
+          "d": "Put option out-of-the-money"
+        },
+        "correct_option": "c",
+        "explanation_html": "Spot price is less than Exercise Price and hence Option is exercised."
+      }
+    ]
+  },
+  {
+    "scenario_number": 17,
+    "title": "CASE SCENARIO 17",
+    "passage_html": "The company ABC Ltd. proposes to take over XYZ Ltd. The chief executive of the company thinks that shareholders always look for the earnings per share. Therefore, he considers maximization of the earnings per share as his company’s objective. The following information is available in respect of ABC Ltd. and XYZ Ltd.\n\n<table class=\"pdf-table\">\n  <thead>\n    <tr>\n      <th>ABC Ltd.</th>\n      <th>XYZ Ltd.</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n      <td>Net Profit (Post Tax)<br>₹ 400 Lakh</td>\n      <td>₹ 315 Lakh</td>\n    </tr>\n    <tr>\n      <td>P/E ratio<br>10.50</td>\n      <td>10.00</td>\n    </tr>\n    <tr>\n      <td>Current market price per share<br>₹ 840</td>\n      <td>₹ 1700</td>\n    </tr>\n  </tbody>\n</table>\n\nThe company is planning to borrow funds @ 15% rate of interest and buys out the target company by paying cash. Assume tax rate @30%. From the information given above, choose the correct answer to the following questions:",
+    "questions": [
+      {
+        "question_number": 1,
+        "question_text": "The total market value of equity of XYZ Ltd. is approximately……………..",
+        "options": {
+          "a": "₹ 3150 lakh",
+          "b": "₹ 3400 lakh",
+          "c": "₹ 4200 lakh",
+          "d": "₹ 16800 lakh"
+        },
+        "correct_option": "a",
+        "explanation_html": "₹ 315 Lakh x 10.00 = ₹ 3150 Lakh"
+      },
+      {
+        "question_number": 2,
+        "question_text": "Suppose if XYZ Ltd. is borrowing funds at a high interest rate to finance acquisition it will affect its EPS mainly due to…………………",
+        "options": {
+          "a": "increase in operating profit.",
+          "b": "increase in interest burden.",
+          "c": "increase in market price of shares.",
+          "d": "increase in tax liability."
+        },
+        "correct_option": "b",
+        "explanation_html": "This will increase the outflow of cash on account of higher interest as well as will increase in financial risk."
+      },
+      {
+        "question_number": 3,
+        "question_text": "Suppose if ABC Ltd. is offering about ₹ 4030 Lakh to XYZ Ltd. for the proposed acquisition it will result in……………….",
+        "options": {
+          "a": "EPS accretion",
+          "b": "EPS dilution",
+          "c": "No Change",
+          "d": "Risk free EPS"
+        },
+        "correct_option": "b",
+        "explanation_html": "Post acquisition the EPS will be reduced to ₹ 58.37."
+      }
+    ]
+  },
+  {
+    "scenario_number": 18,
+    "title": "CASE SCENARIO 18",
+    "passage_html": "A Ltd. is planning to borrow an amount of ₹ 300 crores for a period of 3 months in the coming 6 months’ time from now. The current rate of interest is 9% p.a., but it is likely to go up in 6 months’ time. The company wants to hedge itself against the likely increase in interest rate. You as CFO has been asked to suggest both traditional as well as modern methods to hedge interest rate risk. Suppose the banker of A Ltd. has quoted the following Forward Rate Agreement (FRA) rates:\n\n<table class=\"pdf-table\">\n  <thead>\n    <tr>\n      <th>3 x 6</th>\n      <th>8.10%</th>\n      <th>8.15%</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n      <td>6 x 9</td>\n      <td>8.20%</td>\n      <td>8.30%</td>\n    </tr>\n    <tr>\n      <td>9 x 12</td>\n      <td>8.35%</td>\n      <td>8.45%</td>\n    </tr>\n  </tbody>\n</table>\n\nA Ltd. has already issued redeemable bonds or debentures. From the information given above, choose the correct answer to the following questions:",
+    "questions": [
+      {
+        "question_number": 1,
+        "question_text": "In an FRA contract, the company intending to borrow funds in future should……….",
+        "options": {
+          "a": "buy FRA at bid rate.",
+          "b": "sell FRA at bid rate.",
+          "c": "buy FRA at offer rate.",
+          "d": "sell FRA at offer rate."
+        },
+        "correct_option": "c",
+        "explanation_html": "A future borrower buys FRA at the offer rate to lock in borrowing cost."
+      },
+      {
+        "question_number": 2,
+        "question_text": "If interest rates rise above the FRA rate, the A Ltd. under FRA will……………",
+        "options": {
+          "a": "incur loss and pay banker.",
+          "b": "neither gain nor lose.",
+          "c": "receive compensation from banker.",
+          "d": "cancel the contract."
+        },
+        "correct_option": "c",
+        "explanation_html": "FRA compensates the borrower when market rates exceed the agreed rate."
+      },
+      {
+        "question_number": 3,
+        "question_text": "The settlement under an FRA is made……………",
+        "options": {
+          "a": "at the end of the loan period.",
+          "b": "at the beginning of the loan period.",
+          "c": "at the maturity of FRA.",
+          "d": "along with repayment of principal."
+        },
+        "correct_option": "b",
+        "explanation_html": "FRA is settled at the start of the underlying loan period."
+      },
+      {
+        "question_number": 4,
+        "question_text": "The FRA settlement amount is discounted because………………",
+        "options": {
+          "a": "interest rates are uncertain",
+          "b": "FRA is settled in advance",
+          "c": "principals are not exchanged",
+          "d": "only interest differential is paid"
+        },
+        "correct_option": "b",
+        "explanation_html": "Settlement relates to a future interest period but is paid upfront."
+      },
+      {
+        "question_number": 5,
+        "question_text": "Interest Rate Futures differ from FRAs mainly because Futures are…………",
+        "options": {
+          "a": "OTC instruments",
+          "b": "tailor-made contracts",
+          "c": "standardised and exchange traded",
+          "d": "settled only at maturity"
+        },
+        "correct_option": "c",
+        "explanation_html": "Except (c) other points features are related to FRA."
+      }
+    ]
+  },
+  {
+    "scenario_number": 19,
+    "title": "CASE SCENARIO 19",
+    "passage_html": "ABC Inc., a U.S. firm, will require £ 600,000 in 6 months and is evaluating different strategies to hedge against currency risk. The available market data is as follows: Current Spot Rate: 1 £ = $ 2.50 6-months Forward Rate: 1 £ = $ 2.45 Interest Rates: • UK (per annuam): o Deposit Rate: 9.00% o Borrowing Rate: 10.00% • US (per annuam): o Deposit Rate: 10% o Borrowing Rate: 11.00% Option Contract: • Call option available on £, expiring in 6 months with: o Exercise price: $ 2.46 o Premium: $ 0.05 ABC Inc. has forecasted the following probabilities for spot rates after 6 months:\n\n<table class=\"pdf-table\">\n  <thead>\n    <tr>\n      <th>Spot Rate</th>\n      <th>Probability</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n      <td>$ 2.39</td>\n      <td>25%</td>\n    </tr>\n    <tr>\n      <td>$ 2.44</td>\n      <td>60%</td>\n    </tr>\n    <tr>\n      <td>$ 2.56</td>\n      <td>15%</td>\n    </tr>\n  </tbody>\n</table>\n\nFrom the information given above, choose the correct answer to the following questions:",
+    "questions": [
+      {
+        "question_number": 1,
+        "question_text": "Since ABC Inc. will require £ 600,000 in future, it is said to be…………………..",
+        "options": {
+          "a": "Long in £",
+          "b": "Short in £",
+          "c": "Long in $",
+          "d": "Neutral in currency"
+        },
+        "correct_option": "b",
+        "explanation_html": "Future payment in pounds means exposure to appreciation of £."
+      },
+      {
+        "question_number": 2,
+        "question_text": "Under a forward contract, the dollar cost of £ 600,000 is…………………",
+        "options": {
+          "a": "certain but flexible",
+          "b": "uncertain but capped",
+          "c": "certain and fixed",
+          "d": "nil"
+        },
+        "correct_option": "c",
+        "explanation_html": "Forward contract locks in the exchange rate."
+      },
+      {
+        "question_number": 3,
+        "question_text": "Which hedging technique allows ABC Inc. to benefit if the Pound depreciates while protecting against appreciation?",
+        "options": {
+          "a": "Forward contract",
+          "b": "Money market hedge",
+          "c": "Call option on £",
+          "d": "Futures contract"
+        },
+        "correct_option": "c",
+        "explanation_html": "Options provide downside protection with upside benefit."
+      },
+      {
+        "question_number": 4,
+        "question_text": "If the spot rate after 6 months happens to be $ 2.39/£, ABC Inc. under option hedge will………..",
+        "options": {
+          "a": "exercise the option.",
+          "b": "let the option lapse.",
+          "c": "cancel the contract.",
+          "d": "incur loss equal to intrinsic value."
+        },
+        "correct_option": "b",
+        "explanation_html": "Market rate is better than exercise price."
+      },
+      {
+        "question_number": 5,
+        "question_text": "Which of the following hedging methods involves borrowing and lending in two currencies simultaneously?",
+        "options": {
+          "a": "Forward hedge",
+          "b": "Option hedge",
+          "c": "Money market hedge",
+          "d": "Futures hedge"
+        },
+        "correct_option": "c",
+        "explanation_html": "In remaining methods only one transaction in two currencies is involved."
+      }
+    ]
+  },
+  {
+    "scenario_number": 20,
+    "title": "CASE SCENARIO 20",
+    "passage_html": "An investor is evaluating two companies, X Ltd. and Y Ltd., to determine which company is a better investment. Both companies have different expected returns, standard deviations, and betas. • X Ltd. has an expected return of 22% and a standard deviation (risk) of 40%. Its Beta is 0.86. • Y Ltd. has an expected return of 24%, a standard deviation of 38%, and a Beta of 1.24. The correlation coefficient between the returns of X Ltd. and Y Ltd.is 0.72, and the standard deviation of the market return is 20%. From the information given above, choose the correct answer to the following questions:",
+    "questions": [
+      {
+        "question_number": 1,
+        "question_text": "Which company is expected to be more volatile in absolute terms?",
+        "options": {
+          "a": "X Ltd.",
+          "b": "Y Ltd.",
+          "c": "Both have equal volatility",
+          "d": "Depends on correlation"
+        },
+        "correct_option": "a",
+        "explanation_html": "Volatility is measured by standard deviation; X Ltd. has higher SD (40%)."
+      },
+      {
+        "question_number": 2,
+        "question_text": "The correlation coefficient of 0.72 between X Ltd. and Y Ltd. implies that……………",
+        "options": {
+          "a": "the stocks move in opposite directions.",
+          "b": "the stocks are perfectly correlated.",
+          "c": "there is strong positive co-movement.",
+          "d": "there is no diversification benefit."
+        },
+        "correct_option": "c",
+        "explanation_html": "A correlation of 0.72 indicates strong positive relationship."
+      },
+      {
+        "question_number": 3,
+        "question_text": "If the correlation between X Ltd. and Y Ltd. were zero, the portfolio risk would…………..",
+        "options": {
+          "a": "increase",
+          "b": "decrease",
+          "c": "remain unchanged",
+          "d": "become zero"
+        },
+        "correct_option": "b",
+        "explanation_html": "Lower correlation improves diversification benefits."
+      },
+      {
+        "question_number": 4,
+        "question_text": "Which type of risk can be reduced by forming a portfolio of X Ltd. and Y Ltd.?",
+        "options": {
+          "a": "Political risk",
+          "b": "Market risk",
+          "c": "Unsystematic risk",
+          "d": "Interest rate risk"
+        },
+        "correct_option": "c",
+        "explanation_html": "Other types of risks are systematic risks which cannot be reduced or eliminated through diversification."
+      },
+      {
+        "question_number": 5,
+        "question_text": "If market volatility increases but betas remain unchanged, the expected return as per CAPM will………………",
+        "options": {
+          "a": "Increase",
+          "b": "Decrease",
+          "c": "Remain unchanged",
+          "d": "Become zero"
+        },
+        "correct_option": "c",
+        "explanation_html": "CAPM depends on beta, not total volatility."
+      }
+    ]
+  },
+  {
+    "scenario_number": 21,
+    "title": "CASE SCENARIO 21",
+    "passage_html": "ABC Ltd. plans to invest ₹ 16,00,000 in a new unit. The project is expected to have a useful life of 4 years, with no salvage value at the end of its life. The annual depreciation charge for the project is ₹ 4,00,000. Projected revenues and costs for the project, ignoring inflation, are provided as follows:\n\n<table class=\"pdf-table\">\n  <thead>\n    <tr>\n      <th>Year</th>\n      <th>Revenues (₹)</th>\n      <th>Costs (₹)</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n      <td>1</td>\n      <td>12,00,000</td>\n      <td>6,00,000</td>\n    </tr>\n    <tr>\n      <td>2</td>\n      <td>14,00,000</td>\n      <td>8,00,000</td>\n    </tr>\n    <tr>\n      <td>3</td>\n      <td>16,00,000</td>\n      <td>8,00,000</td>\n    </tr>\n    <tr>\n      <td>4</td>\n      <td>16,00,000</td>\n      <td>8,00,000</td>\n    </tr>\n  </tbody>\n</table>\n\nABC Ltd. is subject to a corporate tax rate of 60%, and the cost of capital for the project, including inflation premium, is 10%. Depreciation provides a tax benefit, and inflation rates for revenues and costs over the project’s lifespan are as follows:\n\n<table class=\"pdf-table\">\n  <thead>\n    <tr>\n      <th>Year</th>\n      <th>Revenue Inflation</th>\n      <th>Cost Inflation</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n      <td>1</td>\n      <td>10%</td>\n      <td>12%</td>\n    </tr>\n    <tr>\n      <td>2</td>\n      <td>9%</td>\n      <td>10%</td>\n    </tr>\n    <tr>\n      <td>3</td>\n      <td>8%</td>\n      <td>9%</td>\n    </tr>\n    <tr>\n      <td>4</td>\n      <td>7%</td>\n      <td>8%</td>\n    </tr>\n  </tbody>\n</table>\n\nFrom the information given above, choose the correct answer to the following questions:",
+    "questions": [
+      {
+        "question_number": 1,
+        "question_text": "Inflation adjustment of revenues and costs is required mainly because………………………",
+        "options": {
+          "a": "Cost of capital includes inflation",
+          "b": "Tax rate is high",
+          "c": "Depreciation is constant",
+          "d": "Project life is short"
+        },
+        "correct_option": "a",
+        "explanation_html": "Cash flows and discount rate must be consistent."
+      },
+      {
+        "question_number": 2,
+        "question_text": "If inflation were ignored in cash flows but included in discount rate, the project NPV would be……………………….",
+        "options": {
+          "a": "Overstated",
+          "b": "Understated",
+          "c": "Correct",
+          "d": "Zero"
+        },
+        "correct_option": "b",
+        "explanation_html": "Ignoring inflation understates future cash flows."
+      },
+      {
+        "question_number": 3,
+        "question_text": "Which of the following cash flows is not affected by inflation directly?",
+        "options": {
+          "a": "Revenue",
+          "b": "Operating cost",
+          "c": "Depreciation",
+          "d": "Tax payment"
+        },
+        "correct_option": "c",
+        "explanation_html": "Depreciation is based on historical cost."
+      }
+    ]
+  },
+  {
+    "scenario_number": 22,
+    "title": "CASE SCENARIO 22",
+    "passage_html": "X and Y are two friends. Since Y has earned a lot of profit from trading in financial derivative market, X is also considering speculating on Gamma Corporation’s shares which is currently trading at ₹ 700 per share through taking positions in options in stocks of same company. Accordingly, X took following contract positions in the options on Gama Corporation’s stock:\n\n(i) Purchasing one contract of 2-month call option with a premium of ₹ 35 and an exercise price of ₹ 750.\n\n(ii) Purchasing one contract of 2-month put option with a premium of ₹ 25 and an exercise price of ₹ 600. After some time, trading in Option Market and understanding the nitty-gritties of same, X being CEO in an organization advised his team to implement the concept of Financial Options in the Capital Budgeting decisions called ‘Real Option’. From the information given above, choose the correct answer to the following questions:",
+    "questions": [
+      {
+        "question_number": 1,
+        "question_text": "Assuming that the contract size of each option contract is 100 and the price of Gama Corporation’s share after two months falls to ₹ 550, the net pay-off of X will be………",
+        "options": {
+          "a": "₹ 1,000 loss",
+          "b": "₹ 1,000 profit",
+          "c": "₹ 3,000 profit",
+          "d": "₹ 3,000 loss"
+        },
+        "correct_option": "a",
+        "explanation_html": "₹ 50 x 100 – [₹ 35 x 100 + ₹ 25 x100] = - ₹ 1,000"
+      },
+      {
+        "question_number": 2,
+        "question_text": "The per share price of Gama Corporation’s stock after 2 months at which X shall be at Break Even is…..",
+        "options": {
+          "a": "₹ 540",
+          "b": "₹ 600",
+          "c": "₹ 625",
+          "d": "₹ 785"
+        },
+        "correct_option": "a",
+        "explanation_html": "₹ 600 – [₹ 35 + ₹ 25] = ₹ 540"
+      },
+      {
+        "question_number": 3,
+        "question_text": "Which of the following statement is false regarding Real Options?",
+        "options": {
+          "a": "Real Options methodology is an approach to capital budgeting that relies on Option Pricing theory to evaluate projects.",
+          "b": "Real options approach is intended to supplement, and not replace, capital budgeting analyses based on standard Discounted Cash Flow (DCF) methodologies.",
+          "c": "Real options are different from financial options as their periods start from the end of 1st year and are higher than financial options.",
+          "d": "Real options are normally traded in the market and are priced."
+        },
+        "correct_option": "d",
+        "explanation_html": "Refer difference between Financial and Real Options."
+      }
+    ]
+  },
+  {
+    "scenario_number": 23,
+    "title": "CASE SCENARIO 23",
+    "passage_html": "The data given below relates to a convertible bond:\n\n<table class=\"pdf-table\">\n  <thead>\n    <tr>\n      <th>Face value</th>\n      <th>₹ 450</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n      <td>Coupon rate</td>\n      <td>15%</td>\n    </tr>\n    <tr>\n      <td>No. of shares per bond</td>\n      <td>25</td>\n    </tr>\n    <tr>\n      <td>Market price of share</td>\n      <td>₹ 20</td>\n    </tr>\n  </tbody>\n</table>\n\n<table class=\"pdf-table\">\n  <thead>\n    <tr>\n      <th>Straight value of bond</th>\n      <th>₹ 400</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n      <td>Market price of convertible bond</td>\n      <td>₹ 550</td>\n    </tr>\n  </tbody>\n</table>\n\nFrom the information given above, choose the correct answer to the following questions:",
+    "questions": [
+      {
+        "question_number": 1,
+        "question_text": "The stock value of bond would be …………",
+        "options": {
+          "a": "₹ 500",
+          "b": "₹ 400",
+          "c": "₹ 550",
+          "d": "₹ 450"
+        },
+        "correct_option": "a",
+        "explanation_html": "₹ 20 x 25 = ₹ 500"
+      },
+      {
+        "question_number": 2,
+        "question_text": "The percentage of downside risk based on market price of convertible bond is…………",
+        "options": {
+          "a": "10%",
+          "b": "27.27%",
+          "c": "18.18%",
+          "d": "11.11%"
+        },
+        "correct_option": "b",
+        "explanation_html": "550-400 ×100 550"
+      },
+      {
+        "question_number": 3,
+        "question_text": "The conversion premium is ………….",
+        "options": {
+          "a": "10%",
+          "b": "27.27%",
+          "c": "18.18%",
+          "d": "11.11%"
+        },
+        "correct_option": "a",
+        "explanation_html": "550-500 ×100 500"
+      },
+      {
+        "question_number": 4,
+        "question_text": "The conversion parity price of the stock is …………..",
+        "options": {
+          "a": "₹ 25",
+          "b": "₹ 20",
+          "c": "₹ 22",
+          "d": "₹ 24"
+        },
+        "correct_option": "c",
+        "explanation_html": "550 = ₹ 25 25"
+      }
+    ]
+  },
+  {
+    "scenario_number": 24,
+    "title": "CASE SCENARIO 24",
+    "passage_html": "Mr. A is interested in investing ₹ 1,00,000 for which he is considering following three alternatives:\n\n(i) Invest ₹ 1,00,000 in Mutual Fund X (MFX)\n\n(ii) Invest ₹ 1,00,000 in Mutual Fund Y (MFY)\n\n(iii) Portfolio - Invest ₹ 60,000 in Mutual Fund X (MFX) and ₹ 40,000 in Mutual Fund Y (MFY) Average annual return earned by MFX and MFY is 12% and 11% respectively. Risk free rate of return is 8% and market rate of return is 10%. Covariance of returns of MFX, MFY and market portfolio Mix are as follow:\n\n<table class=\"pdf-table\">\n  <thead>\n    <tr>\n      <th>MFX</th>\n      <th>MFY</th>\n      <th>Portfolio</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n      <td>MFX<br>4.400</td>\n      <td>4.300</td>\n      <td>3.370</td>\n    </tr>\n    <tr>\n      <td>MFY<br>4.300</td>\n      <td>4.200</td>\n      <td>2.800</td>\n    </tr>\n    <tr>\n      <td>Portfolio<br>3.370</td>\n      <td>2.800</td>\n      <td>4.200</td>\n    </tr>\n  </tbody>\n</table>\n\nFrom the information given above, choose the correct answer to the following questions:",
+    "questions": [
+      {
+        "question_number": 1,
+        "question_text": "Standard Deviation of MFX is ……………",
+        "options": {
+          "a": "2.0736",
+          "b": "2.0976",
+          "c": "1.8358",
+          "d": "2.0494"
+        },
+        "correct_option": "b",
+        "explanation_html": "4.40 = 2.0976"
+      },
+      {
+        "question_number": 2,
+        "question_text": "Portfolio return would be ……………..",
+        "options": {
+          "a": "11.00%",
+          "b": "12.00%",
+          "c": "11.50%",
+          "d": "11.60%"
+        },
+        "correct_option": "d",
+        "explanation_html": "12.00 x 0.60 + 11.00 x 40 = 11.60"
+      },
+      {
+        "question_number": 3,
+        "question_text": "Based on Standard Deviation, the optimum investment for Mr. A would be …………….",
+        "options": {
+          "a": "Portfolio",
+          "b": "All investment in MFX",
+          "c": "All investment in MFY",
+          "d": "Both MFY and mix are indifferent"
+        },
+        "correct_option": "b",
+        "explanation_html": "Based on Coefficient of Variation"
+      }
+    ]
+  },
+  {
+    "scenario_number": 25,
+    "title": "CASE SCENARIO 25",
+    "passage_html": "P Ltd. is studying the possible acquisition of Q Ltd. by way of merger. The following data are available:\n\n<table class=\"pdf-table\">\n  <thead>\n    <tr>\n      <th>Firm</th>\n      <th>After-tax<br>earnings</th>\n      <th>No. of<br>equity<br>shares</th>\n      <th>Market<br>price per<br>share</th>\n      <th>Book Value<br>Per share</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n      <td>P Ltd.</td>\n      <td>₹ 10,00,000</td>\n      <td>2,00,000</td>\n      <td>₹ 75</td>\n      <td>₹ 210</td>\n    </tr>\n    <tr>\n      <td>Q Ltd.</td>\n      <td>₹ 3,00,000</td>\n      <td>50,000</td>\n      <td>₹ 60</td>\n      <td>₹ 105</td>\n    </tr>\n  </tbody>\n</table>\n\nThe merger shall be gone through by exchange of equity shares and the exchange ratio is set according to different weights assigned to different basis as mentioned below :- EPS 50% Market Price 25% Book Value 25% From the information given above, choose the correct answer to the following questions:",
+    "questions": [
+      {
+        "question_number": 1,
+        "question_text": "The swap ratio based on given weights shall be........................................",
+        "options": {
+          "a": "0.825",
+          "b": "0.925",
+          "c": "0.952",
+          "d": "0.752"
+        },
+        "correct_option": "b",
+        "explanation_html": "6 : 5 x 0.50 = 0.60 4 : 5 x 0.25 = 0.20 1 : 2 x 0.25 = 0.125 0.925"
+      },
+      {
+        "question_number": 2,
+        "question_text": "Based on swap ratio as per assigned weights the total number of shares issued by P Ltd to Q Ltd. shall be............",
+        "options": {
+          "a": "46250",
+          "b": "41250",
+          "c": "47600",
+          "d": "37600"
+        },
+        "correct_option": "a",
+        "explanation_html": "0.925 x 50000 = 46,250"
+      },
+      {
+        "question_number": 3,
+        "question_text": "Post merger the EPS of the P Ltd. shall be.................",
+        "options": {
+          "a": "5.39",
+          "b": "5.25",
+          "c": "5.28",
+          "d": "5.47"
+        },
+        "correct_option": "c",
+        "explanation_html": "(1000000 + 300000) / (200000 + 46250) = 5.28"
+      },
+      {
+        "question_number": 4,
+        "question_text": "In case Q Ltd. wants to be sure that its EPS is not diminished by the merger, the relevant exchange ratio to achieve the same objective should be....................",
+        "options": {
+          "a": "0.83",
+          "b": "1.20",
+          "c": "1.30",
+          "d": "1.10"
+        },
+        "correct_option": "b",
+        "explanation_html": "Ratio of EPS"
+      }
+    ]
+  },
+  {
+    "scenario_number": 26,
+    "title": "CASE SCENARIO 26",
+    "passage_html": "Mr. Y has invested in the three mutual funds (MF) as per the following details:\n\n<table class=\"pdf-table\">\n  <thead>\n    <tr>\n      <th>Particulars</th>\n      <th>MF ‘X’</th>\n      <th>MF ‘Y’</th>\n      <th>MF ‘Z’</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n      <td>Amount of Investment (₹)</td>\n      <td>4,00,000</td>\n      <td>8,00,000</td>\n      <td>4,00,000</td>\n    </tr>\n  </tbody>\n</table>\n\n<table class=\"pdf-table\">\n  <thead>\n    <tr>\n      <th>Net Assets Value (NAV) at the time of<br>purchase (₹)</th>\n      <th>10.30</th>\n      <th>10.10</th>\n      <th>10</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n      <td>Dividend Received up to 31.03.2023 (₹)</td>\n      <td>9,000</td>\n      <td>0</td>\n      <td>6,000</td>\n    </tr>\n    <tr>\n      <td>NAV as on 31.03.2023 (₹)</td>\n      <td>10.35</td>\n      <td>10</td>\n      <td>10.30</td>\n    </tr>\n    <tr>\n      <td>Effective Yield per annum as on 31.03.2023<br>(percent)</td>\n      <td>9.66</td>\n      <td>-11.66</td>\n      <td>24.15</td>\n    </tr>\n  </tbody>\n</table>\n\nAssume 1 Year = 365 days From the information given above, choose the correct answer to the following questions:",
+    "questions": [
+      {
+        "question_number": 1,
+        "question_text": "Total NAV of MF ‘Y’ as on 31.03.2023 would be approximately ……………",
+        "options": {
+          "a": "₹ 401941.73",
+          "b": "₹ 412000.00",
+          "c": "₹ 792079.21",
+          "d": "₹ 82500.00"
+        },
+        "correct_option": "c",
+        "explanation_html": "800000 ×10= 792079.21 10.10"
+      },
+      {
+        "question_number": 2,
+        "question_text": "Total Yield of MF ‘X’ in terms of ₹ would be approximately ……………..",
+        "options": {
+          "a": "₹ 10941.75",
+          "b": "₹ 7,920.80",
+          "c": "₹ 18,000.00",
+          "d": "₹ 12450.45"
+        },
+        "correct_option": "a",
+        "explanation_html": "400000 (10.35-10.30)+9000= 10941.75 10.30"
+      },
+      {
+        "question_number": 3,
+        "question_text": "Number of days for which MF ‘X’ is held would be approximately………….",
+        "options": {
+          "a": "31 Days",
+          "b": "68 Days",
+          "c": "103 Days",
+          "d": "85 Days"
+        },
+        "correct_option": "c",
+        "explanation_html": "10941.75 365 × = 0.0966 400000 D"
+      },
+      {
+        "question_number": 4,
+        "question_text": "Number of days for which MF ‘Y’ is held would be………….",
+        "options": {
+          "a": "31 Days",
+          "b": "68 Days",
+          "c": "103 Days",
+          "d": "85 Days"
+        },
+        "correct_option": "a",
+        "explanation_html": "800000 (10.00-10.10) 365 10.10 × =-11.66% 800000 D"
+      }
+    ]
+  },
+  {
+    "scenario_number": 27,
+    "title": "CASE SCENARIO 27",
+    "passage_html": "ABC Ltd. is planning to expand its business and therefore raising fund by issuing a convertible bond of ₹ 10 crore. An investor “Mr. X” is interested to invest in the bond of ABC Ltd. Mr. X has following data related to the convertible bond. The data given below relates to a convertible bond:\n\n<table class=\"pdf-table\">\n  <thead>\n    <tr>\n      <th>Face value</th>\n      <th>₹ 250</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n      <td>Coupon rate</td>\n      <td>12%</td>\n    </tr>\n    <tr>\n      <td>No. of shares per bond</td>\n      <td>20</td>\n    </tr>\n    <tr>\n      <td>Market price of share</td>\n      <td>₹ 12</td>\n    </tr>\n    <tr>\n      <td>Straight value of bond</td>\n      <td>₹ 235</td>\n    </tr>\n    <tr>\n      <td>Market price of convertible bond</td>\n      <td>₹ 265</td>\n    </tr>\n    <tr>\n      <td>Maturity</td>\n      <td>5 Years</td>\n    </tr>\n  </tbody>\n</table>\n\nFrom the information given above, choose the correct answer to the following questions:",
+    "questions": [
+      {
+        "question_number": 1,
+        "question_text": "The percentage of downside risk of the bond is approximately……………..",
+        "options": {
+          "a": "10.42%",
+          "b": "6.38%",
+          "c": "2.13%",
+          "d": "12.77%"
+        },
+        "correct_option": "d",
+        "explanation_html": "265-235 ×100=12.77% 235"
+      },
+      {
+        "question_number": 2,
+        "question_text": "The conversion premium in percentage term of the bond is……………..",
+        "options": {
+          "a": "12.77%",
+          "b": "10.42%",
+          "c": "2.18%",
+          "d": "13.45%"
+        },
+        "correct_option": "b",
+        "explanation_html": "265-240 ×100=10.42% 240"
+      },
+      {
+        "question_number": 3,
+        "question_text": "The conversion parity price of the stock is…………….",
+        "options": {
+          "a": "₹ 11.75",
+          "b": "₹ 12.00",
+          "c": "₹ 13.25",
+          "d": "₹ 12.50"
+        },
+        "correct_option": "c",
+        "explanation_html": "₹ 265/20 = ₹ 13.25"
+      },
+      {
+        "question_number": 4,
+        "question_text": "If he wants approximately a yield of 15% the maximum price, he should be ready to pay for is…………….",
+        "options": {
+          "a": "217.41",
+          "b": "224.81",
+          "c": "240.00",
+          "d": "232.32"
+        },
+        "correct_option": "b",
+        "explanation_html": "₹ 30(3.352) + ₹ 250(0.497) = ₹ 224.81"
+      }
+    ]
+  },
+  {
+    "scenario_number": 28,
+    "title": "CASE SCENARIO 28",
+    "passage_html": "Suppose you are a financial consultant and following 3 clients have approached to you seeking advise on the investment to be made in securities. All these clients have different background and risk appetite as well as perception to the market.  Client A wants to invest in Fixed income avenues and therefore he is looking at the credit rating of the securities as well as financial ratios such as interest coverage, earning power etc and the general prospect of the industry.  Client B wants to earn a fixed income over a period of time by holding the security till its maturity.  Client C wants to earn more by taking more risk. Therefore, he is more interested to invest in stocks. He believes that Price reflects all information found in the record of past prices and volumes. From the information given above, choose the correct answer to the following questions:",
+    "questions": [
+      {
+        "question_number": 1,
+        "question_text": "The main factor to be considered in selecting fixed income avenue for client A shall be………………..",
+        "options": {
+          "a": "Yield to maturity",
+          "b": "Risk of Default",
+          "c": "Tax Shield",
+          "d": "Liquidity"
+        },
+        "correct_option": "b",
+        "explanation_html": "Client A is looking at Credit Rating."
+      },
+      {
+        "question_number": 2,
+        "question_text": "The main factor that have to be evaluated in the selection of Bond for Client B shall be………………..",
+        "options": {
+          "a": "Yield to maturity",
+          "b": "Risk of Default",
+          "c": "Tax Shield",
+          "d": "Liquidity"
+        },
+        "correct_option": "a",
+        "explanation_html": "Holding security till maturity."
+      },
+      {
+        "question_number": 3,
+        "question_text": "If Weak form efficiency is prevailing in the market then which approach is best for selection of Equity Shares?",
+        "options": {
+          "a": "Technical Analysis",
+          "b": "Fundamental Analysis",
+          "c": "Random selection Analysis",
+          "d": "None of the above."
+        },
+        "correct_option": "b",
+        "explanation_html": "As market will react lately."
+      }
+    ]
+  },
+  {
+    "scenario_number": 29,
+    "title": "CASE SCENARIO 29",
+    "passage_html": "AES Ltd. wants to acquire DNF Ltd. and has offered a swap ratio of 1:2 (0.5 shares for every one share of DNF Ltd.). Following information is provided:\n\n<table class=\"pdf-table\">\n  <thead>\n    <tr>\n      <th>AES Ltd.</th>\n      <th>DNF Ltd.</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n      <td>Profit after tax<br>₹ 36,00,000</td>\n      <td>₹ 7,20,000</td>\n    </tr>\n    <tr>\n      <td>Equity shares outstanding (Nos.)<br>12,00,000</td>\n      <td>3,60,000</td>\n    </tr>\n    <tr>\n      <td>PE Ratio<br>10 times</td>\n      <td>7 times</td>\n    </tr>\n    <tr>\n      <td>Market price per share<br>₹ 30</td>\n      <td>₹ 14</td>\n    </tr>\n  </tbody>\n</table>\n\nFrom the information given above, choose the correct answer to the following questions:",
+    "questions": [
+      {
+        "question_number": 1,
+        "question_text": "The number of equity shares to be issued by AES Ltd. for acquisition of DNF Ltd. would be………………",
+        "options": {
+          "a": "1,68,000",
+          "b": "1,80,000",
+          "c": "2,40,000",
+          "d": "3,00,000"
+        },
+        "correct_option": "b",
+        "explanation_html": "360000 x 0.50 = 180000"
+      },
+      {
+        "question_number": 2,
+        "question_text": "The EPS of AES Ltd. after the acquisition would be………………",
+        "options": {
+          "a": "₹ 2",
+          "b": "₹ 3",
+          "c": "₹ 3.13",
+          "d": "₹ 4.00"
+        },
+        "correct_option": "c",
+        "explanation_html": "(₹ 36,00,000 + ₹ 7,20,000)/(1200000 + 180000) = ₹ 3.13"
+      },
+      {
+        "question_number": 3,
+        "question_text": "The equivalent earnings per share of DNF Ltd. would be………..",
+        "options": {
+          "a": "₹ 1",
+          "b": "₹ 1.50",
+          "c": "₹ 1.57",
+          "d": "₹ 2.00"
+        },
+        "correct_option": "c",
+        "explanation_html": "₹ 3.13 x 0.50 = ₹ 1.57"
+      },
+      {
+        "question_number": 4,
+        "question_text": "If AES Ltd. PE multiple remains unchanged then its expected market price per share after the acquisition would be………………",
+        "options": {
+          "a": "₹ 14",
+          "b": "₹ 30",
+          "c": "₹ 31.30",
+          "d": "₹ 40.00"
+        },
+        "correct_option": "c",
+        "explanation_html": "₹ 3.13 x 10 = ₹ 31.30"
+      }
+    ]
+  },
+  {
+    "scenario_number": 30,
+    "title": "CASE SCENARIO 30",
+    "passage_html": "During one business meeting at XYZ Ltd., one of the member pointed out that while evaluating the performance of any company one should not only see its Operating Income but should also analyse its Capital structure as well. Weighted Average Cost of Capital changes on the basis of capital structure keeping all other factors unchanged. He presented data relating to 3 companies Alpha Ltd., Beta Ltd. and Gama Ltd. whose operating Income are equal, but their capital structure is different. The following information relating to these 3 companies is as follows: (in ₹ 000)\n\n<table class=\"pdf-table\">\n  <thead>\n    <tr>\n      <th>Alpha Ltd.</th>\n      <th>Beta Ltd.</th>\n      <th>Gama Ltd.</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n      <td>Total invested capital<br>20,00,000</td>\n      <td>20,00,000</td>\n      <td>20,00,000</td>\n    </tr>\n    <tr>\n      <td>Debt/Assets ratio<br>0.8</td>\n      <td>0.5</td>\n      <td>0.2</td>\n    </tr>\n    <tr>\n      <td>Shares outstanding<br>61,000</td>\n      <td>83,000</td>\n      <td>1,00,000</td>\n    </tr>\n    <tr>\n      <td>Pre tax Cost of Debt<br>16%</td>\n      <td>13%</td>\n      <td>15%</td>\n    </tr>\n    <tr>\n      <td>Cost of Equity<br>26%</td>\n      <td>22%</td>\n      <td>20%</td>\n    </tr>\n    <tr>\n      <td>Operating Income (EBIT)<br>5,00,000</td>\n      <td>5,00,000</td>\n      <td>5,00,000</td>\n    </tr>\n  </tbody>\n</table>\n\nThe Tax rate is uniform 35% in all cases. The industry PE ratio is 11X. From the information given above, choose the correct answer to the following questions:",
+    "questions": [
+      {
+        "question_number": 1,
+        "question_text": "The weighted average cost of capital of Alpha Ltd. shall approximately be …………….",
+        "options": {
+          "a": "13.520%",
+          "b": "15.225%",
+          "c": "17.950%",
+          "d": "18.000%"
+        },
+        "correct_option": "a",
+        "explanation_html": "16%(1 – 0.35) x 0.80 + 26% x 0.20 = 13.52%"
+      },
+      {
+        "question_number": 2,
+        "question_text": "The Economic Valued Added (EVA) of Beta Ltd. is…………….",
+        "options": {
+          "a": "₹ 54600 Thousand",
+          "b": "₹ 20500 Thousand",
+          "c": "(-) ₹ 34000 Thousand",
+          "d": "₹ 21500 Thousand"
+        },
+        "correct_option": "b",
+        "explanation_html": "500000(1 – 0.35) – [{13%(1 – 0.35) x 0.50 + 22% x 0.50} 2000000] = 20500"
+      },
+      {
+        "question_number": 3,
+        "question_text": "The price per share of Gama Ltd. shall be ……………..",
+        "options": {
+          "a": "₹ 28.60",
+          "b": "₹ 31.90",
+          "c": "₹ 31.46",
+          "d": "₹ 29.45"
+        },
+        "correct_option": "c",
+        "explanation_html": "[(500000 – 0.20 x 2000000 x 15%) (1 – 0.35) x 11]/100000 = ₹ 31.46"
+      },
+      {
+        "question_number": 4,
+        "question_text": "The estimated market capitalisation of Alpha Ltd. is…………….",
+        "options": {
+          "a": "₹ 26,47,700 Thousand",
+          "b": "₹ 31,46,000 Thousand",
+          "c": "₹ 17,44,600 Thousand",
+          "d": "₹ 23,73,800 Thousand"
+        },
+        "correct_option": "c",
+        "explanation_html": "[(500000 – 0.80 x 2000000 x 16%) (1 – 0.35) x 11] = 1744600"
+      },
+      {
+        "question_number": 5,
+        "question_text": "Earning per share of Beta Ltd. approximately is……………..",
+        "options": {
+          "a": "₹ 2.60",
+          "b": "₹ 2.90",
+          "c": "₹ 2.86",
+          "d": "₹ 2.15"
+        },
+        "correct_option": "b",
+        "explanation_html": "[(500000 – 0.50 x 2000000 x 13%) (1 – 0.35)]/ 83000 = ₹ 2.90"
+      }
+    ]
+  },
+  {
+    "scenario_number": 31,
+    "title": "CASE SCENARIO 31",
+    "passage_html": "On 1 October 2023 Mr. X an exporter enters into a forward contract with a BNP Bank to sell US$ 1,00,000 on 31 December 2023 at ₹ 85.40/$. However, due to the request of the importer, Mr. X received the amount on 28 November 2023. Mr. X requested the bank the take delivery of the remittance on 30 November 2023 i.e., before due date. The inter-banking rates on 28 November 2023 was as follows: Spot ₹ 85.22/85.27 One Month Premium 10/15 Note:\n\n1. Consider 365 days in a year.\n\n2. Prevailing Prime Lending Rate is 12% From the information given above, choose the correct answer to the following questions:",
+    "questions": [
+      {
+        "question_number": 1,
+        "question_text": "The bank may accept the request of customer of delivery before due date of forward contract provided the customer is ready to bear the loss if any consisting of…………",
+        "options": {
+          "a": "Swap Difference",
+          "b": "Interest on Outlay of Fund",
+          "c": "Swap Difference Plus Interest on Outlay of Fund",
+          "d": "Fixed Charges Plus Swap Difference and Interest on Outlay of Fund"
+        },
+        "correct_option": "d",
+        "explanation_html": "Refer the concept of Early Delivery under Fate of Forward Contract."
+      },
+      {
+        "question_number": 2,
+        "question_text": "In case of early delivery bank shall charge interest on outlay of fund at a rate not less than……………..",
+        "options": {
+          "a": "8%",
+          "b": "10%",
+          "c": "12%",
+          "d": "18%"
+        },
+        "correct_option": "c",
+        "explanation_html": "Refer the concept of Early Delivery under Fate of Forward Contract."
+      },
+      {
+        "question_number": 3,
+        "question_text": "Swap Difference for US$ 1,00,000 is………………..",
+        "options": {
+          "a": "₹ 5,000",
+          "b": "₹ 20,000",
+          "c": "₹ 18,000",
+          "d": "₹ 8,000"
+        },
+        "correct_option": "b",
+        "explanation_html": "Bank Sells at Spot Rate on 28 November 2023 ₹ 85.22 Bank Buys at Forward Rate of 31 December ₹ 85.42 2023 (85.27 + 0.15) Swap Loss per US$ ₹ 00.20 Swap loss for US$ 1,00,000 ₹ 20,000"
+      },
+      {
+        "question_number": 4,
+        "question_text": "Interest on outlay of funds shall be approximately………………….",
+        "options": {
+          "a": "₹ 92 payable by X",
+          "b": "₹ 183 payable by X",
+          "c": "₹ 183 payable by Bank",
+          "d": "₹ 122 payable by Bank"
+        },
+        "correct_option": "b",
+        "explanation_html": "On 28th November Bank sells at ₹ 85.22 It buys from customer at ₹ 00.18 Interest on Outlay fund for US$ 1,00,000 for ₹ 00.20 31 days (US$100000 x 00.18 x 31/365 x 12%) ₹ 183"
+      },
+      {
+        "question_number": 5,
+        "question_text": "Net inflow to Mr. X is approximately……………..",
+        "options": {
+          "a": "₹ 85,42,183",
+          "b": "₹ 85,20,000",
+          "c": "₹ 85,19,817",
+          "d": "₹ 85,40,000"
+        },
+        "correct_option": "c",
+        "explanation_html": "Amount received on sale (₹ 85.40 x 1,00,000) Less: Charges for early delivery payable to bank ₹ 85,40,000 (₹ 20,183) ₹ 85,19,817"
+      }
+    ]
+  },
+  {
+    "scenario_number": 32,
+    "title": "CASE SCENARIO 32",
+    "passage_html": "A US parent company has subsidiaries in France, Germany, UK and Italy. The amounts due to and from the affiliates is converted into a common currency viz. US dollar and entered in the following matrix. Inter Subsidiary Payments Matrix (US $ Thousands)\n\n<table class=\"pdf-table\">\n  <thead>\n    <tr>\n      <th>Paying affiliate</th>\n      <th></th>\n      <th></th>\n      <th>France</th>\n      <th>Germany</th>\n      <th>UK</th>\n      <th>Italy</th>\n      <th>Total</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n      <td>gnivieceR</td>\n      <td>etailiffa</td>\n      <td>France<br>Germany<br>UK<br>Italy<br>Total</td>\n      <td>---<br>120<br>160<br>200<br>480</td>\n      <td>80<br>---<br>120<br>60<br>260</td>\n      <td>120<br>80<br>---<br>120<br>320</td>\n      <td>200<br>160<br>140<br>---<br>500</td>\n      <td>400<br>360<br>420<br>380<br>1560</td>\n    </tr>\n  </tbody>\n</table>\n\nThe treasurer of US Parent company is suggesting that by applying Multilateral Netting system the company can save a lot of transfer/ exchange costs. The company’s Board agreed with Treasurer’s proposal. From the information given above, choose the correct answer to the following questions:",
+    "questions": [
+      {
+        "question_number": 1,
+        "question_text": "Before applying Multilateral Netting it is necessary to apply……………….",
+        "options": {
+          "a": "Unilateral Netting",
+          "b": "Bilateral Netting",
+          "c": "Multilateral Netting",
+          "d": "Interest Rate Swapping"
+        },
+        "correct_option": "b",
+        "explanation_html": "First settle mutual obligation before proceeding further."
+      },
+      {
+        "question_number": 2,
+        "question_text": "Through Multinational Netting these transfers will be reduced to …………….",
+        "options": {
+          "a": "$ 50,000",
+          "b": "$ 100,000",
+          "c": "$ 150,000",
+          "d": "$ 200,000"
+        },
+        "correct_option": "d",
+        "explanation_html": "Netting Schedule (US $ Thousands) Receipt Payment Net Net Receipt Payments France 400 480 --- 80 Germany 360 260 100 --- UK 420 320 100 --- Italy 380 500 --- 120 200 200 Netting Schedule (US $ Thousands)"
+      },
+      {
+        "question_number": 3,
+        "question_text": "The Net Payment/ Net Receipts for France after netting off shall be………….",
+        "options": {
+          "a": "Net Receipt $ 40,000",
+          "b": "Net Payment $ 80,000",
+          "c": "Net Payment $ 40,000",
+          "d": "Net Receipt $ 80,000"
+        },
+        "correct_option": "b",
+        "explanation_html": "Receipt Payment Net"
+      },
+      {
+        "question_number": 4,
+        "question_text": "The Net Payment/ Net Receipts for Italy after netting off shall be…………….",
+        "options": {
+          "a": "Net Receipt $ 60,000",
+          "b": "Net Payment $ 120,000",
+          "c": "Net Payment $ 60,000",
+          "d": "Net Receipt $ 120,000"
+        },
+        "correct_option": "b",
+        "explanation_html": "Receipt Payments France 400 480 --- 80 Germany 360 260 100 --- UK 420 320 100 --- Italy 380 500 --- 120 200"
+      },
+      {
+        "question_number": 5,
+        "question_text": "Suppose if the transfer charges are 0.01% of the amount transferred then by applying multilateral netting techniques there will be reduction in overall cost of transfer by …………..",
+        "options": {
+          "a": "US $ 136",
+          "b": "US $ 156",
+          "c": "US $ 1,360",
+          "d": "US $ 1,560"
+        },
+        "correct_option": "a",
+        "explanation_html": "(1560 – 200) x 0.01% x 1000 = 136"
+      }
+    ]
+  },
+  {
+    "scenario_number": 33,
+    "title": "CASE SCENARIO 33",
+    "passage_html": "XYZ Ltd. needs funds for a short tenure. Some functional level manager suggested about the bank credit/ overdraft option. On conforming from Finance Department, it was found that company exhausted its credit limits due to meeting recent contingency fund requirements. Then CA X, CFO suggested the idea of floating Commercial papers by XYZ Ltd. Accordingly, XYZ Ltd. is planning to issue Commercial Paper (CP), the details of which is given below: Issue Price of CP ₹ 97,550 Face Value ₹ 1,00,000 Maturity Period 3 Months Issue Expense Brokerage 0.15% for 3 months Rating charges 0.50% p.a. Stamp Duty 0.175% for 3 months From the information given above, choose the correct answer to the following questions: MULTIPLE CHOICE QUESTION\n\n1. The Bond Equivalent yield for an investor of the same Commercial Paper shall be approximately…………….. (a) 2.51% (b) 10.05%\n\n(c) 7.53%\n\n(d) 11.05%\n\n2. The Effective Interest Rate per annum of same CP shall approximately be………………… (a) 10.44% (b) 10.05%\n\n(c) 2.51%\n\n(d) 11.05%\n\n3. Based on effective interest rate the total annual cost of funds to the company shall approximately be……………………… (a) 11.27% (b) 11.85%\n\n(c) 12.24%\n\n(d) 10.88%\n\n4. Which of the following instruments cannot be used by a bank to meet its short-term funding requirements? (a) Call/Notice Money (b) Commercial Paper\n\n(c) Certificate of Deposit\n\n(d) Repurchase Agreement (Repo)\n\n5. The period of Commercial Paper ranges from………………. (a) 14 days to 364 days (b) 3 months to 6 months\n\n(c) 7 days to 1 year\n\n(d) 1 year to 3 years",
+    "questions": []
+  },
+  {
+    "scenario_number": 34,
+    "title": "CASE SCENARIO 34",
+    "passage_html": "Grow More Ltd. an NBFC is in the need of funds and hence it sold its receivables to MAC Financial Corporation (MFC) for ₹ 100 million. MFC created a trust for this purpose called General Investment Trust (GIT) through which it issued securities carrying a different level of risk and return to the investors. Further, this structure also permits the GIT to reinvest surplus funds for short term as per their requirement. MFC also appointed a third party, Safeguard Pvt. Ltd. (SPL) to collect the payment due from obligor(s) and passes it to GIT. It will also follow up with defaulting obligor and if required initiate appropriate legal action against them. From the information given above, choose the correct answer to the following questions:",
+    "questions": [
+      {
+        "question_number": 1,
+        "question_text": "The securitized instrument issued for ₹ 100 million by the GIT falls under category of ……….",
+        "options": {
+          "a": "Pass Through certificate (PTCs)",
+          "b": "Pay Through Security (PTS)",
+          "c": "Stripped Security",
+          "d": "Debt Fund."
+        },
+        "correct_option": "b",
+        "explanation_html": "Refer the concept of Pay Through Security."
+      },
+      {
+        "question_number": 2,
+        "question_text": "In the above scenario, the Originator is………………….",
+        "options": {
+          "a": "Grow More Ltd.",
+          "b": "MAC Financial Corporation (MFC)",
+          "c": "General Investment Trust (GIT)",
+          "d": "Safeguard Pvt. Ltd."
+        },
+        "correct_option": "b",
+        "explanation_html": "MAC bought receivables."
+      },
+      {
+        "question_number": 3,
+        "question_text": "In the above scenario, the General Investment Trust (GIT) is a/an………………….",
+        "options": {
+          "a": "Obligor",
+          "b": "Originator",
+          "c": "Special Purpose Vehicle (SPV)",
+          "d": "Receiving and Paying Agent (RPA)"
+        },
+        "correct_option": "c",
+        "explanation_html": "Only for the purpose of issuing securities."
+      },
+      {
+        "question_number": 4,
+        "question_text": "In the above scenario, the Safeguard Pvt. Ltd. (SPL) is a/an………………",
+        "options": {
+          "a": "Obligor",
+          "b": "Originator",
+          "c": "Special Purpose Vehicle (SPV)",
+          "d": "Receiving and Paying Agent (RPA)"
+        },
+        "correct_option": "d",
+        "explanation_html": "Collects the payments from the receivables and pass to the SPV."
+      },
+      {
+        "question_number": 5,
+        "question_text": "Which of the following statement holds true?",
+        "options": {
+          "a": "When Yield to Maturity in market rises, prices of Principle Only (PO) Securities tend to rise.",
+          "b": "When Yield to Maturity in market rises, prices of Principle Only (PO) Securities tend to fall.",
+          "c": "When Yield to Maturity in market falls, prices of Principle Only (PO) Securities tend to fall.",
+          "d": "When Yield to Maturity in market falls, prices of Principle Only (PO) Securities remain the same."
+        },
+        "correct_option": "b",
+        "explanation_html": "Refer the concept of Stripped Securities."
+      }
+    ]
+  },
+  {
+    "scenario_number": 35,
+    "title": "CASE SCENARIO 35",
+    "passage_html": "You are a financial analyst at a prominent investment firm and have been tasked with empirically verifying the weak form of Efficient Market Hypothesis (EMH) Theory for the XYZ Stock Index, a collection of diverse stocks. You decided to conduct three different tests to assess whether the stock market follows the principles of the weak form of EMH. Test 1 For the past five years, you collected daily price changes of the stocks in the XYZ Stock Index. You calculated correlation coefficients for different lag periods and analyzed whether past price changes exhibit any significant correlation with future price changes. You considered price changes to be serially independent. The results indicated that most auto correlation coefficients are close to zero and statistically insignificant, suggesting those past price changes do not predict future price changes. Test 2 You further investigated the randomness of price changes in the XYZ Stock Index. Analyzing the sequence of daily price changes, you count the number of runs where price changes are consistently positive or negative. Upon comparing the observed number of runs with the expected number based on randomness, you find that they align closely, supporting the idea that price changes follow a random pattern. Test 3 To examine the efficacy of trading strategies based on historical price trends, you implemented a simple trading rule for the XYZ Stock Index. The rule involves buying when the price crosses a moving average of 5% threshold and selling when it crosses another 7% threshold. Over a period of testing, you computed the returns generated by the trading strategy. The results revealed that the returns are not consistently better than random chance, implying that past price trends do not reliably predict future price movements. Conclusion: After conducting the three tests the evidence supports the weak form of Efficient Market Theory for the XYZ Stock Index you concluded that past price trends do not reliably predict future price movements. From the information given above, choose the correct answer to the following questions:",
+    "questions": [
+      {
+        "question_number": 1,
+        "question_text": "Test 1 is …………………",
+        "options": {
+          "a": "Serial Correlation test",
+          "b": "Filter Rules test",
+          "c": "Run test",
+          "d": "Variance Ratio test"
+        },
+        "correct_option": "a",
+        "explanation_html": "Refer topic Empirical Evidence on Weak Form of Efficient Market Theory."
+      },
+      {
+        "question_number": 2,
+        "question_text": "Test 2 is ………………….",
+        "options": {
+          "a": "Serial Correlation test",
+          "b": "Filter Rules test",
+          "c": "Run test",
+          "d": "Variance Ratio test"
+        },
+        "correct_option": "c",
+        "explanation_html": "Refer topic Empirical Evidence on Weak Form of Efficient Market Theory."
+      },
+      {
+        "question_number": 3,
+        "question_text": "Test 3 is ………………",
+        "options": {
+          "a": "Serial Correlation test",
+          "b": "Filter Rules test",
+          "c": "Run test",
+          "d": "Variance Ratio test."
+        },
+        "correct_option": "b",
+        "explanation_html": "Refer topic Empirical Evidence on Weak Form of Efficient Market Theory."
+      },
+      {
+        "question_number": 4,
+        "question_text": "The Filter Rule Test should not be applied for buy and hold strategy if………",
+        "options": {
+          "a": "the behavior of stock price changes is predictable.",
+          "b": "the behavior of stock price changes is random.",
+          "c": "the behavior of stock price changes is correlated.",
+          "d": "the behavior of stock price changes is random."
+        },
+        "correct_option": "b",
+        "explanation_html": "Refer Filter Rules Test of Empirical Evidence on Weak Form of Efficient Market Theory."
+      },
+      {
+        "question_number": 5,
+        "question_text": "Results of your studies support the……………",
+        "options": {
+          "a": "Semi-strong EMH Theory",
+          "b": "Strong EMH Theory",
+          "c": "Random Walk Theory",
+          "d": "Markowitz Theory"
+        },
+        "correct_option": "c",
+        "explanation_html": "Refer conclusion of Case Scenario."
+      }
+    ]
+  },
+  {
+    "scenario_number": 36,
+    "title": "CASE SCENARIO 36",
+    "passage_html": "Bank A is in need of fund for a period of 14 days. To meet this financial need on 20th September 2023 Bank A enters into an agreement with Bank B under which it will sell 10% Government of India Bonds issued on 1st January 2023 @ 5.65% for ₹ 8 crore (Face value is ₹ 10,000 per Bond). The clean price of same Bond is ₹ 9,942 and the Initial Margin be 2% and the maturity date of Bond is 31st December 2028. Consider 360 days in a year and interest is payable annually. Based on above Case Scenario, answer the following questions:",
+    "questions": [
+      {
+        "question_number": 1,
+        "question_text": "The arrangement entered between Bank A and Bank B will be called ………",
+        "options": {
+          "a": "Call Money Arrangement",
+          "b": "Commercial Bill Arrangement",
+          "c": "Commercial Paper",
+          "d": "Repurchase Agreement"
+        },
+        "correct_option": "d",
+        "explanation_html": "Refer the concept of Repo and Reverse Repo."
+      },
+      {
+        "question_number": 2,
+        "question_text": "Dirty Price of the Bond will approximately be……………………….",
+        "options": {
+          "a": "₹ 10,353",
+          "b": "₹ 10,670",
+          "c": "₹ 10,499",
+          "d": "₹ 10,816"
+        },
+        "correct_option": "b",
+        "explanation_html": "10 262 ₹ 9,942 + ₹ 10,000 = ₹ 10,670 100 360"
+      },
+      {
+        "question_number": 3,
+        "question_text": "The start proceeds of the transaction shall be approximately ………………….",
+        "options": {
+          "a": "₹ 8,38,36,604",
+          "b": "₹ 8,36,52,800",
+          "c": "₹ 8,58,36,804",
+          "d": "₹ 8,48,52,585"
+        },
+        "correct_option": "b",
+        "explanation_html": "10670 100-2 ₹ 8,00,00,000 × × × × = ₹ 8,36,52,800 10000 100"
+      },
+      {
+        "question_number": 4,
+        "question_text": "The second leg of the transaction shall be approximately.……………….",
+        "options": {
+          "a": "₹ 8,38,36,604",
+          "b": "₹ 8,36,52,800",
+          "c": "₹ 8,58,36,804",
+          "d": "₹ 8,48,52,585"
+        },
+        "correct_option": "a",
+        "explanation_html": "5.65 14 ₹ 8,36,52,800 × 1+ × = ₹ 8,38,36,604 100 360"
+      },
+      {
+        "question_number": 5,
+        "question_text": "The amount of Accrued Interest per Bond shall be approximately ……………",
+        "options": {
+          "a": "₹ 728",
+          "b": "₹ 720",
+          "c": "₹ 734",
+          "d": "₹ 714"
+        },
+        "correct_option": "a",
+        "explanation_html": "10 262 ₹ 10,000 × ×� = ₹ 728 � 100 360"
+      }
+    ]
+  },
+  {
+    "scenario_number": 37,
+    "title": "CASE SCENARIO 37",
+    "passage_html": "Two friends Mr. A and Mr. N were discussing about the risks of market. While Mr. A is sort of risk averse, Mr. N is an aggressive investor and believes in taking risk. Mr. N said we cannot diversify the market risk at all and he quoted the Modern Portfolio Approach. Both of these friends analyse the market data for the few month and came out with expected returns on two stocks for a particular market.\n\n<table class=\"pdf-table\">\n  <thead>\n    <tr>\n      <th>Market Return</th>\n      <th>Aggressive</th>\n      <th>Defensive</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n      <td>7%</td>\n      <td>4%</td>\n      <td>9%</td>\n    </tr>\n    <tr>\n      <td>25%</td>\n      <td>40%</td>\n      <td>18%</td>\n    </tr>\n  </tbody>\n</table>\n\nFrom the information given above, choose the correct answer to the following questions:",
+    "questions": [
+      {
+        "question_number": 1,
+        "question_text": "The Beta of Defensive stock is…………",
+        "options": {
+          "a": "2",
+          "b": "0.50",
+          "c": "4",
+          "d": "1"
+        },
+        "correct_option": "b",
+        "explanation_html": "18%-9% = 0.50 25%-7%"
+      },
+      {
+        "question_number": 2,
+        "question_text": "Expected return of Aggressive stock if the market return is equally likely to be 7% or 25% shall be……..",
+        "options": {
+          "a": "18%",
+          "b": "13.5%",
+          "c": "22%",
+          "d": "11%"
+        },
+        "correct_option": "c",
+        "explanation_html": "First compute Risk Free Rate of Return using simultaneous equations. Then use CAPM and compute the Expected Return under given scenario and multiply each return with 0.50 and add them."
+      },
+      {
+        "question_number": 3,
+        "question_text": "The Alpha of the Defensive stocks is……………….",
+        "options": {
+          "a": "-10%",
+          "b": "22%",
+          "c": "5.5%",
+          "d": "12%"
+        },
+        "correct_option": "c",
+        "explanation_html": "18% = α + 0.50% 25% or 9% = α + 0.50% 7% 4..\n\n(d) Refer the concept of Modern Portfolio Theory 5\n\n(c) Refer the concept of Capital Market Theory."
+      },
+      {
+        "question_number": 4,
+        "question_text": "The Modern Portfolio Theory is propounded by …………………",
+        "options": {
+          "a": "William Sharpe",
+          "b": "Black Scholes",
+          "c": "Stephen Ross",
+          "d": "Harry Markowitz"
+        },
+        "correct_option": "d",
+        "explanation_html": " refer the concept of Modern Portfolio theory"
+      },
+      {
+        "question_number": 5,
+        "question_text": "As per Capital Market Line (CML) Theory the Portfolios lying on the CML over the market portfolio are called ……………….",
+        "options": {
+          "a": "Lending Portfolio",
+          "b": "Borrowing Portfolio",
+          "c": "Diversified Portfolio",
+          "d": "Risk- Free Portfolio"
+        },
+        "correct_option": "c",
+        "explanation_html": " refer the concept of Capital market theory"
+      }
+    ]
+  },
+  {
+    "scenario_number": 38,
+    "title": "CASE SCENARIO 38",
+    "passage_html": "Mr. X on 1st July 2021, during the initial offer of some Mutual Fund invested in 10,000 units having face value of ₹ 10 for each unit. On 31st March 2022, the dividend paid by the M.F. was 10% and Mr. X found that his annualized yield was 153.33%. On 31st December 2023, 20% dividend was given. On 31st March 2024, Mr. X redeemed all his balance of 11,296.11 units when his annualized yield was 73.52%. From the information given above, choose the correct answer to the following questions:",
+    "questions": [
+      {
+        "question_number": 1,
+        "question_text": "NAV as on 31/03/2022 shall be approximately………………",
+        "options": {
+          "a": "₹ 19.50",
+          "b": "₹ 20.50",
+          "c": "₹ 21.50",
+          "d": "₹ 22.50"
+        },
+        "correct_option": "b",
+        "explanation_html": "Yield for 9 months = (153.33 x 9/12) = 115% Market value of Investments as on 31.03.2022 = 1,00,000/- + (1,00,000x 115%) = ₹2,15,000/- Therefore, NAV as on 31.03.2022 = (2,15,000-10,000)/10,000 = ₹ 20.50"
+      },
+      {
+        "question_number": 2,
+        "question_text": "Total number of units as on 31/03/2022 shall be approximately………….",
+        "options": {
+          "a": "10487.80 units",
+          "b": "12585.65 units",
+          "c": "9465.35 units",
+          "d": "11575.40 units"
+        },
+        "correct_option": "a",
+        "explanation_html": "Since dividend was reinvested by Mr. X, additional units 10,000 acquired = = 487.80 units 20.50 Therefore, units as on 31.03.2008 = 10, 000+ 487.80 = 10,487.80"
+      },
+      {
+        "question_number": 3,
+        "question_text": "Dividend as on 31/03/2023 shall be ………………",
+        "options": {
+          "a": "₹ 20625.50",
+          "b": "₹ 20870.45",
+          "c": "₹ 20975.60",
+          "d": "₹ 21565.75"
+        },
+        "correct_option": "c",
+        "explanation_html": "Dividend as on 31.03.2023 = 10,487.80 x ₹ 10 x 0.2 = ₹ 20,975.60"
+      },
+      {
+        "question_number": 4,
+        "question_text": "NAV as on 31/03/2023 shall be approximately………………",
+        "options": {
+          "a": "24.65",
+          "b": "24.85",
+          "c": "25.95",
+          "d": "26.45"
+        },
+        "correct_option": "c",
+        "explanation_html": "Let X be the NAV on 31.03.2023, then number of new units reinvested will be ₹ 20,975.60/X. Accordingly 11296.11 units shall consist of reinvested units and 10487.80 (as on 31.03.2008). Thus, by way of equation it can be shown as follows: 20975.60 11296.11 = + 10487.80 X Therefore, NAV as on 31.03.2023=20,975.60/(11,296.11- 10,487.80) = ₹ 25.95"
+      },
+      {
+        "question_number": 5,
+        "question_text": "NAV as on 31/03/2024 shall be approximately………………",
+        "options": {
+          "a": "20.50",
+          "b": "25.95",
+          "c": "26.75",
+          "d": "27.20"
+        },
+        "correct_option": "c",
+        "explanation_html": "NAV as on 31.03.2024 = ₹ 1,00,000 (1+0.7352x33/12)/ 11296.11 = ₹ 26.75"
+      }
+    ]
+  },
+  {
+    "scenario_number": 39,
+    "title": "CASE SCENARIO 39",
+    "passage_html": "The Asset Management Company of the mutual fund (MF) has declared a dividend of 9.98% on the units under the dividend reinvestment plan for the year ended 31st March 2021. The investors are issued additional units for the dividend at the rate of closing Net Asset Value (NAV) for the year as per the conditions of the scheme. The closing NAV was ₹ 24.95 as on 31st March 2021. An investor Mr. X who is having 20,800 units at the year-end has made an investment in the units before the declaration of the dividend at the rate of opening NAV plus an entry load of ₹ 0.04. The NAV has appreciated by 25% during the year. Assume the face value of the unit as ₹ 10.00. From the information given above, choose the correct answer to the following questions:",
+    "questions": [
+      {
+        "question_number": 1,
+        "question_text": "The Opening NAV of the Asset Management Company shall be …………",
+        "options": {
+          "a": "₹ 20.24",
+          "b": "₹ 19.96",
+          "c": "₹ 18.75",
+          "d": "₹ 17.65"
+        },
+        "correct_option": "b",
+        "explanation_html": "Let N be the opening NAV, then N (1 + 0.25) = ₹ 24.95 N = ₹ 19.96 i.e., beginning NAV = ₹ 19.96"
+      },
+      {
+        "question_number": 2,
+        "question_text": "The Number of the units purchased shall be ………………….",
+        "options": {
+          "a": "18750",
+          "b": "17500",
+          "c": "20450",
+          "d": "20000"
+        },
+        "correct_option": "d",
+        "explanation_html": "Let X be the number of units purchased Then ending units = 20,800 Accordingly, 0.998X 20800=X+ 24.95 24.05X+0.998X 20800= 24.95 X = 20000"
+      },
+      {
+        "question_number": 3,
+        "question_text": "Original amount of the investment shall be ………………",
+        "options": {
+          "a": "₹ 4,00,000",
+          "b": "₹ 6,50,000",
+          "c": "₹ 3,55,000",
+          "d": "₹ 5,65,000"
+        },
+        "correct_option": "a",
+        "explanation_html": "Initial NAV ₹ 19.96 Entry Load ₹ 0.04 ₹ 20.00 Number of funds purchased 20,000 Amount of investment ₹ 4,00,000"
+      },
+      {
+        "question_number": 4,
+        "question_text": "Which of the following statement about Expense ratio is/ are incorrect?\n\n(i) It is the percentage of income that is spent to run a mutual fund.\n\n(ii) It includes advisory fees, travel costs, registrar fees, custodian fees, etc.\n\n(iii) It includes Brokerage costs for trading of Portfolio.\n\n(iv) High Expense Ratio can seriously undermine the performance of a mutual fund scheme.",
+        "options": {
+          "a": "(i), (ii), (iii)",
+          "b": "(i), (iii)",
+          "c": "only (iii)",
+          "d": "only (i)"
+        },
+        "correct_option": "b",
+        "explanation_html": "Refer the concept of Expense Ratio in Mutual Funds."
+      },
+      {
+        "question_number": 5,
+        "question_text": "…………………considers and uses downside deviation instead of total standard deviation in denominator.",
+        "options": {
+          "a": "Expense Ratio",
+          "b": "Sharpe Ratio",
+          "c": "Treynor Ratio",
+          "d": "Sortino Ratio"
+        },
+        "correct_option": "d",
+        "explanation_html": "Refer the topic financial measures to evaluate Mutual Funds."
+      }
+    ]
+  },
+  {
+    "scenario_number": 40,
+    "title": "CASE SCENARIO 40",
+    "passage_html": "You as an investor had purchased a 4-month European Call Option on the equity shares of X Ltd. for ₹ 10, of which the current market price is ₹ 132 per share and the exercise price ₹ 150. You expect the price to range between ₹ 120 to ₹ 190. The expected share price of X Ltd. and related probability is given below:\n\n<table class=\"pdf-table\">\n  <thead>\n    <tr>\n      <th>Expected Price (₹)</th>\n      <th>120</th>\n      <th>140</th>\n      <th>160</th>\n      <th>180</th>\n      <th>190</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n      <td>Probability</td>\n      <td>0.05</td>\n      <td>0.20</td>\n      <td>0.50</td>\n      <td>0.10</td>\n      <td>0.15</td>\n    </tr>\n  </tbody>\n</table>\n\nFrom the information given above, choose the correct answer to the following questions:",
+    "questions": [
+      {
+        "question_number": 1,
+        "question_text": "Expected price of share of X Ltd. at the end of 4 months shall be…….",
+        "options": {
+          "a": "₹ 160.00",
+          "b": "₹ 160.50",
+          "c": "₹ 158.00",
+          "d": "₹ 140.00"
+        },
+        "correct_option": "b",
+        "explanation_html": "₹ 120 x 0.05 + ₹ 140 x 0.20 + ₹ 160 x 0.50 + ₹ 180 x 0.10 + ₹ 190 x 0.15 = ₹ 160.50"
+      },
+      {
+        "question_number": 2,
+        "question_text": "Suppose if the exercise price prevails at the end of 4 months the Value of Call Option shall be…………",
+        "options": {
+          "a": "₹ 0",
+          "b": "₹ 18",
+          "c": "₹ 10",
+          "d": "₹ 14"
+        },
+        "correct_option": "a",
+        "explanation_html": "Share can either be purchased from market or from the seller of the option."
+      },
+      {
+        "question_number": 3,
+        "question_text": "In case the option is held to its maturity, the expected value of the call option shall be……………",
+        "options": {
+          "a": "₹ 0",
+          "b": "₹ 18",
+          "c": "₹ 10",
+          "d": "₹ 14"
+        },
+        "correct_option": "d",
+        "explanation_html": "₹ 10 x 0.50 + ₹ 30 x 0.10 + ₹ 40 x 0.15 = ₹ 14"
+      },
+      {
+        "question_number": 4,
+        "question_text": "In the given different scenarios of expected prices of share of X Ltd. at the time of maturity the option shall be in-the-money in …………… scenarios.",
+        "options": {
+          "a": "two",
+          "b": "three",
+          "c": "five",
+          "d": "In none of the scenario"
+        },
+        "correct_option": "b",
+        "explanation_html": "When spot price exceeds exercise price it will be beneficial to purchase share from the option seller."
+      },
+      {
+        "question_number": 5,
+        "question_text": "In the given different scenarios of expected prices of share of X Ltd. at the time of maturity the option shall be at-the-money in …………… scenarios.",
+        "options": {
+          "a": "two",
+          "b": "three",
+          "c": "five",
+          "d": "In none of the scenario"
+        },
+        "correct_option": "d",
+        "explanation_html": "In none of the case the expected spot price is ₹ 150."
+      }
+    ]
+  },
+  {
+    "scenario_number": 41,
+    "title": "CASE SCENARIO 41",
+    "passage_html": "Suppose you are a risk manager at a financial institution, and your company has loaned a significant amount of ₹ 500 crore to a company X Ltd. for a period of 3 years at 6-month at MCLR plus 200 bps. You are concerned about X Ltd.'s ability to repay the debt due to recent market volatility. To protect your institution from potential default, you decide to purchase a Credit Default Swap (CDS) from ABC Bank Ltd. for same notional amount at a premium quoted at 1% per year through cash settlement. On the respective reset dates for the same period actual MCLR interest rate comes out as follows:\n\n<table class=\"pdf-table\">\n  <thead>\n    <tr>\n      <th>Reset</th>\n      <th>MCLR</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n      <td>1</td>\n      <td>9.75%</td>\n    </tr>\n    <tr>\n      <td>2</td>\n      <td>10.00%</td>\n    </tr>\n    <tr>\n      <td>3</td>\n      <td>10.25%</td>\n    </tr>\n    <tr>\n      <td>4</td>\n      <td>10.35%</td>\n    </tr>\n    <tr>\n      <td>5</td>\n      <td>10.50%</td>\n    </tr>\n    <tr>\n      <td>6</td>\n      <td>10.60%</td>\n    </tr>\n  </tbody>\n</table>\n\nFrom the information given above, choose the correct answer to the following questions:",
+    "questions": [
+      {
+        "question_number": 1,
+        "question_text": "The primary purpose of a Credit Default Swap (CDS) is...................",
+        "options": {
+          "a": "to increase the value of bonds.",
+          "b": "to protect against default risk of a debt obligation.",
+          "c": "to provide guaranteed profit to the buyer.",
+          "d": "to create a new form of loan."
+        },
+        "correct_option": "b",
+        "explanation_html": "Refer the concept of Credit Default Swap."
+      },
+      {
+        "question_number": 2,
+        "question_text": "Which of the following statements is true about CDS contracts?",
+        "options": {
+          "a": "CDS contracts cannot be used for speculation.",
+          "b": "CDS contracts are governed by government regulations.",
+          "c": "CDS contracts are private agreements between two parties.",
+          "d": "CDS contracts eliminate all risks for the buyer."
+        },
+        "correct_option": "c",
+        "explanation_html": "CDS Contracts can also be used for speculation purpose as well. Regulated by ISDA. CDS provide protection against default risk only."
+      },
+      {
+        "question_number": 3,
+        "question_text": "Which organization publishes the guidelines and rules for conducting Credit Default Swap transactions?",
+        "options": {
+          "a": "Federal Reserve",
+          "b": "International Swap and Derivative Association (ISDA)",
+          "c": "Securities and Exchange Commission (SEC)",
+          "d": "World Trade Organization (WTO)"
+        },
+        "correct_option": "b",
+        "explanation_html": "Being OTC in nature."
+      },
+      {
+        "question_number": 4,
+        "question_text": "Assuming no default occurs the total premium your company will pay during the designated loan period shall be........",
+        "options": {
+          "a": "₹ 5 crore",
+          "b": "₹ 10 crore",
+          "c": "₹ 15 crore",
+          "d": "₹ 30 crore"
+        },
+        "correct_option": "c",
+        "explanation_html": "₹ 500 crore x 1% x 3 = ₹ 15 crore"
+      },
+      {
+        "question_number": 5,
+        "question_text": "Suppose if the lender defaults somewhere in the beginning of third year of loan (after payment of interest upto 2 years) and the market value of a reference loans falls to 75% of its par value, then ABC Bank will pay your company ...........in a cash settlement.",
+        "options": {
+          "a": "₹ 15 crore",
+          "b": "₹ 30 crore",
+          "c": "₹ 125 crore",
+          "d": "₹ 500 crore"
+        },
+        "correct_option": "c",
+        "explanation_html": "₹ 500 crore(1 – 0.75) = ₹ 125 crore"
+      }
+    ]
+  },
+  {
+    "scenario_number": 42,
+    "title": "CASE SCENARIO 42",
+    "passage_html": "XYZ Ltd. is a mid-sized manufacturing company that produces industrial equipment. The company is considering a new investment project—a state-of- the-art automated production line, which is expected to improve production efficiency. The details of the same project are as follows:\n\n<table class=\"pdf-table\">\n  <thead>\n    <tr>\n      <th></th>\n      <th>₹</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n      <td>Initial Cost of the project</td>\n      <td>10,00,000</td>\n    </tr>\n    <tr>\n      <td>Sales price/unit</td>\n      <td>60</td>\n    </tr>\n    <tr>\n      <td>Cost/unit<br>Sales volumes</td>\n      <td>40</td>\n    </tr>\n    <tr>\n      <td>Year 1</td>\n      <td>20000 units</td>\n    </tr>\n    <tr>\n      <td>Year 2</td>\n      <td>30000 units</td>\n    </tr>\n    <tr>\n      <td>Year 3</td>\n      <td>30000 units</td>\n    </tr>\n  </tbody>\n</table>\n\nThe applicable discount rate is 10% p.a. From the information given above, choose the correct answer to the following questions:",
+    "questions": [
+      {
+        "question_number": 1,
+        "question_text": "Sensitivity analysis helps to identify…………………..",
+        "options": {
+          "a": "the exact profitability of the project",
+          "b": "the break-even point.",
+          "c": "the degree to which a change in each variable affects the NPV.",
+          "d": "the amount of investment required"
+        },
+        "correct_option": "c",
+        "explanation_html": "Other options are related to Profitability and Investment."
+      },
+      {
+        "question_number": 2,
+        "question_text": "The sale price per unit so that the project would break even with zero NPV shall be approximately…………..",
+        "options": {
+          "a": "₹ 40.00",
+          "b": "₹ 55.26",
+          "c": "₹ 60.00.",
+          "d": "₹ 44.74"
+        },
+        "correct_option": "b",
+        "explanation_html": "Let the sale price/Unit be S so that the project would break even with 0 NPV. ∴ 10,00,000 = 20,000 × (S- 40) + 30,000 × (S-40) + 30,000 (S-40) 1.1 1.21 1.331 S = ₹ 55.26"
+      },
+      {
+        "question_number": 3,
+        "question_text": "The cost per unit so that the project would break even with zero NPV shall be approximately…………..",
+        "options": {
+          "a": "₹ 40.00",
+          "b": "₹ 55.26",
+          "c": "₹ 60.00.",
+          "d": "₹ 44.74"
+        },
+        "correct_option": "d",
+        "explanation_html": "If sales price = ₹ 60 the cost price required to give a margin of ₹ 15.26 is (₹ 60 – ₹ 15.26) or ₹ 44.74."
+      },
+      {
+        "question_number": 4,
+        "question_text": "Overall …………in the sale volume will lead to the project to break even with zero NPV.",
+        "options": {
+          "a": "increase of 23.68%",
+          "b": "fall of 23.68%",
+          "c": "Increase of 31.03%",
+          "d": "fall of 31.03%"
+        },
+        "correct_option": "b",
+        "explanation_html": "The requisite percentage fall is:- × 3,10,293/13,10,293 100 = 23.68%"
+      },
+      {
+        "question_number": 5,
+        "question_text": "A/an …………in the initial outlay will lead to the project to break even with zero NPV.",
+        "options": {
+          "a": "increase of 23.68%",
+          "b": "fall of 23.68%",
+          "c": "Increase of 31.03%",
+          "d": "fall of 31.03%"
+        },
+        "correct_option": "c",
+        "explanation_html": "Since PV of inflows remains at ₹ 13,10,293 the initial outlay must also be the same. Percentage rise = (3,10,293/10,00,000) x 100 = 31.03%."
+      }
+    ]
+  },
+  {
+    "scenario_number": 43,
+    "title": "CASE SCENARIO 43",
+    "passage_html": "You are an investment analyst working for a financial advisory firm. You have been asked to analyze the bond market's yield curve to assist your clients in making investment decisions. The yield curve represents the relationship between the interest rates (yield) and the time to maturity for debt securities, usually government bonds. For simplicity, assume the following yield data for government bonds over various maturities (measured in years): Yield Curve Table\n\n<table class=\"pdf-table\">\n  <thead>\n    <tr>\n      <th>Maturity (Years)</th>\n      <th>Yield (%)</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n      <td>1 Year</td>\n      <td>3.00%</td>\n    </tr>\n    <tr>\n      <td>2 Years</td>\n      <td>4.00%</td>\n    </tr>\n    <tr>\n      <td>3 Years</td>\n      <td>5.00%</td>\n    </tr>\n    <tr>\n      <td>5 Years</td>\n      <td>6.00%</td>\n    </tr>\n    <tr>\n      <td>7 Years</td>\n      <td>6.40%</td>\n    </tr>\n    <tr>\n      <td>10 Years</td>\n      <td>7.00%</td>\n    </tr>\n    <tr>\n      <td>15 Years</td>\n      <td>7.40%</td>\n    </tr>\n    <tr>\n      <td>30 Years</td>\n      <td>7.60%</td>\n    </tr>\n  </tbody>\n</table>\n\nFrom the information given above, choose the correct answer to the following questions:",
+    "questions": [
+      {
+        "question_number": 1,
+        "question_text": "The main characteristic of a normal yield curve is……………….",
+        "options": {
+          "a": "Short-term yields are higher than long-term yields.",
+          "b": "Short-term yields are lower than long-term yields.",
+          "c": "Yields remain the same across all maturities.",
+          "d": "Yields fluctuate randomly over different maturities."
+        },
+        "correct_option": "b",
+        "explanation_html": "Long term bonds carry higher interest rate risk."
+      },
+      {
+        "question_number": 2,
+        "question_text": "Based on the revised yield data, what is the yield spread between the 10- year bond and the 1-year bond?",
+        "options": {
+          "a": "2.0%",
+          "b": "3.5%",
+          "c": "4.0%",
+          "d": "5.0%"
+        },
+        "correct_option": "c",
+        "explanation_html": "7.00% - 3.00% = 4.00%"
+      },
+      {
+        "question_number": 3,
+        "question_text": "An inverted yield curve typically indicates………………",
+        "options": {
+          "a": "Economic growth",
+          "b": "Economic uncertainty",
+          "c": "An upcoming recession",
+          "d": "Inflationary pressure"
+        },
+        "correct_option": "c",
+        "explanation_html": "Investors are pessimistic about long term perspective of the economy."
+      },
+      {
+        "question_number": 4,
+        "question_text": "If an investor is looking to invest for 2 years starting 3 years from now, the forward rate he would expect shall be………",
+        "options": {
+          "a": "7.41%",
+          "b": "7.52%",
+          "c": "7.76%",
+          "d": "7.93%"
+        },
+        "correct_option": "b",
+        "explanation_html": "[(1.06)5/(1.05)3]½ - 1 = 7.52%"
+      },
+      {
+        "question_number": 5,
+        "question_text": "If an investor is looking to invest for 2 years starting 5 years from now, the forward rate he would expect shall be………",
+        "options": {
+          "a": "7.41%",
+          "b": "7.52%",
+          "c": "7.76%",
+          "d": "7.93%"
+        },
+        "correct_option": "a",
+        "explanation_html": "[(1.064)7/(1.06)5]½ - 1 = 7.41%"
+      }
+    ]
+  },
+  {
+    "scenario_number": 44,
+    "title": "CASE SCENARIO 44",
+    "passage_html": "Following Financial data are available for PQR Ltd. for the financial year ending 2023:\n\n<table class=\"pdf-table\">\n  <thead>\n    <tr>\n      <th></th>\n      <th>(₹ in lakh)</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n      <td>8% Debentures</td>\n      <td>1 2 5</td>\n    </tr>\n    <tr>\n      <td>10% Bonds (2022)</td>\n      <td>50</td>\n    </tr>\n    <tr>\n      <td>Equity Shares (₹10 each)</td>\n      <td>100</td>\n    </tr>\n    <tr>\n      <td>Reserves and Surplus</td>\n      <td>300</td>\n    </tr>\n  </tbody>\n</table>\n\n<table class=\"pdf-table\">\n  <thead>\n    <tr>\n      <th>Total Assets</th>\n      <th>600</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n      <td>Assets Turnovers ratio</td>\n      <td>1.1</td>\n    </tr>\n    <tr>\n      <td>Effective interest rate</td>\n      <td>8%</td>\n    </tr>\n    <tr>\n      <td>Effective tax rate</td>\n      <td>40%</td>\n    </tr>\n    <tr>\n      <td>Operating margin</td>\n      <td>10%</td>\n    </tr>\n    <tr>\n      <td>Dividend payout ratio</td>\n      <td>16.67%</td>\n    </tr>\n    <tr>\n      <td>Current market Price of Share</td>\n      <td>₹ 14</td>\n    </tr>\n    <tr>\n      <td>Required rate of return of investors</td>\n      <td>15%</td>\n    </tr>\n  </tbody>\n</table>\n\nFrom the information given above, choose the correct answer to the following questions:",
+    "questions": [
+      {
+        "question_number": 1,
+        "question_text": "10% Bonds must have issued in the month of…………….",
+        "options": {
+          "a": "May 2022",
+          "b": "June 2022",
+          "c": "July 2022",
+          "d": "August 2022"
+        },
+        "correct_option": "b",
+        "explanation_html": "175×8%-125×8% = 0.8 year i.e. 9.6 months prior to 31.03.2023 50×10%"
+      },
+      {
+        "question_number": 2,
+        "question_text": "Amount of retailed earning for the financial year 2023 approximately is…………..",
+        "options": {
+          "a": "₹ 52.00 lakh",
+          "b": "₹ 31.20 lakh",
+          "c": "₹ 26.00 lakh",
+          "d": "₹ 5.20 lakh"
+        },
+        "correct_option": "c",
+        "explanation_html": "�(1 – 16.67%) [(600� x 1.10 x 10% - 175 x 8%)(1 – 0.40)] = 26"
+      },
+      {
+        "question_number": 3,
+        "question_text": "Return on Equity (ROE) of PQR Ltd. is…………..",
+        "options": {
+          "a": "15.00%",
+          "b": "6.50%",
+          "c": "10.00%",
+          "d": "7.80%"
+        },
+        "correct_option": "d",
+        "explanation_html": "[(600 x 1.10 x 10% - 175 x 8%)(1 – 0.40)]/ 400 = 7.80%"
+      },
+      {
+        "question_number": 4,
+        "question_text": "Sustainable Growth Rate of PQR Ltd. shall be approximately…………..",
+        "options": {
+          "a": "15.00%",
+          "b": "6.50%",
+          "c": "10.00%",
+          "d": "7.80%"
+        },
+        "correct_option": "b",
+        "explanation_html": "ROE(1 – d) = 7.80 x (1 – 0.1667) =6.50%"
+      },
+      {
+        "question_number": 5,
+        "question_text": "Fair price of share of PQR Ltd. using Dividend Discount Model shall be approximately………….",
+        "options": {
+          "a": "₹ 10",
+          "b": "₹ 14",
+          "c": "₹ 6.12",
+          "d": "₹ 6.51"
+        },
+        "correct_option": "d",
+        "explanation_html": "3.12(0.1667)(1.065) = 6.51 0.15- 0.065"
+      }
+    ]
+  },
+  {
+    "scenario_number": 45,
+    "title": "CASE SCENARIO 45",
+    "passage_html": "An Indian exporting firm, Rohit and Bros. exported good worth of AUD 1 million to an importer in Sydney. Rohit and Bros. are worried about likely depreciation of AUD in near future as it is likely that the export sum will be received after 3 months. Today as such as there is no derivative contract is available in AUD to hedge itself from such depreciation. The following data is given: Spot rate : ₹ 56.00/AUD 3 months interest rate : India : 12 per cent per annum : Australia : 5 per cent per annum From the information given above, choose the correct answer to the following questions:",
+    "questions": [
+      {
+        "question_number": 1,
+        "question_text": "………….. hedging technique can be used Rohit and Bros. to hedge itself against the risk of depreciation of AUD.",
+        "options": {
+          "a": "Forward Contract",
+          "b": "Future Contract",
+          "c": "Option Contract",
+          "d": "Money Market Hedge"
+        },
+        "correct_option": "d",
+        "explanation_html": "Money Market Hedging technique is used when derivatives to hedge the risk are not available."
+      },
+      {
+        "question_number": 2,
+        "question_text": "Suppose if Rohit and Bros. want to borrow some amount in AUD in such a manner that the receivable amount can be used to repay the amount borrowed along with interest. The amount to be borrowed by Rohit and Bros. shall be approximately………",
+        "options": {
+          "a": "AUD 1 million",
+          "b": "AUD 9,87,654",
+          "c": "₹ 5,53,08,624",
+          "d": "₹ 5,69,67,882"
+        },
+        "correct_option": "b",
+        "explanation_html": "AUD 1000000/(1+0.05/4) = AUD 987654"
+      },
+      {
+        "question_number": 3,
+        "question_text": "Suppose if Rohit and Bros. borrows a designated amount in AUD for 3 months in such a manner that the receivable amount can be used to repay the amount borrowed along with interest and plan to invest same amount in Indian spot market. The same amount available for investment shall be approximately………",
+        "options": {
+          "a": "AUD 1 million",
+          "b": "AUD 9,87,654",
+          "c": "₹ 5,53,08,624",
+          "d": "₹ 5,69,67,882"
+        },
+        "correct_option": "c",
+        "explanation_html": "AUD 987654 x ₹ 56.00 = ₹ 55308624"
+      },
+      {
+        "question_number": 4,
+        "question_text": "Suppose if Rohit and Bros. borrows a designated amount for 3 months in AUD in such a manner that the receivable amount can be used to repay the amount borrowed along with interest. Further he plans to invest same amount in Indian spot market. The amount obtained after 3 months of investment shall be approximately………",
+        "options": {
+          "a": "AUD 1 Million",
+          "b": "AUD 9,87,654",
+          "c": "₹ 5,53,08,624",
+          "d": "₹ 5,69,67,883"
+        },
+        "correct_option": "d",
+        "explanation_html": "₹ 55308624(1 + 0.12/4) = ₹ 56967883"
+      },
+      {
+        "question_number": 5,
+        "question_text": "Suppose if Interest Rate Parity theory is held between INR and AUD, then forward rate between INR and AUD for 6 month should be…………..",
+        "options": {
+          "a": "₹ 51.54/AUD",
+          "b": "₹ 57.91/AUD",
+          "c": "₹ 52.50/AUD",
+          "d": "₹ 59.73/AUD"
+        },
+        "correct_option": "b",
+        "explanation_html": "₹ 56 (1 + 0.12/2)/(1 + 0.05/2) = ₹ 57.91"
+      }
+    ]
+  },
+  {
+    "scenario_number": 46,
+    "title": "CASE SCENARIO 46",
+    "passage_html": "Mr. B is a rational risk taker. He takes his position in a single stock for 4 days in a week. He does not take a position on Friday to avoid weekend effect and takes position only for four days in a week i.e. Monday to Thursday. He transfers the amount on Monday morning and withdraws the balance on Friday morning. He desires to take a maximum exposure in the single stock (not the portfolio) where Value at Risk (VAR) should not exceed the balance lying in his bank account. The position by his manager, as per standing instructions, is taken on the free balance lying in the bank account in the morning on each Monday. On Monday morning (before opening of the capital market) he has transferred an amount of ₹ 11 Crore to his bank account. A fixed deposit also matured on this Monday. The maturity amount of ₹ 63,42,560 was also credited to his account by the bank in the morning of the Monday. However, Mr. B received the intimation of the same in the evening. The bank needs a minimum balance of ₹ 1,000 all the time. The other information with respect to stocks X and Y, which are under consideration for this week, is as under:\n\n<table class=\"pdf-table\">\n  <thead>\n    <tr>\n      <th>X</th>\n      <th>Y</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n      <td>Return<br>Probability</td>\n      <td>Return<br>Probability</td>\n    </tr>\n    <tr>\n      <td>6<br>0.10</td>\n      <td>4<br>0.10</td>\n    </tr>\n    <tr>\n      <td>7<br>0.25</td>\n      <td>6<br>0.20</td>\n    </tr>\n    <tr>\n      <td>8<br>0.30</td>\n      <td>8<br>0.40</td>\n    </tr>\n    <tr>\n      <td>9<br>0.25</td>\n      <td>10<br>0.20</td>\n    </tr>\n    <tr>\n      <td>10<br>0.10</td>\n      <td>12<br>0.10</td>\n    </tr>\n  </tbody>\n</table>\n\nFrom the information given above, choose the correct answer to the following questions:",
+    "questions": [
+      {
+        "question_number": 1,
+        "question_text": "Available amount which can be used by Mr. B for potential exposure for 4 days on Monday morning shall be………………",
+        "options": {
+          "a": "₹ 11,00,00,000",
+          "b": "₹ 11,63,41,560",
+          "c": "₹ 11,00,01,000",
+          "d": "₹ 11,63,42,560"
+        },
+        "correct_option": "b",
+        "explanation_html": "₹ 11,00,00,000 + ₹ 63,42,560 - ₹ 1,000 = ₹11,63,41,560"
+      },
+      {
+        "question_number": 2,
+        "question_text": "The Z-score at a 99% confidence level for Mr. B’s Value at Risk (VaR) is………….",
+        "options": {
+          "a": "1.64",
+          "b": "1.96",
+          "c": "2.33",
+          "d": "2.58"
+        },
+        "correct_option": "c",
+        "explanation_html": "1.64 = 95%, 1.96 = 98% and 2.58 = 99.50%"
+      },
+      {
+        "question_number": 3,
+        "question_text": "The expected return for the stocks X is……….",
+        "options": {
+          "a": "7%",
+          "b": "8%",
+          "c": "9%",
+          "d": "10%"
+        },
+        "correct_option": "b",
+        "explanation_html": "6 x 0.10 +7 x 0.25 +8 x 0.30 + 9 x 0.25 + 10 x 0.10 = 8%"
+      },
+      {
+        "question_number": 4,
+        "question_text": "The expected return for the stocks Y is……….",
+        "options": {
+          "a": "7%",
+          "b": "8%",
+          "c": "9%",
+          "d": "10%"
+        },
+        "correct_option": "b",
+        "explanation_html": "4 x 0.10 + 6 x 0.20 + 8 x 0.40 + 10 x 0.20 + 12 x 0.10 = 8%"
+      },
+      {
+        "question_number": 5,
+        "question_text": "In which stock should Mr. B invest in to maximize his returns while maintaining his Value at Risk (VaR) within acceptable limits?",
+        "options": {
+          "a": "Stock X",
+          "b": "Stock Y",
+          "c": "Both stocks are equally good",
+          "d": "Neither stock is suitable"
+        },
+        "correct_option": "a",
+        "explanation_html": "1.14 2.19 CV = = 0.1425 and CV = = 0.274 x Y 8 8 8"
+      }
+    ]
+  },
+  {
+    "scenario_number": 47,
+    "title": "CASE SCENARIO 47",
+    "passage_html": "XYZ Ltd. plans to invest ₹ 800,000 in a new unit. The project is expected to have a useful life of 4 years, with no salvage value at the end of its life. The annual depreciation charge for the project is ₹ 200,000. Projected revenues and costs for the project, ignoring inflation, are provided as follows:\n\n<table class=\"pdf-table\">\n  <thead>\n    <tr>\n      <th>Year</th>\n      <th>Revenues (₹)</th>\n      <th>Costs (₹)</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n      <td>1</td>\n      <td>600,000</td>\n      <td>300,000</td>\n    </tr>\n    <tr>\n      <td>2</td>\n      <td>700,000</td>\n      <td>400,000</td>\n    </tr>\n    <tr>\n      <td>3</td>\n      <td>800,000</td>\n      <td>400,000</td>\n    </tr>\n    <tr>\n      <td>4</td>\n      <td>800,000</td>\n      <td>400,000</td>\n    </tr>\n  </tbody>\n</table>\n\nXYZ Ltd. is subject to a corporate tax rate of 60%, and the cost of capital for the project, including inflation premium, is 10%. Depreciation provides a tax benefit, and inflation rates for revenues and costs over the project’s lifespan are as follows:\n\n<table class=\"pdf-table\">\n  <thead>\n    <tr>\n      <th>Year</th>\n      <th>Revenue Inflation</th>\n      <th>Cost Inflation</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n      <td>1</td>\n      <td>10%</td>\n      <td>12%</td>\n    </tr>\n    <tr>\n      <td>2</td>\n      <td>9%</td>\n      <td>10%</td>\n    </tr>\n    <tr>\n      <td>3</td>\n      <td>8%</td>\n      <td>9%</td>\n    </tr>\n    <tr>\n      <td>4</td>\n      <td>7%</td>\n      <td>8%</td>\n    </tr>\n  </tbody>\n</table>\n\nFrom the information given above, choose the correct answer to the following questions:",
+    "questions": [
+      {
+        "question_number": 1,
+        "question_text": "The depreciation tax benefit for the project per year shall be……………",
+        "options": {
+          "a": "₹ 120,000",
+          "b": "₹ 150,000",
+          "c": "₹ 200,000",
+          "d": "₹ 180,000"
+        },
+        "correct_option": "a",
+        "explanation_html": "₹ 2,00,000 x 0.60 = ₹ 1,20,000"
+      },
+      {
+        "question_number": 2,
+        "question_text": "The inflation-adjusted revenue in Year 2 shall be…………….",
+        "options": {
+          "a": "₹ 700,000",
+          "b": "₹ 839,300",
+          "c": "₹ 492,800",
+          "d": "₹ 501,760"
+        },
+        "correct_option": "b",
+        "explanation_html": "₹ 7,00,000(1.10)(1.09) = ₹ 8,39,300"
+      },
+      {
+        "question_number": 3,
+        "question_text": "The total cash inflow in Year 1 after adjusting for inflation and tax benefit on depreciation shall be…………",
+        "options": {
+          "a": "₹ 330,000",
+          "b": "₹ 336,000",
+          "c": "₹ 249,600",
+          "d": "₹ 492,800"
+        },
+        "correct_option": "c",
+        "explanation_html": "[₹ 6,00,000(1.10) – ₹ 3,00,000(1.12)]0.40 + ₹ 1,20,000 = ₹ 2,49,600"
+      },
+      {
+        "question_number": 4,
+        "question_text": "The inflation-adjusted cost in Year 2 shall be…………….",
+        "options": {
+          "a": "₹ 700,000",
+          "b": "₹ 839,300",
+          "c": "₹ 492,800",
+          "d": "₹ 501,760"
+        },
+        "correct_option": "c",
+        "explanation_html": "₹ 4,00,000(1.12)(1.10) = ₹ 4,92,800"
+      },
+      {
+        "question_number": 5,
+        "question_text": "The present value of cash inflow for the year 3 shall be approximately………..",
+        "options": {
+          "a": "₹ 213,604",
+          "b": "₹ 226,299",
+          "c": "₹ 226,886",
+          "d": "₹ 239,949"
+        },
+        "correct_option": "d",
+        "explanation_html": "[{₹ 8,00,000(1.10)(1.09)(1.08) - ₹ 4,00,000(1.12)(1.10)(1.09)}0.40 + ₹ 1,20,000] PVF (10%, 3)"
+      }
+    ]
+  },
+  {
+    "scenario_number": 48,
+    "title": "CASE SCENARIO 48",
+    "passage_html": "An investor is evaluating two companies, A Ltd. and B Ltd., to determine which company is a better investment. Both companies have different expected returns, standard deviations, and betas. • A Ltd. has an expected return of 22% and a standard deviation (risk) of 40%. Its Beta is 0.86. • B Ltd. has an expected return of 24%, a standard deviation of 38%, and a Beta of 1.24. The correlation coefficient between the returns of A Ltd. and B Ltd. is 0.72, and the standard deviation of the market return is 20%. From the information given above, choose the correct answer to the following questions:",
+    "questions": [
+      {
+        "question_number": 1,
+        "question_text": "The portfolio's expected rate of return, if the investor invests 30% in B Ltd. and 70% in A Ltd. shall be……………….",
+        "options": {
+          "a": "22.00%",
+          "b": "22.60%",
+          "c": "23.40%",
+          "d": "24.00%"
+        },
+        "correct_option": "b",
+        "explanation_html": "22% X 0.70 + 24% X 0.30 = 22.60%"
+      },
+      {
+        "question_number": 2,
+        "question_text": "The standard deviation of the investor's portfolio if 30% is invested in B Ltd. and 70% in A Ltd. shall be approximately……………..",
+        "options": {
+          "a": "40%",
+          "b": "39%",
+          "c": "37%",
+          "d": "35%"
+        },
+        "correct_option": "c",
+        "explanation_html": "Variance = (40)2(0.70)2 + (38)2(0.30)2 + 2(0.70)(0.30)(40)(38)(0.72) = 1373.61, SD = = 37.08"
+      },
+      {
+        "question_number": 3,
+        "question_text": "The covariance between returns of Stock of A Ltd. and B Ltd. shall be approximately……….",
+        "options": {
+          "a": "0.0230",
+          "b": "0.1094",
+          "c": "0.7200",
+          "d": "0.2189"
+        },
+        "correct_option": "b",
+        "explanation_html": "(0.72)(0.40)(0.38) = 0.1094 √1375.61"
+      },
+      {
+        "question_number": 4,
+        "question_text": "Based on the data given the Risk Free Rate of Return shall be approximately ………..",
+        "options": {
+          "a": "17.48%",
+          "b": "18.00%",
+          "c": "20.00%",
+          "d": "22.74%"
+        },
+        "correct_option": "a",
+        "explanation_html": "Solve simultaneous equations 22 = R + 0.86(R - R) and 24 = f m f R + 1.24(R - R) f m f"
+      },
+      {
+        "question_number": 5,
+        "question_text": "Based on the data given the Market Rate of Return shall be approximately……………",
+        "options": {
+          "a": "17.48%",
+          "b": "18.00%",
+          "c": "20.00%",
+          "d": "22.74%"
+        },
+        "correct_option": "d",
+        "explanation_html": "Solve simultaneous equations 22 = R + 0.86(R - R) and 24 = f m f R + 1.24(R - R) f m f"
+      }
+    ]
+  },
+  {
+    "scenario_number": 49,
+    "title": "CASE SCENARIO 49",
+    "passage_html": "XYZ Ltd., a U.S. firm, will require £ 300,000 in 180 days and is evaluating different strategies to hedge against currency risk. The available market data is as follows: Current Spot Rate: 1 £ = $ 2.00 180-Day Forward Rate: 1 £ = $ 1.96 Interest Rates: • UK (180 days): o Deposit Rate: 4.5% o Borrowing Rate: 5% • US (180 days): o Deposit Rate: 5% o Borrowing Rate: 5.5% Option Contract: • Call option available on £, expiring in 180 days with: o Exercise price: $ 1.97 o Premium: $ 0.04 XYZ Ltd. has forecasted the following probabilities for spot rates after 180 days:\n\n<table class=\"pdf-table\">\n  <thead>\n    <tr>\n      <th>Spot Rate</th>\n      <th>Probability</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n      <td>$ 1.91</td>\n      <td>25%</td>\n    </tr>\n    <tr>\n      <td>$ 1.95</td>\n      <td>60%</td>\n    </tr>\n    <tr>\n      <td>$ 2.05</td>\n      <td>15%</td>\n    </tr>\n  </tbody>\n</table>\n\nFrom the information given above, choose the correct answer to the following questions:",
+    "questions": [
+      {
+        "question_number": 1,
+        "question_text": "The expected dollar amount needed .................if XYZ Ltd. does not hedge.",
+        "options": {
+          "a": "$ 5,88,000",
+          "b": "$ 6,05,741",
+          "c": "$ 5,95,560",
+          "d": "$ 5,86,500"
+        },
+        "correct_option": "d",
+        "explanation_html": "($1.91 x 0.25 + $1.95 x 0.60 + $2.05 x 0.15) £ 300000 = £ 5,86,500"
+      },
+      {
+        "question_number": 2,
+        "question_text": "If XYZ Ltd. chooses the forward contract option, the expected dollar amount needed in 180 days, the total dollar amount required shall be....................",
+        "options": {
+          "a": "$ 5,88,000",
+          "b": "$ 6,05,741",
+          "c": "$ 5,95,560",
+          "d": "$ 5,86,500"
+        },
+        "correct_option": "a",
+        "explanation_html": "$1.96 x £ 300000 = $ 5,88,000"
+      },
+      {
+        "question_number": 3,
+        "question_text": "Under the money market hedge, approximately how much will XYZ Ltd. need to repay after 180 days?",
+        "options": {
+          "a": "$ 5,88,000",
+          "b": "$ 6,05,741",
+          "c": "$ 5,95,560",
+          "d": "$ 5,86,500"
+        },
+        "correct_option": "b",
+        "explanation_html": "Borrow $, convert to £, invest £, repay $ loan in 180 days Amount in £ to be invested = 3,00,000/1.045 = £ 2,87,081 Amount of $ needed to convert into £ = 2,87,081 x 2 = $ 5,74,162 Interest and principal on $ loan after 180 days = $5,74,162 x 1.055 = $ 6,05,741"
+      },
+      {
+        "question_number": 4,
+        "question_text": "If XYZ Ltd. chooses the call option contract, after 180 days the total cost in dollar for £ 300,000 (inclusive of interest on Premium amount) shall be....................",
+        "options": {
+          "a": "$ 5,88,000",
+          "b": "$ 6,05,741",
+          "c": "$ 5,95,560",
+          "d": "$ 5,86,500"
+        },
+        "correct_option": "c",
+        "explanation_html": "[($1.91 + 0.04) x 0.25 + ($1.95 + 0.04) x 0.60 + ($1.97 + 0.04) x 0.15] £ 3,00,000 + $12,000 x 5.5% = $5,95,560"
+      },
+      {
+        "question_number": 5,
+        "question_text": "The expected spot rate per £ after 180 days shall be approximately.................",
+        "options": {
+          "a": "$ 1.91",
+          "b": "$ 1.94",
+          "c": "$ 1.96",
+          "d": "$ 2.05"
+        },
+        "correct_option": "c",
+        "explanation_html": "$1.91 x 0.25 + $1.95 x 0.60 + $2.05 x 0.15 = $1.955 say $1.96"
+      }
+    ]
+  },
+  {
+    "scenario_number": 50,
+    "title": "CASE SCENARIO 50",
+    "passage_html": "P Ltd. is planning to borrow an amount of ₹ 60 crores for a period of 3 months in the coming 6 month's time from now. The current rate of interest is 9% p.a., but it is likely to go up in 6 month’s time. The company wants to hedge itself against the likely increase in interest rate. You as CFO has been asked to suggest both traditional as well as modern methods to hedge interest rate risk. Suppose the banker of P Ltd. has quoted the following Forward Rate Agreement (FRA) rates:\n\n<table class=\"pdf-table\">\n  <thead>\n    <tr>\n      <th>3 x 6</th>\n      <th>9.10%</th>\n      <th>9.15%</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n      <td>6 x 9</td>\n      <td>9.20%</td>\n      <td>9.30%</td>\n    </tr>\n    <tr>\n      <td>9 x 12</td>\n      <td>9.35%</td>\n      <td>9.45%</td>\n    </tr>\n  </tbody>\n</table>\n\nP Ltd. has already issued redeemable bonds or debentures. From the information given above, choose the correct answer to the following questions:",
+    "questions": [
+      {
+        "question_number": 1,
+        "question_text": "Which of the following rate shall be applicable for FRA to hedge the interest rate risk if P Ltd. agrees to adopt this method to hedge interest rate risk?",
+        "options": {
+          "a": "9.10% p.a.",
+          "b": "9.30% p.a.",
+          "c": "9.35% p.a.",
+          "d": "9.45% p.a."
+        },
+        "correct_option": "b",
+        "explanation_html": "P Ltd. is planning to borrow after 6 months for a period of 3 months and higher of two rates shall be taken."
+      },
+      {
+        "question_number": 2,
+        "question_text": "If the actual rate of interest after 6 months happens to be 9.60%, approximately the settlement amount of.................",
+        "options": {
+          "a": "₹ 733,855 shall be paid by P Ltd. to its Banker.",
+          "b": "₹ 439,453 shall be paid by P Ltd. to its Banker.",
+          "c": "₹ 439,453 shall be paid by Banker to P Ltd.",
+          "d": "₹ 733,855 shall be paid by Banker to P Ltd."
+        },
+        "correct_option": "c",
+        "explanation_html": "(9.60-9.30) 1 ₹ 60 crore × = ₹ 439,453 1+ 0.096 4 4"
+      },
+      {
+        "question_number": 3,
+        "question_text": "If the actual rate of interest after 6 months happens to be 8.80%, approximately the settlement amount of.................",
+        "options": {
+          "a": "₹ 733,855 shall be paid by P Ltd. to its Banker.",
+          "b": "₹ 439,453 shall be paid by P Ltd. to its Banker.",
+          "c": "₹ 439,453 shall be paid by Banker to P Ltd.",
+          "d": "₹ 733,855 shall be paid by Banker to P Ltd."
+        },
+        "correct_option": "a",
+        "explanation_html": "� � (8.80-9.30) 1 ₹ 60 crore × = ₹ 733,855 1+ 0.088 4 4"
+      },
+      {
+        "question_number": 4,
+        "question_text": "Which of the following technique is not the modern technique to hedge the interest rate risk.",
+        "options": {
+          "a": "Interest Rate Futures",
+          "b": "Interest Rate Options",
+          "c": "Interest Rate Swaps",
+          "d": "Forward Rate Agreement"
+        },
+        "correct_option": "d",
+        "explanation_html": "� � FRA is a traditional technique to manage interest rate risk."
+      }
+    ]
+  },
+  {
+    "scenario_number": 51,
+    "title": "CASE SCENARIO 51",
+    "passage_html": "XYZ Ltd., a medium-sized company in the renewable energy sector, is experiencing steady sales growth. The company’s management, however, is concerned about balancing rapid growth with long-term sustainability. In the past year, XYZ’s growth objectives have led to aggressive expansion plans, but management now realizes that such growth might not be financially sustainable in the long run. This raises concerns about how to maintain the company's financial health while meeting its ambitious growth targets. The CFO of XYZ Ltd. highlights the importance of Sustainable Growth Rate (SGR). The company now needs to ensure that its operational and financial policies align with its growth goals. XYZ must avoid expanding too quickly, which could strain its financial resources and lead to excessive borrowing. Moreover, management must also consider the long-term implications of resource consumption, particularly in the renewable energy industry, where sustainability is key to both current and future stakeholders. XYZ Ltd. also realizes that it needs to focus on building its growth capability alongside its growth strategy. Without the necessary infrastructure and financial planning in place, the company’s efforts to achieve long-term, sustainable growth could be in jeopardy. Furthermore, the company is aware of the risks of relying too much on external financing and recognizes the need for a balance between maintaining sufficient equity and minimizing debt. Given the importance of these considerations, XYZ’s management team must now review their growth strategy and financial policies to ensure they are consistent with the firm’s sustainable growth objectives. From the information given above, choose the correct answer to the following questions:",
+    "questions": [
+      {
+        "question_number": 1,
+        "question_text": "The concept of Sustainable Growth Rate introduced by...................",
+        "options": {
+          "a": "Harry Markowitz",
+          "b": "William Sharpe",
+          "c": "Black Scholes",
+          "d": "Robert C. Higgins"
+        },
+        "correct_option": "d",
+        "explanation_html": "Names of Harry Markowitz and William Sharpe are associated with Portfolio Theory and Black Scholes with Derivative Valuation."
+      },
+      {
+        "question_number": 2,
+        "question_text": "The Sustainable Growth Rate (SGR) represents.................",
+        "options": {
+          "a": "the rate at which the company can grow by issuing more equity.",
+          "b": "the maximum rate of growth in sales that can be achieved without borrowing additional funds.",
+          "c": "the growth rate determined by market demand for XYZ’s products.",
+          "d": "the rate of growth determined by inflationary pressures."
+        },
+        "correct_option": "b",
+        "explanation_html": "Refer the concept of Sustainable Growth Rate."
+      },
+      {
+        "question_number": 3,
+        "question_text": "According to the case scenario the risk associated with growing too quickly is that...........",
+        "options": {
+          "a": "the company might not be able to retain competent staff.",
+          "b": "the company could face liquidity issues due to over-expansion.",
+          "c": "the company’s stock price might decline.",
+          "d": "it could reduce the company's market share."
+        },
+        "correct_option": "b",
+        "explanation_html": "Refer facts from case scenario."
+      },
+      {
+        "question_number": 4,
+        "question_text": "Which of the following twin cornerstones are necessary for XYZ Ltd. to achieve sustainable growth?",
+        "options": {
+          "a": "Market conditions and competition.",
+          "b": "Growth capability and growth strategy.",
+          "c": "Product innovation and marketing strategy.",
+          "d": "Cost-cutting measures and increased sales."
+        },
+        "correct_option": "b",
+        "explanation_html": "Refer the concept of Sustainable Growth Rate."
+      },
+      {
+        "question_number": 5,
+        "question_text": "In an inflationary condition if creditors require that XYZ Ltd.’s historical cost debt-to-equity ratio stay constant, the inflation......",
+        "options": {
+          "a": "reduces the need for external financing.",
+          "b": "increases the sustainable growth rate by lowering costs.",
+          "c": "lowers the sustainable growth rate.",
+          "d": "It has no effect on the company's growth rate."
+        },
+        "correct_option": "c",
+        "explanation_html": "Refer the concept of Sustainable Growth Rate."
+      }
+    ]
+  },
+  {
+    "scenario_number": 52,
+    "title": "CASE SCENARIO 52",
+    "passage_html": "The company X Ltd. proposes to take over Y Ltd. The chief executive of the company thinks that shareholders always look for the earnings per share. Therefore, he considers maximization of the earnings per share as his company’s objective. The following information is available in respect of X Ltd. and Y Ltd.\n\n<table class=\"pdf-table\">\n  <thead>\n    <tr>\n      <th>X Ltd.</th>\n      <th>Y Ltd.</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n      <td>Net Profit<br>₹ 80 Lakh</td>\n      <td>₹ 15.75 Lakh</td>\n    </tr>\n    <tr>\n      <td>P/E ratio<br>10.50</td>\n      <td>10.00</td>\n    </tr>\n    <tr>\n      <td>Current market price per share<br>₹ 42</td>\n      <td>₹ 85</td>\n    </tr>\n  </tbody>\n</table>\n\nFrom the information given above, choose the correct answer to the following questions:",
+    "questions": [
+      {
+        "question_number": 1,
+        "question_text": "If the company borrows funds @ 15% rate of interest and buys out Target Company by paying cash, how much it should offer to maintain its EPS assuming tax rate @30%.",
+        "options": {
+          "a": "210 Lakhs",
+          "b": "315 Lakhs",
+          "c": "150 Lakhs",
+          "d": "0 Lakhs"
+        },
+        "correct_option": "c",
+        "explanation_html": "The amount available for Interest Payment =Total PBT (₹ 136.79 Lakh) Less PBT of X Ltd. (₹ 114.29 Lakh) = ₹ 22.50 Lakh Cash can be offered = ₹ 22.50 Lakhs/0.15 = ₹ 150 Lakhs"
+      },
+      {
+        "question_number": 2,
+        "question_text": "Maximum exchange ratio which the company should offer so that the company could keep EPS at current level is............",
+        "options": {
+          "a": "1:0.952",
+          "b": "1:2.125",
+          "c": "1:2.023",
+          "d": "1:0.196"
+        },
+        "correct_option": "b",
+        "explanation_html": "EPS (Y Ltd.) = ₹ 8.5 & EPS (X Ltd.) = ₹ 4 Exchange Ratio = 8.5/4 = 2.125"
+      },
+      {
+        "question_number": 3,
+        "question_text": "No. of shares to be issued by X Ltd. shall be approximately..........................",
+        "options": {
+          "a": "3.9375 Lakhs",
+          "b": "1.7639 Lakhs",
+          "c": "3.7485 Lakhs",
+          "d": "0.3631 Lakhs"
+        },
+        "correct_option": "a",
+        "explanation_html": "No. of Shares of Y Ltd.=1.8529 Lakh Shares [₹ 15.75 Lakh/ ₹ 8.50] No. of shares to be issued by X Ltd. = 1.8529 Lakh * 2.125 = 3.9375 Lakh"
+      }
+    ]
+  },
+  {
+    "scenario_number": 53,
+    "title": "CASE SCENARIO 53",
+    "passage_html": "Following information is related to actions taken in different situation of financial options:\n\n<table class=\"pdf-table\">\n  <thead>\n    <tr>\n      <th>Situation</th>\n      <th>Action</th>\n      <th>Exercise Price</th>\n      <th>Premium</th>\n      <th>Spot Price</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n      <td>I</td>\n      <td>Exercised</td>\n      <td>140</td>\n      <td>20</td>\n      <td>160</td>\n    </tr>\n    <tr>\n      <td>II</td>\n      <td>Exercised</td>\n      <td>200</td>\n      <td>15</td>\n      <td>175</td>\n    </tr>\n    <tr>\n      <td>III</td>\n      <td>Lapsed</td>\n      <td>300</td>\n      <td>25</td>\n      <td>400</td>\n    </tr>\n  </tbody>\n</table>\n\nFrom the information given above, choose the correct answer to the following questions:",
+    "questions": [
+      {
+        "question_number": 1,
+        "question_text": "In Situation III, the investor’s position and the amount of profit / loss is..........................",
+        "options": {
+          "a": "Put option, ₹ (25)",
+          "b": "Call option, ₹ 75",
+          "c": "Short position, ₹ 100",
+          "d": "Long position, ₹ (100)"
+        },
+        "correct_option": "a",
+        "explanation_html": "Since option is lapsed. Thus, only loss is the loss of premium i.e., ₹ 25."
+      },
+      {
+        "question_number": 2,
+        "question_text": "In Situation I, the investor’s position and the amount of profit or loss is…….",
+        "options": {
+          "a": "Put option and ₹ 20",
+          "b": "Call option and ₹ 0",
+          "c": "Put option and ₹ 0",
+          "d": "Call option and ₹ 20"
+        },
+        "correct_option": "b",
+        "explanation_html": "Spot price is more than exercise price. Hence Call option. Profit = ₹ 160 - ₹ 140 = ₹ 20 Net profit = ₹ 20 - ₹ 20 = ₹ 0"
+      },
+      {
+        "question_number": 3,
+        "question_text": "In Situation II, the investor’s position and the amount of profit / loss is……..",
+        "options": {
+          "a": "Put option and ₹ 10",
+          "b": "Call option and ₹ 10",
+          "c": "Put option and ₹ 25",
+          "d": "Call option and ₹ 25"
+        },
+        "correct_option": "a",
+        "explanation_html": "Spot price is Less than exercise price. Hence Put option. Profit = ₹ 200 - ₹ 175 = ₹ 25 Net profit = ₹ 25 - ₹ 15 = ₹ 10"
+      }
+    ]
+  },
+  {
+    "scenario_number": 54,
+    "title": "CASE SCENARIO 54",
+    "passage_html": "The following information is available in respect of Bond A and Bond B.\n\n<table class=\"pdf-table\">\n  <thead>\n    <tr>\n      <th>Bond A</th>\n      <th>Bond B</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n      <td>Face value, redeemable at par<br>₹ 1000</td>\n      <td>₹ 1000</td>\n    </tr>\n    <tr>\n      <td>Coupon rate, payable annually (%)<br>6%</td>\n      <td>10%</td>\n    </tr>\n    <tr>\n      <td>Time to maturity (years)<br>5</td>\n      <td>3</td>\n    </tr>\n  </tbody>\n</table>\n\nAn investor has the portfolio consisting of 75% of Bond A and 25% of Bond B. The current YTMs prevailing in the market is 10%.\n\n<table class=\"pdf-table\">\n  <thead>\n    <tr>\n      <th>Year (n) :</th>\n      <th>1</th>\n      <th>2</th>\n      <th>3</th>\n      <th>4</th>\n      <th>5</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n      <td>PVIF (10%, n) :</td>\n      <td>0.9091</td>\n      <td>0.8264</td>\n      <td>0.7513</td>\n      <td>0.6830</td>\n      <td>0.6209</td>\n    </tr>\n  </tbody>\n</table>\n\nFrom the information given above, choose the correct answer to the following questions:",
+    "questions": [
+      {
+        "question_number": 1,
+        "question_text": "The price and duration of the Bond B shall be approximately ………………..respectively.",
+        "options": {
+          "a": "₹ 826.43 and 2.49",
+          "b": "₹ 1,000 and 2.74",
+          "c": "₹ 924.85 and 2.74",
+          "d": "₹ 1,000 and 2.49"
+        },
+        "correct_option": "b",
+        "explanation_html": "Price of Bond B = 100*0.9091 + 100*0.8264 + 1100*0.7513 = ₹ 1000. Duration of Bond B = [(90.91*1) + (82.64*2) + (826.43*3)] / 1000 = 2.74"
+      },
+      {
+        "question_number": 2,
+        "question_text": "The price and duration of the Bond A shall be approximately ………………respectively.",
+        "options": {
+          "a": "₹ 848.34 and 4.41",
+          "b": "₹ 811.09 and 4.38",
+          "c": "₹ 1,227.44 and 4.41",
+          "d": "₹ 658.15 and 3.90"
+        },
+        "correct_option": "a",
+        "explanation_html": "Price of Bond A = 60*0.9091 + 60*0.8264 + 60*0.7513 + 60*0.6830 + 1060*0.6209 = ₹ 848.34 Duration of Bond A = [(54.55*1) + (49.58*2) + (45.08*3) + (40.98*4) + (658.15*5)] /848.34 = 4.41 (Approx.)"
+      },
+      {
+        "question_number": 3,
+        "question_text": "The price sensitivity of the portfolio approximately is……………………..",
+        "options": {
+          "a": "-4.03",
+          "b": "-2.49",
+          "c": "-3.63",
+          "d": "-3.98"
+        },
+        "correct_option": "c",
+        "explanation_html": "Weighted average of duration Bond-A 4.41 75% 3.308 Bond-B 2.74 25% 0.685 Average Duration Price Sensitivity = 3.993/1.10 = 3.63 3.993"
+      }
+    ]
+  },
+  {
+    "scenario_number": 55,
+    "title": "CASE SCENARIO 55",
+    "passage_html": "Z Ltd. paid a dividend of ₹ 5 for the current year. The dividend is expected to grow at 25% for the next 6 years and at 10% per annum thereafter. The return of government bond is 13% per annum and market return is expected to be around 20%. The correlation between market return and Z Ltd. share return is 0.3733. The standard deviation of market return and Z Ltd. shares is 12% and 18% respectively. Round off calculations to two decimal places. From the information given above, choose the correct answer to the following questions:",
+    "questions": [
+      {
+        "question_number": 1,
+        "question_text": "What is the expected return of Z Ltd shares?",
+        "options": {
+          "a": "15%",
+          "b": "23.92%",
+          "c": "16.92%",
+          "d": "16.5%"
+        },
+        "correct_option": "c",
+        "explanation_html": "ß = 0.3733 × (18/12) = 0.560 Expected Return = 13% + 0.560 (20%-13%) = 16.92%"
+      },
+      {
+        "question_number": 2,
+        "question_text": "The intrinsic value of Z Ltd. shares approximately is……………………",
+        "options": {
+          "a": "₹ 156.75",
+          "b": "₹ 303.14",
+          "c": "₹ 349.62",
+          "d": "₹ 341.30"
+        },
+        "correct_option": "a",
+        "explanation_html": "PV of dividend= 6.25*0.855 + 7.81*0.732 + 9.77*0.626 + 12.21*0.535 + 15.26*0.458 + 19.075*0.391 = ₹ 38.16 PV of Terminal Value = [(19.075(1.10)/(0.1692-0.10)] × 0.391 = ₹ 118.53"
+      },
+      {
+        "question_number": 3,
+        "question_text": "If current market price of the shares is ₹ 315 than stock is…………………….",
+        "options": {
+          "a": "Over valued",
+          "b": "Under valued",
+          "c": "Fairley valued",
+          "d": "Cannot be determined"
+        },
+        "correct_option": "a",
+        "explanation_html": "Since current Market Price per share of the share is ₹ 315 higher than Intrinsic Value of the share, the stock is overvalued."
+      }
+    ]
+  },
+  {
+    "scenario_number": 56,
+    "title": "CASE SCENARIO 56",
+    "passage_html": "SM Limited has a market capitalization of ₹ 3,000 crore and the current earnings per share (EPS) is ₹ 200 with a price earnings ratio (PER) of 15. The Board of directors is considering a proposal to buy back 20% of the shares at a premium which can be supported by the financials of the company. The Boards expects post buy back market price per share (MPS) of ₹ 3057. Post buy back PER will remain same. The company proposes to fund the buy back by availing 8% bank loan since available resources are committed for expansion plans. Applicable income tax rate is 30%. From the information given above, choose the correct answer to the following questions:",
+    "questions": [
+      {
+        "question_number": 1,
+        "question_text": "The number of shares proposed to be bought back is…………………..",
+        "options": {
+          "a": "12 lakhs",
+          "b": "15 lakhs",
+          "c": "20 lakhs",
+          "d": "22 lakhs"
+        },
+        "correct_option": "c",
+        "explanation_html": "MPS = ₹ 200 × 15 = ₹ 3000 per share Original shares = (₹ 3000 Crore)/( ₹ 3000) = 1 crores shares No. of shares proposed to be bought back = 1 crores × 20% = 20 Lakhs shares"
+      },
+      {
+        "question_number": 2,
+        "question_text": "The interest amount which can be paid for availing the bank loan shall be……………………",
+        "options": {
+          "a": "₹ 5,280.00 Lakhs",
+          "b": "₹ 5,575.00 Lakhs",
+          "c": "₹ 4865.00 Lakhs",
+          "d": "₹ 6485.00 Lakhs"
+        },
+        "correct_option": "a",
+        "explanation_html": "Post buy back EPS = (₹ 3057 per share)/15 =₹ 203.80 per share Post buy back Earnings after tax = ₹ 203.80 × 80 Lakhs shares = ₹ 16,304 Lakhs Post buy back Earnings before tax (A) = (16,304)/(1 - 0.30) = ₹ 23,291. 43 Lakhs Pre buy back Earnings after tax = 200 × 100 Lakhs shares = ₹ 20,000 Lakhs Pre buy back Earnings before tax (B) = (20,000)/(1 - 0.30) = ₹ 28,571.43 Lakhs Interest to be paid for availing bank loan (A) - (B) = ₹ 5,280 Lakhs"
+      },
+      {
+        "question_number": 3,
+        "question_text": "The loan amount to be raised shall be……………………..",
+        "options": {
+          "a": "₹ 55650 Lakhs",
+          "b": "₹ 62300 Lakhs",
+          "c": "₹ 66000 Lakhs",
+          "d": "₹ 72450 Lakhs"
+        },
+        "correct_option": "c",
+        "explanation_html": "Loan amount to be raised = ₹ 5,280 Lakhs /0.08 = ₹ 66,000 Lakhs 4."
+      },
+      {
+        "question_number": 4,
+        "question_text": "The premium per share paid over the current MPS shall be……………………..",
+        "options": {
+          "a": "₹ 200",
+          "b": "₹ 250",
+          "c": "₹ 300",
+          "d": "₹ 350"
+        },
+        "correct_option": "c",
+        "explanation_html": "(c) Buy back price per share = ₹ 66,000 Lakhs /20 Lakhs = ₹ 3,300 per share Premium per share paid over the current MPS = ₹ 3300 - ₹ 3000 = ₹ 300 per share % Premium = ₹ 300/ ₹ 3000 × 100 = 10%"
+      },
+      {
+        "question_number": 5,
+        "question_text": "% premium over current MPS shall be……………………………..",
+        "options": {
+          "a": "12%",
+          "b": "14%",
+          "c": "10%",
+          "d": "15%"
+        },
+        "correct_option": "c",
+        "explanation_html": "% Premium = ₹ 300/ ₹ 3000 × 100 = 10%"
+      }
+    ]
+  }
+]
