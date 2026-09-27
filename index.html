@@ -44,9 +44,7 @@ body.desktop-view .dots-container::-webkit-scrollbar-thumb{background:#cbd5e1;bo
 body.desktop-view #btnPalette{display:none}
 body.desktop-view #endScreen{margin:auto;width:100%;max-width:500px}
 
-/* ============================================================
-   TV VIEW — auto-applied at >=1400px, works alongside desktop-view
-   ============================================================ */
+/* TV VIEW */
 body.tv-view{background:#0f172a;padding:20px}
 body.tv-view .app-container{max-width:1700px;height:calc(100vh - 40px);border-radius:26px;box-shadow:0 30px 80px -20px rgba(0,0,0,.6)}
 body.tv-view .header{padding:20px 30px;margin:20px 28px 0;border-radius:18px}
@@ -55,92 +53,134 @@ body.tv-view .header-title p{font-size:.8rem}
 body.tv-view .home-btn{width:52px;height:52px;font-size:1.15rem;border-radius:14px}
 body.tv-view .icon-btn{width:52px;height:52px;font-size:1.05rem;border-radius:14px}
 body.tv-view .stats-bar{padding:14px 24px;margin:8px 28px 0;font-size:1rem;border-radius:14px}
-body.tv-view .stats-item{gap:8px}
 body.tv-view .review-wrong-btn{font-size:.9rem;padding:8px 18px;border-radius:22px}
 body.tv-view .main-content{padding:28px 40px}
 body.tv-view #quizArea{gap:26px;max-width:1050px}
 body.tv-view #questionAndOptionsContainer{max-width:1050px;gap:20px}
 body.tv-view .case-study-box{font-size:1.15rem;line-height:1.85;padding:26px;border-left:6px solid var(--primary);border-radius:16px;max-height:44vh}
-body.tv-view .case-study-box .case-label{font-size:.9rem}
 body.tv-view .question-card{padding:26px;border-radius:16px;margin-bottom:6px}
 body.tv-view .question-text{font-size:1.5rem;line-height:1.75;font-weight:500}
-body.tv-view .question-text .q-number{font-size:1.35rem;font-weight:800}
-body.tv-view .options-list{gap:14px}
 body.tv-view .option-btn{font-size:1.25rem;padding:22px 26px;border-radius:16px;gap:18px;line-height:1.5;border-width:2.5px}
 body.tv-view .option-letter{width:48px;height:48px;border-radius:12px;font-size:1.15rem}
 body.tv-view .bottom-nav{padding:16px 24px;margin:0 28px 24px;border-radius:18px;gap:12px}
 body.tv-view .nav-btn{width:60px;height:60px;font-size:1.25rem;border-radius:12px}
-body.tv-view .nav-btn.next-btn{font-size:1.4rem}
 body.tv-view .score-badge{font-size:1.15rem;padding:12px 24px;border-radius:12px}
 body.tv-view #btnPalette{display:none}
-
-/* Welcome + misc screens in TV view */
-body.tv-view .welcome-hero{padding:70px 30px 50px}
-body.tv-view .welcome-hero .brand-icon{width:88px;height:88px;font-size:2.4rem;border-radius:26px;margin-bottom:20px}
-body.tv-view .welcome-hero h1{font-size:3rem;margin-bottom:12px}
-body.tv-view .welcome-hero p{font-size:1.15rem}
+body.tv-view .welcome-hero{padding:40px 30px 32px}
+body.tv-view .brand-text{font-size:2.2rem}
+body.tv-view .brand-icon-sm{width:58px;height:58px;font-size:1.55rem;border-radius:16px}
 body.tv-view .welcome-stats{margin:0 40px 30px;gap:14px;max-width:1200px;margin-left:auto;margin-right:auto;margin-top:-24px}
-body.tv-view .wstat{padding:20px 14px;border-radius:18px}
-body.tv-view .wstat-val{font-size:2rem}
-body.tv-view .wstat-lbl{font-size:.78rem}
-body.tv-view .section-title{font-size:.9rem;padding:28px 30px 10px;max-width:1200px;margin:0 auto;width:100%}
 body.tv-view .mode-cards{padding:0 40px;max-width:1200px;margin:0 auto;gap:16px;width:100%}
 body.tv-view .mode-card{padding:26px;border-radius:22px;gap:22px;border-width:2.5px}
-body.tv-view .mode-icon{width:70px;height:70px;font-size:2rem;border-radius:18px}
-body.tv-view .mode-text h3{font-size:1.45rem;margin-bottom:6px}
-body.tv-view .mode-text p{font-size:1rem}
 body.tv-view .tools-section{padding:30px 40px;gap:14px;max-width:1200px;margin:0 auto;width:100%}
-body.tv-view .tool-btn{padding:22px 18px;border-radius:16px}
-body.tv-view .tool-btn i{font-size:1.9rem;margin-bottom:10px}
-body.tv-view .tool-btn h4{font-size:1.1rem}
 body.tv-view .social-footer{max-width:1200px;margin-left:auto;margin-right:auto}
-body.tv-view .study-explanation-panel{font-size:1.05rem}
 
-/* Reader in TV view */
-body.tv-view .fullscreen-reader .reader-header{padding:18px 28px}
-body.tv-view .reader-header h3{font-size:1.35rem}
-body.tv-view .reader-nav-btn{width:44px;height:44px;font-size:1.05rem}
-body.tv-view .reader-nav-pos{font-size:.95rem;min-width:64px}
-body.tv-view .reader-lock-btn{width:44px;height:44px;font-size:1.05rem}
-body.tv-view .hl-btn{width:34px;height:34px}
-body.tv-view .reader-close-btn{width:44px;height:44px;font-size:1.05rem}
-body.tv-view .fullscreen-reader .reader-content{max-width:1200px;padding:28px 40px;font-size:1.3rem;line-height:1.85}
-body.tv-view #readerQuestion{font-size:1.4rem !important;line-height:1.8 !important}
-body.tv-view #readerCaseStudy{font-size:1.2rem;line-height:1.85;padding:26px}
-body.tv-view #readerOptions .option-btn{font-size:1.2rem;padding:20px 24px}
-body.tv-view .reader-key-guide{bottom:40px;padding:18px 26px;border-radius:18px}
-body.tv-view .rkg-title{font-size:.8rem}
-body.tv-view .rkg-keys{font-size:.95rem;gap:18px}
-body.tv-view .rkg-keys b{font-size:.85rem;padding:4px 10px;border-radius:7px}
-
-/* Welcome hero */
+/* ============================================================
+   WELCOME HERO — clean animated brand lockup
+   ============================================================ */
 .welcome-hero{
-    position:relative;padding:44px 24px 30px;text-align:center;
+    position:relative;
+    padding:32px 22px 26px;
+    padding-top:max(32px, calc(env(safe-area-inset-top,0px) + 22px));
+    text-align:center;
     background:linear-gradient(135deg,#1e3a8a 0%,#2563eb 55%,#3b82f6 100%);
-    color:#fff;border-radius:0 0 30px 30px;
+    color:#fff;
+    border-radius:0 0 26px 26px;
     box-shadow:0 12px 32px rgba(37,99,235,.28);
-    overflow:hidden;margin-bottom:22px;
+    overflow:hidden;
+    margin-bottom:22px;
+    animation:heroSlide .55s cubic-bezier(.16,1,.3,1);
+}
+@keyframes heroSlide{
+    from{opacity:0;transform:translateY(-12px)}
+    to{opacity:1;transform:translateY(0)}
 }
 .welcome-hero::before{
-    content:'';position:absolute;top:-60px;right:-60px;width:200px;height:200px;
+    content:'';position:absolute;top:-60px;right:-60px;width:180px;height:180px;
     background:radial-gradient(circle,rgba(255,255,255,.16),transparent 70%);
     border-radius:50%;pointer-events:none;
+    animation:orbFloat 8s ease-in-out infinite;
 }
 .welcome-hero::after{
-    content:'';position:absolute;bottom:-50px;left:-40px;width:160px;height:160px;
+    content:'';position:absolute;bottom:-50px;left:-40px;width:150px;height:150px;
     background:radial-gradient(circle,rgba(255,255,255,.09),transparent 70%);
     border-radius:50%;pointer-events:none;
+    animation:orbFloat 10s ease-in-out infinite reverse;
 }
-.welcome-hero .brand-icon{
-    width:64px;height:64px;border-radius:20px;
-    background:rgba(255,255,255,.16);border:1.5px solid rgba(255,255,255,.28);
-    display:inline-flex;align-items:center;justify-content:center;
-    font-size:1.7rem;margin-bottom:14px;position:relative;z-index:1;
+@keyframes orbFloat{
+    0%,100%{transform:translate(0,0)}
+    50%{transform:translate(-20px,20px)}
+}
+.brand-lockup{
+    display:inline-flex;
+    align-items:center;
+    gap:11px;
+    position:relative;
+    z-index:2;
+    animation: brandFadeIn .7s cubic-bezier(.16,1,.3,1) .1s both;
+}
+@keyframes brandFadeIn{
+    from{opacity:0;transform:translateY(-10px) scale(.96)}
+    to{opacity:1;transform:translateY(0) scale(1)}
+}
+.brand-icon-sm{
+    width:44px;height:44px;border-radius:13px;
+    background:rgba(255,255,255,.16);
+    border:1.5px solid rgba(255,255,255,.3);
+    display:flex;align-items:center;justify-content:center;
+    font-size:1.2rem;
     backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);
     box-shadow:0 6px 20px rgba(0,0,0,.15);
+    animation: iconPulse 3.5s ease-in-out infinite;
 }
-.welcome-hero h1{font-family:'Poppins',sans-serif;font-size:1.95rem;font-weight:800;line-height:1.15;margin-bottom:8px;position:relative;z-index:1;letter-spacing:-.6px}
-.welcome-hero p{font-size:.88rem;opacity:.95;position:relative;z-index:1;font-weight:500}
+@keyframes iconPulse{
+    0%,100%{box-shadow:0 6px 20px rgba(0,0,0,.15),0 0 0 0 rgba(255,255,255,.3)}
+    50%{box-shadow:0 6px 20px rgba(0,0,0,.15),0 0 0 8px rgba(255,255,255,0)}
+}
+.brand-text{
+    font-family:'Poppins',sans-serif;
+    font-weight:800;font-size:1.7rem;
+    letter-spacing:-.6px;
+    line-height:1;
+    display:flex;align-items:baseline;gap:6px;
+}
+.brand-mcq{
+    color:#fff;
+    animation: letterSlide .7s cubic-bezier(.16,1,.3,1) .15s both;
+}
+.brand-astra{
+    background:linear-gradient(90deg,#fbbf24 0%,#f59e0b 50%,#fbbf24 100%);
+    background-size:200% auto;
+    -webkit-background-clip:text;
+    background-clip:text;
+    -webkit-text-fill-color:transparent;
+    animation: letterSlide .7s cubic-bezier(.16,1,.3,1) .25s both, shimmer 3s linear infinite 1s;
+}
+@keyframes letterSlide{
+    from{opacity:0;transform:translateY(-8px)}
+    to{opacity:1;transform:translateY(0)}
+}
+@keyframes shimmer{
+    0%{background-position:0% center}
+    100%{background-position:200% center}
+}
+.brand-sub{
+    font-size:.68rem;
+    font-weight:600;
+    letter-spacing:.7px;
+    text-transform:uppercase;
+    opacity:.92;
+    margin-top:12px;
+    position:relative;z-index:2;
+    animation: brandFadeIn .7s cubic-bezier(.16,1,.3,1) .4s both;
+}
+.brand-sub-dot{
+    display:inline-block;
+    width:4px;height:4px;border-radius:50%;
+    background:rgba(255,255,255,.6);
+    margin:0 6px;
+    vertical-align:middle;
+}
 
 /* Welcome stats */
 .welcome-stats{
@@ -179,6 +219,8 @@ body.tv-view .rkg-keys b{font-size:.85rem;padding:4px 10px;border-radius:7px}
 .fr .mode-icon{background:linear-gradient(135deg,#8b5cf6,#6d28d9)}
 .afm .mode-icon{background:linear-gradient(135deg,#6366f1,#4338ca)}
 .dt .mode-icon{background:linear-gradient(135deg,#ec4899,#be185d)}
+.mode-card.afmtheory{border-color:#a5b4fc;background:#eef2ff}
+.afmtheory .mode-icon{background:linear-gradient(135deg,#6366f1,#4338ca)}
 .mode-text h3{font-family:'Poppins',sans-serif;font-size:1.05rem;font-weight:700;color:#1e293b;margin-bottom:3px}
 .mode-text p{font-size:.78rem;color:var(--text-secondary);line-height:1.35}
 .section-title{padding:20px 20px 6px;font-family:'Poppins',sans-serif;font-size:.72rem;font-weight:800;letter-spacing:1.4px;text-transform:uppercase;color:#64748b;display:flex;align-items:center;gap:8px}
@@ -189,9 +231,6 @@ body.tv-view .rkg-keys b{font-size:.85rem;padding:4px 10px;border-radius:7px}
 .tool-btn i{font-size:1.4rem;margin-bottom:6px;color:var(--primary)}
 .tool-btn h4{font-size:.8rem;font-weight:600;color:var(--text)}
 
-/* ============================================================
-   HEADER — static, clean, soft shadow (NOT sticky)
-   ============================================================ */
 .header{
     display:flex;align-items:center;justify-content:space-between;
     padding:11px 14px;
@@ -200,10 +239,7 @@ body.tv-view .rkg-keys b{font-size:.85rem;padding:4px 10px;border-radius:7px}
     border-radius:14px;
     border:1px solid rgba(226,232,240,.85);
     flex-shrink:0;
-    box-shadow:
-        0 1px 2px rgba(15,23,42,.02),
-        0 4px 14px rgba(15,23,42,.04),
-        0 12px 30px -12px rgba(37,99,235,.06);
+    box-shadow:0 1px 2px rgba(15,23,42,.02),0 4px 14px rgba(15,23,42,.04),0 12px 30px -12px rgba(37,99,235,.06);
     transition:all .3s ease;
     position:relative;
 }
@@ -230,6 +266,11 @@ body.tv-view .rkg-keys b{font-size:.85rem;padding:4px 10px;border-radius:7px}
 .icon-btn.study-toggle.active{background:#7c3aed;border-color:#7c3aed;color:#fff;box-shadow:0 0 0 3px rgba(124,58,237,.3)}
 .icon-btn.reader-mode{background:#ecfdf5;border-color:#6ee7b7;color:#059669}
 .icon-btn.reader-mode:active{background:#d1fae5}
+.icon-btn.settings-btn{background:#eef2ff;border-color:#c7d2fe;color:#4f46e5}
+body.desktop-view .header-actions .settings-btn{display:none}
+@media (max-width: 900px) {
+    body:not(.desktop-view) .header-actions .icon-btn:not(.settings-btn){display:none;}
+}
 .main-content{flex:1;overflow-y:auto;-webkit-overflow-scrolling:touch;padding:8px 10px;min-height:0;position:relative;scroll-behavior:smooth}
 .case-study-box{background:#f8fafc;border:1px solid var(--border);border-radius:12px;padding:12px 14px;margin-bottom:10px;font-size:.83rem;line-height:1.6;max-height:34vh;overflow-y:auto;color:#334155;position:relative;border-left:4px solid var(--primary);cursor:pointer;transition:.2s}
 .case-study-box:active{background:#f1f5f9}
@@ -257,60 +298,16 @@ body.tv-view .rkg-keys b{font-size:.85rem;padding:4px 10px;border-radius:7px}
 @keyframes pulse-green{0%,100%{transform:scale(1)}50%{transform:scale(1.02)}}
 @keyframes shake{0%,100%{transform:translateX(0)}25%{transform:translateX(-4px)}75%{transform:translateX(4px)}}
 
-/* ============ STUDY MODE INLINE EXPLANATION PANEL ============ */
-.study-explanation-panel{
-    margin-top:12px;
-    padding:14px 15px;
-    background:linear-gradient(135deg,#fffbeb 0%,#fef3c7 100%);
-    border:1.5px solid #fcd34d;
-    border-radius:12px;
-    animation:fadeIn .3s ease;
-    box-shadow:0 4px 14px rgba(251,191,36,.15);
-}
-.study-explanation-panel .sep-head{
-    display:flex;align-items:center;gap:8px;
-    margin-bottom:10px;
-    font-family:'Poppins',sans-serif;
-    font-weight:800;font-size:.78rem;
-    color:#92400e;
-    text-transform:uppercase;letter-spacing:.6px;
-}
+.study-explanation-panel{margin-top:12px;padding:14px 15px;background:linear-gradient(135deg,#fffbeb 0%,#fef3c7 100%);border:1.5px solid #fcd34d;border-radius:12px;animation:fadeIn .3s ease;box-shadow:0 4px 14px rgba(251,191,36,.15)}
+.study-explanation-panel .sep-head{display:flex;align-items:center;gap:8px;margin-bottom:10px;font-family:'Poppins',sans-serif;font-weight:800;font-size:.78rem;color:#92400e;text-transform:uppercase;letter-spacing:.6px}
 .study-explanation-panel .sep-head i{font-size:.95rem;color:#d97706}
-.study-explanation-panel .sep-correct{
-    font-size:.84rem;font-weight:700;color:#065f46;
-    background:rgba(255,255,255,.7);
-    border:1px solid #a7f3d0;
-    padding:8px 10px;border-radius:8px;
-    margin-bottom:10px;
-    display:flex;align-items:flex-start;gap:7px;
-    line-height:1.5;
-}
-.study-explanation-panel .sep-correct .sep-tag{
-    background:#059669;color:#fff;
-    font-size:.6rem;font-weight:800;
-    padding:2px 7px;border-radius:20px;
-    letter-spacing:.4px;flex-shrink:0;margin-top:1px;
-}
-.study-explanation-panel .sep-body{
-    font-size:.84rem;line-height:1.7;color:#334155;
-}
+.study-explanation-panel .sep-correct{font-size:.84rem;font-weight:700;color:#065f46;background:rgba(255,255,255,.7);border:1px solid #a7f3d0;padding:8px 10px;border-radius:8px;margin-bottom:10px;display:flex;align-items:flex-start;gap:7px;line-height:1.5}
+.study-explanation-panel .sep-correct .sep-tag{background:#059669;color:#fff;font-size:.6rem;font-weight:800;padding:2px 7px;border-radius:20px;letter-spacing:.4px;flex-shrink:0;margin-top:1px}
+.study-explanation-panel .sep-body{font-size:.84rem;line-height:1.7;color:#334155}
 .study-explanation-panel .sep-body b{color:#92400e}
-.study-explanation-panel .sep-empty{
-    font-size:.8rem;font-style:italic;color:#94a3b8;
-}
+.study-explanation-panel .sep-empty{font-size:.8rem;font-style:italic;color:#94a3b8}
 .study-explanation-panel .table-wrap{margin-top:8px}
 .study-explanation-panel .pdf-table{font-size:.78rem}
-
-/* Study mode badge floating */
-.study-float-tip{
-    margin-top:10px;padding:8px 12px;
-    background:rgba(124,58,237,.08);
-    border:1px dashed rgba(124,58,237,.35);
-    border-radius:10px;
-    font-size:.72rem;font-weight:600;color:#6d28d9;
-    text-align:center;
-    display:flex;align-items:center;justify-content:center;gap:6px;
-}
 
 .dots-container{display:flex;gap:6px;overflow-x:auto;padding:10px 2px;-webkit-overflow-scrolling:touch;scrollbar-width:none;margin-top:8px}
 .dots-container::-webkit-scrollbar{display:none}
@@ -346,8 +343,8 @@ body.tv-view .rkg-keys b{font-size:.85rem;padding:4px 10px;border-radius:7px}
 .dialog-actions{display:flex;gap:10px}
 .btn-outline{width:100%;padding:13px;background:#fff;color:var(--text);border:2px solid var(--border);border-radius:11px;font-weight:600;font-size:.9rem;cursor:pointer;transition:.2s}
 .btn-outline:active{background:#f1f5f9;transform:scale(.98)}
-.bottom-sheet{position:fixed;inset:0;top:auto;background:#fff;border-radius:22px 22px 0 0;max-height:85vh;overflow-y:auto;z-index:180;padding:18px;box-shadow:0 -8px 40px rgba(0,0,0,.15);transform:translateY(100%);transition:transform .3s cubic-bezier(.16,1,.3,1)}
-.bottom-sheet.show{transform:translateY(0)}
+.bottom-sheet{position:fixed;inset:0;top:auto;background:#fff;border-radius:22px 22px 0 0;max-height:85vh;overflow-y:auto;z-index:180;padding:18px;box-shadow:0 -8px 40px rgba(0,0,0,.15);transform:translateY(100%);transition:transform .3s cubic-bezier(.16,1,.3,1);display:none}
+.bottom-sheet.show{transform:translateY(0);display:block}
 .sheet-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;position:sticky;top:0;background:#fff;padding-bottom:10px;z-index:1;border-bottom:1px solid var(--border)}
 .sheet-header h3{font-size:1.08rem;font-weight:700;font-family:'Poppins',sans-serif}
 .close-btn{width:38px;height:38px;border-radius:50%;border:1.5px solid var(--border);background:#f8fafc;font-size:1.3rem;cursor:pointer;display:flex;align-items:center;justify-content:center;color:var(--text-secondary);transition:all .2s}
@@ -395,166 +392,40 @@ body.tv-view .rkg-keys b{font-size:.85rem;padding:4px 10px;border-radius:7px}
 .subtle-toast-close{background:none;border:none;color:#94a3b8;font-size:1.1rem;cursor:pointer;padding:0 3px;transition:color .2s}
 .subtle-toast-close:hover{color:#fff}
 .yt-footer{text-align:center;padding:20px 16px;margin-top:auto;background:var(--surface);border-top:1px solid var(--border)}
-.yt-footer a{display:inline-flex;align-items:center;justify-content:center;gap:8px;color:var(--text);text-decoration:none;font-weight:600;font-size:.8rem;padding:11px 18px;background:#fff1f2;border:1px solid #fecdd3;border-radius:28px;transition:.2s;max-width:100%;line-height:1.35}
-.yt-footer a:active{transform:scale(.95);background:#ffe4e6}
-.yt-footer a i{color:#ef4444;font-size:1.3rem}
 @keyframes spin{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}
 
-/* ============================================================
-   SOCIAL FOOTER — sleek, YouTube-first, icon-only
-   ============================================================ */
-.social-footer{
-    flex-shrink: 0;
-    margin: 16px 14px 22px;
-    padding: 16px 16px 14px;
-    background: linear-gradient(180deg,#ffffff 0%,#f9fbff 100%);
-    border: 1px solid rgba(226,232,240,.9);
-    border-radius: 18px;
-    box-shadow: 0 1px 2px rgba(15,23,42,.02), 0 8px 24px -12px rgba(15,23,42,.08);
-    text-align: center;
-    position: relative;
-    overflow: hidden;
-}
-.social-footer::before{
-    content:'';position:absolute;top:0;left:0;right:0;height:3px;
-    background: linear-gradient(90deg, #ef4444, #dc2626, #b91c1c);
-    opacity: .9;
-}
-
-/* --- YouTube CTA (main focal point) --- */
-.sf-yt-cta{
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    padding: 14px 16px;
-    margin-bottom: 14px;
-    background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
-    color: #fff;
-    text-decoration: none;
-    border-radius: 14px;
-    box-shadow: 0 8px 22px -8px rgba(239,68,68,.6);
-    transition: transform .18s ease, box-shadow .18s ease;
-    position: relative;
-    overflow: hidden;
-}
-.sf-yt-cta::after{
-    content:'';
-    position:absolute;top:0;left:-100%;width:100%;height:100%;
-    background: linear-gradient(90deg,transparent,rgba(255,255,255,.22),transparent);
-    transition: left .6s ease;
-}
+/* Social footer */
+.social-footer{flex-shrink:0;margin:16px 14px 22px;padding:16px 16px 14px;background:linear-gradient(180deg,#ffffff 0%,#f9fbff 100%);border:1px solid rgba(226,232,240,.9);border-radius:18px;box-shadow:0 1px 2px rgba(15,23,42,.02),0 8px 24px -12px rgba(15,23,42,.08);text-align:center;position:relative;overflow:hidden}
+.social-footer::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,#ef4444,#dc2626,#b91c1c);opacity:.9}
+.sf-yt-cta{display:flex;align-items:center;gap:12px;padding:14px 16px;margin-bottom:14px;background:linear-gradient(135deg,#ef4444 0%,#dc2626 100%);color:#fff;text-decoration:none;border-radius:14px;box-shadow:0 8px 22px -8px rgba(239,68,68,.6);transition:transform .18s ease,box-shadow .18s ease;position:relative;overflow:hidden}
+.sf-yt-cta::after{content:'';position:absolute;top:0;left:-100%;width:100%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.22),transparent);transition:left .6s ease}
 .sf-yt-cta:hover::after{left:100%}
-.sf-yt-cta:hover{transform: translateY(-2px); box-shadow: 0 14px 28px -10px rgba(239,68,68,.7)}
-.sf-yt-cta:active{transform: scale(.985)}
-.sf-yt-cta > .fa-youtube{
-    font-size: 1.9rem;
-    flex-shrink: 0;
-    filter: drop-shadow(0 2px 4px rgba(0,0,0,.18));
-}
-.sf-yt-text{
-    flex: 1;
-    text-align: left;
-    line-height: 1.15;
-    display: flex;
-    flex-direction: column;
-    min-width: 0;
-}
-.sf-yt-text b{
-    font-size: .68rem;
-    font-weight: 700;
-    letter-spacing: .4px;
-    text-transform: uppercase;
-    opacity: .92;
-}
-.sf-yt-text span{
-    font-family: 'Poppins', sans-serif;
-    font-size: .95rem;
-    font-weight: 800;
-    letter-spacing: -.2px;
-    margin-top: 2px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-.sf-yt-arrow{
-    font-size: .78rem;
-    flex-shrink: 0;
-    opacity: .9;
-}
-
-/* --- Icon-only row for other platforms --- */
-.sf-icons-row{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    padding: 4px 0 12px;
-}
-.sf-icons-row a{
-    width: 40px;
-    height: 40px;
-    border-radius: 12px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: #f1f5f9;
-    color: #64748b;
-    font-size: 1rem;
-    text-decoration: none;
-    border: 1px solid rgba(226,232,240,.95);
-    transition: all .18s ease;
-    position: relative;
-}
-.sf-icons-row a:hover{
-    transform: translateY(-2px);
-    box-shadow: 0 8px 18px -8px rgba(15,23,42,.35);
-}
+.sf-yt-cta:hover{transform:translateY(-2px);box-shadow:0 14px 28px -10px rgba(239,68,68,.7)}
+.sf-yt-cta:active{transform:scale(.985)}
+.sf-yt-cta>.fa-youtube{font-size:1.9rem;flex-shrink:0;filter:drop-shadow(0 2px 4px rgba(0,0,0,.18))}
+.sf-yt-text{flex:1;text-align:left;line-height:1.15;display:flex;flex-direction:column;min-width:0}
+.sf-yt-text b{font-size:.68rem;font-weight:700;letter-spacing:.4px;text-transform:uppercase;opacity:.92}
+.sf-yt-text span{font-family:'Poppins',sans-serif;font-size:.95rem;font-weight:800;letter-spacing:-.2px;margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.sf-yt-arrow{font-size:.78rem;flex-shrink:0;opacity:.9}
+.sf-icons-row{display:flex;justify-content:center;align-items:center;gap:10px;padding:4px 0 12px}
+.sf-icons-row a{width:40px;height:40px;border-radius:12px;display:flex;align-items:center;justify-content:center;background:#f1f5f9;color:#64748b;font-size:1rem;text-decoration:none;border:1px solid rgba(226,232,240,.95);transition:all .18s ease;position:relative}
+.sf-icons-row a:hover{transform:translateY(-2px);box-shadow:0 8px 18px -8px rgba(15,23,42,.35)}
 .sf-icons-row a[title="LinkedIn"]:hover{background:#0a66c2;color:#fff;border-color:#0a66c2}
 .sf-icons-row a[title="Instagram"]:hover{background:linear-gradient(135deg,#f58529,#dd2a7b 55%,#8134af);color:#fff;border-color:transparent}
 .sf-icons-row a[title="Portfolio"]:hover{background:linear-gradient(135deg,#7c3aed,#4f46e5);color:#fff;border-color:transparent}
-
-/* --- Copyright --- */
-.social-footer .copyright{
-    padding-top: 10px;
-    border-top: 1px solid rgba(226,232,240,.75);
-    font-size: .6rem;
-    color:#94a3b8;
-    font-weight: 600;
-    letter-spacing: .25px;
-    line-height: 1.7;
-}
-.social-footer .copyright .heart{
-    color:#ef4444;
-    display:inline-block;
-    animation: heartbeat 2s ease-in-out infinite;
-}
+.social-footer .copyright{padding-top:10px;border-top:1px solid rgba(226,232,240,.75);font-size:.6rem;color:#94a3b8;font-weight:600;letter-spacing:.25px;line-height:1.7}
+.social-footer .copyright .heart{color:#ef4444;display:inline-block;animation:heartbeat 2s ease-in-out infinite}
 @keyframes heartbeat{0%,100%{transform:scale(1)}50%{transform:scale(1.15)}}
 .social-footer .copyright .sep{margin:0 6px;opacity:.5}
-.social-footer .copyright a{
-    color:#6366f1;
-    text-decoration:none;
-    font-weight:700;
-    border-bottom:1px dotted transparent;
-    transition: color .2s ease;
-}
-.social-footer .copyright a:hover{
-    color:#4f46e5;
-    border-bottom-color: rgba(99,102,241,.4);
-}
+.social-footer .copyright a{color:#6366f1;text-decoration:none;font-weight:700;border-bottom:1px dotted transparent;transition:color .2s ease}
+.social-footer .copyright a:hover{color:#4f46e5;border-bottom-color:rgba(99,102,241,.4)}
 
-/* Source pill */
-.source-pill{
-    display:inline-flex;align-items:center;gap:5px;
-    font-size:.68rem;color:#64748b;text-decoration:none;
-    padding:7px 13px;border-radius:20px;
-    background:#fff;border:1px solid #e2e8f0;
-    transition:.2s;font-weight:600;
-}
+.source-pill{display:inline-flex;align-items:center;gap:5px;font-size:.68rem;color:#64748b;text-decoration:none;padding:7px 13px;border-radius:20px;background:#fff;border:1px solid #e2e8f0;transition:.2s;font-weight:600}
 .source-pill:hover,.source-pill:active{background:#f1f5f9;color:#2563eb}
 
-/* ============ TABLE FORMATTING ============ */
+/* Tables */
 .table-wrap{max-width:100%;overflow-x:auto;margin:10px 0;border:1px solid var(--border);border-radius:10px;background:#fff;-webkit-overflow-scrolling:touch}
-.table-wrap, .table-wrap *{touch-action:pan-x pan-y}
+.table-wrap,.table-wrap *{touch-action:pan-x pan-y}
 .pdf-table{border-collapse:collapse;width:max-content;min-width:100%;font-size:.82rem;border-style:hidden}
 .pdf-table th,.pdf-table td{border:1px solid var(--border);padding:8px 10px;vertical-align:top;text-align:left}
 .pdf-table th{background:#f1f5f9;color:var(--text);font-weight:700}
@@ -562,22 +433,9 @@ body.tv-view .rkg-keys b{font-size:.85rem;padding:4px 10px;border-radius:7px}
 .case-study-box .pdf-table{font-size:.78rem}
 .case-study-box .pdf-table th,.case-study-box .pdf-table td{padding:6px 8px}
 .reader-content .pdf-table{font-size:.88rem}
-body.tv-view .pdf-table{font-size:1rem}
-body.tv-view .pdf-table th,body.tv-view .pdf-table td{padding:12px 16px}
 
-/* ============ ONE-TIME READER KEY GUIDE ============ */
-.reader-key-guide{
-    position:fixed;bottom:22px;left:50%;
-    transform:translateX(-50%) translateY(140%);
-    background:rgba(15,23,42,.94);color:#fff;
-    padding:11px 16px;border-radius:14px;z-index:420;
-    box-shadow:0 12px 32px rgba(0,0,0,.35);
-    backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);
-    display:flex;flex-direction:column;gap:7px;align-items:center;
-    opacity:0;pointer-events:none;max-width:94vw;
-    transition:transform .5s cubic-bezier(.16,1,.3,1),opacity .35s ease;
-    border:1px solid rgba(255,255,255,.08);
-}
+/* Reader key guide */
+.reader-key-guide{position:fixed;bottom:22px;left:50%;transform:translateX(-50%) translateY(140%);background:rgba(15,23,42,.94);color:#fff;padding:11px 16px;border-radius:14px;z-index:420;box-shadow:0 12px 32px rgba(0,0,0,.35);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);display:flex;flex-direction:column;gap:7px;align-items:center;opacity:0;pointer-events:none;max-width:94vw;transition:transform .5s cubic-bezier(.16,1,.3,1),opacity .35s ease;border:1px solid rgba(255,255,255,.08)}
 .reader-key-guide.show{transform:translateX(-50%) translateY(0);opacity:1}
 .rkg-title{font-size:.62rem;font-weight:800;letter-spacing:.8px;text-transform:uppercase;color:#94a3b8;display:flex;align-items:center;gap:6px}
 .rkg-title i{color:#fbbf24;font-size:.75rem}
@@ -585,7 +443,7 @@ body.tv-view .pdf-table th,body.tv-view .pdf-table td{padding:12px 16px}
 .rkg-keys span{display:flex;align-items:center;gap:5px;color:#cbd5e1}
 .rkg-keys b{background:#fff;color:#0f172a;padding:2px 7px;border-radius:5px;font-size:.68rem;font-weight:900;min-width:18px;text-align:center;box-shadow:0 1px 2px rgba(0,0,0,.2)}
 
-/* ============ WRONG QUESTIONS REVIEW SCREEN ============ */
+/* Wrong review list */
 .wr-item{background:#fff;border:1px solid var(--border);border-radius:14px;padding:14px;box-shadow:0 1px 3px rgba(0,0,0,.03)}
 .wr-item-head{display:flex;align-items:center;gap:6px;margin-bottom:10px;flex-wrap:wrap}
 .wr-badge{font-size:.6rem;font-weight:800;letter-spacing:.5px;text-transform:uppercase;padding:3px 9px;border-radius:20px;background:#f1f5f9;color:var(--text-secondary)}
@@ -617,7 +475,7 @@ body.tv-view .pdf-table th,body.tv-view .pdf-table td{padding:12px 16px}
 .wr-empty{text-align:center;padding:44px 20px;color:#94a3b8;font-size:.88rem}
 .wr-empty i{font-size:3rem;color:#cbd5e1;margin-bottom:12px;display:block}
 
-/* ============ SYLLABUS ============ */
+/* Syllabus */
 .syl-body{padding:16px 16px 30px;max-width:860px;margin:0 auto;width:100%}
 .syl-hero{background:linear-gradient(135deg,#4c1d95,#7c3aed 55%,#6366f1);border-radius:18px;padding:18px;color:#fff;margin-bottom:14px;box-shadow:0 10px 26px rgba(124,58,237,.28);position:relative;overflow:hidden}
 .syl-hero::after{content:'';position:absolute;top:-40px;right:-30px;width:130px;height:130px;background:rgba(255,255,255,.09);border-radius:50%}
@@ -652,7 +510,7 @@ body.tv-view .pdf-table th,body.tv-view .pdf-table td{padding:12px 16px}
 .syl-kt-btn:active{transform:scale(.85);background:#fde68a}
 .syl-kt-btn.empty{opacity:.32;pointer-events:none}
 
-/* ============ TOPIC FLASHCARDS ============ */
+/* Flashcard overlay */
 .flash-overlay{position:fixed;inset:0;background:radial-gradient(circle at 50% 0%,#1e293b,#0b1120 70%);z-index:400;display:none;flex-direction:column}
 .flash-overlay.show{display:flex;animation:fadeIn .22s ease}
 .flash-header{display:flex;align-items:center;gap:10px;padding:12px 14px;color:#fff;flex-shrink:0}
@@ -700,7 +558,7 @@ body.tv-view .pdf-table th,body.tv-view .pdf-table td{padding:12px 16px}
 @keyframes hintR{0%,100%{transform:translateX(0);opacity:.7}50%{transform:translateX(4px);opacity:1}}
 @keyframes hintPulse{0%,100%{opacity:.92}50%{opacity:1}}
 
-/* ============ KT DECK ============ */
+/* KT Deck */
 .kt-deck-overlay{position:fixed;inset:0;background:radial-gradient(circle at 50% 0%,#451a03,#1c0a02 70%);z-index:390;display:none;flex-direction:column}
 .kt-deck-overlay.show{display:flex;animation:fadeIn .22s ease}
 .kt-deck-header{display:flex;align-items:center;gap:10px;padding:12px 14px;color:#fef3c7;flex-shrink:0}
@@ -748,298 +606,78 @@ body.tv-view .pdf-table th,body.tv-view .pdf-table td{padding:12px 16px}
 .kt-deck-text .kw-std{background:rgba(251,191,36,.35);color:#7c2d12;font-weight:800;padding:1px 5px;border-radius:5px;font-family:'Inter',monospace;letter-spacing:.3px;border:1px solid rgba(180,83,9,.2)}
 .kt-deck-card-inner.custom .kt-deck-text .kw-std{background:rgba(139,92,246,.25);color:#4c1d95;border-color:rgba(109,40,217,.25)}
 
-/* ============ FIRST-TIME GUIDE OVERLAY ============ */
-.guide-overlay{
-    position:fixed;inset:0;
-    background:rgba(15,23,42,.82);
-    z-index:600;
-    display:none;
-    flex-direction:column;
-    align-items:center;
-    justify-content:center;
-    padding:24px;
-    backdrop-filter:blur(6px);
-    -webkit-backdrop-filter:blur(6px);
-}
+/* First-time guide */
+.guide-overlay{position:fixed;inset:0;background:rgba(15,23,42,.82);z-index:600;display:none;flex-direction:column;align-items:center;justify-content:center;padding:24px;backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}
 .guide-overlay.show{display:flex;animation:fadeIn .3s ease}
-.guide-card{
-    background:#fff;
-    border-radius:24px;
-    padding:28px 22px;
-    max-width:420px;
-    width:100%;
-    text-align:center;
-    box-shadow:0 25px 70px rgba(0,0,0,.35);
-    position:relative;
-    overflow:hidden;
-}
-.guide-card::before{
-    content:'';
-    position:absolute;
-    top:0;left:0;right:0;
-    height:5px;
-    background:linear-gradient(90deg,#2563eb,#7c3aed,#ec4899);
-}
-.guide-icon{
-    width:72px;height:72px;
-    border-radius:22px;
-    background:linear-gradient(135deg,#dbeafe,#ede9fe);
-    display:inline-flex;
-    align-items:center;
-    justify-content:center;
-    font-size:1.9rem;
-    color:#4f46e5;
-    margin-bottom:16px;
-}
-.guide-card h2{
-    font-family:'Poppins',sans-serif;
-    font-size:1.2rem;
-    font-weight:800;
-    color:#0f172a;
-    margin-bottom:6px;
-}
-.guide-card .guide-sub{
-    font-size:.82rem;
-    color:#64748b;
-    margin-bottom:20px;
-    line-height:1.5;
-}
-.guide-steps{
-    display:flex;
-    flex-direction:column;
-    gap:10px;
-    text-align:left;
-    margin-bottom:22px;
-}
-.guide-step{
-    display:flex;
-    align-items:flex-start;
-    gap:12px;
-    padding:11px 13px;
-    border-radius:12px;
-    background:#f8fafc;
-    border:1px solid #e2e8f0;
-    transition:transform .2s;
-}
+.guide-card{background:#fff;border-radius:24px;padding:28px 22px;max-width:420px;width:100%;text-align:center;box-shadow:0 25px 70px rgba(0,0,0,.35);position:relative;overflow:hidden}
+.guide-card::before{content:'';position:absolute;top:0;left:0;right:0;height:5px;background:linear-gradient(90deg,#2563eb,#7c3aed,#ec4899)}
+.guide-icon{width:72px;height:72px;border-radius:22px;background:linear-gradient(135deg,#dbeafe,#ede9fe);display:inline-flex;align-items:center;justify-content:center;font-size:1.9rem;color:#4f46e5;margin-bottom:16px}
+.guide-card h2{font-family:'Poppins',sans-serif;font-size:1.2rem;font-weight:800;color:#0f172a;margin-bottom:6px}
+.guide-card .guide-sub{font-size:.82rem;color:#64748b;margin-bottom:20px;line-height:1.5}
+.guide-steps{display:flex;flex-direction:column;gap:10px;text-align:left;margin-bottom:22px}
+.guide-step{display:flex;align-items:flex-start;gap:12px;padding:11px 13px;border-radius:12px;background:#f8fafc;border:1px solid #e2e8f0;transition:transform .2s}
 .guide-step:active{transform:scale(.98)}
-.guide-step-num{
-    width:28px;height:28px;
-    border-radius:9px;
-    background:linear-gradient(135deg,#2563eb,#4f46e5);
-    color:#fff;
-    font-weight:800;
-    font-size:.75rem;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    flex-shrink:0;
-}
-.guide-step-text h4{
-    font-size:.82rem;
-    font-weight:700;
-    color:#1e293b;
-    margin-bottom:2px;
-}
-.guide-step-text p{
-    font-size:.72rem;
-    color:#64748b;
-    line-height:1.4;
-}
-.guide-actions{
-    display:flex;
-    gap:10px;
-}
-.guide-actions button{
-    flex:1;
-    padding:13px;
-    border-radius:13px;
-    font-weight:700;
-    font-size:.84rem;
-    cursor:pointer;
-    transition:.2s;
-    font-family:inherit;
-}
-.guide-actions .btn-skip{
-    background:#f1f5f9;
-    border:1.5px solid #e2e8f0;
-    color:#64748b;
-}
+.guide-step-num{width:28px;height:28px;border-radius:9px;background:linear-gradient(135deg,#2563eb,#4f46e5);color:#fff;font-weight:800;font-size:.75rem;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.guide-step-text h4{font-size:.82rem;font-weight:700;color:#1e293b;margin-bottom:2px}
+.guide-step-text p{font-size:.72rem;color:#64748b;line-height:1.4}
+.guide-actions{display:flex;gap:10px}
+.guide-actions button{flex:1;padding:13px;border-radius:13px;font-weight:700;font-size:.84rem;cursor:pointer;transition:.2s;font-family:inherit}
+.guide-actions .btn-skip{background:#f1f5f9;border:1.5px solid #e2e8f0;color:#64748b}
 .guide-actions .btn-skip:active{transform:scale(.97);background:#e2e8f0}
-.guide-actions .btn-start{
-    background:linear-gradient(135deg,#2563eb,#4f46e5);
-    border:none;
-    color:#fff;
-    box-shadow:0 6px 18px rgba(37,99,235,.35);
-}
+.guide-actions .btn-start{background:linear-gradient(135deg,#2563eb,#4f46e5);border:none;color:#fff;box-shadow:0 6px 18px rgba(37,99,235,.35)}
 .guide-actions .btn-start:active{transform:scale(.97);box-shadow:0 3px 10px rgba(37,99,235,.3)}
 
-/* ============ KT PALETTE SHEET ============ */
-.kt-palette-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fill,minmax(40px,1fr));
-    gap:7px;
-}
-.kt-palette-item{
-    min-width:38px;height:38px;
-    border-radius:9px;
-    border:2px solid var(--border);
-    background:var(--surface);
-    font-size:.62rem;
-    font-weight:800;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    cursor:pointer;
-    position:relative;
-    color:var(--text-secondary);
-    transition:all .2s;
-    padding:2px;
-    line-height:1.1;
-    text-align:center;
-    word-break:break-word;
-}
+/* KT palette */
+.kt-palette-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(40px,1fr));gap:7px}
+.kt-palette-item{min-width:38px;height:38px;border-radius:9px;border:2px solid var(--border);background:var(--surface);font-size:.62rem;font-weight:800;display:flex;align-items:center;justify-content:center;cursor:pointer;position:relative;color:var(--text-secondary);transition:all .2s;padding:2px;line-height:1.1;text-align:center;word-break:break-word}
 .kt-palette-item:active{transform:scale(.88)}
-.kt-palette-item.current{
-    border-color:#f59e0b;
-    background:#fef3c7;
-    color:#b45309;
-    box-shadow:0 0 0 3px rgba(245,158,11,.2);
-    transform:scale(1.05);
-}
-.kt-palette-item.custom-kt{
-    border-color:#c4b5fd;
-    background:#f5f3ff;
-}
-.kt-palette-item .kt-fav-dot{
-    position:absolute;
-    top:-2px;right:-2px;
-    width:8px;height:8px;
-    background:#f59e0b;
-    border-radius:50%;
-    border:1.5px solid #fff;
-}
+.kt-palette-item.current{border-color:#f59e0b;background:#fef3c7;color:#b45309;box-shadow:0 0 0 3px rgba(245,158,11,.2);transform:scale(1.05)}
+.kt-palette-item.custom-kt{border-color:#c4b5fd;background:#f5f3ff}
+.kt-palette-item .kt-fav-dot{position:absolute;top:-2px;right:-2px;width:8px;height:8px;background:#f59e0b;border-radius:50%;border:1.5px solid #fff}
 
-/* ============================================================
-   AFM THEORY MASTER SHEET — rich flashcard deck
-   ============================================================ */
-.afm-theory-overlay{
-    background: radial-gradient(circle at 50% 0%, #1e1b4b, #0b1120 70%);
-}
+/* AFM Theory */
+.afm-theory-overlay{background:radial-gradient(circle at 50% 0%,#1e1b4b,#0b1120 70%)}
 .afm-theory-overlay .flash-card{height:min(72vh,600px)}
-.afm-front-badge{
-    background: linear-gradient(135deg,#6366f1,#4338ca);
-    color:#fff;font-weight:800;
-}
-.afm-q-text{
-    font-family:'Poppins',sans-serif;
-    font-size:1.15rem;font-weight:700;line-height:1.55;
-    color:#0f172a;flex:1;overflow-y:auto;padding-right:4px;
-}
-.afm-memory-code{
-    margin-top:14px;
-    background:linear-gradient(135deg,#eef2ff,#e0e7ff);
-    border:1.5px dashed #818cf8;
-    border-radius:12px;padding:10px 12px;
-    font-size:.78rem;font-weight:800;
-    color:#4338ca;letter-spacing:.5px;
-    text-align:center;
-}
-.afm-memory-code::before{
-    content:'🧠 MEMORY CODE';
-    display:block;font-size:.6rem;letter-spacing:1px;
-    color:#6366f1;margin-bottom:4px;
-}
-.afm-trigger{
-    margin-top:10px;font-size:.66rem;font-weight:700;
-    text-transform:uppercase;letter-spacing:.5px;
-    color:#94a3b8;
-}
-.afm-back{
-    background:linear-gradient(160deg,#1e1b4b,#312e81 60%,#4338ca);
-    color:#fff;transform:rotateY(180deg);
-    overflow-y:auto;
-}
+.afm-front-badge{background:linear-gradient(135deg,#6366f1,#4338ca);color:#fff;font-weight:800}
+.afm-q-text{font-family:'Poppins',sans-serif;font-size:1.15rem;font-weight:700;line-height:1.55;color:#0f172a;flex:1;overflow-y:auto;padding-right:4px}
+.afm-memory-code{margin-top:14px;background:linear-gradient(135deg,#eef2ff,#e0e7ff);border:1.5px dashed #818cf8;border-radius:12px;padding:10px 12px;font-size:.78rem;font-weight:800;color:#4338ca;letter-spacing:.5px;text-align:center}
+.afm-memory-code::before{content:'🧠 MEMORY CODE';display:block;font-size:.6rem;letter-spacing:1px;color:#6366f1;margin-bottom:4px}
+.afm-trigger{margin-top:10px;font-size:.66rem;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:#94a3b8}
+.afm-back{background:linear-gradient(160deg,#1e1b4b,#312e81 60%,#4338ca);color:#fff;transform:rotateY(180deg);overflow-y:auto}
 .afm-sec{margin-bottom:12px}
-.afm-sec-title{
-    font-size:.62rem;font-weight:900;
-    letter-spacing:1px;text-transform:uppercase;
-    color:#a5b4fc;margin-bottom:5px;
-    display:flex;align-items:center;gap:5px;
-}
-.afm-sec-body{
-    font-size:.8rem;line-height:1.6;
-    color:#e0e7ff;font-weight:500;
-}
+.afm-sec-title{font-size:.62rem;font-weight:900;letter-spacing:1px;text-transform:uppercase;color:#a5b4fc;margin-bottom:5px;display:flex;align-items:center;gap:5px}
+.afm-sec-body{font-size:.8rem;line-height:1.6;color:#e0e7ff;font-weight:500}
 .afm-kw-list{display:flex;flex-wrap:wrap;gap:5px;margin-top:4px}
-.afm-kw{
-    font-size:.68rem;font-weight:700;
-    padding:4px 9px;border-radius:20px;
-    background:rgba(165,180,252,.18);
-    border:1px solid rgba(165,180,252,.3);
-    color:#c7d2fe;
-}
-.afm-skel{
-    background:rgba(255,255,255,.06);
-    border-left:3px solid #fbbf24;
-    border-radius:6px;
-    padding:8px 10px;font-size:.76rem;
-    line-height:1.55;color:#fef3c7;
-    margin-top:4px;
-}
-.afm-formula{
-    background:linear-gradient(135deg,#fef3c7,#fde68a);
-    color:#78350f;font-family:'Courier New',monospace;
-    font-weight:800;font-size:.82rem;
-    padding:8px 12px;border-radius:8px;
-    margin-top:4px;text-align:center;
-    letter-spacing:.3px;
-}
-.afm-swipe-hint{
-    font-size:.62rem;color:#a5b4fc;
-    text-align:center;margin-top:auto;padding-top:12px;
-    font-weight:600;letter-spacing:.3px;
-}
-.afm-legend-toggle{
-    display:flex;align-items:center;gap:6px;
-    font-size:.68rem;font-weight:700;
-    color:#a5b4fc;
-}
+.afm-kw{font-size:.68rem;font-weight:700;padding:4px 9px;border-radius:20px;background:rgba(165,180,252,.18);border:1px solid rgba(165,180,252,.3);color:#c7d2fe}
+.afm-skel{background:rgba(255,255,255,.06);border-left:3px solid #fbbf24;border-radius:6px;padding:8px 10px;font-size:.76rem;line-height:1.55;color:#fef3c7;margin-top:4px}
+.afm-formula{background:linear-gradient(135deg,#fef3c7,#fde68a);color:#78350f;font-family:'Courier New',monospace;font-weight:800;font-size:.82rem;padding:8px 12px;border-radius:8px;margin-top:4px;text-align:center;letter-spacing:.3px}
+.afm-swipe-hint{font-size:.62rem;color:#a5b4fc;text-align:center;margin-top:auto;padding-top:12px;font-weight:600;letter-spacing:.3px}
 
-/* Mode-card colour for AFM Theory */
-.mode-card.afmtheory{border-color:#a5b4fc;background:#eef2ff}
-.afmtheory .mode-icon{background:linear-gradient(135deg,#6366f1,#4338ca)}
+/* Settings sheet */
+.settings-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:4px 2px}
+.settings-item{display:flex;flex-direction:column;align-items:flex-start;gap:8px;padding:14px 12px;background:#f8fafc;border:1.5px solid var(--border);border-radius:14px;cursor:pointer;font-family:inherit;transition:all .18s ease;text-align:left}
+.settings-item:active{transform:scale(.97);background:#f1f5f9}
+.settings-item i{width:38px;height:38px;border-radius:11px;background:linear-gradient(135deg,#eef2ff,#e0e7ff);color:#4f46e5;display:flex;align-items:center;justify-content:center;font-size:1rem}
+.settings-item b{font-size:.8rem;font-weight:700;color:#1e293b;display:block}
+.settings-item small{font-size:.65rem;color:#94a3b8;font-weight:500;line-height:1.35;display:block}
+.settings-item.danger i{background:linear-gradient(135deg,#fef2f2,#fee2e2);color:#dc2626}
+.settings-item.study i{background:linear-gradient(135deg,#faf5ff,#f3e8ff);color:#7c3aed}
+.settings-item.reader i{background:linear-gradient(135deg,#ecfdf5,#d1fae5);color:#059669}
+.settings-item.bookmark i{background:linear-gradient(135deg,#fef3c7,#fde68a);color:#d97706}
+.settings-item.kt i{background:linear-gradient(135deg,#fef3c7,#fde68a);color:#b45309}
 
-/* Subject selector sheet (Key Takeaways picker) */
-.subject-picker-grid{
-    display:grid;grid-template-columns:1fr 1fr;gap:10px;
-    max-width:600px;margin:0 auto;
-}
-.subject-pick-btn{
-    display:flex;flex-direction:column;align-items:center;justify-content:center;
-    gap:8px;padding:16px 12px;
-    border-radius:14px;border:1.5px solid var(--border);
-    background:#fff;cursor:pointer;
-    transition:all .18s ease;
-    font-family:inherit;
-    text-align:center;
-}
-.subject-pick-btn:hover{
-    transform:translateY(-2px);
-    box-shadow:0 8px 20px -10px rgba(15,23,42,.35);
-}
+/* Wrong carousel */
+.wrong-card{background:#fff;border-radius:14px;padding:16px;margin-bottom:14px;border:1px solid var(--border);box-shadow:0 1px 3px rgba(0,0,0,.03)}
+.wrong-card .wc-head{display:flex;align-items:center;gap:6px;flex-wrap:wrap;margin-bottom:12px}
+.wrong-card .wc-meta{font-size:.62rem;font-weight:800;letter-spacing:.4px;text-transform:uppercase;padding:3px 9px;border-radius:20px;background:#f1f5f9;color:var(--text-secondary)}
+
+.subject-picker-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;max-width:600px;margin:0 auto}
+.subject-pick-btn{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;padding:16px 12px;border-radius:14px;border:1.5px solid var(--border);background:#fff;cursor:pointer;transition:all .18s ease;font-family:inherit;text-align:center}
+.subject-pick-btn:hover{transform:translateY(-2px);box-shadow:0 8px 20px -10px rgba(15,23,42,.35)}
 .subject-pick-btn:active{transform:scale(.97)}
-.subject-pick-btn i{
-    font-size:1.5rem;
-    width:44px;height:44px;border-radius:12px;
-    display:flex;align-items:center;justify-content:center;
-    color:#fff;
-}
-.subject-pick-btn b{
-    font-size:.78rem;font-weight:700;color:#1e293b;
-}
-.subject-pick-btn small{
-    font-size:.62rem;color:#94a3b8;font-weight:600;
-}
+.subject-pick-btn i{font-size:1.5rem;width:44px;height:44px;border-radius:12px;display:flex;align-items:center;justify-content:center;color:#fff}
+.subject-pick-btn b{font-size:.78rem;font-weight:700;color:#1e293b}
+.subject-pick-btn small{font-size:.62rem;color:#94a3b8;font-weight:600}
 .subject-pick-btn.audit i{background:linear-gradient(135deg,#10b981,#059669)}
 .subject-pick-btn.afm i{background:linear-gradient(135deg,#6366f1,#4338ca)}
 </style>
@@ -1087,31 +725,19 @@ body.tv-view .pdf-table th,body.tv-view .pdf-table td{padding:12px 16px}
         <div class="guide-steps">
             <div class="guide-step">
                 <div class="guide-step-num">1</div>
-                <div class="guide-step-text">
-                    <h4>Pick a Subject</h4>
-                    <p>Choose from Audit, FR, AFM, DT, GST & more.</p>
-                </div>
+                <div class="guide-step-text"><h4>Pick a Subject</h4><p>Choose from Audit, FR, AFM, DT, GST & more.</p></div>
             </div>
             <div class="guide-step">
                 <div class="guide-step-num">2</div>
-                <div class="guide-step-text">
-                    <h4>Answer & Learn</h4>
-                    <p>Select options, get instant explanations.</p>
-                </div>
+                <div class="guide-step-text"><h4>Answer & Learn</h4><p>Select options, get instant explanations.</p></div>
             </div>
             <div class="guide-step">
                 <div class="guide-step-num">3</div>
-                <div class="guide-step-text">
-                    <h4>Study Mode</h4>
-                    <p>Toggle 📖 to reveal the correct answer & explanation instantly.</p>
-                </div>
+                <div class="guide-step-text"><h4>Study Mode</h4><p>Toggle 📖 to reveal the correct answer & explanation instantly.</p></div>
             </div>
             <div class="guide-step">
                 <div class="guide-step-num">4</div>
-                <div class="guide-step-text">
-                    <h4>Read & Highlight</h4>
-                    <p>Double-tap any question for distraction-free reading mode.</p>
-                </div>
+                <div class="guide-step-text"><h4>Read & Highlight</h4><p>Double-tap any question for distraction-free reading mode.</p></div>
             </div>
         </div>
         <div class="guide-actions">
@@ -1130,9 +756,14 @@ body.tv-view .pdf-table th,body.tv-view .pdf-table td{padding:12px 16px}
     <!-- WELCOME -->
     <div id="welcomeScreen" class="screen active">
         <div class="welcome-hero">
-            <div class="brand-icon"><i class="fa-solid fa-graduation-cap"></i></div>
-            <h1>MCQ Astra</h1>
-            <p>CA Final · Pro Simulator</p>
+            <div class="brand-lockup">
+                <div class="brand-icon-sm"><i class="fa-solid fa-graduation-cap"></i></div>
+                <div class="brand-text">
+                    <span class="brand-mcq">MCQ</span>
+                    <span class="brand-astra">ASTRA</span>
+                </div>
+            </div>
+            <div class="brand-sub">CA Final <span class="brand-sub-dot"></span> Pro Simulator</div>
         </div>
         <div class="welcome-stats">
             <div class="wstat" onclick="openWrongReview()">
@@ -1210,7 +841,6 @@ body.tv-view .pdf-table th,body.tv-view .pdf-table td{padding:12px 16px}
             <div class="tool-btn" onclick="document.getElementById('importFile').click()"><i class="fa-solid fa-cloud-arrow-up"></i><h4>Restore</h4></div>
         </div>
 
-        <!-- SOURCE REFERENCE -->
         <div style="padding:0 18px 10px;text-align:center">
             <a href="https://www.icai.org/post/bos-csb-final-may2026" target="_blank" rel="noopener" class="source-pill">
                 <i class="fa-solid fa-link" style="color:#2563eb"></i>
@@ -1218,12 +848,7 @@ body.tv-view .pdf-table th,body.tv-view .pdf-table td{padding:12px 16px}
             </a>
         </div>
 
-        <!-- ============================================================
-             SOCIAL FOOTER — sleek, YouTube-first, icon-only
-             ============================================================ -->
         <div class="social-footer">
-
-            <!-- Primary CTA: YouTube Subscribe -->
             <a class="sf-yt-cta" href="https://youtube.com/@observe_with_satyam?si=xKMKJHWzcjVFeDFj" target="_blank" rel="noopener" aria-label="Subscribe to Observe with Satyam on YouTube">
                 <i class="fa-brands fa-youtube"></i>
                 <span class="sf-yt-text">
@@ -1232,21 +857,11 @@ body.tv-view .pdf-table th,body.tv-view .pdf-table td{padding:12px 16px}
                 </span>
                 <i class="fa-solid fa-arrow-right sf-yt-arrow"></i>
             </a>
-
-            <!-- Icon-only row -->
             <div class="sf-icons-row">
-                <a href="https://linkedin.com/in/satyam-kumar5286o" target="_blank" rel="noopener" title="LinkedIn" aria-label="LinkedIn">
-                    <i class="fa-brands fa-linkedin-in"></i>
-                </a>
-                <a href="https://instagram.com/observe_with_satyam?igsh=MWdxYnp1Y283b2ZyeQ==" target="_blank" rel="noopener" title="Instagram" aria-label="Instagram">
-                    <i class="fa-brands fa-instagram"></i>
-                </a>
-                <a href="https://satqm.github.io/Portfolio-" target="_blank" rel="noopener" title="Portfolio" aria-label="Portfolio">
-                    <i class="fa-solid fa-globe"></i>
-                </a>
+                <a href="https://linkedin.com/in/satyam-kumar5286o" target="_blank" rel="noopener" title="LinkedIn" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="https://instagram.com/observe_with_satyam?igsh=MWdxYnp1Y283b2ZyeQ==" target="_blank" rel="noopener" title="Instagram" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://satqm.github.io/Portfolio-" target="_blank" rel="noopener" title="Portfolio" aria-label="Portfolio"><i class="fa-solid fa-globe"></i></a>
             </div>
-
-            <!-- Copyright -->
             <div class="copyright">
                 Built with <span class="heart">❤️</span> by
                 <a href="https://youtube.com/@observe_with_satyam" target="_blank" rel="noopener">Observe with Satyam</a>
@@ -1254,8 +869,9 @@ body.tv-view .pdf-table th,body.tv-view .pdf-table td{padding:12px 16px}
                 © 2026 MCQ Astra
             </div>
         </div>
-</div> 
-<!-- SYLLABUS -->
+    </div>
+
+    <!-- SYLLABUS -->
     <div id="syllabusScreen" class="screen" style="background:var(--bg)">
         <div class="sheet-header" style="padding:14px 18px;box-shadow:0 1px 3px rgba(0,0,0,.05);margin-bottom:0;background:#fff">
             <h3>📚 Syllabus Tracker</h3>
@@ -1299,22 +915,6 @@ body.tv-view .pdf-table th,body.tv-view .pdf-table td{padding:12px 16px}
         </div>
     </div>
 
-    <!-- WRONG QUESTIONS REVIEW -->
-    <div id="reviewWrongScreen" class="screen" style="background:#fff">
-        <div class="sheet-header" style="padding:14px 18px;box-shadow:0 1px 3px rgba(0,0,0,.05);margin-bottom:0;background:#fff">
-            <h3>❌ All Wrong Questions</h3>
-            <button class="close-btn" onclick="goHome()"><i class="fa-solid fa-xmark"></i></button>
-        </div>
-        <div style="padding:14px 16px 40px;max-width:900px;margin:0 auto;width:100%">
-            <div id="wrongFilterBar" style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px"></div>
-            <div style="display:flex;gap:8px;margin-bottom:14px;align-items:center">
-                <span id="wrongCountLabel" style="flex:1;font-size:.78rem;color:#64748b;font-weight:600"></span>
-                <button onclick="clearAllWrong()" style="background:#fef2f2;border:1.5px solid #fca5a5;color:#dc2626;font-size:.72rem;font-weight:700;padding:6px 12px;border-radius:16px;cursor:pointer;white-space:nowrap;font-family:inherit">🗑 Clear All</button>
-            </div>
-            <div id="wrongListFull" style="display:flex;flex-direction:column;gap:10px"></div>
-        </div>
-    </div>
-
     <!-- QUIZ -->
     <div id="quizScreen" class="screen" style="overflow:hidden">
         <div class="header">
@@ -1328,10 +928,11 @@ body.tv-view .pdf-table th,body.tv-view .pdf-table td{padding:12px 16px}
             <div class="header-actions">
                 <button class="icon-btn desktop-toggle" id="desktopToggleBtn" title="Toggle Desktop" onclick="toggleDesktopView()"><i class="fa-solid fa-desktop" id="desktopToggleIcon"></i></button>
                 <button class="icon-btn study-toggle" id="studyToggleBtn" title="Study Mode" onclick="toggleStudyMode()"><i class="fa-solid fa-graduation-cap"></i></button>
-                <button class="icon-btn reader-mode" id="readerModeBtn" title="Reading Mode (8)" onclick="openFullscreenReader()"><i class="fa-solid fa-book-open"></i></button>
+                <button class="icon-btn reader-mode" id="readerModeBtn" title="Reading Mode" onclick="openFullscreenReader()"><i class="fa-solid fa-book-open"></i></button>
                 <button class="icon-btn" id="bookmarkBtn" title="Mark for review"><i class="fa-regular fa-bookmark" id="bookmarkIcon" style="color:#94a3b8"></i></button>
                 <button class="icon-btn lifeline" id="lifelineBtn" title="Lifelines"><i class="fa-solid fa-wand-magic-sparkles"></i></button>
                 <button class="icon-btn retake" title="Retake Set" onclick="retakeQuiz()"><i class="fa-solid fa-rotate-right"></i></button>
+                <button class="icon-btn settings-btn" id="settingsBtn" title="Settings" onclick="openQuizSettings()"><i class="fa-solid fa-gear"></i></button>
             </div>
         </div>
         <div id="lifelineDropdown" class="lifeline-dropdown">
@@ -1357,10 +958,6 @@ body.tv-view .pdf-table th,body.tv-view .pdf-table td{padding:12px 16px}
                 <p style="color:#64748b;margin-bottom:20px">You've reached the end.</p>
                 <button onclick="goHome()" style="padding:12px 26px;background:var(--primary);color:#fff;border:none;border-radius:28px;font-weight:600;font-size:.88rem;cursor:pointer;width:100%;margin-bottom:10px">Return to Dashboard</button>
                 <button onclick="retakeQuiz()" style="padding:12px 26px;border:2px solid var(--border);border-radius:28px;background:#fff;font-weight:600;font-size:.88rem;cursor:pointer;width:100%">Restart this Set</button>
-                <div class="sf-mini">
-                    Built with <span style="color:#ef4444">❤️</span> by
-                    <a href="https://youtube.com/@observe_with_satyam" target="_blank" rel="noopener">Observe with Satyam</a>
-                </div>
             </div>
         </div>
         <div class="stats-bar" id="statsBar">
@@ -1401,6 +998,48 @@ body.tv-view .pdf-table th,body.tv-view .pdf-table td{padding:12px 16px}
     </div>
 </div>
 
+<!-- QUIZ SETTINGS SHEET -->
+<div id="quizSettingsSheet" class="bottom-sheet" style="height:auto;max-height:85vh">
+    <div class="sheet-header">
+        <h3>⚙️ Quiz Settings</h3>
+        <button class="close-btn" onclick="closeSheet('quizSettingsSheet')"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <div class="settings-grid">
+        <button class="settings-item study" onclick="closeSheet('quizSettingsSheet');setTimeout(()=>toggleStudyMode(),200)">
+            <i class="fa-solid fa-graduation-cap"></i>
+            <div><b>Study Mode</b><small>Show correct answer instantly</small></div>
+        </button>
+        <button class="settings-item reader" onclick="closeSheet('quizSettingsSheet');setTimeout(()=>openFullscreenReader(),200)">
+            <i class="fa-solid fa-book-open"></i>
+            <div><b>Reading Mode</b><small>Distraction-free fullscreen</small></div>
+        </button>
+        <button class="settings-item bookmark" onclick="closeSheet('quizSettingsSheet');setTimeout(()=>toggleBookmark(),200)">
+            <i class="fa-solid fa-bookmark"></i>
+            <div><b>Bookmark</b><small>Mark for later review</small></div>
+        </button>
+        <button class="settings-item" onclick="closeSheet('quizSettingsSheet');setTimeout(()=>use5050(),200)">
+            <i class="fa-solid fa-wand-magic-sparkles"></i>
+            <div><b>50:50 Eliminator</b><small>Remove 2 wrong options</small></div>
+        </button>
+        <button class="settings-item" onclick="closeSheet('quizSettingsSheet');setTimeout(()=>useExpert(),200)">
+            <i class="fa-solid fa-user-tie"></i>
+            <div><b>Expert Advice</b><small>Show answer + explanation</small></div>
+        </button>
+        <button class="settings-item danger" onclick="closeSheet('quizSettingsSheet');setTimeout(()=>retakeQuiz(),200)">
+            <i class="fa-solid fa-rotate-right"></i>
+            <div><b>Retake Set</b><small>Restart from beginning</small></div>
+        </button>
+        <button class="settings-item" onclick="closeSheet('quizSettingsSheet');setTimeout(()=>toggleDesktopView(),200)">
+            <i class="fa-solid fa-desktop"></i>
+            <div><b>Desktop View</b><small>Switch layout mode</small></div>
+        </button>
+        <button class="settings-item kt" onclick="closeSheet('quizSettingsSheet');setTimeout(()=>{ if(STATE.currentMode) showCustomAlert('Subject Filter','Wrong questions are filtered by subject inside the Review Wrong screen.'); },200)">
+            <i class="fa-solid fa-filter"></i>
+            <div><b>Subject Filter</b><small>Filter wrong questions</small></div>
+        </button>
+    </div>
+</div>
+
 <!-- PALETTE SHEET -->
 <div id="paletteSheet" class="bottom-sheet">
     <div class="sheet-header"><h3>📋 Question Palette</h3><button class="close-btn" onclick="closeSheet('paletteSheet')"><i class="fa-solid fa-xmark"></i></button></div>
@@ -1425,9 +1064,9 @@ body.tv-view .pdf-table th,body.tv-view .pdf-table td{padding:12px 16px}
         <h3>📖 Reading Mode</h3>
         <div class="right-controls">
             <div class="reader-nav-group">
-                <button class="reader-nav-btn" id="readerPrevBtn" onclick="readerNav(-1)" title="Previous question (0)"><i class="fa-solid fa-chevron-left"></i></button>
+                <button class="reader-nav-btn" id="readerPrevBtn" onclick="readerNav(-1)" title="Previous (0)"><i class="fa-solid fa-chevron-left"></i></button>
                 <span class="reader-nav-pos" id="readerNavPos">1/1</span>
-                <button class="reader-nav-btn" id="readerNextBtn" onclick="readerNav(1)" title="Next question (9)"><i class="fa-solid fa-chevron-right"></i></button>
+                <button class="reader-nav-btn" id="readerNextBtn" onclick="readerNav(1)" title="Next (9)"><i class="fa-solid fa-chevron-right"></i></button>
                 <div style="width:1px;height:14px;background:var(--border);margin:0 2px"></div>
                 <button class="reader-lock-btn" id="readerLockBtn" onclick="toggleReaderNavLock()" title="Lock swipe navigation"><i class="fa-solid fa-lock-open" id="readerLockIcon"></i></button>
             </div>
@@ -1446,6 +1085,36 @@ body.tv-view .pdf-table th,body.tv-view .pdf-table td{padding:12px 16px}
         <span class="highlight-hint" id="highlightHint">✏️ Mode ON — swipe across text or select text first.</span>
     </div>
     <div class="reader-content" id="readerContent"></div>
+</div>
+
+<!-- WRONG QUESTION CAROUSEL -->
+<div id="wrongCarousel" class="fullscreen-reader">
+    <div class="reader-header">
+        <h3>❌ Wrong Questions</h3>
+        <div class="right-controls">
+            <div class="reader-nav-group">
+                <button class="reader-nav-btn" id="wrongPrevBtn" onclick="wrongNav(-1)"><i class="fa-solid fa-chevron-left"></i></button>
+                <span class="reader-nav-pos" id="wrongNavPos">0/0</span>
+                <button class="reader-nav-btn" id="wrongNextBtn" onclick="wrongNav(1)"><i class="fa-solid fa-chevron-right"></i></button>
+            </div>
+            <button class="reader-nav-btn" onclick="openWrongPalette()" title="Palette" style="background:#eff6ff;color:var(--primary);width:32px;height:32px;border-radius:9px;border:none;display:flex;align-items:center;justify-content:center;cursor:pointer"><i class="fa-solid fa-table-cells"></i></button>
+            <button class="reader-nav-btn" onclick="openWrongFilter()" title="Filter" style="background:#fef3c7;color:#b45309;width:32px;height:32px;border-radius:9px;border:none;display:flex;align-items:center;justify-content:center;cursor:pointer"><i class="fa-solid fa-filter"></i></button>
+            <button class="reader-close-btn" onclick="closeWrongCarousel()"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+    </div>
+    <div class="reader-content" id="wrongCarouselContent"></div>
+</div>
+
+<!-- WRONG PALETTE SHEET -->
+<div id="wrongPaletteSheet" class="bottom-sheet" style="height:70vh;z-index:460">
+    <div class="sheet-header"><h3>📋 Jump to Wrong Question</h3><button class="close-btn" onclick="closeSheet('wrongPaletteSheet')"><i class="fa-solid fa-xmark"></i></button></div>
+    <div id="wrongPaletteGrid" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(38px,1fr));gap:7px;max-width:800px;margin:0 auto"></div>
+</div>
+
+<!-- WRONG FILTER SHEET -->
+<div id="wrongFilterSheet" class="bottom-sheet" style="height:auto;max-height:70vh;z-index:460">
+    <div class="sheet-header"><h3>🔎 Filter by Subject</h3><button class="close-btn" onclick="closeSheet('wrongFilterSheet')"><i class="fa-solid fa-xmark"></i></button></div>
+    <div id="wrongFilterGrid" style="display:grid;grid-template-columns:1fr 1fr;gap:8px"></div>
 </div>
 
 <!-- ONE-TIME KEYBOARD SHORTCUT GUIDE -->
@@ -1508,9 +1177,7 @@ body.tv-view .pdf-table th,body.tv-view .pdf-table td{padding:12px 16px}
     <div id="ktPaletteGrid" class="kt-palette-grid" style="max-width:800px;margin:0 auto"></div>
 </div>
 
-<!-- ============================================================
-     AFM THEORY MASTER SHEET OVERLAY
-     ============================================================ -->
+<!-- AFM THEORY MASTER SHEET OVERLAY -->
 <div id="afmTheoryOverlay" class="flash-overlay afm-theory-overlay">
     <div class="flash-header">
         <button class="reader-close-btn" onclick="closeAFMTheory()"><i class="fa-solid fa-xmark"></i></button>
@@ -1518,6 +1185,7 @@ body.tv-view .pdf-table th,body.tv-view .pdf-table td{padding:12px 16px}
             <h3 id="afmTheoryTitle">AFM Theory Master Sheet</h3>
             <p id="afmTheoryProgress">0 / 0</p>
         </div>
+        <button class="icon-btn" onclick="openAFMPalette()" title="Palette"><i class="fa-solid fa-table-cells"></i></button>
         <button class="icon-btn" id="afmShuffleBtn" onclick="afmShuffle()" title="Shuffle deck"><i class="fa-solid fa-shuffle"></i></button>
         <button class="icon-btn" onclick="afmResetProgress()" title="Reset progress"><i class="fa-solid fa-rotate-left"></i></button>
     </div>
@@ -1530,9 +1198,13 @@ body.tv-view .pdf-table th,body.tv-view .pdf-table td{padding:12px 16px}
     </div>
 </div>
 
-<!-- ============================================================
-     SUBJECT PICKER SHEET — for Key Takeaways
-     ============================================================ -->
+<!-- AFM PALETTE SHEET -->
+<div id="afmPaletteSheet" class="bottom-sheet" style="height:75vh;z-index:460">
+    <div class="sheet-header"><h3>📋 Jump to AFM Theory Card</h3><button class="close-btn" onclick="closeSheet('afmPaletteSheet')"><i class="fa-solid fa-xmark"></i></button></div>
+    <div id="afmPaletteGrid" class="kt-palette-grid" style="max-width:800px;margin:0 auto"></div>
+</div>
+
+<!-- SUBJECT PICKER SHEET -->
 <div id="subjectPickerSheet" class="bottom-sheet" style="height:auto;max-height:70vh">
     <div class="sheet-header">
         <h3>💡 Choose Subject — Key Takeaways</h3>
@@ -1557,26 +1229,8 @@ body.tv-view .pdf-table th,body.tv-view .pdf-table td{padding:12px 16px}
 // ==================== STATE ====================
 const STATE={currentMode:null,questions:[],currentIdx:0,session:[],isAnswered:false,audioCtx:null,armedColor:null,studyMode:false,readerScrollPos:0,lastReaderIdx:-1};
 const DB_NAME='CAAuditProDB',STORE_NAME='progress',WRONG_STORE='wrongQuestions';
-const FILES={
-    easy:'study.json',
-    medium:'mcqs.json',
-    hard:'audit_case_scenarios.json',
-    gst:'gstcase_scenarios.json',
-    fr:'fr.json',
-    fricaics:'fricaics.json',
-    afm:'afm_icaics.json',
-    dt:'dticaics.json'
-};
-const MODE_LABELS={
-    easy:'Basic Concepts',
-    medium:'Standard Questions',
-    hard:'Case Scenarios',
-    gst:'GST Case Scenarios',
-    fr:'Financial Reporting',
-    fricaics:'FR ICAI Case Studies',
-    afm:'Advanced Financial Management',
-    dt:'Direct Tax Laws'
-};
+const FILES={easy:'study.json',medium:'mcqs.json',hard:'audit_case_scenarios.json',gst:'gstcase_scenarios.json',fr:'fr.json',fricaics:'fricaics.json',afm:'afm_icaics.json',dt:'dticaics.json'};
+const MODE_LABELS={easy:'Basic Concepts',medium:'Standard Questions',hard:'Case Scenarios',gst:'GST Case Scenarios',fr:'Financial Reporting',fricaics:'FR ICAI Case Studies',afm:'Advanced Financial Management',dt:'Direct Tax Laws'};
 const MODE_KEYS=['easy','medium','hard','gst','fr','fricaics','afm','dt'];
 let totalAnsweredGlobally=parseInt(localStorage.getItem('auditPro_totalAnswered'))||0;
 let supportToastShown=localStorage.getItem('auditPro_supportShown')==='true';
@@ -1584,16 +1238,8 @@ let readerNavLocked = sessionStorage.getItem('auditPro_readerNavLocked')==='1';
 let wrongFilter='all';
 
 // ==================== FIRST-TIME GUIDE ====================
-function checkFirstTimeGuide(){
-    const seen=localStorage.getItem('mcqHelper_guideSeen');
-    if(!seen){
-        document.getElementById('firstTimeGuide').classList.add('show');
-    }
-}
-window.closeGuide=function(){
-    document.getElementById('firstTimeGuide').classList.remove('show');
-    localStorage.setItem('mcqHelper_guideSeen','true');
-};
+function checkFirstTimeGuide(){const seen=localStorage.getItem('mcqHelper_guideSeen');if(!seen){document.getElementById('firstTimeGuide').classList.add('show');}}
+window.closeGuide=function(){document.getElementById('firstTimeGuide').classList.remove('show');localStorage.setItem('mcqHelper_guideSeen','true');};
 
 // ==================== CUSTOM MODALS ====================
 window.showCustomAlert=function(t,m){document.getElementById('alertTitle').innerHTML=t;document.getElementById('alertMessage').innerHTML=m;document.getElementById('customAlertModal').style.display='flex';};
@@ -1602,63 +1248,20 @@ let confirmCallback=null;
 window.showCustomConfirm=function(t,m,cb){document.getElementById('confirmTitle').innerHTML=t;document.getElementById('confirmMessage').innerHTML=m;confirmCallback=cb;document.getElementById('customConfirmModal').style.display='flex';};
 window.handleConfirm=function(r){document.getElementById('customConfirmModal').style.display='none';confirmCallback&&confirmCallback(r);confirmCallback=null;};
 let promptCallback=null;
-window.showCustomPrompt=function(title,msg,placeholder,cb){
-    document.getElementById('promptTitle').textContent=title;
-    document.getElementById('promptMessage').textContent=msg||'';
-    const ta=document.getElementById('promptInput');
-    ta.placeholder=placeholder||'Type...';
-    ta.value='';
-    promptCallback=cb;
-    document.getElementById('customPromptModal').style.display='flex';
-    setTimeout(()=>ta.focus(),80);
-};
+window.showCustomPrompt=function(title,msg,placeholder,cb){document.getElementById('promptTitle').textContent=title;document.getElementById('promptMessage').textContent=msg||'';const ta=document.getElementById('promptInput');ta.placeholder=placeholder||'Type...';ta.value='';promptCallback=cb;document.getElementById('customPromptModal').style.display='flex';setTimeout(()=>ta.focus(),80);};
 window.closePrompt=function(){document.getElementById('customPromptModal').style.display='none';promptCallback=null;};
-window.submitPrompt=function(){
-    const v=document.getElementById('promptInput').value.trim();
-    const cb=promptCallback;
-    document.getElementById('customPromptModal').style.display='none';
-    promptCallback=null;
-    if(cb)cb(v);
-};
+window.submitPrompt=function(){const v=document.getElementById('promptInput').value.trim();const cb=promptCallback;document.getElementById('customPromptModal').style.display='none';promptCallback=null;if(cb)cb(v);};
 
 // ==================== INDEXEDDB ====================
-function initDB(){return new Promise((res,rej)=>{
-    const r=indexedDB.open(DB_NAME,2);
-    r.onupgradeneeded=e=>{
-        const d=e.target.result;
-        if(!d.objectStoreNames.contains(STORE_NAME))d.createObjectStore(STORE_NAME);
-        if(!d.objectStoreNames.contains(WRONG_STORE))d.createObjectStore(WRONG_STORE,{keyPath:'id'});
-    };
-    r.onsuccess=e=>res(e.target.result);
-    r.onerror=e=>rej(e);
-});}
+function initDB(){return new Promise((res,rej)=>{const r=indexedDB.open(DB_NAME,2);r.onupgradeneeded=e=>{const d=e.target.result;if(!d.objectStoreNames.contains(STORE_NAME))d.createObjectStore(STORE_NAME);if(!d.objectStoreNames.contains(WRONG_STORE))d.createObjectStore(WRONG_STORE,{keyPath:'id'});};r.onsuccess=e=>res(e.target.result);r.onerror=e=>rej(e);});}
 async function saveState(mode,data){const db=await initDB();return new Promise((res,rej)=>{const tx=db.transaction(STORE_NAME,'readwrite');const st=tx.objectStore(STORE_NAME);st.put(data,mode);tx.oncomplete=()=>res();tx.onerror=()=>rej();});}
 async function loadState(mode){const db=await initDB();return new Promise(res=>{const tx=db.transaction(STORE_NAME,'readonly');const st=tx.objectStore(STORE_NAME);const r=st.get(mode);r.onsuccess=e=>res(e.target.result||null);r.onerror=()=>res(null);});}
 async function getAllStates(){const db=await initDB();return new Promise(res=>{const tx=db.transaction(STORE_NAME,'readonly');const st=tx.objectStore(STORE_NAME);const rq=st.getAll();const kq=st.getAllKeys();rq.onsuccess=()=>{kq.onsuccess=()=>{let o={};kq.result.forEach((k,i)=>o[k]=rq.result[i]);res(o);};};});}
 async function getAllWrongQuestions(){const db=await initDB();return new Promise(res=>{const tx=db.transaction(WRONG_STORE,'readonly');const rq=tx.objectStore(WRONG_STORE).getAll();rq.onsuccess=()=>res(rq.result||[]);rq.onerror=()=>res([]);});}
 async function removeWrongQuestion(id){const db=await initDB();return new Promise((res,rej)=>{const tx=db.transaction(WRONG_STORE,'readwrite');tx.objectStore(WRONG_STORE).delete(id);tx.oncomplete=()=>res();tx.onerror=()=>rej();});}
 async function clearWrongQuestions(){const db=await initDB();return new Promise((res,rej)=>{const tx=db.transaction(WRONG_STORE,'readwrite');tx.objectStore(WRONG_STORE).clear();tx.oncomplete=()=>res();tx.onerror=()=>rej();});}
-async function addOrIncrementWrong(id,mode,q,chosen){
-    try{
-        const db=await initDB();
-        const tx=db.transaction(WRONG_STORE,'readwrite');
-        const st=tx.objectStore(WRONG_STORE);
-        const rq=st.get(id);
-        rq.onsuccess=()=>{
-            const prev=rq.result;
-            const now=Date.now();
-            const entry={id,mode,qNum:q.qNum||'',question:q.question||'',options:Array.isArray(q.options)?q.options:[],correct:q.correct,chosen,explain:q.explain||'',caseStudy:q.caseStudy||'',caseTitle:q.caseTitle||'',firstWrong:prev?prev.firstWrong:now,lastWrong:now,wrongCount:(prev?prev.wrongCount:0)+1};
-            st.put(entry);
-        };
-        await new Promise(res=>{tx.oncomplete=res;tx.onerror=res;});
-    }catch(e){}
-}
-function wrongId(mode,q){
-    const base=String(q.question||'').slice(0,140)+'|'+(q.options||[]).length+'|'+q.correct;
-    let h=5381;
-    for(let i=0;i<base.length;i++){h=((h<<5)+h)+base.charCodeAt(i);h|=0;}
-    return mode+'::'+h;
-}
+async function addOrIncrementWrong(id,mode,q,chosen){try{const db=await initDB();const tx=db.transaction(WRONG_STORE,'readwrite');const st=tx.objectStore(WRONG_STORE);const rq=st.get(id);rq.onsuccess=()=>{const prev=rq.result;const now=Date.now();const entry={id,mode,qNum:q.qNum||'',question:q.question||'',options:Array.isArray(q.options)?q.options:[],correct:q.correct,chosen,explain:q.explain||'',caseStudy:q.caseStudy||'',caseTitle:q.caseTitle||'',firstWrong:prev?prev.firstWrong:now,lastWrong:now,wrongCount:(prev?prev.wrongCount:0)+1};st.put(entry);};await new Promise(res=>{tx.oncomplete=res;tx.onerror=res;});}catch(e){}}
+function wrongId(mode,q){const base=String(q.question||'').slice(0,140)+'|'+(q.options||[]).length+'|'+q.correct;let h=5381;for(let i=0;i<base.length;i++){h=((h<<5)+h)+base.charCodeAt(i);h|=0;}return mode+'::'+h;}
 
 // ==================== AUDIO / UTIL ====================
 function getAudio(){if(!STATE.audioCtx)STATE.audioCtx=new(window.AudioContext||window.webkitAudioContext)();if(STATE.audioCtx.state==='suspended')STATE.audioCtx.resume();return STATE.audioCtx;}
@@ -1669,26 +1272,12 @@ function hideLoader(){document.getElementById('loader').style.display='none';}
 function switchScreen(id){document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));document.getElementById(id).classList.add('active');if(document.body.classList.contains('desktop-view')&&id==='quizScreen')applyDesktopLayout();if(id==='welcomeScreen')refreshWelcomeStats();}
 window.goHome=function(){if(STATE.currentMode)saveProgress();switchScreen('welcomeScreen');updateWrongChip();};
 
-/* ============ TV VIEW AUTO-DETECT ============ */
-function detectViewMode(){
-    const w=window.innerWidth;
-    if(w>900){
-        document.body.classList.add('desktop-view');
-        document.getElementById('desktopToggleIcon').className='fa-solid fa-mobile-screen';
-    }
-    if(w>=1400){
-        document.body.classList.add('tv-view');
-    }
-}
-window.toggleDesktopView=function(){
-    const b=document.body;
-    b.classList.toggle('desktop-view');
-    const ic=document.getElementById('desktopToggleIcon');
-    ic.className=b.classList.contains('desktop-view')?'fa-solid fa-mobile-screen':'fa-solid fa-desktop';
-    if(b.classList.contains('desktop-view'))applyDesktopLayout();else removeDesktopLayout();
-};
+function detectViewMode(){const w=window.innerWidth;if(w>900){document.body.classList.add('desktop-view');document.getElementById('desktopToggleIcon').className='fa-solid fa-mobile-screen';}if(w>=1400){document.body.classList.add('tv-view');}}
+window.toggleDesktopView=function(){const b=document.body;b.classList.toggle('desktop-view');const ic=document.getElementById('desktopToggleIcon');ic.className=b.classList.contains('desktop-view')?'fa-solid fa-mobile-screen':'fa-solid fa-desktop';if(b.classList.contains('desktop-view'))applyDesktopLayout();else removeDesktopLayout();};
 function applyDesktopLayout(){if(STATE.questions[STATE.currentIdx]&&STATE.questions[STATE.currentIdx].caseStudy)document.getElementById('quizArea').classList.add('has-case');}
 function removeDesktopLayout(){document.getElementById('quizArea').classList.remove('has-case');}
+
+window.openQuizSettings=function(){openSheet('quizSettingsSheet');};
 
 window.toggleStudyMode=function(){
     STATE.studyMode=!STATE.studyMode;
@@ -1699,73 +1288,47 @@ window.toggleStudyMode=function(){
     if(STATE.studyMode){beep(660,'sine',.08);setTimeout(()=>beep(880,'sine',.08),100);}else{beep(440,'sine',.08);}
     renderQuestion();
     if(STATE.questions.length>0)updateStatsBar();
-    if(STATE.studyMode){
-        // gentle scroll so the explanation panel is visible
-        setTimeout(()=>{const p=document.getElementById('studyExplanationSlot');if(p&&p.firstChild)p.scrollIntoView({behavior:'smooth',block:'nearest'});},200);
-    }
+    if(STATE.studyMode){setTimeout(()=>{const p=document.getElementById('studyExplanationSlot');if(p&&p.firstChild)p.scrollIntoView({behavior:'smooth',block:'nearest'});},200);}
 };
 
-/* ============ TABLE PREPROCESSING ============ */
 function prepareTables(container){
     if(!container)return;
     container.querySelectorAll('table').forEach(table=>{
         if(!table.classList.contains('pdf-table'))table.classList.add('pdf-table');
         if(table.parentElement&&table.parentElement.classList.contains('table-wrap'))return;
-        const wrap=document.createElement('div');
-        wrap.className='table-wrap';
-        table.before(wrap);
-        wrap.append(table);
-        const rows=[...table.rows];
-        if(!rows.length)return;
-        for(let c=rows[0].cells.length-1;c>=0;c--){
-            const hasText=rows.some(row=>row.cells[c]&&row.cells[c].textContent.trim());
-            if(!hasText)rows.forEach(row=>{if(row.cells[c])row.cells[c].remove();});
-        }
+        const wrap=document.createElement('div');wrap.className='table-wrap';
+        table.before(wrap);wrap.append(table);
+        const rows=[...table.rows];if(!rows.length)return;
+        for(let c=rows[0].cells.length-1;c>=0;c--){const hasText=rows.some(row=>row.cells[c]&&row.cells[c].textContent.trim());if(!hasText)rows.forEach(row=>{if(row.cells[c])row.cells[c].remove();});}
         [...table.rows].forEach(row=>{if(![...row.cells].some(cell=>cell.textContent.trim()))row.remove();});
     });
 }
 
-/* ============ NORMALIZER ============ */
 function normalizeData(rawData){
-    let parsed=[];
-    let ds;
+    let parsed=[];let ds;
     if(Array.isArray(rawData)){ds=rawData;}
-    else{
-        ds=rawData.caseScenarios||rawData.questions||rawData.scenarios||rawData.data||rawData.items||null;
-        if(!ds){for(const k in rawData){if(Array.isArray(rawData[k])){ds=rawData[k];break;}}}
-        ds=ds||[];
-    }
+    else{ds=rawData.caseScenarios||rawData.questions||rawData.scenarios||rawData.data||rawData.items||null;if(!ds){for(const k in rawData){if(Array.isArray(rawData[k])){ds=rawData[k];break;}}}ds=ds||[];}
     ds.forEach((item,i)=>{
         if(item&&Array.isArray(item.questions)){
             const ct=item.passage_html||item.caseStudy||item.case_study||item.scenario||item.passage||'';
             const cti=item.title||item.case_title||item.caseTitle||('CASE SCENARIO '+(item.scenario_number||(i+1)));
             item.questions.forEach((q,j)=>parsed.push(parseSingleQuestion(q,ct,cti,`${i+1}.${j+1}`)));
-        }else if(item){
-            parsed.push(parseSingleQuestion(item,'','',`${i+1}`));
-        }
+        }else if(item){parsed.push(parseSingleQuestion(item,'','',`${i+1}`));}
     });
     return parsed;
 }
 function parseSingleQuestion(q,ct,cti,qNum){
     let opts=[];let ci=0;
-    let ansRaw=(q.correctOption!==undefined&&q.correctOption!==null)?q.correctOption
-             :(q.correct_option!==undefined&&q.correct_option!==null)?q.correct_option
-             :(q.answer!==undefined&&q.answer!==null)?q.answer
-             :(q.correct!==undefined&&q.correct!==null)?q.correct:0;
+    let ansRaw=(q.correctOption!==undefined&&q.correctOption!==null)?q.correctOption:(q.correct_option!==undefined&&q.correct_option!==null)?q.correct_option:(q.answer!==undefined&&q.answer!==null)?q.answer:(q.correct!==undefined&&q.correct!==null)?q.correct:0;
     if(Array.isArray(q.options)){
         opts=q.options.slice();
-        if(typeof ansRaw==='string'&&isNaN(parseInt(ansRaw,10))){
-            const ch=ansRaw.trim().toLowerCase().charAt(0);
-            ci=ch.charCodeAt(0)-97;
-        }else{ci=parseInt(ansRaw,10);if(isNaN(ci))ci=0;}
+        if(typeof ansRaw==='string'&&isNaN(parseInt(ansRaw,10))){const ch=ansRaw.trim().toLowerCase().charAt(0);ci=ch.charCodeAt(0)-97;}
+        else{ci=parseInt(ansRaw,10);if(isNaN(ci))ci=0;}
     }else if(q.options&&typeof q.options==='object'){
-        const lower={};
-        Object.keys(q.options).forEach(k=>{lower[String(k).toLowerCase()]=q.options[k];});
-        const ks=['a','b','c','d','e'];
-        opts=ks.map(k=>lower[k]).filter(v=>v!==undefined&&v!==null);
+        const lower={};Object.keys(q.options).forEach(k=>{lower[String(k).toLowerCase()]=q.options[k];});
+        const ks=['a','b','c','d','e'];opts=ks.map(k=>lower[k]).filter(v=>v!==undefined&&v!==null);
         const key=String(ansRaw).trim().toLowerCase();
-        if(key.length===1&&key>='a'&&key<='e'){ci=ks.indexOf(key);}
-        else{ci=parseInt(key,10);if(isNaN(ci))ci=0;}
+        if(key.length===1&&key>='a'&&key<='e'){ci=ks.indexOf(key);}else{ci=parseInt(key,10);if(isNaN(ci))ci=0;}
     }
     if(!opts.length)opts=['—'];
     if(ci<0||ci>=opts.length)ci=0;
@@ -1804,31 +1367,18 @@ function updateNotesBadge(){const st=STATE.session[STATE.currentIdx];const b=doc
 
 function updateStatsBar(){const s=STATE.session;document.getElementById('statCorrectCount').textContent=s.filter(x=>x.ok===true).length;document.getElementById('statWrongCount').textContent=s.filter(x=>x.ok===false).length;document.getElementById('statUnansweredCount').textContent=s.filter(x=>x.sel===null).length;document.getElementById('statBookmarkedCount').textContent=s.filter(x=>x.mark).length;}
 
-/* ============ RENDER STUDY MODE EXPLANATION (INLINE) ============ */
 function renderStudyExplanation(){
-    const slot=document.getElementById('studyExplanationSlot');
-    if(!slot)return;
-    slot.innerHTML='';
+    const slot=document.getElementById('studyExplanationSlot');if(!slot)return;slot.innerHTML='';
     if(!STATE.studyMode)return;
-    const q=STATE.questions[STATE.currentIdx];
-    if(!q)return;
+    const q=STATE.questions[STATE.currentIdx];if(!q)return;
     if(!q.explain && (q.correct===undefined || q.correct===null))return;
-
-    const panel=document.createElement('div');
-    panel.className='study-explanation-panel';
+    const panel=document.createElement('div');panel.className='study-explanation-panel';
     let html='<div class="sep-head"><i class="fa-solid fa-lightbulb"></i> Explanation &amp; Expert Advice</div>';
-    // Correct answer badge
     const correctText=(q.options&&q.options[q.correct])?q.options[q.correct]:'—';
     html+='<div class="sep-correct"><span class="sep-tag">CORRECT</span><span>Option '+String.fromCharCode(65+q.correct)+' — '+correctText+'</span></div>';
-    // Explanation body
-    if(q.explain){
-        html+='<div class="sep-body">'+q.explain+'</div>';
-    } else {
-        html+='<div class="sep-body sep-empty">No detailed explanation provided for this question. Refer to the correct answer above.</div>';
-    }
-    panel.innerHTML=html;
-    slot.appendChild(panel);
-    prepareTables(panel);
+    if(q.explain){html+='<div class="sep-body">'+q.explain+'</div>';}
+    else{html+='<div class="sep-body sep-empty">No detailed explanation provided for this question. Refer to the correct answer above.</div>';}
+    panel.innerHTML=html;slot.appendChild(panel);prepareTables(panel);
 }
 
 function renderQuestion(){
@@ -1894,16 +1444,14 @@ function showExplanationModal(ok,expert=false){
     let html=`<div style="margin-bottom:10px"><b>Correct Answer:</b> Option ${String.fromCharCode(65+q.correct)} — ${esc(q.options[q.correct]||'')}</div>`;
     html+=q.explain?`<div style="padding-top:8px;border-top:1px dashed #cbd5e1"><b>Explanation:</b><br/>${q.explain}</div>`:`<div style="padding-top:8px;border-top:1px dashed #cbd5e1;font-style:italic;color:#64748b">No explanation provided.</div>`;
     const body=document.getElementById('explanationBody');
-    body.innerHTML=html;
-    prepareTables(body);
+    body.innerHTML=html;prepareTables(body);
     document.getElementById('explanationNextBtn').textContent=STATE.currentIdx>=STATE.questions.length-1?'Finish Set':'Next Question →';
     document.getElementById('explanationModal').style.display='flex';
 }
 
 // ==================== FULLSCREEN READER ====================
 window.openFullscreenReader=function(){
-    const q=STATE.questions[STATE.currentIdx];
-    if(!q)return;
+    const q=STATE.questions[STATE.currentIdx];if(!q)return;
     const st=STATE.session[STATE.currentIdx]||{sel:null,ok:null,mark:false,caseHtml:null,questionHtml:null,optionsHtml:null,note:null};
     if(!st.optionsHtml)st.optionsHtml=[];
     STATE.armedColor=null;pendingSelectionRange=null;pendingSelectionContainer=null;updateHighlightSwatchUI();
@@ -1920,7 +1468,6 @@ window.openFullscreenReader=function(){
         content+=`<button class="option-btn ${extra}" id="readerOptBtn${i}" onclick="handleReaderOptionClick(${i})" ${disabled}><span class="option-letter">${String.fromCharCode(65+i)}</span><span id="readerOptText${i}" style="flex:1">${st.optionsHtml[i]||o}</span></button>`;
     });
     content+=`</div>`;
-    // Study Mode: inline explanation in reader
     if(STATE.studyMode && (q.explain || q.correct!==undefined)){
         content+='<div id="readerStudyExplanation" class="study-explanation-panel" style="margin-top:20px">';
         content+='<div class="sep-head"><i class="fa-solid fa-lightbulb"></i> Explanation &amp; Expert Advice</div>';
@@ -1928,69 +1475,16 @@ window.openFullscreenReader=function(){
         content+=q.explain ? ('<div class="sep-body">'+q.explain+'</div>') : '<div class="sep-body sep-empty">No detailed explanation provided for this question.</div>';
         content+='</div>';
     }
-    const rc=document.getElementById('readerContent');
-    rc.innerHTML=content;
+    const rc=document.getElementById('readerContent');rc.innerHTML=content;
     document.getElementById('fullscreenReader').style.display='flex';
     rc.scrollTop=STATE.readerScrollPos||0;
-    prepareTables(rc);
-    updateReaderNavUI();
-    updateReaderLockUI();
-    showReaderKeyGuide();
+    prepareTables(rc);updateReaderNavUI();updateReaderLockUI();showReaderKeyGuide();
 };
-
-function showReaderKeyGuide(){
-    const key='auditPro_readerKeyGuideShown';
-    if(sessionStorage.getItem(key)==='1')return;
-    sessionStorage.setItem(key,'1');
-    const g=document.getElementById('readerKeyGuide');
-    if(!g)return;
-    setTimeout(()=>g.classList.add('show'),500);
-    setTimeout(()=>g.classList.remove('show'),6000);
-}
-
-function updateReaderNavUI(){
-    const total=STATE.questions.length;
-    const pos=document.getElementById('readerNavPos');
-    if(pos)pos.textContent=(STATE.currentIdx+1)+'/'+total;
-    const pb=document.getElementById('readerPrevBtn');
-    const nb=document.getElementById('readerNextBtn');
-    if(pb)pb.disabled=(STATE.currentIdx<=0);
-    if(nb)nb.disabled=(STATE.currentIdx>=total-1);
-}
-
-window.toggleReaderNavLock=function(){
-    readerNavLocked=!readerNavLocked;
-    sessionStorage.setItem('auditPro_readerNavLocked',readerNavLocked?'1':'0');
-    updateReaderLockUI();
-    beep(readerNavLocked?280:620,'sine',.08);
-};
-function updateReaderLockUI(){
-    const btn=document.getElementById('readerLockBtn');
-    const ic=document.getElementById('readerLockIcon');
-    if(!btn||!ic)return;
-    if(readerNavLocked){
-        btn.classList.add('active');
-        ic.className='fa-solid fa-lock';
-        btn.title='Swipe navigation LOCKED (tap to unlock)';
-    }else{
-        btn.classList.remove('active');
-        ic.className='fa-solid fa-lock-open';
-        btn.title='Lock swipe navigation';
-    }
-}
-
-window.readerNav=function(dir){
-    if(!STATE.questions.length)return;
-    const target=STATE.currentIdx+dir;
-    if(target<0||target>=STATE.questions.length){beep(240,'sine',.07);return;}
-    STATE.currentIdx=target;
-    STATE.lastReaderIdx=-1;
-    renderQuestion();
-    saveProgress();
-    openFullscreenReader();
-    beep(dir>0?540:430,'sine',.05);
-};
-
+function showReaderKeyGuide(){const key='auditPro_readerKeyGuideShown';if(sessionStorage.getItem(key)==='1')return;sessionStorage.setItem(key,'1');const g=document.getElementById('readerKeyGuide');if(!g)return;setTimeout(()=>g.classList.add('show'),500);setTimeout(()=>g.classList.remove('show'),6000);}
+function updateReaderNavUI(){const total=STATE.questions.length;const pos=document.getElementById('readerNavPos');if(pos)pos.textContent=(STATE.currentIdx+1)+'/'+total;const pb=document.getElementById('readerPrevBtn');const nb=document.getElementById('readerNextBtn');if(pb)pb.disabled=(STATE.currentIdx<=0);if(nb)nb.disabled=(STATE.currentIdx>=total-1);}
+window.toggleReaderNavLock=function(){readerNavLocked=!readerNavLocked;sessionStorage.setItem('auditPro_readerNavLocked',readerNavLocked?'1':'0');updateReaderLockUI();beep(readerNavLocked?280:620,'sine',.08);};
+function updateReaderLockUI(){const btn=document.getElementById('readerLockBtn');const ic=document.getElementById('readerLockIcon');if(!btn||!ic)return;if(readerNavLocked){btn.classList.add('active');ic.className='fa-solid fa-lock';btn.title='Swipe navigation LOCKED (tap to unlock)';}else{btn.classList.remove('active');ic.className='fa-solid fa-lock-open';btn.title='Lock swipe navigation';}}
+window.readerNav=function(dir){if(!STATE.questions.length)return;const target=STATE.currentIdx+dir;if(target<0||target>=STATE.questions.length){beep(240,'sine',.07);return;}STATE.currentIdx=target;STATE.lastReaderIdx=-1;renderQuestion();saveProgress();openFullscreenReader();beep(dir>0?540:430,'sine',.05);};
 window.handleReaderOptionClick=function(idx){if(STATE.isAnswered||STATE.studyMode)return;if(!STATE.questions[STATE.currentIdx].options[idx])return;beep(400,'sine',.04);document.querySelectorAll('#readerContent .option-btn').forEach(b=>b.classList.remove('selected'));const btn=document.getElementById('readerOptBtn'+idx);if(btn)btn.classList.add('selected');setTimeout(()=>lockAnswer(idx,true),300);};
 window.closeFullscreenReader=function(){STATE.readerScrollPos=document.getElementById('readerContent').scrollTop||0;document.getElementById('fullscreenReader').style.display='none';STATE.armedColor=null;const sel=window.getSelection();sel&&sel.removeAllRanges();};
 
@@ -2011,7 +1505,6 @@ function onReaderTouchStart(e){if(!STATE.armedColor)return;const t=e.touches[0];
 function onReaderTouchMove(e){if(!hlGesture.active)return;const t=e.touches[0];if(!t)return;const dx=t.clientX-hlGesture.sx,dy=t.clientY-hlGesture.sy;if(hlGesture.mode===null){if(Math.abs(dx)<8&&Math.abs(dy)<8)return;hlGesture.mode=(Math.abs(dx)>Math.abs(dy))?'highlight':'scroll';if(hlGesture.mode==='scroll'){hlGesture.active=false;return;}}if(hlGesture.mode==='highlight'){e.preventDefault();const cr=getCaretRangeFromPoint(t.clientX,t.clientY);const lr=buildOrderedRange(hlGesture.anchor,cr);if(lr&&!lr.collapsed){const sel=window.getSelection();sel.removeAllRanges();sel.addRange(lr);}}}
 function onReaderTouchEnd(){if(hlGesture.active&&hlGesture.mode==='highlight'){const sel=window.getSelection();if(sel&&sel.rangeCount>0&&!sel.isCollapsed){const range=sel.getRangeAt(0);applyHighlightToRange(range,STATE.armedColor,hlGesture.container);sel.removeAllRanges();}}hlGesture.active=false;hlGesture.mode=null;hlGesture.anchor=null;hlGesture.container=null;}
 
-/* ============ SCROLL HELPERS (keys 5/6) ============ */
 function scrollReaderDown(){const el=document.getElementById('readerContent');if(el)el.scrollBy({top:Math.max(200,el.clientHeight*0.6),behavior:'smooth'});}
 function scrollReaderUp(){const el=document.getElementById('readerContent');if(el)el.scrollBy({top:-Math.max(200,el.clientHeight*0.6),behavior:'smooth'});}
 function scrollMainDown(){const el=document.getElementById('mainContent');if(el)el.scrollBy({top:Math.max(160,el.clientHeight*0.55),behavior:'smooth'});}
@@ -2031,13 +1524,170 @@ window.buildPalette=function(){const g=document.getElementById('paletteGrid');g.
 window.buildReview=function(){const l=document.getElementById('reviewList');l.innerHTML='';STATE.questions.forEach((q,i)=>{const st=STATE.session[i];let ic='⚪';if(st.sel!==null)ic=st.ok?'✅':'❌';const div=document.createElement('div');div.style.cssText='padding:12px;border:1px solid #e2e8f0;border-radius:12px;background:white;cursor:pointer;margin-bottom:8px;display:flex;gap:10px;align-items:flex-start;';div.innerHTML=`<span style="font-size:1.1rem;flex-shrink:0">${ic}</span><div style="flex:1"><h4 style="font-size:.82rem;font-weight:600;color:#1e293b;margin-bottom:3px">Q${i+1}: ${String(q.question).substring(0,70)}${String(q.question).length>70?'...':''}</h4><p style="font-size:.72rem;color:#64748b">Your: <b style="color:${st.sel!==null?(st.ok?'#059669':'#dc2626'):'#64748b'}">${st.sel!==null?String.fromCharCode(65+st.sel):'-'}</b> | Correct: <b style="color:#059669">${String.fromCharCode(65+q.correct)}</b></p></div>`;div.addEventListener('click',()=>{jumpTo(i);closeSheet('reviewSheet');});l.appendChild(div);});openSheet('reviewSheet');};
 window.openReviewWrong=function(){const l=document.getElementById('reviewWrongList');l.innerHTML='';const wrongQs=STATE.session.map((st,i)=>({st,i})).filter(x=>x.st.ok===false);if(wrongQs.length===0){l.innerHTML='<div style="text-align:center;padding:30px;color:#64748b;font-size:.9rem">No incorrect answers yet! 🎉</div>';}else{wrongQs.forEach(({st,i})=>{const q=STATE.questions[i];const div=document.createElement('div');div.style.cssText='padding:12px;border:1px solid #fecaca;border-radius:12px;background:#fef2f2;cursor:pointer;margin-bottom:8px;display:flex;gap:10px;align-items:flex-start;';div.innerHTML=`<span style="font-size:1.1rem">❌</span><div style="flex:1"><h4 style="font-size:.82rem;font-weight:600;color:#1e293b;margin-bottom:3px">Q${i+1}: ${String(q.question).substring(0,70)}${String(q.question).length>70?'...':''}</h4><p style="font-size:.72rem;color:#64748b">Your: <b style="color:#dc2626">${String.fromCharCode(65+st.sel)}</b> | Correct: <b style="color:#059669">${String.fromCharCode(65+q.correct)}</b></p></div>`;div.addEventListener('click',()=>{jumpTo(i);closeSheet('reviewWrongSheet');});l.appendChild(div);});}openSheet('reviewWrongSheet');};
 
-/* ==================== GLOBAL WRONG REVIEW ==================== */
-window.openWrongReview=async function(){
+/* ==================== WRONG REVIEW CAROUSEL ==================== */
+const WRONG_STATE = { items: [], idx: 0, filter: 'all' };
+
+window.openWrongReview = async function(){
     showLoader('Loading...');
-    try{await renderWrongReviewScreen();switchScreen('reviewWrongScreen');}
-    finally{hideLoader();}
+    try{
+        const all = await getAllWrongQuestions();
+        all.sort((a,b)=>(b.lastWrong||0)-(a.lastWrong||0));
+        WRONG_STATE.items = all;
+        WRONG_STATE.filter = 'all';
+        WRONG_STATE.idx = 0;
+        const savedIdx = sessionStorage.getItem('wrongCarousel_idx');
+        if(savedIdx !== null){
+            const n = parseInt(savedIdx,10);
+            if(!isNaN(n) && n >= 0) WRONG_STATE.idx = n;
+        }
+        if(!WRONG_STATE.items.length){
+            showCustomAlert('Nothing here', 'No wrong questions yet. Keep practicing! 🎉');
+            hideLoader();
+            return;
+        }
+        renderWrongCarousel();
+        document.getElementById('wrongCarousel').style.display='flex';
+    }catch(e){
+        showCustomAlert('Error','Could not load wrong questions.');
+    }finally{ hideLoader(); }
 };
 
+window.closeWrongCarousel = function(){
+    try{ sessionStorage.setItem('wrongCarousel_idx', String(WRONG_STATE.idx)); }catch(e){}
+    document.getElementById('wrongCarousel').style.display='none';
+};
+
+function currentWrongItems(){
+    const all = WRONG_STATE.items;
+    if(WRONG_STATE.filter === 'all') return all;
+    return all.filter(x => x.mode === WRONG_STATE.filter);
+}
+
+function renderWrongCarousel(){
+    const items = currentWrongItems();
+    const total = items.length;
+    const pos = document.getElementById('wrongNavPos');
+    if(!total){
+        document.getElementById('wrongCarouselContent').innerHTML = '<div class="wr-empty"><i class="fa-regular fa-face-smile"></i>No wrong questions in this filter. 🎉</div>';
+        pos.textContent = '0/0';
+        return;
+    }
+    if(WRONG_STATE.idx >= total) WRONG_STATE.idx = total - 1;
+    if(WRONG_STATE.idx < 0) WRONG_STATE.idx = 0;
+    pos.textContent = (WRONG_STATE.idx + 1) + '/' + total;
+    document.getElementById('wrongPrevBtn').disabled = WRONG_STATE.idx <= 0;
+    document.getElementById('wrongNextBtn').disabled = WRONG_STATE.idx >= total - 1;
+
+    const item = items[WRONG_STATE.idx];
+    const modeClass = 'mode-' + item.mode;
+    let caseHtml = '';
+    if(item.caseStudy){
+        caseHtml = '<div class="wr-case" style="max-height:none">' + (item.caseTitle ? '<b>'+esc(item.caseTitle)+'</b><br>' : '') + item.caseStudy + '</div>';
+    }
+    let optsHtml = (item.options||[]).map((o,i)=>{
+        let cls='';
+        if(i===item.correct)cls='correct';
+        else if(i===item.chosen)cls='wrong';
+        return '<div class="wr-opt '+cls+'"><span class="wr-l">'+String.fromCharCode(65+i)+'</span><span>'+o+'</span></div>';
+    }).join('');
+    const explainHtml = item.explain ? '<div class="wr-explain"><b>📘 Explanation</b>'+item.explain+'</div>' : '';
+
+    const html =
+        '<div class="wrong-card">' +
+            '<div class="wc-head">' +
+                '<span class="wc-meta '+modeClass+'" style="background:'+modeColor(item.mode)+';color:#fff">'+esc(MODE_LABELS[item.mode]||item.mode)+'</span>' +
+                '<span class="wc-meta">Q'+esc(String(item.qNum||''))+'</span>' +
+                (item.wrongCount>1 ? '<span class="wc-meta" style="background:#fee2e2;color:#991b1b">✗ '+item.wrongCount+'×</span>' : '') +
+                '<button class="wr-remove" onclick="removeWrongFromCarousel(\''+item.id+'\')" title="Remove"><i class="fa-solid fa-xmark"></i></button>' +
+            '</div>' +
+            caseHtml +
+            '<div class="wr-question" style="font-size:.92rem">'+item.question+'</div>' +
+            '<div class="wr-options">'+optsHtml+'</div>' +
+            explainHtml +
+        '</div>';
+    const content = document.getElementById('wrongCarouselContent');
+    content.innerHTML = html;
+    prepareTables(content);
+    content.scrollTop = 0;
+}
+
+function modeColor(mode){
+    const map = {easy:'#10b981',medium:'#3b82f6',hard:'#ef4444',gst:'#d97706',fr:'#7c3aed',fricaics:'#6d28d9',afm:'#4338ca',dt:'#be185d'};
+    return map[mode] || '#64748b';
+}
+
+window.wrongNav = function(dir){
+    const items = currentWrongItems();
+    const t = WRONG_STATE.idx + dir;
+    if(t < 0 || t >= items.length){ beep(240,'sine',.07); return; }
+    WRONG_STATE.idx = t;
+    renderWrongCarousel();
+    beep(dir>0?540:430,'sine',.05);
+};
+
+window.removeWrongFromCarousel = function(id){
+    showCustomConfirm('Remove','Remove this question from the wrong list?', async r=>{
+        if(!r) return;
+        await removeWrongQuestion(id);
+        WRONG_STATE.items = WRONG_STATE.items.filter(x => x.id !== id);
+        if(WRONG_STATE.idx >= currentWrongItems().length) WRONG_STATE.idx = Math.max(0, currentWrongItems().length-1);
+        renderWrongCarousel();
+        updateWrongChip();
+        beep(320,'sine',.06);
+    });
+};
+
+window.openWrongPalette = function(){
+    const g = document.getElementById('wrongPaletteGrid');
+    g.innerHTML = '';
+    const items = currentWrongItems();
+    items.forEach((item,i)=>{
+        const b = document.createElement('button');
+        b.className = 'kt-palette-item' + (i === WRONG_STATE.idx ? ' current' : '');
+        b.textContent = i+1;
+        b.title = (MODE_LABELS[item.mode]||item.mode) + ' · Q' + (item.qNum||'');
+        b.style.background = i===WRONG_STATE.idx ? '#fef3c7' : modeColor(item.mode)+'22';
+        b.style.borderColor = i===WRONG_STATE.idx ? '#f59e0b' : modeColor(item.mode);
+        b.style.color = i===WRONG_STATE.idx ? '#b45309' : modeColor(item.mode);
+        b.addEventListener('click',()=>{
+            WRONG_STATE.idx = i;
+            closeSheet('wrongPaletteSheet');
+            renderWrongCarousel();
+            beep(520,'sine',.05);
+        });
+        g.appendChild(b);
+    });
+    openSheet('wrongPaletteSheet');
+};
+
+window.openWrongFilter = function(){
+    const g = document.getElementById('wrongFilterGrid');
+    g.innerHTML = '';
+    const counts = {all: WRONG_STATE.items.length};
+    MODE_KEYS.forEach(m=>{ counts[m] = WRONG_STATE.items.filter(x=>x.mode===m).length; });
+    const mk = (key, label) => {
+        const b = document.createElement('button');
+        b.className = 'settings-item';
+        if(WRONG_STATE.filter === key){
+            b.style.background = 'linear-gradient(135deg,#eff6ff,#dbeafe)';
+            b.style.borderColor = '#93c5fd';
+        }
+        b.innerHTML = '<i class="fa-solid fa-circle-check" style="'+(WRONG_STATE.filter===key?'background:linear-gradient(135deg,#2563eb,#4f46e5);color:#fff':'')+'"></i><div><b>'+esc(label)+'</b><small>'+(counts[key]||0)+' questions</small></div>';
+        b.onclick = () => {
+            WRONG_STATE.filter = key;
+            WRONG_STATE.idx = 0;
+            closeSheet('wrongFilterSheet');
+            renderWrongCarousel();
+            beep(520,'sine',.05);
+        };
+        return b;
+    };
+    g.appendChild(mk('all','All Subjects'));
+    MODE_KEYS.forEach(m => g.appendChild(mk(m, MODE_LABELS[m]||m)));
+    openSheet('wrongFilterSheet');
+};
+
+// ==================== GLOBAL WRONG CHIP ====================
 async function updateWrongChip(){
     try{
         const all=await getAllWrongQuestions();
@@ -2048,67 +1698,12 @@ async function updateWrongChip(){
 }
 
 async function refreshWelcomeStats(){
-    try{
-        const all=await getAllWrongQuestions();
-        const ws=document.getElementById('wstatWrong');if(ws)ws.textContent=all.length;
-    }catch(e){}
+    try{const all=await getAllWrongQuestions();const ws=document.getElementById('wstatWrong');if(ws)ws.textContent=all.length;}catch(e){}
     const sy=document.getElementById('wstatSyl');if(sy)sy.textContent=sylOverallPct()+'%';
-    try{
-        await loadKTData();
-        const totalKT=Object.values(KT_DATA).reduce((a,c)=>a+(c.takeaways?c.takeaways.length:0),0);
-        const kt=document.getElementById('wstatKT');if(kt)kt.textContent=totalKT;
-    }catch(e){}
+    try{await loadKTData();const totalKT=Object.values(KT_DATA).reduce((a,c)=>a+(c.takeaways?c.takeaways.length:0),0);const kt=document.getElementById('wstatKT');if(kt)kt.textContent=totalKT;}catch(e){}
 }
 
-async function renderWrongReviewScreen(){
-    const all=await getAllWrongQuestions();
-    all.sort((a,b)=>(b.lastWrong||0)-(a.lastWrong||0));
-    const counts={all:all.length};
-    MODE_KEYS.forEach(m=>counts[m]=0);
-    all.forEach(x=>{if(counts[x.mode]!==undefined)counts[x.mode]++;});
-    const bar=document.getElementById('wrongFilterBar');
-    bar.innerHTML='';
-    const mk=(k,label)=>{const b=document.createElement('button');b.className='wr-filter'+(wrongFilter===k?' active':'');b.textContent=label+' ('+(counts[k]||0)+')';b.onclick=()=>{wrongFilter=k;renderWrongReviewScreen();};return b;};
-    bar.appendChild(mk('all','All'));
-    MODE_KEYS.forEach(m=>bar.appendChild(mk(m,MODE_LABELS[m]||m)));
-    const list=document.getElementById('wrongListFull');
-    list.innerHTML='';
-    const filtered=wrongFilter==='all'?all:all.filter(x=>x.mode===wrongFilter);
-    document.getElementById('wrongCountLabel').textContent=filtered.length+' question'+(filtered.length===1?'':'s');
-    if(!filtered.length){
-        list.innerHTML='<div class="wr-empty"><i class="fa-regular fa-face-smile"></i>No wrong questions here. Keep it up! 🎉</div>';
-        return;
-    }
-    filtered.forEach(item=>{
-        const el=document.createElement('div');
-        el.className='wr-item';
-        const modeClass='mode-'+item.mode;
-        const caseHtml=item.caseStudy?`<div class="wr-case">${item.caseTitle?'<b>'+esc(item.caseTitle)+'</b><br>':''}${item.caseStudy}</div>`:'';
-        const optsHtml=(item.options||[]).map((o,i)=>{
-            let cls='';
-            if(i===item.correct)cls='correct';
-            else if(i===item.chosen)cls='wrong';
-            return `<div class="wr-opt ${cls}"><span class="wr-l">${String.fromCharCode(65+i)}</span><span>${o}</span></div>`;
-        }).join('');
-        const explainHtml=item.explain?`<div class="wr-explain"><b>📘 Explanation</b>${item.explain}</div>`:'';
-        el.innerHTML=`<div class="wr-item-head"><span class="wr-badge ${modeClass}">${MODE_LABELS[item.mode]||item.mode}</span><span class="wr-badge">Q${esc(String(item.qNum||''))}</span>${item.wrongCount>1?`<span class="wr-badge count">✗ ${item.wrongCount}×</span>`:''}<button class="wr-remove" title="Remove from list"><i class="fa-solid fa-xmark"></i></button></div>${caseHtml}<div class="wr-question">${item.question}</div><div class="wr-options">${optsHtml}</div>${explainHtml}`;
-        el.querySelector('.wr-remove').addEventListener('click',async()=>{await removeWrongQuestion(item.id);beep(320,'sine',.06);renderWrongReviewScreen();updateWrongChip();});
-        prepareTables(el);
-        list.appendChild(el);
-    });
-}
-
-window.clearAllWrong=function(){
-    showCustomConfirm('Clear All','Remove all saved wrong questions? This cannot be undone.',async r=>{
-        if(!r)return;
-        await clearWrongQuestions();
-        wrongFilter='all';
-        renderWrongReviewScreen();
-        updateWrongChip();
-        beep(280,'sawtooth',.12);
-    });
-};
-
+// ==================== LIFELINES ====================
 function toggleLifelineMenu(){const dd=document.getElementById('lifelineDropdown');dd.style.display=dd.style.display==='block'?'none':'block';}
 function use5050(){toggleLifelineMenu();if(STATE.isAnswered||STATE.studyMode)return;const q=STATE.questions[STATE.currentIdx];const wrong=[0,1,2,3].filter(i=>i!==q.correct&&q.options[i]!==undefined);wrong.sort(()=>Math.random()-.5);wrong.slice(0,2).forEach(i=>{const b=document.getElementById('optBtn'+i);if(b){b.style.opacity='0.3';b.disabled=true;}});}
 function useExpert(){toggleLifelineMenu();showExplanationModal(false,true);}
@@ -2131,12 +1726,7 @@ document.getElementById('importFile').addEventListener('change',async function(e
                 for(const md of Object.keys(d.progress)) await saveState(md,d.progress[md]);
                 await clearWrongQuestions();
                 const db=await initDB();
-                await new Promise(res=>{
-                    const tx=db.transaction(WRONG_STORE,'readwrite');
-                    const st=tx.objectStore(WRONG_STORE);
-                    d.wrongQuestions.forEach(w=>st.put(w));
-                    tx.oncomplete=res;tx.onerror=res;
-                });
+                await new Promise(res=>{const tx=db.transaction(WRONG_STORE,'readwrite');const st=tx.objectStore(WRONG_STORE);d.wrongQuestions.forEach(w=>st.put(w));tx.oncomplete=res;tx.onerror=res;});
             } else {for(const md of Object.keys(d)) await saveState(md,d[md]);}
             showCustomAlert("Success","✅ Progress restored!");
             document.getElementById('importFile').value="";
@@ -2147,9 +1737,7 @@ document.getElementById('importFile').addEventListener('change',async function(e
     rd.readAsText(f);
 });
 
-/* ============================================================
-   SYLLABUS + KT + FLASHCARDS
-   ============================================================ */
+// ==================== SYLLABUS + KT + FLASHCARDS ====================
 const SYL_STORE_KEY='auditPro_syllabusProgress';
 let SYL_PROGRESS={};try{SYL_PROGRESS=JSON.parse(localStorage.getItem(SYL_STORE_KEY)||'{}')||{};}catch(e){SYL_PROGRESS={};}
 function saveSylProgress(){try{localStorage.setItem(SYL_STORE_KEY,JSON.stringify(SYL_PROGRESS));}catch(e){}}
@@ -2164,29 +1752,8 @@ function saveFavKT(){try{localStorage.setItem(FAV_KT_KEY,JSON.stringify([...FAV_
 async function loadKTData(){
     if(KT_LOADED)return;
     KT_LOADED=true;
-    try{
-        const res=await fetch('kt.json',{cache:'no-store'});
-        if(!res.ok)throw new Error('missing');
-        const j=await res.json();
-        const chs=j.chapters||[];
-        chs.forEach(ch=>{
-            if(!ch||!ch.chapter_number)return;
-            KT_DATA[String(ch.chapter_number)]={title:ch.chapter_title||'',takeaways:Array.isArray(ch.key_takeaways)?ch.key_takeaways:[]};
-        });
-    }catch(e){
-        KT_DATA['1']={title:'Quality Control',takeaways:[
-            "SQC 1 requires that the firm should establish a system of quality control designed to provide it with reasonable assurance that the firm and its personnel comply with professional standards and regulatory and legal requirements.",
-            "SQC 1 is applicable to audits, reviews of historical financial Information, and other assurance and related services engagements.",
-            "Elements of system of quality control include leadership responsibilities, ethical requirements, acceptance and continuance, human resources, engagement performance and monitoring.",
-            "Significant judgments made in an engagement should be reviewed by an engagement quality control reviewer before the report is issued.",
-            "Engagement quality control review is mandatory in respect of listed entities.",
-            "Engagement files should be completed in not more than 60 days after date of auditor's report in case of audit engagements.",
-            "In the specific case of audit engagements, the retention period ordinarily is no shorter than seven years from the date of the auditor's report.",
-            "SA 220 is applicable to audit engagements only. It deals with responsibilities of engagement teams to implement quality control procedures.",
-            "Besides SQC 1 and SA 220, other SAs, Code of Ethics and the Companies Act, 2013 facilitate quality control process.",
-            "Mechanism for review of quality control exists through Peer Review Board, Quality Review Board and NFRA."
-        ]};
-    }
+    try{const res=await fetch('kt.json',{cache:'no-store'});if(!res.ok)throw new Error('missing');const j=await res.json();const chs=j.chapters||[];chs.forEach(ch=>{if(!ch||!ch.chapter_number)return;KT_DATA[String(ch.chapter_number)]={title:ch.chapter_title||'',takeaways:Array.isArray(ch.key_takeaways)?ch.key_takeaways:[]};});}
+    catch(e){KT_DATA['1']={title:'Quality Control',takeaways:["SQC 1 requires that the firm should establish a system of quality control designed to provide it with reasonable assurance that the firm and its personnel comply with professional standards and regulatory and legal requirements.","SQC 1 is applicable to audits, reviews of historical financial Information, and other assurance and related services engagements.","Elements of system of quality control include leadership responsibilities, ethical requirements, acceptance and continuance, human resources, engagement performance and monitoring.","Significant judgments made in an engagement should be reviewed by an engagement quality control reviewer before the report is issued.","Engagement quality control review is mandatory in respect of listed entities.","Engagement files should be completed in not more than 60 days after date of auditor's report in case of audit engagements.","In the specific case of audit engagements, the retention period ordinarily is no shorter than seven years from the date of the auditor's report.","SA 220 is applicable to audit engagements only. It deals with responsibilities of engagement teams to implement quality control procedures.","Besides SQC 1 and SA 220, other SAs, Code of Ethics and the Companies Act, 2013 facilitate quality control process.","Mechanism for review of quality control exists through Peer Review Board, Quality Review Board and NFRA."]};}
 }
 function getChapterKT(chNum){return KT_DATA[String(chNum)]||null;}
 
@@ -2379,9 +1946,7 @@ function normalizeSyllabus(raw){
             const ch={chapter_number:c.chapter_number||(ci+1),chapter_title:c.chapter_title||c.title||('Chapter '+(ci+1)),topics:[]};
             (c.topics||[]).forEach((t,ti)=>{
                 const tp={topic_number:t.topic_number||String(ti+1),title:t.title||t.topic_title||''};
-                if(Array.isArray(t.subtopics)&&t.subtopics.length){
-                    tp.subtopics=t.subtopics.map((s,si)=>({topic_number:s.topic_number||(tp.topic_number+'.'+(si+1)),title:s.title||''})).filter(s=>s.title);
-                }
+                if(Array.isArray(t.subtopics)&&t.subtopics.length){tp.subtopics=t.subtopics.map((s,si)=>({topic_number:s.topic_number||(tp.topic_number+'.'+(si+1)),title:s.title||''})).filter(s=>s.title);}
                 if(tp.title)ch.topics.push(tp);
             });
             mod.chapters.push(ch);
@@ -2394,22 +1959,15 @@ function normalizeSyllabus(raw){
 
 async function loadSyllabusData(){
     await loadKTData();
-    try{
-        const res=await fetch('syllabus.json',{cache:'no-store'});
-        if(!res.ok)throw new Error('missing');
-        const j=await res.json();
-        const n=normalizeSyllabus(j);
-        if(n.modules&&n.modules.length)return n;
-    }catch(e){}
+    try{const res=await fetch('syllabus.json',{cache:'no-store'});if(!res.ok)throw new Error('missing');const j=await res.json();const n=normalizeSyllabus(j);if(n.modules&&n.modules.length)return n;}catch(e){}
     return DEFAULT_SYLLABUS;
 }
 
 function sylCardsForChapter(mod,ch){
     const cards=[];const m=mod.module_number,c=ch.chapter_number;
     (ch.topics||[]).forEach(t=>{
-        if(Array.isArray(t.subtopics)&&t.subtopics.length){
-            t.subtopics.forEach(s=>{cards.push({id:'m'+m+'c'+c+'t'+t.topic_number+'s'+s.topic_number,title:s.title,parent:t.title,mod:m,chNum:c,chTitle:ch.chapter_title,tag:'Subtopic '+s.topic_number});});
-        }else{cards.push({id:'m'+m+'c'+c+'t'+t.topic_number,title:t.title,parent:'',mod:m,chNum:c,chTitle:ch.chapter_title,tag:'Topic '+t.topic_number});}
+        if(Array.isArray(t.subtopics)&&t.subtopics.length){t.subtopics.forEach(s=>{cards.push({id:'m'+m+'c'+c+'t'+t.topic_number+'s'+s.topic_number,title:s.title,parent:t.title,mod:m,chNum:c,chTitle:ch.chapter_title,tag:'Subtopic '+s.topic_number});});}
+        else{cards.push({id:'m'+m+'c'+c+'t'+t.topic_number,title:t.title,parent:'',mod:m,chNum:c,chTitle:ch.chapter_title,tag:'Topic '+t.topic_number});}
     });
     if(!cards.length)cards.push({id:'m'+m+'c'+c,title:ch.chapter_title,parent:'',mod:m,chNum:c,chTitle:ch.chapter_title,tag:'Chapter '+c});
     return cards;
@@ -2418,12 +1976,7 @@ function sylAllCards(){const src=SYLLABUS||DEFAULT_SYLLABUS;let all=[];(src.modu
 function sylOverallPct(){const all=sylAllCards();if(!all.length)return 0;const dn=all.filter(c=>SYL_PROGRESS[c.id]).length;return Math.round(dn/all.length*100);}
 function updateSylChip(){const chip=document.getElementById('sylChip');if(chip)chip.textContent=sylOverallPct()+'%';const ws=document.getElementById('wstatSyl');if(ws)ws.textContent=sylOverallPct()+'%';}
 
-window.openSyllabus=async function(){
-    showLoader('Loading syllabus...');
-    try{SYLLABUS=await loadSyllabusData();document.getElementById('sylCourseTitle').textContent=SYLLABUS.course_title||'Advanced Auditing, Assurance and Professional Ethics';renderSyllabus();switchScreen('syllabusScreen');}
-    catch(e){showCustomAlert('Error','Could not load the syllabus.');}
-    finally{hideLoader();}
-};
+window.openSyllabus=async function(){showLoader('Loading syllabus...');try{SYLLABUS=await loadSyllabusData();document.getElementById('sylCourseTitle').textContent=SYLLABUS.course_title||'Advanced Auditing, Assurance and Professional Ethics';renderSyllabus();switchScreen('syllabusScreen');}catch(e){showCustomAlert('Error','Could not load the syllabus.');}finally{hideLoader();}};
 
 function renderSyllabus(){
     if(!SYLLABUS)return;
@@ -2437,8 +1990,7 @@ function renderSyllabus(){
     const wrap=document.getElementById('sylModules');if(!wrap)return;
     wrap.innerHTML='';
     (SYLLABUS.modules||[]).forEach(mod=>{
-        const chs=mod.chapters||[];
-        let modCards=0,modDone=0;
+        const chs=mod.chapters||[];let modCards=0,modDone=0;
         chs.forEach(ch=>{const cs=sylCardsForChapter(mod,ch);modCards+=cs.length;modDone+=cs.filter(c=>SYL_PROGRESS[c.id]).length;});
         const mpct=modCards?Math.round(modDone/modCards*100):0;
         const el=document.createElement('div');
@@ -2463,9 +2015,7 @@ function renderSyllabus(){
     });
 }
 
-/* ============================================================
-   KT DECK (with session memory + palette)
-   ============================================================ */
+// ==================== KT DECK ====================
 const KT_DECK={deck:[],idx:0,chapter:null,title:'',sub:'',lock:false};
 function buildKTDeckForChapter(chNum){
     const kt=getChapterKT(chNum);const chTitle=(kt&&kt.title)||('Chapter '+chNum);
@@ -2486,41 +2036,17 @@ window.openKTDeckForChapter=function(chNum){
         openKTDeck(deck,title,'Key Takeaways');
     });
 };
-window.openOverallKT = function(){
-    openSheet('subjectPickerSheet');
-};
+window.openOverallKT=function(){openSheet('subjectPickerSheet');};
+window.openAuditKT=function(){showLoader('Loading takeaways...');loadSyllabusData().then(()=>{const deck=buildKTDeckAll();if(!deck.length){showCustomAlert('No takeaways','No Key Takeaways available yet.');hideLoader();return;}openKTDeck(deck,'📚 Audit — All Key Takeaways',deck.length+' across all chapters');}).finally(()=>hideLoader());};
 
-/* Original Audit KT deck opener (called from picker) */
-window.openAuditKT = function(){
-    showLoader('Loading takeaways...');
-    loadSyllabusData().then(()=>{
-        const deck = buildKTDeckAll();
-        if(!deck.length){
-            showCustomAlert('No takeaways','No Key Takeaways available yet.');
-            hideLoader(); return;
-        }
-        openKTDeck(deck,'📚 Audit — All Key Takeaways', deck.length+' across all chapters');
-    }).finally(()=>hideLoader());
-};
-
-/* ============================================================
-   AFM THEORY MASTER SHEET — rich flashcard deck
-   ============================================================ */
+// ==================== AFM THEORY ====================
 const AFM_THEORY_KEY = 'auditPro_afmTheoryProgress';
-const AFM_STATE = {
-    deck: [],
-    idx: 0,
-    flipped: false,
-    loading: false,
-    progress: {}
-};
-try {
-    AFM_STATE.progress = JSON.parse(localStorage.getItem(AFM_THEORY_KEY) || '{}') || {};
-} catch(e) { AFM_STATE.progress = {}; }
-
-function saveAFMProgress() {
-    try { localStorage.setItem(AFM_THEORY_KEY, JSON.stringify(AFM_STATE.progress)); } catch(e) {}
-}
+const AFM_IDX_KEY = 'auditPro_afmTheoryIdx';
+const AFM_STATE = {deck: [], idx: 0, flipped: false, loading: false, progress: {}};
+try { AFM_STATE.progress = JSON.parse(localStorage.getItem(AFM_THEORY_KEY) || '{}') || {}; } catch(e) { AFM_STATE.progress = {}; }
+try { const saved = parseInt(localStorage.getItem(AFM_IDX_KEY)||'0',10); if(!isNaN(saved)) AFM_STATE.idx = saved; } catch(e) {}
+function saveAFMProgress() { try { localStorage.setItem(AFM_THEORY_KEY, JSON.stringify(AFM_STATE.progress)); } catch(e) {} }
+function saveAFMIdx() { try { localStorage.setItem(AFM_IDX_KEY, String(AFM_STATE.idx)); } catch(e) {} }
 
 async function loadAFMTheory() {
     if (AFM_STATE.deck.length) return AFM_STATE.deck;
@@ -2536,19 +2062,13 @@ async function loadAFMTheory() {
             const chTitle = ch.title || ('Chapter ' + chNum);
             (ch.questions || []).forEach(q => {
                 deck.push({
-                    id: q.id,
-                    question: q.question || '',
-                    definition: q.definition || '',
+                    id: q.id, question: q.question || '', definition: q.definition || '',
                     keywords: Array.isArray(q.keywords) ? q.keywords : [],
-                    memory_code: q.memory_code || '',
-                    answer_skeleton: q.answer_skeleton || '',
-                    exam_trigger: q.exam_trigger || '',
-                    formula: q.formula || '',
+                    memory_code: q.memory_code || '', answer_skeleton: q.answer_skeleton || '',
+                    exam_trigger: q.exam_trigger || '', formula: q.formula || '',
                     definitions: q.definitions || null,
                     formulas: Array.isArray(q.formulas) ? q.formulas : null,
-                    chNum: chNum,
-                    chTitle: chTitle,
-                    memoryMap: ch.memory_map || ''
+                    chNum: chNum, chTitle: chTitle, memoryMap: ch.memory_map || ''
                 });
             });
         });
@@ -2557,9 +2077,7 @@ async function loadAFMTheory() {
     } catch(e) {
         showCustomAlert('Error', 'Could not load afmtheory.json. Ensure the file exists in the project root.');
         return null;
-    } finally {
-        AFM_STATE.loading = false;
-    }
+    } finally { AFM_STATE.loading = false; }
 }
 
 window.openAFMTheory = async function() {
@@ -2569,45 +2087,32 @@ window.openAFMTheory = async function() {
         hideLoader();
         if (!ok || !ok.length) return;
     }
-    AFM_STATE.idx = 0;
     AFM_STATE.flipped = false;
+    if(AFM_STATE.idx >= AFM_STATE.deck.length) AFM_STATE.idx = 0;
     document.getElementById('afmTheoryActions').style.display = 'flex';
     document.getElementById('afmTheoryOverlay').classList.add('show');
     renderAFMTheory();
 };
 
 window.closeAFMTheory = function() {
+    saveAFMProgress(); saveAFMIdx();
     document.getElementById('afmTheoryOverlay').classList.remove('show');
-    saveAFMProgress();
 };
 
 function renderAFMTheory() {
     const stage = document.getElementById('afmTheoryStage');
     const total = AFM_STATE.deck.length;
     if (!stage || !total) return;
-
     const mastered = AFM_STATE.deck.filter(d => AFM_STATE.progress[d.id]).length;
-    document.getElementById('afmTheoryProgress').textContent =
-        (AFM_STATE.idx + 1) + ' / ' + total + '  ·  ' + mastered + ' mastered';
-    document.getElementById('afmTheoryProgressFill').style.width =
-        ((AFM_STATE.idx + 1) / total * 100) + '%';
-
+    document.getElementById('afmTheoryProgress').textContent = (AFM_STATE.idx + 1) + ' / ' + total + '  ·  ' + mastered + ' mastered';
+    document.getElementById('afmTheoryProgressFill').style.width = ((AFM_STATE.idx + 1) / total * 100) + '%';
     stage.innerHTML = '';
     const d = AFM_STATE.deck[AFM_STATE.idx];
     if (!d) return;
-
-    const kwHtml = d.keywords.length
-        ? d.keywords.map(k => '<span class="afm-kw">' + esc(k) + '</span>').join('')
-        : '<span class="afm-kw" style="opacity:.5">No keywords</span>';
-
+    const kwHtml = d.keywords.length ? d.keywords.map(k => '<span class="afm-kw">' + esc(k) + '</span>').join('') : '<span class="afm-kw" style="opacity:.5">No keywords</span>';
     let formulaBlock = '';
-    if (d.formula) {
-        formulaBlock = '<div class="afm-sec"><div class="afm-sec-title"><i class="fa-solid fa-square-root-variable"></i> Formula</div><div class="afm-formula">' + esc(d.formula) + '</div></div>';
-    } else if (d.formulas && d.formulas.length) {
-        formulaBlock = '<div class="afm-sec"><div class="afm-sec-title"><i class="fa-solid fa-square-root-variable"></i> Formulas</div>' +
-            d.formulas.map(f => '<div class="afm-formula">' + esc(f) + '</div>').join('') + '</div>';
-    }
-
+    if (d.formula) { formulaBlock = '<div class="afm-sec"><div class="afm-sec-title"><i class="fa-solid fa-square-root-variable"></i> Formula</div><div class="afm-formula">' + esc(d.formula) + '</div></div>'; }
+    else if (d.formulas && d.formulas.length) { formulaBlock = '<div class="afm-sec"><div class="afm-sec-title"><i class="fa-solid fa-square-root-variable"></i> Formulas</div>' + d.formulas.map(f => '<div class="afm-formula">' + esc(f) + '</div>').join('') + '</div>'; }
     const card = document.createElement('div');
     card.className = 'flash-card' + (AFM_STATE.flipped ? ' flipped' : '');
     card.dataset.top = '1';
@@ -2627,11 +2132,7 @@ function renderAFMTheory() {
                 '<div class="afm-swipe-hint">← Not Yet · Tap to Reveal · Mastered →</div>' +
             '</div>' +
         '</div>';
-
-    card.addEventListener('click', e => {
-        if (e.target.closest('.flash-btn')) return;
-        afmFlip();
-    });
+    card.addEventListener('click', e => { if (e.target.closest('.flash-btn')) return; afmFlip(); });
     stage.appendChild(card);
 }
 
@@ -2650,6 +2151,7 @@ window.afmSwipe = function(mastered) {
     saveAFMProgress();
     AFM_STATE.flipped = false;
     AFM_STATE.idx++;
+    saveAFMIdx();
     if (AFM_STATE.idx >= AFM_STATE.deck.length) { showAFMComplete(); return; }
     renderAFMTheory();
 };
@@ -2667,7 +2169,7 @@ function showAFMComplete() {
             '<div style="font-size:3.2rem;margin-bottom:12px">' + (pct === 100 ? '🎉' : '👍') + '</div>' +
             '<h3>AFM Theory Deck Complete</h3>' +
             '<p>' + mastered + ' of ' + total + ' cards marked as mastered (' + pct + '%)</p>' +
-            '<button class="flash-btn yes" style="max-width:230px;margin:0 auto;flex-direction:row;justify-content:center;gap:9px" onclick="AFM_STATE.idx=0;AFM_STATE.flipped=false;document.getElementById(\'afmTheoryActions\').style.display=\'flex\';renderAFMTheory()">' +
+            '<button class="flash-btn yes" style="max-width:230px;margin:0 auto;flex-direction:row;justify-content:center;gap:9px" onclick="AFM_STATE.idx=0;AFM_STATE.flipped=false;saveAFMIdx();document.getElementById(\'afmTheoryActions\').style.display=\'flex\';renderAFMTheory()">' +
                 '<i class="fa-solid fa-rotate-right"></i><span>Review Again</span>' +
             '</button>' +
             '<button class="flash-btn no" style="max-width:230px;margin:10px auto 0;flex-direction:row;justify-content:center;gap:9px" onclick="closeAFMTheory()">' +
@@ -2684,6 +2186,7 @@ window.afmShuffle = function() {
     }
     AFM_STATE.idx = 0;
     AFM_STATE.flipped = false;
+    saveAFMIdx();
     beep(560, 'triangle', .06);
     renderAFMTheory();
 };
@@ -2695,52 +2198,58 @@ window.afmResetProgress = function() {
         saveAFMProgress();
         AFM_STATE.idx = 0;
         AFM_STATE.flipped = false;
+        saveAFMIdx();
         beep(280, 'sawtooth', .1);
         renderAFMTheory();
     });
 };
 
+window.openAFMPalette = function() {
+    const g = document.getElementById('afmPaletteGrid');
+    g.innerHTML = '';
+    AFM_STATE.deck.forEach((d,i)=>{
+        const b = document.createElement('button');
+        const mastered = AFM_STATE.progress[d.id];
+        b.className = 'kt-palette-item' + (i === AFM_STATE.idx ? ' current' : '') + (mastered ? ' custom-kt' : '');
+        b.textContent = i+1;
+        b.title = 'Ch'+d.chNum+' · '+d.question.substring(0,60);
+        if(mastered){ const dot = document.createElement('span'); dot.className='kt-fav-dot'; dot.style.background='#10b981'; b.appendChild(dot); }
+        b.addEventListener('click',()=>{
+            AFM_STATE.idx = i;
+            AFM_STATE.flipped = false;
+            saveAFMIdx();
+            closeSheet('afmPaletteSheet');
+            renderAFMTheory();
+            beep(520,'sine',.05);
+        });
+        g.appendChild(b);
+    });
+    openSheet('afmPaletteSheet');
+};
+
+// ==================== KT DECK (cont'd) ====================
 function openKTDeck(deck,title,sub){
     KT_DECK.deck=deck;KT_DECK.idx=0;KT_DECK.title=title;KT_DECK.sub=sub;
     KT_DECK.chapter=deck[0]?deck[0].chapterNum:null;
-    try{
-        const saved=sessionStorage.getItem('ktDeck_idx_'+title);
-        if(saved!==null){
-            const n=parseInt(saved,10);
-            if(!isNaN(n)&&n>=0&&n<deck.length)KT_DECK.idx=n;
-        }
-    }catch(e){}
+    try{const saved=sessionStorage.getItem('ktDeck_idx_'+title);if(saved!==null){const n=parseInt(saved,10);if(!isNaN(n)&&n>=0&&n<deck.length)KT_DECK.idx=n;}}catch(e){}
     document.getElementById('ktDeckTitle').textContent=title;
     document.getElementById('ktDeckOverlay').classList.add('show');
     renderKTDeck();
 }
-window.closeKTDeck=function(){
-    try{sessionStorage.setItem('ktDeck_idx_'+KT_DECK.title,String(KT_DECK.idx));}catch(e){}
-    document.getElementById('ktDeckOverlay').classList.remove('show');
-};
+window.closeKTDeck=function(){try{sessionStorage.setItem('ktDeck_idx_'+KT_DECK.title,String(KT_DECK.idx));}catch(e){}document.getElementById('ktDeckOverlay').classList.remove('show');};
 window.ktDeckNav=function(dir){
     const newIdx=KT_DECK.idx+dir;
-    if(newIdx<0||newIdx>=KT_DECK.deck.length){
-        const top=document.querySelector('#ktDeckStage .kt-deck-card[data-top="1"]');
-        if(top){top.style.transition='transform .2s';top.style.transform='translate3d('+(dir>0?-30:30)+'px,0,0)';setTimeout(()=>{top.style.transform='translate3d(0,0,0)';},180);}
-        beep(280,'sine',.05);return;
-    }
+    if(newIdx<0||newIdx>=KT_DECK.deck.length){const top=document.querySelector('#ktDeckStage .kt-deck-card[data-top="1"]');if(top){top.style.transition='transform .2s';top.style.transform='translate3d('+(dir>0?-30:30)+'px,0,0)';setTimeout(()=>{top.style.transform='translate3d(0,0,0)';},180);}beep(280,'sine',.05);return;}
     const top=document.querySelector('#ktDeckStage .kt-deck-card[data-top="1"]');
     if(top){top.style.transition='transform .22s ease-out, opacity .22s ease-out';top.style.transform='translate3d('+(dir>0?-640:640)+'px,0,0) rotate('+(dir>0?-15:15)+'deg)';top.style.opacity='0';}
-    KT_DECK.idx=newIdx;
-    KT_DECK.chapter=KT_DECK.deck[KT_DECK.idx]?KT_DECK.deck[KT_DECK.idx].chapterNum:null;
-    beep(420,'sine',.04);
-    setTimeout(renderKTDeck,120);
+    KT_DECK.idx=newIdx;KT_DECK.chapter=KT_DECK.deck[KT_DECK.idx]?KT_DECK.deck[KT_DECK.idx].chapterNum:null;
+    beep(420,'sine',.04);setTimeout(renderKTDeck,120);
 };
 function renderKTDeck(){
-    const stage=document.getElementById('ktDeckStage');
-    if(!stage)return;
-    stage.innerHTML='';
-    const total=KT_DECK.deck.length;
-    if(!total){return;}
+    const stage=document.getElementById('ktDeckStage');if(!stage)return;stage.innerHTML='';
+    const total=KT_DECK.deck.length;if(!total){return;}
     function highlightKT(text){
-        const str=String(text||'');
-        if(/<\s*[a-z][^>]*>/i.test(str)){return str;}
+        const str=String(text||'');if(/<\s*[a-z][^>]*>/i.test(str)){return str;}
         let out=esc(str);
         out=out.replace(/\b(SA|SQC|SRE|SRS|SAE)\s?\d{1,4}\b/g,m=>'<span class="kw-std">'+m+'</span>');
         out=out.replace(/\b(CARO\s?20\d{2}|Ind\s?AS\s?\d{1,4}|AS\s?\d{1,3}|NFRA|ICAI|RBI|C&amp;AG|C&AG|BRSR|ESG|SDG|SDGs)\b/g,m=>'<span class="kw-std">'+m+'</span>');
@@ -2774,11 +2283,7 @@ function renderKTDeck(){
         const delBtn=card.querySelector('.kt-del-btn');
         if(delBtn){delBtn.addEventListener('click',e=>{e.stopPropagation();const chNum=delBtn.dataset.ch;const uid=delBtn.dataset.uid;if(!chNum||!uid)return;showCustomConfirm('Delete takeaway','Remove this custom takeaway? This cannot be undone.',r=>{if(!r)return;const arr=CUSTOM_KT[chNum]||[];CUSTOM_KT[chNum]=arr.filter(x=>x.uid!==uid);if(!CUSTOM_KT[chNum].length)delete CUSTOM_KT[chNum];saveCustomKT();KT_DECK.deck=KT_DECK.deck.filter(x=>x.id!==delBtn.dataset.id);if(KT_DECK.idx>=KT_DECK.deck.length)KT_DECK.idx=Math.max(0,KT_DECK.deck.length-1);renderKTDeck();beep(280,'sawtooth',.12);});});}
     }
-    if(KT_DECK.idx===0){
-        const hint=document.createElement('div');hint.className='flash-hint';
-        hint.innerHTML='<span class="hint-l"><i class="fa-solid fa-arrow-left"></i></span><span>SWIPE TO NAVIGATE</span><span class="hint-r"><i class="fa-solid fa-arrow-right"></i></span>';
-        stage.appendChild(hint);
-    }
+    if(KT_DECK.idx===0){const hint=document.createElement('div');hint.className='flash-hint';hint.innerHTML='<span class="hint-l"><i class="fa-solid fa-arrow-left"></i></span><span>SWIPE TO NAVIGATE</span><span class="hint-r"><i class="fa-solid fa-arrow-right"></i></span>';stage.appendChild(hint);}
 }
 function attachKTDrag(card){
     let sx=0,sy=0,dx=0,dy=0;let dragging=false,decided=false;let rafId=null;
@@ -2794,8 +2299,7 @@ function attachKTDrag(card){
 window.promptAddKT=function(){
     const card=KT_DECK.deck[KT_DECK.idx];
     const chNum=card?card.chapterNum:(KT_DECK.chapter||'1');
-    const kt=getChapterKT(chNum);
-    const chName=kt?kt.title:('Chapter '+chNum);
+    const kt=getChapterKT(chNum);const chName=kt?kt.title:('Chapter '+chNum);
     showCustomPrompt('Add Your Takeaway','Adding to '+(chName||'this chapter'),'Write your own key takeaway...',txt=>{
         if(!txt)return;
         const uid='u'+Date.now()+Math.random().toString(36).slice(2,6);
@@ -2810,11 +2314,8 @@ window.promptAddKT=function(){
         renderKTDeck();
     });
 };
-
-/* ============ KT PALETTE ============ */
 window.openKTPalette=function(){
-    const g=document.getElementById('ktPaletteGrid');
-    g.innerHTML='';
+    const g=document.getElementById('ktPaletteGrid');g.innerHTML='';
     KT_DECK.deck.forEach((d,i)=>{
         const b=document.createElement('button');
         b.className='kt-palette-item'+(i===KT_DECK.idx?' current':'')+(d.custom?' custom-kt':'');
@@ -2827,9 +2328,7 @@ window.openKTPalette=function(){
     openSheet('ktPaletteSheet');
 };
 
-/* ============================================================
-   TOPIC FLASHCARDS
-   ============================================================ */
+// ==================== TOPIC FLASHCARDS ====================
 const FLASH={deck:[],idx:0,title:'',sub:'',lock:false,chapter:null};
 window.openFlashcards=function(deck,title,sub){
     if(!deck||!deck.length)return;
@@ -2840,11 +2339,9 @@ window.openFlashcards=function(deck,title,sub){
     updateFlashKTBtn();renderFlash();
 };
 function updateFlashKTBtn(){
-    const btn=document.getElementById('flashKTBtn');
-    if(!btn)return;
+    const btn=document.getElementById('flashKTBtn');if(!btn)return;
     const chNum=FLASH.chapter||(FLASH.deck[FLASH.idx]&&FLASH.deck[FLASH.idx].chNum);
-    const kt=chNum?getChapterKT(chNum):null;
-    const hasKT=!!(kt&&kt.takeaways.length);
+    const kt=chNum?getChapterKT(chNum):null;const hasKT=!!(kt&&kt.takeaways.length);
     btn.style.display=hasKT?'flex':'none';
 }
 window.openFlashKT=function(){
@@ -2857,8 +2354,7 @@ window.openAllFlashcards=function(){const all=sylAllCards();if(!all.length)retur
 window.closeFlashcards=function(){document.getElementById('flashOverlay').classList.remove('show');if(document.getElementById('syllabusScreen').classList.contains('active'))renderSyllabus();};
 function flashCommit(done){
     if(FLASH.lock)return;
-    FLASH.lock=true;
-    setTimeout(()=>{FLASH.lock=false;},180);
+    FLASH.lock=true;setTimeout(()=>{FLASH.lock=false;},180);
     const d=FLASH.deck[FLASH.idx];
     if(d){if(done){SYL_PROGRESS[d.id]=true;beep(720,'sine',.07);}else{delete SYL_PROGRESS[d.id];beep(320,'sine',.07);}saveSylProgress();}
     FLASH.idx++;renderFlash();
@@ -2882,12 +2378,9 @@ window.flashMarkAll=function(){
 };
 window.restartFlashDeck=function(){FLASH.idx=0;renderFlash();};
 function renderFlash(){
-    const stage=document.getElementById('flashStage');
-    const actions=document.getElementById('flashActions');
-    if(!stage)return;
-    stage.innerHTML='';updateFlashKTBtn();
-    const total=FLASH.deck.length;
-    const doneCount=FLASH.deck.filter(d=>SYL_PROGRESS[d.id]).length;
+    const stage=document.getElementById('flashStage');const actions=document.getElementById('flashActions');
+    if(!stage)return;stage.innerHTML='';updateFlashKTBtn();
+    const total=FLASH.deck.length;const doneCount=FLASH.deck.filter(d=>SYL_PROGRESS[d.id]).length;
     const shown=Math.min(FLASH.idx+1,total);
     document.getElementById('flashProgressText').textContent=shown+' / '+total+'  ·  '+doneCount+' completed';
     document.getElementById('flashProgressFill').style.width=(total?(FLASH.idx/total*100):0)+'%';
@@ -2911,11 +2404,7 @@ function renderFlash(){
         stage.appendChild(card);
         if(isTop)attachFlashDrag(card);
     }
-    if(FLASH.idx===0){
-        const hint=document.createElement('div');hint.className='flash-hint';
-        hint.innerHTML='<span class="hint-l"><i class="fa-solid fa-arrow-left"></i></span><span>SWIPE</span><span class="hint-r"><i class="fa-solid fa-arrow-right"></i></span>';
-        stage.appendChild(hint);
-    }
+    if(FLASH.idx===0){const hint=document.createElement('div');hint.className='flash-hint';hint.innerHTML='<span class="hint-l"><i class="fa-solid fa-arrow-left"></i></span><span>SWIPE</span><span class="hint-r"><i class="fa-solid fa-arrow-right"></i></span>';stage.appendChild(hint);}
 }
 function attachFlashDrag(card){
     let sx=0,sy=0,dx=0,dy=0;let dragging=false,decided=false;let rafId=null;
@@ -2930,9 +2419,7 @@ function attachFlashDrag(card){
     card.addEventListener('pointercancel',()=>{dragging=false;if(rafId){cancelAnimationFrame(rafId);rafId=null;}dx=0;dy=0;reset();});
 }
 
-/* ============================================================
-   EVENT BINDINGS
-   ============================================================ */
+// ==================== EVENT BINDINGS ====================
 function bindEvents(){
     document.getElementById('btnPrev').addEventListener('click',goPrev);
     document.getElementById('btnNext').addEventListener('click',goNext);
@@ -2963,19 +2450,26 @@ function bindEvents(){
         rdSwipe.x=t.clientX;rdSwipe.y=t.clientY;rdSwipe.active=true;
     },{passive:true});
     rc.addEventListener('touchend',e=>{
-        if(!rdSwipe.active)return;
-        rdSwipe.active=false;
-        if(STATE.armedColor)return;
-        if(readerNavLocked)return;
-        if(rdSwipe.inTable)return;
+        if(!rdSwipe.active)return;rdSwipe.active=false;
+        if(STATE.armedColor)return; if(readerNavLocked)return; if(rdSwipe.inTable)return;
         const t=e.changedTouches[0];if(!t)return;
-        const dx=t.clientX-rdSwipe.x, dy=t.clientY-rdSwipe.y;
+        const dx=t.clientX-rdSwipe.x,dy=t.clientY-rdSwipe.y;
         if(Math.abs(dx)>80 && Math.abs(dx)>Math.abs(dy)*1.5){readerNav(dx<0?1:-1);}
+    },{passive:true});
+
+    // Wrong carousel swipe
+    const wc=document.getElementById('wrongCarouselContent');
+    let wSw={x:0,y:0,active:false};
+    wc.addEventListener('touchstart',e=>{const t=e.changedTouches[0];if(!t)return;wSw.x=t.clientX;wSw.y=t.clientY;wSw.active=true;},{passive:true});
+    wc.addEventListener('touchend',e=>{
+        if(!wSw.active)return;wSw.active=false;
+        const t=e.changedTouches[0];if(!t)return;
+        const dx=t.clientX-wSw.x,dy=t.clientY-wSw.y;
+        if(Math.abs(dx)>70 && Math.abs(dx)>Math.abs(dy)*1.5){wrongNav(dx<0?1:-1);}
     },{passive:true});
 
     document.addEventListener('click',e=>{const dd=document.getElementById('lifelineDropdown');const lb=document.getElementById('lifelineBtn');if(dd.style.display==='block'&&!dd.contains(e.target)&&e.target!==lb&&!lb.contains(e.target))dd.style.display='none';});
 
-    /* ==== Global keyboard shortcuts ==== */
     document.addEventListener('keydown',e=>{
         const key=e.key;
         const tag=(document.activeElement&&document.activeElement.tagName)||'';
@@ -2986,6 +2480,12 @@ function bindEvents(){
             else if (key === 'ArrowLeft') { e.preventDefault(); afmSwipe(false); }
             else if (key === ' ' || key === 'Enter') { e.preventDefault(); afmFlip(); }
             else if (key === 'Escape' || key === '7') { e.preventDefault(); closeAFMTheory(); }
+            return;
+        }
+        if(document.getElementById('wrongCarousel').style.display==='flex'){
+            if(key==='ArrowRight'||key==='9'){e.preventDefault();wrongNav(1);return;}
+            if(key==='ArrowLeft'||key==='0'){e.preventDefault();wrongNav(-1);return;}
+            if(key==='Escape'||key==='7'){e.preventDefault();closeWrongCarousel();return;}
             return;
         }
         if(document.getElementById('flashOverlay').classList.contains('show')){
@@ -3006,7 +2506,6 @@ function bindEvents(){
            document.getElementById('customPromptModal').style.display==='flex'||
            document.getElementById('notesModal').style.display==='flex'){return;}
 
-        /* ---- Fullscreen Reading Mode ---- */
         if(document.getElementById('fullscreenReader').style.display==='flex'){
             if(key==='ArrowRight'||key==='9'){e.preventDefault();readerNav(1);return;}
             if(key==='ArrowLeft'||key==='0'){e.preventDefault();readerNav(-1);return;}
@@ -3015,16 +2514,12 @@ function bindEvents(){
             if(key==='6'){e.preventDefault();scrollReaderUp();return;}
             if(key==='8'){e.preventDefault();document.getElementById('readerContent').scrollTo({top:0,behavior:'smooth'});return;}
             if(key==='1'||key==='2'||key==='3'||key==='4'){
-                e.preventDefault();
-                const idx=parseInt(key,10)-1;
-                const q=STATE.questions[STATE.currentIdx];
-                if(q&&q.options[idx]!==undefined)handleReaderOptionClick(idx);
-                return;
+                e.preventDefault();const idx=parseInt(key,10)-1;const q=STATE.questions[STATE.currentIdx];
+                if(q&&q.options[idx]!==undefined)handleReaderOptionClick(idx);return;
             }
             return;
         }
 
-        /* ---- Quiz screen ---- */
         if(document.getElementById('quizScreen').classList.contains('active')){
             const modalOpen=document.getElementById('explanationModal').style.display==='flex';
             if(key==='9'){e.preventDefault();goNext();return;}
@@ -3036,8 +2531,7 @@ function bindEvents(){
             if(key==='1'||key==='2'||key==='3'||key==='4'){
                 e.preventDefault();
                 if(!modalOpen&&!STATE.isAnswered&&!STATE.studyMode){
-                    const idx=parseInt(key,10)-1;
-                    const q=STATE.questions[STATE.currentIdx];
+                    const idx=parseInt(key,10)-1;const q=STATE.questions[STATE.currentIdx];
                     if(q&&q.options[idx]!==undefined)handleOptionClick(idx);
                 }
                 return;
