@@ -13,8 +13,8 @@
     "user_sheet_chapters": "The existing sheet uses a different chapter numbering sequence. Its topics have been preserved and mapped to the current ICAI 15-chapter structure.",
     "official_current_structure": "1 Financial Policy and Corporate Strategy; 2 Risk Management; 3 Advanced Capital Budgeting Decisions; 4 Security Analysis; 5 Security Valuation; 6 Portfolio Management; 7 Securitization; 8 Mutual Funds; 9 Derivatives Analysis and Valuation; 10 Foreign Exchange Exposure and Risk Management; 11 International Financial Management; 12 Interest Rate Risk Management; 13 Business Valuation; 14 Mergers, Acquisitions and Corporate Restructuring; 15 Startup Finance.",
     "source_basis": [
-      ":chatgpt-content-reference{index="0"}",
-      ":chatgpt-content-reference{index="1"}"
+      "ICAI Source 0",
+      "ICAI Source 1"
     ]
   },
   "chapters": [
@@ -115,7 +115,7 @@
           "exam_trigger": "Approaches to EFR"
         }
       ],
-      "source_support": ":chatgpt-content-reference{index="2"}"
+      "source_support": "ICAI Source 2"
     },
     {
       "chapter": 2,
@@ -195,7 +195,7 @@
           "exam_trigger": "Importer-manufacturer risks"
         }
       ],
-      "source_support": ":chatgpt-content-reference{index="3"}"
+      "source_support": "ICAI Source 3"
     },
     {
       "chapter": 3,
@@ -266,7 +266,7 @@
           "exam_trigger": "Optimum replacement cycle"
         }
       ],
-      "source_support": ":chatgpt-content-reference{index="4"}"
+      "source_support": "ICAI Source 4"
     },
     {
       "chapter": 4,
@@ -346,7 +346,7 @@
           "exam_trigger": "Moving average signals"
         }
       ],
-      "source_support": ":chatgpt-content-reference{index="5"}"
+      "source_support": "ICAI Source 5"
     },
     {
       "chapter": 5,
@@ -445,7 +445,7 @@
           "exam_trigger": "Precautions before accepting valuation assignment"
         }
       ],
-      "source_support": ":chatgpt-content-reference{index="6"}"
+      "source_support": "ICAI Source 6"
     },
     {
       "chapter": 6,
@@ -525,7 +525,7 @@
           "exam_trigger": "Alternative investments"
         }
       ],
-      "source_support": ":chatgpt-content-reference{index="7"}"
+      "source_support": "ICAI Source 7"
     },
     {
       "chapter": 7,
@@ -641,7 +641,7 @@
           "exam_trigger": "Tokenization vs securitization"
         }
       ],
-      "source_support": ":chatgpt-content-reference{index="8"}"
+      "source_support": "ICAI Source 8"
     },
     {
       "chapter": 8,
@@ -712,7 +712,7 @@
           "exam_trigger": "Role of fund manager"
         }
       ],
-      "source_support": ":chatgpt-content-reference{index="9"}"
+      "source_support": "ICAI Source 9"
     },
     {
       "chapter": 9,
@@ -834,7 +834,7 @@
           "exam_trigger": "Specialised derivatives"
         }
       ],
-      "source_support": ":chatgpt-content-reference{index="10"}"
+      "source_support": "ICAI Source 10"
     },
     {
       "chapter": 10,
@@ -941,7 +941,7 @@
           "exam_trigger": "Payment gateways"
         }
       ],
-      "source_support": ":chatgpt-content-reference{index="11"}"
+      "source_support": "ICAI Source 11"
     },
     {
       "chapter": 11,
@@ -1039,7 +1039,7 @@
           "exam_trigger": "International working capital management"
         }
       ],
-      "source_support": ":chatgpt-content-reference{index="12"}"
+      "source_support": "ICAI Source 12"
     },
     {
       "chapter": 12,
@@ -1110,7 +1110,7 @@
           "exam_trigger": "Swaption features"
         }
       ],
-      "source_support": ":chatgpt-content-reference{index="13"}"
+      "source_support": "ICAI Source 13"
     },
     {
       "chapter": 13,
@@ -1240,7 +1240,7 @@
           "exam_trigger": "Digital/professional/start-up valuation"
         }
       ],
-      "source_support": ":chatgpt-content-reference{index="14"}"
+      "source_support": "ICAI Source 14"
     },
     {
       "chapter": 14,
@@ -1365,7 +1365,7 @@
           "exam_trigger": "SPAC"
         }
       ],
-      "source_support": ":chatgpt-content-reference{index="15"}"
+      "source_support": "ICAI Source 15"
     },
     {
       "chapter": 15,
@@ -1499,7 +1499,7 @@
           "exam_trigger": "Berkus approach"
         }
       ],
-      "source_support": ":chatgpt-content-reference{index="16"}"
+      "source_support": "ICAI Source 16"
     }
   ],
   "ultra_quick_recall": {
@@ -1564,18 +1564,18 @@
     ]
   },
   "source_alignment": {
-    "current_15_chapter_structure": ":chatgpt-content-reference{index="17"}",
-    "existing_user_keyword_sheet": ":chatgpt-content-reference{index="18"}",
-    "advanced_capital_budgeting": ":chatgpt-content-reference{index="19"}",
-    "security_valuation": ":chatgpt-content-reference{index="20"}",
-    "portfolio_management": ":chatgpt-content-reference{index="21"}",
-    "securitization": ":chatgpt-content-reference{index="22"}",
-    "mutual_funds": ":chatgpt-content-reference{index="23"}",
-    "foreign_exchange": ":chatgpt-content-reference{index="24"}",
-    "international_financial_management": ":chatgpt-content-reference{index="25"}",
-    "interest_rate_risk": ":chatgpt-content-reference{index="26"}",
-    "business_valuation": ":chatgpt-content-reference{index="27"}",
-    "m_and_a": ":chatgpt-content-reference{index="28"}",
-    "derivatives": ":chatgpt-content-reference{index="29"}"
+    "current_15_chapter_structure": "ICAI Source 17",
+    "existing_user_keyword_sheet": "ICAI Source 18",
+    "advanced_capital_budgeting": "ICAI Source 19",
+    "security_valuation": "ICAI Source 20",
+    "portfolio_management": "ICAI Source 21",
+    "securitization": "ICAI Source 22",
+    "mutual_funds": "ICAI Source 23",
+    "foreign_exchange": "ICAI Source 24",
+    "international_financial_management": "ICAI Source 25",
+    "interest_rate_risk": "ICAI Source 26",
+    "business_valuation": "ICAI Source 27",
+    "m_and_a": "ICAI Source 28",
+    "derivatives": "ICAI Source 29"
   }
 }
