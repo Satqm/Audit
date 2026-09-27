@@ -54,41 +54,22 @@ body.tv-view .header-title p{font-size:.8rem}
 body.tv-view .home-btn{width:52px;height:52px;font-size:1.15rem;border-radius:14px}
 body.tv-view .icon-btn{width:52px;height:52px;font-size:1.05rem;border-radius:14px}
 body.tv-view .stats-bar{padding:14px 24px;margin:8px 28px 0;font-size:1rem;border-radius:14px}
-body.tv-view .review-wrong-btn{font-size:.9rem;padding:8px 18px;border-radius:22px}
 body.tv-view .main-content{padding:28px 40px}
-body.tv-view #quizArea{gap:26px;max-width:1050px}
-body.tv-view #questionAndOptionsContainer{max-width:1050px;gap:20px}
-body.tv-view .case-study-box{font-size:1.15rem;line-height:1.85;padding:26px;border-left:6px solid var(--primary);border-radius:16px;max-height:44vh}
-body.tv-view .question-card{padding:26px;border-radius:16px;margin-bottom:6px}
-body.tv-view .question-text{font-size:1.5rem;line-height:1.75;font-weight:500}
-body.tv-view .option-btn{font-size:1.25rem;padding:22px 26px;border-radius:16px;gap:18px;line-height:1.5;border-width:2.5px}
-body.tv-view .option-letter{width:48px;height:48px;border-radius:12px;font-size:1.15rem}
-body.tv-view .bottom-nav{padding:16px 24px;margin:0 28px 24px;border-radius:18px;gap:12px}
-body.tv-view .nav-btn{width:60px;height:60px;font-size:1.25rem;border-radius:12px}
-body.tv-view .score-badge{font-size:1.15rem;padding:12px 24px;border-radius:12px}
 body.tv-view #btnPalette{display:none}
-body.tv-view .welcome-hero{padding:40px 30px 32px}
-body.tv-view .brand-text{font-size:2.2rem}
-body.tv-view .brand-icon-sm{width:58px;height:58px;font-size:1.55rem;border-radius:16px}
-body.tv-view .welcome-stats{margin:0 40px 30px;gap:14px;max-width:1200px;margin-left:auto;margin-right:auto;margin-top:-24px}
-body.tv-view .mode-cards{padding:0 40px;max-width:1200px;margin:0 auto;gap:16px;width:100%}
-body.tv-view .mode-card{padding:26px;border-radius:22px;gap:22px;border-width:2.5px}
-body.tv-view .tools-section{padding:30px 40px;gap:14px;max-width:1200px;margin:0 auto;width:100%}
-body.tv-view .social-footer{max-width:1200px;margin-left:auto;margin-right:auto}
 
 /* ============================================================
    WELCOME HERO — clean animated brand lockup
    ============================================================ */
 .welcome-hero{
     position:relative;
-    padding:24px 22px 26px;
+    padding:32px 22px 60px;
     text-align:center;
     background:linear-gradient(135deg,#1e3a8a 0%,#2563eb 55%,#3b82f6 100%);
     color:#fff;
     border-radius:0 0 26px 26px;
     box-shadow:0 12px 32px rgba(37,99,235,.28);
     overflow:hidden;
-    margin-bottom:22px;
+    margin-bottom:0;
     animation:heroSlide .55s cubic-bezier(.16,1,.3,1);
 }
 @keyframes heroSlide{
@@ -144,59 +125,39 @@ body.tv-view .social-footer{max-width:1200px;margin-left:auto;margin-right:auto}
     line-height:1;
     display:flex;align-items:baseline;gap:6px;
 }
-.brand-mcq{
-    color:#fff;
-    animation: letterSlide .7s cubic-bezier(.16,1,.3,1) .15s both;
-}
+.brand-mcq{color:#fff;animation:letterSlide .7s cubic-bezier(.16,1,.3,1) .15s both;}
 .brand-astra{
     background:linear-gradient(90deg,#fbbf24 0%,#f59e0b 50%,#fbbf24 100%);
     background-size:200% auto;
-    -webkit-background-clip:text;
-    background-clip:text;
+    -webkit-background-clip:text;background-clip:text;
     -webkit-text-fill-color:transparent;
     animation: letterSlide .7s cubic-bezier(.16,1,.3,1) .25s both, shimmer 3s linear infinite 1s;
 }
-@keyframes letterSlide{
-    from{opacity:0;transform:translateY(-8px)}
-    to{opacity:1;transform:translateY(0)}
-}
-@keyframes shimmer{
-    0%{background-position:0% center}
-    100%{background-position:200% center}
-}
+@keyframes letterSlide{from{opacity:0;transform:translateY(-8px)}to{opacity:1;transform:translateY(0)}}
+@keyframes shimmer{0%{background-position:0% center}100%{background-position:200% center}}
 .brand-sub{
-    font-size:.68rem;
-    font-weight:600;
-    letter-spacing:.7px;
-    text-transform:uppercase;
-    opacity:.92;
-    margin-top:12px;
-    position:relative;z-index:2;
+    font-size:.68rem;font-weight:600;letter-spacing:.7px;text-transform:uppercase;
+    opacity:.92;margin-top:12px;position:relative;z-index:2;
     animation: brandFadeIn .7s cubic-bezier(.16,1,.3,1) .4s both;
 }
-.brand-sub-dot{
-    display:inline-block;
-    width:4px;height:4px;border-radius:50%;
-    background:rgba(255,255,255,.6);
-    margin:0 6px;
-    vertical-align:middle;
-}
+@keyframes brandFadeIn{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:translateY(0)}}
+.brand-sub-dot{display:inline-block;width:4px;height:4px;border-radius:50%;background:rgba(255,255,255,.6);margin:0 6px;vertical-align:middle;}
 
-/* Welcome stats */
+/* Welcome stats — floats over hero bottom */
 .welcome-stats{
     display:grid;grid-template-columns:repeat(3,1fr);gap:10px;
-    padding:0 18px;margin-top:-20px;margin-bottom:20px;position:relative;z-index:3;
+    padding:0 18px;margin-top:-42px;margin-bottom:16px;position:relative;z-index:3;
 }
 .wstat{
     background:#fff;border:1px solid var(--border);border-radius:14px;
-    padding:12px 8px;text-align:center;box-shadow:0 6px 16px rgba(15,23,42,.06);
+    padding:12px 8px;text-align:center;box-shadow:0 6px 16px rgba(15,23,42,.08);
     cursor:pointer;transition:transform .18s,box-shadow .18s;
     display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;
 }
 .wstat:active{transform:scale(.95);box-shadow:0 3px 10px rgba(15,23,42,.08)}
 .wstat:hover{box-shadow:0 8px 22px rgba(15,23,42,.1)}
-.wstat-val{font-family:'Poppins',sans-serif;font-size:1.35rem;font-weight:800;line-height:1.1;letter-spacing:-.5px}
-.wstat-lbl{font-size:.6rem;font-weight:700;text-transform:uppercase;letter-spacing:.6px;color:var(--text-secondary)}
+.wstat-val{font-family:'Poppins',sans-serif;font-size:1.3rem;font-weight:800;line-height:1.1;letter-spacing:-.5px}
+.wstat-lbl{font-size:.58rem;font-weight:700;text-transform:uppercase;letter-spacing:.6px;color:var(--text-secondary)}
 
 .screen{display:none;height:100%;width:100%;flex-direction:column;overflow-y:auto;padding-bottom:16px}
 .screen.active{display:flex}
@@ -219,10 +180,9 @@ body.tv-view .social-footer{max-width:1200px;margin-left:auto;margin-right:auto}
 .fr .mode-icon{background:linear-gradient(135deg,#8b5cf6,#6d28d9)}
 .afm .mode-icon{background:linear-gradient(135deg,#6366f1,#4338ca)}
 .dt .mode-icon{background:linear-gradient(135deg,#ec4899,#be185d)}
-.mode-card.afmtheory{border-color:#a5b4fc;background:#eef2ff}
-.afmtheory .mode-icon{background:linear-gradient(135deg,#6366f1,#4338ca)}
 .mode-text h3{font-family:'Poppins',sans-serif;font-size:1.05rem;font-weight:700;color:#1e293b;margin-bottom:3px}
 .mode-text p{font-size:.78rem;color:var(--text-secondary);line-height:1.35}
+.mode-count{display:inline-flex;align-items:center;gap:4px;font-size:.62rem;font-weight:700;color:#475569;background:rgba(255,255,255,.7);border:1px solid rgba(15,23,42,.08);padding:2px 8px;border-radius:20px;margin-top:6px;letter-spacing:.2px}
 .section-title{padding:20px 20px 6px;font-family:'Poppins',sans-serif;font-size:.72rem;font-weight:800;letter-spacing:1.4px;text-transform:uppercase;color:#64748b;display:flex;align-items:center;gap:8px}
 .section-title::after{content:'';flex:1;height:1px;background:var(--border)}
 .tools-section{padding:20px 18px;display:grid;grid-template-columns:1fr 1fr;gap:10px}
@@ -233,21 +193,14 @@ body.tv-view .social-footer{max-width:1200px;margin-left:auto;margin-right:auto}
 
 .header{
     display:flex;align-items:center;justify-content:space-between;
-    padding:11px 14px;
-    margin:10px 12px 0;
+    padding:11px 14px;margin:10px 12px 0;
     background:linear-gradient(180deg,#ffffff 0%,#fbfdff 100%);
-    border-radius:14px;
-    border:1px solid rgba(226,232,240,.85);
+    border-radius:14px;border:1px solid rgba(226,232,240,.85);
     flex-shrink:0;
     box-shadow:0 1px 2px rgba(15,23,42,.02),0 4px 14px rgba(15,23,42,.04),0 12px 30px -12px rgba(37,99,235,.06);
-    transition:all .3s ease;
-    position:relative;
+    transition:all .3s ease;position:relative;
 }
-.header::after{
-    content:'';position:absolute;left:14px;right:14px;bottom:-1px;height:1px;
-    background:linear-gradient(90deg,transparent,rgba(37,99,235,.18),transparent);
-    border-radius:2px;pointer-events:none;
-}
+.header::after{content:'';position:absolute;left:14px;right:14px;bottom:-1px;height:1px;background:linear-gradient(90deg,transparent,rgba(37,99,235,.18),transparent);border-radius:2px;pointer-events:none}
 .header-left{display:flex;align-items:center;gap:9px;min-width:0}
 .home-btn{width:36px;height:36px;border-radius:10px;background:linear-gradient(135deg,#f1f5f9,#e8eef5);border:1.5px solid var(--border);display:flex;align-items:center;justify-content:center;color:var(--text-secondary);cursor:pointer;font-size:.85rem;transition:.2s;flex-shrink:0}
 .home-btn:active{transform:scale(.9);background:#e2e8f0}
@@ -265,11 +218,13 @@ body.tv-view .social-footer{max-width:1200px;margin-left:auto;margin-right:auto}
 .icon-btn.study-toggle{background:#faf5ff;border-color:#d8b4fe;color:#7c3aed;transition:all .25s}
 .icon-btn.study-toggle.active{background:#7c3aed;border-color:#7c3aed;color:#fff;box-shadow:0 0 0 3px rgba(124,58,237,.3)}
 .icon-btn.reader-mode{background:#ecfdf5;border-color:#6ee7b7;color:#059669}
-.icon-btn.reader-mode:active{background:#d1fae5}
 .icon-btn.settings-btn{background:#eef2ff;border-color:#c7d2fe;color:#4f46e5}
+.icon-btn.bookmark-btn{background:#fef3c7;border-color:#fcd34d;color:#b45309;transition:all .25s}
+.icon-btn.bookmark-btn.active{background:linear-gradient(135deg,#fbbf24,#f59e0b);border-color:#f59e0b;color:#fff;box-shadow:0 0 0 3px rgba(251,191,36,.3);animation:bookmarkPop .35s ease}
+@keyframes bookmarkPop{0%{transform:scale(1)}50%{transform:scale(1.15)}100%{transform:scale(1)}}
 body.desktop-view .header-actions .settings-btn{display:none}
 @media (max-width: 900px) {
-    body:not(.desktop-view) .header-actions .icon-btn:not(.settings-btn){display:none;}
+    body:not(.desktop-view) .header-actions .icon-btn:not(.settings-btn):not(.bookmark-btn){display:none;}
 }
 .main-content{flex:1;overflow-y:auto;-webkit-overflow-scrolling:touch;padding:8px 10px;min-height:0;position:relative;scroll-behavior:smooth}
 .case-study-box{background:#f8fafc;border:1px solid var(--border);border-radius:12px;padding:12px 14px;margin-bottom:10px;font-size:.83rem;line-height:1.6;max-height:34vh;overflow-y:auto;color:#334155;position:relative;border-left:4px solid var(--primary);cursor:pointer;transition:.2s}
@@ -304,10 +259,7 @@ body.desktop-view .header-actions .settings-btn{display:none}
 .study-explanation-panel .sep-correct{font-size:.84rem;font-weight:700;color:#065f46;background:rgba(255,255,255,.7);border:1px solid #a7f3d0;padding:8px 10px;border-radius:8px;margin-bottom:10px;display:flex;align-items:flex-start;gap:7px;line-height:1.5}
 .study-explanation-panel .sep-correct .sep-tag{background:#059669;color:#fff;font-size:.6rem;font-weight:800;padding:2px 7px;border-radius:20px;letter-spacing:.4px;flex-shrink:0;margin-top:1px}
 .study-explanation-panel .sep-body{font-size:.84rem;line-height:1.7;color:#334155}
-.study-explanation-panel .sep-body b{color:#92400e}
 .study-explanation-panel .sep-empty{font-size:.8rem;font-style:italic;color:#94a3b8}
-.study-explanation-panel .table-wrap{margin-top:8px}
-.study-explanation-panel .pdf-table{font-size:.78rem}
 
 .dots-container{display:flex;gap:6px;overflow-x:auto;padding:10px 2px;-webkit-overflow-scrolling:touch;scrollbar-width:none;margin-top:8px}
 .dots-container::-webkit-scrollbar{display:none}
@@ -331,6 +283,8 @@ body.desktop-view .header-actions .settings-btn{display:none}
 .nav-btn:active{background:#e2e8f0;transform:scale(.92)}
 .nav-btn.next-btn{background:var(--primary);color:#fff;border-color:var(--primary);font-size:.95rem}
 .nav-btn.next-btn:active{background:#1d4ed8}
+.nav-btn.bookmark-nav-btn{background:#fef3c7;border-color:#fcd34d;color:#b45309}
+.nav-btn.bookmark-nav-btn.active{background:linear-gradient(135deg,#fbbf24,#f59e0b);border-color:#f59e0b;color:#fff}
 .score-badge{font-size:.8rem;font-weight:700;color:var(--primary);background:#eff6ff;padding:7px 12px;border-radius:9px;border:1.5px solid #bfdbfe;white-space:nowrap}
 .modal-overlay{position:fixed;inset:0;background:rgba(15,23,42,.7);display:flex;align-items:center;justify-content:center;z-index:200;padding:18px;backdrop-filter:blur(4px)}
 .modal-card{background:#fff;border-radius:18px;padding:22px;max-width:420px;width:100%;text-align:center;box-shadow:0 20px 60px rgba(0,0,0,.2);max-height:90vh;overflow-y:auto;display:flex;flex-direction:column}
@@ -350,7 +304,8 @@ body.desktop-view .header-actions .settings-btn{display:none}
 .close-btn{width:38px;height:38px;border-radius:50%;border:1.5px solid var(--border);background:#f8fafc;font-size:1.3rem;cursor:pointer;display:flex;align-items:center;justify-content:center;color:var(--text-secondary);transition:all .2s}
 .close-btn:active{background:#fee2e2;color:#ef4444;border-color:#fca5a5;transform:scale(.88)}
 .fullscreen-reader{position:fixed;inset:0;background:#fff;z-index:250;display:none;flex-direction:column;animation:fadeIn .2s ease}
-.fullscreen-reader .reader-header{display:flex;justify-content:space-between;align-items:center;padding:8px 14px;border-bottom:1px solid var(--border);background:#f8fafc;gap:10px;flex-wrap:wrap;box-shadow:0 2px 4px rgba(0,0,0,.02);flex-shrink:0}
+.fullscreen-reader .reader-header{display:flex;justify-content:space-between;align-items:center;padding:8px 14px;border-bottom:1px solid var(--border);background:#f8fafc;gap:10px;flex-wrap:wrap;box-shadow:0 2px 4px rgba(0,0,0,.02);flex-shrink:0;transition:max-height .3s ease,padding .3s ease;overflow:hidden;max-height:200px}
+.fullscreen-reader.collapsed .reader-header{max-height:0;padding-top:0;padding-bottom:0;border-bottom:none}
 .reader-header h3{font-family:'Poppins',sans-serif;font-size:1.05rem;color:var(--text);margin:0;white-space:nowrap}
 .reader-header .right-controls{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
 .highlighter-tools{display:flex;gap:5px;align-items:center;background:#fff;padding:3px 7px;border-radius:10px;border:1px solid var(--border);flex-wrap:wrap}
@@ -361,6 +316,8 @@ body.desktop-view .header-actions .settings-btn{display:none}
 .hl-eraser{background:#f1f5f9;border:1px solid var(--border);color:#64748b;font-size:.68rem;box-shadow:none}
 .hl-eraser.armed{box-shadow:0 0 0 2px rgba(220,38,38,.45)}
 .toolbar-notes-btn{background:#eff6ff;border:1px solid #bfdbfe;color:var(--primary);font-size:.72rem;position:relative;box-shadow:none}
+.toolbar-bookmark-btn{background:#fef3c7;border:1px solid #fcd34d;color:#b45309;font-size:.72rem;position:relative;box-shadow:none}
+.toolbar-bookmark-btn.active{background:linear-gradient(135deg,#fbbf24,#f59e0b);border-color:#f59e0b;color:#fff}
 .notes-badge{position:absolute;top:-2px;right:-2px;width:9px;height:9px;background:var(--marked);border-radius:50%;border:2px solid #fff;display:none}
 .notes-badge.show{display:block}
 .reader-close-btn{width:32px;height:32px;border-radius:9px;background:#e2e8f0;border:1px solid #cbd5e1;display:flex;align-items:center;justify-content:center;color:var(--text-secondary);cursor:pointer;transition:.2s;flex-shrink:0}
@@ -373,7 +330,12 @@ body.desktop-view .header-actions .settings-btn{display:none}
 .reader-lock-btn{width:28px;height:28px;border-radius:8px;border:1px solid var(--border);background:#fff;color:var(--text-secondary);display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:.72rem;transition:.18s;flex-shrink:0}
 .reader-lock-btn:active{transform:scale(.88)}
 .reader-lock-btn.active{background:#fef3c7;border-color:#f59e0b;color:#b45309;box-shadow:0 0 0 2px rgba(245,158,11,.25)}
-.fullscreen-reader .reader-content{flex:1;overflow-y:auto;padding:20px 40px;width:100%;-webkit-overflow-scrolling:touch;scroll-behavior:smooth}
+.reader-collapse-btn{width:32px;height:32px;border-radius:9px;background:#eef2ff;border:1px solid #c7d2fe;color:#4f46e5;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:.2s;flex-shrink:0}
+.reader-collapse-btn:active{transform:scale(.88)}
+.fullscreen-reader .reader-content{flex:1;overflow-y:auto;padding:14px 12px;width:100%;-webkit-overflow-scrolling:touch;scroll-behavior:smooth}
+.fullscreen-reader.collapsed .reader-content{padding-top:52px}
+.reader-expand-tab{position:absolute;top:8px;right:12px;z-index:300;display:none;background:#eef2ff;border:1px solid #c7d2fe;color:#4f46e5;width:36px;height:36px;border-radius:10px;align-items:center;justify-content:center;cursor:pointer;box-shadow:0 4px 12px rgba(0,0,0,.08)}
+.fullscreen-reader.collapsed .reader-expand-tab{display:flex}
 @keyframes fadeIn{from{opacity:0}to{opacity:1}}
 .highlight-hint{width:100%;font-size:.68rem;color:var(--primary);font-weight:600;padding-top:3px;display:none;margin-bottom:-3px}
 .highlight-hint.show{display:block}
@@ -390,8 +352,8 @@ body.desktop-view .header-actions .settings-btn{display:none}
 .subtle-toast-text{font-size:.8rem;line-height:1.35;font-weight:500}
 .subtle-toast-text a{color:#60a5fa;font-weight:700;text-decoration:none}
 .subtle-toast-close{background:none;border:none;color:#94a3b8;font-size:1.1rem;cursor:pointer;padding:0 3px;transition:color .2s}
-.subtle-toast-close:hover{color:#fff}
-.yt-footer{text-align:center;padding:20px 16px;margin-top:auto;background:var(--surface);border-top:1px solid var(--border)}
+.mini-toast{position:fixed;bottom:70px;left:50%;transform:translateX(-50%) translateY(20px);background:#0f172a;color:#fff;font-size:.72rem;font-weight:700;padding:8px 14px;border-radius:20px;z-index:1100;opacity:0;pointer-events:none;transition:opacity .25s,transform .25s;box-shadow:0 6px 20px rgba(0,0,0,.25);letter-spacing:.3px}
+.mini-toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
 @keyframes spin{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}
 
 /* Social footer */
@@ -401,7 +363,6 @@ body.desktop-view .header-actions .settings-btn{display:none}
 .sf-yt-cta::after{content:'';position:absolute;top:0;left:-100%;width:100%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.22),transparent);transition:left .6s ease}
 .sf-yt-cta:hover::after{left:100%}
 .sf-yt-cta:hover{transform:translateY(-2px);box-shadow:0 14px 28px -10px rgba(239,68,68,.7)}
-.sf-yt-cta:active{transform:scale(.985)}
 .sf-yt-cta>.fa-youtube{font-size:1.9rem;flex-shrink:0;filter:drop-shadow(0 2px 4px rgba(0,0,0,.18))}
 .sf-yt-text{flex:1;text-align:left;line-height:1.15;display:flex;flex-direction:column;min-width:0}
 .sf-yt-text b{font-size:.68rem;font-weight:700;letter-spacing:.4px;text-transform:uppercase;opacity:.92}
@@ -419,6 +380,15 @@ body.desktop-view .header-actions .settings-btn{display:none}
 .social-footer .copyright .sep{margin:0 6px;opacity:.5}
 .social-footer .copyright a{color:#6366f1;text-decoration:none;font-weight:700;border-bottom:1px dotted transparent;transition:color .2s ease}
 .social-footer .copyright a:hover{color:#4f46e5;border-bottom-color:rgba(99,102,241,.4)}
+
+/* Desktop footer horizontal */
+body.desktop-view .social-footer{
+    display:flex;align-items:center;justify-content:center;flex-wrap:wrap;
+    gap:14px;padding:14px 20px;margin:16px 18px 22px;
+}
+body.desktop-view .sf-yt-cta{margin-bottom:0;padding:10px 16px;flex:0 0 auto;min-width:220px}
+body.desktop-view .sf-icons-row{padding:0;gap:8px}
+body.desktop-view .social-footer .copyright{padding-top:0;border-top:none;padding-left:18px;border-left:1px solid rgba(226,232,240,.8);font-size:.66rem;text-align:left;line-height:1.4}
 
 .source-pill{display:inline-flex;align-items:center;gap:5px;font-size:.68rem;color:#64748b;text-decoration:none;padding:7px 13px;border-radius:20px;background:#fff;border:1px solid #e2e8f0;transition:.2s;font-weight:600}
 .source-pill:hover,.source-pill:active{background:#f1f5f9;color:#2563eb}
@@ -444,17 +414,9 @@ body.desktop-view .header-actions .settings-btn{display:none}
 .rkg-keys b{background:#fff;color:#0f172a;padding:2px 7px;border-radius:5px;font-size:.68rem;font-weight:900;min-width:18px;text-align:center;box-shadow:0 1px 2px rgba(0,0,0,.2)}
 
 /* Wrong review list */
-.wr-item{background:#fff;border:1px solid var(--border);border-radius:14px;padding:14px;box-shadow:0 1px 3px rgba(0,0,0,.03)}
-.wr-item-head{display:flex;align-items:center;gap:6px;margin-bottom:10px;flex-wrap:wrap}
-.wr-badge{font-size:.6rem;font-weight:800;letter-spacing:.5px;text-transform:uppercase;padding:3px 9px;border-radius:20px;background:#f1f5f9;color:var(--text-secondary)}
-.wr-badge.mode-easy{background:#d1fae5;color:#059669}
-.wr-badge.mode-medium{background:#dbeafe;color:#1e40af}
-.wr-badge.mode-hard{background:#fee2e2;color:#991b1b}
-.wr-badge.mode-gst{background:#fef3c7;color:#92400e}
-.wr-badge.mode-fr{background:#f3e8ff;color:#6d28d9}
-.wr-badge.mode-afm{background:#eef2ff;color:#4338ca}
-.wr-badge.mode-dt{background:#fdf2f8;color:#be185d}
-.wr-badge.count{background:#fee2e2;color:#991b1b}
+.wrong-card{background:#fff;border-radius:14px;padding:16px;margin-bottom:14px;border:1px solid var(--border);box-shadow:0 1px 3px rgba(0,0,0,.03)}
+.wrong-card .wc-head{display:flex;align-items:center;gap:6px;flex-wrap:wrap;margin-bottom:12px}
+.wrong-card .wc-meta{font-size:.62rem;font-weight:800;letter-spacing:.4px;text-transform:uppercase;padding:3px 9px;border-radius:20px;background:#f1f5f9;color:var(--text-secondary)}
 .wr-remove{margin-left:auto;background:none;border:1.5px solid var(--border);width:26px;height:26px;border-radius:8px;color:#94a3b8;cursor:pointer;font-size:.75rem;transition:.18s;display:flex;align-items:center;justify-content:center}
 .wr-remove:active{background:#fee2e2;color:#dc2626;border-color:#fca5a5;transform:scale(.9)}
 .wr-question{font-size:.84rem;font-weight:600;color:var(--text);line-height:1.55;margin-bottom:8px}
@@ -469,25 +431,28 @@ body.desktop-view .header-actions .settings-btn{display:none}
 .wr-opt.wrong .wr-l{background:var(--wrong);color:#fff}
 .wr-explain{margin-top:8px;padding:10px 12px;background:#f0fdf4;border-left:3px solid var(--correct);border-radius:8px;font-size:.76rem;line-height:1.6;color:#166534}
 .wr-explain b{display:block;margin-bottom:4px;color:#14532d;font-size:.7rem;text-transform:uppercase;letter-spacing:.4px}
-.wr-filter{font-size:.7rem;font-weight:700;padding:6px 12px;border-radius:20px;border:1.5px solid var(--border);background:#fff;color:var(--text-secondary);cursor:pointer;transition:.18s;font-family:inherit}
-.wr-filter:active{transform:scale(.94)}
-.wr-filter.active{background:var(--primary);color:#fff;border-color:var(--primary)}
 .wr-empty{text-align:center;padding:44px 20px;color:#94a3b8;font-size:.88rem}
 .wr-empty i{font-size:3rem;color:#cbd5e1;margin-bottom:12px;display:block}
+
+/* Review fullscreen list item */
+.review-item{background:#fff;border:1px solid var(--border);border-radius:12px;padding:14px;margin-bottom:10px;cursor:pointer;transition:.2s}
+.review-item:active{transform:scale(.99);background:#f8fafc}
+.review-item .ri-head{display:flex;align-items:center;gap:8px;margin-bottom:8px}
+.review-item .ri-num{font-weight:800;color:var(--primary);font-size:.85rem}
+.review-item .ri-status{font-size:1.1rem}
+.review-item .ri-q{font-size:.86rem;line-height:1.55;color:var(--text);font-weight:500}
 
 /* Syllabus */
 .syl-body{padding:16px 16px 30px;max-width:860px;margin:0 auto;width:100%}
 .syl-hero{background:linear-gradient(135deg,#4c1d95,#7c3aed 55%,#6366f1);border-radius:18px;padding:18px;color:#fff;margin-bottom:14px;box-shadow:0 10px 26px rgba(124,58,237,.28);position:relative;overflow:hidden}
-.syl-hero::after{content:'';position:absolute;top:-40px;right:-30px;width:130px;height:130px;background:rgba(255,255,255,.09);border-radius:50%}
-.syl-hero h2{font-family:'Poppins',sans-serif;font-size:1rem;font-weight:700;line-height:1.35;margin-bottom:3px;position:relative;z-index:1}
-.syl-hero p{font-size:.72rem;opacity:.88;margin-bottom:14px;position:relative;z-index:1}
-.syl-bar{height:9px;border-radius:6px;background:rgba(255,255,255,.25);overflow:hidden;position:relative;z-index:1}
+.syl-hero h2{font-family:'Poppins',sans-serif;font-size:1rem;font-weight:700;line-height:1.35;margin-bottom:3px}
+.syl-hero p{font-size:.72rem;opacity:.88;margin-bottom:14px}
+.syl-bar{height:9px;border-radius:6px;background:rgba(255,255,255,.25);overflow:hidden}
 .syl-bar>div{height:100%;border-radius:6px;background:#fff;width:0%;transition:width .45s cubic-bezier(.16,1,.3,1)}
-.syl-hero-row{display:flex;justify-content:space-between;align-items:baseline;font-size:.7rem;font-weight:700;margin-top:8px;position:relative;z-index:1;letter-spacing:.2px}
+.syl-hero-row{display:flex;justify-content:space-between;align-items:baseline;font-size:.7rem;font-weight:700;margin-top:8px}
 .syl-swipe-all{width:100%;padding:13px;border-radius:13px;border:1.5px solid #ddd6fe;background:#faf5ff;color:#6d28d9;font-weight:700;font-size:.81rem;margin-bottom:10px;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:9px;transition:.2s;font-family:inherit}
 .syl-swipe-all:active{transform:scale(.98);background:#f3e8ff}
 .syl-swipe-all.kt-btn{background:linear-gradient(135deg,#fef3c7,#fde68a);border-color:#fcd34d;color:#92400e;box-shadow:0 4px 14px rgba(251,191,36,.25)}
-.syl-swipe-all.kt-btn:active{background:#fde68a}
 .syl-module{background:var(--surface);border:1px solid var(--border);border-radius:15px;margin-bottom:11px;overflow:hidden;box-shadow:0 1px 3px rgba(0,0,0,.03)}
 .syl-module-head{display:flex;align-items:center;gap:10px;padding:13px 14px;cursor:pointer;background:#f8fafc;user-select:none}
 .syl-module-head h4{font-size:.8rem;font-weight:700;flex:1;color:var(--text);font-family:'Poppins',sans-serif}
@@ -497,7 +462,6 @@ body.desktop-view .header-actions .settings-btn{display:none}
 .syl-module-body{display:none;padding:7px}
 .syl-module.open .syl-module-body{display:block;animation:fadeIn .2s ease}
 .syl-chapter{display:flex;align-items:center;gap:10px;padding:10px;border-radius:11px;cursor:pointer;transition:.15s}
-.syl-chapter:hover{background:#f8fafc}
 .syl-chapter:active{transform:scale(.985);background:#f1f5f9}
 .syl-num{width:32px;height:32px;border-radius:9px;background:#eef2ff;color:#4f46e5;font-weight:800;font-size:.72rem;display:flex;align-items:center;justify-content:center;flex-shrink:0}
 .syl-chapter.done .syl-num{background:#d1fae5;color:#059669}
@@ -516,7 +480,6 @@ body.desktop-view .header-actions .settings-btn{display:none}
 .flash-header{display:flex;align-items:center;gap:10px;padding:12px 14px;color:#fff;flex-shrink:0}
 .flash-header .reader-close-btn{background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.2);color:#fff}
 .flash-header .icon-btn{background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.2);color:#e2e8f0}
-.flash-header .icon-btn.kt-header-btn{background:linear-gradient(135deg,#fbbf24,#f59e0b);border-color:#f59e0b;color:#fff;box-shadow:0 4px 12px rgba(251,191,36,.35)}
 .flash-header-info{flex:1;min-width:0;text-align:center}
 .flash-header-info h3{font-size:.84rem;font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-family:'Poppins',sans-serif}
 .flash-header-info p{font-size:.66rem;opacity:.65;margin-top:2px}
@@ -596,9 +559,6 @@ body.desktop-view .header-actions .settings-btn{display:none}
 .kt-deck-btn.prev{background:rgba(255,255,255,.1);color:#fde68a}
 .kt-deck-btn.next{background:linear-gradient(135deg,#fbbf24,#f59e0b);color:#fff;box-shadow:0 8px 22px rgba(251,191,36,.35)}
 .kt-deck-btn.add{background:rgba(139,92,246,.25);color:#ddd6fe;max-width:70px;flex:0 0 70px}
-.kt-deck-empty{color:#fde68a;text-align:center;padding:26px;max-width:340px}
-.kt-deck-empty h3{color:#fff;font-size:1.15rem;font-weight:800;margin-bottom:7px;font-family:'Poppins',sans-serif}
-.kt-deck-empty p{font-size:.83rem;margin-bottom:20px;line-height:1.5;opacity:.85}
 .kt-add-modal textarea{width:100%;height:130px;padding:14px;border:2px solid var(--border);border-radius:10px;resize:none;margin-bottom:14px;font-family:inherit;font-size:.9rem;outline:none;transition:.2s}
 .kt-add-modal textarea:focus{border-color:#f59e0b}
 .kt-deck-text .kw{background:linear-gradient(180deg,transparent 60%,#fde68a 60%);color:#78350f;font-weight:800;padding:0 2px;border-radius:3px}
@@ -616,16 +576,13 @@ body.desktop-view .header-actions .settings-btn{display:none}
 .guide-card .guide-sub{font-size:.82rem;color:#64748b;margin-bottom:20px;line-height:1.5}
 .guide-steps{display:flex;flex-direction:column;gap:10px;text-align:left;margin-bottom:22px}
 .guide-step{display:flex;align-items:flex-start;gap:12px;padding:11px 13px;border-radius:12px;background:#f8fafc;border:1px solid #e2e8f0;transition:transform .2s}
-.guide-step:active{transform:scale(.98)}
 .guide-step-num{width:28px;height:28px;border-radius:9px;background:linear-gradient(135deg,#2563eb,#4f46e5);color:#fff;font-weight:800;font-size:.75rem;display:flex;align-items:center;justify-content:center;flex-shrink:0}
 .guide-step-text h4{font-size:.82rem;font-weight:700;color:#1e293b;margin-bottom:2px}
 .guide-step-text p{font-size:.72rem;color:#64748b;line-height:1.4}
 .guide-actions{display:flex;gap:10px}
 .guide-actions button{flex:1;padding:13px;border-radius:13px;font-weight:700;font-size:.84rem;cursor:pointer;transition:.2s;font-family:inherit}
 .guide-actions .btn-skip{background:#f1f5f9;border:1.5px solid #e2e8f0;color:#64748b}
-.guide-actions .btn-skip:active{transform:scale(.97);background:#e2e8f0}
 .guide-actions .btn-start{background:linear-gradient(135deg,#2563eb,#4f46e5);border:none;color:#fff;box-shadow:0 6px 18px rgba(37,99,235,.35)}
-.guide-actions .btn-start:active{transform:scale(.97);box-shadow:0 3px 10px rgba(37,99,235,.3)}
 
 /* KT palette */
 .kt-palette-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(40px,1fr));gap:7px}
@@ -634,6 +591,9 @@ body.desktop-view .header-actions .settings-btn{display:none}
 .kt-palette-item.current{border-color:#f59e0b;background:#fef3c7;color:#b45309;box-shadow:0 0 0 3px rgba(245,158,11,.2);transform:scale(1.05)}
 .kt-palette-item.custom-kt{border-color:#c4b5fd;background:#f5f3ff}
 .kt-palette-item .kt-fav-dot{position:absolute;top:-2px;right:-2px;width:8px;height:8px;background:#f59e0b;border-radius:50%;border:1.5px solid #fff}
+.kt-palette-chapter-divider{grid-column:1/-1;font-size:.62rem;font-weight:800;letter-spacing:.8px;text-transform:uppercase;color:#78350f;background:linear-gradient(135deg,#fef3c7,#fde68a);border:1px solid #fcd34d;padding:6px 10px;border-radius:8px;margin-top:8px;margin-bottom:2px;font-family:'Poppins',sans-serif;display:flex;align-items:center;gap:6px}
+.kt-palette-chapter-divider:first-child{margin-top:0}
+.kt-palette-chapter-divider i{font-size:.7rem}
 
 /* AFM Theory */
 .afm-theory-overlay{background:radial-gradient(circle at 50% 0%,#1e1b4b,#0b1120 70%)}
@@ -666,11 +626,7 @@ body.desktop-view .header-actions .settings-btn{display:none}
 .settings-item.bookmark i{background:linear-gradient(135deg,#fef3c7,#fde68a);color:#d97706}
 .settings-item.kt i{background:linear-gradient(135deg,#fef3c7,#fde68a);color:#b45309}
 
-/* Wrong carousel */
-.wrong-card{background:#fff;border-radius:14px;padding:16px;margin-bottom:14px;border:1px solid var(--border);box-shadow:0 1px 3px rgba(0,0,0,.03)}
-.wrong-card .wc-head{display:flex;align-items:center;gap:6px;flex-wrap:wrap;margin-bottom:12px}
-.wrong-card .wc-meta{font-size:.62rem;font-weight:800;letter-spacing:.4px;text-transform:uppercase;padding:3px 9px;border-radius:20px;background:#f1f5f9;color:var(--text-secondary)}
-
+/* Subject picker */
 .subject-picker-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;max-width:600px;margin:0 auto}
 .subject-pick-btn{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;padding:16px 12px;border-radius:14px;border:1.5px solid var(--border);background:#fff;cursor:pointer;transition:all .18s ease;font-family:inherit;text-align:center}
 .subject-pick-btn:hover{transform:translateY(-2px);box-shadow:0 8px 20px -10px rgba(15,23,42,.35)}
@@ -686,6 +642,8 @@ body.desktop-view .header-actions .settings-btn{display:none}
 <input type="file" id="importFile" accept=".json" style="display:none" />
 
 <div class="loader-overlay" id="loader"><div class="spinner"></div><p style="font-weight:600;color:var(--text-secondary)" id="loaderText">Loading...</p></div>
+
+<div id="miniToast" class="mini-toast"></div>
 
 <div id="customAlertModal" class="modal-overlay" style="display:none;z-index:9999">
     <div class="modal-card custom-dialog">
@@ -716,29 +674,16 @@ body.desktop-view .header-actions .settings-btn{display:none}
     </div>
 </div>
 
-<!-- FIRST-TIME GUIDE OVERLAY -->
 <div id="firstTimeGuide" class="guide-overlay">
     <div class="guide-card">
         <div class="guide-icon"><i class="fa-solid fa-graduation-cap"></i></div>
         <h2>Welcome to MCQ Astra!</h2>
         <p class="guide-sub">Your all-in-one CA Final preparation companion</p>
         <div class="guide-steps">
-            <div class="guide-step">
-                <div class="guide-step-num">1</div>
-                <div class="guide-step-text"><h4>Pick a Subject</h4><p>Choose from Audit, FR, AFM, DT, GST & more.</p></div>
-            </div>
-            <div class="guide-step">
-                <div class="guide-step-num">2</div>
-                <div class="guide-step-text"><h4>Answer & Learn</h4><p>Select options, get instant explanations.</p></div>
-            </div>
-            <div class="guide-step">
-                <div class="guide-step-num">3</div>
-                <div class="guide-step-text"><h4>Study Mode</h4><p>Toggle 📖 to reveal the correct answer & explanation instantly.</p></div>
-            </div>
-            <div class="guide-step">
-                <div class="guide-step-num">4</div>
-                <div class="guide-step-text"><h4>Read & Highlight</h4><p>Double-tap any question for distraction-free reading mode.</p></div>
-            </div>
+            <div class="guide-step"><div class="guide-step-num">1</div><div class="guide-step-text"><h4>Pick a Subject</h4><p>Choose from Audit, FR, AFM, DT, GST & more.</p></div></div>
+            <div class="guide-step"><div class="guide-step-num">2</div><div class="guide-step-text"><h4>Answer & Learn</h4><p>Select options, get instant explanations.</p></div></div>
+            <div class="guide-step"><div class="guide-step-num">3</div><div class="guide-step-text"><h4>Study Mode</h4><p>Toggle 📖 to reveal the correct answer & explanation instantly.</p></div></div>
+            <div class="guide-step"><div class="guide-step-num">4</div><div class="guide-step-text"><h4>Read & Highlight</h4><p>Double-tap any question for distraction-free reading mode.</p></div></div>
         </div>
         <div class="guide-actions">
             <button class="btn-skip" onclick="closeGuide()">Skip</button>
@@ -770,9 +715,9 @@ body.desktop-view .header-actions .settings-btn{display:none}
                 <div class="wstat-val" style="color:#dc2626" id="wstatWrong">0</div>
                 <div class="wstat-lbl">Wrong</div>
             </div>
-            <div class="wstat" onclick="openSyllabus()">
-                <div class="wstat-val" style="color:#7c3aed" id="wstatSyl">0%</div>
-                <div class="wstat-lbl">Syllabus</div>
+            <div class="wstat">
+                <div class="wstat-val" style="color:#2563eb" id="wstatTotal">—</div>
+                <div class="wstat-lbl">Questions</div>
             </div>
             <div class="wstat" onclick="openOverallKT()">
                 <div class="wstat-val" style="color:#d97706" id="wstatKT">0</div>
@@ -782,15 +727,15 @@ body.desktop-view .header-actions .settings-btn{display:none}
         <div class="mode-cards">
             <div class="mode-card easy" onclick="startApp('easy')">
                 <div class="mode-icon"><i class="fa-solid fa-seedling"></i></div>
-                <div class="mode-text"><h3>Audit - Easy Set</h3><p>Core concepts &amp; direct MCQs</p></div>
+                <div class="mode-text"><h3>Audit - Easy Set</h3><p>Core concepts &amp; direct MCQs</p><span class="mode-count" data-count-mode="easy">…</span></div>
             </div>
             <div class="mode-card medium" onclick="startApp('medium')">
                 <div class="mode-icon"><i class="fa-solid fa-fire"></i></div>
-                <div class="mode-text"><h3>Audit - Medium Set</h3><p>Advanced standard questions</p></div>
+                <div class="mode-text"><h3>Audit - Medium Set</h3><p>Advanced standard questions</p><span class="mode-count" data-count-mode="medium">…</span></div>
             </div>
             <div class="mode-card hard" onclick="startApp('hard')">
                 <div class="mode-icon"><i class="fa-solid fa-briefcase"></i></div>
-                <div class="mode-text"><h3>Audit - Case Studies</h3><p>Complex scenario challenges</p></div>
+                <div class="mode-text"><h3>Audit - Case Studies</h3><p>Complex scenario challenges</p><span class="mode-count" data-count-mode="hard">…</span></div>
             </div>
         </div>
 
@@ -798,27 +743,23 @@ body.desktop-view .header-actions .settings-btn{display:none}
         <div class="mode-cards">
             <div class="mode-card fr" onclick="startApp('fr')">
                 <div class="mode-icon"><i class="fa-solid fa-chart-line"></i></div>
-                <div class="mode-text"><h3>Financial Reporting</h3><p>FR MCQs &amp; concepts</p></div>
+                <div class="mode-text"><h3>Financial Reporting</h3><p>FR MCQs &amp; concepts</p><span class="mode-count" data-count-mode="fr">…</span></div>
             </div>
             <div class="mode-card fr" onclick="startApp('fricaics')">
                 <div class="mode-icon"><i class="fa-solid fa-file-invoice"></i></div>
-                <div class="mode-text"><h3>FR ICAI Case Studies</h3><p>ICAI additional case scenarios</p></div>
+                <div class="mode-text"><h3>FR ICAI Case Studies</h3><p>ICAI additional case scenarios</p><span class="mode-count" data-count-mode="fricaics">…</span></div>
             </div>
             <div class="mode-card afm" onclick="startApp('afm')">
                 <div class="mode-icon"><i class="fa-solid fa-coins"></i></div>
-                <div class="mode-text"><h3>Advanced Financial Mgmt</h3><p>AFM ICAI case scenarios</p></div>
+                <div class="mode-text"><h3>Advanced Financial Mgmt</h3><p>AFM ICAI case scenarios</p><span class="mode-count" data-count-mode="afm">…</span></div>
             </div>
             <div class="mode-card dt" onclick="startApp('dt')">
                 <div class="mode-icon"><i class="fa-solid fa-landmark"></i></div>
-                <div class="mode-text"><h3>Direct Tax Laws</h3><p>DT ICAI case scenarios</p></div>
+                <div class="mode-text"><h3>Direct Tax Laws</h3><p>DT ICAI case scenarios</p><span class="mode-count" data-count-mode="dt">…</span></div>
             </div>
             <div class="mode-card gst" onclick="startApp('gst')">
                 <div class="mode-icon"><i class="fa-solid fa-file-invoice-dollar"></i></div>
-                <div class="mode-text"><h3>GST Case Scenarios</h3><p>Practical GST case studies</p></div>
-            </div>
-            <div class="mode-card afmtheory" onclick="openAFMTheory()">
-                <div class="mode-icon"><i class="fa-solid fa-brain"></i></div>
-                <div class="mode-text"><h3>AFM Theory Master Sheet</h3><p>150 theory Q-cards · Memory codes · Answer skeletons</p></div>
+                <div class="mode-text"><h3>GST Case Scenarios</h3><p>Practical GST case studies</p><span class="mode-count" data-count-mode="gst">…</span></div>
             </div>
         </div>
 
@@ -930,7 +871,7 @@ body.desktop-view .header-actions .settings-btn{display:none}
                 <button class="icon-btn" id="togglePaletteBtn" title="Toggle Palette" onclick="togglePalette()" style="display:none"><i class="fa-solid fa-table-cells"></i></button>
                 <button class="icon-btn study-toggle" id="studyToggleBtn" title="Study Mode" onclick="toggleStudyMode()"><i class="fa-solid fa-graduation-cap"></i></button>
                 <button class="icon-btn reader-mode" id="readerModeBtn" title="Reading Mode" onclick="openFullscreenReader()"><i class="fa-solid fa-book-open"></i></button>
-                <button class="icon-btn" id="bookmarkBtn" title="Mark for review"><i class="fa-regular fa-bookmark" id="bookmarkIcon" style="color:#94a3b8"></i></button>
+                <button class="icon-btn bookmark-btn" id="bookmarkBtn" title="Bookmark (B)" onclick="toggleBookmark(true)"><i class="fa-regular fa-bookmark" id="bookmarkIcon"></i></button>
                 <button class="icon-btn lifeline" id="lifelineBtn" title="Lifelines"><i class="fa-solid fa-wand-magic-sparkles"></i></button>
                 <button class="icon-btn retake" title="Retake Set" onclick="retakeQuiz()"><i class="fa-solid fa-rotate-right"></i></button>
                 <button class="icon-btn settings-btn" id="settingsBtn" title="Settings" onclick="openQuizSettings()"><i class="fa-solid fa-gear"></i></button>
@@ -950,7 +891,7 @@ body.desktop-view .header-actions .settings-btn{display:none}
                     <div id="studyExplanationSlot"></div>
                 </div>
             </div>
-            <div class="desktop-sidebar-wrapper" id="desktopSidebarWrapper">
+            <div class="desktop-sidebar-wrapper hidden" id="desktopSidebarWrapper">
                 <h3 class="desktop-sidebar-title">📋 Question Palette</h3>
                 <div class="dots-container" id="dotsDisplay"></div>
             </div>
@@ -973,7 +914,7 @@ body.desktop-view .header-actions .settings-btn{display:none}
             <button class="nav-btn" id="btnPrev"><i class="fa-solid fa-chevron-left"></i></button>
             <button class="nav-btn" id="btnPalette"><i class="fa-solid fa-table-cells"></i></button>
             <div class="score-badge" id="scoreDisplay">1/10</div>
-            <button class="nav-btn" id="btnReview"><i class="fa-solid fa-list-check"></i></button>
+            <button class="nav-btn bookmark-nav-btn" id="btnBookmarkNav" title="Bookmark (B)"><i class="fa-regular fa-bookmark" id="bookmarkNavIcon"></i></button>
             <button class="nav-btn next-btn" id="btnNext"><i class="fa-solid fa-chevron-right"></i></button>
         </div>
     </div>
@@ -1015,10 +956,6 @@ body.desktop-view .header-actions .settings-btn{display:none}
             <i class="fa-solid fa-book-open"></i>
             <div><b>Reading Mode</b><small>Distraction-free fullscreen</small></div>
         </button>
-        <button class="settings-item bookmark" onclick="closeSheet('quizSettingsSheet');setTimeout(()=>toggleBookmark(),200)">
-            <i class="fa-solid fa-bookmark"></i>
-            <div><b>Bookmark</b><small>Mark for later review</small></div>
-        </button>
         <button class="settings-item" onclick="closeSheet('quizSettingsSheet');setTimeout(()=>use5050(),200)">
             <i class="fa-solid fa-wand-magic-sparkles"></i>
             <div><b>50:50 Eliminator</b><small>Remove 2 wrong options</small></div>
@@ -1035,10 +972,6 @@ body.desktop-view .header-actions .settings-btn{display:none}
             <i class="fa-solid fa-desktop"></i>
             <div><b>Desktop View</b><small>Switch layout mode</small></div>
         </button>
-        <button class="settings-item kt" onclick="closeSheet('quizSettingsSheet');setTimeout(()=>{ if(STATE.currentMode) showCustomAlert('Subject Filter','Wrong questions are filtered by subject inside the Review Wrong screen.'); },200)">
-            <i class="fa-solid fa-filter"></i>
-            <div><b>Subject Filter</b><small>Filter wrong questions</small></div>
-        </button>
     </div>
 </div>
 
@@ -1048,10 +981,22 @@ body.desktop-view .header-actions .settings-btn{display:none}
     <div id="paletteGrid" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(40px,1fr));gap:7px"></div>
 </div>
 
-<!-- REVIEW SHEET -->
-<div id="reviewSheet" class="bottom-sheet" style="height:88vh">
-    <div class="sheet-header"><h3>📝 Review All Questions</h3><button class="close-btn" onclick="closeSheet('reviewSheet')"><i class="fa-solid fa-xmark"></i></button></div>
-    <div id="reviewList" style="max-width:800px;margin:0 auto"></div>
+<!-- REVIEW FULLSCREEN -->
+<div id="reviewFullscreen" class="fullscreen-reader">
+    <div class="reader-header">
+        <h3>📝 Review Questions</h3>
+        <div class="right-controls">
+            <div class="reader-nav-group">
+                <button class="reader-nav-btn" id="reviewPrevBtn" onclick="reviewNav(-1)"><i class="fa-solid fa-chevron-left"></i></button>
+                <span class="reader-nav-pos" id="reviewNavPos">1/1</span>
+                <button class="reader-nav-btn" id="reviewNextBtn" onclick="reviewNav(1)"><i class="fa-solid fa-chevron-right"></i></button>
+                <div style="width:1px;height:14px;background:var(--border);margin:0 2px"></div>
+                <button class="reader-lock-btn" id="reviewLockBtn" onclick="toggleReviewLock()"><i class="fa-solid fa-lock-open" id="reviewLockIcon"></i></button>
+            </div>
+            <button class="reader-close-btn" onclick="closeReviewFullscreen()"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+    </div>
+    <div class="reader-content" id="reviewContent"></div>
 </div>
 
 <!-- REVIEW WRONG SHEET (session only) -->
@@ -1062,7 +1007,8 @@ body.desktop-view .header-actions .settings-btn{display:none}
 
 <!-- FULLSCREEN READER -->
 <div id="fullscreenReader" class="fullscreen-reader">
-    <div class="reader-header">
+    <button class="reader-expand-tab" onclick="toggleReaderCollapse()" title="Show header"><i class="fa-solid fa-chevron-down"></i></button>
+    <div class="reader-header" id="readerHeader">
         <h3>📖 Reading Mode</h3>
         <div class="right-controls">
             <div class="reader-nav-group">
@@ -1080,8 +1026,10 @@ body.desktop-view .header-actions .settings-btn{display:none}
                 <button class="hl-btn hl-pink" data-color="#fbcfe8" onclick="selectHighlightColor(this)"></button>
                 <button class="hl-btn hl-eraser" data-color="transparent" onclick="selectHighlightColor(this)"><i class="fa-solid fa-eraser"></i></button>
                 <div style="width:1px;height:14px;background:var(--border);margin:0 3px"></div>
+                <button class="hl-btn toolbar-bookmark-btn" id="readerBookmarkBtn" onclick="toggleBookmark(true)"><i class="fa-regular fa-bookmark" id="readerBookmarkIcon"></i></button>
                 <button class="hl-btn toolbar-notes-btn" onclick="openNotesModal()"><i class="fa-solid fa-pen"></i><div class="notes-badge" id="notesBadge"></div></button>
             </div>
+            <button class="reader-collapse-btn" onclick="toggleReaderCollapse()" title="Collapse header"><i class="fa-solid fa-chevron-up"></i></button>
             <button class="reader-close-btn" onclick="closeFullscreenReader()" title="Close (7)"><i class="fa-solid fa-xmark"></i></button>
         </div>
         <span class="highlight-hint" id="highlightHint">✏️ Mode ON — swipe across text or select text first.</span>
@@ -1234,14 +1182,19 @@ const DB_NAME='CAAuditProDB',STORE_NAME='progress',WRONG_STORE='wrongQuestions';
 const FILES={easy:'study.json',medium:'mcqs.json',hard:'audit_case_scenarios.json',gst:'gstcase_scenarios.json',fr:'fr.json',fricaics:'fricaics.json',afm:'afm_icaics.json',dt:'dticaics.json'};
 const MODE_LABELS={easy:'Basic Concepts',medium:'Standard Questions',hard:'Case Scenarios',gst:'GST Case Scenarios',fr:'Financial Reporting',fricaics:'FR ICAI Case Studies',afm:'Advanced Financial Management',dt:'Direct Tax Laws'};
 const MODE_KEYS=['easy','medium','hard','gst','fr','fricaics','afm','dt'];
+let QUESTION_COUNTS={};
 let totalAnsweredGlobally=parseInt(localStorage.getItem('auditPro_totalAnswered'))||0;
 let supportToastShown=localStorage.getItem('auditPro_supportShown')==='true';
 let readerNavLocked = sessionStorage.getItem('auditPro_readerNavLocked')==='1';
-let wrongFilter='all';
+let reviewNavLocked = sessionStorage.getItem('auditPro_reviewNavLocked')==='1';
 
 // ==================== FIRST-TIME GUIDE ====================
 function checkFirstTimeGuide(){const seen=localStorage.getItem('mcqHelper_guideSeen');if(!seen){document.getElementById('firstTimeGuide').classList.add('show');}}
 window.closeGuide=function(){document.getElementById('firstTimeGuide').classList.remove('show');localStorage.setItem('mcqHelper_guideSeen','true');};
+
+// ==================== MINI TOAST ====================
+let miniToastTimer=null;
+function showMiniToast(txt){const t=document.getElementById('miniToast');t.textContent=txt;t.classList.add('show');clearTimeout(miniToastTimer);miniToastTimer=setTimeout(()=>t.classList.remove('show'),1500);}
 
 // ==================== CUSTOM MODALS ====================
 window.showCustomAlert=function(t,m){document.getElementById('alertTitle').innerHTML=t;document.getElementById('alertMessage').innerHTML=m;document.getElementById('customAlertModal').style.display='flex';};
@@ -1274,9 +1227,34 @@ function hideLoader(){document.getElementById('loader').style.display='none';}
 function switchScreen(id){document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));document.getElementById(id).classList.add('active');if(document.body.classList.contains('desktop-view')&&id==='quizScreen')applyDesktopLayout();if(id==='welcomeScreen')refreshWelcomeStats();}
 window.goHome=function(){if(STATE.currentMode)saveProgress();switchScreen('welcomeScreen');updateWrongChip();};
 
-function detectViewMode(){const w=window.innerWidth;if(w>900){document.body.classList.add('desktop-view');document.getElementById('desktopToggleIcon').className='fa-solid fa-mobile-screen';document.getElementById('togglePaletteBtn').style.display='flex';}else{document.getElementById('togglePaletteBtn').style.display='none';}if(w>=1400){document.body.classList.add('tv-view');}}
-window.toggleDesktopView=function(){const b=document.body;b.classList.toggle('desktop-view');const ic=document.getElementById('desktopToggleIcon');ic.className=b.classList.contains('desktop-view')?'fa-solid fa-mobile-screen':'fa-solid fa-desktop';if(b.classList.contains('desktop-view')){applyDesktopLayout();document.getElementById('togglePaletteBtn').style.display='flex';}else{removeDesktopLayout();document.getElementById('togglePaletteBtn').style.display='none';}};
-window.togglePalette=function(){const wrapper=document.getElementById('desktopSidebarWrapper');wrapper.classList.toggle('hidden');const quizArea=document.getElementById('quizArea');if(wrapper.classList.contains('hidden')){quizArea.style.maxWidth='100%';}else{quizArea.style.maxWidth='';}};
+function detectViewMode(){
+    const w=window.innerWidth;
+    if(w>900){
+        document.body.classList.add('desktop-view');
+        document.getElementById('desktopToggleIcon').className='fa-solid fa-mobile-screen';
+        document.getElementById('togglePaletteBtn').style.display='flex';
+    }else{
+        document.getElementById('togglePaletteBtn').style.display='none';
+    }
+    if(w>=1400){document.body.classList.add('tv-view');}
+}
+window.toggleDesktopView=function(){
+    const b=document.body;
+    b.classList.toggle('desktop-view');
+    const ic=document.getElementById('desktopToggleIcon');
+    ic.className=b.classList.contains('desktop-view')?'fa-solid fa-mobile-screen':'fa-solid fa-desktop';
+    if(b.classList.contains('desktop-view')){
+        applyDesktopLayout();
+        document.getElementById('togglePaletteBtn').style.display='flex';
+    }else{
+        removeDesktopLayout();
+        document.getElementById('togglePaletteBtn').style.display='none';
+    }
+};
+window.togglePalette=function(){
+    const wrapper=document.getElementById('desktopSidebarWrapper');
+    wrapper.classList.toggle('hidden');
+};
 function applyDesktopLayout(){if(STATE.questions[STATE.currentIdx]&&STATE.questions[STATE.currentIdx].caseStudy)document.getElementById('quizArea').classList.add('has-case');}
 function removeDesktopLayout(){document.getElementById('quizArea').classList.remove('has-case');}
 
@@ -1417,7 +1395,32 @@ function renderQuestion(){
 }
 
 function renderDots(){const c=document.getElementById('dotsDisplay');c.innerHTML='';STATE.questions.forEach((_,i)=>{const st=STATE.session[i];const dot=document.createElement('button');dot.className='dot-btn';dot.textContent=i+1;if(i===STATE.currentIdx)dot.classList.add('current');if(st.sel!==null){if(st.ok===true)dot.classList.add('correct-answer');else if(st.ok===false)dot.classList.add('wrong-answer');else dot.classList.add('attempted');}else dot.classList.add('unattempted');if(st.mark)dot.innerHTML+=`<span class="bookmark-indicator"></span>`;dot.addEventListener('click',()=>jumpTo(i));c.appendChild(dot);});setTimeout(()=>{const cd=c.querySelector('.dot-btn.current');if(cd)cd.scrollIntoView({behavior:'smooth',block:'nearest',inline:'center'});},80);}
-function updateBookmarkIcon(){const st=STATE.session[STATE.currentIdx];const ic=document.getElementById('bookmarkIcon');if(st&&st.mark){ic.className='fa-solid fa-bookmark';ic.style.color='#d97706';}else{ic.className='fa-regular fa-bookmark';ic.style.color='#94a3b8';}}
+
+function updateBookmarkIcon(){
+    const st=STATE.session[STATE.currentIdx];
+    const isMarked=!!(st&&st.mark);
+    const ic=document.getElementById('bookmarkIcon');
+    const btn=document.getElementById('bookmarkBtn');
+    const navBtn=document.getElementById('btnBookmarkNav');
+    const navIc=document.getElementById('bookmarkNavIcon');
+    const readerBtn=document.getElementById('readerBookmarkBtn');
+    const readerIc=document.getElementById('readerBookmarkIcon');
+    if(isMarked){
+        ic.className='fa-solid fa-bookmark';
+        if(btn)btn.classList.add('active');
+        if(navIc)navIc.className='fa-solid fa-bookmark';
+        if(navBtn)navBtn.classList.add('active');
+        if(readerIc)readerIc.className='fa-solid fa-bookmark';
+        if(readerBtn)readerBtn.classList.add('active');
+    }else{
+        ic.className='fa-regular fa-bookmark';
+        if(btn)btn.classList.remove('active');
+        if(navIc)navIc.className='fa-regular fa-bookmark';
+        if(navBtn)navBtn.classList.remove('active');
+        if(readerIc)readerIc.className='fa-regular fa-bookmark';
+        if(readerBtn)readerBtn.classList.remove('active');
+    }
+}
 
 function handleOptionClick(idx){if(STATE.isAnswered||STATE.studyMode)return;if(!STATE.questions[STATE.currentIdx].options[idx])return;beep(400,'sine',.04);document.querySelectorAll('#optionsDisplay .option-btn').forEach(b=>b.classList.remove('selected'));const btn=document.getElementById('optBtn'+idx);if(btn)btn.classList.add('selected');setTimeout(()=>lockAnswer(idx),300);}
 function lockAnswer(idx,fromReader=false){
@@ -1453,6 +1456,8 @@ function showExplanationModal(ok,expert=false){
 }
 
 // ==================== FULLSCREEN READER ====================
+window.toggleReaderCollapse=function(){document.getElementById('fullscreenReader').classList.toggle('collapsed');};
+
 window.openFullscreenReader=function(){
     const q=STATE.questions[STATE.currentIdx];if(!q)return;
     const st=STATE.session[STATE.currentIdx]||{sel:null,ok:null,mark:false,caseHtml:null,questionHtml:null,optionsHtml:null,note:null};
@@ -1480,13 +1485,14 @@ window.openFullscreenReader=function(){
     }
     const rc=document.getElementById('readerContent');rc.innerHTML=content;
     document.getElementById('fullscreenReader').style.display='flex';
+    document.getElementById('fullscreenReader').classList.remove('collapsed');
     rc.scrollTop=STATE.readerScrollPos||0;
-    prepareTables(rc);updateReaderNavUI();updateReaderLockUI();showReaderKeyGuide();
+    prepareTables(rc);updateReaderNavUI();updateReaderLockUI();updateBookmarkIcon();showReaderKeyGuide();
 };
 function showReaderKeyGuide(){const key='auditPro_readerKeyGuideShown';if(sessionStorage.getItem(key)==='1')return;sessionStorage.setItem(key,'1');const g=document.getElementById('readerKeyGuide');if(!g)return;setTimeout(()=>g.classList.add('show'),500);setTimeout(()=>g.classList.remove('show'),6000);}
 function updateReaderNavUI(){const total=STATE.questions.length;const pos=document.getElementById('readerNavPos');if(pos)pos.textContent=(STATE.currentIdx+1)+'/'+total;const pb=document.getElementById('readerPrevBtn');const nb=document.getElementById('readerNextBtn');if(pb)pb.disabled=(STATE.currentIdx<=0);if(nb)nb.disabled=(STATE.currentIdx>=total-1);}
 window.toggleReaderNavLock=function(){readerNavLocked=!readerNavLocked;sessionStorage.setItem('auditPro_readerNavLocked',readerNavLocked?'1':'0');updateReaderLockUI();beep(readerNavLocked?280:620,'sine',.08);};
-function updateReaderLockUI(){const btn=document.getElementById('readerLockBtn');const ic=document.getElementById('readerLockIcon');if(!btn||!ic)return;if(readerNavLocked){btn.classList.add('active');ic.className='fa-solid fa-lock';btn.title='Swipe navigation LOCKED (tap to unlock)';}else{btn.classList.remove('active');ic.className='fa-solid fa-lock-open';btn.title='Lock swipe navigation';}}
+function updateReaderLockUI(){const btn=document.getElementById('readerLockBtn');const ic=document.getElementById('readerLockIcon');if(!btn||!ic)return;if(readerNavLocked){btn.classList.add('active');ic.className='fa-solid fa-lock';btn.title='Swipe navigation LOCKED';}else{btn.classList.remove('active');ic.className='fa-solid fa-lock-open';btn.title='Lock swipe navigation';}}
 window.readerNav=function(dir){if(!STATE.questions.length)return;const target=STATE.currentIdx+dir;if(target<0||target>=STATE.questions.length){beep(240,'sine',.07);return;}STATE.currentIdx=target;STATE.lastReaderIdx=-1;renderQuestion();saveProgress();openFullscreenReader();beep(dir>0?540:430,'sine',.05);};
 window.handleReaderOptionClick=function(idx){if(STATE.isAnswered||STATE.studyMode)return;if(!STATE.questions[STATE.currentIdx].options[idx])return;beep(400,'sine',.04);document.querySelectorAll('#readerContent .option-btn').forEach(b=>b.classList.remove('selected'));const btn=document.getElementById('readerOptBtn'+idx);if(btn)btn.classList.add('selected');setTimeout(()=>lockAnswer(idx,true),300);};
 window.closeFullscreenReader=function(){STATE.readerScrollPos=document.getElementById('readerContent').scrollTop||0;document.getElementById('fullscreenReader').style.display='none';STATE.armedColor=null;const sel=window.getSelection();sel&&sel.removeAllRanges();};
@@ -1495,7 +1501,7 @@ window.closeFullscreenReader=function(){STATE.readerScrollPos=document.getElemen
 function getHighlightableContainer(node){let el=(node&&node.nodeType===3)?node.parentElement:node;while(el&&el!==document.body&&el!==document){if(el.classList&&el.classList.contains('highlightable'))return el;el=el.parentElement;}return null;}
 function getCaretRangeFromPoint(x,y){if(document.caretRangeFromPoint)return document.caretRangeFromPoint(x,y);if(document.caretPositionFromPoint){const p=document.caretPositionFromPoint(x,y);if(!p||!p.offsetNode)return null;const r=document.createRange();r.setStart(p.offsetNode,p.offset);r.collapse(true);return r;}return null;}
 function buildOrderedRange(a,b){if(!a||!b)return null;const r=document.createRange();try{if(a.compareBoundaryPoints(Range.START_TO_START,b)<=0){r.setStart(a.startContainer,a.startOffset);r.setEnd(b.startContainer,b.startOffset);}else{r.setStart(b.startContainer,b.startOffset);r.setEnd(a.startContainer,a.startOffset);}}catch(e){return null;}return r;}
-function wrapRangeSafe(range,color){if(!range||range.collapsed)return false;const span=document.createElement('span');span.className='user-highlight';span.style.backgroundColor=color;span.style.display='inline';span.style.padding='0';span.style.margin='0';try{range.surroundContents(span);return true;}catch(e){try{const walker=document.createTreeWalker(range.commonAncestorContainer,NodeFilter.SHOW_TEXT,{acceptNode:nd=>{const nr=document.createRange();nr.selectNodeContents(nd);return range.intersectsNode(nd)?NodeFilter.FILTER_ACCEPT:NodeFilter.FILTER_REJECT;}});const nodes=[];let n;while(n=walker.nextNode())nodes.push(n);if(nodes.length===0)return false;let ok=false;nodes.forEach(tn=>{const nr=document.createRange();nr.selectNodeContents(tn);const st=range.compareBoundaryPoints(Range.START_TO_START,nr)>0?range.startOffset:0;const en=range.compareBoundaryPoints(Range.END_TO_END,nr)<0?range.endOffset:tn.length;if(st<en){const pr=document.createRange();pr.setStart(tn,st);pr.setEnd(tn,en);try{const s2=document.createElement('span');s2.className='user-highlight';s2.style.backgroundColor=color;s2.style.display='inline';s2.style.padding='0';s2.style.margin='0';pr.surroundContents(s2);ok=true;}catch(e2){}}});return ok;}catch(e2){return false;}}}
+function wrapRangeSafe(range,color){if(!range||range.collapsed)return false;const span=document.createElement('span');span.className='user-highlight';span.style.backgroundColor=color;span.style.display='inline';try{range.surroundContents(span);return true;}catch(e){try{const walker=document.createTreeWalker(range.commonAncestorContainer,NodeFilter.SHOW_TEXT,{acceptNode:nd=>range.intersectsNode(nd)?NodeFilter.FILTER_ACCEPT:NodeFilter.FILTER_REJECT});const nodes=[];let n;while(n=walker.nextNode())nodes.push(n);if(nodes.length===0)return false;let ok=false;nodes.forEach(tn=>{const nr=document.createRange();nr.selectNodeContents(tn);const st=range.compareBoundaryPoints(Range.START_TO_START,nr)>0?range.startOffset:0;const en=range.compareBoundaryPoints(Range.END_TO_END,nr)<0?range.endOffset:tn.length;if(st<en){const pr=document.createRange();pr.setStart(tn,st);pr.setEnd(tn,en);try{const s2=document.createElement('span');s2.className='user-highlight';s2.style.backgroundColor=color;s2.style.display='inline';pr.surroundContents(s2);ok=true;}catch(e2){}}});return ok;}catch(e2){return false;}}}
 function syncHighlightToState(container){if(!container)return;const cq=STATE.questions[STATE.currentIdx];const st=STATE.session[STATE.currentIdx];if(!st)return;const html=container.innerHTML;if(container.id==='readerCaseStudy'){STATE.questions.forEach((q,idx)=>{if(q.caseTitle===cq.caseTitle){if(!STATE.session[idx])STATE.session[idx]={sel:null,ok:null,mark:false,caseHtml:null,questionHtml:null,optionsHtml:null,note:null};STATE.session[idx].caseHtml=html;}});const mb=document.getElementById('mainCaseStudyContent');if(mb)mb.innerHTML=html;}else if(container.id==='readerQuestion'){st.questionHtml=html;const mb=document.getElementById('mainQuestionContent');if(mb)mb.innerHTML=html;}saveProgress();}
 function eraseHighlights(range,container){const spans=container.querySelectorAll('.user-highlight');let erased=false;spans.forEach(sp=>{const sr=document.createRange();sr.selectNodeContents(sp);if(range.compareBoundaryPoints(Range.END_TO_START,sr)<=0&&range.compareBoundaryPoints(Range.START_TO_END,sr)>=0){const p=sp.parentNode;while(sp.firstChild)p.insertBefore(sp.firstChild,sp);p.removeChild(sp);erased=true;}});if(erased){container.normalize();beep(260,'sine',.04);syncHighlightToState(container);}}
 function applyHighlightToRange(range,color,container){if(!container)container=getHighlightableContainer(range.commonAncestorContainer);if(!container)return;if(color==='transparent'){eraseHighlights(range,container);return;}const ok=wrapRangeSafe(range,color);if(ok){beep(520,'sine',.04);syncHighlightToState(container);}}
@@ -1517,14 +1523,88 @@ function scrollMainUp(){const el=document.getElementById('mainContent');if(el)el
 window.goNext=function(){document.getElementById('explanationModal').style.display='none';if(STATE.currentIdx<STATE.questions.length-1){STATE.currentIdx++;renderQuestion();saveProgress();if(document.getElementById('fullscreenReader').style.display==='flex'){STATE.lastReaderIdx=-1;openFullscreenReader();}}else showEndScreen();};
 window.goPrev=function(){document.getElementById('explanationModal').style.display='none';if(STATE.currentIdx>0){STATE.currentIdx--;renderQuestion();saveProgress();if(document.getElementById('fullscreenReader').style.display==='flex'){STATE.lastReaderIdx=-1;openFullscreenReader();}}};
 function jumpTo(i){if(i>=0&&i<STATE.questions.length){STATE.currentIdx=i;renderQuestion();saveProgress();updateStatsBar();}}
-function toggleBookmark(){if(!STATE.session[STATE.currentIdx])return;STATE.session[STATE.currentIdx].mark=!STATE.session[STATE.currentIdx].mark;updateBookmarkIcon();renderDots();updateStatsBar();saveProgress();beep(600,'sine',.06);}
+function toggleBookmark(visual){
+    const st=STATE.session[STATE.currentIdx];
+    if(!st)return;
+    st.mark=!st.mark;
+    updateBookmarkIcon();renderDots();updateStatsBar();
+    saveProgress();
+    if(st.mark){beep(660,'triangle',.1);setTimeout(()=>beep(880,'triangle',.1),80);if(visual!==false)showMiniToast('🔖 Bookmarked');}
+    else{beep(400,'sine',.08);if(visual!==false)showMiniToast('Bookmark removed');}
+}
 function showEndScreen(){document.getElementById('quizArea').style.display='none';document.getElementById('desktopSidebarWrapper').style.display='none';document.getElementById('dotsDisplay').style.display='none';document.getElementById('endScreen').style.display='block';document.getElementById('statsBar').style.opacity='0.5';}
 window.retakeQuiz=function(){showCustomConfirm('Restart','Erase progress and restart this set?',r=>{if(r){STATE.session=STATE.questions.map(()=>({sel:null,ok:null,mark:false,caseHtml:null,questionHtml:null,optionsHtml:null,note:null}));STATE.currentIdx=0;saveProgress();document.getElementById('quizArea').style.display='';document.getElementById('desktopSidebarWrapper').style.display='';document.getElementById('dotsDisplay').style.display='';document.getElementById('endScreen').style.display='none';document.getElementById('statsBar').style.opacity='1';renderQuestion();updateStatsBar();}});};
 
 window.openSheet=function(id){const s=document.getElementById(id);s.style.display='block';void s.offsetWidth;s.classList.add('show');};
 window.closeSheet=function(id){const s=document.getElementById(id);s.classList.remove('show');setTimeout(()=>s.style.display='none',280);};
 window.buildPalette=function(){const g=document.getElementById('paletteGrid');g.innerHTML='';STATE.questions.forEach((_,i)=>{const st=STATE.session[i];const d=document.createElement('button');d.className='dot-btn';d.style.width='100%';d.style.aspectRatio='1';d.textContent=i+1;if(i===STATE.currentIdx)d.classList.add('current');if(st.sel!==null){if(st.ok===true)d.classList.add('correct-answer');else if(st.ok===false)d.classList.add('wrong-answer');else d.classList.add('attempted');}else d.classList.add('unattempted');if(st.mark)d.innerHTML+=`<span class="bookmark-indicator"></span>`;d.addEventListener('click',()=>{jumpTo(i);closeSheet('paletteSheet');});g.appendChild(d);});openSheet('paletteSheet');};
-window.buildReview=function(){const l=document.getElementById('reviewList');l.innerHTML='';STATE.questions.forEach((q,i)=>{const st=STATE.session[i];let ic='⚪';if(st.sel!==null)ic=st.ok?'✅':'❌';const div=document.createElement('div');div.style.cssText='padding:12px;border:1px solid #e2e8f0;border-radius:12px;background:white;cursor:pointer;margin-bottom:8px;display:flex;gap:10px;align-items:flex-start;';div.innerHTML=`<span style="font-size:1.1rem;flex-shrink:0">${ic}</span><div style="flex:1"><h4 style="font-size:.82rem;font-weight:600;color:#1e293b;margin-bottom:3px">Q${i+1}: ${String(q.question).substring(0,70)}${String(q.question).length>70?'...':''}</h4><p style="font-size:.72rem;color:#64748b">Your: <b style="color:${st.sel!==null?(st.ok?'#059669':'#dc2626'):'#64748b'}">${st.sel!==null?String.fromCharCode(65+st.sel):'-'}</b> | Correct: <b style="color:#059669">${String.fromCharCode(65+q.correct)}</b></p></div>`;div.addEventListener('click',()=>{jumpTo(i);closeSheet('reviewSheet');});l.appendChild(div);});openSheet('reviewSheet');};
+
+/* ==================== REVIEW FULLSCREEN ==================== */
+let reviewIdx=0;
+window.buildReview=function(){
+    reviewIdx=STATE.currentIdx;
+    document.getElementById('reviewFullscreen').style.display='flex';
+    renderReview();
+};
+window.closeReviewFullscreen=function(){document.getElementById('reviewFullscreen').style.display='none';};
+function renderReview(){
+    const total=STATE.questions.length;
+    if(reviewIdx>=total)reviewIdx=total-1;
+    if(reviewIdx<0)reviewIdx=0;
+    document.getElementById('reviewNavPos').textContent=(reviewIdx+1)+'/'+total;
+    document.getElementById('reviewPrevBtn').disabled=reviewIdx<=0;
+    document.getElementById('reviewNextBtn').disabled=reviewIdx>=total-1;
+    updateReviewLockUI();
+    const q=STATE.questions[reviewIdx];const st=STATE.session[reviewIdx];const rc=document.getElementById('reviewContent');
+    let status='⚪ Unattempted';
+    if(st.sel!==null) status = st.ok ? '✅ Correct' : '❌ Wrong';
+    let html = '<div style="margin-bottom:14px"><div style="display:flex;align-items:center;gap:10px;margin-bottom:10px;flex-wrap:wrap"><span style="background:#eff6ff;color:var(--primary);font-weight:800;font-size:.75rem;padding:4px 10px;border-radius:20px">Q'+reviewIdx+1+'</span><span style="font-size:.78rem;font-weight:700">'+status+'</span>'+(st.mark?'<span style="background:#fef3c7;color:#b45309;font-size:.68rem;font-weight:700;padding:3px 8px;border-radius:20px">🔖 Bookmarked</span>':'')+'</div>';
+    if(q.caseStudy){
+        html+='<div style="background:#f8fafc;border-left:4px solid var(--primary);border-radius:10px;padding:14px;margin-bottom:16px;line-height:1.65">';
+        if(q.caseTitle)html+='<div style="color:var(--primary);font-weight:700;font-size:.75rem;text-transform:uppercase;margin-bottom:6px">'+esc(q.caseTitle)+'</div>';
+        html+= q.caseStudy + '</div>';
+    }
+    html+='<h3 style="color:var(--text);font-weight:700;font-size:.95rem;margin-bottom:10px">Question '+esc(String(q.qNum||''))+'</h3>';
+    html+='<div style="font-size:1rem;line-height:1.6;margin-bottom:16px">'+(st.questionHtml||q.question)+'</div>';
+    html+='<div class="options-list" style="margin-bottom:20px">';
+    q.options.forEach((o,i)=>{
+        let extra='';
+        if(st.sel!==null){if(i===st.sel&&!st.ok)extra='wrong';if(i===q.correct)extra='correct';}
+        else if(i===q.correct)extra='correct';
+        html+='<div class="option-btn '+extra+'" style="cursor:default;pointer-events:none"><span class="option-letter">'+String.fromCharCode(65+i)+'</span><span style="flex:1">'+o+'</span></div>';
+    });
+    html+='</div>';
+    if(q.explain){
+        html+='<div class="study-explanation-panel" style="margin-top:12px">';
+        html+='<div class="sep-head"><i class="fa-solid fa-lightbulb"></i> Explanation</div>';
+        html+='<div class="sep-correct"><span class="sep-tag">CORRECT</span><span>Option '+String.fromCharCode(65+q.correct)+' — '+esc(q.options[q.correct]||'')+'</span></div>';
+        html+='<div class="sep-body">'+q.explain+'</div>';
+        html+='</div>';
+    }
+    html+='</div>';
+    rc.innerHTML=html;
+    prepareTables(rc);
+    rc.scrollTop=0;
+}
+window.reviewNav=function(dir){
+    const total=STATE.questions.length;
+    const t=reviewIdx+dir;
+    if(t<0||t>=total){beep(240,'sine',.07);return;}
+    reviewIdx=t;renderReview();beep(dir>0?540:430,'sine',.05);
+};
+window.toggleReviewLock=function(){
+    reviewNavLocked=!reviewNavLocked;
+    sessionStorage.setItem('auditPro_reviewNavLocked',reviewNavLocked?'1':'0');
+    updateReviewLockUI();
+    beep(reviewNavLocked?280:620,'sine',.08);
+};
+function updateReviewLockUI(){
+    const btn=document.getElementById('reviewLockBtn');const ic=document.getElementById('reviewLockIcon');
+    if(!btn||!ic)return;
+    if(reviewNavLocked){btn.classList.add('active');ic.className='fa-solid fa-lock';}
+    else{btn.classList.remove('active');ic.className='fa-solid fa-lock-open';}
+}
+
 window.openReviewWrong=function(){const l=document.getElementById('reviewWrongList');l.innerHTML='';const wrongQs=STATE.session.map((st,i)=>({st,i})).filter(x=>x.st.ok===false);if(wrongQs.length===0){l.innerHTML='<div style="text-align:center;padding:30px;color:#64748b;font-size:.9rem">No incorrect answers yet! 🎉</div>';}else{wrongQs.forEach(({st,i})=>{const q=STATE.questions[i];const div=document.createElement('div');div.style.cssText='padding:12px;border:1px solid #fecaca;border-radius:12px;background:#fef2f2;cursor:pointer;margin-bottom:8px;display:flex;gap:10px;align-items:flex-start;';div.innerHTML=`<span style="font-size:1.1rem">❌</span><div style="flex:1"><h4 style="font-size:.82rem;font-weight:600;color:#1e293b;margin-bottom:3px">Q${i+1}: ${String(q.question).substring(0,70)}${String(q.question).length>70?'...':''}</h4><p style="font-size:.72rem;color:#64748b">Your: <b style="color:#dc2626">${String.fromCharCode(65+st.sel)}</b> | Correct: <b style="color:#059669">${String.fromCharCode(65+q.correct)}</b></p></div>`;div.addEventListener('click',()=>{jumpTo(i);closeSheet('reviewWrongSheet');});l.appendChild(div);});}openSheet('reviewWrongSheet');};
 
 /* ==================== WRONG REVIEW CAROUSEL ==================== */
@@ -1694,16 +1774,46 @@ window.openWrongFilter = function(){
 async function updateWrongChip(){
     try{
         const all=await getAllWrongQuestions();
-        const chip=document.getElementById('wrongChip');
-        if(chip){chip.textContent=all.length;chip.style.display=all.length?'inline-block':'none';}
         const ws=document.getElementById('wstatWrong');if(ws)ws.textContent=all.length;
     }catch(e){}
 }
 
 async function refreshWelcomeStats(){
     try{const all=await getAllWrongQuestions();const ws=document.getElementById('wstatWrong');if(ws)ws.textContent=all.length;}catch(e){}
-    const sy=document.getElementById('wstatSyl');if(sy)sy.textContent=sylOverallPct()+'%';
-    try{await loadKTData();const totalKT=Object.values(KT_DATA).reduce((a,c)=>a+(c.takeaways?c.takeaways.length:0),0);const kt=document.getElementById('wstatKT');if(kt)kt.textContent=totalKT;}catch(e){}
+    try{
+        await loadKTData();
+        let totalKT=Object.values(KT_DATA).reduce((a,c)=>a+(c.takeaways?c.takeaways.length:0),0);
+        // add custom KT count
+        Object.values(CUSTOM_KT).forEach(arr=>{if(Array.isArray(arr))totalKT+=arr.length;});
+        // add AFM theory count if loaded
+        if(AFM_STATE.deck && AFM_STATE.deck.length) totalKT += AFM_STATE.deck.length;
+        const kt=document.getElementById('wstatKT');if(kt)kt.textContent=totalKT;
+    }catch(e){}
+    // Compute question counts
+    await computeQuestionCounts();
+}
+
+async function computeQuestionCounts(){
+    let total=0;
+    let allLoaded=true;
+    for (const mode of MODE_KEYS) {
+        if (QUESTION_COUNTS[mode]!==undefined){ total += QUESTION_COUNTS[mode]; continue; }
+        try{
+            const res=await fetch(FILES[mode],{cache:'no-store'});
+            if(!res.ok){ allLoaded=false; continue; }
+            const data=await res.json();
+            const parsed=normalizeData(data);
+            QUESTION_COUNTS[mode]=parsed.length;
+            total+=parsed.length;
+        }catch(e){ allLoaded=false; }
+    }
+    document.querySelectorAll('[data-count-mode]').forEach(el=>{
+        const mode=el.dataset.countMode;
+        if(QUESTION_COUNTS[mode]!==undefined) el.innerHTML='<i class="fa-solid fa-list-ol"></i> '+QUESTION_COUNTS[mode]+' Qs';
+        else el.innerHTML='<i class="fa-solid fa-list-ol"></i> —';
+    });
+    const tot=document.getElementById('wstatTotal');
+    if(tot) tot.textContent = total>0 ? total : '—';
 }
 
 // ==================== LIFELINES ====================
@@ -1760,182 +1870,45 @@ async function loadKTData(){
 }
 function getChapterKT(chNum){return KT_DATA[String(chNum)]||null;}
 
-const DEFAULT_SYLLABUS={
-    course_title:"Advanced Auditing, Assurance and Professional Ethics",
-    modules:[
-        {module_number:1,chapters:[
-            {chapter_number:1,chapter_title:"Quality Control",topics:[
-                {topic_number:"1",title:"Audit Quality"},
-                {topic_number:"2",title:"SQC 1 – Quality Control for Firms that Perform Audits and Reviews of Historical Financial Information",subtopics:[
-                    {topic_number:"2.1",title:"Elements of a System of Quality Control"},
-                    {topic_number:"2.2",title:"Leadership Responsibilities for Quality within the Firm"},
-                    {topic_number:"2.3",title:"Ethical Requirements"},
-                    {topic_number:"2.4",title:"Acceptance and Continuance of Client Relationships"},
-                    {topic_number:"2.5",title:"Human Resources"},
-                    {topic_number:"2.6",title:"Engagement Performance"},
-                    {topic_number:"2.7",title:"Monitoring"}
-                ]},
-                {topic_number:"3",title:"SA 220 – Quality Control for an Audit of Financial Statements",subtopics:[
-                    {topic_number:"3.1",title:"Leadership Responsibility for Quality of Audits"},
-                    {topic_number:"3.2",title:"Relevant Ethical Requirements"},
-                    {topic_number:"3.3",title:"Acceptance and Continuance of Client Relationships and Audit Engagements"},
-                    {topic_number:"3.4",title:"Assignment of Engagement Teams"},
-                    {topic_number:"3.5",title:"Engagement Performance"},
-                    {topic_number:"3.6",title:"Engagement Quality Control Review"},
-                    {topic_number:"3.7",title:"Monitoring and Documentation"}
-                ]}
-            ]},
-            {chapter_number:2,chapter_title:"General Auditing Principles and Auditors' Responsibilities",topics:[
-                {topic_number:"1",title:"SA 200 – Overall Objectives of the Independent Auditor"},
-                {topic_number:"2",title:"SA 210 – Agreeing the Terms of Audit Engagements"},
-                {topic_number:"3",title:"SA 230 – Audit Documentation"},
-                {topic_number:"4",title:"SA 240 – Auditor's Responsibilities Relating to Fraud"},
-                {topic_number:"5",title:"SA 250 – Consideration of Laws and Regulations in an Audit"},
-                {topic_number:"6",title:"SA 260 – Communication with Those Charged with Governance"},
-                {topic_number:"7",title:"SA 265 – Communicating Deficiencies in Internal Control"},
-                {topic_number:"8",title:"SA 299 – Joint Audit of Financial Statements"},
-                {topic_number:"9",title:"SA 402 – Audit Considerations Relating to an Entity Using a Service Organisation"},
-                {topic_number:"10",title:"Professional Skepticism and Professional Judgment"}
-            ]},
-            {chapter_number:3,chapter_title:"Audit Planning, Strategy and Execution",topics:[
-                {topic_number:"1",title:"Audit Planning – Concept and Benefits"},
-                {topic_number:"2",title:"SA 300 – Planning an Audit of Financial Statements"},
-                {topic_number:"3",title:"Audit Strategy and Audit Plan"},
-                {topic_number:"4",title:"Audit Programme"},
-                {topic_number:"5",title:"Direction, Supervision and Review"},
-                {topic_number:"6",title:"Execution of Audit and Time Budgeting"}
-            ]},
-            {chapter_number:4,chapter_title:"Materiality, Risk Assessment and Internal Control",topics:[
-                {topic_number:"1",title:"SA 315 – Identifying and Assessing Risks of Material Misstatement"},
-                {topic_number:"2",title:"SA 320 – Materiality in Planning and Performing an Audit"},
-                {topic_number:"3",title:"SA 330 – The Auditor's Responses to Assessed Risks"},
-                {topic_number:"4",title:"Internal Control – Components and the COSO Framework"},
-                {topic_number:"5",title:"Understanding the Entity and Its Environment"},
-                {topic_number:"6",title:"Risk Assessment Procedures and Documentation"}
-            ]},
-            {chapter_number:5,chapter_title:"Audit Evidence",topics:[
-                {topic_number:"1",title:"SA 500 – Audit Evidence"},
-                {topic_number:"2",title:"SA 501 – Audit Evidence – Specific Considerations"},
-                {topic_number:"3",title:"SA 505 – External Confirmations"},
-                {topic_number:"4",title:"SA 510 – Initial Audit Engagements – Opening Balances"},
-                {topic_number:"5",title:"SA 520 – Analytical Procedures"},
-                {topic_number:"6",title:"SA 530 – Audit Sampling"},
-                {topic_number:"7",title:"SA 540 – Auditing Accounting Estimates and Related Disclosures"},
-                {topic_number:"8",title:"SA 550 – Related Parties"},
-                {topic_number:"9",title:"SA 570 – Going Concern"}
-            ]},
-            {chapter_number:6,chapter_title:"Completion and Review",topics:[
-                {topic_number:"1",title:"SA 450 – Evaluation of Misstatements Identified during the Audit"},
-                {topic_number:"2",title:"SA 560 – Subsequent Events"},
-                {topic_number:"3",title:"SA 580 – Written Representations"},
-                {topic_number:"4",title:"SA 620 – Using the Work of an Auditor's Expert"},
-                {topic_number:"5",title:"Completion Procedures and Overall Review of Financial Statements"}
-            ]},
-            {chapter_number:7,chapter_title:"Reporting",topics:[
-                {topic_number:"1",title:"SA 700 – Forming an Opinion and Reporting on Financial Statements"},
-                {topic_number:"2",title:"SA 701 – Communicating Key Audit Matters"},
-                {topic_number:"3",title:"SA 705 – Modifications to the Opinion in the Independent Auditor's Report"},
-                {topic_number:"4",title:"SA 706 – Emphasis of Matter and Other Matter Paragraphs"},
-                {topic_number:"5",title:"SA 710 – Comparative Information"},
-                {topic_number:"6",title:"SA 720 – The Auditor's Responsibilities Relating to Other Information"},
-                {topic_number:"7",title:"CARO 2020 – Reporting Requirements"},
-                {topic_number:"8",title:"Reporting under the Companies Act, 2013"}
-            ]}
+const DEFAULT_SYLLABUS={course_title:"Advanced Auditing, Assurance and Professional Ethics",modules:[
+    {module_number:1,chapters:[
+        {chapter_number:1,chapter_title:"Quality Control",topics:[
+            {topic_number:"1",title:"Audit Quality"},
+            {topic_number:"2",title:"SQC 1 – Quality Control for Firms that Perform Audits and Reviews of Historical Financial Information",subtopics:[
+                {topic_number:"2.1",title:"Elements of a System of Quality Control"},{topic_number:"2.2",title:"Leadership Responsibilities for Quality within the Firm"},{topic_number:"2.3",title:"Ethical Requirements"},{topic_number:"2.4",title:"Acceptance and Continuance of Client Relationships"},{topic_number:"2.5",title:"Human Resources"},{topic_number:"2.6",title:"Engagement Performance"},{topic_number:"2.7",title:"Monitoring"}]},
+            {topic_number:"3",title:"SA 220 – Quality Control for an Audit of Financial Statements",subtopics:[
+                {topic_number:"3.1",title:"Leadership Responsibility for Quality of Audits"},{topic_number:"3.2",title:"Relevant Ethical Requirements"},{topic_number:"3.3",title:"Acceptance and Continuance of Client Relationships and Audit Engagements"},{topic_number:"3.4",title:"Assignment of Engagement Teams"},{topic_number:"3.5",title:"Engagement Performance"},{topic_number:"3.6",title:"Engagement Quality Control Review"},{topic_number:"3.7",title:"Monitoring and Documentation"}]}
         ]},
-        {module_number:2,chapters:[
-            {chapter_number:8,chapter_title:"Specialised Areas",topics:[
-                {topic_number:"1",title:"Overview of Specialised Audits"},
-                {topic_number:"2",title:"Audit of Limited Liability Partnerships (LLPs)"},
-                {topic_number:"3",title:"Audit of Non-Governmental Organisations (NGOs)"},
-                {topic_number:"4",title:"Audit of Co-operative Societies"},
-                {topic_number:"5",title:"Audit of Insurance Companies"},
-                {topic_number:"6",title:"Tax Audit under Section 44AB"},
-                {topic_number:"7",title:"Audit of Mutual Funds and Asset Management Companies"}
-            ]},
-            {chapter_number:9,chapter_title:"Related Services",topics:[
-                {topic_number:"1",title:"Overview of Related Services"},
-                {topic_number:"2",title:"SRS 4400 – Engagements to Perform Agreed-Upon Procedures"},
-                {topic_number:"3",title:"SRS 4410 – Compilation Engagements"},
-                {topic_number:"4",title:"SAE 3402 – Assurance Reports on Controls at a Service Organisation"},
-                {topic_number:"5",title:"Difference between Audit, Review and Related Services"}
-            ]},
-            {chapter_number:10,chapter_title:"Review of Financial Information",topics:[
-                {topic_number:"1",title:"SRE 2400 – Engagements to Review Historical Financial Statements"},
-                {topic_number:"2",title:"SRE 2410 – Review of Interim Financial Information"},
-                {topic_number:"3",title:"Review Procedures and Negative Assurance"},
-                {topic_number:"4",title:"Reporting in Review Engagements"}
-            ]},
-            {chapter_number:11,chapter_title:"Prospective Financial Information and Other Assurance Services",topics:[
-                {topic_number:"1",title:"Prospective Financial Information – Concepts"},
-                {topic_number:"2",title:"SAE 3400 – The Examination of Prospective Financial Information"},
-                {topic_number:"3",title:"Other Assurance Services – Overview"},
-                {topic_number:"4",title:"Assurance on Non-Financial Information"}
-            ]},
-            {chapter_number:12,chapter_title:"Digital Auditing & Assurance",topics:[
-                {topic_number:"1",title:"Digital Auditing – Concepts and Challenges"},
-                {topic_number:"2",title:"Computer Assisted Audit Techniques (CAAT)"},
-                {topic_number:"3",title:"Data Analytics in Audit"},
-                {topic_number:"4",title:"IT General Controls and Application Controls"},
-                {topic_number:"5",title:"Audit in ERP / Automated Environments"},
-                {topic_number:"6",title:"Cyber Security and Emerging Digital Risks"}
-            ]},
-            {chapter_number:13,chapter_title:"Group Audits",topics:[
-                {topic_number:"1",title:"Group Audit – Concepts and Terminology"},
-                {topic_number:"2",title:"SA 600 – Using the Work of Another Auditor"},
-                {topic_number:"3",title:"Principal Auditor and Component Auditors"},
-                {topic_number:"4",title:"Consolidation Process and Group Financial Statements"},
-                {topic_number:"5",title:"Communication and Documentation in Group Audits"}
-            ]},
-            {chapter_number:14,chapter_title:"Special Features of Audit of Banks & Non-Banking Financial Companies",topics:[
-                {topic_number:"1",title:"Audit of Banks – Legal and Regulatory Framework"},
-                {topic_number:"2",title:"Income Recognition and Asset Classification (IRAC) Norms"},
-                {topic_number:"3",title:"Audit of Advances and NPA Classification"},
-                {topic_number:"4",title:"Long Form Audit Report (LFAR)"},
-                {topic_number:"5",title:"Audit of Non-Banking Financial Companies (NBFCs)"},
-                {topic_number:"6",title:"Regulatory Reporting and RBI Guidelines"}
-            ]}
-        ]},
-        {module_number:3,chapters:[
-            {chapter_number:15,chapter_title:"Overview of Audit of Public Sector Undertakings",topics:[
-                {topic_number:"1",title:"Public Sector Undertakings – Overview"},
-                {topic_number:"2",title:"CAG and the DPC Act, 1971"},
-                {topic_number:"3",title:"Propriety Audit and Performance Audit"},
-                {topic_number:"4",title:"Audit of Government Companies"},
-                {topic_number:"5",title:"Reporting by the Comptroller and Auditor General"}
-            ]},
-            {chapter_number:16,chapter_title:"Internal Audit",topics:[
-                {topic_number:"1",title:"Internal Audit – Concepts, Scope and Objectives"},
-                {topic_number:"2",title:"SA 610 – Using the Work of Internal Auditors"},
-                {topic_number:"3",title:"Standards on Internal Audit (SIAs)"},
-                {topic_number:"4",title:"Risk Based Internal Audit"},
-                {topic_number:"5",title:"Internal Audit vs Statutory Audit"},
-                {topic_number:"6",title:"Internal Financial Controls (IFC) and IFC Reporting"}
-            ]},
-            {chapter_number:17,chapter_title:"Due Diligence, Investigation & Forensic Accounting",topics:[
-                {topic_number:"1",title:"Due Diligence – Concepts and Types"},
-                {topic_number:"2",title:"Financial Due Diligence Procedures"},
-                {topic_number:"3",title:"Investigation – Concepts and Types"},
-                {topic_number:"4",title:"Forensic Accounting and Fraud Investigation"},
-                {topic_number:"5",title:"Reporting in Investigation and Forensic Engagements"}
-            ]},
-            {chapter_number:18,chapter_title:"Emerging Areas: SDG & Environment, Social and Governance (ESG) Assurance",topics:[
-                {topic_number:"1",title:"Sustainable Development Goals (SDGs) – Overview"},
-                {topic_number:"2",title:"Environment, Social and Governance (ESG) Framework"},
-                {topic_number:"3",title:"BRSR and Sustainability Reporting"},
-                {topic_number:"4",title:"ESG Assurance Engagements"},
-                {topic_number:"5",title:"Greenwashing and Related Risks"}
-            ]},
-            {chapter_number:19,chapter_title:"Professional Ethics & Liabilities of Auditors",topics:[
-                {topic_number:"1",title:"Code of Ethics – ICAI and IESBA"},
-                {topic_number:"2",title:"Independence and Conflict of Interest"},
-                {topic_number:"3",title:"Professional Misconduct – First and Second Schedules"},
-                {topic_number:"4",title:"Liabilities of Auditors – Civil, Criminal and Disciplinary"},
-                {topic_number:"5",title:"Penalties under the Companies Act, 2013"},
-                {topic_number:"6",title:"Ethical Requirements in Specialised Engagements"}
-            ]}
-        ]}
-    ]
-};
+        {chapter_number:2,chapter_title:"General Auditing Principles and Auditors' Responsibilities",topics:[
+            {topic_number:"1",title:"SA 200 – Overall Objectives of the Independent Auditor"},{topic_number:"2",title:"SA 210 – Agreeing the Terms of Audit Engagements"},{topic_number:"3",title:"SA 230 – Audit Documentation"},{topic_number:"4",title:"SA 240 – Auditor's Responsibilities Relating to Fraud"},{topic_number:"5",title:"SA 250 – Consideration of Laws and Regulations in an Audit"},{topic_number:"6",title:"SA 260 – Communication with Those Charged with Governance"},{topic_number:"7",title:"SA 265 – Communicating Deficiencies in Internal Control"},{topic_number:"8",title:"SA 299 – Joint Audit of Financial Statements"},{topic_number:"9",title:"SA 402 – Audit Considerations Relating to an Entity Using a Service Organisation"},{topic_number:"10",title:"Professional Skepticism and Professional Judgment"}]},
+        {chapter_number:3,chapter_title:"Audit Planning, Strategy and Execution",topics:[
+            {topic_number:"1",title:"Audit Planning – Concept and Benefits"},{topic_number:"2",title:"SA 300 – Planning an Audit of Financial Statements"},{topic_number:"3",title:"Audit Strategy and Audit Plan"},{topic_number:"4",title:"Audit Programme"},{topic_number:"5",title:"Direction, Supervision and Review"},{topic_number:"6",title:"Execution of Audit and Time Budgeting"}]},
+        {chapter_number:4,chapter_title:"Materiality, Risk Assessment and Internal Control",topics:[
+            {topic_number:"1",title:"SA 315 – Identifying and Assessing Risks of Material Misstatement"},{topic_number:"2",title:"SA 320 – Materiality in Planning and Performing an Audit"},{topic_number:"3",title:"SA 330 – The Auditor's Responses to Assessed Risks"},{topic_number:"4",title:"Internal Control – Components and the COSO Framework"},{topic_number:"5",title:"Understanding the Entity and Its Environment"},{topic_number:"6",title:"Risk Assessment Procedures and Documentation"}]},
+        {chapter_number:5,chapter_title:"Audit Evidence",topics:[
+            {topic_number:"1",title:"SA 500 – Audit Evidence"},{topic_number:"2",title:"SA 501 – Audit Evidence – Specific Considerations"},{topic_number:"3",title:"SA 505 – External Confirmations"},{topic_number:"4",title:"SA 510 – Initial Audit Engagements – Opening Balances"},{topic_number:"5",title:"SA 520 – Analytical Procedures"},{topic_number:"6",title:"SA 530 – Audit Sampling"},{topic_number:"7",title:"SA 540 – Auditing Accounting Estimates and Related Disclosures"},{topic_number:"8",title:"SA 550 – Related Parties"},{topic_number:"9",title:"SA 570 – Going Concern"}]},
+        {chapter_number:6,chapter_title:"Completion and Review",topics:[
+            {topic_number:"1",title:"SA 450 – Evaluation of Misstatements Identified during the Audit"},{topic_number:"2",title:"SA 560 – Subsequent Events"},{topic_number:"3",title:"SA 580 – Written Representations"},{topic_number:"4",title:"SA 620 – Using the Work of an Auditor's Expert"},{topic_number:"5",title:"Completion Procedures and Overall Review of Financial Statements"}]},
+        {chapter_number:7,chapter_title:"Reporting",topics:[
+            {topic_number:"1",title:"SA 700 – Forming an Opinion and Reporting on Financial Statements"},{topic_number:"2",title:"SA 701 – Communicating Key Audit Matters"},{topic_number:"3",title:"SA 705 – Modifications to the Opinion in the Independent Auditor's Report"},{topic_number:"4",title:"SA 706 – Emphasis of Matter and Other Matter Paragraphs"},{topic_number:"5",title:"SA 710 – Comparative Information"},{topic_number:"6",title:"SA 720 – The Auditor's Responsibilities Relating to Other Information"},{topic_number:"7",title:"CARO 2020 – Reporting Requirements"},{topic_number:"8",title:"Reporting under the Companies Act, 2013"}]}
+    ]},
+    {module_number:2,chapters:[
+        {chapter_number:8,chapter_title:"Specialised Areas",topics:[{topic_number:"1",title:"Overview of Specialised Audits"},{topic_number:"2",title:"Audit of Limited Liability Partnerships (LLPs)"},{topic_number:"3",title:"Audit of Non-Governmental Organisations (NGOs)"},{topic_number:"4",title:"Audit of Co-operative Societies"},{topic_number:"5",title:"Audit of Insurance Companies"},{topic_number:"6",title:"Tax Audit under Section 44AB"},{topic_number:"7",title:"Audit of Mutual Funds and Asset Management Companies"}]},
+        {chapter_number:9,chapter_title:"Related Services",topics:[{topic_number:"1",title:"Overview of Related Services"},{topic_number:"2",title:"SRS 4400 – Engagements to Perform Agreed-Upon Procedures"},{topic_number:"3",title:"SRS 4410 – Compilation Engagements"},{topic_number:"4",title:"SAE 3402 – Assurance Reports on Controls at a Service Organisation"},{topic_number:"5",title:"Difference between Audit, Review and Related Services"}]},
+        {chapter_number:10,chapter_title:"Review of Financial Information",topics:[{topic_number:"1",title:"SRE 2400 – Engagements to Review Historical Financial Statements"},{topic_number:"2",title:"SRE 2410 – Review of Interim Financial Information"},{topic_number:"3",title:"Review Procedures and Negative Assurance"},{topic_number:"4",title:"Reporting in Review Engagements"}]},
+        {chapter_number:11,chapter_title:"Prospective Financial Information and Other Assurance Services",topics:[{topic_number:"1",title:"Prospective Financial Information – Concepts"},{topic_number:"2",title:"SAE 3400 – The Examination of Prospective Financial Information"},{topic_number:"3",title:"Other Assurance Services – Overview"},{topic_number:"4",title:"Assurance on Non-Financial Information"}]},
+        {chapter_number:12,chapter_title:"Digital Auditing & Assurance",topics:[{topic_number:"1",title:"Digital Auditing – Concepts and Challenges"},{topic_number:"2",title:"Computer Assisted Audit Techniques (CAAT)"},{topic_number:"3",title:"Data Analytics in Audit"},{topic_number:"4",title:"IT General Controls and Application Controls"},{topic_number:"5",title:"Audit in ERP / Automated Environments"},{topic_number:"6",title:"Cyber Security and Emerging Digital Risks"}]},
+        {chapter_number:13,chapter_title:"Group Audits",topics:[{topic_number:"1",title:"Group Audit – Concepts and Terminology"},{topic_number:"2",title:"SA 600 – Using the Work of Another Auditor"},{topic_number:"3",title:"Principal Auditor and Component Auditors"},{topic_number:"4",title:"Consolidation Process and Group Financial Statements"},{topic_number:"5",title:"Communication and Documentation in Group Audits"}]},
+        {chapter_number:14,chapter_title:"Special Features of Audit of Banks & Non-Banking Financial Companies",topics:[{topic_number:"1",title:"Audit of Banks – Legal and Regulatory Framework"},{topic_number:"2",title:"Income Recognition and Asset Classification (IRAC) Norms"},{topic_number:"3",title:"Audit of Advances and NPA Classification"},{topic_number:"4",title:"Long Form Audit Report (LFAR)"},{topic_number:"5",title:"Audit of Non-Banking Financial Companies (NBFCs)"},{topic_number:"6",title:"Regulatory Reporting and RBI Guidelines"}]}
+    ]},
+    {module_number:3,chapters:[
+        {chapter_number:15,chapter_title:"Overview of Audit of Public Sector Undertakings",topics:[{topic_number:"1",title:"Public Sector Undertakings – Overview"},{topic_number:"2",title:"CAG and the DPC Act, 1971"},{topic_number:"3",title:"Propriety Audit and Performance Audit"},{topic_number:"4",title:"Audit of Government Companies"},{topic_number:"5",title:"Reporting by the Comptroller and Auditor General"}]},
+        {chapter_number:16,chapter_title:"Internal Audit",topics:[{topic_number:"1",title:"Internal Audit – Concepts, Scope and Objectives"},{topic_number:"2",title:"SA 610 – Using the Work of Internal Auditors"},{topic_number:"3",title:"Standards on Internal Audit (SIAs)"},{topic_number:"4",title:"Risk Based Internal Audit"},{topic_number:"5",title:"Internal Audit vs Statutory Audit"},{topic_number:"6",title:"Internal Financial Controls (IFC) and IFC Reporting"}]},
+        {chapter_number:17,chapter_title:"Due Diligence, Investigation & Forensic Accounting",topics:[{topic_number:"1",title:"Due Diligence – Concepts and Types"},{topic_number:"2",title:"Financial Due Diligence Procedures"},{topic_number:"3",title:"Investigation – Concepts and Types"},{topic_number:"4",title:"Forensic Accounting and Fraud Investigation"},{topic_number:"5",title:"Reporting in Investigation and Forensic Engagements"}]},
+        {chapter_number:18,chapter_title:"Emerging Areas: SDG & Environment, Social and Governance (ESG) Assurance",topics:[{topic_number:"1",title:"Sustainable Development Goals (SDGs) – Overview"},{topic_number:"2",title:"Environment, Social and Governance (ESG) Framework"},{topic_number:"3",title:"BRSR and Sustainability Reporting"},{topic_number:"4",title:"ESG Assurance Engagements"},{topic_number:"5",title:"Greenwashing and Related Risks"}]},
+        {chapter_number:19,chapter_title:"Professional Ethics & Liabilities of Auditors",topics:[{topic_number:"1",title:"Code of Ethics – ICAI and IESBA"},{topic_number:"2",title:"Independence and Conflict of Interest"},{topic_number:"3",title:"Professional Misconduct – First and Second Schedules"},{topic_number:"4",title:"Liabilities of Auditors – Civil, Criminal and Disciplinary"},{topic_number:"5",title:"Penalties under the Companies Act, 2013"},{topic_number:"6",title:"Ethical Requirements in Specialised Engagements"}]}
+    ]}
+]};
 
 let SYLLABUS=DEFAULT_SYLLABUS;
 let sylOpenModules={1:true,2:false,3:false};
@@ -1977,7 +1950,6 @@ function sylCardsForChapter(mod,ch){
 }
 function sylAllCards(){const src=SYLLABUS||DEFAULT_SYLLABUS;let all=[];(src.modules||[]).forEach(mod=>(mod.chapters||[]).forEach(ch=>{all=all.concat(sylCardsForChapter(mod,ch));}));return all;}
 function sylOverallPct(){const all=sylAllCards();if(!all.length)return 0;const dn=all.filter(c=>SYL_PROGRESS[c.id]).length;return Math.round(dn/all.length*100);}
-function updateSylChip(){const chip=document.getElementById('sylChip');if(chip)chip.textContent=sylOverallPct()+'%';const ws=document.getElementById('wstatSyl');if(ws)ws.textContent=sylOverallPct()+'%';}
 
 window.openSyllabus=async function(){showLoader('Loading syllabus...');try{SYLLABUS=await loadSyllabusData();document.getElementById('sylCourseTitle').textContent=SYLLABUS.course_title||'Advanced Auditing, Assurance and Professional Ethics';renderSyllabus();switchScreen('syllabusScreen');}catch(e){showCustomAlert('Error','Could not load the syllabus.');}finally{hideLoader();}};
 
@@ -1989,7 +1961,6 @@ function renderSyllabus(){
     const bar=document.getElementById('sylOverallBar');if(bar)bar.style.width=pct+'%';
     const txt=document.getElementById('sylOverallText');if(txt)txt.textContent=doneAll+' of '+all.length+' topics completed';
     const pc=document.getElementById('sylOverallPct');if(pc)pc.textContent=pct+'%';
-    updateSylChip();
     const wrap=document.getElementById('sylModules');if(!wrap)return;
     wrap.innerHTML='';
     (SYLLABUS.modules||[]).forEach(mod=>{
@@ -2136,7 +2107,59 @@ function renderAFMTheory() {
             '</div>' +
         '</div>';
     card.addEventListener('click', e => { if (e.target.closest('.flash-btn')) return; afmFlip(); });
+    attachAFMDrag(card);
     stage.appendChild(card);
+    if(AFM_STATE.idx===0 && !AFM_STATE._hintShown){
+        const hint=document.createElement('div');hint.className='flash-hint';
+        hint.innerHTML='<span class="hint-l"><i class="fa-solid fa-arrow-left"></i></span><span>SWIPE TO NAVIGATE</span><span class="hint-r"><i class="fa-solid fa-arrow-right"></i></span>';
+        stage.appendChild(hint);
+        AFM_STATE._hintShown=true;
+        setTimeout(()=>{if(hint.parentNode)hint.remove();},4000);
+    }
+}
+
+function attachAFMDrag(card){
+    let sx=0,sy=0,dx=0,dy=0;let dragging=false,decided=false;let rafId=null;let startTime=0;
+    const BASE='translate3d(0,0,0) scale(1)';
+    function paint(){rafId=null;card.style.transform='translate3d('+dx+'px,'+(dy*.3)+'px,0) rotate('+(dx/16)+'deg)';}
+    function reset(){card.style.transition='transform .3s cubic-bezier(.16,1,.3,1)';card.style.transform=BASE;}
+    card.addEventListener('pointerdown',e=>{
+        if(e.button&&e.button!==0)return;
+        dragging=true;decided=false;dx=0;dy=0;sx=e.clientX;sy=e.clientY;startTime=Date.now();
+        card.style.transition='none';
+        try{card.setPointerCapture(e.pointerId);}catch(err){}
+    });
+    card.addEventListener('pointermove',e=>{
+        if(!dragging)return;
+        dx=e.clientX-sx;dy=e.clientY-sy;
+        if(!decided){
+            if(Math.abs(dx)<6&&Math.abs(dy)<6)return;
+            decided=true;
+            if(Math.abs(dy)>Math.abs(dx)){dragging=false;reset();return;}
+        }
+        if(rafId)return;rafId=requestAnimationFrame(paint);
+    });
+    function finish(e){
+        if(!dragging)return;
+        dragging=false;
+        if(rafId){cancelAnimationFrame(rafId);rafId=null;}
+        const dt=Date.now()-startTime;
+        if(Math.abs(dx)>80){
+            const dir=dx>0;
+            card.style.transition='transform .22s ease-out, opacity .22s ease-out';
+            card.style.transform='translate3d('+(dir?640:-640)+'px,'+(dy*.4)+'px,0) rotate('+(dir?26:-26)+'deg)';
+            card.style.opacity='0';
+            setTimeout(()=>afmSwipe(dir),140);
+        }else if(Math.abs(dx)<6 && Math.abs(dy)<6 && dt<300){
+            // Tap
+            reset();
+            afmFlip();
+        }else{
+            dx=0;dy=0;reset();
+        }
+    }
+    card.addEventListener('pointerup',finish);
+    card.addEventListener('pointercancel',()=>{dragging=false;if(rafId){cancelAnimationFrame(rafId);rafId=null;}dx=0;dy=0;reset();});
 }
 
 window.afmFlip = function() {
@@ -2210,11 +2233,19 @@ window.afmResetProgress = function() {
 window.openAFMPalette = function() {
     const g = document.getElementById('afmPaletteGrid');
     g.innerHTML = '';
+    let lastCh=null;
     AFM_STATE.deck.forEach((d,i)=>{
+        if(d.chNum!==lastCh){
+            lastCh=d.chNum;
+            const div=document.createElement('div');
+            div.className='kt-palette-chapter-divider';
+            div.innerHTML='<i class="fa-solid fa-bookmark"></i> Ch '+d.chNum+' · '+esc(d.chTitle);
+            g.appendChild(div);
+        }
         const b = document.createElement('button');
         const mastered = AFM_STATE.progress[d.id];
         b.className = 'kt-palette-item' + (i === AFM_STATE.idx ? ' current' : '') + (mastered ? ' custom-kt' : '');
-        b.textContent = i+1;
+        b.textContent = (i+1);
         b.title = 'Ch'+d.chNum+' · '+d.question.substring(0,60);
         if(mastered){ const dot = document.createElement('span'); dot.className='kt-fav-dot'; dot.style.background='#10b981'; b.appendChild(dot); }
         b.addEventListener('click',()=>{
@@ -2317,9 +2348,19 @@ window.promptAddKT=function(){
         renderKTDeck();
     });
 };
+
+// KT Palette with chapter dividers
 window.openKTPalette=function(){
     const g=document.getElementById('ktPaletteGrid');g.innerHTML='';
+    let lastCh=null;
     KT_DECK.deck.forEach((d,i)=>{
+        if(d.chapterNum!==lastCh){
+            lastCh=d.chapterNum;
+            const div=document.createElement('div');
+            div.className='kt-palette-chapter-divider';
+            div.innerHTML='<i class="fa-solid fa-bookmark"></i> Ch '+d.chapterNum+' · '+esc(d.chapterTitle||'');
+            g.appendChild(div);
+        }
         const b=document.createElement('button');
         b.className='kt-palette-item'+(i===KT_DECK.idx?' current':'')+(d.custom?' custom-kt':'');
         b.textContent=(d.custom?'✎':'')+(d.idx||i+1);
@@ -2427,8 +2468,9 @@ function bindEvents(){
     document.getElementById('btnPrev').addEventListener('click',goPrev);
     document.getElementById('btnNext').addEventListener('click',goNext);
     document.getElementById('btnPalette').addEventListener('click',buildPalette);
-    document.getElementById('btnReview').addEventListener('click',buildReview);
-    document.getElementById('bookmarkBtn').addEventListener('click',toggleBookmark);
+    document.getElementById('btnBookmarkNav').addEventListener('click',()=>toggleBookmark(true));
+    document.getElementById('bookmarkBtn').addEventListener('click',()=>toggleBookmark(true));
+    document.getElementById('readerBookmarkBtn')?.addEventListener('click',()=>toggleBookmark(true));
     document.getElementById('lifelineBtn').addEventListener('click',toggleLifelineMenu);
     document.getElementById('btn5050').addEventListener('click',use5050);
     document.getElementById('btnExpert').addEventListener('click',useExpert);
@@ -2460,7 +2502,18 @@ function bindEvents(){
         if(Math.abs(dx)>80 && Math.abs(dx)>Math.abs(dy)*1.5){readerNav(dx<0?1:-1);}
     },{passive:true});
 
-    // Wrong carousel swipe
+    // Review fullscreen swipe
+    const rvc=document.getElementById('reviewContent');
+    let rSw={x:0,y:0,active:false};
+    rvc.addEventListener('touchstart',e=>{const t=e.changedTouches[0];if(!t)return;rSw.x=t.clientX;rSw.y=t.clientY;rSw.active=true;},{passive:true});
+    rvc.addEventListener('touchend',e=>{
+        if(!rSw.active)return;rSw.active=false;
+        if(reviewNavLocked)return;
+        const t=e.changedTouches[0];if(!t)return;
+        const dx=t.clientX-rSw.x,dy=t.clientY-rSw.y;
+        if(Math.abs(dx)>80 && Math.abs(dx)>Math.abs(dy)*1.5){reviewNav(dx<0?1:-1);}
+    },{passive:true});
+
     const wc=document.getElementById('wrongCarouselContent');
     let wSw={x:0,y:0,active:false};
     wc.addEventListener('touchstart',e=>{const t=e.changedTouches[0];if(!t)return;wSw.x=t.clientX;wSw.y=t.clientY;wSw.active=true;},{passive:true});
@@ -2489,6 +2542,12 @@ function bindEvents(){
             if(key==='ArrowRight'||key==='9'){e.preventDefault();wrongNav(1);return;}
             if(key==='ArrowLeft'||key==='0'){e.preventDefault();wrongNav(-1);return;}
             if(key==='Escape'||key==='7'){e.preventDefault();closeWrongCarousel();return;}
+            return;
+        }
+        if(document.getElementById('reviewFullscreen').style.display==='flex'){
+            if(key==='ArrowRight'||key==='9'){e.preventDefault();reviewNav(1);return;}
+            if(key==='ArrowLeft'||key==='0'){e.preventDefault();reviewNav(-1);return;}
+            if(key==='Escape'||key==='7'){e.preventDefault();closeReviewFullscreen();return;}
             return;
         }
         if(document.getElementById('flashOverlay').classList.contains('show')){
@@ -2531,6 +2590,7 @@ function bindEvents(){
             if(key==='5'){e.preventDefault();scrollMainDown();return;}
             if(key==='6'){e.preventDefault();scrollMainUp();return;}
             if(key==='8'){e.preventDefault();if(!modalOpen)openFullscreenReader();return;}
+            if(key==='b'||key==='B'){e.preventDefault();toggleBookmark(true);return;}
             if(key==='1'||key==='2'||key==='3'||key==='4'){
                 e.preventDefault();
                 if(!modalOpen&&!STATE.isAnswered&&!STATE.studyMode){
@@ -2564,7 +2624,6 @@ window.addEventListener('DOMContentLoaded',()=>{
     bindEvents();
     detectViewMode();
     switchScreen('welcomeScreen');
-    updateSylChip();
     loadKTData().then(refreshWelcomeStats);
     updateWrongChip();
     refreshWelcomeStats();
