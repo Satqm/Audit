@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
-<title>MCQ Helper - CA Final Simulator</title>
+<title>MCQ Astra - CA Final Simulator</title>
 <script src="https://cdn.tailwindcss.com"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 <style>
@@ -401,129 +401,132 @@ body.tv-view .rkg-keys b{font-size:.85rem;padding:4px 10px;border-radius:7px}
 @keyframes spin{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}
 
 /* ============================================================
-   SOCIAL FOOTER — refined, compact, single accent color
+   SOCIAL FOOTER — sleek, YouTube-first, icon-only
    ============================================================ */
 .social-footer{
     flex-shrink: 0;
-    margin: 14px 14px 20px;
-    padding: 16px 14px 14px;
-    background: #ffffff;
+    margin: 16px 14px 22px;
+    padding: 16px 16px 14px;
+    background: linear-gradient(180deg,#ffffff 0%,#f9fbff 100%);
     border: 1px solid rgba(226,232,240,.9);
     border-radius: 18px;
-    box-shadow: 0 1px 2px rgba(15,23,42,.02), 0 6px 20px -8px rgba(15,23,42,.06);
+    box-shadow: 0 1px 2px rgba(15,23,42,.02), 0 8px 24px -12px rgba(15,23,42,.08);
+    text-align: center;
     position: relative;
     overflow: hidden;
-    text-align: left;
 }
 .social-footer::before{
     content:'';position:absolute;top:0;left:0;right:0;height:3px;
-    background: linear-gradient(90deg, #6366f1, #8b5cf6);
-    opacity: .75;
+    background: linear-gradient(90deg, #ef4444, #dc2626, #b91c1c);
+    opacity: .9;
 }
 
-/* Brand header */
-.sf-brand{
-    display:flex;align-items:center;gap:10px;
-    padding: 2px 2px 12px;
-    text-decoration:none;color:inherit;
-    border-bottom: 1px solid rgba(226,232,240,.75);
-    margin-bottom: 12px;
-    transition: opacity .2s;
+/* --- YouTube CTA (main focal point) --- */
+.sf-yt-cta{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 16px;
+    margin-bottom: 14px;
+    background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 14px;
+    box-shadow: 0 8px 22px -8px rgba(239,68,68,.6);
+    transition: transform .18s ease, box-shadow .18s ease;
+    position: relative;
+    overflow: hidden;
 }
-.sf-brand:active{opacity:.7}
-.sf-avatar{
-    width:36px;height:36px;border-radius:11px;flex-shrink:0;
-    background: linear-gradient(135deg, #6366f1, #8b5cf6);
-    color:#fff;display:flex;align-items:center;justify-content:center;
-    font-size:.9rem;
-    box-shadow: 0 6px 14px -6px rgba(99,102,241,.55);
+.sf-yt-cta::after{
+    content:'';
+    position:absolute;top:0;left:-100%;width:100%;height:100%;
+    background: linear-gradient(90deg,transparent,rgba(255,255,255,.22),transparent);
+    transition: left .6s ease;
 }
-.sf-brand-text{
-    flex:1;min-width:0;text-align:left;
-    display:flex;flex-direction:column;line-height:1.2;
+.sf-yt-cta:hover::after{left:100%}
+.sf-yt-cta:hover{transform: translateY(-2px); box-shadow: 0 14px 28px -10px rgba(239,68,68,.7)}
+.sf-yt-cta:active{transform: scale(.985)}
+.sf-yt-cta > .fa-youtube{
+    font-size: 1.9rem;
+    flex-shrink: 0;
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,.18));
 }
-.sf-name{
-    font-family:'Poppins',sans-serif;font-weight:700;font-size:.82rem;
-    color:#0f172a;letter-spacing:-.2px;
-}
-.sf-tag{
-    font-size:.62rem;font-weight:600;color:#8b5cf6;
-    margin-top:2px;letter-spacing:.1px;
-}
-.sf-cta{
-    display:inline-flex;align-items:center;gap:4px;flex-shrink:0;
-    font-size:.58rem;font-weight:700;
-    color:#6366f1;
-    background: #eef2ff;
-    border: 1px solid #c7d2fe;
-    padding: 5px 9px;border-radius: 14px;
-    white-space:nowrap;letter-spacing:.2px;
-}
-
-/* 2x2 compact grid */
-.sf-links{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 7px;
-}
-.sf-link{
-    display:flex;align-items:center;gap:8px;
-    padding: 8px 9px;
-    border-radius: 10px;
-    background: #f8fafc;
-    border: 1px solid rgba(226,232,240,.9);
-    text-decoration:none;
-    transition: all .18s ease;
+.sf-yt-text{
+    flex: 1;
+    text-align: left;
+    line-height: 1.15;
+    display: flex;
+    flex-direction: column;
     min-width: 0;
 }
-.sf-link:hover{
-    background: #fff;
-    border-color: #c7d2fe;
-    transform: translateY(-1px);
-    box-shadow: 0 6px 14px -8px rgba(99,102,241,.35);
+.sf-yt-text b{
+    font-size: .68rem;
+    font-weight: 700;
+    letter-spacing: .4px;
+    text-transform: uppercase;
+    opacity: .92;
 }
-.sf-link:active{transform:scale(.98)}
-.sf-ic{
-    width:26px;height:26px;border-radius:8px;flex-shrink:0;
-    display:flex;align-items:center;justify-content:center;
-    font-size:.72rem;
-    background: #eef2ff;
-    color: #6366f1;
-    border: 1px solid #e0e7ff;
-    transition: all .18s ease;
+.sf-yt-text span{
+    font-family: 'Poppins', sans-serif;
+    font-size: .95rem;
+    font-weight: 800;
+    letter-spacing: -.2px;
+    margin-top: 2px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
-.sf-link:hover .sf-ic{
-    background: #6366f1;
-    color: #fff;
-    border-color: #6366f1;
+.sf-yt-arrow{
+    font-size: .78rem;
+    flex-shrink: 0;
+    opacity: .9;
 }
-.sf-lt{
-    flex:1;min-width:0;text-align:left;
-    display:flex;flex-direction:column;line-height:1.2;
-}
-.sf-lt b{font-size:.66rem;font-weight:700;color:#1e293b}
-.sf-lt small{
-    font-size:.55rem;color:#94a3b8;font-weight:500;
-    overflow:hidden;text-overflow:ellipsis;white-space:nowrap;
-    margin-top:2px;letter-spacing:.1px;
-}
-.sf-ar{display:none}
 
-/* Copyright */
+/* --- Icon-only row for other platforms --- */
+.sf-icons-row{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 4px 0 12px;
+}
+.sf-icons-row a{
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f1f5f9;
+    color: #64748b;
+    font-size: 1rem;
+    text-decoration: none;
+    border: 1px solid rgba(226,232,240,.95);
+    transition: all .18s ease;
+    position: relative;
+}
+.sf-icons-row a:hover{
+    transform: translateY(-2px);
+    box-shadow: 0 8px 18px -8px rgba(15,23,42,.35);
+}
+.sf-icons-row a[title="LinkedIn"]:hover{background:#0a66c2;color:#fff;border-color:#0a66c2}
+.sf-icons-row a[title="Instagram"]:hover{background:linear-gradient(135deg,#f58529,#dd2a7b 55%,#8134af);color:#fff;border-color:transparent}
+.sf-icons-row a[title="Portfolio"]:hover{background:linear-gradient(135deg,#7c3aed,#4f46e5);color:#fff;border-color:transparent}
+
+/* --- Copyright --- */
 .social-footer .copyright{
-    margin-top:12px;
     padding-top: 10px;
     border-top: 1px solid rgba(226,232,240,.75);
-    font-size:.58rem;
+    font-size: .6rem;
     color:#94a3b8;
-    font-weight:500;
-    letter-spacing:.2px;
-    line-height:1.7;
-    text-align: center;
+    font-weight: 600;
+    letter-spacing: .25px;
+    line-height: 1.7;
 }
 .social-footer .copyright .heart{
-    color:#ef4444;display:inline-block;
-    animation:heartbeat 2s ease-in-out infinite;
+    color:#ef4444;
+    display:inline-block;
+    animation: heartbeat 2s ease-in-out infinite;
 }
 @keyframes heartbeat{0%,100%{transform:scale(1)}50%{transform:scale(1.15)}}
 .social-footer .copyright .sep{margin:0 6px;opacity:.5}
@@ -531,12 +534,12 @@ body.tv-view .rkg-keys b{font-size:.85rem;padding:4px 10px;border-radius:7px}
     color:#6366f1;
     text-decoration:none;
     font-weight:700;
-    transition:color .2s ease;
     border-bottom:1px dotted transparent;
+    transition: color .2s ease;
 }
-.social-footer .copyright a:hover,.social-footer .copyright a:active{
+.social-footer .copyright a:hover{
     color:#4f46e5;
-    border-bottom-color:rgba(99,102,241,.4);
+    border-bottom-color: rgba(99,102,241,.4);
 }
 
 /* Source pill */
@@ -915,6 +918,130 @@ body.tv-view .pdf-table th,body.tv-view .pdf-table td{padding:12px 16px}
     border-radius:50%;
     border:1.5px solid #fff;
 }
+
+/* ============================================================
+   AFM THEORY MASTER SHEET — rich flashcard deck
+   ============================================================ */
+.afm-theory-overlay{
+    background: radial-gradient(circle at 50% 0%, #1e1b4b, #0b1120 70%);
+}
+.afm-theory-overlay .flash-card{height:min(72vh,600px)}
+.afm-front-badge{
+    background: linear-gradient(135deg,#6366f1,#4338ca);
+    color:#fff;font-weight:800;
+}
+.afm-q-text{
+    font-family:'Poppins',sans-serif;
+    font-size:1.15rem;font-weight:700;line-height:1.55;
+    color:#0f172a;flex:1;overflow-y:auto;padding-right:4px;
+}
+.afm-memory-code{
+    margin-top:14px;
+    background:linear-gradient(135deg,#eef2ff,#e0e7ff);
+    border:1.5px dashed #818cf8;
+    border-radius:12px;padding:10px 12px;
+    font-size:.78rem;font-weight:800;
+    color:#4338ca;letter-spacing:.5px;
+    text-align:center;
+}
+.afm-memory-code::before{
+    content:'🧠 MEMORY CODE';
+    display:block;font-size:.6rem;letter-spacing:1px;
+    color:#6366f1;margin-bottom:4px;
+}
+.afm-trigger{
+    margin-top:10px;font-size:.66rem;font-weight:700;
+    text-transform:uppercase;letter-spacing:.5px;
+    color:#94a3b8;
+}
+.afm-back{
+    background:linear-gradient(160deg,#1e1b4b,#312e81 60%,#4338ca);
+    color:#fff;transform:rotateY(180deg);
+    overflow-y:auto;
+}
+.afm-sec{margin-bottom:12px}
+.afm-sec-title{
+    font-size:.62rem;font-weight:900;
+    letter-spacing:1px;text-transform:uppercase;
+    color:#a5b4fc;margin-bottom:5px;
+    display:flex;align-items:center;gap:5px;
+}
+.afm-sec-body{
+    font-size:.8rem;line-height:1.6;
+    color:#e0e7ff;font-weight:500;
+}
+.afm-kw-list{display:flex;flex-wrap:wrap;gap:5px;margin-top:4px}
+.afm-kw{
+    font-size:.68rem;font-weight:700;
+    padding:4px 9px;border-radius:20px;
+    background:rgba(165,180,252,.18);
+    border:1px solid rgba(165,180,252,.3);
+    color:#c7d2fe;
+}
+.afm-skel{
+    background:rgba(255,255,255,.06);
+    border-left:3px solid #fbbf24;
+    border-radius:6px;
+    padding:8px 10px;font-size:.76rem;
+    line-height:1.55;color:#fef3c7;
+    margin-top:4px;
+}
+.afm-formula{
+    background:linear-gradient(135deg,#fef3c7,#fde68a);
+    color:#78350f;font-family:'Courier New',monospace;
+    font-weight:800;font-size:.82rem;
+    padding:8px 12px;border-radius:8px;
+    margin-top:4px;text-align:center;
+    letter-spacing:.3px;
+}
+.afm-swipe-hint{
+    font-size:.62rem;color:#a5b4fc;
+    text-align:center;margin-top:auto;padding-top:12px;
+    font-weight:600;letter-spacing:.3px;
+}
+.afm-legend-toggle{
+    display:flex;align-items:center;gap:6px;
+    font-size:.68rem;font-weight:700;
+    color:#a5b4fc;
+}
+
+/* Mode-card colour for AFM Theory */
+.mode-card.afmtheory{border-color:#a5b4fc;background:#eef2ff}
+.afmtheory .mode-icon{background:linear-gradient(135deg,#6366f1,#4338ca)}
+
+/* Subject selector sheet (Key Takeaways picker) */
+.subject-picker-grid{
+    display:grid;grid-template-columns:1fr 1fr;gap:10px;
+    max-width:600px;margin:0 auto;
+}
+.subject-pick-btn{
+    display:flex;flex-direction:column;align-items:center;justify-content:center;
+    gap:8px;padding:16px 12px;
+    border-radius:14px;border:1.5px solid var(--border);
+    background:#fff;cursor:pointer;
+    transition:all .18s ease;
+    font-family:inherit;
+    text-align:center;
+}
+.subject-pick-btn:hover{
+    transform:translateY(-2px);
+    box-shadow:0 8px 20px -10px rgba(15,23,42,.35);
+}
+.subject-pick-btn:active{transform:scale(.97)}
+.subject-pick-btn i{
+    font-size:1.5rem;
+    width:44px;height:44px;border-radius:12px;
+    display:flex;align-items:center;justify-content:center;
+    color:#fff;
+}
+.subject-pick-btn b{
+    font-size:.78rem;font-weight:700;color:#1e293b;
+}
+.subject-pick-btn small{
+    font-size:.62rem;color:#94a3b8;font-weight:600;
+}
+.subject-pick-btn.audit i{background:linear-gradient(135deg,#10b981,#059669)}
+.subject-pick-btn.afm i{background:linear-gradient(135deg,#6366f1,#4338ca)}
 </style>
 </head>
 <body>
@@ -955,7 +1082,7 @@ body.tv-view .pdf-table th,body.tv-view .pdf-table td{padding:12px 16px}
 <div id="firstTimeGuide" class="guide-overlay">
     <div class="guide-card">
         <div class="guide-icon"><i class="fa-solid fa-graduation-cap"></i></div>
-        <h2>Welcome to MCQ Helper!</h2>
+        <h2>Welcome to MCQ Astra!</h2>
         <p class="guide-sub">Your all-in-one CA Final preparation companion</p>
         <div class="guide-steps">
             <div class="guide-step">
@@ -1004,7 +1131,7 @@ body.tv-view .pdf-table th,body.tv-view .pdf-table td{padding:12px 16px}
     <div id="welcomeScreen" class="screen active">
         <div class="welcome-hero">
             <div class="brand-icon"><i class="fa-solid fa-graduation-cap"></i></div>
-            <h1>MCQ Helper</h1>
+            <h1>MCQ Astra</h1>
             <p>CA Final · Pro Simulator</p>
         </div>
         <div class="welcome-stats">
@@ -1058,6 +1185,10 @@ body.tv-view .pdf-table th,body.tv-view .pdf-table td{padding:12px 16px}
                 <div class="mode-icon"><i class="fa-solid fa-file-invoice-dollar"></i></div>
                 <div class="mode-text"><h3>GST Case Scenarios</h3><p>Practical GST case studies</p></div>
             </div>
+            <div class="mode-card afmtheory" onclick="openAFMTheory()">
+                <div class="mode-icon"><i class="fa-solid fa-brain"></i></div>
+                <div class="mode-text"><h3>AFM Theory Master Sheet</h3><p>150 theory Q-cards · Memory codes · Answer skeletons</p></div>
+            </div>
         </div>
 
         <div class="section-title">Tools</div>
@@ -1087,49 +1218,42 @@ body.tv-view .pdf-table th,body.tv-view .pdf-table td{padding:12px 16px}
             </a>
         </div>
 
-    <!-- ============================================================
-     SOCIAL FOOTER — clean, compact, single accent color
-     ============================================================ -->
-<div class="social-footer">
+        <!-- ============================================================
+             SOCIAL FOOTER — sleek, YouTube-first, icon-only
+             ============================================================ -->
+        <div class="social-footer">
 
-    <!-- Brand header (tap → YouTube channel) -->
-    <a class="sf-brand" href="https://youtube.com/@observe_with_satyam?si=xKMKJHWzcjVFeDFj" target="_blank" rel="noopener" aria-label="Observe with Satyam on YouTube">
-        <span class="sf-avatar"><i class="fa-solid fa-graduation-cap"></i></span>
-        <span class="sf-brand-text">
-            <span class="sf-name">Satyam Kumar</span>
-            <span class="sf-tag">Observe with Satyam</span>
-        </span>
-        <span class="sf-cta"><i class="fa-brands fa-youtube"></i> Follow</span>
-    </a>
+            <!-- Primary CTA: YouTube Subscribe -->
+            <a class="sf-yt-cta" href="https://youtube.com/@observe_with_satyam?si=xKMKJHWzcjVFeDFj" target="_blank" rel="noopener" aria-label="Subscribe to Observe with Satyam on YouTube">
+                <i class="fa-brands fa-youtube"></i>
+                <span class="sf-yt-text">
+                    <b>Subscribe to</b>
+                    <span>Observe with Satyam</span>
+                </span>
+                <i class="fa-solid fa-arrow-right sf-yt-arrow"></i>
+            </a>
 
-    <!-- 2x2 compact grid of social links -->
-    <div class="sf-links">
-        <a class="sf-link" href="https://youtube.com/@observe_with_satyam?si=xKMKJHWzcjVFeDFj" target="_blank" rel="noopener">
-            <span class="sf-ic"><i class="fa-brands fa-youtube"></i></span>
-            <span class="sf-lt"><b>YouTube</b><small>@observe_with_satyam</small></span>
-        </a>
-        <a class="sf-link" href="https://linkedin.com/in/satyam-kumar5286o" target="_blank" rel="noopener">
-            <span class="sf-ic"><i class="fa-brands fa-linkedin-in"></i></span>
-            <span class="sf-lt"><b>LinkedIn</b><small>satyam-kumar5286o</small></span>
-        </a>
-        <a class="sf-link" href="https://instagram.com/observe_with_satyam?igsh=MWdxYnp1Y283b2ZyeQ==" target="_blank" rel="noopener">
-            <span class="sf-ic"><i class="fa-brands fa-instagram"></i></span>
-            <span class="sf-lt"><b>Instagram</b><small>@observe_with_satyam</small></span>
-        </a>
-        <a class="sf-link" href="https://satqm.github.io/Portfolio-" target="_blank" rel="noopener">
-            <span class="sf-ic"><i class="fa-solid fa-globe"></i></span>
-            <span class="sf-lt"><b>Portfolio</b><small>satqm.github.io</small></span>
-        </a>
-    </div>
+            <!-- Icon-only row -->
+            <div class="sf-icons-row">
+                <a href="https://linkedin.com/in/satyam-kumar5286o" target="_blank" rel="noopener" title="LinkedIn" aria-label="LinkedIn">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+                <a href="https://instagram.com/observe_with_satyam?igsh=MWdxYnp1Y283b2ZyeQ==" target="_blank" rel="noopener" title="Instagram" aria-label="Instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="https://satqm.github.io/Portfolio-" target="_blank" rel="noopener" title="Portfolio" aria-label="Portfolio">
+                    <i class="fa-solid fa-globe"></i>
+                </a>
+            </div>
 
-    <!-- Copyright -->
-    <div class="copyright">
-        Built with <span class="heart">❤️</span> by
-        <a href="https://youtube.com/@observe_with_satyam" target="_blank" rel="noopener">Observe with Satyam</a>
-        <span class="sep">·</span>
-        © 2026 MCQ Helper
-    </div>
-</div>
+            <!-- Copyright -->
+            <div class="copyright">
+                Built with <span class="heart">❤️</span> by
+                <a href="https://youtube.com/@observe_with_satyam" target="_blank" rel="noopener">Observe with Satyam</a>
+                <span class="sep">·</span>
+                © 2026 MCQ Astra
+            </div>
+        </div>
 </div> 
 <!-- SYLLABUS -->
     <div id="syllabusScreen" class="screen" style="background:var(--bg)">
@@ -1197,7 +1321,7 @@ body.tv-view .pdf-table th,body.tv-view .pdf-table td{padding:12px 16px}
             <div class="header-left">
                 <button class="home-btn" onclick="goHome()"><i class="fa-solid fa-house"></i></button>
                 <div class="header-title">
-                    <h2>MCQ HELPER <span class="study-badge-inline" id="studyBadgeInline">📖 STUDY</span></h2>
+                    <h2>MCQ ASTRA <span class="study-badge-inline" id="studyBadgeInline">📖 STUDY</span></h2>
                     <p id="currentModeLabel">Mode: Easy</p>
                 </div>
             </div>
@@ -1382,6 +1506,50 @@ body.tv-view .pdf-table th,body.tv-view .pdf-table td{padding:12px 16px}
 <div id="ktPaletteSheet" class="bottom-sheet" style="height:70vh;z-index:450">
     <div class="sheet-header"><h3>📋 Jump to Takeaway</h3><button class="close-btn" onclick="closeSheet('ktPaletteSheet')"><i class="fa-solid fa-xmark"></i></button></div>
     <div id="ktPaletteGrid" class="kt-palette-grid" style="max-width:800px;margin:0 auto"></div>
+</div>
+
+<!-- ============================================================
+     AFM THEORY MASTER SHEET OVERLAY
+     ============================================================ -->
+<div id="afmTheoryOverlay" class="flash-overlay afm-theory-overlay">
+    <div class="flash-header">
+        <button class="reader-close-btn" onclick="closeAFMTheory()"><i class="fa-solid fa-xmark"></i></button>
+        <div class="flash-header-info">
+            <h3 id="afmTheoryTitle">AFM Theory Master Sheet</h3>
+            <p id="afmTheoryProgress">0 / 0</p>
+        </div>
+        <button class="icon-btn" id="afmShuffleBtn" onclick="afmShuffle()" title="Shuffle deck"><i class="fa-solid fa-shuffle"></i></button>
+        <button class="icon-btn" onclick="afmResetProgress()" title="Reset progress"><i class="fa-solid fa-rotate-left"></i></button>
+    </div>
+    <div class="flash-progress-track"><div id="afmTheoryProgressFill"></div></div>
+    <div class="flash-stage" id="afmTheoryStage"></div>
+    <div class="flash-actions" id="afmTheoryActions">
+        <button class="flash-btn no" onclick="afmSwipe(false)"><i class="fa-solid fa-xmark"></i><span>Not Yet</span></button>
+        <button class="flash-btn flip" onclick="afmFlip()"><i class="fa-solid fa-rotate"></i><span>Reveal</span></button>
+        <button class="flash-btn yes" onclick="afmSwipe(true)"><i class="fa-solid fa-check"></i><span>Mastered</span></button>
+    </div>
+</div>
+
+<!-- ============================================================
+     SUBJECT PICKER SHEET — for Key Takeaways
+     ============================================================ -->
+<div id="subjectPickerSheet" class="bottom-sheet" style="height:auto;max-height:70vh">
+    <div class="sheet-header">
+        <h3>💡 Choose Subject — Key Takeaways</h3>
+        <button class="close-btn" onclick="closeSheet('subjectPickerSheet')"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <div class="subject-picker-grid">
+        <button class="subject-pick-btn audit" onclick="closeSheet('subjectPickerSheet');openAuditKT()">
+            <i class="fa-solid fa-shield-halved"></i>
+            <b>Audit</b>
+            <small>ICAI SA-based takeaways</small>
+        </button>
+        <button class="subject-pick-btn afm" onclick="closeSheet('subjectPickerSheet');openAFMTheory()">
+            <i class="fa-solid fa-brain"></i>
+            <b>AFM Theory</b>
+            <small>Memory codes + skeletons</small>
+        </button>
+    </div>
 </div>
 
 <script>
@@ -2318,14 +2486,220 @@ window.openKTDeckForChapter=function(chNum){
         openKTDeck(deck,title,'Key Takeaways');
     });
 };
-window.openOverallKT=function(){
+window.openOverallKT = function(){
+    openSheet('subjectPickerSheet');
+};
+
+/* Original Audit KT deck opener (called from picker) */
+window.openAuditKT = function(){
     showLoader('Loading takeaways...');
     loadSyllabusData().then(()=>{
-        const deck=buildKTDeckAll();
-        if(!deck.length){showCustomAlert('No takeaways','No Key Takeaways available yet.');hideLoader();return;}
-        openKTDeck(deck,'📚 All Key Takeaways',deck.length+' across all chapters');
+        const deck = buildKTDeckAll();
+        if(!deck.length){
+            showCustomAlert('No takeaways','No Key Takeaways available yet.');
+            hideLoader(); return;
+        }
+        openKTDeck(deck,'📚 Audit — All Key Takeaways', deck.length+' across all chapters');
     }).finally(()=>hideLoader());
 };
+
+/* ============================================================
+   AFM THEORY MASTER SHEET — rich flashcard deck
+   ============================================================ */
+const AFM_THEORY_KEY = 'auditPro_afmTheoryProgress';
+const AFM_STATE = {
+    deck: [],
+    idx: 0,
+    flipped: false,
+    loading: false,
+    progress: {}
+};
+try {
+    AFM_STATE.progress = JSON.parse(localStorage.getItem(AFM_THEORY_KEY) || '{}') || {};
+} catch(e) { AFM_STATE.progress = {}; }
+
+function saveAFMProgress() {
+    try { localStorage.setItem(AFM_THEORY_KEY, JSON.stringify(AFM_STATE.progress)); } catch(e) {}
+}
+
+async function loadAFMTheory() {
+    if (AFM_STATE.deck.length) return AFM_STATE.deck;
+    if (AFM_STATE.loading) return null;
+    AFM_STATE.loading = true;
+    try {
+        const res = await fetch('afmtheory.json', {cache:'no-store'});
+        if (!res.ok) throw new Error('Missing afmtheory.json');
+        const data = await res.json();
+        const deck = [];
+        (data.chapters || []).forEach(ch => {
+            const chNum = ch.chapter;
+            const chTitle = ch.title || ('Chapter ' + chNum);
+            (ch.questions || []).forEach(q => {
+                deck.push({
+                    id: q.id,
+                    question: q.question || '',
+                    definition: q.definition || '',
+                    keywords: Array.isArray(q.keywords) ? q.keywords : [],
+                    memory_code: q.memory_code || '',
+                    answer_skeleton: q.answer_skeleton || '',
+                    exam_trigger: q.exam_trigger || '',
+                    formula: q.formula || '',
+                    definitions: q.definitions || null,
+                    formulas: Array.isArray(q.formulas) ? q.formulas : null,
+                    chNum: chNum,
+                    chTitle: chTitle,
+                    memoryMap: ch.memory_map || ''
+                });
+            });
+        });
+        AFM_STATE.deck = deck;
+        return deck;
+    } catch(e) {
+        showCustomAlert('Error', 'Could not load afmtheory.json. Ensure the file exists in the project root.');
+        return null;
+    } finally {
+        AFM_STATE.loading = false;
+    }
+}
+
+window.openAFMTheory = async function() {
+    if (!AFM_STATE.deck.length) {
+        showLoader('Loading AFM Theory...');
+        const ok = await loadAFMTheory();
+        hideLoader();
+        if (!ok || !ok.length) return;
+    }
+    AFM_STATE.idx = 0;
+    AFM_STATE.flipped = false;
+    document.getElementById('afmTheoryActions').style.display = 'flex';
+    document.getElementById('afmTheoryOverlay').classList.add('show');
+    renderAFMTheory();
+};
+
+window.closeAFMTheory = function() {
+    document.getElementById('afmTheoryOverlay').classList.remove('show');
+    saveAFMProgress();
+};
+
+function renderAFMTheory() {
+    const stage = document.getElementById('afmTheoryStage');
+    const total = AFM_STATE.deck.length;
+    if (!stage || !total) return;
+
+    const mastered = AFM_STATE.deck.filter(d => AFM_STATE.progress[d.id]).length;
+    document.getElementById('afmTheoryProgress').textContent =
+        (AFM_STATE.idx + 1) + ' / ' + total + '  ·  ' + mastered + ' mastered';
+    document.getElementById('afmTheoryProgressFill').style.width =
+        ((AFM_STATE.idx + 1) / total * 100) + '%';
+
+    stage.innerHTML = '';
+    const d = AFM_STATE.deck[AFM_STATE.idx];
+    if (!d) return;
+
+    const kwHtml = d.keywords.length
+        ? d.keywords.map(k => '<span class="afm-kw">' + esc(k) + '</span>').join('')
+        : '<span class="afm-kw" style="opacity:.5">No keywords</span>';
+
+    let formulaBlock = '';
+    if (d.formula) {
+        formulaBlock = '<div class="afm-sec"><div class="afm-sec-title"><i class="fa-solid fa-square-root-variable"></i> Formula</div><div class="afm-formula">' + esc(d.formula) + '</div></div>';
+    } else if (d.formulas && d.formulas.length) {
+        formulaBlock = '<div class="afm-sec"><div class="afm-sec-title"><i class="fa-solid fa-square-root-variable"></i> Formulas</div>' +
+            d.formulas.map(f => '<div class="afm-formula">' + esc(f) + '</div>').join('') + '</div>';
+    }
+
+    const card = document.createElement('div');
+    card.className = 'flash-card' + (AFM_STATE.flipped ? ' flipped' : '');
+    card.dataset.top = '1';
+    card.innerHTML =
+        '<div class="flash-card-inner">' +
+            '<div class="flash-face flash-front">' +
+                '<div class="flash-badge afm-front-badge">Ch ' + d.chNum + ' · ' + esc(d.chTitle) + '</div>' +
+                '<div class="afm-q-text">' + esc(d.question) + '</div>' +
+                (d.memory_code ? '<div class="afm-memory-code">' + esc(d.memory_code) + '</div>' : '') +
+                (d.exam_trigger ? '<div class="afm-trigger">🎯 ' + esc(d.exam_trigger) + '</div>' : '') +
+            '</div>' +
+            '<div class="flash-face afm-back">' +
+                '<div class="afm-sec"><div class="afm-sec-title"><i class="fa-solid fa-book"></i> Definition</div><div class="afm-sec-body">' + esc(d.definition) + '</div></div>' +
+                '<div class="afm-sec"><div class="afm-sec-title"><i class="fa-solid fa-key"></i> Keywords</div><div class="afm-kw-list">' + kwHtml + '</div></div>' +
+                (d.answer_skeleton ? '<div class="afm-sec"><div class="afm-sec-title"><i class="fa-solid fa-pen-fancy"></i> Answer Skeleton</div><div class="afm-skel">' + esc(d.answer_skeleton) + '</div></div>' : '') +
+                formulaBlock +
+                '<div class="afm-swipe-hint">← Not Yet · Tap to Reveal · Mastered →</div>' +
+            '</div>' +
+        '</div>';
+
+    card.addEventListener('click', e => {
+        if (e.target.closest('.flash-btn')) return;
+        afmFlip();
+    });
+    stage.appendChild(card);
+}
+
+window.afmFlip = function() {
+    AFM_STATE.flipped = !AFM_STATE.flipped;
+    const card = document.querySelector('#afmTheoryStage .flash-card');
+    if (card) card.classList.toggle('flipped', AFM_STATE.flipped);
+    beep(AFM_STATE.flipped ? 620 : 440, 'sine', .05);
+};
+
+window.afmSwipe = function(mastered) {
+    const d = AFM_STATE.deck[AFM_STATE.idx];
+    if (!d) return;
+    if (mastered) { AFM_STATE.progress[d.id] = true; beep(720, 'triangle', .08); }
+    else { delete AFM_STATE.progress[d.id]; beep(320, 'sine', .06); }
+    saveAFMProgress();
+    AFM_STATE.flipped = false;
+    AFM_STATE.idx++;
+    if (AFM_STATE.idx >= AFM_STATE.deck.length) { showAFMComplete(); return; }
+    renderAFMTheory();
+};
+
+function showAFMComplete() {
+    const total = AFM_STATE.deck.length;
+    const mastered = AFM_STATE.deck.filter(d => AFM_STATE.progress[d.id]).length;
+    const pct = total ? Math.round(mastered / total * 100) : 0;
+    const stage = document.getElementById('afmTheoryStage');
+    document.getElementById('afmTheoryActions').style.display = 'none';
+    document.getElementById('afmTheoryProgressFill').style.width = '100%';
+    document.getElementById('afmTheoryProgress').textContent = mastered + ' / ' + total + ' mastered';
+    stage.innerHTML =
+        '<div class="flash-empty">' +
+            '<div style="font-size:3.2rem;margin-bottom:12px">' + (pct === 100 ? '🎉' : '👍') + '</div>' +
+            '<h3>AFM Theory Deck Complete</h3>' +
+            '<p>' + mastered + ' of ' + total + ' cards marked as mastered (' + pct + '%)</p>' +
+            '<button class="flash-btn yes" style="max-width:230px;margin:0 auto;flex-direction:row;justify-content:center;gap:9px" onclick="AFM_STATE.idx=0;AFM_STATE.flipped=false;document.getElementById(\'afmTheoryActions\').style.display=\'flex\';renderAFMTheory()">' +
+                '<i class="fa-solid fa-rotate-right"></i><span>Review Again</span>' +
+            '</button>' +
+            '<button class="flash-btn no" style="max-width:230px;margin:10px auto 0;flex-direction:row;justify-content:center;gap:9px" onclick="closeAFMTheory()">' +
+                '<i class="fa-solid fa-check"></i><span>Done</span>' +
+            '</button>' +
+        '</div>';
+}
+
+window.afmShuffle = function() {
+    const deck = AFM_STATE.deck;
+    for (let i = deck.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [deck[i], deck[j]] = [deck[j], deck[i]];
+    }
+    AFM_STATE.idx = 0;
+    AFM_STATE.flipped = false;
+    beep(560, 'triangle', .06);
+    renderAFMTheory();
+};
+
+window.afmResetProgress = function() {
+    showCustomConfirm('Reset AFM Progress','Clear all mastered marks for AFM Theory?', r => {
+        if (!r) return;
+        AFM_STATE.progress = {};
+        saveAFMProgress();
+        AFM_STATE.idx = 0;
+        AFM_STATE.flipped = false;
+        beep(280, 'sawtooth', .1);
+        renderAFMTheory();
+    });
+};
+
 function openKTDeck(deck,title,sub){
     KT_DECK.deck=deck;KT_DECK.idx=0;KT_DECK.title=title;KT_DECK.sub=sub;
     KT_DECK.chapter=deck[0]?deck[0].chapterNum:null;
@@ -2607,6 +2981,13 @@ function bindEvents(){
         const tag=(document.activeElement&&document.activeElement.tagName)||'';
         if(tag==='TEXTAREA'||tag==='INPUT')return;
 
+        if (document.getElementById('afmTheoryOverlay').classList.contains('show')) {
+            if (key === 'ArrowRight') { e.preventDefault(); afmSwipe(true); }
+            else if (key === 'ArrowLeft') { e.preventDefault(); afmSwipe(false); }
+            else if (key === ' ' || key === 'Enter') { e.preventDefault(); afmFlip(); }
+            else if (key === 'Escape' || key === '7') { e.preventDefault(); closeAFMTheory(); }
+            return;
+        }
         if(document.getElementById('flashOverlay').classList.contains('show')){
             if(key==='ArrowRight'){e.preventDefault();flashSwipe(true);}
             else if(key==='ArrowLeft'){e.preventDefault();flashSwipe(false);}
