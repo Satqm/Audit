@@ -1,0 +1,1581 @@
+{
+  "title": "CA Final Advanced Financial Management (AFM) – Complete Theory Quick Recall Master Sheet",
+  "edition_focus": "2025–2026",
+  "purpose": "20-mark theory target: convert probable descriptive concepts into quick-recall definitions, keywords, memory codes and answer skeletons.",
+  "important_note": "All questions from the user's existing keyword sheet are retained and mapped to the corresponding current ICAI 15-chapter structure. Additional concept questions are added from the ICAI AFM syllabus, Saransh Last Mile Referencer and 2025 study material so that the sheet is comprehensive without becoming a textbook.",
+  "answer_method": {
+    "ideal_3_to_5_mark_answer": "Definition/meaning → 4–6 keywords → one-line explanation of each keyword → conclusion.",
+    "ideal_6_to_8_mark_answer": "Meaning → classification/features → 5–7 explained points → formula/diagram wherever relevant → conclusion.",
+    "recall_rule": "Do not memorise paragraphs. Memorise the MEMORY CODE first, then expand every letter into one sentence.",
+    "exam_trigger": "If the question asks 'explain', 'discuss', 'state features', 'enumerate', 'differentiate' or 'what are', use the definition + keywords + explanation format."
+  },
+  "chapter_mapping_note": {
+    "user_sheet_chapters": "The existing sheet uses a different chapter numbering sequence. Its topics have been preserved and mapped to the current ICAI 15-chapter structure.",
+    "official_current_structure": "1 Financial Policy and Corporate Strategy; 2 Risk Management; 3 Advanced Capital Budgeting Decisions; 4 Security Analysis; 5 Security Valuation; 6 Portfolio Management; 7 Securitization; 8 Mutual Funds; 9 Derivatives Analysis and Valuation; 10 Foreign Exchange Exposure and Risk Management; 11 International Financial Management; 12 Interest Rate Risk Management; 13 Business Valuation; 14 Mergers, Acquisitions and Corporate Restructuring; 15 Startup Finance.",
+    "source_basis": [
+      ":chatgpt-content-reference{index="0"}",
+      ":chatgpt-content-reference{index="1"}"
+    ]
+  },
+  "chapters": [
+    {
+      "chapter": 1,
+      "title": "Financial Policy and Corporate Strategy",
+      "memory_map": "CORPORATE → FINANCIAL PLANNING → FINANCIAL DECISIONS → CFO → SGR → EFR",
+      "questions": [
+        {
+          "id": "1.1",
+          "question": "Corporate Level Strategy and the three basic questions",
+          "definition": "Corporate-level strategy decides which businesses the organisation should be in and how the overall portfolio of businesses should be managed.",
+          "keywords": ["Selection of businesses", "Suitability", "Feasibility", "Acceptability"],
+          "memory_code": "SFA = Suitable + Feasible + Acceptable",
+          "answer_skeleton": "Explain corporate strategy → selection of businesses → test every strategic choice through Suitability, Feasibility and Acceptability.",
+          "exam_trigger": "Corporate level strategy / 3 basic questions"
+        },
+        {
+          "id": "1.2",
+          "question": "Financially Sustainable Organisation",
+          "definition": "A financially sustainable organisation is capable of continuing its activities over time through diversified income, sound systems, financial autonomy and clear values.",
+          "keywords": ["More than one income source", "More than one income-generation method", "Regular strategic/action/financial planning", "Adequate financial systems", "Good public image", "Value clarity", "Financial autonomy"],
+          "memory_code": "2I + PLAN + SYSTEM + IMAGE + VALUES + AUTONOMY",
+          "answer_skeleton": "Start with continuity → diversify income → plan regularly → maintain systems → build credibility → preserve value clarity → achieve financial autonomy.",
+          "exam_trigger": "Financially sustainable organisation"
+        },
+        {
+          "id": "1.3",
+          "question": "Outcomes of Financial Planning",
+          "definition": "Financial planning translates organisational objectives into financial decisions and measurable financial outcomes.",
+          "keywords": ["Financial Objectives", "Financial Decision Making", "Financial Measures"],
+          "memory_code": "ODM = Objectives → Decisions → Measures",
+          "answer_skeleton": "State the three outcomes and explain that planning links goals with decisions and measurable results.",
+          "exam_trigger": "Outcomes of financial planning"
+        },
+        {
+          "id": "1.4",
+          "question": "Strategy at different hierarchy levels",
+          "definition": "Strategy operates at corporate, business-unit and functional/departmental levels, with each level answering a different management question.",
+          "keywords": ["Corporate level", "Business unit level", "Functional/departmental level"],
+          "memory_code": "C-B-F",
+          "answer_skeleton": "Corporate = where to compete; Business = how to compete; Functional = how each function supports execution.",
+          "exam_trigger": "Hierarchy of strategy"
+        },
+        {
+          "id": "1.5",
+          "question": "Key Financial Strategy Decisions",
+          "definition": "Financial strategy determines how funds are raised, invested, distributed and managed across investments.",
+          "keywords": ["Financing", "Investment", "Dividend", "Portfolio"],
+          "memory_code": "F-I-D-P",
+          "answer_skeleton": "Explain each decision in one line: raise funds, deploy funds, distribute earnings and manage portfolio investments.",
+          "exam_trigger": "Key financial strategy decisions"
+        },
+        {
+          "id": "1.6",
+          "question": "Interface of Financial Policy and Strategic Management",
+          "definition": "Financial policy supports strategic management by ensuring that strategic choices have appropriate financing, investment and distribution decisions.",
+          "keywords": ["Sources of finance/capital structure", "Investment/fund allocation", "Dividend policy", "Interdependence"],
+          "memory_code": "F-I-D",
+          "answer_skeleton": "Strategy determines direction → finance provides resources → capital structure, investment allocation and dividend policy support execution.",
+          "exam_trigger": "Interface between financial policy and strategic management"
+        },
+        {
+          "id": "1.7",
+          "question": "Role of CFO in the post-pandemic environment",
+          "definition": "The modern CFO is not limited to accounting; the role extends into strategic decisions, risk, operations, restructuring and sustainable financing.",
+          "keywords": ["Strategic and operational decision-making", "Risk Management", "Supply Chain", "M&A/Corporate Restructuring", "ESG Financing"],
+          "memory_code": "R-S-M-E",
+          "answer_skeleton": "Begin with strategic CFO → explain risk, supply chain, M&A/restructuring and ESG financing responsibilities.",
+          "exam_trigger": "Modern role of CFO"
+        },
+        {
+          "id": "1.8",
+          "question": "Financial Goals versus Sustainable Growth",
+          "definition": "Sustainable growth means expanding sales and operations at a rate consistent with profitability, asset utilisation, financing capacity and financial policies.",
+          "keywords": ["Financial consequences of sales growth", "Operating policies", "Financial policies", "Stable growth strategy"],
+          "memory_code": "Sales Growth must FIT Finance",
+          "answer_skeleton": "Sales growth creates funding requirements → growth must remain consistent with operating and financial policies → aim for stable sustainable expansion.",
+          "exam_trigger": "Financial goals and sustainable growth"
+        },
+        {
+          "id": "1.9",
+          "question": "Sustainable Growth Rate (SGR) and assumptions",
+          "definition": "SGR represents the maximum sales growth that can be supported without raising additional external equity/borrowing beyond the assumed financing structure.",
+          "keywords": ["Maximum sales growth", "No additional borrowing", "Target capital structure", "Target dividend payout"],
+          "formula": "SGR = ROE × (1 − Dividend Payout Ratio)",
+          "memory_code": "ROE × Retention",
+          "answer_skeleton": "Define SGR → give formula → explain ROE and retention → state assumptions regarding capital structure, payout and financing.",
+          "exam_trigger": "SGR / assumptions of sustainable growth"
+        },
+        {
+          "id": "1.10",
+          "question": "External Funding Requirement (EFR) approaches",
+          "definition": "EFR estimates the additional external funds required to support projected growth after considering internally generated funds and spontaneous financing.",
+          "keywords": ["Analytical approach", "Formula-based approach"],
+          "memory_code": "A + F",
+          "answer_skeleton": "Define EFR → Analytical approach = project individual balance-sheet items → Formula approach = use relationship-based formula.",
+          "exam_trigger": "Approaches to EFR"
+        }
+      ],
+      "source_support": ":chatgpt-content-reference{index="2"}"
+    },
+    {
+      "chapter": 2,
+      "title": "Risk Management",
+      "memory_map": "RISK TYPES → VAR → COMPLIANCE/OPERATIONS → COUNTERPARTY → COUNTRY → IMPORTER",
+      "questions": [
+        {
+          "id": "2.1",
+          "question": "Identification of Financial Risk and Currency Risk",
+          "definition": "Financial risk arises from adverse financial-market or financing conditions; currency risk arises from adverse exchange-rate movements affecting foreign-currency positions.",
+          "keywords": ["Counterparty", "Political", "Interest-rate", "Currency", "Government action", "Inflation/interest rate", "Natural calamity"],
+          "memory_code": "C-P-I-C-G-I-N",
+          "answer_skeleton": "Identify each risk → explain the event causing it → state the possible financial consequence.",
+          "exam_trigger": "Identify financial/currency risks"
+        },
+        {
+          "id": "2.2",
+          "question": "Applications of Value at Risk (VaR)",
+          "definition": "VaR estimates the potential maximum loss of a portfolio over a specified time horizon at a specified confidence level under normal market conditions.",
+          "keywords": ["Maximum possible loss", "Performance benchmark", "Fix risk limits", "Trading strategy", "Asset-Liability Management"],
+          "memory_code": "LOSS → BENCHMARK → LIMIT → TRADE → ALM",
+          "answer_skeleton": "Define VaR → explain how it quantifies loss → list five managerial applications.",
+          "exam_trigger": "Applications of VaR"
+        },
+        {
+          "id": "2.3",
+          "question": "Compliance Risk and Operational Risk",
+          "definition": "Compliance risk is the risk of violating applicable rules and regulations; operational risk arises from failures in internal people, processes or day-to-day operations.",
+          "keywords": ["Rules/regulations", "Penalties", "Internal risk", "Day-to-day problems", "People", "Process"],
+          "memory_code": "Compliance = RULE; Operational = PEOPLE + PROCESS",
+          "answer_skeleton": "Define both → distinguish external regulatory consequences from internal operational failures.",
+          "exam_trigger": "Compliance and operational risk"
+        },
+        {
+          "id": "2.4",
+          "question": "Counterparty Risk Management",
+          "definition": "Counterparty risk management controls the possibility that the other party to a financial transaction fails to meet its contractual obligation.",
+          "keywords": ["Due diligence", "Avoid over-commitment", "Exposure limits", "Review limits", "Rapid action", "Performance guarantee"],
+          "memory_code": "D-L-R-A-G",
+          "answer_skeleton": "Check counterparty → limit exposure → monitor → act quickly → obtain protection where appropriate.",
+          "exam_trigger": "Counterparty risk management"
+        },
+        {
+          "id": "2.5",
+          "question": "Main Features of VaR",
+          "definition": "VaR is a statistical risk measure that expresses a potential worst-case loss as a monetary or percentage amount for a defined probability and horizon.",
+          "keywords": ["Worst-case loss", "Percentage/amount", "Statistical method", "Time horizon", "Probability", "Z-score"],
+          "memory_code": "LOSS + % + STAT + TIME + PROB + Z",
+          "answer_skeleton": "Define → specify amount/percentage → confidence/probability → horizon → statistical basis → Z-score.",
+          "exam_trigger": "Features of VaR"
+        },
+        {
+          "id": "2.6",
+          "question": "Stakeholder View of Financial Risk",
+          "definition": "Financial risk affects stakeholders differently because each stakeholder has a different exposure to the organisation's financial condition.",
+          "keywords": ["Shareholders/lenders", "Company", "Government"],
+          "memory_code": "S-L-C-G",
+          "answer_skeleton": "Shareholders/lenders → company → government; explain how risk affects return, solvency and public/revenue interests.",
+          "exam_trigger": "Stakeholder perspective of financial risk"
+        },
+        {
+          "id": "2.7",
+          "question": "Country Risk Assessment and Mitigation",
+          "definition": "Country risk is the possibility that political, economic or country-specific conditions adversely affect an international investment or transaction.",
+          "keywords": ["Political ranking", "Macro-economic conditions", "Local sourcing", "Joint ventures", "Local financing"],
+          "memory_code": "RANK → MACRO → LOCAL → JV → FINANCE",
+          "answer_skeleton": "Assess political and macro conditions → reduce dependence through local sourcing/JVs/local financing.",
+          "exam_trigger": "Country risk assessment/mitigation"
+        },
+        {
+          "id": "2.8",
+          "question": "Risks faced by an Importer-Manufacturer",
+          "definition": "An importer-manufacturer is exposed to multiple risks because it imports inputs, processes them domestically and sells the output, often across markets.",
+          "keywords": ["Currency risk", "Political/trade risk", "Market risk", "Regulatory risk"],
+          "memory_code": "C-P-M-R",
+          "answer_skeleton": "Identify the four risks and link each to the import, manufacturing or sales chain.",
+          "exam_trigger": "Importer-manufacturer risks"
+        }
+      ],
+      "source_support": ":chatgpt-content-reference{index="3"}"
+    },
+    {
+      "chapter": 3,
+      "title": "Advanced Capital Budgeting Decisions",
+      "memory_map": "TRENDS → RISK → TECHNIQUES → APV → REPLACEMENT",
+      "questions": [
+        {
+          "id": "3.1",
+          "question": "Current trends/factors affecting Capital Budgeting",
+          "definition": "Modern capital budgeting recognises that project cash flows are affected by changing economic, technological and governmental conditions.",
+          "keywords": ["Inflation", "Technology change", "Government policy"],
+          "memory_code": "I-T-G",
+          "answer_skeleton": "State why traditional certainty assumption is unrealistic → explain inflation, technology and government-policy effects.",
+          "exam_trigger": "Current trends in capital budgeting"
+        },
+        {
+          "id": "3.2",
+          "question": "Impact of Inflation on Capital Budgeting",
+          "definition": "Inflation affects project revenues, operating costs and the real value of tax-related cash flows, so cash flows and discount rates must be treated consistently.",
+          "keywords": ["Revenue increase", "Cost increase", "Historical-cost depreciation", "Tax shield distortion", "Real return"],
+          "memory_code": "R-C-D-T-RETURN",
+          "answer_skeleton": "Explain inflation → revenues/costs rise → depreciation tax shield may not rise proportionately → real return is affected.",
+          "exam_trigger": "Inflation in capital budgeting"
+        },
+        {
+          "id": "3.3",
+          "question": "Risk versus Uncertainty",
+          "definition": "Risk exists when variability of outcomes can be assessed and probabilities can be assigned; uncertainty exists when probabilities cannot be reliably assigned.",
+          "keywords": ["Risk", "Probability assignable", "Uncertainty", "Probability not assignable"],
+          "memory_code": "RISK = Probability; UNCERTAINTY = No Probability",
+          "answer_skeleton": "Define both → explain measurement difference → state why risk adjustment is required.",
+          "exam_trigger": "Risk and uncertainty"
+        },
+        {
+          "id": "3.4",
+          "question": "Internal and External Factors affecting Capital Budgeting",
+          "definition": "Project cash flows are influenced by project/company-specific internal risks and broader macroeconomic external risks.",
+          "keywords": ["Project-specific risk", "Company-specific risk", "Monetary policy", "Fiscal policy", "Inflation", "GDP", "Market conditions"],
+          "memory_code": "P-C | M-F-I-G",
+          "answer_skeleton": "Internal = project/company factors; external = macroeconomic and policy factors.",
+          "exam_trigger": "Internal/external factors"
+        },
+        {
+          "id": "3.5",
+          "question": "Methods of Incorporating Risk in Capital Budgeting",
+          "definition": "Risk-adjustment methods modify either expected cash flows or discount rates to reflect project risk.",
+          "keywords": ["Probability", "Variance/standard deviation", "Coefficient of variation", "Risk-adjusted discount rate", "Certainty equivalent", "Sensitivity analysis", "Scenario analysis", "Simulation", "Decision tree"],
+          "memory_code": "P-V-C | RADR-CE | S-S-S-D",
+          "answer_skeleton": "Classify statistical and conventional methods → explain how each incorporates risk.",
+          "exam_trigger": "Risk analysis techniques"
+        },
+        {
+          "id": "3.6",
+          "question": "Adjusted Present Value (APV)",
+          "definition": "APV separates the value of the project under all-equity financing from the present value of financing side effects such as tax benefits.",
+          "keywords": ["Base project value", "Financing side effects", "Tax shield", "Separate valuation"],
+          "memory_code": "APV = Base NPV + Financing Effects",
+          "answer_skeleton": "Value project independently → calculate financing effects → add present value of relevant benefits/costs.",
+          "exam_trigger": "Adjusted Present Value"
+        },
+        {
+          "id": "3.7",
+          "question": "Optimum Replacement Cycle",
+          "definition": "Optimum replacement analysis determines the economically appropriate replacement timing by comparing annualised/equivalent costs or benefits over alternative lives.",
+          "keywords": ["Replacement timing", "Equivalent annual cost", "Operating cost", "Maintenance", "Salvage value"],
+          "memory_code": "COST → LIFE → SALVAGE → REPLACE",
+          "answer_skeleton": "Compare alternative replacement cycles → convert to comparable annual measure → select the economically appropriate cycle.",
+          "exam_trigger": "Optimum replacement cycle"
+        }
+      ],
+      "source_support": ":chatgpt-content-reference{index="4"}"
+    },
+    {
+      "chapter": 4,
+      "title": "Security Analysis",
+      "memory_map": "FUNDAMENTAL → TECHNICAL → EMH → MARKET INDICATORS → TESTS",
+      "questions": [
+        {
+          "id": "4.1",
+          "question": "Technical Analysis in an Efficient Market",
+          "definition": "Technical analysis attempts to use price/volume patterns to identify future price movements, while efficient-market theory questions whether such patterns can consistently generate abnormal returns.",
+          "keywords": ["Crowd psychology", "Gradual demand/supply shift", "Self-defeating proposition"],
+          "memory_code": "PSY → GRADUAL → SELF-DEFEAT",
+          "answer_skeleton": "Explain technical analysis → crowd psychology → gradual demand/supply adjustment → efficiency makes exploitable patterns self-defeating.",
+          "exam_trigger": "Technical analysis and efficient market"
+        },
+        {
+          "id": "4.2",
+          "question": "Principles of Technical Analysis",
+          "definition": "Technical analysis rests on the idea that market prices incorporate relevant information, prices move in trends and historical market behaviour can recur.",
+          "keywords": ["Market discounts everything", "Prices move in trends", "History tends to repeat"],
+          "memory_code": "M-T-H",
+          "answer_skeleton": "Explain all three principles separately.",
+          "exam_trigger": "Principles of technical analysis"
+        },
+        {
+          "id": "4.3",
+          "question": "Market Indicators",
+          "definition": "Market indicators are statistical or market-based measures used to assess market direction, participation, sentiment and relative performance.",
+          "keywords": ["Breadth Index", "Volume of transactions", "Confidence Index", "Relative Strength Analysis", "Odd-Lot Theory"],
+          "memory_code": "B-V-C-R-O",
+          "answer_skeleton": "Name each indicator → state what aspect of market behaviour it measures.",
+          "exam_trigger": "Market indicators"
+        },
+        {
+          "id": "4.4",
+          "question": "Factors affecting Economic Analysis",
+          "definition": "Economic analysis evaluates the broad economic environment before assessing industries and securities.",
+          "keywords": ["National income growth", "Industrial sector growth", "Inflation", "Monsoon"],
+          "memory_code": "N-I-I-M",
+          "answer_skeleton": "Explain each factor and its potential effect on corporate earnings/market conditions.",
+          "exam_trigger": "Economic analysis factors"
+        },
+        {
+          "id": "4.5",
+          "question": "Factors affecting Industry Analysis",
+          "definition": "Industry analysis examines the structural attractiveness and competitive conditions of an industry.",
+          "keywords": ["Product life cycle", "Demand-supply gap", "Barriers to entry", "Government attitude", "State of competition"],
+          "memory_code": "L-D-B-G-C",
+          "answer_skeleton": "Explain life cycle → demand/supply → entry barriers → government → competition.",
+          "exam_trigger": "Industry analysis factors"
+        },
+        {
+          "id": "4.6",
+          "question": "Challenges to Efficient Market Theory",
+          "definition": "Efficient-market theory can face practical challenges because investors and markets may not always have complete information or process it rationally.",
+          "keywords": ["Information inadequacy", "Limited processing capability", "Irrational behaviour", "Monopolistic influence"],
+          "memory_code": "I-P-I-M",
+          "answer_skeleton": "State each challenge → explain how it may prevent perfect information efficiency.",
+          "exam_trigger": "Challenges to EMH"
+        },
+        {
+          "id": "4.7",
+          "question": "Tests for Weak-form Efficiency",
+          "definition": "Weak-form efficiency concerns whether historical price and return information is already reflected in current prices.",
+          "keywords": ["Serial correlation test", "Run test", "Filter rules test"],
+          "memory_code": "S-R-F",
+          "answer_skeleton": "Define weak form → explain what each test checks → conclude how randomness relates to weak-form efficiency.",
+          "exam_trigger": "Weak-form efficiency tests"
+        },
+        {
+          "id": "4.8",
+          "question": "Moving Average Buy/Sell Signals",
+          "definition": "Moving-average analysis compares market price with its moving-average line to generate trend-based signals.",
+          "keywords": ["Price rises through moving average", "Price falls below rising line", "Price falls through moving average", "Price rises above falling line"],
+          "memory_code": "CROSS = SIGNAL",
+          "answer_skeleton": "Explain upward/downward crossings and interpret them in the context of the direction of the moving average.",
+          "exam_trigger": "Moving average signals"
+        }
+      ],
+      "source_support": ":chatgpt-content-reference{index="5"}"
+    },
+    {
+      "chapter": 5,
+      "title": "Security Valuation",
+      "memory_map": "RETURN → ERP → DISCOUNT → EQUITY → PREFERENCE → DEBT → VALUER",
+      "questions": [
+        {
+          "id": "5.1",
+          "question": "Meaning/Overview of Valuation",
+          "definition": "Valuation estimates the intrinsic worth of an asset by assessing expected future benefits, risk, timing and appropriate required return.",
+          "keywords": ["Future cash flows", "Risk", "Inflation", "Market price", "Intrinsic value"],
+          "memory_code": "CASH + RISK + TIME = VALUE",
+          "answer_skeleton": "Define valuation → explain intrinsic value → connect future benefits with risk and discounting.",
+          "exam_trigger": "Meaning of valuation"
+        },
+        {
+          "id": "5.2",
+          "question": "Required Rate of Return",
+          "definition": "Required return is the minimum return an investor expects for committing funds to an asset of a specified risk.",
+          "keywords": ["Minimum return", "Opportunity cost", "Cost of capital", "Risk"],
+          "memory_code": "MINIMUM EXPECTED RETURN",
+          "answer_skeleton": "Define → explain opportunity cost → relate to risk and cost of capital.",
+          "exam_trigger": "Required rate of return"
+        },
+        {
+          "id": "5.3",
+          "question": "Equity Risk Premium",
+          "definition": "Equity risk premium represents the excess return expected from equity over a risk-free return as compensation for equity risk.",
+          "formula": "Equity Risk Premium = Rx − Rf = βx(Rm − Rf)",
+          "keywords": ["Risk-free rate", "Equity return", "Beta", "Market risk premium"],
+          "memory_code": "EQUITY − RISK FREE",
+          "answer_skeleton": "Define → give CAPM relationship → distinguish equity risk premium from market risk premium.",
+          "exam_trigger": "Equity risk premium"
+        },
+        {
+          "id": "5.4",
+          "question": "Discount Rate",
+          "definition": "Discount rate is the rate used to convert future cash flows into present value and reflects risk-free return plus relevant risk premium.",
+          "keywords": ["Present value", "Risk-free rate", "Risk premium", "Cash-flow risk", "Maturity"],
+          "memory_code": "PV = FUTURE CASH ÷ DISCOUNT",
+          "answer_skeleton": "Define → explain risk premium → explain why different cash flows can have different discount rates.",
+          "exam_trigger": "Discount rate"
+        },
+        {
+          "id": "5.5",
+          "question": "Nominal Cash Flow versus Real Cash Flow",
+          "definition": "Nominal cash flows include inflation effects; real cash flows are stated after removing inflation effects.",
+          "keywords": ["Nominal cash flow", "Real cash flow", "Nominal discount rate", "Real discount rate"],
+          "memory_code": "NOMINAL ↔ NOMINAL; REAL ↔ REAL",
+          "answer_skeleton": "Define both → state consistency rule between cash flow and discount rate.",
+          "exam_trigger": "Nominal and real cash flow"
+        },
+        {
+          "id": "5.6",
+          "question": "Valuation of Equity Shares – Dividend, Earnings and Cash Flow Models",
+          "definition": "Equity can be valued using expected dividends, earnings multiples or expected cash flows, depending on the available information and valuation approach.",
+          "keywords": ["Dividend-based", "Earnings-based", "Cash-flow-based", "Zero growth", "Constant growth", "Variable growth", "P/E"],
+          "memory_code": "D-E-C",
+          "answer_skeleton": "Identify model → state assumption → give key formula/logic → explain suitable application.",
+          "exam_trigger": "Equity valuation approaches"
+        },
+        {
+          "id": "5.7",
+          "question": "Valuation of Preference Shares",
+          "definition": "Preference share valuation depends on the nature of dividend, redemption and other contractual cash flows.",
+          "keywords": ["Dividend", "Required return", "Redemption value", "Period"],
+          "memory_code": "D-R-V",
+          "answer_skeleton": "Identify cash-flow pattern → discount dividends and redemption according to the relevant model.",
+          "exam_trigger": "Preference share valuation"
+        },
+        {
+          "id": "5.8",
+          "question": "Valuation of Debentures/Bonds",
+          "definition": "Bond value is the present value of contractual interest/coupon payments plus redemption value discounted at the appropriate required return.",
+          "keywords": ["Coupon", "Required yield", "Present value", "Redemption value", "Maturity"],
+          "memory_code": "COUPON PV + PRINCIPAL PV",
+          "answer_skeleton": "Value periodic interest → value redemption → add present values.",
+          "exam_trigger": "Bond/debenture valuation"
+        },
+        {
+          "id": "5.9",
+          "question": "Role and Responsibilities of Valuers",
+          "definition": "A valuer provides an independent professional valuation while maintaining competence, due care, integrity, independence and confidentiality.",
+          "keywords": ["M&A/de-merger/takeover", "Slump/asset/IPR sale", "Debt/security conversion", "Capital reduction", "Financial restructuring", "Integrity", "Competence", "Independence", "Confidentiality"],
+          "memory_code": "I-C-I-C",
+          "answer_skeleton": "State statutory valuation situations → explain professional responsibilities.",
+          "exam_trigger": "Role/responsibilities of valuer"
+        },
+        {
+          "id": "5.10",
+          "question": "Precautions before accepting a valuation assignment",
+          "definition": "A valuation is a professional estimate rather than an absolute number, so the valuer must understand the assignment, information, assumptions and potential conflicts before acceptance.",
+          "keywords": ["Data quality", "Understanding business", "Assumptions", "Independence", "Conflict of interest", "Professional competence"],
+          "memory_code": "DATA → BUSINESS → ASSUMPTIONS → INDEPENDENCE",
+          "answer_skeleton": "Explain why valuation is an estimate → verify information → understand business → assess independence and assignment suitability.",
+          "exam_trigger": "Precautions before accepting valuation assignment"
+        }
+      ],
+      "source_support": ":chatgpt-content-reference{index="6"}"
+    },
+    {
+      "chapter": 6,
+      "title": "Portfolio Management",
+      "memory_map": "PROCESS → THEORY → RISK → REVISION → EVALUATION → ASSET ALLOCATION",
+      "questions": [
+        {
+          "id": "6.1",
+          "question": "Portfolio Management Process",
+          "definition": "Portfolio management is a continuous process of selecting, combining, revising and evaluating securities to achieve the investor's risk-return objectives.",
+          "keywords": ["Security analysis", "Portfolio construction", "Portfolio revision", "Portfolio evaluation"],
+          "memory_code": "A-C-R-E",
+          "answer_skeleton": "Analyse → construct/select → revise → evaluate.",
+          "exam_trigger": "Portfolio management process"
+        },
+        {
+          "id": "6.2",
+          "question": "Traditional Approach to Portfolio Management",
+          "definition": "Traditional portfolio management begins with understanding investor needs and then develops objectives, strategy, diversification and security selection.",
+          "keywords": ["Investor profile", "Portfolio objectives", "Investment strategy", "Diversification", "Security selection"],
+          "memory_code": "I-O-S-D-S",
+          "answer_skeleton": "Know investor → define objective → strategy → diversify → select securities.",
+          "exam_trigger": "Traditional approach"
+        },
+        {
+          "id": "6.3",
+          "question": "Portfolio Rebalancing Policies",
+          "definition": "Portfolio rebalancing policies determine how asset proportions are changed when market values move or investor objectives change.",
+          "keywords": ["Buy and Hold", "Constant Mix", "Constant Proportion Insurance", "Floor", "Multiplier"],
+          "memory_code": "B-C-C + FLOOR × MULTIPLIER",
+          "answer_skeleton": "Define each policy → explain how allocation changes with market movements.",
+          "exam_trigger": "Portfolio revision/rebalancing"
+        },
+        {
+          "id": "6.4",
+          "question": "Risk as an Integral Part of the Market",
+          "definition": "Market risk cannot be completely eliminated through diversification because systematic risk affects securities broadly.",
+          "keywords": ["Systematic risk", "Bullish trend", "Bearish trend", "Share-price indices"],
+          "memory_code": "SYSTEMATIC = MARKET-WIDE",
+          "answer_skeleton": "Explain systematic risk → relate to market trends and indices.",
+          "exam_trigger": "Risk as integral part of market"
+        },
+        {
+          "id": "6.5",
+          "question": "Portfolio Evaluation",
+          "definition": "Portfolio evaluation measures actual return relative to risk borne over a selected period and identifies weaknesses in investment performance.",
+          "keywords": ["Return", "Risk", "Sharpe", "Treynor", "Jensen"],
+          "memory_code": "RETURN ÷ RISK",
+          "answer_skeleton": "Define evaluation → explain risk-adjusted performance measures.",
+          "exam_trigger": "Portfolio evaluation"
+        },
+        {
+          "id": "6.6",
+          "question": "Sharpe, Treynor and Jensen Measures",
+          "definition": "These measures assess portfolio performance after adjusting returns for different measures of risk.",
+          "keywords": ["Sharpe = total risk", "Treynor = systematic risk", "Jensen = abnormal return/alpha"],
+          "memory_code": "S = σ; T = β; J = α",
+          "answer_skeleton": "State each measure → identify risk measure → explain interpretation.",
+          "exam_trigger": "Performance evaluation ratios"
+        },
+        {
+          "id": "6.7",
+          "question": "Asset Allocation",
+          "definition": "Asset allocation determines how investment funds are distributed among asset classes according to return, risk, liquidity and investor objectives.",
+          "keywords": ["Equity", "Debt/fixed income", "Cash", "Alternative investments", "Risk-return objective"],
+          "memory_code": "MIX ASSETS TO FIT OBJECTIVE",
+          "answer_skeleton": "Define → explain strategic allocation → link with investor risk and return objectives.",
+          "exam_trigger": "Asset allocation"
+        },
+        {
+          "id": "6.8",
+          "question": "Alternative Investment Avenues",
+          "definition": "Alternative investments are non-traditional asset classes that can diversify portfolios beyond conventional securities.",
+          "keywords": ["Real estate", "Gold", "Private equity", "REITs", "Hedge funds", "ETFs", "Mutual funds", "Commodities"],
+          "memory_code": "R-G-PE-REIT-HF-ETF-MF-C",
+          "answer_skeleton": "Name alternatives → explain diversification/liquidity/risk characteristics briefly.",
+          "exam_trigger": "Alternative investments"
+        }
+      ],
+      "source_support": ":chatgpt-content-reference{index="7"}"
+    },
+    {
+      "chapter": 7,
+      "title": "Securitization",
+      "memory_map": "MEANING → PARTICIPANTS → MECHANISM → INSTRUMENTS → BENEFITS/PROBLEMS → RISK → BLOCKCHAIN",
+      "questions": [
+        {
+          "id": "7.1",
+          "question": "Meaning of Securitization",
+          "definition": "Securitization converts a pool of financial assets or receivables into marketable securities backed by the cash flows from those assets.",
+          "keywords": ["Pooling", "Financial assets/receivables", "SPV", "Marketable securities", "Cash flows"],
+          "memory_code": "POOL → SPV → SECURITY → CASH FLOW",
+          "answer_skeleton": "Define → explain conversion of illiquid receivables into tradable securities.",
+          "exam_trigger": "Concept of securitization"
+        },
+        {
+          "id": "7.2",
+          "question": "Participants in Securitization",
+          "definition": "Securitization involves parties responsible for originating assets, structuring the transaction, transferring/holding assets, servicing, enhancing credit, rating and investing.",
+          "keywords": ["Originator", "SPV", "Investors", "Obligors", "Rating agency", "RPA", "Trustee", "Credit enhancer", "Structurer"],
+          "memory_code": "O-S-I-O-R-R-T-C-S",
+          "answer_skeleton": "Name participants → give one-line role of each.",
+          "exam_trigger": "Participants in securitization"
+        },
+        {
+          "id": "7.3",
+          "question": "Mechanism of Securitization",
+          "definition": "The mechanism involves pooling receivables, transferring them to an SPV, issuing securities to investors and using underlying cash flows for repayment.",
+          "keywords": ["Create pool", "Transfer to SPV", "Sale of securities", "Asset administration", "Recourse", "Repayment", "Credit rating"],
+          "memory_code": "POOL → SPV → SELL → SERVICE → REPAY",
+          "answer_skeleton": "Draw the flow and explain each stage.",
+          "exam_trigger": "Mechanism of securitization"
+        },
+        {
+          "id": "7.4",
+          "question": "Features of Securitization",
+          "definition": "Securitization creates structured financial instruments by transforming pools of assets and their cash flows into securities with different risk/return characteristics.",
+          "keywords": ["Financial instruments", "Bundling/unbundling", "Risk management", "Structured finance", "Tranching", "Homogeneity"],
+          "memory_code": "F-B-R-S-T-H",
+          "answer_skeleton": "Explain each feature and its purpose.",
+          "exam_trigger": "Features of securitization"
+        },
+        {
+          "id": "7.5",
+          "question": "Benefits of Securitization",
+          "definition": "Securitization can convert receivables into liquidity and provide funding, risk-transfer and balance-sheet benefits.",
+          "keywords": ["Liquidity", "Funding", "Risk transfer", "Balance-sheet management", "Investor access"],
+          "memory_code": "LIQUIDITY + FUNDING + RISK",
+          "answer_skeleton": "Explain how originator obtains funds and how investors obtain asset-backed investment opportunities.",
+          "exam_trigger": "Benefits of securitization"
+        },
+        {
+          "id": "7.6",
+          "question": "Problems in Securitization in India",
+          "definition": "The development of securitization can be constrained by legal, tax, accounting, market and enforcement-related issues.",
+          "keywords": ["Stamp duty", "Taxation", "Accounting", "Lack of standardisation", "Inadequate debt market", "Ineffective foreclosure laws"],
+          "memory_code": "S-T-A-S-D-F",
+          "answer_skeleton": "Group problems into legal, tax, accounting, standardisation, market and enforcement categories.",
+          "exam_trigger": "Problems in Indian securitization"
+        },
+        {
+          "id": "7.7",
+          "question": "PTC versus Pay Through Security",
+          "definition": "PTCs pass underlying principal/interest collections through to investors, while pay-through structures issue securities whose payments can be structured differently from the timing of underlying collections.",
+          "keywords": ["Pass-through cash receipt", "Direct claim", "Asset backing", "Tranching", "Surplus reinvestment"],
+          "memory_code": "PTC = PASS; PTS = STRUCTURE",
+          "answer_skeleton": "Define both → compare cash-flow timing and structuring.",
+          "exam_trigger": "PTC vs PTS"
+        },
+        {
+          "id": "7.8",
+          "question": "Pricing of Securitized Instruments",
+          "definition": "Pricing depends on the perspective of the originator and investor and the expected cash flows, risk and required return.",
+          "keywords": ["Originator outflow rate", "Investor expected cash flows", "Discounting", "Comparable yield", "YTM"],
+          "memory_code": "ORIGINATOR COST ↔ INVESTOR YTM",
+          "answer_skeleton": "Originator angle → amortise funding cost; investor angle → discount expected cash flows at comparable yield/YTM.",
+          "exam_trigger": "Pricing of securitized instruments"
+        },
+        {
+          "id": "7.9",
+          "question": "Risks in Securitization",
+          "definition": "Securitization exposes investors and transaction participants to credit, legal and market risks.",
+          "keywords": ["Credit/counterparty risk", "Legal risk", "Macroeconomic risk", "Prepayment risk", "Interest-rate risk"],
+          "memory_code": "C-L-M + P-I",
+          "answer_skeleton": "Define each risk and explain its effect on pool cash flows or investor payouts.",
+          "exam_trigger": "Risks in securitization"
+        },
+        {
+          "id": "7.10",
+          "question": "Blockchain Transaction and Risks",
+          "definition": "Blockchain is a distributed ledger system in which transactions are validated and recorded across a network rather than relying on a single central authority.",
+          "keywords": ["Distributed ledger", "Irreversible records", "Technology reliability", "No central authority", "Information overload"],
+          "memory_code": "DLT + IRREVERSIBLE + DECENTRALISED",
+          "answer_skeleton": "Explain blockchain mechanism → discuss technology, governance and information risks.",
+          "exam_trigger": "Blockchain transaction/risks"
+        },
+        {
+          "id": "7.11",
+          "question": "Applications of Blockchain",
+          "definition": "Blockchain can be applied wherever shared, traceable and tamper-resistant transaction records are useful.",
+          "keywords": ["Financial services", "Healthcare", "Government", "Travel", "Economic forecasting"],
+          "memory_code": "F-H-G-T-E",
+          "answer_skeleton": "List application sectors → explain the transaction-record benefit in each.",
+          "exam_trigger": "Applications of blockchain"
+        },
+        {
+          "id": "7.12",
+          "question": "Tokenization versus Securitization",
+          "definition": "Tokenization digitally represents assets as blockchain-based tokens, while securitization converts asset cash flows into structured marketable securities.",
+          "keywords": ["Blockchain tokens", "Liquidity", "Diversification", "Trading", "New opportunities"],
+          "memory_code": "TOKEN = DIGITAL REPRESENTATION; SECURITIZATION = CASH-FLOW SECURITIES",
+          "answer_skeleton": "Define both → compare structure → explain common benefits such as liquidity and tradability.",
+          "exam_trigger": "Tokenization vs securitization"
+        }
+      ],
+      "source_support": ":chatgpt-content-reference{index="8"}"
+    },
+    {
+      "chapter": 8,
+      "title": "Mutual Funds",
+      "memory_map": "MEANING → TYPES → EVALUATION → SIDE POCKET → TRACKING ERROR → ETF",
+      "questions": [
+        {
+          "id": "8.1",
+          "question": "Special Categories of Mutual Funds",
+          "definition": "Special funds are schemes designed around a specific geography, sector, asset class, strategy or investment objective.",
+          "keywords": ["International", "Offshore", "Sector", "Money market", "Fund of funds", "Gold", "Quant funds"],
+          "memory_code": "I-O-S-M-F-G-Q",
+          "answer_skeleton": "Name category → explain its investment focus.",
+          "exam_trigger": "Special categories of mutual funds"
+        },
+        {
+          "id": "8.2",
+          "question": "Advantages and Disadvantages of Mutual Funds",
+          "definition": "Mutual funds pool investor money and professionally manage diversified portfolios, but involve costs, market risk and possible underperformance.",
+          "keywords": ["Diversification", "Professional management", "Liquidity", "Costs", "No guaranteed return", "Fund selection"],
+          "memory_code": "D-P-L | C-R",
+          "answer_skeleton": "Benefits → diversification/professional management/liquidity; drawbacks → fees, selection risk and market loss.",
+          "exam_trigger": "Advantages/disadvantages of mutual funds"
+        },
+        {
+          "id": "8.3",
+          "question": "Side Pocketing",
+          "definition": "Side pocketing separates stressed or illiquid assets from the liquid portfolio so that the affected investment can be isolated rather than forcing distress selling.",
+          "keywords": ["Separate risky assets", "Liquid assets", "Locked until recovery", "NAV reflects liquid value"],
+          "memory_code": "RISKY ASSET → SIDE POCKET → LIQUID NAV",
+          "answer_skeleton": "Define → explain separation → explain effect on NAV and investor liquidity.",
+          "exam_trigger": "Side pocketing"
+        },
+        {
+          "id": "8.4",
+          "question": "Tracking Error and its reasons",
+          "definition": "Tracking error is the deviation between a fund's return and the return of its benchmark.",
+          "keywords": ["Transaction costs", "Fees", "Fund expenses", "Cash holdings", "Sampling bias"],
+          "memory_code": "T-F-E-C-S",
+          "answer_skeleton": "Define tracking error → explain five causes → lower tracking error means closer benchmark replication.",
+          "exam_trigger": "Reasons for tracking error"
+        },
+        {
+          "id": "8.5",
+          "question": "Exchange Traded Fund (ETF)",
+          "definition": "An ETF combines features of an investment fund with exchange trading and is generally listed and traded during market hours.",
+          "keywords": ["Hybrid product", "Stock exchange listing", "Authorised participants", "Market hours", "Trading without conventional paper process"],
+          "memory_code": "FUND + EXCHANGE",
+          "answer_skeleton": "Define ETF → explain exchange listing, trading and authorised participants.",
+          "exam_trigger": "ETF"
+        },
+        {
+          "id": "8.6",
+          "question": "Financial Evaluation Measures of Mutual Funds",
+          "definition": "Mutual fund performance can be assessed using risk-adjusted and cost-related measures.",
+          "keywords": ["Expense ratio", "Sharpe ratio", "Treynor ratio", "Sortino ratio"],
+          "memory_code": "E-S-T-S",
+          "answer_skeleton": "Define each measure and state what risk/cost aspect it captures.",
+          "exam_trigger": "Mutual fund evaluation measures"
+        },
+        {
+          "id": "8.7",
+          "question": "Role of Fund Manager",
+          "definition": "The fund manager converts the scheme's stated objective into investment decisions while controlling risk, liquidity and portfolio composition.",
+          "keywords": ["Security selection", "Portfolio construction", "Risk control", "Liquidity", "Performance monitoring"],
+          "memory_code": "SELECT → ALLOCATE → CONTROL → MONITOR",
+          "answer_skeleton": "Explain investment, risk, liquidity and monitoring responsibilities.",
+          "exam_trigger": "Role of fund manager"
+        }
+      ],
+      "source_support": ":chatgpt-content-reference{index="9"}"
+    },
+    {
+      "chapter": 9,
+      "title": "Derivatives Analysis and Valuation",
+      "memory_map": "FORWARD → FUTURE → OPTION → GREEKS → EXOTIC → CREDIT → REAL → SWAP",
+      "questions": [
+        {
+          "id": "9.1",
+          "question": "Meaning of Derivative",
+          "definition": "A derivative is a financial contract whose value is derived from one or more underlying assets, indices or reference rates.",
+          "keywords": ["Underlying", "Equity", "Forex", "Commodity", "Interest rate"],
+          "memory_code": "VALUE DERIVES FROM UNDERLYING",
+          "answer_skeleton": "Define → identify underlying → explain why change in underlying changes derivative value.",
+          "exam_trigger": "Derivative meaning"
+        },
+        {
+          "id": "9.2",
+          "question": "Forward versus Futures",
+          "definition": "Both are contracts to transact an underlying at a future date, but futures are standardised and exchange-traded whereas forwards are generally customised OTC contracts.",
+          "keywords": ["Customised", "Standardised", "OTC", "Exchange", "Margin", "Daily settlement"],
+          "memory_code": "FORWARD = CUSTOM; FUTURE = STANDARD",
+          "answer_skeleton": "Compare standardisation, trading venue, settlement, margin and counterparty exposure.",
+          "exam_trigger": "Forward vs future"
+        },
+        {
+          "id": "9.3",
+          "question": "Pricing of Forwards and Futures",
+          "definition": "Forward/futures pricing is based on the relationship between spot value, carrying costs/benefits, financing and time to maturity.",
+          "keywords": ["Spot price", "Cost of carry", "Interest", "Income", "Maturity"],
+          "memory_code": "FORWARD ≈ SPOT + CARRY",
+          "answer_skeleton": "Explain no-arbitrage logic → identify financing/carry and income effects.",
+          "exam_trigger": "Pricing forwards/futures"
+        },
+        {
+          "id": "9.4",
+          "question": "Hedging using Futures",
+          "definition": "Futures hedging reduces exposure to adverse price movements by taking an offsetting futures position.",
+          "keywords": ["Long hedge", "Short hedge", "Basis risk", "Underlying exposure"],
+          "memory_code": "EXPOSURE → OPPOSITE FUTURE",
+          "answer_skeleton": "Identify exposure → choose long/short hedge → explain offset → mention basis risk.",
+          "exam_trigger": "Futures hedging"
+        },
+        {
+          "id": "9.5",
+          "question": "Options",
+          "definition": "An option gives the buyer a right, but not an obligation, to buy or sell the underlying at a specified strike price under stated contract conditions.",
+          "keywords": ["Call", "Put", "Right", "No obligation", "Strike price", "Premium"],
+          "memory_code": "BUYER = RIGHT; SELLER = OBLIGATION",
+          "answer_skeleton": "Define → call vs put → buyer/seller rights and obligations → premium.",
+          "exam_trigger": "Options meaning"
+        },
+        {
+          "id": "9.6",
+          "question": "Option Greeks",
+          "definition": "Greeks measure the sensitivity of option value to changes in key variables.",
+          "keywords": ["Delta", "Gamma", "Theta", "Rho", "Vega"],
+          "memory_code": "D-G-T-R-V",
+          "definitions": {
+            "Delta": "Sensitivity of option price to a change in underlying price.",
+            "Gamma": "Sensitivity of delta to a change in underlying price.",
+            "Theta": "Sensitivity of option value to passage of time.",
+            "Rho": "Sensitivity of option value to interest-rate changes.",
+            "Vega": "Sensitivity of option value to volatility changes."
+          },
+          "exam_trigger": "Option Greeks"
+        },
+        {
+          "id": "9.7",
+          "question": "Exotic Options",
+          "definition": "Exotic options are option contracts with structures or payoff conditions different from standard plain-vanilla options.",
+          "keywords": ["Asian", "Lookback", "Barrier", "Basket", "Bermuda", "Binary", "Spread", "Chooser", "Compound"],
+          "memory_code": "A-L-B-B-B-D-S-C-C",
+          "answer_skeleton": "Define exotic option → name types → give one-line distinguishing feature.",
+          "exam_trigger": "Exotic options"
+        },
+        {
+          "id": "9.8",
+          "question": "Credit Derivatives",
+          "definition": "Credit derivatives transfer or manage credit exposure using contracts whose value depends on credit events or credit-related underlying instruments.",
+          "keywords": ["Credit exposure", "Default", "Credit risk transfer", "CDO"],
+          "memory_code": "CREDIT RISK → DERIVATIVE → TRANSFER",
+          "answer_skeleton": "Define → explain credit-risk transfer → mention relevant structures.",
+          "exam_trigger": "Credit derivatives"
+        },
+        {
+          "id": "9.9",
+          "question": "Real Options",
+          "definition": "Real options recognise managerial flexibility embedded in investment projects, such as the ability to expand, delay, abandon or switch.",
+          "keywords": ["Flexibility", "Expansion", "Delay", "Abandonment", "Switching"],
+          "memory_code": "FLEXIBILITY HAS VALUE",
+          "answer_skeleton": "Explain why conventional NPV may omit managerial flexibility → identify option type.",
+          "exam_trigger": "Real options"
+        },
+        {
+          "id": "9.10",
+          "question": "Derivative Mishaps and Lessons",
+          "definition": "Derivative failures demonstrate that leverage, model risk, inadequate controls, weak governance and misunderstood exposures can create large losses.",
+          "keywords": ["Leverage", "Risk limits", "Model risk", "Controls", "Governance", "Monitoring"],
+          "memory_code": "L-R-M-C-G-M",
+          "answer_skeleton": "Identify source of failure → connect to risk-management lesson.",
+          "exam_trigger": "Derivative mishaps/lessons"
+        },
+        {
+          "id": "9.11",
+          "question": "Swaps",
+          "definition": "A swap is an agreement under which parties exchange specified cash-flow streams according to agreed terms.",
+          "keywords": ["Interest-rate swap", "Currency swap", "Cash flows", "Notional principal"],
+          "memory_code": "EXCHANGE CASH FLOWS",
+          "answer_skeleton": "Define → explain parties exchange cash flows → identify common swap types.",
+          "exam_trigger": "Swaps"
+        },
+        {
+          "id": "9.12",
+          "question": "Commodity, Weather and Electricity Derivatives",
+          "definition": "These derivatives use specialised physical or environmental variables as underlying references for hedging price, weather or power-related exposure.",
+          "keywords": ["Commodity price", "Weather variable", "Electricity price", "Hedging"],
+          "memory_code": "SPECIAL UNDERLYING = SPECIAL DERIVATIVE",
+          "answer_skeleton": "Identify underlying → identify business exposure → explain hedging purpose.",
+          "exam_trigger": "Specialised derivatives"
+        }
+      ],
+      "source_support": ":chatgpt-content-reference{index="10"}"
+    },
+    {
+      "chapter": 10,
+      "title": "Foreign Exchange Exposure and Risk Management",
+      "memory_map": "FX MARKET → RATE THEORIES → EXPOSURES → RISK MANAGEMENT → SWIFT/PAYMENTS",
+      "questions": [
+        {
+          "id": "10.1",
+          "question": "Foreign Exchange Market",
+          "definition": "The foreign exchange market facilitates conversion and transfer of purchasing power from one currency into another.",
+          "keywords": ["Banks", "Non-bank entities", "Governments", "Speculators", "Arbitrageurs"],
+          "memory_code": "B-N-G-S-A",
+          "answer_skeleton": "Define market → identify participants → explain currency conversion function.",
+          "exam_trigger": "Foreign exchange market"
+        },
+        {
+          "id": "10.2",
+          "question": "Factors affecting Exchange Rates",
+          "definition": "Exchange rates are influenced by economic, monetary, inflation, interest-rate, trade and market factors.",
+          "keywords": ["Inflation", "Interest rates", "Balance of payments", "Money supply", "Economic conditions", "Market expectations"],
+          "memory_code": "I-I-B-M-E-M",
+          "answer_skeleton": "List factors → explain how each can influence currency demand/supply.",
+          "exam_trigger": "Factors affecting FX rate"
+        },
+        {
+          "id": "10.3",
+          "question": "Interest Rate Parity (IRP)",
+          "definition": "IRP links the forward premium/discount of a currency with the interest-rate differential between two countries.",
+          "keywords": ["Forward premium/discount", "Interest differential", "Spot rate", "Forward rate"],
+          "memory_code": "IR DIFFERENCE → FORWARD DIFFERENCE",
+          "answer_skeleton": "Define → state relationship → explain economic logic.",
+          "exam_trigger": "IRP theory"
+        },
+        {
+          "id": "10.4",
+          "question": "Purchasing Power Parity (PPP)",
+          "definition": "PPP links expected exchange-rate changes with differences in inflation rates between countries.",
+          "keywords": ["Inflation differential", "Spot exchange rate", "Purchasing power"],
+          "memory_code": "INFLATION DIFFERENCE → SPOT CHANGE",
+          "answer_skeleton": "Define → explain inflation differential → state expected spot-rate implication.",
+          "exam_trigger": "PPP"
+        },
+        {
+          "id": "10.5",
+          "question": "International Fisher Effect (IFE)",
+          "definition": "IFE links exchange-rate movements with interest-rate differentials, with higher nominal rates reflecting higher expected inflation.",
+          "keywords": ["Interest differential", "Expected inflation", "Spot-rate change", "Real return"],
+          "memory_code": "INTEREST DIFFERENCE → FX CHANGE",
+          "answer_skeleton": "Define → connect nominal interest differential with expected currency movement.",
+          "exam_trigger": "IFE"
+        },
+        {
+          "id": "10.6",
+          "question": "Transaction Exposure",
+          "definition": "Transaction exposure measures the effect of exchange-rate changes on existing contractual foreign-currency cash flows that will be settled later.",
+          "keywords": ["Existing obligation", "Contractual cash flow", "Settlement after rate change"],
+          "memory_code": "CONTRACTED → NOT SETTLED",
+          "answer_skeleton": "Define → give importer/exporter example → explain gain/loss.",
+          "exam_trigger": "Transaction exposure"
+        },
+        {
+          "id": "10.7",
+          "question": "Translation Exposure",
+          "definition": "Translation exposure arises when foreign-currency financial statements of subsidiaries are converted into the reporting currency for consolidation.",
+          "keywords": ["Foreign subsidiary", "Financial statements", "Translation", "Consolidation"],
+          "memory_code": "BOOKS → REPORTING CURRENCY",
+          "answer_skeleton": "Define → explain consolidation impact.",
+          "exam_trigger": "Translation exposure"
+        },
+        {
+          "id": "10.8",
+          "question": "Economic Exposure",
+          "definition": "Economic exposure is the broader effect of exchange-rate changes on the economic value, competitive position, costs and revenues of the firm.",
+          "keywords": ["Firm value", "Input costs", "Output prices", "Competitive position"],
+          "memory_code": "FX → COST + PRICE + COMPETITION",
+          "answer_skeleton": "Define → explain long-term operating impact → distinguish from transaction and translation exposure.",
+          "exam_trigger": "Economic exposure"
+        },
+        {
+          "id": "10.9",
+          "question": "Foreign Exchange Risk Management",
+          "definition": "FX risk management identifies, measures and mitigates losses arising from currency fluctuations.",
+          "keywords": ["Protection from volatility", "Cost reduction", "Competitive advantage", "Cash-flow improvement", "Compliance"],
+          "memory_code": "P-C-C-C-C",
+          "answer_skeleton": "Explain why FX risk must be managed → connect to stability, cost, competitiveness, cash flow and compliance.",
+          "exam_trigger": "Importance of FX risk management"
+        },
+        {
+          "id": "10.10",
+          "question": "Role of SWIFT",
+          "definition": "SWIFT provides a standardised communication network for transmitting financial messages between participating financial institutions.",
+          "keywords": ["Standardised messages", "International payments", "Financial institutions", "Secure communication"],
+          "memory_code": "STANDARD FX COMMUNICATION",
+          "answer_skeleton": "Define SWIFT → explain messaging role → distinguish communication from actual settlement.",
+          "exam_trigger": "SWIFT in foreign exchange"
+        },
+        {
+          "id": "10.11",
+          "question": "National and International Payment Gateways",
+          "definition": "Payment gateways facilitate electronic payment instructions and processing across payment networks, supporting domestic and cross-border transactions.",
+          "keywords": ["Payment initiation", "Authentication", "Processing", "Settlement", "Cross-border payment"],
+          "memory_code": "INITIATE → AUTHORISE → PROCESS → SETTLE",
+          "answer_skeleton": "Explain the payment flow and cross-border relevance.",
+          "exam_trigger": "Payment gateways"
+        }
+      ],
+      "source_support": ":chatgpt-content-reference{index="11"}"
+    },
+    {
+      "chapter": 11,
+      "title": "International Financial Management",
+      "memory_map": "ICB → INTERNATIONAL FUNDS → SOVEREIGN FUNDS → GIFT CITY → CASH/RECEIVABLE/INVENTORY",
+      "questions": [
+        {
+          "id": "11.1",
+          "question": "Complexities in International Capital Budgeting",
+          "definition": "International capital budgeting is more complex than domestic budgeting because project and parent cash flows, currencies, taxes, political risk and capital restrictions interact.",
+          "keywords": ["Currency conversion", "Project vs parent cash flows", "Home/host-country tax", "FX risk", "Inflation", "Fund-transfer restrictions", "Political risk"],
+          "memory_code": "C-P-T-F-I-R-P",
+          "answer_skeleton": "Start with domestic vs international difference → explain each complexity.",
+          "exam_trigger": "International capital budgeting"
+        },
+        {
+          "id": "11.2",
+          "question": "Offshore Investment Strategy versus Domestic Capital Budgeting",
+          "definition": "Offshore investment decisions require additional adjustments for currency, country, tax, political and transferability risks beyond domestic project evaluation.",
+          "keywords": ["Foreign project", "Currency", "Country risk", "Tax", "Blocked funds"],
+          "memory_code": "DOMESTIC + INTERNATIONAL RISKS",
+          "answer_skeleton": "Compare common NPV framework with additional international adjustments.",
+          "exam_trigger": "Offshore vs domestic capital budgeting"
+        },
+        {
+          "id": "11.3",
+          "question": "Project Cash Flow versus Parent Cash Flow",
+          "definition": "Project cash flows are generated by the foreign project, whereas parent cash flows reflect the amounts actually available to the parent after tax, remittance restrictions and currency effects.",
+          "keywords": ["Project cash flow", "Parent cash flow", "Remittance", "Tax", "FX"],
+          "memory_code": "PROJECT ≠ PARENT",
+          "answer_skeleton": "Define both → explain why parent receives a different economic cash flow.",
+          "exam_trigger": "Project vs parent cash flows"
+        },
+        {
+          "id": "11.4",
+          "question": "International Cash Management Objectives",
+          "definition": "International cash management seeks to minimise currency exposure and transaction costs while ensuring liquidity and optimal deployment of excess cash.",
+          "keywords": ["Minimise currency exposure", "Minimise cash requirement", "Minimise transaction cost", "Optimise cash flow", "Invest excess cash"],
+          "memory_code": "MIN FX + MIN CASH + MIN COST + OPTIMISE",
+          "answer_skeleton": "Explain each objective.",
+          "exam_trigger": "Objectives of international cash management"
+        },
+        {
+          "id": "11.5",
+          "question": "Centralised Cash Management",
+          "definition": "Centralised cash management coordinates cash across subsidiaries to reduce idle balances, improve netting and optimise funding/investment decisions.",
+          "keywords": ["Minimum cash balance", "Multinational netting", "Transfer pricing mechanism", "Currency movement correlations"],
+          "memory_code": "MINIMUM + NETTING + TRANSFER + CURRENCY",
+          "answer_skeleton": "Explain centralisation → netting → lower idle cash → coordinated currency/funding decisions.",
+          "exam_trigger": "Centralised cash management"
+        },
+        {
+          "id": "11.6",
+          "question": "Constituents of an International Financial Centre",
+          "definition": "An international financial centre requires financial infrastructure, stable governance, strategic location, skilled professionals and an enabling regulatory/economic environment.",
+          "keywords": ["Infrastructure", "Stable political environment", "Strategic location", "Quality of life", "Rational regulatory framework", "Sustainable economy"],
+          "memory_code": "I-S-L-Q-R-S",
+          "answer_skeleton": "Explain six constituents.",
+          "exam_trigger": "Constituents of IFC"
+        },
+        {
+          "id": "11.7",
+          "question": "Benefits of GIFT City/IFC",
+          "definition": "An international financial centre can attract global financial activity, specialised professionals and international transactions.",
+          "keywords": ["Qualified professionals", "Global opportunities", "Reduce brain drain", "Bring back financial transactions"],
+          "memory_code": "TALENT + GLOBAL + BRAIN + TRANSACTIONS",
+          "answer_skeleton": "Explain each benefit.",
+          "exam_trigger": "GIFT City benefits"
+        },
+        {
+          "id": "11.8",
+          "question": "FCCBs – Advantages and Disadvantages",
+          "definition": "Foreign Currency Convertible Bonds are foreign-currency debt instruments carrying a conversion feature into equity under specified conditions.",
+          "keywords": ["Conversion flexibility", "Delayed equity dilution", "Marketability", "Exchange risk", "Forex outgo"],
+          "memory_code": "FLEXIBILITY | DILUTION DELAY | FX RISK",
+          "answer_skeleton": "Define FCCB → advantages → disadvantages.",
+          "exam_trigger": "Advantages/disadvantages of FCCB"
+        },
+        {
+          "id": "11.9",
+          "question": "Salient Features of FCCBs",
+          "definition": "FCCBs are foreign-currency denominated convertible instruments subject to applicable issue and custody requirements.",
+          "keywords": ["Foreign currency denomination", "Permission", "Domestic/foreign custodian", "Conversion feature", "Tax treatment"],
+          "memory_code": "FOREIGN + PERMISSION + CUSTODY + CONVERSION",
+          "answer_skeleton": "State features in bullet form.",
+          "exam_trigger": "FCCB features"
+        },
+        {
+          "id": "11.10",
+          "question": "International Working Capital Management",
+          "definition": "International working capital management coordinates cash, receivables and inventory across countries while managing currency, tax, liquidity and country-specific factors.",
+          "keywords": ["Cash", "Receivables", "Inventory", "Currency", "Liquidity"],
+          "memory_code": "C-R-I + FX",
+          "answer_skeleton": "Explain the three working-capital components and international complications.",
+          "exam_trigger": "International working capital management"
+        }
+      ],
+      "source_support": ":chatgpt-content-reference{index="12"}"
+    },
+    {
+      "chapter": 12,
+      "title": "Interest Rate Risk Management",
+      "memory_map": "IRR TYPES → MEASUREMENT → ALM/FRA → FUTURES/OPTIONS/SWAPS → SWAPTION",
+      "questions": [
+        {
+          "id": "12.1",
+          "question": "Types of Interest Rate Risk",
+          "definition": "Interest-rate risk arises when changes in market rates adversely affect earnings, asset/liability values or reinvestment outcomes.",
+          "keywords": ["Gap/mismatch", "Basis", "Embedded option", "Yield curve", "Price", "Reinvestment"],
+          "memory_code": "G-B-E-Y-P-R",
+          "answer_skeleton": "Define IRR → explain each type with one line.",
+          "exam_trigger": "Types of interest-rate risk"
+        },
+        {
+          "id": "12.2",
+          "question": "Measurement of Interest Rate Risk",
+          "definition": "Interest-rate risk must first be identified and quantified before appropriate hedging can be designed.",
+          "keywords": ["Maturity gap", "Duration", "Simulation", "VaR"],
+          "memory_code": "G-D-S-V",
+          "answer_skeleton": "State what each technique measures.",
+          "exam_trigger": "Measuring interest-rate risk"
+        },
+        {
+          "id": "12.3",
+          "question": "Asset and Liability Management (ALM)",
+          "definition": "ALM is a comprehensive framework for managing the structure of assets and liabilities so that interest earnings are optimised within the institution's risk preference.",
+          "keywords": ["Balance-sheet structure", "Market risk", "Liquidity", "Funding", "Capital planning", "Profit planning"],
+          "memory_code": "BALANCE SHEET + RISK + PROFIT",
+          "answer_skeleton": "Define → explain asset/liability matching → discuss broader functions.",
+          "exam_trigger": "ALM"
+        },
+        {
+          "id": "12.4",
+          "question": "Hedging Interest Rate Risk",
+          "definition": "Interest-rate hedging uses balance-sheet techniques and derivatives to reduce adverse effects of rate movements.",
+          "keywords": ["ALM", "FRA", "Interest-rate futures", "Interest-rate options", "Interest-rate swaps"],
+          "memory_code": "ALM + FRA + FUTURE + OPTION + SWAP",
+          "answer_skeleton": "Classify traditional and modern methods → explain each.",
+          "exam_trigger": "Methods of hedging IRR"
+        },
+        {
+          "id": "12.5",
+          "question": "Net Interest Position and Price Risk",
+          "definition": "Net interest position reflects exposure of interest earnings to rate movements; price risk arises when interest-sensitive assets are sold before maturity and market yields change.",
+          "keywords": ["Non-paying liabilities", "Net interest income", "Premature asset sale", "Bond price-yield relationship"],
+          "memory_code": "NII RISK + SALE PRICE RISK",
+          "answer_skeleton": "Define both → explain impact on earnings and market value.",
+          "exam_trigger": "Net interest position/price risk"
+        },
+        {
+          "id": "12.6",
+          "question": "Forward Rate Agreement (FRA) Features",
+          "definition": "An FRA is an off-balance-sheet agreement that fixes an interest rate for a future borrowing/lending period on a notional principal.",
+          "keywords": ["Fix interest cost", "Off-balance-sheet", "Notional principal", "Cash settlement", "Maturity"],
+          "memory_code": "FIX RATE TODAY → FUTURE PERIOD",
+          "answer_skeleton": "Define → explain notional → settlement → hedging purpose.",
+          "exam_trigger": "Features of FRA"
+        },
+        {
+          "id": "12.7",
+          "question": "Interest Rate Swaption",
+          "definition": "A swaption is an option giving the holder the right to enter into an interest-rate swap under specified terms.",
+          "keywords": ["Option on swap", "Call swaption", "Put swaption", "Tenor", "Premium", "Cash settlement"],
+          "memory_code": "OPTION ON SWAP",
+          "answer_skeleton": "Define → call/put → tenor/premium → settlement.",
+          "exam_trigger": "Swaption features"
+        }
+      ],
+      "source_support": ":chatgpt-content-reference{index="13"}"
+    },
+    {
+      "chapter": 13,
+      "title": "Business Valuation",
+      "memory_map": "ASSET → EARNING → CASH FLOW → CAPM/APT → RELATIVE → EVA/MVA/SVA → FAIR/DISTRESSED",
+      "questions": [
+        {
+          "id": "13.1",
+          "question": "Approaches to Business Valuation",
+          "definition": "Business valuation can be performed through asset-based, earning-based and cash-flow-based approaches, supplemented by contemporary methods.",
+          "keywords": ["Asset based", "Earning based", "Cash flow based", "Contemporary approaches"],
+          "memory_code": "A-E-C",
+          "answer_skeleton": "Name three core approaches → explain what each considers.",
+          "exam_trigger": "Approaches to business valuation"
+        },
+        {
+          "id": "13.2",
+          "question": "Asset-Based Valuation",
+          "definition": "Asset-based valuation estimates business value from the value of assets and liabilities rather than primarily from future earnings.",
+          "keywords": ["Net Asset Value", "Net Realizable Value", "Replacement Value", "Net assets"],
+          "memory_code": "NAV + NRV + REPLACEMENT",
+          "answer_skeleton": "Explain three variants → state strengths and limitations.",
+          "exam_trigger": "Asset-based approach"
+        },
+        {
+          "id": "13.3",
+          "question": "Earning-Based Valuation",
+          "definition": "Earning-based valuation estimates business value from maintainable earnings capitalised at an appropriate rate or through an earnings multiple.",
+          "keywords": ["P/E ratio", "Maintainable profit", "Capitalisation rate", "Earning yield"],
+          "memory_code": "EARNINGS × MULTIPLE",
+          "answer_skeleton": "P/E approach → maintainable earnings → capitalisation approach.",
+          "exam_trigger": "Earning-based approach"
+        },
+        {
+          "id": "13.4",
+          "question": "Cash Flow Based Valuation / DCF",
+          "definition": "Cash-flow valuation discounts future free cash flows and terminal value at an appropriate cost of capital.",
+          "keywords": ["Forecast cash flows", "FCF", "Discount rate", "Terminal value", "Present value"],
+          "memory_code": "FCF → RATE → TV → PV",
+          "answer_skeleton": "Forecast FCF → determine discount rate → terminal value → present value → interpret enterprise/equity value.",
+          "exam_trigger": "DCF valuation"
+        },
+        {
+          "id": "13.5",
+          "question": "CAPM in Business Valuation",
+          "definition": "CAPM links required return to risk-free return plus beta-adjusted market risk premium.",
+          "formula": "Ke = Rf + β(Rm − Rf)",
+          "keywords": ["Risk-free rate", "Beta", "Market risk premium", "Required return"],
+          "memory_code": "RF + BETA × MRP",
+          "answer_skeleton": "Explain CAPM → beta → required return → application in discount rate.",
+          "exam_trigger": "CAPM in valuation"
+        },
+        {
+          "id": "13.6",
+          "question": "Estimating Beta for Unlisted Companies",
+          "definition": "For an unlisted company, beta can be estimated using comparable listed companies, adjusting/de-gearing their beta for differences in capital structure.",
+          "keywords": ["Proxy companies", "Asset beta", "De-gearing", "Average/appropriate beta", "Re-gearing"],
+          "memory_code": "PROXY → DEGEAR → AVERAGE → REGEAR",
+          "answer_skeleton": "Select comparables → calculate asset beta → adjust → obtain beta for target → apply CAPM.",
+          "exam_trigger": "Beta of unlisted company"
+        },
+        {
+          "id": "13.7",
+          "question": "Relative Valuation",
+          "definition": "Relative valuation estimates value using comparable companies and market-based multiples linked to relevant business drivers.",
+          "keywords": ["Comparable firms", "Drivers", "Financial ratios", "Multiples", "Iteration"],
+          "memory_code": "COMPARE → MULTIPLE → APPLY → SMOOTH",
+          "answer_skeleton": "Select comparables → identify driver → derive multiple → apply to target.",
+          "exam_trigger": "Relative valuation"
+        },
+        {
+          "id": "13.8",
+          "question": "Chop-Shop Method",
+          "definition": "The chop-shop approach values separate business segments using comparable industry capitalisation ratios and aggregates their theoretical values.",
+          "keywords": ["Business segments", "Industry comparables", "Capitalisation ratios", "Theoretical values"],
+          "memory_code": "SPLIT → VALUE → ADD",
+          "answer_skeleton": "Identify segments → apply comparable ratios → calculate segment values → aggregate.",
+          "exam_trigger": "Chop-shop method"
+        },
+        {
+          "id": "13.9",
+          "question": "EVA, MVA and SVA",
+          "definition": "These contemporary approaches assess value creation from operating returns, market value or shareholder-value drivers.",
+          "keywords": ["EVA", "MVA", "SVA"],
+          "formulas": [
+            "EVA = NOPAT − (Invested Capital × WACC)",
+            "MVA = Current Market Value − Invested Capital"
+          ],
+          "memory_code": "EVA = OPERATING VALUE; MVA = MARKET VALUE; SVA = SHAREHOLDER VALUE",
+          "answer_skeleton": "Define each → give formula where relevant → explain value-creation interpretation.",
+          "exam_trigger": "EVA/MVA/SVA"
+        },
+        {
+          "id": "13.10",
+          "question": "Fair Value and Valuation Range",
+          "definition": "Fair value should be approached through appropriate valuation methods and assumptions; valuation often produces a range rather than a single unquestionable number.",
+          "keywords": ["Multiple approaches", "Minimum acceptable value", "Maximum payable value", "Negotiation", "Assumptions"],
+          "memory_code": "VALUE = RANGE, NOT MAGIC NUMBER",
+          "answer_skeleton": "Use available methods → compare results → analyse assumptions → derive reasonable range.",
+          "exam_trigger": "Fair value"
+        },
+        {
+          "id": "13.11",
+          "question": "Going Concern versus Non-Going Concern Valuation",
+          "definition": "Going-concern valuation assumes the business continues operations; non-going-concern valuation focuses more on realisable asset values and liquidation outcomes.",
+          "keywords": ["Continuity", "Future earnings", "Asset realisation", "Liquidation"],
+          "memory_code": "CONTINUE vs LIQUIDATE",
+          "answer_skeleton": "Define both → explain different valuation basis.",
+          "exam_trigger": "Going/non-going concern"
+        },
+        {
+          "id": "13.12",
+          "question": "Valuation of Distressed Companies",
+          "definition": "Distressed-company valuation must recognise financial distress, reduced future cash flows, asset realisation and uncertainty surrounding continuity.",
+          "keywords": ["Distress", "Cash-flow uncertainty", "Asset value", "Going concern", "Liquidation"],
+          "memory_code": "DISTRESS = CASH + ASSET + CONTINUITY",
+          "answer_skeleton": "Identify distress → assess viability → value assets/cash flows appropriately.",
+          "exam_trigger": "Distressed company valuation"
+        },
+        {
+          "id": "13.13",
+          "question": "Valuation of Digital/Technology/Professional Firms",
+          "definition": "Businesses with significant intangible value may require drivers beyond traditional asset-based measures.",
+          "keywords": ["Scalability", "Brand", "Intellectual property", "Subscribers/users", "Growth potential", "Professional human capital"],
+          "memory_code": "INTANGIBLES MATTER",
+          "answer_skeleton": "Explain why book assets may understate value → identify industry-specific drivers.",
+          "exam_trigger": "Digital/professional/start-up valuation"
+        }
+      ],
+      "source_support": ":chatgpt-content-reference{index="14"}"
+    },
+    {
+      "chapter": 14,
+      "title": "Mergers, Acquisitions and Corporate Restructuring",
+      "memory_map": "WHY → FORM → FINANCE → DEFEND → DIVEST → OWNERSHIP → VALUE → CROSS-BORDER → SPAC",
+      "questions": [
+        {
+          "id": "14.1",
+          "question": "Concept of Corporate Restructuring",
+          "definition": "Corporate restructuring involves major changes in operations, assets, financial structure or ownership to respond to strategic and market conditions.",
+          "keywords": ["Expansion/contraction", "Asset restructuring", "Financial restructuring", "Ownership restructuring", "M&A"],
+          "memory_code": "OPERATIONS + ASSETS + FINANCE + OWNERSHIP",
+          "answer_skeleton": "Define → internal vs external restructuring → examples.",
+          "exam_trigger": "Corporate restructuring"
+        },
+        {
+          "id": "14.2",
+          "question": "Merger versus Acquisition versus Takeover",
+          "definition": "A merger combines entities into one; acquisition involves one entity obtaining another; takeover generally refers to obtaining control of a company.",
+          "keywords": ["Combination", "Control", "Separate legal identity", "Amalgamation"],
+          "memory_code": "MERGE = COMBINE; ACQUIRE = BUY; TAKEOVER = CONTROL",
+          "answer_skeleton": "Define each → distinguish legal/economic effect.",
+          "exam_trigger": "Merger/acquisition/takeover distinction"
+        },
+        {
+          "id": "14.3",
+          "question": "Rationale for Mergers and Acquisitions",
+          "definition": "M&A may be undertaken to achieve strategic, operational, financial or market-related objectives.",
+          "keywords": ["Synergy", "Growth", "Market access", "Economies of scale", "Diversification", "Resource access"],
+          "memory_code": "S-G-M-E-D-R",
+          "answer_skeleton": "Explain each rationale and connect it with expected value creation.",
+          "exam_trigger": "Rationale for M&A"
+        },
+        {
+          "id": "14.4",
+          "question": "Forms of M&A",
+          "definition": "M&A structures differ according to the relationship between businesses and the legal/financial form of combination.",
+          "keywords": ["Horizontal", "Vertical", "Concentric/congeneric", "Conglomerate", "Merger/amalgamation"],
+          "memory_code": "H-V-C-C",
+          "answer_skeleton": "Define each form and give the underlying business relationship.",
+          "exam_trigger": "Forms of mergers"
+        },
+        {
+          "id": "14.5",
+          "question": "Financial Framework of M&A",
+          "definition": "The financial framework evaluates purchase consideration, financing, expected synergy, value transfer and post-merger financial effects.",
+          "keywords": ["Valuation", "Purchase price", "Consideration", "Financing", "Synergy", "Value creation"],
+          "memory_code": "VALUE → PRICE → FINANCE → SYNERGY",
+          "answer_skeleton": "Value target → determine consideration → select financing → assess synergy/value impact.",
+          "exam_trigger": "Financial framework of M&A"
+        },
+        {
+          "id": "14.6",
+          "question": "Takeover Defensive Tactics",
+          "definition": "Defensive tactics are measures adopted by a target company to resist or make an unwanted takeover more difficult.",
+          "keywords": ["Poison pill", "White knight", "Greenmail", "Pac-Man", "Golden parachute"],
+          "memory_code": "P-W-G-P-G",
+          "answer_skeleton": "Name defence → explain how it makes takeover less attractive/difficult.",
+          "exam_trigger": "Defensive tactics"
+        },
+        {
+          "id": "14.7",
+          "question": "Reverse Merger",
+          "definition": "A reverse merger is a transaction structure in which the ownership/control or listing outcome is achieved through a merger that reverses the usual direction of acquisition/control.",
+          "keywords": ["Control", "Merger structure", "Listing/access", "Corporate reorganisation"],
+          "memory_code": "REVERSE THE USUAL ROUTE",
+          "answer_skeleton": "Define → explain structure → state strategic use.",
+          "exam_trigger": "Reverse merger"
+        },
+        {
+          "id": "14.8",
+          "question": "Divestiture, Demerger and Equity Carve-Out",
+          "definition": "Divestiture reduces or separates a business/asset; demerger separates an undertaking into distinct entities; an equity carve-out involves selling a portion of a subsidiary/business equity to outside investors.",
+          "keywords": ["Sell-off", "Demerger", "Spin-off", "Equity carve-out", "Non-core business"],
+          "memory_code": "SEPARATE TO UNLOCK VALUE",
+          "answer_skeleton": "Define each restructuring form → explain ownership/cash-flow consequences.",
+          "exam_trigger": "Divestiture/demerger/carve-out"
+        },
+        {
+          "id": "14.9",
+          "question": "Financial and Ownership Restructuring",
+          "definition": "Financial restructuring changes the financing/capital structure; ownership restructuring changes who owns or controls the business.",
+          "keywords": ["Debt-equity change", "Capital restructuring", "MBO", "LBO", "Going private"],
+          "memory_code": "FINANCE vs OWNERSHIP",
+          "answer_skeleton": "Define both → explain MBO/LBO/going-private structures.",
+          "exam_trigger": "Financial/ownership restructuring"
+        },
+        {
+          "id": "14.10",
+          "question": "Unlocking Value through M&A and Restructuring",
+          "definition": "Value unlocking seeks to improve business value by realising synergies, separating non-core assets, improving capital structure or improving strategic focus.",
+          "keywords": ["Synergy", "Non-core divestment", "Capital efficiency", "Strategic focus", "Value creation"],
+          "memory_code": "SYNERGY + FOCUS + CAPITAL",
+          "answer_skeleton": "Explain how restructuring can release value from assets, operations and ownership.",
+          "exam_trigger": "Value unlocking"
+        },
+        {
+          "id": "14.11",
+          "question": "Reasons for M&A Failure",
+          "definition": "M&A may fail when expected synergies or strategic benefits are not achieved or integration and valuation assumptions prove incorrect.",
+          "keywords": ["Overvaluation", "Overpayment", "Poor integration", "Cultural mismatch", "Unrealised synergy", "Financing burden"],
+          "memory_code": "VALUE + PRICE + PEOPLE + INTEGRATION",
+          "answer_skeleton": "Explain financial, strategic and human/integration causes.",
+          "exam_trigger": "M&A failures"
+        },
+        {
+          "id": "14.12",
+          "question": "Cross-Border Mergers",
+          "definition": "Cross-border mergers combine businesses across countries and therefore require consideration of currency, tax, regulatory, political and cultural issues.",
+          "keywords": ["FX", "International tax", "Regulation", "Political risk", "Culture", "Integration"],
+          "memory_code": "FX-TAX-REG-POL-CULTURE",
+          "answer_skeleton": "Define → explain additional international complexities.",
+          "exam_trigger": "Cross-border merger"
+        },
+        {
+          "id": "14.13",
+          "question": "SPACs",
+          "definition": "A Special Purpose Acquisition Company is formed to raise capital through a public vehicle with the purpose of subsequently acquiring or combining with a target business.",
+          "keywords": ["Special purpose vehicle", "Capital raising", "Target acquisition", "Listing"],
+          "memory_code": "RAISE → FIND TARGET → COMBINE",
+          "answer_skeleton": "Define SPAC → explain structure → explain acquisition/listing mechanism.",
+          "exam_trigger": "SPAC"
+        }
+      ],
+      "source_support": ":chatgpt-content-reference{index="15"}"
+    },
+    {
+      "chapter": 15,
+      "title": "Startup Finance",
+      "memory_map": "RECOGNITION → UNICORN → FUNDING → BOOTSTRAP → ANGEL → VC → EXIT → PITCH → SUCCESSION → VALUATION",
+      "questions": [
+        {
+          "id": "15.1",
+          "question": "Startup Recognition Criteria",
+          "definition": "Startup recognition depends on prescribed legal/entity, age, turnover and innovation/development-related criteria under the applicable framework.",
+          "keywords": ["Private limited/partnership/LLP", "10 years", "₹100 crore", "Innovation/development/improvement", "Not splitting/reconstruction"],
+          "memory_code": "ENTITY + 10Y + 100C + INNOVATION",
+          "answer_skeleton": "State the recognition criteria in the applicable ICAI study framework.",
+          "exam_trigger": "Startup recognition"
+        },
+        {
+          "id": "15.2",
+          "question": "Unicorn Startup",
+          "definition": "A unicorn is a privately held startup reaching a valuation of at least US$1 billion.",
+          "keywords": ["Privately held", "US$1 billion", "Disruptive innovation", "Rarity", "Decacorn = US$10 billion"],
+          "memory_code": "1B = UNICORN; 10B = DECA-CORN",
+          "answer_skeleton": "Define unicorn → distinguish decacorn → mention valuation nature.",
+          "exam_trigger": "Unicorn/decacorn"
+        },
+        {
+          "id": "15.3",
+          "question": "Innovative Sources of Startup Funding",
+          "definition": "Startups can use non-traditional funding sources in addition to conventional debt/equity finance.",
+          "keywords": ["Personal financing", "Personal credit lines", "Family/friends", "Peer-to-peer", "Crowdfunding", "Vendor financing", "Factoring"],
+          "memory_code": "P-C-F-P-C-V-F",
+          "answer_skeleton": "Name source → explain how it provides early-stage liquidity/capital.",
+          "exam_trigger": "Innovative funding sources"
+        },
+        {
+          "id": "15.4",
+          "question": "Bootstrapping",
+          "definition": "Bootstrapping means financing and growing the startup primarily through internal resources and operating arrangements rather than external equity funding.",
+          "keywords": ["Personal finances", "Trade credit", "Factoring", "Leasing"],
+          "memory_code": "P-T-F-L",
+          "answer_skeleton": "Define → explain methods → link to reduced external funding dependence.",
+          "exam_trigger": "Bootstrapping methods"
+        },
+        {
+          "id": "15.5",
+          "question": "Angel Investors",
+          "definition": "Angel investors are individuals who invest their own money in early-stage businesses, usually in exchange for equity or convertible instruments.",
+          "keywords": ["Own money", "Family/friends", "Favourable terms", "Equity", "Convertible debt", "Exit strategy"],
+          "memory_code": "OWN MONEY + EARLY STAGE + EQUITY/CONVERTIBLE",
+          "answer_skeleton": "Define → explain investment form → investor expectation/exit.",
+          "exam_trigger": "Angel investors"
+        },
+        {
+          "id": "15.6",
+          "question": "Characteristics of Venture Capital",
+          "definition": "Venture capital is long-term risk capital invested in high-growth businesses, generally with an equity participation and limited liquidity.",
+          "keywords": ["Long time horizon", "Illiquidity", "High risk", "Equity participation"],
+          "memory_code": "LONG + ILLIQUID + HIGH RISK + EQUITY",
+          "answer_skeleton": "Explain four characteristics.",
+          "exam_trigger": "Venture capital characteristics"
+        },
+        {
+          "id": "15.7",
+          "question": "VC Fund Structure in India",
+          "definition": "VC fund structures may be organised through domestic, offshore or unified structures depending on the funding and investment arrangement.",
+          "keywords": ["Domestic funds", "Trust structure", "Offshore structure", "Unified structure"],
+          "memory_code": "D-O-U",
+          "answer_skeleton": "Name structures → explain basic structural distinction.",
+          "exam_trigger": "VC structure"
+        },
+        {
+          "id": "15.8",
+          "question": "Tag-Along Clause and Exit Plan",
+          "definition": "A tag-along provision protects an investor by allowing it to participate in a sale of shares by specified existing shareholders, subject to agreed terms.",
+          "keywords": ["Promoter sale", "VC participation", "Deal structuring", "IPO", "Private placement", "Promoter buyback"],
+          "memory_code": "PROMOTER SELLS → VC CAN TAG",
+          "answer_skeleton": "Define clause → explain investor protection → list exit routes.",
+          "exam_trigger": "Tag-along/exit plan"
+        },
+        {
+          "id": "15.9",
+          "question": "Startup Risk Matrix / Funding Stages",
+          "definition": "Startup risk generally changes across funding stages as the business develops and uncertainty reduces.",
+          "keywords": ["Seed", "Start-up", "First", "Second", "Third", "Fourth"],
+          "memory_code": "SEED HIGH → LATER STAGES LOWER",
+          "answer_skeleton": "State the risk progression used in the study framework and connect it with maturity/funding stage.",
+          "exam_trigger": "Risk matrix/funding stages"
+        },
+        {
+          "id": "15.10",
+          "question": "Startup Pitch Presentation",
+          "definition": "A startup pitch communicates the business opportunity, solution, market, team, model, financial prospects and funding requirement to potential investors.",
+          "keywords": ["Introduction", "Team", "Problem", "Solution", "Marketing", "Projections", "Competition", "Business model", "Financing"],
+          "memory_code": "I-T-P-S-M-P-C-B-F",
+          "answer_skeleton": "Introduce → team → problem → solution → market → projections → competition → model → financing.",
+          "exam_trigger": "Pitch presentation"
+        },
+        {
+          "id": "15.11",
+          "question": "Business Succession Strategy",
+          "definition": "Succession strategy prepares the organisation to maintain leadership and critical capabilities when key individuals leave or roles change.",
+          "keywords": ["Evaluate leadership", "Map competencies", "Identify workforce competencies", "Bridge leader"],
+          "memory_code": "LEADER → COMPETENCY → TALENT → BRIDGE",
+          "answer_skeleton": "Assess leadership needs → map competencies → identify gaps → develop/appoint successor.",
+          "exam_trigger": "Business succession strategy"
+        },
+        {
+          "id": "15.12",
+          "question": "Need for Succession Planning",
+          "definition": "Succession planning reduces disruption by preparing talent for critical positions and maintaining continuity.",
+          "keywords": ["Critical positions", "Risk mitigation", "Cause removal", "Talent pipeline", "Conflict resolution"],
+          "memory_code": "CRITICAL → RISK → TALENT → CONFLICT",
+          "answer_skeleton": "Explain continuity, risk reduction, talent development and conflict management.",
+          "exam_trigger": "Need for succession planning"
+        },
+        {
+          "id": "15.13",
+          "question": "Venture Capital Valuation",
+          "definition": "The venture-capital method estimates the required future value and discounts it using an investor's target return or applies an investment multiple.",
+          "keywords": ["Initial investment multiple", "Target IRR", "Future value", "Discounting", "10x/20x/30x"],
+          "memory_code": "FUTURE EXIT → TARGET RETURN → PRESENT VALUE",
+          "answer_skeleton": "Estimate future exit value → apply required multiple/return → discount to present value.",
+          "exam_trigger": "VC valuation"
+        },
+        {
+          "id": "15.14",
+          "question": "Berkus Approach",
+          "definition": "The Berkus approach values an early-stage startup using qualitative/early business-value factors rather than relying only on historical financial performance.",
+          "keywords": ["Basic value", "Technology", "Execution", "Strategic relationships", "Production and sales"],
+          "memory_code": "B-T-E-S-P",
+          "answer_skeleton": "Explain each value driver and how it contributes to startup valuation.",
+          "exam_trigger": "Berkus approach"
+        }
+      ],
+      "source_support": ":chatgpt-content-reference{index="16"}"
+    }
+  ],
+  "ultra_quick_recall": {
+    "chapter_codes": {
+      "1": "SFA | ODM | CBF | FIDP | FID | RSME | ROE×Retention | A+F",
+      "2": "C-P-I-C-G-I-N | LOSS-BENCHMARK-LIMIT-TRADE-ALM | RULE vs PEOPLE/PROCESS | D-L-R-A-G | LOSS-%-STAT-TIME-PROB-Z | S-L-C-G | RANK-MACRO-LOCAL-JV-FINANCE | C-P-M-R",
+      "3": "I-T-G | RISK/UNCERTAINTY | P-C/M-F-I-G | P-V-C/RADR-CE/S-S-S-D | APV | REPLACEMENT",
+      "4": "M-T-H | B-V-C-R-O | N-I-I-M | L-D-B-G-C | I-P-I-M | S-R-F | MOVING AVERAGE CROSS",
+      "5": "VALUE | REQUIRED RETURN | ERP | DISCOUNT | NOMINAL/REAL | D-E-C | PREFERENCE | BOND | VALUER",
+      "6": "A-C-R-E | I-O-S-D-S | B-C-C | SYSTEMATIC | S-T-J | ASSET ALLOCATION | ALTERNATIVES",
+      "7": "POOL-SPV-SECURITY-CASH | PARTICIPANTS | POOL-SPV-SELL-SERVICE-REPAY | F-B-R-S-T-H | C-L-M | TOKENIZATION",
+      "8": "I-O-S-M-F-G-Q | D-P-L | SIDE POCKET | TRACKING ERROR | ETF | E-S-T-S",
+      "9": "UNDERLYING | CUSTOM vs STANDARD | SPOT+CARRY | OPPOSITE FUTURE | RIGHT-NO OBLIGATION | D-G-T-R-V | EXOTIC | CREDIT | REAL OPTION | SWAP",
+      "10": "FX MARKET | IRP | PPP | IFE | TRANSACTION-TRANSLATION-ECONOMIC | SWIFT | PAYMENT FLOW",
+      "11": "C-P-T-F-I-R-P | PROJECT≠PARENT | MIN FX/MIN CASH/MIN COST | CENTRALISE | IFC | GIFT | FCCB | C-R-I",
+      "12": "G-B-E-Y-P-R | G-D-S-V | ALM | FRA | FUTURES | OPTIONS | SWAP | SWAPTION",
+      "13": "A-E-C | NAV-NRV-REPLACEMENT | PE/EARNINGS | DCF | CAPM | PROXY-DEGEAR-REGEAR | RELATIVE | CHOP-SHOP | EVA-MVA-SVA",
+      "14": "RESTRUCTURE | MERGE-ACQUIRE-TAKEOVER | SYNERGY | H-V-C-C | VALUE-PRICE-FINANCE-SYNERGY | DEFENSIVE | DIVEST | MBO/LBO | VALUE UNLOCK | FAILURE | CROSS-BORDER | SPAC",
+      "15": "ENTITY-10Y-100C-INNOVATION | 1B/10B | FUNDING SOURCES | BOOTSTRAP | ANGEL | VC | TAG-ALONG | RISK STAGES | PITCH | SUCCESSION | VC VALUATION | BERKUS"
+    },
+    "five_most_important_formula_triggers": [
+      "SGR = ROE × (1 − Dividend Payout Ratio)",
+      "CAPM: Ke = Rf + β(Rm − Rf)",
+      "Equity Risk Premium = Rx − Rf = βx(Rm − Rf)",
+      "EVA = NOPAT − (Invested Capital × WACC)",
+      "MVA = Current Market Value − Invested Capital"
+    ],
+    "one_line_memory": "AFM THEORY = DEFINE → CLASSIFY → KEYWORDS → EXPLAIN → FORMULA/DIAGRAM → CONCLUDE"
+  },
+  "20_mark_execution_plan": {
+    "before_exam": [
+      "Memorise the chapter memory_map first.",
+      "Then memorise every question's memory_code.",
+      "For each code, be able to expand every letter into one sentence.",
+      "Revise formulas separately from descriptive theory.",
+      "Practise writing 4–6 point answers without looking at the sheet."
+    ],
+    "during_exam": [
+      "Underline the technical keywords.",
+      "Start with a one-line definition wherever possible.",
+      "Use headings instead of long paragraphs.",
+      "Write 4–7 explained points depending on marks.",
+      "Use a formula/flow/mini-table whenever the concept permits.",
+      "Do not write only keywords; convert each keyword into a meaningful sentence."
+    ],
+    "highest_recall_priority": [
+      "Chapter 1: SFA, FIDP, FID, CFO, SGR, EFR",
+      "Chapter 2: VaR, risk categories, counterparty, country risk",
+      "Chapter 3: risk techniques, APV, inflation/current trends",
+      "Chapter 4: technical analysis, EMH, indicators, weak-form tests",
+      "Chapter 5: ERP, discount rate, equity valuation, valuers",
+      "Chapter 6: rebalancing, evaluation ratios, systematic risk",
+      "Chapter 7: participants, mechanism, instruments, risks, tokenization",
+      "Chapter 8: tracking error, side pocketing, ETF, evaluation",
+      "Chapter 9: options, Greeks, exotic options, swaps",
+      "Chapter 10: IRP, PPP, IFE, three FX exposures",
+      "Chapter 11: international cash management, FCCB, GIFT/IFC, international capital budgeting",
+      "Chapter 12: IRR types, ALM, FRA, swaps/swaptions",
+      "Chapter 13: valuation approaches, CAPM, beta, relative valuation, EVA/MVA/SVA",
+      "Chapter 14: M&A rationale/forms, defensive tactics, restructuring, SPAC",
+      "Chapter 15: startup funding, VC, pitch, succession, startup valuation"
+    ]
+  },
+  "source_alignment": {
+    "current_15_chapter_structure": ":chatgpt-content-reference{index="17"}",
+    "existing_user_keyword_sheet": ":chatgpt-content-reference{index="18"}",
+    "advanced_capital_budgeting": ":chatgpt-content-reference{index="19"}",
+    "security_valuation": ":chatgpt-content-reference{index="20"}",
+    "portfolio_management": ":chatgpt-content-reference{index="21"}",
+    "securitization": ":chatgpt-content-reference{index="22"}",
+    "mutual_funds": ":chatgpt-content-reference{index="23"}",
+    "foreign_exchange": ":chatgpt-content-reference{index="24"}",
+    "international_financial_management": ":chatgpt-content-reference{index="25"}",
+    "interest_rate_risk": ":chatgpt-content-reference{index="26"}",
+    "business_valuation": ":chatgpt-content-reference{index="27"}",
+    "m_and_a": ":chatgpt-content-reference{index="28"}",
+    "derivatives": ":chatgpt-content-reference{index="29"}"
+  }
+}
