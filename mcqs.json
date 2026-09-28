@@ -464,21 +464,21 @@
     "attempt_tag": "N20M/SM22",
     "explanation": "[Chapter 03 - branches other than head office at Bangalore, Chennai and Pune. | Part 3 - SA 610] Correct Option: (c) Both a & b"
   },
-  {
-    "id": 32,
-    "book_id": "610.2",
-    "type": "independent",
-    "question": "",
-    "options": [
-      "(d) M. Ltd. appointed M/s K.K. & Co., Chartered Accountants as Statutory Auditors. The Statutory Auditors found the internal audit function reliable and effective. The Statutory Auditor assigned the task of assessing the inventory levels of a few branches where the Statutory Auditor believed that there might be some risk of material misstatement to one of the internal auditor Mr. Ryan. Since the Internal Auditor had recently done such assessment as a part of their internal audit program, therefore, the Statutory Auditor believed that they could rely on the former's report. Besides this, because of the paucity of time the Statutory Auditors also requested Mr. Ryan to help them in some paperwork including audit documentation. Before the audit was concluded, Mr. Ryan got promoted and shifted to another city. During the audit discussion stage, the lead Statutory Auditory found out that the documentation delegated to Mr. Ryan was not complete. Accordingly, Statutory Auditor further checked the inventory work delegated to the Internal Auditor, however, it was found to be satisfactory. In view of the above case scenario, state which of the following statement(s) hold true:",
-      "(a) The working of Internal Audit function was reliable and satisfactory; therefore, the allocation of inventory level work was within the authority of the Statutory Auditor. This was further confirmed by the satisfactory work of Internal Auditory, as found out later.",
-      "(b) The documentation would be considered complete as far as the Statutory Auditor's responsibility is concerned as the missing documentation was because of the oversight of the Internal Auditor.",
-      "(c) Since the Internal Audit had conducted the similar inventory level checking activity recently, therefore, because of familiarity with the audit the Statutory Auditor was right in delegating the same to the Internal Auditor."
-    ],
-    "correctOption": 3,
-    "attempt_tag": "SM22/M24M",
-    "explanation": "[Chapter 03 - branches other than head office at Bangalore, Chennai and Pune. | Part 3 - SA 610] Correct Option: (c) Since the Internal Audit had conducted the similar inventory level checking activity recently, therefore, because of familiarity with the audit the Statutory Auditor was right in delegating the same to the Internal Auditor."
-  },
+{
+  "id": 32,
+  "book_id": "610.2",
+  "type": "independent",
+  "question": "M. Ltd. appointed M/s K.K. & Co., Chartered Accountants as Statutory Auditors. The Statutory Auditors found the internal audit function reliable and effective. The Statutory Auditor assigned the task of assessing the inventory levels of a few branches where the Statutory Auditor believed that there might be some risk of material misstatement to one of the internal auditor Mr. Ryan. Since the Internal Auditor had recently done such assessment as a part of their internal audit program, therefore, the Statutory Auditor believed that they could rely on the former's report. Besides this, because of the paucity of time the Statutory Auditors also requested Mr. Ryan to help them in some paperwork including audit documentation. Before the audit was concluded, Mr. Ryan got promoted and shifted to another city. During the audit discussion stage, the lead Statutory Auditory found out that the documentation delegated to Mr. Ryan was not complete. Accordingly, Statutory Auditor further checked the inventory work delegated to the Internal Auditor, however, it was found to be satisfactory. In view of the above case scenario, state which of the following statement(s) hold true:",
+  "options": [
+    "(a) The working of Internal Audit function was reliable and satisfactory; therefore, the allocation of inventory level work was within the authority of the Statutory Auditor. This was further confirmed by the satisfactory work of Internal Auditory, as found out later.",
+    "(b) The documentation would be considered complete as far as the Statutory Auditor's responsibility is concerned as the missing documentation was because of the oversight of the Internal Auditor.",
+    "(c) Since the Internal Audit had conducted the similar inventory level checking activity recently, therefore, because of familiarity with the audit the Statutory Auditor was right in delegating the same to the Internal Auditor.",
+    "(d) The Statutory Auditor should not have delegated the inventory level checking to the Internal Auditor, as the risk assessed was material. Further, the audit documents are Statutory Auditor's property and responsibility. Also, the Statutory Auditor should maintain confidentiality during all the stages of the audit. Therefore, it was wrong on the part of the Statutory Auditor to handover the task of audit documentation to the Internal Auditor."
+  ],
+  "correctOption": 3,
+  "attempt_tag": "SM22/M24M",
+  "explanation": "[Chapter 03 - branches other than head office at Bangalore, Chennai and Pune. | Part 3 - SA 610] Correct Option: (c) Since the Internal Audit had conducted the similar inventory level checking activity recently, therefore, because of familiarity with the audit the Statutory Auditor was right in delegating the same to the Internal Auditor."
+},
   {
     "id": 33,
     "book_id": "610.3",
